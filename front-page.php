@@ -5,6 +5,15 @@
 
 <main class="front-page">
     <style>
+    .img-container {
+        height: 350px;
+        margin-top: -120px;
+    }
+
+    .bg-container {
+        height: 200px;
+    }
+
     .swiper-container {
         position: relative;
         width: 100%;
@@ -74,6 +83,15 @@
 
     @media (min-width: 992px) {
 
+        .bg-container {
+            height: 361px;
+        }
+
+        .img-container {
+            height: 648px;
+            margin-top: -270px;
+        }
+
         .left-text {
             font-family: Sora;
             font-size: 45px;
@@ -133,8 +151,53 @@
                 transform: translateX(-100%);
             }
         }
+
+        .pagination-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+        }
+
+        .pagination-btn {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pagination-btn.active {
+            background-color: #E94271;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: left;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: left;
+            text-align: center;
+            height: 100%;
+        }
+
+
+
+
     }
     </style>
+
+
+
     <div class="container" style="margin-top:250px">
 
         <div class="row">
@@ -176,12 +239,12 @@
         </div>
 
 
-        <div class="d-none d-lg-block "
+        <!-- 1<div class="d-none d-lg-block "
             style="background:#25325F; border-radius:40px;height:361px;width:1280px; margin-top:120px">
             <div class="row">
                 <div class="d-flex align-items-center justify-content-between" style="margin-top:20px">
 
-                    <!-- pagination-container -->
+                    pagination-container
                     <div class="col-lg-1">
                         <div class="pagination-container  d-flex d-lg-row" style="margin-left:20px;">
                             <div class="pagination-container ">
@@ -218,9 +281,9 @@
                         </div>
                     </div>
 
-                    <!-- Swiper On Small Screen -->
+                    Swiper On Small Screen
 
-                    <!-- <div class="swiper-container col-lg-6 " style="--swiper-pagination-color: #fff">
+                     <div class="swiper-container col-lg-6 " style="--swiper-pagination-color: #fff">
                         <div class="swiper mySwiper"
                             style="--swiper-navigation-color: #f5a287; --swiper-pagination-color: #f5a287">
 
@@ -239,7 +302,7 @@
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
-                    </div> -->
+                    </div>
 
 
                     <div class="col-lg-4"></div>
@@ -256,10 +319,10 @@
 
             </div>
 
-        </div>
+        </div> -->
 
 
-        <div class="d-block d-lg-none "
+        <!-- 2<div class="d-block d-lg-none "
             style="background:#25325F; border-radius:40px;height:361px;width: 390px; margin-top:120px">
             <div class="row">
                 <div class="d-flex align-items-center justify-content-between" style="margin-top:20px">
@@ -269,17 +332,17 @@
                         style="white-space:nowrap; color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:180%; background-color:#E94271; border-radius:20px; margin-left:20px;margin-right: 10px;"
                         class="btn col-lg-1 ">
 
-                        <!--  left:calc(var(--bs-gutter-x)* -0.3); -->
+                       
                         <?= get_field("trending_btn")['title'] ?>
                     </a>
 
-                    <!-- <span
+                    <span
                         style="color: #FFF; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px"
                         class="col-lg-4">
                         There is space here for the title of a trending article
-                    </span> -->
+                    </span> 
 
-                    <!-- <div class="m-scroll">
+                   <div class="m-scroll">
                         <div class="m-scroll__title">
                             <div>
                                 <h1> There is space here for the title of a trending article &nbsp;</h1>
@@ -288,12 +351,12 @@
                             </div>
 
                         </div>
-                    </div> -->
+                    </div>
 
 
 
 
-                    <!-- Swiper On Small Screen -->
+                    Swiper On Small Screen
 
                     <div class="swiper-container fadeIn" style="--swiper-pagination-color: #fff">
                         <div #swiperRef=""
@@ -335,19 +398,78 @@
 
             </div>
 
+        </div> -->
+        <!-- width:1280px; -->
+        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;   margin-top:120px;">
+            <div class="d-flex flex-row align-items-center justify-content-around">
+
+                <div class="">
+                    <div class="pagination-container d-flex flex-row align-items-start" style="margin-left:20px;">
+                        <button class="pagination-btn active" data-target="0"></button>
+                        <button class="pagination-btn" data-target="1"></button>
+                        <button class="pagination-btn" data-target="2"></button>
+                    </div>
+                </div>
+
+                <div class="">
+                    <a href="<?= get_field("trending_btn")['url'] ?>"
+                        style="white-space:nowrap; color: #FFF;font-family: Manrope;font-size: 13px;font-style:normal;font-weight: 700;line-height:180%; background-color:#E94271; border-radius:20px; ;"
+                        class="btn  ">
+                        <?= get_field("trending_btn")['title'] ?>
+                    </a>
+                </div>
+
+                <!-- Swiper -->
+                <div class="" style="width:50%; overflow:hidden; position:relative;">
+                    <div class="swiper-container" style="flex-grow:1;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span style="color: white; text-align:left; font-size:16px;">There is space here for
+                                    the title of a
+                                    trending article</span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span style="color: white; text-align: center; font-size:16px;">Scrolling Text Example 2
+                                </span>
+                            </div>
+                            <div class="swiper-slide">
+                                <span style="color: white; text-align: center; font-size:16px;">Scrolling Text Example 3
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="">
+                    <a style="border-radius:14px; background-color:white; height:39px; width:44px;"
+                        class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                        <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
+                            style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
+                    </a>
+                </div>
+
+            </div>
         </div>
 
 
-        <div class="d-block d-lg-none" style="margin-top:-270px">
+
+
+
+
+        <div class="col-12 col-lg-12 img-container" style="">
+            <!-- width:390px; -->
             <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=""
-                style="width:390px; height:350px;border-radius: 40px; object-fit:cover" />
+                style=" height: ;border-radius:40px; object-fit:cover" />
         </div>
 
-
-        <div class="d-none d-lg-block" style="margin-top:-270px">
+        <!--  style="margin-top:-270px" -->
+        <!-- <div class="d-none d-lg-block" style="margin-top:-270px">
             <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=""
                 style="width:1280px; height:648px;border-radius: 40px; object-fit:cover" />
-        </div>
+        </div> -->
 
 
         <!-- Testimonials Section on All Screens -->
@@ -435,9 +557,11 @@
             </div>
         </div>
 
-
-
     </div>
+
+
+
+
 
 
     <!-- Swiper JS -->
@@ -445,69 +569,41 @@
 
     <!-- Initialize Swiper -->
     <script>
-    var swiper = new Swiper(".mySwiper", {
+    document.addEventListener("DOMContentLoaded", () => {
 
-        // slidesPerView: 2.5,
+        const swiper = new Swiper(".swiper-container", {
+            slidesPerView: 1,
+            centeredSlides: true,
+            loop: false,
+            allowTouchMove: true,
+        });
 
-        slidesPerView: auto,
-        // centeredSlides: true,
-        // loop: true,
-        grabCursor: true,
-        spaceBetween: 5,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            // type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-            992: {
+        // Pagination Buttons Logic
+        const paginationButtons = document.querySelectorAll(".pagination-btn");
 
-                slidesPerView: 3.5,
-            }
-        }
+        paginationButtons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                // Remove active class from all buttons
+                paginationButtons.forEach(btn => btn.classList.remove("active"));
+                // Add active class to the clicked button
+                button.classList.add("active");
+                // Slide to the corresponding swiper slide
+                swiper.slideTo(index);
+            });
+        });
+
+        // Synchronize pagination buttons with Swiper
+        swiper.on("slideChange", () => {
+            paginationButtons.forEach(btn => btn.classList.remove("active"));
+            paginationButtons[swiper.realIndex].classList.add("active");
+        });
     });
-
-    var appendNumber = 4;
-    var prependNumber = 1;
-    document
-        .querySelector(".prepend-2-slides")
-        .addEventListener("click", function(e) {
-            e.preventDefault();
-            swiper.prependSlide([
-                '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-                '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
-            ]);
-        });
-    document
-        .querySelector(".prepend-slide")
-        .addEventListener("click", function(e) {
-            e.preventDefault();
-            swiper.prependSlide(
-                '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
-            );
-        });
-    document
-        .querySelector(".append-slide")
-        .addEventListener("click", function(e) {
-            e.preventDefault();
-            swiper.appendSlide(
-                '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
-            );
-        });
-    document
-        .querySelector(".append-2-slides")
-        .addEventListener("click", function(e) {
-            e.preventDefault();
-            swiper.appendSlide([
-                '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-                '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
-            ]);
-        });
     </script>
+
+
+
+
+
 </main>
 
 <?php get_footer() ?>
