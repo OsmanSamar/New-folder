@@ -137,9 +137,6 @@
                             </li>
                         </ul>
                     </li>
-
-
-
                 </ul>
 
                 <!-- Arrow and Let's Talk -->
@@ -155,8 +152,9 @@
                 </div>
 
                 <!-- Toggle Button -->
-                <button class="navbar-toggler shadow-none border-0 d-lg-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation" style=" background-color:red; color: #25325F;">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
