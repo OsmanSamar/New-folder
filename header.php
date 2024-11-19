@@ -10,10 +10,14 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+
+
     <!-- Get Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
@@ -140,29 +144,84 @@
                 </ul>
 
                 <!-- Arrow and Let's Talk -->
-                <div class="d-none d-lg-flex align-items-center gap-3">
-                    <a href="<?= esc_url(home_url('/')); ?>">
+                <div class="d-none d-lg-flex align-items-center justify-content-center gap-3 mt-4">
+                    <a href="<?= esc_url(home_url('/')); ?>" style="border-radius: 14px;
+                                        background-color: #E94271; height:34px; width:48px;"
+                        class="d-flex justify-content-center align-items-center">
                         <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                            style="width: 92px; height: 30px;">
+                            style="width:12px; height: 18px; margin:7px 0;  ">
                     </a>
                     <a href="<?= esc_url(home_url('/')); ?>"
-                        style="font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;">
+                        style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;">
                         Let's talk
                     </a>
                 </div>
 
-                <!-- Toggle Button -->
+
+
                 <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                    aria-label="Toggle navigation" style=" background-color:red; color: #25325F;">
-                    <span class="navbar-toggler-icon"></span>
+                    aria-label="Toggle navigation" style=" ">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="hamburger-icon">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </span>
+
                 </button>
 
-                <button class="btn  btn-outline-light shadow-none border-0 d-none d-lg-block p-4" type="button"
+
+                <style>
+                .hamburger-icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30px;
+
+                    height: 20px;
+
+                    position: relative;
+                }
+
+                .hamburger-icon .line {
+                    display: block;
+                    height: 4px;
+
+                    background-color: #25325F;
+
+                    border-radius: 2px;
+
+                    transition: all 0.3s ease;
+
+                }
+
+                .hamburger-icon .line-1,
+                .hamburger-icon .line-2 {
+                    width: 100%;
+
+                }
+
+                .hamburger-icon .line-3 {
+                    width: 60%;
+
+                    align-self: flex-end;
+
+                }
+                </style>
+
+
+
+
+
+
+                <!-- ----------------------------------------------------- -->
+                <!-- Toggle Button slidebar on Lg -->
+                <!-- <button class="btn  btn-outline-light shadow-none border-0 d-none d-lg-block p-4" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                     style=" background-color: #25325F; color: #25325F;">
                     <span class="navbar-toggler-icon" style="color: #25325F;"></span>
-                </button>
+                </button> -->
 
             </div>
         </nav>
