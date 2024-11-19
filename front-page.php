@@ -155,7 +155,7 @@
 
     @media (min-width: 768px) {
 
-        .bg-container {
+        .container2 {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -174,7 +174,7 @@
 
     @media (min-width: 992px) {
 
-        .bg-container {
+        .container2 {
 
             margin-top: -45px;
         }
@@ -495,7 +495,7 @@
 
         <div class="container">
 
-            <div class="row d-none d-md-flex d-lg-flex bg-container" style="">
+            <div class="row d-none d-md-flex d-lg-flex container2" style="">
                 <?php
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
