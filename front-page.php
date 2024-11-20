@@ -10,6 +10,7 @@
         position: relative;
         width: 100%;
         overflow: hidden;
+        margin: 70px 0;
     }
 
     .background-image {
@@ -20,14 +21,14 @@
     /* Overlay styles */
 
     .overlay2 {
-        /* position: absolute; */
-        top: 50%;
-        left: 24%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        border-radius: 14px;
+        position: relative;
+
+        left: 50%;
+        transform: translate(-50%, -49%);
+        background-color: red;
+        border-radius: 15px;
         width: 90%;
-        max-width: 450px;
+        max-width: 350px;
         padding: 32px;
         display: flex;
         flex-direction: column;
@@ -80,14 +81,14 @@
     /* Responsive Design */
     @media (min-width: 768px) {
         .overlay2 {
-            position: absolute;
+            position: relative;
             top: 50%;
-            left: 24%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            background-color: white;
-            border-radius: 14px;
+            background-color: red;
+            border-radius: 15px;
             width: 90%;
-            max-width: 450px;
+            max-width: 400px;
             padding: 32px;
             display: flex;
             flex-direction: column;
@@ -1269,8 +1270,8 @@
                 <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
                     class="background-image" />
                 <div class="overlay">
-                    <span class="sub-title">Lorem <?= get_field("sub_title") ?></span>
-                    <span class="main-title"><?= get_field("main_title") ?></span>
+                    <span class="sub-title">Lorem <?= get_field("sue_title") ?></span>
+                    <span class="main-title"><?= get_field("sue_main_title") ?></span>
 
                     <div class="row">
                         <div class="icon-container col-12 col-lg-12">
@@ -1291,8 +1292,8 @@
 
 
             <div class="overlay2">
-                <span class="sub-title">Lorem <?= get_field("sub_title") ?></span>
-                <span class="main-title"><?= get_field("main_title") ?></span>
+                <span class="sub-title"><?= get_field("sue_title") ?></span>
+                <span class="main-title"><?= get_field("sue_main_title") ?></span>
 
                 <div class="row">
                     <div class="icon-container col-12 col-lg-12">
