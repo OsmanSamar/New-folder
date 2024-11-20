@@ -5,6 +5,91 @@
 
 <main class="front-page">
     <style>
+    /* Custom Pagination Numbers */
+    .custom-pagination {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .custom-number {
+        position: relative;
+        background-color: #f0f0f0;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .custom-number.active {
+        background-color: #274083;
+        color: #fff;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .custom-number .custom-title {
+        display: none;
+        margin-left: 10px;
+        white-space: nowrap;
+    }
+
+    .custom-number.active .custom-title {
+        display: inline-block;
+    }
+
+    /*  */
+    /* .swiper-pagination-top {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .swiper-pagination {
+        position: static;
+        To position at the bottom
+        margin-top: 50px;
+    }
+
+    .sample-slider .swiper-slide {
+        text-align: center;
+        padding: 20px;
+    } */
+
+
+
+
+    /* .swiper-container4 {
+        position: relative;
+        width: 85%;
+        height: 100vh;
+        margin: 0 auto;
+        background-color: yellow;
+    } */
+
+
+    /* .swiper-container4 .swiper-pagination1 {
+        bottom: -30px !important;
+    }
+
+    .swiper-container4 .swiper-pagination-bullet {
+        background-color: red;
+    } */
+
+
+
+
+
     /* Container for the background image and overlay */
     .responsive-container {
         position: relative;
@@ -16,6 +101,7 @@
     .background-image {
         width: 100%;
         height: auto;
+        object-fit: cover;
     }
 
     /* Overlay styles */
@@ -587,7 +673,7 @@
 
                 <div class="">
                     <a style="border-radius:14px; background-color:white; height:39px; width:44px;"
-                        class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                        class="d-flex justify-content-center align-items-center" href="#">
                         <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
                             style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
                     </a>
@@ -625,7 +711,7 @@
                     </span>
                     <div class="d-flex justify-content-end ">
                         <a style="border-radius:14px; background-color: #E94271; height:39px; width:44px;"
-                            class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                            class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
                                 class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
                         </a>
@@ -673,7 +759,7 @@
                     <div class="d-flex align-items-center gap-2">
                         <a style="border-radius:14px;
                                             background-color: #E94271; height:39px; width:44px;"
-                            class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                            class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
                                 class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
                         </a>
@@ -822,7 +908,7 @@
     </div>
 
     <!-- The blue block -->
-    <div style="border-radius:40px;background: #25325F; height:850px;  margin-top:150px;">
+    <div class="container" style="border-radius:40px;background: #25325F; height:850px;  margin-top:150px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 ">
@@ -895,7 +981,7 @@
 
                                 <a href="#"
                                     style="border-radius:14px;background-color: #E94271;height:38px; width:47px;"
-                                    class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                                    class="d-flex justify-content-center align-items-center" href="#">
 
                                     <img src="<?= $testimonails['link']['url'] ?>"
                                         alt=" <?= $testimonails['link']['alt'] ?>" class=""
@@ -947,7 +1033,7 @@
 
                                 <a href="#"
                                     style="border-radius:14px;background-color: #E94271;height:38px; width:47px;"
-                                    class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                                    class="d-flex justify-content-center align-items-center" href="#">
 
                                     <img src="<?= $testimonails['link']['url'] ?>"
                                         alt=" <?= $testimonails['link']['alt'] ?>" class=""
@@ -998,7 +1084,7 @@
 
                                         <a href="#"
                                             style="border-radius:14px;background-color: #E94271;height:38px; width:47px;"
-                                            class="d-flex justify-content-center align-items-center" href="#Maaktuin">
+                                            class="d-flex justify-content-center align-items-center" href="#">
 
                                             <img src="<?= $testimonails['link']['url'] ?>"
                                                 alt=" <?= $testimonails['link']['alt'] ?>" class=""
@@ -1016,6 +1102,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     </div>
@@ -1182,8 +1271,6 @@
 
                     </div>
 
-
-
                     <div class="col-12 col-lg-6 ">
 
                         <div style="border-bottom: 1px solid  #25325F;">
@@ -1215,62 +1302,18 @@
                                 </a>
                             </div>
                         </div>
-
-
-
-
                     </div>
 
                 </div>
             </div>
         </div>
 
-
-        <!-- <div class="row">
-            <div class=" " style="position:relative; ">
-                <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
-                    style="height:610px" />
-                <div class="d-flex flex-column align-items-left justify-content-center"
-                    style="background-color:white; border-radius:14px;width: 449px;height: 454px; position: absolute; top:15%;left:88px;">
-                    <span
-                        style="background-color:#274083;width:243px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; text-align:center; margin-left:35px;">Lorem
-                        <?= get_field("sub_title") ?>
-                    </span>
-                    <span
-                        style="color:#25325F;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 39px;  margin-left:37px;">
-                        <?= get_field("main_title") ?>
-                    </span>
-
-                    <div class="row">
-                        <div class="col-12 col-lg-12" style="margin-left:16px; margin-top:30px;">
-
-                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                alt="<?= get_field("rabobank_icon")['alt'] ?>"
-                                style="width: 161px;height: 82px; margin-left:20px;" />
-                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
-                                style="width: 161px;height: 82px; margin-left:20px;" />
-                        </div>
-
-                        <div class="col-12 col-lg-12" style="margin-left:16px; margin-top:30px;">
-
-                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                                style="width: 161px;height: 82px; margin-left:20px;" />
-                            <img src="<?= get_field("booking_icon")['url'] ?>"
-                                alt="<?= get_field("booking_icon")['alt'] ?>"
-                                style="width: 161px;height: 82px; margin-left:20px;" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
         <div class="row">
             <div class="responsive-container">
                 <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
                     class="background-image" />
                 <div class="overlay">
-                    <span class="sub-title">Lorem <?= get_field("sue_title") ?></span>
+                    <span class="sub-title"><?= get_field("sue_title") ?></span>
                     <span class="main-title"><?= get_field("sue_main_title") ?></span>
 
                     <div class="row">
@@ -1313,8 +1356,219 @@
 
         </div>
 
+        <!-- New Section -->
+
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col12 col-lg-6">
+                <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
+                    style="max-width: 451px;height: 492px;border-radius: 25px; object-fit:cover" />
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-12 col-lg-6">
+                <div
+                    style="max-width:641px; max-height:492px; border: 1px solid #CBCFDE; border-radius: 25px; padding:45px 20px;">
+                    <div class="custom-pagination">
+                        <div class="custom-number active" data-index="0">
+                            1
+                            <span class="custom-title">Mi vel turpis vitae mi a id vitae</span>
+                        </div>
+                        <div class="custom-number" data-index="1">2
+
+                            <span class="custom-title">Vel turpis lacus vitae mi mollis</span>
+                        </div>
+                        <div class="custom-number" data-index="2">3
+
+                            <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
+                        </div>
+                    </div>
+                    <div style="border-bottom: 1px solid #CBCFDE; margin: 40px 0;"></div>
+
+                    <div class="swiper sample-slider" style="background-color:; width: 85%; margin: 0 auto;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h1>Mi vel turpis vitae mi a id vitae turpis lacus vitae mi mollis</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
+                                    porttitor
+                                    vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
+                                </p>
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                    <a href="#"
+                                        style="background-color: #25325F; height:30px; width:30px; border-radius: 8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;" />
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <h1>Vel turpis lacus vitae mi mollis</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
+                                    porttitor
+                                    vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
+                                </p>
+
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                    <a href="#"
+                                        style="background-color:#25325F;; height:30px; width:30px; border-radius: 8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <h1>Turpis lacus vitae mi mollis volutpat</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
+                                    porttitor
+                                    vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
+                                </p>
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                    <a href="#"
+                                        style="background-color:#25325F;; height:30px; width:30px; border-radius: 8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;" />
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="border-radius:40px;background: #25325F; height:540px;  margin-top:150px;">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class=""
+                        style="border-radius:40px; border:1px solid gray; margin-top:10px; background-color:; color:white;height: 520px;">
+                        <div
+                            style="display: flex; flex-direction: column; justify-content: flex-start; margin-left:50px; margin-top:50px;">
+                            <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
+                                style="max-width:72px;height:72px;border-radius:15px; object-fit:cover" />
+                            <span
+                                style="margin-top:50px; color:  #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px ">Firstnmae:</span>
+                            <span
+                                style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height: 150%;  39px">Let's
+                                talk</span>
+                        </div>
+
+                        <div style=" margin-left:50px; margin-top:50px;">
+                            <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                <a href="#" style="background: #E94271; height:30px; width:30px; border-radius: 8px;"
+                                    class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                        alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0;" />
+                                </a>
+                                <span
+                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl</span>
+                            </div>
+
+                            <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                <a href="#" style="background-color:white; height:30px; width:30px; border-radius: 8px;"
+                                    class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                        alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0;color:black" />
+                                </a>
+                                <span
+                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                    345 656 666</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Right column -->
+                <div class="col-12 col-lg-9">
+                    <div
+                        style="border-radius:40px; border:1px solid gray; margin-top:10px; background-color:pink; color:white;height: 520px;">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Form Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <div class="d-flex flex-row">
+
+
+
+                        <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
+                            style="margin-top:50px">
+
+                            <?php
+                            foreach (get_field("arrow_section") as $testimonails) {
+                                ?>
+                            <div class="col-lg"
+                                style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <img src="<?= $testimonails['img_1']['url'] ?>"
+                                        alt=" <?= $testimonails['img_1']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " />
+
+                                    <img src="<?= $testimonails['img_2']['url'] ?>"
+                                        alt=" <?= $testimonails['img_2']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " />
+
+                                    <img src="<?= $testimonails['img_3']['url'] ?>"
+                                        alt=" <?= $testimonails['img_3']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " />
+
+                                    <!-- <img src="<?= $testimonails['img_4']['url'] ?>"
+                                        alt=" <?= $testimonails['img_4']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " /> -->
+
+                                    <img src="<?= $testimonails['img_5']['url'] ?>"
+                                        alt=" <?= $testimonails['img_5']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " />
+
+                                    <!-- <img src="<?= $testimonails['img_6']['url'] ?>"
+                                        alt=" <?= $testimonails['img_6']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " /> -->
+
+                                    <img src="<?= $testimonails['img_7']['url'] ?>"
+                                        alt=" <?= $testimonails['img_7']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " />
+
+                                    <img src="<?= $testimonails['img_8']['url'] ?>"
+                                        alt=" <?= $testimonails['img_8']['alt'] ?>" class="sue-img"
+                                        style="width: 87.239px;height: 139.295px;flex-shrink: 0; object-fit: " />
+
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
+
 
 
 
@@ -1405,7 +1659,7 @@
         spaceBetween: 1,
 
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination1',
             clickable: true,
         },
         navigation: {
@@ -1443,6 +1697,40 @@
 
         }
     })
+    </script>
+
+
+
+
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const swiper = new Swiper('.sample-slider', {
+            loop: false,
+        });
+
+        // Custom Pagination
+        const numbers = document.querySelectorAll('.custom-number');
+        numbers.forEach((number, index) => {
+            number.addEventListener('click', () => {
+                // Remove active class from all numbers
+                numbers.forEach(num => num.classList.remove('active'));
+
+                // Add active class to clicked number
+                number.classList.add('active');
+
+                // Slide to the corresponding index
+                swiper.slideTo(index);
+            });
+        });
+
+        // Update custom pagination on slide change
+        swiper.on('slideChange', function() {
+            const activeIndex = swiper.activeIndex;
+            numbers.forEach(num => num.classList.remove('active'));
+            numbers[activeIndex].classList.add('active');
+        });
+    });
     </script>
 
 
