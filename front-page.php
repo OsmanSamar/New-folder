@@ -5,6 +5,149 @@
 
 <main class="front-page">
     <style>
+    /* Container for the background image and overlay */
+    .responsive-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .background-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Overlay styles */
+
+    .overlay2 {
+        /* position: absolute; */
+        top: 50%;
+        left: 24%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 14px;
+        width: 90%;
+        max-width: 450px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+
+
+    /* Subtitle styles */
+    .sub-title {
+        background-color: #274083;
+        color: #FFF;
+        padding: 5px 20px;
+        border-radius: 40px;
+        font-family: Manrope, sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    /* Main title styles */
+    .main-title {
+        color: #25325F;
+        font-family: Manrope, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    /* Icon container */
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Individual icons */
+    .icon {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+        .overlay2 {
+            position: absolute;
+            top: 50%;
+            left: 24%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 14px;
+            width: 90%;
+            max-width: 450px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        .sub-title {
+            font-size: 1rem;
+        }
+
+        .main-title {
+            font-size: 2rem;
+        }
+
+        .icon {
+            width: 140px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .overlay2 {
+
+            display: none;
+
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 24%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 14px;
+            width: 90%;
+            max-width: 450px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* .overlay {
+            width: 449px;
+            max-width: none;
+        } */
+
+        .icon {
+            width: 160px;
+        }
+    }
+
+
+    /*  */
     .mySwiper2 .swiper-pagination-bullet {
         background-color: white;
     }
@@ -677,6 +820,7 @@
 
     </div>
 
+    <!-- The blue block -->
     <div style="border-radius:40px;background: #25325F; height:850px;  margin-top:150px;">
         <div class="container">
             <div class="row">
@@ -869,19 +1013,305 @@
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of The blue block -->
+
+    <!-- SUE Insights -->
+    <div class="container" style="margin-top:40px;">
+
+
+        <div class="row">
+            <div class="col-6 col-lg-6">
+                <span
+                    style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
+                    <?= get_field("sue_insights") ?>
+                </span>
+            </div>
+            <div class="col-6 col-lg-6 ">
+                <div class=" d-flex flex-row align-items-center justify-content-end gap-3">
+                    <a href="#"
+                        style="background-color: #E94271; height:30px; width:30px; border-radius: 8px;background:#25325F;"
+                        class="d-flex justify-content-center align-items-center">
+                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                            style="width:12px; height:18px; margin:7px 0;" />
+                    </a>
+                    <span
+                        style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                        <?= get_field("sue_insights_text") ?>
+                    </span>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div style=" border-bottom: 1px solid  #25325F; margin:30px 0;"></div>
+
+        <div class="row">
+            <div class="col-12 col-lg-5 col-md-12">
 
 
 
+                <!-- Client Story -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-5 col-md-12" style="margin-top:150px;">
+                            <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
+                            <div class="col">
+                                <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
+                                    <div class="row g-0 align-items-center">
+                                        <div class=" col-4 ">
+                                            <img src="<?= $testimonial['img']['url'] ?>"
+                                                alt="<?= $testimonial['img']['alt'] ?>" class="testimonial-img" />
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="card-body">
+                                                <div
+                                                    class="d-flex flex-row align-items-center justify-content-left gap-4">
+                                                    <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>"
+                                                        style="width:94px; height:30px;">
+                                                        <?= $testimonial['btn']['title'] ?>
+                                                    </a>
+                                                    <h4 class="card-title" style="">
+                                                        <?= $testimonial["client_name"] ?>
+                                                    </h4>
+                                                </div>
+                                                <h4 class="card-text mt-2"
+                                                    style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
+                                                    <?= $testimonial["text"] ?>
+                                                    <a href="#">
+                                                        <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                            alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
                 </div>
 
 
 
 
+            </div>
+            <div class="d-none d-md-none d-lg-block col-lg-3"></div>
+            <div class="col-12 col-lg-4">
+                <!-- hereeee -->
+                <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
+                    style="margin-left:; color:#FFF; margin-top:150px;">
+                    <span
+                        style="background-color:#274083;width:243px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; text-align:center">Lorem
+                        <?= get_field("sub_title") ?>
+                    </span>
+                    <span
+                        style="color:#25325F;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 39px;">
+                        <?= get_field("main_title") ?>
 
+                    </span>
+                    <span
+                        style="color:#6A7291;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:  27.2px;">
+                        <?= get_field("text") ?>
+                    </span>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12 col-lg-6" style="">
+
+                        <div style="border-bottom: 1px solid   #25325F; ">
+
+                            <div class=" d-flex flex-row align-items-center justify-content-between  gap-3 mt-4"
+                                style="margin:20px 0;">
+                                <span
+                                    style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <?= get_field("knowledge") ?>
+                                </span>
+                                <a href="#" class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("knowledge_link")['url'] ?>"
+                                        alt="<?= get_field("knowledge_link")['alt'] ?>"
+                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                        <div style="border-bottom: 1px solid  #25325F;">
+                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                style="margin:20px 0;">
+                                <span
+                                    style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <?= get_field("client_stories") ?>
+                                </span>
+                                <a href="#" class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("client_stories_link")['url'] ?>"
+                                        alt="<?= get_field("client_stories_link")['alt'] ?>"
+                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div style="border-bottom: 1px solid  #25325F;">
+                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                style="margin:20px 0;">
+                                <span
+                                    style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <?= get_field("events") ?>
+                                </span>
+                                <a href="#" class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("events_link")['url'] ?>"
+                                        alt="<?= get_field("client_stories_link")['alt'] ?>"
+                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-12 col-lg-6 ">
+
+                        <div style="border-bottom: 1px solid  #25325F;">
+                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                style="margin:20px 0;">
+                                <span
+                                    style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <?= get_field("resources") ?>
+                                </span>
+                                <a href="#" class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("resources_link")['url'] ?>"
+                                        alt="<?= get_field("resources_link")['alt'] ?>"
+                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <div style="border-bottom: 1px solid  #25325F;">
+                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                style="margin:20px 0;">
+                                <span
+                                    style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <?= get_field("video") ?>
+                                </span>
+                                <a href="#" class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("videos_link")['url'] ?>"
+                                        alt="<?= get_field("videos_link")['alt'] ?>"
+                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                </a>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="row">
+            <div class=" " style="position:relative; ">
+                <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
+                    style="height:610px" />
+                <div class="d-flex flex-column align-items-left justify-content-center"
+                    style="background-color:white; border-radius:14px;width: 449px;height: 454px; position: absolute; top:15%;left:88px;">
+                    <span
+                        style="background-color:#274083;width:243px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; text-align:center; margin-left:35px;">Lorem
+                        <?= get_field("sub_title") ?>
+                    </span>
+                    <span
+                        style="color:#25325F;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 39px;  margin-left:37px;">
+                        <?= get_field("main_title") ?>
+                    </span>
+
+                    <div class="row">
+                        <div class="col-12 col-lg-12" style="margin-left:16px; margin-top:30px;">
+
+                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                alt="<?= get_field("rabobank_icon")['alt'] ?>"
+                                style="width: 161px;height: 82px; margin-left:20px;" />
+                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                                style="width: 161px;height: 82px; margin-left:20px;" />
+                        </div>
+
+                        <div class="col-12 col-lg-12" style="margin-left:16px; margin-top:30px;">
+
+                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                                style="width: 161px;height: 82px; margin-left:20px;" />
+                            <img src="<?= get_field("booking_icon")['url'] ?>"
+                                alt="<?= get_field("booking_icon")['alt'] ?>"
+                                style="width: 161px;height: 82px; margin-left:20px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="responsive-container">
+                <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
+                    class="background-image" />
+                <div class="overlay">
+                    <span class="sub-title">Lorem <?= get_field("sub_title") ?></span>
+                    <span class="main-title"><?= get_field("main_title") ?></span>
+
+                    <div class="row">
+                        <div class="icon-container col-12 col-lg-12">
+                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                                class="icon" />
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                            class="icon" />
+                        <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
+                            class="icon" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="overlay2">
+                <span class="sub-title">Lorem <?= get_field("sub_title") ?></span>
+                <span class="main-title"><?= get_field("main_title") ?></span>
+
+                <div class="row">
+                    <div class="icon-container col-12 col-lg-12">
+                        <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                            alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                        <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                            class="icon" />
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                        class="icon" />
+                    <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
+                        class="icon" />
+                </div>
             </div>
 
         </div>
+
 
     </div>
 
@@ -890,6 +1320,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------------------------------------------------------------- -->
 
 
     <!-- Swiper JS -->
