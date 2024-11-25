@@ -146,8 +146,8 @@
 
                 <!-- Arrow and Let's Talk -->
                 <div class="d-none d-lg-flex align-items-center justify-content-center gap-3 mt-4">
-                    <a href="<?= esc_url(home_url('/')); ?>" style="border-radius: 14px;
-                                        background-color: #E94271; height:34px; width:48px;"
+                    <a href="<?= esc_url(home_url('/')); ?>"
+                        style="border-radius:8px;background-color: #E94271; height:30px; width:30px;"
                         class="d-flex justify-content-center align-items-center">
                         <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
                             style="width:12px; height: 18px; margin:7px 0;  ">
