@@ -274,10 +274,11 @@
 
     .swiper-container {
         position: relative;
+        overflow: hidden;
 
     }
 
-    .swiper-container .swiper-pagination {
+    /* .swiper-container .swiper-pagination {
         bottom: -50px !important;
         display: block;
     }
@@ -290,6 +291,27 @@
 
     .swiper-pagination {
         position: relative;
+    } */
+
+    .swiper-pagination {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        flex-direction: row;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #E94271;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #FFF;
+        /* Highlight active bullet */
     }
 
 
@@ -557,7 +579,6 @@
 
 
 
-
     }
     </style>
 
@@ -606,69 +627,44 @@
 
 
         <!-- width:1280px; -->
-        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;   margin-top:120px;">
-            <div class="d-flex flex-row align-items-center justify-content-around">
+        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:120px;">
+            <div class="d-flex flex-row align-items-center justify-content-around gap-2" style="position:relative;">
 
 
-                <!-- pagination-container -->
-                <!-- <div class="">
-                    <div class="pagination-container d-flex flex-row align-items-start" style="margin-left:20px;">
-                        <button class="pagination-btn active" data-target="0"></button>
-                        <button class="pagination-btn" data-target="1"></button>
-                        <button class="pagination-btn" data-target="2"></button> 
+                <!-- Pagination -->
+                <div class="swiper-pagination"
+                    style="position: relative; left: ; top: ; transform: translateY(50%); width: ;">
+                </div>
 
-                         <div class="pagination-btn swiper-pagination active"></div>
-                    </div>
-                </div> -->
-
-                <!-- Btn Trending -->
-                <!-- <div class="">
+                <!-- Button -->
+                <div style="position: relative;">
                     <a href="<?= get_field("trending_btn")['url'] ?>"
-                        style="white-space:nowrap; color: #FFF;font-family: Manrope;font-size: 13px;font-style:normal;font-weight: 700;line-height:180%; background-color:#E94271; border-radius:20px; ;"
-                        class="btn  ">
+                        style="white-space: nowrap; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 180%; background-color: #E94271; border-radius: 20px; padding: 8px 16px;"
+                        class="btn">
                         <?= get_field("trending_btn")['title'] ?>
                     </a>
-                </div> -->
-
-
-                <div class="d-flex flex-row align-items-center justify-content-around gap-4"
-                    style="width:50%; overflow:hidden; position:relative;">
-
-                    <!-- Btn Trending -->
-                    <div class="" style=" position: absolute;left: 10%;">
-                        <a href="<?= get_field("trending_btn")['url'] ?>"
-                            style="white-space:nowrap; color: #FFF;font-family: Manrope;font-size: 13px;font-style:normal;font-weight: 700;line-height:180%; background-color:#E94271; border-radius:20px; ;"
-                            class="btn  ">
-                            <?= get_field("trending_btn")['title'] ?>
-                        </a>
-                    </div>
-
-                    <div class=" " style="width:50%; overflow:hidden; position:absolute; left:-22%;top:43%;">
-                        <div class="swiper-pagination">
-                        </div>
-                    </div>
-                    <!-- The first one for text on blue top img -->
-                    <div class="swiper swiper-container " style="flex-grow:1; --swiper-pagination-color: #E94271">
-                        <div class="swiper-wrapper" style=" position: relative;left: 41%; overflow:hidden;">
-                            <div class="swiper-slide">
-                                <span style="color: white; text-align:left; font-size:16px;">There is space here for
-                                    the title of a
-                                    trending article</span>
-                            </div>
-                            <div class="swiper-slide">
-                                <span style="color: white; text-align: center; font-size:16px;">Scrolling Text Example 2
-                                </span>
-                            </div>
-                            <div class="swiper-slide">
-                                <span style="color: white; text-align: center; font-size:16px;">Scrolling Text Example 3
-                                </span>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- <div class="swiper-pagination"></div> -->
-
                 </div>
+
+                <!-- Swiper Container -->
+                <div class="swiper swiper-container" style="flex-grow: 1; --swiper-pagination-color: #E94271;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <span style="color: white; font-size: 16px;">There is space here for the title of a trending
+                                article</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <span style="color: white; font-size: 16px;">Scrolling Text Example 2</span>
+                        </div>
+                        <div class="swiper-slide">
+                            <span style="color: white; font-size: 16px;">Scrolling Text Example 3</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
 
 
 
@@ -1945,10 +1941,10 @@
             el: '.swiper-pagination',
             clickable: true,
         },
-        navigation: { //navigation(arrows)
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+        // navigation: { 
+        //     nextEl: ".swiper-button-next",
+        //     prevEl: ".swiper-button-prev",
+        // },
     })
     </script>
 
