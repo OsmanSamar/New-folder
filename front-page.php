@@ -587,19 +587,23 @@
                         style="position:relative; padding:20px 20px">
 
 
-                        <div class="col-3 col-lg-1">
+
+                        <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block">
                         </div>
 
+
                         <!-- Pagination -->
-                        <div class="col-3 col-lg-2">
+
+                        <div class="col-2 col-lg-2 d-none d-md-block d-lg-block">
                             <div class="swiper-pagination2"
                                 style="position:relative;   transform: translateY(50%);  z-index:1;">
                             </div>
                         </div>
 
 
+
                         <!-- Button -->
-                        <div class="col-3 col-lg-2">
+                        <div class="col-2 col-lg-2">
                             <div style="position: relative; margin:0 ">
                                 <a href="<?= get_field("trending_btn")['url'] ?>"
                                     style="white-space: nowrap; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 180%; background-color: #E94271; border-radius: 20px; padding: 4px 12px;"
@@ -608,7 +612,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-3 col-lg-4">
+                        <div class="col-4 col-lg-4">
 
                             <!-- Swiper Container -->
                             <div class="swiper swiper-container"
@@ -630,7 +634,7 @@
                             </div>
 
                         </div>
-                        <div class="col-3 col-lg-2">
+                        <div class="col-2 col-lg-2">
 
                             <div class="d-flex justify-content-end align-items-center">
                                 <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
@@ -641,7 +645,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-3 col-lg-1"></div>
+                        <div class="d-none d-md-flex d-lg-flex">
+                            <div class="col-3 col-lg-1"></div>
+                        </div>
 
 
                     </div>
@@ -1943,10 +1949,7 @@
                 el: '.swiper-pagination2',
                 clickable: true,
             },
-            // navigation: { 
-            //     nextEl: ".swiper-button-next",
-            //     prevEl: ".swiper-button-prev",
-            // },
+
         })
     </script>
 
@@ -1969,7 +1972,7 @@
                 prevEl: ".swiper-button-prev",
             },
 
-            breakpoi nts: {
+            breakpoints: {
 
 
                 540: {
@@ -1996,86 +1999,86 @@
     </script>
 
 
-    <scr ipt>
-        let swip er3 = new Swiper('.mySwiper2', {
-        slid esPerView: 1.3,
-        grabCursor: true,
-        spaceBetween: 1,
+    <script>
+        let swiper3 = new Swiper('.mySwiper2', {
+            slidesPerView: 1.3,
+            grabCursor: true,
+            spaceBetween: 1,
 
-        pagination: {
-        el: '.swiper-pagination1',
-        clickable: true,
-        },
-        navigati on: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        },
+            pagination: {
+                el: '.swiper-pagination1',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
 
-        breakpoi nts: {
-
-
-        410: {
-        slidesPerView: 1.1,
-        spaceBetween: 4,
-
-        },
-
-        540: {
-        slidesPerView: 1.4,
-        spaceBetween: 2,
-
-        },
-
-        556: {
-        slidesPerView: 2.3,
+            breakpoints: {
 
 
-        spaceBetween: 2,
-        },
-        992: {
+                410: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 4,
 
-        slidesPerView: 3.5,
-        spaceBetween: 0,
-        }
+                },
+
+                540: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 2,
+
+                },
+
+                556: {
+                    slidesPerView: 2.3,
 
 
-        }
+                    spaceBetween: 2,
+                },
+                992: {
+
+                    slidesPerView: 3.5,
+                    spaceBetween: 0,
+                }
+
+
+            }
         })
-        </script>
+    </script>
 
 
 
 
 
-        <script>
-            document.add EventListener("DOMContentLoaded", function () {
-                const swiper = new Swiper('.sample-slider', {
-                    loop: false,
-                });
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.sample-slider', {
+                loop: false,
+            });
 
-                // Custo m Pagination
-                const nu mbers = document.querySelectorAll('.custom-number');
-            numb ers.forEach((number, index) => {
-                    number.addEventListener('click', () => {
-                        // Remove active class from all numbers
-                        numbers.forEach(num => num.classList.remove('active'));
-
-                        // Add active class to clicked number
-                        number.classList.add('active');
-
-                        // Slide to the corresponding index
-                        swiper.slideTo(index);
-                    });
-                });
-
-                // Update custom pagination on slide change
-                swiper.on('slideChange', function () {
-                    const activeIndex = swiper.activeIndex;
+            // Custom Pagination
+            const numbers = document.querySelectorAll('.custom-number');
+            numbers.forEach((number, index) => {
+                number.addEventListener('click', () => {
+                    // Remove active class from all numbers
                     numbers.forEach(num => num.classList.remove('active'));
-                    numbers[activeIndex].classList.add('active');
+
+                    // Add active class to clicked number
+                    number.classList.add('active');
+
+                    // Slide to the corresponding index
+                    swiper.slideTo(index);
                 });
             });
-        </script>
+
+            // Update custom pagination on slide change
+            swiper.on('slideChange', function () {
+                const activeIndex = swiper.activeIndex;
+                numbers.forEach(num => num.classList.remove('active'));
+                numbers[activeIndex].classList.add('active');
+            });
+        });
+    </script>
 
 
 
