@@ -101,7 +101,7 @@
 
 
 
-        /* Subtitle styles */
+
         .sub-title {
             background-color: #274083;
             color: #FFF;
@@ -110,16 +110,17 @@
             font-family: Manrope, sans-serif;
             font-size: 0.8rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
-        /* Main title styles */
+
         .main-title {
             color: #25325F;
             font-family: Manrope, sans-serif;
-            font-size: 1.5rem;
+            font-size: 22px;
             font-weight: 700;
             margin-bottom: 20px;
+            text-align: center;
         }
 
         /* Icon container */
@@ -138,272 +139,6 @@
         }
 
         /* Responsive Design */
-        @media (min-width: 768px) {
-            .overlay2 {
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #EDF3F4;
-                border-radius: 15px;
-                width: 90%;
-                max-width: 400px;
-                padding: 32px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .overlay {
-                display: none;
-            }
-
-            .sub-title {
-                font-size: 1rem;
-            }
-
-            .main-title {
-                font-size: 2rem;
-            }
-
-            .icon {
-                width: 140px;
-            }
-        }
-
-        @media (min-width: 992px) {
-
-            .bg_img {
-                height: 648px;
-            }
-
-            .form_section {
-                height: 550px;
-            }
-
-            .arrow_section {
-
-                width: 87.239px;
-                height: 139.295px;
-                flex-shrink: 0;
-                object-fit: cover;
-                margin-right: 60px;
-            }
-
-            .overlay2 {
-
-                display: none;
-
-            }
-
-            /* Overlay styles */
-            .overlay {
-                position: absolute;
-                top: 50%;
-                left: 24%;
-                transform: translate(-50%, -50%);
-                background-color: white;
-                border-radius: 14px;
-                width: 90%;
-                max-width: 450px;
-                padding: 32px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            /* .overlay {
-            width: 449px;
-            max-width: none;
-        } */
-
-            .icon {
-                width: 160px;
-            }
-        }
-
-
-        /*  */
-        .mySwiper2 .swiper-pagination-bullet {
-            background-color: white;
-        }
-
-        .mySwiper2 .swiper-pagination-bullet-active {
-            background-color: #E94271;
-        }
-
-        /* .swiper-container2 {
-        position: relative;
-        width: 70%;
-        margin: 0 auto;
-    }
-
-    .swiper-container2 .swiper-button-prev {
-        left: -40px;
-    }
-
-    .swiper-container2 .swiper-button-next {
-        right: -40px;
-    }
-
-    .swiper-container2 .swiper-pagination {
-        bottom: -30px !important;
-    }
-
-    .swiper-container2 img {
-        width: 100%;
-    } */
-
-        .mySwiper1 {
-            width: 100%;
-
-        }
-
-        .mySwiper1 .swiper-slide {
-            margin: 0;
-            padding: 0;
-        }
-
-        .sample-slider .swiper-slide {
-            margin: 0;
-            padding: 0;
-        }
-
-
-        .swiper-container {
-            position: relative;
-            overflow: hidden;
-
-        }
-
-        /* .swiper-container .swiper-pagination {
-        bottom: -50px !important;
-        display: block;
-    }
-
-    .swiper-container .swiper-pagination-bullet {
-        width: 15px;
-        height: 15px;
-
-    }
-
-    .swiper-pagination {
-        position: relative;
-    } */
-
-        .swiper-pagination {
-            display: flex !important;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            flex-direction: row;
-        }
-
-        .swiper-pagination-bullet {
-            background-color: #E94271;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            opacity: 1;
-        }
-
-        .swiper-pagination-bullet-active {
-            background-color: #FFF;
-            /* Highlight active bullet */
-        }
-
-
-
-        /*  */
-        .img-container {
-            height: 350px;
-            margin-top: -120px;
-        }
-
-        .bg-container {
-            height: 200px;
-        }
-
-
-
-        .left-text {
-            color: #25325F;
-            font-family: Sora;
-            font-size: 45px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 120%;
-        }
-
-        .vl {
-            width: 1px;
-            height: 81.006px;
-            background: #25325F;
-        }
-
-        .right-text {
-            color: #25325F;
-            font-family: Manrope;
-            /* font-family: Sora; */
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 150%;
-        }
-
-        .card {
-            border-radius: 20px;
-            border: 1px solid #CBCFDE;
-            background: #EDF3F4;
-            width: ;
-
-
-        }
-
-        .testimonial-img {
-            width: 95px;
-            height: 95px;
-            flex-shrink: 0;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-left: 12px;
-        }
-
-        .client-btn {
-            border-radius: 14px;
-            color: #FFFFFF;
-            background-color: #E94271;
-            width: 106px;
-            height: 26px;
-            text-align: center;
-        }
-
-        .card-title {
-            color: #25325F;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 27px;
-        }
-
-        /* .bg-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: -195px;
-    }
-
-    .testimonial-container {
-
-        border-radius: 15px;
-        background-color: #EFBDC5;
-        width: 350px;
-       
-        margin: 10px 0;
-
-    } */
-
         @media (min-width: 768px) {
 
             .container2 {
@@ -430,84 +165,46 @@
                 border-radius: 15px;
                 margin-left: 12px;
             }
-        }
 
-        @media (min-width: 992px) {
-
-            .container2 {
-
-                margin-top: -45px;
-            }
-
-            .testimonial-container {
-
-                border-radius: 15px;
+            .overlay2 {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 background-color: #EDF3F4;
-                width: 390px;
-                height: 287px;
-                margin: 0 18px;
-
-            }
-
-
-
-            .card {
-                border-radius: 20px;
-                border: 1px solid #CBCFDE;
-                background: #EDF3F4;
-                width: 546px;
-                height: 172px;
-
-            }
-
-            .testimonial-img {
-                width: 166px;
-                height: 131px;
-                flex-shrink: 0;
-                object-fit: cover;
                 border-radius: 15px;
-                margin-left: 12px;
-            }
-
-            .client-btn {
-                border-radius: 14px;
-                color: #FFFFFF;
-                background-color: #E94271;
-                width: 106px;
-                height: 26px;
+                width: 90%;
+                max-width: 400px;
+                padding: 32px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
 
-            .card-title {
-
-                font-size: 15px;
-
+            .overlay {
+                display: none;
             }
 
-
-
-            .bg-container {
-                height: 361px;
+            .sub-title {
+                font-size: 1rem;
             }
 
-            .img-container {
-                height: 648px;
-                margin-top: -270px;
+            .main-title {
+                font-size: 26px;
             }
 
-            .left-text {
-                font-family: Sora;
-                font-size: 45px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 120%;
+            .icon {
+                width: 140px;
             }
-
-
-
         }
 
+
+
+
         @media (min-width: 992px) {
+
+
             .m-scroll {
                 display: flex;
                 position: relative;
@@ -576,70 +273,325 @@
                 background-color: #E94271;
             }
 
+            .resources {
+                margin-top: 40px;
+            }
+
+            .container2 {
+
+                margin-top: 250px;
+            }
+
+            .testimonial-container {
+
+                border-radius: 15px;
+                background-color: #EDF3F4;
+                width: 390px;
+                height: 287px;
+                margin: 0 18px;
+
+            }
 
 
 
+            .card {
+                border-radius: 20px;
+                border: 1px solid #CBCFDE;
+                background: #EDF3F4;
+                width: 546px;
+                height: 172px;
+
+            }
+
+            .testimonial-img {
+                width: 166px;
+                height: 131px;
+                flex-shrink: 0;
+                object-fit: cover;
+                border-radius: 15px;
+                margin-left: 12px;
+            }
+
+            .client-btn {
+                border-radius: 14px;
+                color: #FFFFFF;
+                background-color: #E94271;
+                width: 106px;
+                height: 26px;
+                text-align: center;
+            }
+
+            .card-title {
+
+                font-size: 15px;
+
+            }
+
+
+
+            .bg-container {
+                height: 361px;
+            }
+
+            .img-container {
+                height: 648px;
+                margin-top: -270px;
+            }
+
+            .left-text {
+                font-family: Sora;
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+            }
+
+
+            .bg_img {
+                height: 648px;
+            }
+
+            .form_section {
+                height: 550px;
+            }
+
+            .arrow_section {
+
+                width: 87.239px;
+                height: 139.295px;
+                flex-shrink: 0;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+
+            .overlay2 {
+
+                display: none;
+
+            }
+
+            /* Overlay styles */
+            .overlay {
+                position: absolute;
+                top: 50%;
+                left: 24%;
+                transform: translate(-50%, -50%);
+                background-color: white;
+                border-radius: 14px;
+                width: 90%;
+                max-width: 450px;
+                padding: 32px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+            }
+
+
+
+            .icon {
+                width: 160px;
+            }
+        }
+
+
+
+
+        /*  */
+        .mySwiper2 .swiper-pagination-bullet {
+            background-color: white;
+        }
+
+        .mySwiper2 .swiper-pagination-bullet-active {
+            background-color: #E94271;
+        }
+
+
+
+        .mySwiper1 {
+            width: 100%;
+
+        }
+
+        .mySwiper1 .swiper-slide {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sample-slider .swiper-slide {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .swiper-container {
+            position: relative;
+            overflow: hidden;
+
+        }
+
+
+
+        .swiper-pagination {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+            flex-direction: row;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #E94271;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #FFF;
+
+        }
+
+
+
+
+        .img-container {
+            height: 350px;
+            margin-top: -120px;
+        }
+
+        .bg-container {
+            height: 200px;
+        }
+
+
+
+        .left-text {
+            color: #25325F;
+            font-family: Sora;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+        }
+
+        .vl {
+            width: 1px;
+            height: 81.006px;
+            background: #25325F;
+        }
+
+        .right-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        .card {
+            border-radius: 20px;
+            border: 1px solid #CBCFDE;
+            background: #EDF3F4;
+            width: ;
+
+
+        }
+
+        .testimonial-img {
+            width: 95px;
+            height: 95px;
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-left: 12px;
+        }
+
+        .client-btn {
+            border-radius: 14px;
+            color: #FFFFFF;
+            background-color: #E94271;
+            width: 106px;
+            height: 26px;
+            text-align: center;
+        }
+
+        .card-title {
+            color: #25325F;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 27px;
         }
     </style>
 
 
 
-    <div class="container" style="margin-top:180px">
+    <div class="container">
 
-        <div class="row">
-            <div class="d-flex align-items-center justify-content-between">
-                <h1 class="left-text ">
-                    <!-- Cloud complexity made <span style="color:#E94271">simple</span> -->
-                    <?= get_field("left_text") ?>
+        <!-- 1 -->
+        <div class="container" style="margin-top:180px">
+            <div class=" row">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h1 class="left-text ">
+                        <!-- Cloud complexity made <span style="color:#E94271">simple</span> -->
+                        <?= get_field("left_text") ?>
 
-                </h1>
-                <div class="vl d-none d-lg-flex "></div>
+                        <span style="color:#E94271"><?= get_field("left_text_pink_word") ?></span>
+
+                    </h1>
+                    <div class="vl d-none d-lg-flex "></div>
 
 
-                <p class="right-text d-none d-lg-flex ">
-                    <?= get_field("right_text") ?>
-                </p>
-            </div>
-        </div>
-
-        <div class="d-flex d-lg-none" style="margin-top:50px;">
-            <div class="row">
-                <div class="col-6 d-flex align-items-center justify-content-center ">
-                    <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
-                        background-color: #E94271; height:39px; width:44px;"
-                        class="d-flex justify-content-center align-items-center">
-                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                            style="width:12px; height:18px; margin:7px 0;  ">
-                    </a>
-                    <a href="<?= esc_url(home_url('/')); ?>"
-                        style="font-family: Manrope; font-size:14px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;margin: 0 10px;">
-                        Let's talk
-                    </a>
+                    <p class="right-text d-none d-lg-flex ">
+                        <?= get_field("right_text") ?>
+                    </p>
                 </div>
-                <p class="right-text col-6">
-                    <!-- <?= get_field("right_text") ?> -->
-                    Empowering organizations to innovate faster
-                </p>
+            </div>
 
+            <div class="d-flex d-lg-none" style="margin-top:50px;">
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center justify-content-center ">
+                        <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
+                                background-color: #E94271; height:30px; width:30px;"
+                            class="d-flex justify-content-center align-items-center">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                                style="width:12px; height:18px; margin:7px 0;  ">
+                        </a>
+                        <a href="<?= esc_url(home_url('/')); ?>"
+                            style="font-family: Manrope; font-size:14px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;margin: 0 10px;">
+                            Let's talk
+                        </a>
+                    </div>
+                    <p class="right-text col-6">
+                        <!-- <?= get_field("right_text") ?> -->
+                        Empowering organizations to innovate faster
+                    </p>
+
+                </div>
             </div>
         </div>
+        <!-- 1 -->
 
 
-
+        <!-- 2 -->
         <!-- width:1280px; -->
-        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:120px;">
-            <div class="d-flex flex-row align-items-center justify-content-around gap-2" style="position:relative;">
+
+        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:80px;">
+            <div class="d-flex flex-row align-items-center justify-content-around gap-2"
+                style="position:relative; padding:20px 20px">
 
 
                 <!-- Pagination -->
-                <div class="swiper-pagination"
+                <div class="swiper-pagination "
                     style="position: relative; left: ; top: ; transform: translateY(50%); width: ;">
                 </div>
 
                 <!-- Button -->
-                <div style="position: relative;">
+                <div style="position: relative; margin:0 40px">
                     <a href="<?= get_field("trending_btn")['url'] ?>"
-                        style="white-space: nowrap; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 180%; background-color: #E94271; border-radius: 20px; padding: 8px 16px;"
+                        style="white-space: nowrap; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 180%; background-color: #E94271; border-radius: 20px; padding: 4px 12px;"
                         class="btn">
                         <?= get_field("trending_btn")['title'] ?>
                     </a>
@@ -649,7 +601,8 @@
                 <div class="swiper swiper-container" style="flex-grow: 1; --swiper-pagination-color: #E94271;">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <span style="color: white; font-size: 16px;">There is space here for the title of a trending
+                            <span style="color: white; font-size: 16px;">There is space here for the title of a
+                                trending
                                 article</span>
                         </div>
                         <div class="swiper-slide">
@@ -661,13 +614,6 @@
                     </div>
                 </div>
 
-
-
-
-
-
-
-
                 <div class="">
                     <a style="border-radius:14px; background-color:white; height:39px; width:44px;"
                         class="d-flex justify-content-center align-items-center" href="#">
@@ -678,6 +624,7 @@
 
             </div>
         </div>
+
 
 
 
@@ -738,7 +685,7 @@
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
                     <div class="testimonial-container" style=" ">
-                        <div style=" margin-top:25px;">
+                        <div style=" margin-top:25px; padding:0 20px">
                             <span
                                 style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;">
                                 <?= $testimonial["num"] ?>
@@ -748,18 +695,18 @@
                                 <?= $testimonial["sub_title"] ?>
                             </span>
                         </div>
-                        <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px ">
+                        <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px ">
                             <?= $testimonial["main_title"] ?>
                         </h1>
 
-                        <div style=" border-bottom: 1px solid  #25325F; margin:30px 0;"></div>
+                        <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
 
                         <p class=""
-                            style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;  ">
+                            style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px  ">
                             <?= $testimonial["text"] ?>
                         </p>
 
-                        <div class="d-flex align-items-center gap-2">
+                        <div class="d-flex align-items-center gap-2" style="padding:0 20px">
                             <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
                                 class="d-flex justify-content-center align-items-center" href="#">
                                 <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
@@ -780,12 +727,10 @@
 
 
         <!-- Sue_Partners Repeater On LG -->
-
-
         <div class="container">
             <div class="">
                 <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                    style="margin-top:50px">
+                    style="margin-top:100px">
                     <span class="col-lg-2 "
                         style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">SUE
                         partners:</span>
@@ -820,8 +765,6 @@
         <!--  Sue_Partners Repeater  Swiper On Small -->
         <div style="margin-top:50px; margin-bottom: 60px;">
             <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
-
-
                 <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
                     <div class="swiper-wrapper">
                         <?php
@@ -857,9 +800,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
 
 
@@ -902,25 +842,18 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
     </div>
 
     <!-- The blue block -->
-    <div class="container" style="border-radius:40px;background: #25325F;  margin-top:150px; height: height: 850px;">
+    <div class="container" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
         <div class="container">
             <div class="row">
                 <!-- Left Column -->
                 <div class="col-lg-4 ">
                     <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
-                        style="margin-left:23px; color:#FFF; margin-top:150px;">
+                        style="margin-left:23px; color:#FFF; margin-top:80px;">
                         <span
-                            style="background-color:#274083;width:243px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; text-align:center; padding: 3px 0;">
+                            style="background-color:#274083;width:223px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; padding: 3px 15px;">
 
                             <?= get_field("sub_title") ?>
 
@@ -928,6 +861,7 @@
                         <span
                             style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 39px;">
                             <?= get_field("main_title") ?>
+                            <!-- <span><?= get_field("blue_block_main_title_pink_word") ?></span> -->
 
                         </span>
                         <span
@@ -957,14 +891,13 @@
                     <div class="container">
 
                         <div class="row  d-flex flex-cloumn align-items-center justify-content-between gap-4"
-                            style=" margin-top:150px;">
+                            style=" margin-top:80px;">
 
                             <?php
                             foreach (get_field("testimonails_section") as $testimonails) {
                                 ?>
 
-                                <div class=""
-                                    style="border-radius:15px; background-color:; width:350px; height:99px; margin:35px 0;">
+                                <div class="" style="border-radius:15px;  width:350px; height:99px; margin:35px 0;">
                                     <div class="d-flex flex-row align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-around gap-2">
                                             <span
@@ -1011,7 +944,7 @@
                     <div class="container">
 
                         <div class="row  d-flex flex-cloumn align-items-center justify-content-between gap-4"
-                            style=" margin-top:150px;">
+                            style=" margin-top:80px;">
 
                             <?php
                             foreach (get_field("testimonails_section_right") as $testimonails) {
@@ -1059,7 +992,7 @@
                 </div>
 
                 <!-- Left columns Repeater  Swiper -->
-                <div style="margin-top:50px; margin-bottom: 60px;">
+                <div style="margin-top:160px; margin-bottom:;">
                     <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
 
                         <!-- here for swiper block on the big blue background -->
@@ -1175,20 +1108,18 @@
     <!-- End of The blue block -->
 
     <!-- SUE Insights -->
-    <div class="container" style="margin-top:40px;">
-
-
+    <div class="container" style="margin-top:120px;">
         <div class="row">
             <div class="col-6 col-lg-6">
                 <span
-                    style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
+                    style="color:#6A7291;font-family: Manrope;font-size:15px;font-style:normal;font-weight: 600;line-height:27px;">
                     <?= get_field("sue_insights") ?>
                 </span>
             </div>
             <div class="col-6 col-lg-6 ">
                 <div class=" d-flex flex-row align-items-center justify-content-end gap-3">
                     <a href="#"
-                        style="background-color: #E94271; height:30px; width:30px; border-radius:8px;background:#25325F;"
+                        style="background-color:#E94271; height:30px; width:30px; border-radius:8px; background:#25325F;"
                         class="d-flex justify-content-center align-items-center">
                         <img src="<?= get_field("sue_insights_link")['url'] ?>"
                             alt="<?= get_field("sue_insights_link")['alt'] ?>"
@@ -1198,24 +1129,18 @@
                         style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                         <?= get_field("sue_insights_text") ?>
                     </span>
-
                 </div>
-
-
             </div>
         </div>
 
-        <div style=" border-bottom: 1px solid  #25325F; margin:30px 0;"></div>
+        <div style=" border-bottom:0.5px solid  #CBCFDE; margin:30px 0;"></div>
 
         <div class="row">
             <div class="col-12 col-lg-5 col-md-12">
-
-
-
-                <!-- Client Story -->
+                <!-- Client Story2 -->
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-5 col-md-12" style="margin-top:150px;">
+                        <div class="col-12 col-lg-5 col-md-12" style="margin-top:60px;">
                             <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
                                 <div class="col">
                                     <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
@@ -1254,27 +1179,24 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
+
             <div class="d-none d-md-none d-lg-block col-lg-3"></div>
             <div class="col-12 col-lg-4">
                 <!-- Right Column  Knowledge And ReSources-->
                 <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
-                    style="margin-left:; color:#FFF; margin-top:150px;">
+                    style="margin-left:; color:#FFF; margin-top:60px; ">
                     <span
-                        style="background-color:#274083;width:243px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; text-align:center; padding:4px 0">
+                        style="background-color:#274083;width:243px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope;font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
                         <?= get_field("sub_title") ?>
                     </span>
                     <span
-                        style="color:#25325F;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 39px;">
+                        style="color:#25325F;font-family:Manrope;font-size:26px;font-style:normal;font-weight:700;line-height:39px; margin-bottom:15px;">
                         <?= get_field("main_title") ?>
 
                     </span>
                     <span
-                        style="color:#6A7291;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:  27.2px;">
+                        style="color:#6A7291;font-family:Manrope;font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:15px;">
                         <?= get_field("text") ?>
                     </span>
 
@@ -1282,9 +1204,9 @@
 
 
                 <div class="row">
-                    <div class="col-12 col-lg-6" style="">
+                    <div class="col-12 col-lg-6 resources" style="margin-top:;">
 
-                        <div style="border-bottom: 1px solid   #25325F; ">
+                        <div style="border-bottom: 0.5px solid   #25325F; ">
 
                             <div class=" d-flex flex-row align-items-center justify-content-between  gap-3 mt-4"
                                 style="margin:20px 0;">
@@ -1302,7 +1224,7 @@
                         </div>
 
 
-                        <div style="border-bottom: 1px solid  #25325F;">
+                        <div style="border-bottom: 0.5px solid  #25325F;">
                             <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                 style="margin:20px 0;">
                                 <span
@@ -1317,7 +1239,7 @@
                             </div>
                         </div>
 
-                        <div style="border-bottom: 1px solid  #25325F;">
+                        <div style="border-bottom: 0.5px solid  #25325F;">
                             <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                 style="margin:20px 0;">
                                 <span
@@ -1334,9 +1256,9 @@
 
                     </div>
 
-                    <div class="col-12 col-lg-6 ">
+                    <div class="col-12 col-lg-6 resources " style="margin-top:;">
 
-                        <div style="border-bottom: 1px solid  #25325F;">
+                        <div style="border-bottom: 0.5px solid  #25325F;">
                             <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                 style="margin:20px 0;">
                                 <span
@@ -1351,7 +1273,7 @@
                             </div>
                         </div>
 
-                        <div style="border-bottom: 1px solid  #25325F;">
+                        <div style="border-bottom: 0.5px solid  #25325F;">
                             <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                 style="margin:20px 0;">
                                 <span
@@ -1377,22 +1299,25 @@
                     class="background-image" />
                 <div class="overlay">
                     <span class="sub-title"><?= get_field("sue_title") ?></span>
-                    <span class="main-title"><?= get_field("sue_main_title") ?></span>
+                    <span class="main-title"><?= get_field("sue_main_title") ?>
 
-                    <div class="row">
-                        <div class="icon-container col-12 col-lg-12">
-                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
-                                class="icon" />
+                        <span class="main-title" style="color:#E94271"><?= get_field("sue_main_title_pink_word") ?>
+                        </span>
+
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="icon-container col-12 col-lg-12">
+                                <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                    alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                                <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                                    class="icon" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="icon-container">
-                        <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                            class="icon" />
-                        <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
-                            class="icon" />
-                    </div>
+                        <div class="icon-container">
+                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                                class="icon" />
+                            <img src="<?= get_field("booking_icon")['url'] ?>"
+                                alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
+                        </div>
                 </div>
             </div>
 
@@ -1602,7 +1527,7 @@
                                     <?= get_field("contact_en_adres_on_sm") ?>
                                 </span>
                                 <a href="#" data-bs-toggle="collapse" data-bs-target="#contact_en_adres_collapse"
-                                    aria-expanded="false" aria-controls="contact_en_adres_collapse">
+                                    aria-expanded="true" aria-controls="contact_en_adres_collapse">
                                     <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
                                         alt="<?= get_field("contact_en_adres_collapse")['alt'] ?>"
                                         style="width: 12px; height: 18px;" />
@@ -1627,6 +1552,44 @@
                                 </div>
                             </div>
 
+                            <!-- 
+                            <div class="card">
+                                <div
+                                    class="heading1 d-flex flex-row align-items-center justify-content-between  gap-3 d-md-flex d-lg-none gap-2 ">
+                                    <span
+                                        style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                        <?= get_field("contact_en_adres_on_sm") ?>
+                                    </span>
+                                    <a href="#" data-toggle="collapse" data-target="#contact_en_adres_collapse"
+                                        aria-expanded="true" aria-controls="contact_en_adres_collapse">
+                                        <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                            alt="<?= get_field("contact_en_adres_collapse")['alt'] ?>"
+                                            style="width: 12px; height: 18px;" />
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="collapse show" id="contact_en_adres_collapse" aria-labelledby="heading1"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="d-flex d-md-none d-lg-none flex-column align-items-flex-start gap-2">
+                                        <span
+                                            style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
+                                            <?= get_field("e_mail") ?>
+                                        </span>
+                                        <span>
+                                            <?= get_field("tele") ?>
+                                        </span>
+
+                                        <span
+                                            style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                            <?= get_field("address") ?></span>
+                                        <span> <?= get_field("city") ?></span>
+                                    </div>
+                                </div>
+                            </div> -->
+
                             <div class="d-flex d-md-flex d-lg-none"
                                 style=" border-bottom: 1px solid  #25325F; margin:30px 0;"></div>
 
@@ -1639,7 +1602,7 @@
                                     <?= get_field("information") ?>
                                 </span>
                                 <a href="#" data-bs-toggle="collapse" data-bs-target="#information_collapse"
-                                    aria-expanded="false" aria-controls="information_collapse">
+                                    aria-expanded="true" aria-controls="information_collapse">
                                     <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
                                         alt="<?= get_field("contact_en_adres_collapse")['alt'] ?>"
                                         style="width: 12px; height: 18px;" />
