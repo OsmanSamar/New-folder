@@ -5,89 +5,176 @@
 
 <main class="front-page">
     <style>
-        .bg_img {
-            height: 350px;
-        }
+    .bg_img {
+        height: 350px;
+    }
 
-        .form_section {
-            height: 1091px;
-        }
+    .form_section {
+        height: 1091px;
+    }
 
-        .arrow_section {
+    .arrow_section {
 
-            width: 57.851px;
-            height: 92.371px;
-            flex-shrink: 0;
-        }
+        width: 57.851px;
+        height: 92.371px;
+        flex-shrink: 0;
+    }
 
-        /* Custom Pagination Numbers */
-        .custom-pagination {
+    /* Custom Pagination Numbers */
+    .custom-pagination {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .custom-number {
+        position: relative;
+        background-color: #f0f0f0;
+        color: #000;
+        font-size: 16px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .custom-number.active {
+        background-color: #274083;
+        color: #fff;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .custom-number .custom-title {
+        display: none;
+        margin-left: 10px;
+        white-space: nowrap;
+    }
+
+    .custom-number.active .custom-title {
+        display: inline-block;
+    }
+
+
+    /* Container for the background image and overlay */
+    .responsive-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 70px 0;
+    }
+
+    .background-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Overlay styles */
+
+    .overlay2 {
+        position: relative;
+
+        left: 50%;
+        transform: translate(-50%, -49%);
+        background-color: #EDF3F4;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 350px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+
+
+
+    .sub-title {
+        background-color: #274083;
+        color: #FFF;
+        padding: 5px 20px;
+        border-radius: 40px;
+        font-family: Manrope, sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+
+    .main-title {
+        color: #25325F;
+        font-family: Manrope, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Icon container */
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Individual icons */
+    .icon {
+        width: 120px;
+        height: auto;
+    }
+
+    /* Responsive Design */
+    @media (min-width: 768px) {
+
+        .container2 {
             display: flex;
-            gap: 20px;
-            justify-content: flex-start;
             align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .custom-number {
-            position: relative;
-            background-color: #f0f0f0;
-            color: #000;
-            font-size: 16px;
-            font-weight: bold;
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            display: flex;
             justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            margin-top: -65px;
         }
 
-        .custom-number.active {
-            background-color: #274083;
-            color: #fff;
-            width: auto;
-            padding: 0 20px;
+        .testimonial-container {
+            border-radius: 15px;
+            background-color: #EDF3F4;
+            /* width: 390px; */
+            height: 229px;
+            margin: 20px 0;
+
         }
 
-        .custom-number .custom-title {
-            display: none;
-            margin-left: 10px;
-            white-space: nowrap;
-        }
-
-        .custom-number.active .custom-title {
-            display: inline-block;
-        }
-
-
-        /* Container for the background image and overlay */
-        .responsive-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            margin: 70px 0;
-        }
-
-        .background-image {
-            width: 100%;
-            height: auto;
+        .testimonial-img {
+            width: 182px;
+            height: 108px;
+            flex-shrink: 0;
             object-fit: cover;
+            border-radius: 15px;
+            margin-left: 12px;
         }
-
-        /* Overlay styles */
 
         .overlay2 {
             position: relative;
-
+            top: 50%;
             left: 50%;
-            transform: translate(-50%, -49%);
+            transform: translate(-50%, -50%);
             background-color: #EDF3F4;
             border-radius: 15px;
             width: 90%;
-            max-width: 350px;
+            max-width: 400px;
             padding: 32px;
             display: flex;
             flex-direction: column;
@@ -99,410 +186,126 @@
             display: none;
         }
 
-
-
-
         .sub-title {
-            background-color: #274083;
-            color: #FFF;
-            padding: 5px 20px;
-            border-radius: 40px;
-            font-family: Manrope, sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 15px;
+            font-size: 1rem;
         }
-
 
         .main-title {
-            color: #25325F;
-            font-family: Manrope, sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-align: center;
+            font-size: 26px;
         }
 
-        /* Icon container */
-        .icon-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Individual icons */
         .icon {
-            width: 120px;
-            height: auto;
+            width: 140px;
         }
+    }
 
-        /* Responsive Design */
-        @media (min-width: 768px) {
 
-            .container2 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: -65px;
-            }
 
-            .testimonial-container {
-                border-radius: 15px;
-                background-color: #EDF3F4;
-                /* width: 390px; */
-                height: 229px;
-                margin: 20px 0;
 
-            }
+    @media (min-width: 992px) {
 
-            .testimonial-img {
-                width: 182px;
-                height: 108px;
-                flex-shrink: 0;
-                object-fit: cover;
-                border-radius: 15px;
-                margin-left: 12px;
-            }
 
-            .overlay2 {
-                position: relative;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #EDF3F4;
-                border-radius: 15px;
-                width: 90%;
-                max-width: 400px;
-                padding: 32px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .overlay {
-                display: none;
-            }
-
-            .sub-title {
-                font-size: 1rem;
-            }
-
-            .main-title {
-                font-size: 26px;
-            }
-
-            .icon {
-                width: 140px;
-            }
-        }
-
-
-
-
-        @media (min-width: 992px) {
-
-
-            .m-scroll {
-                display: flex;
-                position: relative;
-                width: 800px;
-                height: 62px;
-                margin: auto;
-                background-color: ;
-                overflow: hidden;
-                z-index: 1;
-            }
-
-            .m-scroll__title {
-                display: flex;
-                position: absolute;
-                top: 50%;
-                left: 0;
-                align-items: center;
-                transform: translateY(-50%);
-                white-space: nowrap;
-            }
-
-            .m-scroll__title>div {
-                display: flex;
-                animation: scrollText 15s infinite linear;
-            }
-
-            .m-scroll__title h1 {
-                margin: 0;
-
-                color: #FFF;
-                font-family: Manrope;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 23.4px
-            }
-
-            @keyframes scrollText {
-                0% {
-                    transform: translateX(100%);
-                }
-
-                100% {
-                    transform: translateX(-100%);
-                }
-            }
-
-            .pagination-container {
-                display: flex;
-                flex-direction: row;
-                gap: 15px;
-            }
-
-            .pagination-btn {
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: #ccc;
-                border: none;
-                cursor: pointer;
-                background-color: #E94271;
-                transition: background-color 0.3s;
-            }
-
-            .pagination-btn.active {
-                background-color: #E94271;
-            }
-
-            .resources {
-                margin-top: 40px;
-            }
-
-            .container2 {
-
-                margin-top: 250px;
-            }
-
-            .testimonial-container {
-
-                border-radius: 15px;
-                background-color: #EDF3F4;
-                width: 390px;
-                height: 287px;
-                margin: 0 18px;
-
-            }
-
-
-
-            .card {
-                border-radius: 20px;
-                border: 1px solid #CBCFDE;
-                background: #EDF3F4;
-                width: 546px;
-                height: 172px;
-
-            }
-
-            .testimonial-img {
-                width: 166px;
-                height: 131px;
-                flex-shrink: 0;
-                object-fit: cover;
-                border-radius: 15px;
-                margin-left: 12px;
-            }
-
-            .client-btn {
-                border-radius: 14px;
-                color: #FFFFFF;
-                background-color: #E94271;
-                width: 106px;
-                height: 26px;
-                text-align: center;
-            }
-
-            .card-title {
-
-                font-size: 15px;
-
-            }
-
-
-
-            .bg-container {
-                height: 361px;
-            }
-
-            .img-container {
-                height: 648px;
-                margin-top: -270px;
-            }
-
-            .left-text {
-                font-family: Sora;
-                font-size: 45px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 120%;
-            }
-
-
-            .bg_img {
-                height: 648px;
-            }
-
-            .form_section {
-                height: 550px;
-            }
-
-            .arrow_section {
-
-                width: 87.239px;
-                height: 139.295px;
-                flex-shrink: 0;
-                object-fit: cover;
-                margin-right: 60px;
-            }
-
-            .overlay2 {
-
-                display: none;
-
-            }
-
-            /* Overlay styles */
-            .overlay {
-                position: absolute;
-                top: 50%;
-                left: 24%;
-                transform: translate(-50%, -50%);
-                background-color: white;
-                border-radius: 14px;
-                width: 90%;
-                max-width: 450px;
-                padding: 32px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: left;
-            }
-
-
-
-            .icon {
-                width: 160px;
-            }
-        }
-
-
-
-
-        /*  */
-        .mySwiper2 .swiper-pagination-bullet {
-            background-color: white;
-        }
-
-        .mySwiper2 .swiper-pagination-bullet-active {
-            background-color: #E94271;
-        }
-
-
-
-        .mySwiper1 {
-            width: 100%;
-
-        }
-
-        .mySwiper1 .swiper-slide {
-            margin: 0;
-            padding: 0;
-        }
-
-        .sample-slider .swiper-slide {
-            margin: 0;
-            padding: 0;
-        }
-
-
-        .swiper-container {
+        .m-scroll {
+            display: flex;
             position: relative;
-            /* overflow: hidden; */
-
+            width: 800px;
+            height: 62px;
+            margin: auto;
+            background-color: ;
+            overflow: hidden;
+            z-index: 1;
         }
 
-
-
-        .swiper-pagination {
-            display: flex !important;
-            justify-content: center;
+        .m-scroll__title {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 0;
             align-items: center;
-            gap: 2px;
-            flex-direction: row;
+            transform: translateY(-50%);
+            white-space: nowrap;
         }
 
-        .swiper-pagination-bullet {
-            background-color: #E94271;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            opacity: 1;
+        .m-scroll__title>div {
+            display: flex;
+            animation: scrollText 15s infinite linear;
         }
 
-        .swiper-pagination-bullet-active {
-            background-color: #FFF;
+        .m-scroll__title h1 {
+            margin: 0;
 
-        }
-
-
-
-
-        .img-container {
-            height: 350px;
-            margin-top: -120px;
-        }
-
-        .bg-container {
-            height: 200px;
-        }
-
-
-
-        .left-text {
-            color: #25325F;
-            font-family: Sora;
-            font-size: 45px;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
             font-style: normal;
             font-weight: 700;
-            line-height: 120%;
+            line-height: 23.4px
         }
 
-        .vl {
-            width: 1px;
-            height: 81.006px;
-            background: #25325F;
+        @keyframes scrollText {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
-        .right-text {
-            color: #25325F;
-            font-family: Manrope;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 150%;
+        .pagination-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
         }
+
+        .pagination-btn {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: none;
+            cursor: pointer;
+            background-color: #E94271;
+            transition: background-color 0.3s;
+        }
+
+        .pagination-btn.active {
+            background-color: #E94271;
+        }
+
+        .resources {
+            margin-top: 40px;
+        }
+
+        .container2 {
+
+            margin-top: 250px;
+        }
+
+        .testimonial-container {
+
+            border-radius: 15px;
+            background-color: #EDF3F4;
+            width: 390px;
+            height: 287px;
+            margin: 0 18px;
+
+        }
+
+
 
         .card {
             border-radius: 20px;
             border: 1px solid #CBCFDE;
             background: #EDF3F4;
-            width: ;
-
+            width: 546px;
+            height: 172px;
 
         }
 
         .testimonial-img {
-            width: 95px;
-            height: 95px;
+            width: 166px;
+            height: 131px;
             flex-shrink: 0;
             object-fit: cover;
             border-radius: 15px;
@@ -519,11 +322,208 @@
         }
 
         .card-title {
-            color: #25325F;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 27px;
+
+            font-size: 15px;
+
         }
+
+
+
+        .bg-container {
+            height: 361px;
+        }
+
+        .img-container {
+            height: 648px;
+            margin-top: -270px;
+        }
+
+        .left-text {
+            font-family: Sora;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+        }
+
+
+        .bg_img {
+            height: 648px;
+        }
+
+        .form_section {
+            height: 550px;
+        }
+
+        .arrow_section {
+
+            width: 87.239px;
+            height: 139.295px;
+            flex-shrink: 0;
+            object-fit: cover;
+            margin-right: 60px;
+        }
+
+        .overlay2 {
+
+            display: none;
+
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 24%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 14px;
+            width: 90%;
+            max-width: 450px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+        }
+
+
+
+        .icon {
+            width: 160px;
+        }
+    }
+
+
+
+
+    /*  */
+    .mySwiper2 .swiper-pagination-bullet {
+        background-color: white;
+    }
+
+    .mySwiper2 .swiper-pagination-bullet-active {
+        background-color: #E94271;
+    }
+
+
+
+    .mySwiper1 {
+        width: 100%;
+
+    }
+
+    .mySwiper1 .swiper-slide {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sample-slider .swiper-slide {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .swiper-container {
+        position: relative;
+        /* overflow: hidden; */
+
+    }
+
+
+
+    .swiper-pagination {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        flex-direction: row;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #E94271;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #FFF;
+
+    }
+
+
+
+
+    .img-container {
+        height: 350px;
+        margin-top: -120px;
+    }
+
+    .bg-container {
+        height: 200px;
+    }
+
+
+
+    .left-text {
+        color: #25325F;
+        font-family: Sora;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .vl {
+        width: 1px;
+        height: 81.006px;
+        background: #25325F;
+    }
+
+    .right-text {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    .card {
+        border-radius: 20px;
+        border: 1px solid #CBCFDE;
+        background: #EDF3F4;
+        width: ;
+
+
+    }
+
+    .testimonial-img {
+        width: 95px;
+        height: 95px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-left: 12px;
+    }
+
+    .client-btn {
+        border-radius: 14px;
+        color: #FFFFFF;
+        background-color: #E94271;
+        width: 106px;
+        height: 26px;
+        text-align: center;
+    }
+
+    .card-title {
+        color: #25325F;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 27px;
+    }
     </style>
 
 
@@ -720,33 +720,33 @@
                 <?php
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
-                    <div class="testimonial"
-                        style="border-radius:15px; background-color:#EDF3F4; width:350px; height:104px; margin:15px 0;">
-                        <div style=" margin-top:2px;">
-                            <span
-                                style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px;">
-                                <?= $testimonial["num"] ?>
-                            </span>
-                            <span
-                                style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
-                                <?= $testimonial["sub_title"] ?>
-                            </span>
-                        </div>
-
-                        <div class="d-flex justify-content-end ">
-                            <a style="border-radius:14px; background-color: #E94271; height:39px; width:44px;"
-                                class="d-flex justify-content-center align-items-center" href="#">
-                                <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
-                                    class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
-                            </a>
-                        </div>
-
-                        <h1 style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; ; ">
-                            <?= $testimonial["main_title"] ?>
-                        </h1>
-
+                <div class="testimonial"
+                    style="border-radius:15px; background-color:#EDF3F4; width:350px; height:104px; margin:15px 0;">
+                    <div style=" margin-top:2px;">
+                        <span
+                            style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px;">
+                            <?= $testimonial["num"] ?>
+                        </span>
+                        <span
+                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
+                            <?= $testimonial["sub_title"] ?>
+                        </span>
                     </div>
-                    <?php
+
+                    <div class="d-flex justify-content-end ">
+                        <a style="border-radius:14px; background-color: #E94271; height:39px; width:44px;"
+                            class="d-flex justify-content-center align-items-center" href="#">
+                            <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
+                                class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
+                        </a>
+                    </div>
+
+                    <h1 style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; ; ">
+                        <?= $testimonial["main_title"] ?>
+                    </h1>
+
+                </div>
+                <?php
                 }
                 ?>
             </div>
@@ -761,41 +761,41 @@
                 <?php
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
-                    <div class="testimonial-container" style=" ">
-                        <div style=" margin-top:25px; padding:0 20px">
-                            <span
-                                style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;">
-                                <?= $testimonial["num"] ?>
-                            </span>
-                            <span
-                                style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
-                                <?= $testimonial["sub_title"] ?>
-                            </span>
-                        </div>
-                        <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px ">
-                            <?= $testimonial["main_title"] ?>
-                        </h1>
-
-                        <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
-
-                        <p class=""
-                            style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px  ">
-                            <?= $testimonial["text"] ?>
-                        </p>
-
-                        <div class="d-flex align-items-center gap-2" style="padding:0 20px">
-                            <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center" href="#">
-                                <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
-                                    class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
-                            </a>
-
-                            <span class="" style="font-size:16px;color:black;  ">
-                                <?= $testimonial["btn_text"] ?>
-                            </span>
-                        </div>
+                <div class="testimonial-container" style=" ">
+                    <div style=" margin-top:25px; padding:0 20px">
+                        <span
+                            style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;">
+                            <?= $testimonial["num"] ?>
+                        </span>
+                        <span
+                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
+                            <?= $testimonial["sub_title"] ?>
+                        </span>
                     </div>
-                    <?php
+                    <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px ">
+                        <?= $testimonial["main_title"] ?>
+                    </h1>
+
+                    <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
+
+                    <p class=""
+                        style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px  ">
+                        <?= $testimonial["text"] ?>
+                    </p>
+
+                    <div class="d-flex align-items-center gap-2" style="padding:0 20px">
+                        <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
+                            class="d-flex justify-content-center align-items-center" href="#">
+                            <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
+                                class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
+                        </a>
+
+                        <span class="" style="font-size:16px;color:black;  ">
+                            <?= $testimonial["btn_text"] ?>
+                        </span>
+                    </div>
+                </div>
+                <?php
                 }
                 ?>
             </div>
@@ -814,23 +814,23 @@
                     <?php
                     foreach (get_field("sue_partners") as $sue) {
                         ?>
-                        <div class="col-lg" style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
-                            <div class="d-flex flex-row align-items-center justify-content-between">
-                                <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                    alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                    style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
-                                <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
-                                    <?= $sue["sue_partners_text"] ?>
-                                </h1>
-                                <a style="border-radius:14px; background-color:; height:; width:;display:flex; flex-direction: row; align-items: center;"
-                                    class="" href="#">
-                                    <img src="<?= $sue['sue_partners_link']['url'] ?>"
-                                        alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                        style="width:4px; height:8px; object-fit:cover  " />
-                                </a>
-                            </div>
+                    <div class="col-lg" style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
+                        <div class="d-flex flex-row align-items-center justify-content-between">
+                            <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                            <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
+                                <?= $sue["sue_partners_text"] ?>
+                            </h1>
+                            <a style="border-radius:14px; background-color:; height:; width:;display:flex; flex-direction: row; align-items: center;"
+                                class="" href="#">
+                                <img src="<?= $sue['sue_partners_link']['url'] ?>"
+                                    alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
+                                    style="width:4px; height:8px; object-fit:cover  " />
+                            </a>
                         </div>
-                        <?php
+                    </div>
+                    <?php
                     }
                     ?>
                 </div>
@@ -848,29 +848,29 @@
                         foreach (get_field("sue_partners") as $sue) {
                             ?>
 
-                            <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
-                                style="width:fit-content;">
+                        <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
+                            style="width:fit-content;">
 
-                                <div
-                                    style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-around">
-                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                            alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                            style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
-                                        <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
-                                            <?= $sue["sue_partners_text"] ?>
-                                        </h1>
-                                        <a style="border-radius:14px; background-color:; height:; width:;"
-                                            class="d-flex align-items-center" href="#">
-                                            <img src="<?= $sue['sue_partners_link']['url'] ?>"
-                                                alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                                style="width:4px; height:8px; object-fit:cover  " />
-                                        </a>
-                                    </div>
+                            <div
+                                style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-around">
+                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                        alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                        style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
+                                    <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
+                                        <?= $sue["sue_partners_text"] ?>
+                                    </h1>
+                                    <a style="border-radius:14px; background-color:; height:; width:;"
+                                        class="d-flex align-items-center" href="#">
+                                        <img src="<?= $sue['sue_partners_link']['url'] ?>"
+                                            alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
+                                            style="width:4px; height:8px; object-fit:cover  " />
+                                    </a>
                                 </div>
-
                             </div>
-                            <?php
+
+                        </div>
+                        <?php
                         }
                         ?>
                     </div>
@@ -884,37 +884,37 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-2 g-4">
                 <?php foreach (get_field("client_story") as $testimonial) { ?>
-                    <div class="col">
-                        <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
-                            <div class="row g-0 align-items-center">
-                                <div class=" col-4 ">
-                                    <img src="<?= $testimonial['client_img']['url'] ?>"
-                                        alt="<?= $testimonial['client_img']['alt'] ?>" class="testimonial-img" />
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row align-items-center justify-content-left gap-4">
-                                            <a class="client-btn" href="<?= $testimonial['client_story_btn']['url'] ?>">
-                                                <?= $testimonial['client_story_btn']['title'] ?>
-                                            </a>
-                                            <h4 class="card-title" style="">
-                                                <?= $testimonial["client_name"] ?>
-                                            </h4>
-                                        </div>
-                                        <h4 class="card-text mt-2"
-                                            style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
-                                            <?= $testimonial["client_text"] ?>
-                                            <a href="#">
-                                                <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                    alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                    style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                            </a>
+                <div class="col">
+                    <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
+                        <div class="row g-0 align-items-center">
+                            <div class=" col-4 ">
+                                <img src="<?= $testimonial['client_img']['url'] ?>"
+                                    alt="<?= $testimonial['client_img']['alt'] ?>" class="testimonial-img" />
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row align-items-center justify-content-left gap-4">
+                                        <a class="client-btn" href="<?= $testimonial['client_story_btn']['url'] ?>">
+                                            <?= $testimonial['client_story_btn']['title'] ?>
+                                        </a>
+                                        <h4 class="card-title" style="">
+                                            <?= $testimonial["client_name"] ?>
                                         </h4>
                                     </div>
+                                    <h4 class="card-text mt-2"
+                                        style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
+                                        <?= $testimonial["client_text"] ?>
+                                        <a href="#">
+                                            <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                        </a>
+                                    </h4>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php } ?>
             </div>
         </div>
@@ -975,40 +975,40 @@
                             foreach (get_field("testimonails_section") as $testimonails) {
                                 ?>
 
-                                <div class="" style="border-radius:15px;  width:350px; height:99px; margin:35px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-around gap-2">
-                                            <span
-                                                style="color: #E94271;font-family Manropefont-size:15px;font-style:normal;font-weight:600;line-height:27px;">
-                                                <?= $testimonails["num"] ?>
-                                            </span>
-                                            <span
-                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
-                                                <?= $testimonails["title"] ?>
-
-                                            </span>
-                                        </div>
-
-                                    </div>
-                                    <div style="margin:20px 0">
+                            <div class="" style="border-radius:15px;  width:350px; height:99px; margin:35px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="d-flex flex-row align-items-center justify-content-around gap-2">
                                         <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px">
-                                            <?= $testimonails["text"] ?>
+                                            style="color: #E94271;font-family Manropefont-size:15px;font-style:normal;font-weight:600;line-height:27px;">
+                                            <?= $testimonails["num"] ?>
+                                        </span>
+                                        <span
+                                            style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
+                                            <?= $testimonails["title"] ?>
+
                                         </span>
                                     </div>
 
-                                    <a href="#"
-                                        style="border-radius:8px; background-color: #E94271; height:30px; width:30px; margin:10px 0;"
-                                        class="d-flex justify-content-center align-items-center" href="#">
-
-                                        <img src="<?= $testimonails['link']['url'] ?>"
-                                            alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                            style="width:12px; height: 18px; margin:7px 0;" />
-                                    </a>
-
+                                </div>
+                                <div style="margin:20px 0">
+                                    <span
+                                        style="color: #FFF;font-family: Manrope;font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px">
+                                        <?= $testimonails["text"] ?>
+                                    </span>
                                 </div>
 
-                                <?php
+                                <a href="#"
+                                    style="border-radius:8px; background-color: #E94271; height:30px; width:30px; margin:10px 0;"
+                                    class="d-flex justify-content-center align-items-center" href="#">
+
+                                    <img src="<?= $testimonails['link']['url'] ?>"
+                                        alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                        style="width:12px; height: 18px; margin:7px 0;" />
+                                </a>
+
+                            </div>
+
+                            <?php
                             }
                             ?>
                         </div>
@@ -1028,40 +1028,40 @@
                             foreach (get_field("testimonails_section_right") as $testimonails) {
                                 ?>
 
-                                <div class=""
-                                    style="border-radius:15px; background-color:; width:350px;height:99px; margin:35px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-around gap-2">
-                                            <span
-                                                style="color:  #E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height: 27px ">
-                                                <?= $testimonails["num"] ?>
-                                            </span>
-                                            <span
-                                                style="color: #9AA0B7;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
-                                                <?= $testimonails["title"] ?>
-
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <div style="margin:20px 0">
+                            <div class=""
+                                style="border-radius:15px; background-color:; width:350px;height:99px; margin:35px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-between">
+                                    <div class="d-flex flex-row align-items-center justify-content-around gap-2">
                                         <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px;">
-                                            <?= $testimonails["text"] ?>
+                                            style="color:  #E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height: 27px ">
+                                            <?= $testimonails["num"] ?>
+                                        </span>
+                                        <span
+                                            style="color: #9AA0B7;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
+                                            <?= $testimonails["title"] ?>
+
                                         </span>
                                     </div>
-
-                                    <a href="#"
-                                        style="border-radius:8px; background-color: #E94271;height:30px; width:30px; margin:10px 0"
-                                        class="d-flex justify-content-center align-items-center" href="#">
-
-                                        <img src="<?= $testimonails['link']['url'] ?>"
-                                            alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                            style="width:12px; height: 18px; margin:7px 0;" />
-                                    </a>
-
                                 </div>
-                                <?php
+
+                                <div style="margin:20px 0">
+                                    <span
+                                        style="color: #FFF;font-family: Manrope;font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px;">
+                                        <?= $testimonails["text"] ?>
+                                    </span>
+                                </div>
+
+                                <a href="#"
+                                    style="border-radius:8px; background-color: #E94271;height:30px; width:30px; margin:10px 0"
+                                    class="d-flex justify-content-center align-items-center" href="#">
+
+                                    <img src="<?= $testimonails['link']['url'] ?>"
+                                        alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                        style="width:12px; height: 18px; margin:7px 0;" />
+                                </a>
+
+                            </div>
+                            <?php
                             }
                             ?>
                         </div>
@@ -1079,46 +1079,46 @@
                                 <?php
                                 foreach (get_field("testimonails_section") as $testimonails) {
                                     ?>
-                                    <div class="swiper-slide d-flex align-items-center justify-content-center w-fit"
-                                        style="width:fit-content;">
-                                        <div
-                                            style="border-radius:15px; background-color:white; width:350px;height:139px; margin:16px 10px;padding: 16px 10px;">
-                                            <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <div
-                                                    class="d-flex flex-row align-items-center justify-content-around gap-2">
-                                                    <span
-                                                        style="color:#E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
-                                                        <?= $testimonails["num"] ?>
-                                                    </span>
-                                                    <span
-                                                        style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
-                                                        <?= $testimonails["title"] ?>
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                            <div class="d-flex flex-row align-items  gap-1 ">
-
+                                <div class="swiper-slide d-flex align-items-center justify-content-center w-fit"
+                                    style="width:fit-content;">
+                                    <div
+                                        style="border-radius:15px; background-color:white; width:350px;height:139px; margin:16px 10px;padding: 16px 10px;">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div
+                                                class="d-flex flex-row align-items-center justify-content-around gap-2">
                                                 <span
-                                                    style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
-                                                    <?= $testimonails["text"] ?>
+                                                    style="color:#E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
+                                                    <?= $testimonails["num"] ?>
                                                 </span>
-
-                                                <a href="#"
-                                                    style="border-radius:8px;background-color: #E94271;height:30px; width:30px;"
-                                                    class="d-flex justify-content-center align-items-center" href="#">
-
-                                                    <img src="<?= $testimonails['link']['url'] ?>"
-                                                        alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                                        style="width:12px; height: 18px; margin:7px 0;" />
-                                                </a>
+                                                <span
+                                                    style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
+                                                    <?= $testimonails["title"] ?>
+                                                </span>
                                             </div>
-
 
                                         </div>
-                                    </div>
+                                        <div class="d-flex flex-row align-items  gap-1 ">
 
-                                    <?php
+                                            <span
+                                                style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                                <?= $testimonails["text"] ?>
+                                            </span>
+
+                                            <a href="#"
+                                                style="border-radius:8px;background-color: #E94271;height:30px; width:30px;"
+                                                class="d-flex justify-content-center align-items-center" href="#">
+
+                                                <img src="<?= $testimonails['link']['url'] ?>"
+                                                    alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                                    style="width:12px; height: 18px; margin:7px 0;" />
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <?php
                                 }
                                 ?>
 
@@ -1128,46 +1128,46 @@
                                 <?php
                                 foreach (get_field("testimonails_section_right") as $testimonails) {
                                     ?>
-                                    <div class="swiper-slide d-flex align-items-center justify-content-center w-fit"
-                                        style="width:fit-content;">
-                                        <div
-                                            style="border-radius:15px; background-color:white; width:350px;height:139px; margin:16px 10px;padding: 16px 10px;">
-                                            <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <div
-                                                    class="d-flex flex-row align-items-center justify-content-around gap-2">
-                                                    <span
-                                                        style="color:#E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
-                                                        <?= $testimonails["num"] ?>
-                                                    </span>
-                                                    <span
-                                                        style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
-                                                        <?= $testimonails["title"] ?>
-                                                    </span>
-                                                </div>
-
-                                            </div>
-                                            <div class="d-flex flex-row align-items  gap-1 ">
-
+                                <div class="swiper-slide d-flex align-items-center justify-content-center w-fit"
+                                    style="width:fit-content;">
+                                    <div
+                                        style="border-radius:15px; background-color:white; width:350px;height:139px; margin:16px 10px;padding: 16px 10px;">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div
+                                                class="d-flex flex-row align-items-center justify-content-around gap-2">
                                                 <span
-                                                    style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
-                                                    <?= $testimonails["text"] ?>
+                                                    style="color:#E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
+                                                    <?= $testimonails["num"] ?>
                                                 </span>
-
-                                                <a href="#"
-                                                    style="border-radius:8px;background-color: #E94271;height:30px; width:30px;"
-                                                    class="d-flex justify-content-center align-items-center" href="#">
-
-                                                    <img src="<?= $testimonails['link']['url'] ?>"
-                                                        alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                                        style="width:12px; height: 18px; margin:7px 0;" />
-                                                </a>
+                                                <span
+                                                    style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
+                                                    <?= $testimonails["title"] ?>
+                                                </span>
                                             </div>
-
 
                                         </div>
-                                    </div>
+                                        <div class="d-flex flex-row align-items  gap-1 ">
 
-                                    <?php
+                                            <span
+                                                style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                                <?= $testimonails["text"] ?>
+                                            </span>
+
+                                            <a href="#"
+                                                style="border-radius:8px;background-color: #E94271;height:30px; width:30px;"
+                                                class="d-flex justify-content-center align-items-center" href="#">
+
+                                                <img src="<?= $testimonails['link']['url'] ?>"
+                                                    alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                                    style="width:12px; height: 18px; margin:7px 0;" />
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <?php
                                 }
                                 ?>
                             </div>
@@ -1220,39 +1220,39 @@
                     <div class="row">
                         <div class="col-12 col-lg-5 col-md-12" style="margin-top:60px;">
                             <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
-                                <div class="col">
-                                    <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
-                                        <div class="row g-0 align-items-center">
-                                            <div class=" col-4 ">
-                                                <img src="<?= $testimonial['img']['url'] ?>"
-                                                    alt="<?= $testimonial['img']['alt'] ?>" class="testimonial-img" />
-                                            </div>
-                                            <div class="col-8">
-                                                <div class="card-body">
-                                                    <div
-                                                        class="d-flex flex-row align-items-center justify-content-left gap-4">
-                                                        <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>"
-                                                            style="width:94px; height:30px;">
-                                                            <?= $testimonial['btn']['title'] ?>
-                                                        </a>
-                                                        <h4 class="card-title" style="">
-                                                            <?= $testimonial["client_name"] ?>
-                                                        </h4>
-                                                    </div>
-                                                    <h4 class="card-text mt-2"
-                                                        style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
-                                                        <?= $testimonial["text"] ?>
-                                                        <a href="#">
-                                                            <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                                alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                                style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                                        </a>
+                            <div class="col">
+                                <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
+                                    <div class="row g-0 align-items-center">
+                                        <div class=" col-4 ">
+                                            <img src="<?= $testimonial['img']['url'] ?>"
+                                                alt="<?= $testimonial['img']['alt'] ?>" class="testimonial-img" />
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="card-body">
+                                                <div
+                                                    class="d-flex flex-row align-items-center justify-content-left gap-4">
+                                                    <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>"
+                                                        style="width:94px; height:30px;">
+                                                        <?= $testimonial['btn']['title'] ?>
+                                                    </a>
+                                                    <h4 class="card-title" style="">
+                                                        <?= $testimonial["client_name"] ?>
                                                     </h4>
                                                 </div>
+                                                <h4 class="card-text mt-2"
+                                                    style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
+                                                    <?= $testimonial["text"] ?>
+                                                    <a href="#">
+                                                        <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                            alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                                    </a>
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             <?php } ?>
                         </div>
                     </div>
@@ -1787,40 +1787,40 @@
                                 <?php
                                 foreach (get_field("arrow_section") as $testimonails) {
                                     ?>
-                                    <div class="col-lg"
-                                        style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
-                                        <div class="d-flex flex-row align-items-center justify-content-between gap-4">
-                                            <img src="<?= $testimonails['img_1']['url'] ?>"
-                                                alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
+                                <div class="col-lg"
+                                    style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
+                                    <div class="d-flex flex-row align-items-center justify-content-between gap-4">
+                                        <img src="<?= $testimonails['img_1']['url'] ?>"
+                                            alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
 
-                                            <img src="<?= $testimonails['img_2']['url'] ?>"
-                                                alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_2']['url'] ?>"
+                                            alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_3']['url'] ?>"
-                                                alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                                class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_3']['url'] ?>"
+                                            alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_4']['url'] ?>"
-                                                alt=" <?= $testimonails['img_4']['alt'] ?>" class="arrow_section" />
+                                        <img src="<?= $testimonails['img_4']['url'] ?>"
+                                            alt=" <?= $testimonails['img_4']['alt'] ?>" class="arrow_section" />
 
-                                            <img src="<?= $testimonails['img_5']['url'] ?>"
-                                                alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                                class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_5']['url'] ?>"
+                                            alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_6']['url'] ?>"
-                                                alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                                class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_6']['url'] ?>"
+                                            alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_7']['url'] ?>"
-                                                alt=" <?= $testimonails['img_7']['alt'] ?>" class="arrow_section" />
+                                        <img src="<?= $testimonails['img_7']['url'] ?>"
+                                            alt=" <?= $testimonails['img_7']['alt'] ?>" class="arrow_section" />
 
-                                            <img src="<?= $testimonails['img_8']['url'] ?>"
-                                                alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
+                                        <img src="<?= $testimonails['img_8']['url'] ?>"
+                                            alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
 
-                                        </div>
                                     </div>
-                                    <?php
+                                </div>
+                                <?php
                                 }
                                 ?>
                             </div>
@@ -1842,40 +1842,40 @@
                                 <?php
                                 foreach (get_field("arrow_section_second_row") as $testimonails) {
                                     ?>
-                                    <div class="col-lg"
-                                        style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
-                                        <div class="d-flex flex-row align-items-center justify-content-around  gap-4">
-                                            <img src="<?= $testimonails['img_1']['url'] ?>"
-                                                alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
+                                <div class="col-lg"
+                                    style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
+                                    <div class="d-flex flex-row align-items-center justify-content-around  gap-4">
+                                        <img src="<?= $testimonails['img_1']['url'] ?>"
+                                            alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
 
-                                            <img src="<?= $testimonails['img_2']['url'] ?>"
-                                                alt=" <?= $testimonails['img_2']['alt'] ?>" class="arrow_section" />
+                                        <img src="<?= $testimonails['img_2']['url'] ?>"
+                                            alt=" <?= $testimonails['img_2']['alt'] ?>" class="arrow_section" />
 
-                                            <img src="<?= $testimonails['img_3']['url'] ?>"
-                                                alt=" <?= $testimonails['img_3']['alt'] ?>" class="arrow_section" />
+                                        <img src="<?= $testimonails['img_3']['url'] ?>"
+                                            alt=" <?= $testimonails['img_3']['alt'] ?>" class="arrow_section" />
 
-                                            <img src="<?= $testimonails['img_4']['url'] ?>"
-                                                alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_4']['url'] ?>"
+                                            alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_5']['url'] ?>"
-                                                alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                                class="arrow_section  d-none d-md-flex d-lg-flex " />
+                                        <img src="<?= $testimonails['img_5']['url'] ?>"
+                                            alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                            class="arrow_section  d-none d-md-flex d-lg-flex " />
 
-                                            <img src="<?= $testimonails['img_6']['url'] ?>"
-                                                alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                                class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_6']['url'] ?>"
+                                            alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_7']['url'] ?>"
-                                                alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                                class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                        <img src="<?= $testimonails['img_7']['url'] ?>"
+                                            alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
 
-                                            <img src="<?= $testimonails['img_8']['url'] ?>"
-                                                alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
+                                        <img src="<?= $testimonails['img_8']['url'] ?>"
+                                            alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
 
-                                        </div>
                                     </div>
-                                    <?php
+                                </div>
+                                <?php
                                 }
                                 ?>
                             </div>
@@ -1943,14 +1943,14 @@
     <!-- Swiper JS -->
 
     <script>
-        let swiper1 = new Swiper('.swiper-container', {
-            loop: true, //loop
-            pagination: { //pagination(dots)
-                el: '.swiper-pagination2',
-                clickable: true,
-            },
+    let swiper1 = new Swiper('.swiper-container', {
+        loop: true, //loop
+        pagination: { //pagination(dots)
+            el: '.swiper-pagination2',
+            clickable: true,
+        },
 
-        })
+    })
     </script>
 
 
@@ -1958,92 +1958,92 @@
 
     <!--  mySwiper1 -->
     <script>
-        let swiper2 = new Swiper('.mySwiper1', {
-            slidesPerView: 1.3,
-            grabCursor: true,
-            spaceBetween: 1,
+    let swiper2 = new Swiper('.mySwiper1', {
+        slidesPerView: 1.3,
+        grabCursor: true,
+        spaceBetween: 1,
 
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+
+
+            540: {
+                slidesPerView: 2,
+                spaceBetween: 4,
+
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+
+            556: {
+                slidesPerView: 2.5,
+
+
+                spaceBetween: 4,
             },
+            992: {
 
-            breakpoints: {
-
-
-                540: {
-                    slidesPerView: 2,
-                    spaceBetween: 4,
-
-                },
-
-                556: {
-                    slidesPerView: 2.5,
-
-
-                    spaceBetween: 4,
-                },
-                992: {
-
-                    slidesPerView: 3.5,
-                    spaceBetween: 0,
-                }
-
-
+                slidesPerView: 3.5,
+                spaceBetween: 0,
             }
-        })
+
+
+        }
+    })
     </script>
 
 
     <script>
-        let swiper3 = new Swiper('.mySwiper2', {
-            slidesPerView: 1.3,
-            grabCursor: true,
-            spaceBetween: 1,
+    let swiper3 = new Swiper('.mySwiper2', {
+        slidesPerView: 1.3,
+        grabCursor: true,
+        spaceBetween: 1,
 
-            pagination: {
-                el: '.swiper-pagination1',
-                clickable: true,
+        pagination: {
+            el: '.swiper-pagination1',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+
+
+            410: {
+                slidesPerView: 1.1,
+                spaceBetween: 4,
+
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+
+            540: {
+                slidesPerView: 1.4,
+                spaceBetween: 2,
+
             },
 
-            breakpoints: {
+            556: {
+                slidesPerView: 2.3,
 
 
-                410: {
-                    slidesPerView: 1.1,
-                    spaceBetween: 4,
+                spaceBetween: 2,
+            },
+            992: {
 
-                },
-
-                540: {
-                    slidesPerView: 1.4,
-                    spaceBetween: 2,
-
-                },
-
-                556: {
-                    slidesPerView: 2.3,
-
-
-                    spaceBetween: 2,
-                },
-                992: {
-
-                    slidesPerView: 3.5,
-                    spaceBetween: 0,
-                }
-
-
+                slidesPerView: 3.5,
+                spaceBetween: 0,
             }
-        })
+
+
+        }
+    })
     </script>
 
 
@@ -2051,33 +2051,33 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const swiper = new Swiper('.sample-slider', {
-                loop: false,
-            });
+    document.addEventListener("DOMContentLoaded", function() {
+        const swiper = new Swiper('.sample-slider', {
+            loop: false,
+        });
 
-            // Custom Pagination
-            const numbers = document.querySelectorAll('.custom-number');
-            numbers.forEach((number, index) => {
-                number.addEventListener('click', () => {
-                    // Remove active class from all numbers
-                    numbers.forEach(num => num.classList.remove('active'));
-
-                    // Add active class to clicked number
-                    number.classList.add('active');
-
-                    // Slide to the corresponding index
-                    swiper.slideTo(index);
-                });
-            });
-
-            // Update custom pagination on slide change
-            swiper.on('slideChange', function () {
-                const activeIndex = swiper.activeIndex;
+        // Custom Pagination
+        const numbers = document.querySelectorAll('.custom-number');
+        numbers.forEach((number, index) => {
+            number.addEventListener('click', () => {
+                // Remove active class from all numbers
                 numbers.forEach(num => num.classList.remove('active'));
-                numbers[activeIndex].classList.add('active');
+
+                // Add active class to clicked number
+                number.classList.add('active');
+
+                // Slide to the corresponding index
+                swiper.slideTo(index);
             });
         });
+
+        // Update custom pagination on slide change
+        swiper.on('slideChange', function() {
+            const activeIndex = swiper.activeIndex;
+            numbers.forEach(num => num.classList.remove('active'));
+            numbers[activeIndex].classList.add('active');
+        });
+    });
     </script>
 
 
