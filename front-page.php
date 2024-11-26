@@ -1552,43 +1552,7 @@
                                 </div>
                             </div>
 
-                            <!-- 
-                            <div class="card">
-                                <div
-                                    class="heading1 d-flex flex-row align-items-center justify-content-between  gap-3 d-md-flex d-lg-none gap-2 ">
-                                    <span
-                                        style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                        <?= get_field("contact_en_adres_on_sm") ?>
-                                    </span>
-                                    <a href="#" data-toggle="collapse" data-target="#contact_en_adres_collapse"
-                                        aria-expanded="true" aria-controls="contact_en_adres_collapse">
-                                        <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                            alt="<?= get_field("contact_en_adres_collapse")['alt'] ?>"
-                                            style="width: 12px; height: 18px;" />
-                                    </a>
 
-                                </div>
-                            </div>
-
-                            <div class="collapse show" id="contact_en_adres_collapse" aria-labelledby="heading1"
-                                data-parent="#accordion">
-                                <div class="card-body">
-                                    <div class="d-flex d-md-none d-lg-none flex-column align-items-flex-start gap-2">
-                                        <span
-                                            style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
-                                            <?= get_field("e_mail") ?>
-                                        </span>
-                                        <span>
-                                            <?= get_field("tele") ?>
-                                        </span>
-
-                                        <span
-                                            style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                            <?= get_field("address") ?></span>
-                                        <span> <?= get_field("city") ?></span>
-                                    </div>
-                                </div>
-                            </div> -->
 
                             <div class="d-flex d-md-flex d-lg-none"
                                 style=" border-bottom: 1px solid  #25325F; margin:30px 0;"></div>
