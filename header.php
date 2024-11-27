@@ -29,7 +29,7 @@
 
     <header class="header" style="margin-top:50px">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: ; top: 26px;">
+        <nav class="navbar navbar-expand-lg  fixed-top" style="background: #EDF3F4; top:26px;">
             <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
@@ -238,7 +238,7 @@
                 </button>
             </div>
 
-            <!-- Sidebar Body p-lg-0 -->
+            <!-- Sidebar Body p-lg-0 display: flex;flex-direction: column; -->
             <div class="offcanvas-body">
                 <ul class="navbar-nav fs-5 d-flex align-items-left justify-content-start">
                     <li class="nav-item dropdown">
