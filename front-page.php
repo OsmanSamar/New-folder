@@ -5,6 +5,30 @@
 
 <main class="front-page">
     <style>
+    .text-swiper {
+        font-size: 11px;
+        color: white;
+
+    }
+
+    .text-swiper.span {
+
+        overflow-wrap: break-word;
+    }
+
+    .btn-swiper {
+        white-space: nowrap;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 180%;
+        background-color: #E94271;
+        border-radius: 20px;
+        padding: 4px 8px;
+    }
+
     .bg_img {
         height: 350px;
     }
@@ -141,6 +165,15 @@
     /* Responsive Design */
     @media (min-width: 768px) {
 
+        .text-swiper {
+            font-size: 14px;
+        }
+
+        .btn-swiper {
+            font-size: 13px;
+            padding: 4px 12px;
+        }
+
         .container2 {
             display: flex;
             align-items: center;
@@ -199,10 +232,17 @@
         }
     }
 
-
-
-
     @media (min-width: 992px) {
+
+        .text-swiper {
+            font-size: 14px;
+        }
+
+        .btn-swiper {
+            font-size: 14px;
+            padding: 4px 12px;
+        }
+
 
 
         .m-scroll {
@@ -605,36 +645,35 @@
                         <!-- Button -->
                         <div class="col-2 col-lg-2">
                             <div style="position: relative; margin:0 ">
-                                <a href="<?= get_field("trending_btn")['url'] ?>"
-                                    style="white-space: nowrap; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 180%; background-color: #E94271; border-radius: 20px; padding: 4px 12px;"
-                                    class="btn">
+                                <a href="<?= get_field("trending_btn")['url'] ?>" style="" class="btn-swiper">
                                     <?= get_field("trending_btn")['title'] ?>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-4 col-lg-4">
+                        <div class="text-swiper col-6 col-lg-4">
 
                             <!-- Swiper Container -->
                             <div class="swiper swiper-container"
                                 style="flex-grow: 1; --swiper-pagination-color: #E94271;">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <span style="color: white; font-size: 14px;">There is space here for the title
+                                        <span>There is space here for the title
                                             of a
                                             trending
-                                            article</span>
+                                            article
+                                        </span>
                                     </div>
                                     <div class="swiper-slide">
-                                        <span style="color: white; font-size: 14px;">Scrolling Text Example 2</span>
+                                        <span>Scrolling Text Example 2</span>
                                     </div>
                                     <div class="swiper-slide">
-                                        <span style="color: white; font-size: 14px;">Scrolling Text Example 3</span>
+                                        <span>Scrolling Text Example 3</span>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div class="col-2 col-lg-2">
+                        <div class="col-1 col-lg-2">
 
                             <div class="d-flex justify-content-end align-items-center">
                                 <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
@@ -1600,7 +1639,7 @@
                     <div class="row" style="margin:50px 0;">
                         <div class="col-lg-4">
                             <!-- Contact and address  collapse on Small Screen-->
-                            <div
+                            <!-- <div
                                 class="d-flex flex-row align-items-center justify-content-between  gap-3 d-md-flex d-lg-none gap-2 ">
                                 <span
                                     style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
@@ -1631,52 +1670,133 @@
                                     <span> <?= get_field("city") ?></span>
                                 </div>
                             </div>
-
-
-
-
-                            <div class="d-flex d-md-flex d-lg-none"
-                                style=" border-bottom: 1px solid  #25325F; margin:30px 0;"></div>
+                             <div class="d-flex d-md-flex d-lg-none"
+                                style=" border-bottom: 1px solid  #25325F; margin:30px 0;">
+                            </div>
+                            -->
 
                             <!-- Informations section on Small Screen  -->
 
-                            <div
+                            <!-- <div
                                 class="d-flex flex-row align-items-center justify-content-between  gap-3 d-md-flex  d-lg-none   gap-2">
                                 <span
                                     style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
                                     <?= get_field("information") ?>
-                                </span>
-                                <a href="#" data-bs-toggle="collapse" data-bs-target="#information_collapse"
-                                    aria-expanded="true" aria-controls="information_collapse">
-                                    <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                        alt="<?= get_field("contact_en_adres_collapse")['alt'] ?>"
-                                        style="width: 12px; height: 18px;" />
-                                </a>
-                            </div>
+                                                            </span>
+                                                            <a href="#" data-bs-toggle="collapse" data-bs-target="#information_collapse"
+                                                                aria-expanded="true" aria-controls="information_collapse">
+                                                                <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                                    alt="<?= get_field("contact_en_adres_collapse")['alt'] ?>"
+                                                                    style="width: 12px; height: 18px;" />
+                                                            </a>
+                                                        </div>
+                                                        <div class="collapse" id="information_collapse">
+                                                            <div class="d-flex d-md-none d-lg-none flex-column align-items-flex-start gap-2">
+                                                                <div class="d-flex flex-row align-items-center gap-2">
+                            
+                                                                    <span
+                                                                        style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                                                        <?= get_field("kvk") ?>
+                                                                    </span>
+                                                                    <span
+                                                                        style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                                        <?= get_field("kvk_num") ?>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="d-flex flex-row align-items-center gap-2">
+                                                                    <span> <?= get_field("vat") ?></span>
+                                                                    <span> <?= get_field("account_num") ?></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            
+                                                        <div class="d-flex d-md-flex d-lg-none"
+                                                            style=" border-bottom: 1px solid  #25325F; margin:30px 0;">
+                                                        </div> -->
 
-                            <div class="collapse" id="information_collapse">
-                                <div class="d-flex d-md-none d-lg-none flex-column align-items-flex-start gap-2">
-                                    <div class="d-flex flex-row align-items-center gap-2">
 
-                                        <span
-                                            style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
-                                            <?= get_field("kvk") ?>
-                                        </span>
-                                        <span
-                                            style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                            <?= get_field("kvk_num") ?>
-                                        </span>
+
+                            <div class="accordion d-block d-lg-none" id="accordionExample">
+                                <!-- First Item -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <a href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
+                                            aria-expanded="true" aria-controls="collapseOne"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("contact_en_adres_on_sm") ?>
+                                        </a>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body ">
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span
+                                                    style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
+                                                    <?= get_field("e_mail") ?>
+                                                </span>
+                                                <span>
+                                                    <?= get_field("tele") ?>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span
+                                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                    <?= get_field("address") ?></span>
+                                                <span> <?= get_field("city") ?></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="d-flex flex-row align-items-center gap-2">
-                                        <span> <?= get_field("vat") ?></span>
-                                        <span> <?= get_field("account_num") ?></span>
+                                </div>
+
+                                <!-- Second Item -->
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <a href="#collapseTwo" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("information") ?>
+                                        </a>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span
+                                                    style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                                    <?= get_field("kvk") ?>
+                                                    <span
+                                                        style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                        <?= get_field("kvk_num") ?>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span> <?= get_field("vat") ?> <span>
+                                                        <?= get_field("account_num") ?>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="d-flex d-md-flex d-lg-none"
-                                style=" border-bottom: 1px solid  #25325F; margin:30px 0;">
-                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
                             <!-- LG -->
@@ -1692,6 +1812,10 @@
                             </div>
 
                         </div>
+
+
+
+
                         <div class="col-lg-4">
                             <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2"> <span
                                     style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
