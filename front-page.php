@@ -5,6 +5,10 @@
 
 <main class="front-page">
     <style>
+    .right_section {
+        margin-top: 27px;
+    }
+
     .text-swiper {
         font-size: 11px;
         color: white;
@@ -47,7 +51,7 @@
     /* Custom Pagination Numbers */
     .custom-pagination {
         display: flex;
-        gap: 20px;
+        gap: 8px;
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 20px;
@@ -57,7 +61,7 @@
         position: relative;
         background-color: #f0f0f0;
         color: #000;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
         width: 40px;
         height: 40px;
@@ -162,8 +166,37 @@
         height: auto;
     }
 
+
+    /* The first Card  */
+    .client_card1 {
+        border-radius: 20px;
+        border: 1px solid #CBCFDE;
+        background: #EDF3F4;
+        /* width: 100%;
+        max-width: 546px;*/
+        max-height: 172px;
+    }
+
+
+    .client_card2 {
+        border-radius: 20px;
+        border: 1px solid #CBCFDE;
+        background: #EDF3F4;
+        /* width: 546px;
+        height: 172px; */
+    }
+
     /* Responsive Design */
     @media (min-width: 768px) {
+
+        .right_section {
+            margin-top: 27px;
+        }
+
+        .custom-number {
+            font-size: 16px;
+        }
+
 
         .text-swiper {
             font-size: 14px;
@@ -230,9 +263,44 @@
         .icon {
             width: 140px;
         }
+
+        .client_card2 {
+            border-radius: 20px;
+            border: 1px solid #CBCFDE;
+            background: #EDF3F4;
+            /* width: 546px;
+            height: 172px; */
+        }
+
+        .client-img {
+            width: 135px;
+            height: 108px;
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-left: 12px;
+        }
     }
 
     @media (min-width: 992px) {
+
+        .right_section {
+            margin-top: 0;
+        }
+
+        /* Custom Pagination Numbers */
+        .custom-pagination {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+
+        .custom-number {
+            font-size: 16px;
+        }
 
         .text-swiper {
             font-size: 14px;
@@ -334,19 +402,18 @@
 
 
 
-        .card {
+        .client_card2 {
             border-radius: 20px;
             border: 1px solid #CBCFDE;
             background: #EDF3F4;
             width: 546px;
             height: 172px;
-
         }
 
-        .testimonial-img {
-            width: 166px;
-            height: 131px;
-            flex-shrink: 0;
+        .client1-img {
+            width: 135px;
+            height: 135px;
+            /* flex-shrink: 0; */
             object-fit: cover;
             border-radius: 15px;
             margin-left: 12px;
@@ -431,6 +498,15 @@
 
         .icon {
             width: 160px;
+        }
+
+        .client-img {
+            width: 135px;
+            height: 108px;
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-left: 12px;
         }
     }
 
@@ -531,18 +607,12 @@
         line-height: 150%;
     }
 
-    .card {
-        border-radius: 20px;
-        border: 1px solid #CBCFDE;
-        background: #EDF3F4;
-        width: ;
 
 
-    }
 
-    .testimonial-img {
-        width: 95px;
-        height: 95px;
+    .client-img {
+        width: 98px;
+        height: 98px;
         flex-shrink: 0;
         object-fit: cover;
         border-radius: 15px;
@@ -773,10 +843,10 @@
                     </div>
 
                     <div class="d-flex justify-content-end ">
-                        <a style="border-radius:14px; background-color: #E94271; height:39px; width:44px;"
+                        <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
                             class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
-                                class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
+                                class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover " />
                         </a>
                     </div>
 
@@ -826,7 +896,7 @@
                         <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
                             class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("arrow_btn")['url'] ?>" alt="<?= get_field("arrow_btn")['title'] ?>"
-                                class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover  " />
+                                class="arrow_btn" style="width:12px; height:18px; margin:7px 0; object-fit:cover " />
                         </a>
 
                         <span class="" style="font-size:16px;color:black;  ">
@@ -865,7 +935,7 @@
                                 class="" href="#">
                                 <img src="<?= $sue['sue_partners_link']['url'] ?>"
                                     alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                    style="width:4px; height:8px; object-fit:cover  " />
+                                    style="width:4px; height:8px; object-fit:cover " />
                             </a>
                         </div>
                     </div>
@@ -903,7 +973,7 @@
                                         class="d-flex align-items-center" href="#">
                                         <img src="<?= $sue['sue_partners_link']['url'] ?>"
                                             alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                            style="width:4px; height:8px; object-fit:cover  " />
+                                            style="width:4px; height:8px; object-fit:cover " />
                                     </a>
                                 </div>
                             </div>
@@ -924,15 +994,15 @@
             <div class="row row-cols-1 row-cols-lg-2 g-4">
                 <?php foreach (get_field("client_story") as $testimonial) { ?>
                 <div class="col">
-                    <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
+                    <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center">
                         <div class="row g-0 align-items-center">
                             <div class=" col-4 ">
                                 <img src="<?= $testimonial['client_img']['url'] ?>"
-                                    alt="<?= $testimonial['client_img']['alt'] ?>" class="testimonial-img" />
+                                    alt="<?= $testimonial['client_img']['alt'] ?>" class="client-img" />
                             </div>
                             <div class="col-8">
                                 <div class="card-body">
-                                    <div class="d-flex flex-row align-items-center justify-content-left gap-4">
+                                    <div class="d-flex flex-row align-items-center justify-content-left gap-2">
                                         <a class="client-btn" href="<?= $testimonial['client_story_btn']['url'] ?>">
                                             <?= $testimonial['client_story_btn']['title'] ?>
                                         </a>
@@ -1260,11 +1330,12 @@
                         <div class="col-12 col-lg-5 col-md-12" style="margin-top:60px;">
                             <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
                             <div class="col">
-                                <div class="card mb-3 d-flex flex-row align-items-center justify-content-center">
+                                <div
+                                    class="card client_card2 mb-3 d-flex flex-row align-items-center justify-content-center">
                                     <div class="row g-0 align-items-center">
                                         <div class=" col-4 ">
                                             <img src="<?= $testimonial['img']['url'] ?>"
-                                                alt="<?= $testimonial['img']['alt'] ?>" class="testimonial-img" />
+                                                alt="<?= $testimonial['img']['alt'] ?>" class="client-img" />
                                         </div>
                                         <div class="col-8">
                                             <div class="card-body">
@@ -1283,8 +1354,8 @@
                                                     <?= $testimonial["text"] ?>
                                                     <a href="#">
                                                         <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                            alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                                            alt="<?= $testimonial['client_link']['alt'] ?>" style="width:4px; height:8px; object-fit:cover;
+                                                        margin-left:2px;" />
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1467,13 +1538,13 @@
             <!-- Left Section -->
             <div class="col12 col-lg-5">
                 <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
-                    style="max-width:451px;height: 392px;border-radius: 25px; object-fit:cover" />
+                    style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover" />
             </div>
 
             <!-- Right Section -->
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-7 right_section ">
                 <div
-                    style="max-width:741px; max-height:492px; border: 1px solid #CBCFDE; border-radius: 25px; padding:45px 20px;">
+                    style="max-width:; max-height:492px; border: 1px solid #CBCFDE; border-radius: 25px; padding:45px 20px;">
                     <div class="custom-pagination">
                         <div class="custom-number active" data-index="0">
                             1
@@ -1923,18 +1994,18 @@
 
                                         <img src="<?= $testimonails['img_3']['url'] ?>"
                                             alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
                                         <img src="<?= $testimonails['img_4']['url'] ?>"
                                             alt=" <?= $testimonails['img_4']['alt'] ?>" class="arrow_section" />
 
                                         <img src="<?= $testimonails['img_5']['url'] ?>"
                                             alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
                                         <img src="<?= $testimonails['img_6']['url'] ?>"
                                             alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
                                         <img src="<?= $testimonails['img_7']['url'] ?>"
                                             alt=" <?= $testimonails['img_7']['alt'] ?>" class="arrow_section" />
@@ -1984,15 +2055,15 @@
 
                                         <img src="<?= $testimonails['img_5']['url'] ?>"
                                             alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                            class="arrow_section  d-none d-md-flex d-lg-flex " />
+                                            class="arrow_section d-none d-md-flex d-lg-flex " />
 
                                         <img src="<?= $testimonails['img_6']['url'] ?>"
                                             alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
                                         <img src="<?= $testimonails['img_7']['url'] ?>"
                                             alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                            class="arrow_section  d-none d-md-flex d-lg-flex" />
+                                            class="arrow_section d-none d-md-flex d-lg-flex" />
 
                                         <img src="<?= $testimonails['img_8']['url'] ?>"
                                             alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />

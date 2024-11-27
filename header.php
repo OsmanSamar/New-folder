@@ -21,7 +21,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    </script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -177,42 +177,37 @@
 
 
                 <style>
-                    .hamburger-icon {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        width: 30px;
-                        height: 20px;
-                        position: relative;
-                    }
+                .hamburger-icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30px;
+                    height: 20px;
+                    position: relative;
+                }
 
-                    .hamburger-icon .line {
-                        display: block;
-                        height: 4px;
-                        background-color: #25325F;
-                        border-radius: 2px;
-                        transition: all 0.3s ease;
+                .hamburger-icon .line {
+                    display: block;
+                    height: 4px;
+                    background-color: #25325F;
+                    border-radius: 2px;
+                    transition: all 0.3s ease;
 
-                    }
+                }
 
-                    .hamburger-icon .line-1,
-                    .hamburger-icon .line-2 {
-                        width: 100%;
+                .hamburger-icon .line-1,
+                .hamburger-icon .line-2 {
+                    width: 100%;
 
-                    }
+                }
 
-                    .hamburger-icon .line-3 {
-                        width: 60%;
+                .hamburger-icon .line-3 {
+                    width: 60%;
 
-                        align-self: flex-end;
+                    align-self: flex-end;
 
-                    }
+                }
                 </style>
-
-
-
-
-
 
                 <!-- ----------------------------------------------------- -->
                 <!-- Toggle Button slidebar on Lg -->
@@ -222,14 +217,16 @@
                     <span class="navbar-toggler-icon" style="color: #25325F;"></span>
                 </button> -->
 
+
+
             </div>
         </nav>
 
-        <!-- Sidebar p-lg-0 -->
+        <!-- Sidebar p-lg-0 on SM Screen  -->
         <div class="offcanvas offcanvas-end p-4 " tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel" style="background-color:;">
+            aria-labelledby="offcanvasNavbarLabel" style=" background:; bottom:6%">
             <div class="offcanvas-header text-black border-bottom">
-                <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5> -->
+                <!-- offcanvasNavbartitle/logo -->
 
                 <a class=" offcanvas-title" href="<?= esc_url(home_url('/')); ?>">
                     <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
@@ -237,7 +234,8 @@
                 </a>
 
                 <button type="button" class="btn-close btn-close-#25325F shadow-none" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                    aria-label="Close">
+                </button>
             </div>
 
             <!-- Sidebar Body p-lg-0 -->
@@ -356,21 +354,27 @@
 
                 </ul>
                 <!-- Arrow and Let's Talk on SM Screen-->
+                <div style="position: relative;bottom: -30%; ">
+                    <div style="border-radius:30px;background:#25325F;width:100%;height: 101px; ">
+                        <div class="d-flex align-items-center justify-content-center gap-3" style="">
+                            <a href="<?= esc_url(home_url('/')); ?>"
+                                style="border-radius:8px;
+                                                                        background-color: #E94271; height:30px; width:30px;"
+                                class="d-flex justify-content-center align-items-center">
+                                <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                                    style="width:12px; height: 18px; margin:7px 0;  ">
+                            </a>
+                            <a href="<?= esc_url(home_url('/')); ?>"
+                                style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color: white;">
+                                Let's talk
+                            </a>
+                        </div>
 
-                <div style="position: relative;bottom: -40%; ">
-                    <div class="d-flex align-items-center justify-content-center gap-3" style="">
-                        <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
-                                                        background-color: #E94271; height:30px; width:30px;"
-                            class="d-flex justify-content-center align-items-center">
-                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                                style="width:12px; height: 18px; margin:7px 0;  ">
-                        </a>
-                        <a href="<?= esc_url(home_url('/')); ?>"
-                            style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color: blue;">
-                            Let's talk
-                        </a>
                     </div>
                 </div>
+
+
+
 
             </div>
         </div>
