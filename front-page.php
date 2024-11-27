@@ -124,6 +124,16 @@
         transition: all 0.3s ease-in-out;
     }
 
+    /* .custom-number {
+        .custom-title {}
+
+        &.active {
+            sjdfhksh .custom-title {}
+        }
+
+
+    } */
+
     .custom-number.active {
         background-color: #274083;
         color: #fff;

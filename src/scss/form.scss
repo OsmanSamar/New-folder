@@ -1,8 +1,14 @@
 .gform-body {
   .gfield {
-    grid-column: span 4 !important;
+    color: white !important;
   }
-  .gfield--type-textarea {
-    grid-row: span 2 !important;
+
+  @media screen and (min-width: 992px) {
+    .gfield {
+      grid-column: span 4 !important;
+    }
+    .gfield--type-textarea {
+      grid-row: span 2 !important;
+    }
   }
 }
