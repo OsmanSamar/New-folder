@@ -1570,7 +1570,8 @@
             <div class="col-12 col-lg-7 right_section ">
                 <div
                     style="max-width:; max-height:492px; border: 1px solid #CBCFDE; border-radius: 25px; padding:45px 20px;">
-                    <div class="custom-pagination">
+
+                    <!-- <div class="custom-pagination">
                         <div class="custom-number active" data-index="0">
                             1
                             <span class="custom-title">Mi vel turpis vitae mi a id vitae</span>
@@ -1583,7 +1584,70 @@
 
                             <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
                         </div>
+
+                        <div class="d-flex justify-content-end align-items-center gap-4">
+                            <div>
+                                <a href="">
+                                    <img src="<?= get_field("prev_btn")['url'] ?>"
+                                        alt="<?= get_field("prev_btn")['title'] ?>" />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="">
+                                    <img src="<?= get_field("next_btn")['url'] ?>"
+                                        alt="<?= get_field("next_btn")['title'] ?>" style="width:12px; height:18px;" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>-->
+
+
+
+
+                    <div class="custom-pagination">
+
+                        <div class="custom-number active" data-index="0">
+                            1
+                            <span class="custom-title">Mi vel turpis vitae mi a id vitae</span>
+                        </div>
+                        <div class="custom-number" data-index="1">2
+
+                            <span class="custom-title">Vel turpis lacus vitae mi mollis</span>
+                        </div>
+                        <div class="custom-number" data-index="2">3
+
+                            <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
+                        </div>
+
+                        <div class="d-none d-md-flex d-lg-flex align-items-center gap-4"
+                            style="justify-content: flex-end; width: 100%;">
+                            <div>
+                                <a href=""
+                                    style=" height:30px; width:30px; border-radius:8px; border: 1px solid #6A7291;"
+                                    class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("prev_btn")['url'] ?>"
+                                        alt="<?= get_field("prev_btn")['title'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0; object-fit:cover" />
+                                </a>
+
+                            </div>
+                            <div>
+                                <a href=""
+                                    style=" height:30px; width:30px; border-radius:8px; border: 1px solid #6A7291;"
+                                    class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("next_btn")['url'] ?>"
+                                        alt="<?= get_field("next_btn")['title'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0; object-fit:cover " />
+                                </a>
+
+
+
+                            </div>
+                        </div>
+
+
                     </div>
+
                     <div style="border-bottom: 1px solid #CBCFDE; margin: 40px 0;"></div>
 
                     <div class="swiper sample-slider"
@@ -1611,12 +1675,13 @@
                             </div>
                             <div class="swiper-slide">
                                 <h1>Vel turpis lacus vitae mi mollis</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
+                                <p>Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nulla egestas, nisl posuere
                                     porttitor
                                     vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
                                 </p>
 
-                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                <div class="d-flex flex-row align-items-center justify-content-start gap-3">
                                     <a href="#"
                                         style="background-color:#25325F;; height:30px; width:30px; border-radius: 8px;"
                                         class="d-flex justify-content-center align-items-center">
@@ -2274,6 +2339,11 @@
     document.addEventListener("DOMContentLoaded", function() {
         const swiper = new Swiper('.sample-slider', {
             loop: false,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
         });
 
         // Custom Pagination
