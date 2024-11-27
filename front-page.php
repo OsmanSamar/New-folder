@@ -5,6 +5,34 @@
 
 <main class="front-page">
     <style>
+    .client-btn {
+        border-radius: 14px;
+        color: #FFFFFF;
+        background-color: #E94271;
+        width: 87px;
+        height: 20px;
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .card-title {
+        color: #25325F;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 27px;
+    }
+
+    .card-text {
+        color: #25325F;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 27px;
+        font-family: Manrope;
+        font-style: normal;
+        line-height: 23.8px;
+        font-weight: 700;
+    }
+
     .right_section {
         margin-top: 27px;
     }
@@ -280,6 +308,18 @@
             border-radius: 15px;
             margin-left: 12px;
         }
+
+        .client-btn {
+            width: 106px;
+            height: 26px;
+            font-size: 14px;
+        }
+
+
+        .card-title {
+            font-size: 13px;
+        }
+
     }
 
     @media (min-width: 992px) {
@@ -420,18 +460,18 @@
         }
 
         .client-btn {
-            border-radius: 14px;
-            color: #FFFFFF;
-            background-color: #E94271;
             width: 106px;
             height: 26px;
-            text-align: center;
+            font-size: 14px;
         }
 
         .card-title {
+            font-size: 13px;
+        }
 
-            font-size: 15px;
-
+        .card-text {
+            font-size: 16px;
+            line-height: 27.2px;
         }
 
 
@@ -508,6 +548,8 @@
             border-radius: 15px;
             margin-left: 12px;
         }
+
+
     }
 
 
@@ -617,22 +659,6 @@
         object-fit: cover;
         border-radius: 15px;
         margin-left: 12px;
-    }
-
-    .client-btn {
-        border-radius: 14px;
-        color: #FFFFFF;
-        background-color: #E94271;
-        width: 106px;
-        height: 26px;
-        text-align: center;
-    }
-
-    .card-title {
-        color: #25325F;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 27px;
     }
     </style>
 
@@ -1010,13 +1036,12 @@
                                             <?= $testimonial["client_name"] ?>
                                         </h4>
                                     </div>
-                                    <h4 class="card-text mt-2"
-                                        style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
+                                    <h4 class="card-text mt-2" style="">
                                         <?= $testimonial["client_text"] ?>
                                         <a href="#">
                                             <img src="<?= $testimonial['client_link']['url'] ?>"
                                                 alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                                style="width:4px; height:8px; object-fit:cover; margin-left:4px;" />
                                         </a>
                                     </h4>
                                 </div>
@@ -1341,8 +1366,8 @@
                                             <div class="card-body">
                                                 <div
                                                     class="d-flex flex-row align-items-center justify-content-left gap-4">
-                                                    <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>"
-                                                        style="width:94px; height:30px;">
+                                                    <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>">
+                                                        <!--  style="width:94px; height:30px;" -->
                                                         <?= $testimonial['btn']['title'] ?>
                                                     </a>
                                                     <h4 class="card-title" style="">
@@ -1355,7 +1380,7 @@
                                                     <a href="#">
                                                         <img src="<?= $testimonial['client_link']['url'] ?>"
                                                             alt="<?= $testimonial['client_link']['alt'] ?>" style="width:4px; height:8px; object-fit:cover;
-                                                        margin-left:2px;" />
+                                                        margin-left:4px;" />
                                                     </a>
                                                 </h4>
                                             </div>
