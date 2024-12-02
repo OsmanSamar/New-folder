@@ -776,111 +776,109 @@
         </div>
 
         <!-- 2 -->
-        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:80px; ">
-            <div class="container">
-                <div class="row">
-                    <div class="d-flex flex-lg-row flex-row align-items-center justify-content-between gap-2"
-                        style="position:relative; padding:20px 20px">
-                        <!-- <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block"></div> -->
+        <div class="container">
+            <div class="bg-container" style="background:#25325F; border-radius:40px;margin-top:80px; ">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-flex flex-lg-row flex-row align-items-center justify-content-between gap-2"
+                            style="position:relative; padding:20px 20px">
+                            <!-- <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block"></div> -->
 
-                        <!-- Pagination -->
-                        <div class="col-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
-                            <div class="swiper-pagination2"
-                                style="position:relative;transform: translateY(50%);  z-index:1;">
+                            <!-- Pagination -->
+                            <div class="col-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
+                                <div class="swiper-pagination2"
+                                    style="position:relative;transform: translateY(50%);  z-index:1;">
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Button -->
-                        <div class="col-2 col-lg-1">
-                            <div style="position: relative; margin:0 ">
+                            <!-- Button -->
+                            <div class="col-2 col-lg-1">
+                                <div style="position: relative; margin:0 ">
 
-                                <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
-                                    <?= get_field("trending_btn")['title'] ?>
-                                </a>
+                                    <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
+                                        <?= get_field("trending_btn")['title'] ?>
+                                    </a>
 
+                                </div>
                             </div>
-                        </div>
 
 
-                        <div class="text-swiper col-6 col-lg-5">
-                            <!-- Swiper Container -->
-                            <div class="swiper swiper-container"
-                                style="flex-grow:1; --swiper-pagination-color: #E94271;">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date d-none d-lg-block"
-                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">12.12.2024</span>
-                                            <span class="slide-text">There is space here for the title
-                                                of a
-                                                trending
-                                                article</span>
+                            <div class="text-swiper col-6 col-lg-5">
+                                <!-- Swiper Container -->
+                                <div class="swiper swiper-container"
+                                    style="flex-grow:1; --swiper-pagination-color: #E94271;">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <span class="slide-date d-none d-lg-block"
+                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">12.12.2024</span>
+                                                <span class="slide-text">There is space here for the title
+                                                    of a
+                                                    trending
+                                                    article</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date d-none d-lg-block"
-                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">14.12.2024</span>
-                                            <span class="slide-text">There is space here for the title
-                                                of a
-                                                trending
-                                                article2</span>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <span class="slide-date d-none d-lg-block"
+                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">14.12.2024</span>
+                                                <span class="slide-text">There is space here for the title
+                                                    of a
+                                                    trending
+                                                    article2</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date d-none d-lg-block"
-                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">16.12.2024</span>
-                                            <span class="slide-text">There is space here for the title
-                                                of a
-                                                trending
-                                                article3</span>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <span class="slide-date d-none d-lg-block"
+                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">16.12.2024</span>
+                                                <span class="slide-text">There is space here for the title
+                                                    of a
+                                                    trending
+                                                    article3</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="d-none d-md-flex d-lg-flex">
-                            <div class="col-3 col-lg-1"></div>
-                        </div>
-                        <div class="col-1 col-lg-1">
-                            <div class="d-flex justify-content-end align-items-center">
-                                <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
-                                    class="d-flex justify-content-center align-items-center" href="#">
-                                    <img src="<?= get_field("arrow_btn")['url'] ?>"
-                                        alt="<?= get_field("arrow_btn")['title'] ?>"
-                                        style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
-                                </a>
+                            <div class="d-none d-md-flex d-lg-flex">
+                                <div class="col-3 col-lg-1"></div>
                             </div>
-                        </div>
+                            <div class="col-1 col-lg-1">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                        class="d-flex justify-content-center align-items-center" href="#">
+                                        <img src="<?= get_field("arrow_btn")['url'] ?>"
+                                            alt="<?= get_field("arrow_btn")['title'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
+                                    </a>
+                                </div>
+                            </div>
 
-                        <!-- <div class="d-none d-md-flex d-lg-flex">
-                            <div class="col-3 col-lg-1"></div>
-                        </div> -->
+                            <!-- <div class="d-none d-md-flex d-lg-flex">
+                                    <div class="col-3 col-lg-1"></div>
+                                </div> -->
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
+
         <!-- Img under the  -->
+        <div class="container col-12 col-lg-12 img-container">
 
 
-        <div class="col-12 col-lg-12 img-container" style="position: ;">
+            <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class="bg_img"
+                style=" height: ;border-radius:40px; object-fit:cover" />
 
-            <div style=" ">
-                <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=" bg_img"
-                    style=" height: ;border-radius:40px; object-fit:cover" />
+            <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:absolute ;top: 120%;left:49.9%;transform: translate(-50%, -50%);"
+                class="d-none d-lg-flex justify-content-center align-items-center" href="#testimonials">
+                <img src="<?= get_field("arrow_on_img")['url'] ?>" alt="<?= get_field("arrow_on_img")['alt'] ?>"
+                    style="width:12px; height:18px; margin:7px 0;" />
+            </a>
 
-                <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:absolute ;top: 120%;left:49.9%;transform: translate(-50%, -50%);"
-                    class="d-none d-lg-flex justify-content-center align-items-center" href="#testimonials">
-                    <img src="<?= get_field("arrow_on_img")['url'] ?>" alt="<?= get_field("arrow_on_img")['alt'] ?>"
-                        style="width:12px; height:18px; margin:7px 0;" />
-                </a>
-            </div>
         </div>
 
         <!-- Outcome Testimonials Section on Small Screens -->
@@ -1099,7 +1097,7 @@
         <!-- Here new -->
 
         <!-- The blue block container -->
-        <div class="" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
+        <div class="container" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
@@ -1510,55 +1508,57 @@
 
 
 
-        <!-- responsive-container With banks Block -->
-        <div class="row">
-            <div class="responsive-container">
-                <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
-                    class="background-image" />
-                <div class="overlay">
-                    <span class="sub-title"><?= get_field("sue_title") ?></span>
-                    <span class="main-title"><?= get_field("sue_main_title") ?>
+        <div class="container">
+            <!-- responsive-container With banks Block -->
+            <div class="row">
+                <div class="responsive-container">
+                    <img src="<?= get_field("sue_customers_bg")['url'] ?>"
+                        alt="<?= get_field("sue_customers_bg")['alt'] ?>" class="background-image" />
+                    <div class="overlay">
+                        <span class="sub-title"><?= get_field("sue_title") ?></span>
+                        <span class="main-title"><?= get_field("sue_main_title") ?>
 
-                        <span class="main-title" style="color:#E94271"><?= get_field("sue_main_title_pink_word") ?>
-                        </span>
+                            <span class="main-title" style="color:#E94271"><?= get_field("sue_main_title_pink_word") ?>
+                            </span>
 
-                        <div class="row" style="margin-top: 20px;">
-                            <div class="icon-container col-12 col-lg-12">
-                                <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                    alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                                <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
-                                    class="icon" />
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="icon-container col-12 col-lg-12">
+                                    <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                        alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                                    <img src="<?= get_field("bol_icon")['url'] ?>"
+                                        alt="<?= get_field("bol_icon")['alt'] ?>" class="icon" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="icon-container">
-                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                                class="icon" />
-                            <img src="<?= get_field("booking_icon")['url'] ?>"
-                                alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
-                        </div>
+                            <div class="icon-container">
+                                <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                                    class="icon" />
+                                <img src="<?= get_field("booking_icon")['url'] ?>"
+                                    alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
+                            </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="overlay2">
-                <span class="sub-title"><?= get_field("sue_title") ?></span>
-                <span class="main-title"><?= get_field("sue_main_title") ?></span>
+                <div class="overlay2">
+                    <span class="sub-title"><?= get_field("sue_title") ?></span>
+                    <span class="main-title"><?= get_field("sue_main_title") ?></span>
 
-                <div class="row">
-                    <div class="icon-container col-12 col-lg-12">
-                        <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                            alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                        <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                    <div class="row">
+                        <div class="icon-container col-12 col-lg-12">
+                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                                class="icon" />
+                        </div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                            class="icon" />
+                        <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
                             class="icon" />
                     </div>
                 </div>
-                <div class="icon-container">
-                    <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                        class="icon" />
-                    <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
-                        class="icon" />
-                </div>
-            </div>
-        </div><!-- End of responsive-container With banks Block -->
+            </div><!-- End of responsive-container With banks Block -->
+        </div>
 
 
         <div class="container">
