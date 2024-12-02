@@ -175,8 +175,10 @@
         font-weight: 700;
         line-height: 180%;
         background-color: #E94271;
-        border-radius: 20px;
+        border-radius: 100px;
         padding: 4px 8px;
+        width: 88px;
+        height: 33px;
     }
 
     .bg_img {
@@ -818,11 +820,11 @@
             <!-- here Cutout -->
 
 
-            <!-- End of container div -->
+            <!-- End of the first container div -->
         </div>
 
         <!-- 2 -->
-        <!-- width:1280px; -->
+
         <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:80px; ">
             <div class="container">
                 <div class="row">
@@ -841,42 +843,23 @@
                         <!-- Button -->
                         <div class="col-2 col-lg-1">
                             <div style="position: relative; margin:0 ">
-                                <a href="<?= get_field("trending_btn")['url'] ?>" style="" class="btn-swiper">
+
+                                <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
                                     <?= get_field("trending_btn")['title'] ?>
                                 </a>
+
                             </div>
                         </div>
 
-                        <!-- Datum -->
-                        <!-- <div class="datum-swiper col-2 col-lg-1 d-none d-md-none d-lg-block">
-                            <div style="position:relative;">
-                                12.12.2024
-                            </div>
-                        </div> -->
-                        <div class="text-swiper col-6 col-lg-4">
+
+                        <div class="text-swiper col-6 col-lg-5">
                             <!-- Swiper Container -->
                             <div class="swiper swiper-container"
                                 style="flex-grow:1; --swiper-pagination-color: #E94271;">
-                                <!-- <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <span>There is space here for the title
-                                            of a
-                                            trending
-                                            article
-                                        </span>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <span>Scrolling Text Example 2</span>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <span>Scrolling Text Example 3</span>
-                                    </div>
-                                </div> -->
-
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date">12.12.2024</span>
+                                            <span class="slide-date d-none d-lg-block">12.12.2024</span>
                                             <span class="slide-text">There is space here for the title
                                                 of a
                                                 trending
@@ -885,43 +868,62 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date">12.12.2024</span>
-                                            <span class="slide-text">Scrolling Text Example 2</span>
+                                            <span class="slide-date d-none d-lg-block">12.12.2024</span>
+                                            <span class="slide-text">There is space here for the title
+                                                of a
+                                                trending
+                                                article2</span>
                                         </div>
-                                        <div class="swiper-slide">
-                                            <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <span class="slide-date">12.12.2024</span>
-                                                <span class="slide-text">Scrolling Text Example </span>
-                                            </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <span class="slide-date d-none d-lg-block">12.12.2024</span>
+                                            <span class="slide-text">There is space here for the title
+                                                of a
+                                                trending
+                                                article3</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
 
 
 
-                            <div class="d-none d-md-flex d-lg-flex">
-                                <div class="col-3 col-lg-1"></div>
+
+                        <div class="d-none d-md-flex d-lg-flex">
+                            <div class="col-3 col-lg-1"></div>
+                        </div>
+                        <div class="col-1 col-lg-1">
+                            <div class="d-flex justify-content-end align-items-center">
+                                <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                    class="d-flex justify-content-center align-items-center" href="#">
+                                    <img src="<?= get_field("arrow_btn")['url'] ?>"
+                                        alt="<?= get_field("arrow_btn")['title'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
+                                </a>
                             </div>
-                            <div class="col-1 col-lg-1">
-                                <div class="d-flex justify-content-end align-items-center">
-                                    <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
-                                        class="d-flex justify-content-center align-items-center" href="#">
-                                        <img src="<?= get_field("arrow_btn")['url'] ?>"
-                                            alt="<?= get_field("arrow_btn")['title'] ?>"
-                                            style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- <div class="d-none d-md-flex d-lg-flex">
+                        </div>
+
+                        <!-- <div class="d-none d-md-flex d-lg-flex">
                             <div class="col-3 col-lg-1"></div>
                         </div> -->
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+        <!-- Img under the  -->
 
 
         <div class="col-12 col-lg-12 img-container" style="">
@@ -1146,8 +1148,8 @@
         </div>
         <!-- Here new -->
 
-        <!-- The blue block -->
-        <div class="container" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
+        <!-- The blue block container -->
+        <div class="" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
@@ -1351,9 +1353,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- End of The blue block -->
 
-        <!-- End of The blue block -->
+
 
         <!-- SUE Insights -->
         <div class="container" style="margin-top:120px;">
@@ -1382,11 +1384,12 @@
             </div>
 
             <div style=" border-bottom:0.5px solid  #CBCFDE; margin:30px 0;"></div>
+            <!-- End of SUE Insights -->
 
             <div class="row">
-                <div class="col-12 col-lg-5 col-md-12">
+                <div class="col-12 col-lg-5 col-md-12 mask-group">
                     <!-- Client Story2 -->
-                    <div class="container">
+                    <div class="container ">
                         <div class="row">
                             <div class="col-12 col-lg-5 col-md-12" style="margin-top:60px;">
                                 <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
@@ -1550,8 +1553,9 @@
 
                     </div>
                 </div>
-            </div>
+            </div> <!-- End of Client Story2 and Right column -->
 
+            <!-- responsive-container With banks Block -->
             <div class="row">
                 <div class="responsive-container">
                     <img src="<?= get_field("sue_customers_bg")['url'] ?>"
@@ -1599,10 +1603,11 @@
                             class="icon" />
                     </div>
                 </div>
-            </div>
+            </div><!-- End of responsive-container With banks Block -->
+
+
 
             <!-- New Section With Swiper On Right Side -->
-
             <div class="row">
                 <!-- Left Section -->
                 <div class="col12 col-lg-5 order-2 order-lg-1 custom-video">
@@ -1723,6 +1728,7 @@
                     </div>
                 </div>
             </div>
+            <!--End of  New Section With Swiper On Right Side -->
 
             <!-- Form Section -->
             <div class="container form_section" style="">
@@ -2166,9 +2172,10 @@
             </div>
         </div>
 
+
+
+        <!-- End of the first bg-color -->
     </div>
-
-
 
 
 
@@ -2239,7 +2246,7 @@
 
     <script>
     let swiper3 = new Swiper('.mySwiper2', {
-        slidesPerView: 1.3,
+        slidesPerView: 1.1,
         grabCursor: true,
         spaceBetween: 1,
 
@@ -2257,7 +2264,7 @@
 
             410: {
                 slidesPerView: 1.1,
-                spaceBetween: 4,
+                spaceBetween: 2,
 
             },
 
@@ -2268,7 +2275,7 @@
             },
 
             556: {
-                slidesPerView: 2.3,
+                slidesPerView: 2.1,
 
 
                 spaceBetween: 2,
