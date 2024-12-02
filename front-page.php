@@ -21,39 +21,7 @@
         margin-left: 10px;
     }
 
-    /* .accordion-item {
-        border-bottom: 1px solid #ddd;
-    }
 
-    .accordion-item:last-child {
-        border-bottom: none;
-    }
-
-    .accordion-link {
-        display: block;
-        width: 100%;
-        padding: 1rem;
-        text-decoration: none;
-        color: #333;
-        background-color: transparent;
-    }
-
-    .accordion-link:focus,
-    .accordion-link:hover {
-        text-decoration: none;
-        background-color: #f8f9fa;
-    }
-
-    .accordion-link.collapsed {
-        color: #666;
-    }
-
-    .accordion-body {
-        padding: 1rem;
-    } */
-
-
-    /*  */
 
     .left-container {
         border-radius: 30px;
@@ -108,13 +76,10 @@
         border-radius: 100px;
         color: #FFFFFF;
         background-color: #E94271;
-        /* width: 87px;
-        height: 20px; */
         text-align: center;
         font-size: 11px;
         width: 103px;
         height: 30px;
-        /* font-size: 14px; */
         padding: 4px;
     }
 
@@ -143,9 +108,6 @@
         color: #FFFFFF;
         background-color: #E94271;
         text-align: center;
-        /* font-size: 11px;
-        width: 103px;
-        height: 30px; */
         padding: 4px 10px;
         width: fit-content;
     }
@@ -585,9 +547,6 @@
 
         .client_card2 {
             border-radius: 20px;
-            /* border-radius: 20px;
-            border: 1px solid #CBCFDE;
-            background: #EDF3F4; */
             width: 546px;
             height: 172px;
         }
@@ -602,8 +561,6 @@
         }
 
         .client-btn {
-            /* width: 106px;
-            height: 26px; */
             width: 103px;
             height: 30px;
             font-size: 14px;
@@ -815,23 +772,16 @@
                     </div>
                 </div>
             </div>
-            <!-- 1 -->
-
-            <!-- here Cutout -->
-
-
             <!-- End of the first container div -->
         </div>
 
         <!-- 2 -->
-
         <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:80px; ">
             <div class="container">
                 <div class="row">
                     <div class="d-flex flex-lg-row flex-row align-items-center justify-content-between gap-2"
                         style="position:relative; padding:20px 20px">
                         <!-- <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block"></div> -->
-
 
                         <!-- Pagination -->
                         <div class="col-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
@@ -859,7 +809,8 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date d-none d-lg-block">12.12.2024</span>
+                                            <span class="slide-date d-none d-lg-block"
+                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">12.12.2024</span>
                                             <span class="slide-text">There is space here for the title
                                                 of a
                                                 trending
@@ -868,7 +819,8 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date d-none d-lg-block">12.12.2024</span>
+                                            <span class="slide-date d-none d-lg-block"
+                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">14.12.2024</span>
                                             <span class="slide-text">There is space here for the title
                                                 of a
                                                 trending
@@ -877,7 +829,8 @@
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
-                                            <span class="slide-date d-none d-lg-block">12.12.2024</span>
+                                            <span class="slide-date d-none d-lg-block"
+                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">16.12.2024</span>
                                             <span class="slide-text">There is space here for the title
                                                 of a
                                                 trending
@@ -887,10 +840,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
 
                         <div class="d-none d-md-flex d-lg-flex">
                             <div class="col-3 col-lg-1"></div>
@@ -912,28 +861,30 @@
                     </div>
                 </div>
             </div>
+
+
+
         </div>
-
-
-
-
-
-
-
-
-
 
         <!-- Img under the  -->
 
 
-        <div class="col-12 col-lg-12 img-container" style="">
-            <!-- width:390px; -->
-            <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=" bg_img"
-                style=" height: ;border-radius:40px; object-fit:cover" />
+        <div class="col-12 col-lg-12 img-container" style="position: ;">
+
+            <div style=" ">
+                <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=" bg_img"
+                    style=" height: ;border-radius:40px; object-fit:cover" />
+
+                <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:absolute ;top: 120%;left:49.9%;transform: translate(-50%, -50%);"
+                    class="d-none d-lg-flex justify-content-center align-items-center" href="#testimonials">
+                    <img src="<?= get_field("arrow_on_img")['url'] ?>" alt="<?= get_field("arrow_on_img")['alt'] ?>"
+                        style="width:12px; height:18px; margin:7px 0;" />
+                </a>
+            </div>
         </div>
 
         <!-- Outcome Testimonials Section on Small Screens -->
-        <div class="container">
+        <div class="container" style="">
             <div class="row d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none"
                 style="margin-top:-195px;">
                 <?php
@@ -973,10 +924,10 @@
         </div>
 
 
-        <!-- Outcome Testimonials Section on LG and MD Screens -->
-        <div class="container">
+        <!-- Outcome Testimonials Section on Lg and MD Screens -->
+        <div class="container" id="testimonials">
 
-            <div class="row d-none d-md-flex d-lg-flex container2" style="">
+            <div class="row d-none d-md-flex d-lg-flex container2" style="position: ">
                 <?php
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
@@ -1023,7 +974,6 @@
 
 
         <div class="mask-group">
-
 
             <!--  Sue_Partners Repeater  Swiper On Small -->
             <div class="" style="margin-top:50px; margin-bottom: 60px;">
@@ -1387,7 +1337,7 @@
             <!-- End of SUE Insights -->
 
             <div class="row">
-                <div class="col-12 col-lg-5 col-md-12 mask-group">
+                <div class="col-12 col-lg-5 col-md-12  mask-group ">
                     <!-- Client Story2 -->
                     <div class="container ">
                         <div class="row">
@@ -1432,6 +1382,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <div class="d-none d-md-none d-lg-block col-lg-2 ">
 
@@ -1554,58 +1505,63 @@
                     </div>
                 </div>
             </div> <!-- End of Client Story2 and Right column -->
+        </div> <!-- End of container div -->
 
-            <!-- responsive-container With banks Block -->
-            <div class="row">
-                <div class="responsive-container">
-                    <img src="<?= get_field("sue_customers_bg")['url'] ?>"
-                        alt="<?= get_field("sue_customers_bg")['alt'] ?>" class="background-image" />
-                    <div class="overlay">
-                        <span class="sub-title"><?= get_field("sue_title") ?></span>
-                        <span class="main-title"><?= get_field("sue_main_title") ?>
 
-                            <span class="main-title" style="color:#E94271"><?= get_field("sue_main_title_pink_word") ?>
-                            </span>
 
-                            <div class="row" style="margin-top: 20px;">
-                                <div class="icon-container col-12 col-lg-12">
-                                    <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                        alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                                    <img src="<?= get_field("bol_icon")['url'] ?>"
-                                        alt="<?= get_field("bol_icon")['alt'] ?>" class="icon" />
-                                </div>
-                            </div>
-                            <div class="icon-container">
-                                <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                                    class="icon" />
-                                <img src="<?= get_field("booking_icon")['url'] ?>"
-                                    alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
-                            </div>
-                    </div>
-                </div>
 
-                <div class="overlay2">
+        <!-- responsive-container With banks Block -->
+        <div class="row">
+            <div class="responsive-container">
+                <img src="<?= get_field("sue_customers_bg")['url'] ?>" alt="<?= get_field("sue_customers_bg")['alt'] ?>"
+                    class="background-image" />
+                <div class="overlay">
                     <span class="sub-title"><?= get_field("sue_title") ?></span>
-                    <span class="main-title"><?= get_field("sue_main_title") ?></span>
+                    <span class="main-title"><?= get_field("sue_main_title") ?>
 
-                    <div class="row">
-                        <div class="icon-container col-12 col-lg-12">
-                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
-                                class="icon" />
+                        <span class="main-title" style="color:#E94271"><?= get_field("sue_main_title_pink_word") ?>
+                        </span>
+
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="icon-container col-12 col-lg-12">
+                                <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                    alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                                <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                                    class="icon" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="icon-container">
-                        <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                            class="icon" />
-                        <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
+                        <div class="icon-container">
+                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                                class="icon" />
+                            <img src="<?= get_field("booking_icon")['url'] ?>"
+                                alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
+                        </div>
+                </div>
+            </div>
+
+            <div class="overlay2">
+                <span class="sub-title"><?= get_field("sue_title") ?></span>
+                <span class="main-title"><?= get_field("sue_main_title") ?></span>
+
+                <div class="row">
+                    <div class="icon-container col-12 col-lg-12">
+                        <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                            alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                        <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
                             class="icon" />
                     </div>
                 </div>
-            </div><!-- End of responsive-container With banks Block -->
+                <div class="icon-container">
+                    <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                        class="icon" />
+                    <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
+                        class="icon" />
+                </div>
+            </div>
+        </div><!-- End of responsive-container With banks Block -->
 
 
+        <div class="container">
 
             <!-- New Section With Swiper On Right Side -->
             <div class="row">
@@ -1730,8 +1686,13 @@
             </div>
             <!--End of  New Section With Swiper On Right Side -->
 
-            <!-- Form Section -->
-            <div class="container form_section" style="">
+        </div> <!-- End of the Container -->
+
+
+        <!-- Form Section  -->
+        <div class=" container  form_section" style="">
+            <!-- container -->
+            <div class="">
                 <div class="row">
                     <div class="col-12 col-lg-3">
                         <div class="left-container" style="">
@@ -1748,7 +1709,8 @@
                                 </div>
 
                                 <div class="d-none d-lg-block"
-                                    style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;"></div>
+                                    style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
+                                </div>
                             </div>
                             <div class="d-block d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
                             </div></a>
@@ -1794,384 +1756,383 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- End of Form Section -->
 
-            <!-- New Section -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <!-- First Row -->
-                        <div class=""
-                            style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; margin-top:150px;">
-                            <span
-                                style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin:10px 5px 0">
-                                <?= get_field("information_title") ?>
-                            </span>
-                            <br>
-                            <span
-                                style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin:5px 0 ">
+        </div>
+        <!-- End of Form Section -->
 
-                                <?= get_field("information_text") ?>
-                            </span>
-                        </div>
+        <!-- New Section -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <!-- First Row -->
+                    <div class=""
+                        style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; margin-top:150px;">
+                        <span
+                            style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin:10px 5px 0">
+                            <?= get_field("information_title") ?>
+                        </span>
+                        <br>
+                        <span
+                            style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin:5px 0 ">
 
-                        <!-- Second Row -->
-                        <div class="row" style="margin:50px 0;">
-                            <div class="col-lg-4">
-                                <!-- accordion -->
-                                <div class="    d-block d-lg-none" id="accordionExample">
-                                    <!-- First Item -->
-                                    <div class="accordion-item">
-                                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <a href="#collapseOne" class="accordion-button"
-                                                    data-bs-toggle="collapse" aria-expanded="true"
-                                                    aria-controls="collapseOne"
-                                                    style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                                    <?= get_field("contact_en_adres_on_sm") ?>
-                                                </a>
+                            <?= get_field("information_text") ?>
+                        </span>
+                    </div>
 
-                                            </h2>
-                                            <!-- DownAroow -->
-                                            <div>
-                                                <a class="d-flex justify-content-center align-items-center"
-                                                    href="#collapseOne" class="accordion-button"
-                                                    data-bs-toggle="collapse" aria-expanded="false"
-                                                    aria-controls="collapseOne">
-                                                    <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                                        alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
-                                                        style="width:12px; height:12px; margin:7px 0; " />
-                                                </a>
+                    <!-- Second Row -->
+                    <div class="row" style="margin:50px 0;">
+                        <div class="col-lg-4">
+                            <!-- accordion -->
+                            <div class="    d-block d-lg-none" id="accordionExample">
+                                <!-- First Item -->
+                                <div class="accordion-item">
+                                    <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <a href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
+                                                aria-expanded="true" aria-controls="collapseOne"
+                                                style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                                <?= get_field("contact_en_adres_on_sm") ?>
+                                            </a>
+
+                                        </h2>
+                                        <!-- DownAroow -->
+                                        <div>
+                                            <a class="d-flex justify-content-center align-items-center"
+                                                href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                    alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                    style="width:12px; height:12px; margin:7px 0; " />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne" class="accordion-collapse collapse "
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body ">
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span
+                                                    style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
+                                                    <?= get_field("e_mail") ?>
+                                                </span>
+                                                <span>
+                                                    <?= get_field("tele") ?>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span
+                                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                    <?= get_field("address") ?></span>
+                                                <span> <?= get_field("city") ?></span>
                                             </div>
                                         </div>
-                                        <div id="collapseOne" class="accordion-collapse collapse "
-                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body ">
-                                                <div class="d-flex flex-column align-items-flex-start ">
-                                                    <span
-                                                        style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
-                                                        <?= get_field("e_mail") ?>
-                                                    </span>
-                                                    <span>
-                                                        <?= get_field("tele") ?>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column align-items-flex-start ">
+                                    </div>
+                                </div>
+
+                                <div class="d-block d-lg-none"
+                                    style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                                </div>
+
+                                <!-- Second Item -->
+                                <div class="accordion-item">
+                                    <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <a href="#collapseTwo" class="accordion-button collapsed"
+                                                data-bs-toggle="collapse" aria-expanded="false"
+                                                aria-controls="collapseTwo"
+                                                style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                                <?= get_field("information") ?>
+                                            </a>
+                                        </h2>
+
+
+                                        <!-- DownAroow -->
+                                        <div>
+                                            <a class="d-flex justify-content-center align-items-center"
+                                                href="#collapseTwo" class="accordion-button collapsed"
+                                                data-bs-toggle="collapse" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                                <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                    alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                    style="width:12px; height:12px; margin:7px 0; " />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span
+                                                    style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                                    <?= get_field("kvk") ?>
                                                     <span
                                                         style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                                        <?= get_field("address") ?></span>
-                                                    <span> <?= get_field("city") ?></span>
-                                                </div>
+                                                        <?= get_field("kvk_num") ?>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-flex-start ">
+                                                <span> <?= get_field("vat") ?> <span>
+                                                        <?= get_field("account_num") ?>
+                                                    </span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="d-block d-lg-none"
-                                        style=" border-bottom: 1px solid  #25325F; margin:30px 0; "></div>
-
-                                    <!-- Second Item -->
-                                    <div class="accordion-item">
-                                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <a href="#collapseTwo" class="accordion-button collapsed"
-                                                    data-bs-toggle="collapse" aria-expanded="false"
-                                                    aria-controls="collapseTwo"
-                                                    style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                                    <?= get_field("information") ?>
-                                                </a>
-                                            </h2>
-
-
-                                            <!-- DownAroow -->
-                                            <div>
-                                                <a class="d-flex justify-content-center align-items-center"
-                                                    href="#collapseTwo" class="accordion-button collapsed"
-                                                    data-bs-toggle="collapse" aria-expanded="false"
-                                                    aria-controls="collapseTwo">
-                                                    <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                                        alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
-                                                        style="width:12px; height:12px; margin:7px 0; " />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="collapseTwo" class="accordion-collapse collapse"
-                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                            <div class="accordion-body">
-
-                                                <div class="d-flex flex-column align-items-flex-start ">
-                                                    <span
-                                                        style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
-                                                        <?= get_field("kvk") ?>
-                                                        <span
-                                                            style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                                            <?= get_field("kvk_num") ?>
-                                                        </span>
-                                                    </span>
-                                                </div>
-                                                <div class="d-flex flex-column align-items-flex-start ">
-                                                    <span> <?= get_field("vat") ?> <span>
-                                                            <?= get_field("account_num") ?>
-                                                        </span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-block d-lg-none"
-                                        style=" border-bottom: 1px solid  #25325F; margin:30px 0; "></div>
                                 </div>
-
-
-
-
-
-                                <!-- LG -->
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
-                                    <span
-                                        style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                        <?= get_field("contact_title") ?></span>
-                                    <span
-                                        style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                        <?= get_field("e_mail") ?></span>
-                                    <span> <?= get_field("tele") ?></span>
-
+                                <div class="d-block d-lg-none"
+                                    style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
                                 </div>
+                            </div>
+
+
+
+
+
+                            <!-- LG -->
+                            <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                                <span
+                                    style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                    <?= get_field("contact_title") ?></span>
+                                <span
+                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                    <?= get_field("e_mail") ?></span>
+                                <span> <?= get_field("tele") ?></span>
 
                             </div>
 
-                            <div class="col-lg-4">
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
-                                    <span
-                                        style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                        <?= get_field("address_title") ?></span>
-                                    <span
-                                        style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                        <?= get_field("address") ?></span>
-                                    <span> <?= get_field("city") ?></span>
-                                </div>
+                        </div>
 
+                        <div class="col-lg-4">
+                            <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                                <span
+                                    style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                    <?= get_field("address_title") ?></span>
+                                <span
+                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                    <?= get_field("address") ?></span>
+                                <span> <?= get_field("city") ?></span>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                                <span
+                                    style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                    <?= get_field("information") ?>
+                                </span>
+
+
+                                <div class="d-flex flex-row align-items-center gap-2">
+
                                     <span
-                                        style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                        <?= get_field("information") ?>
+                                        style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                        <?= get_field("kvk") ?>
                                     </span>
+                                    <span
+                                        style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                        <?= get_field("kvk_num") ?>
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-row align-items-center gap-2">
+                                    <span> <?= get_field("vat") ?></span>
+                                    <span> <?= get_field("account_num") ?></span>
 
-
-                                    <div class="d-flex flex-row align-items-center gap-2">
-
-                                        <span
-                                            style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
-                                            <?= get_field("kvk") ?>
-                                        </span>
-                                        <span
-                                            style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                            <?= get_field("kvk_num") ?>
-                                        </span>
-                                    </div>
-                                    <div class="d-flex flex-row align-items-center gap-2">
-                                        <span> <?= get_field("vat") ?></span>
-                                        <span> <?= get_field("account_num") ?></span>
-
-                                    </div>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
 
-                    <!-- Gap between -->
-                    <div class="d-none d-lg-flex col-lg-2"></div>
-
-                    <!-- Newsletters -->
-
-                    <div class="col-12 col-lg-4">
-                        <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
-                            <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
-
-                                <!-- Logo -->
-
-                                <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
-                                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
-                                        style="height: 43px;width: 88px;">
-                                </a>
-
-                                <span
-                                    style="margin:20px 0; color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                    <?= get_field("newsletter_text") ?>
-                                </span>
-                                <span
-                                    style=" color: #6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:  23.4px">
-                                    <?= get_field("privacy_statement") ?>
-                                </span>
-                                <!-- #25325F -->
-
-
-                            </div>
-
-
-                        </div>
-
-                    </div>
                 </div>
 
+                <!-- Gap between -->
+                <div class="d-none d-lg-flex col-lg-2"></div>
 
+                <!-- Newsletters -->
 
+                <div class="col-12 col-lg-4">
+                    <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
+                        <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
 
+                            <!-- Logo -->
 
+                            <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
+                                <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
+                                    style="height: 43px;width: 88px;">
+                            </a>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-12">
-                            <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-between"
-                                style="margin-top:50px">
-                                <?php
-                                foreach (get_field("arrow_section") as $testimonails) {
-                                    ?>
-                                <div class="col-lg"
-                                    style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-between gap-4">
-                                        <img src="<?= $testimonails['img_1']['url'] ?>"
-                                            alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
+                            <span
+                                style="margin:20px 0; color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("newsletter_text") ?>
+                            </span>
+                            <span
+                                style=" color: #6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:  23.4px">
+                                <?= get_field("privacy_statement") ?>
+                            </span>
+                            <!-- #25325F -->
 
-                                        <img src="<?= $testimonails['img_2']['url'] ?>"
-                                            alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_3']['url'] ?>"
-                                            alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_4']['url'] ?>"
-                                            alt=" <?= $testimonails['img_4']['alt'] ?>" class="arrow_section" />
-
-                                        <img src="<?= $testimonails['img_5']['url'] ?>"
-                                            alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_6']['url'] ?>"
-                                            alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_7']['url'] ?>"
-                                            alt=" <?= $testimonails['img_7']['alt'] ?>" class="arrow_section" />
-
-                                        <img src="<?= $testimonails['img_8']['url'] ?>"
-                                            alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
-
-                                    </div>
-                                </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
 
                         </div>
+
+
                     </div>
 
-                    <!-- Second Line  -->
-
-                    <div class="row">
-                        <div class="col-12 col-lg-12">
-                            <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-around"
-                                style="margin-top:50px">
-
-                                <?php
-                                foreach (get_field("arrow_section_second_row") as $testimonails) {
-                                    ?>
-                                <div class="col-lg"
-                                    style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-around  gap-4">
-                                        <img src="<?= $testimonails['img_1']['url'] ?>"
-                                            alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
-
-                                        <img src="<?= $testimonails['img_2']['url'] ?>"
-                                            alt=" <?= $testimonails['img_2']['alt'] ?>" class="arrow_section" />
-
-                                        <img src="<?= $testimonails['img_3']['url'] ?>"
-                                            alt=" <?= $testimonails['img_3']['alt'] ?>" class="arrow_section" />
-
-                                        <img src="<?= $testimonails['img_4']['url'] ?>"
-                                            alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_5']['url'] ?>"
-                                            alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex " />
-
-                                        <img src="<?= $testimonails['img_6']['url'] ?>"
-                                            alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_7']['url'] ?>"
-                                            alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                            class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                        <img src="<?= $testimonails['img_8']['url'] ?>"
-                                            alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
-
-                                    </div>
-                                </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <!-- Footer -->
-
-                <div class="container" style="margin-top:100px; padding-bottom:50px;">
-                    <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <div
-                                class="d-flex flex-column align-items-flex-start flex-md-row  flex-lg-row align-items-lg-center justify-content-between gap-2 ">
-                                <span
-                                    style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    © Copyright 2024
-                                </span>
-
-
-                                <span
-                                    style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Algemene leveringsvoorwaarden
-                                </span>
-                                <span
-                                    style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Verwerkers overeenkomst
-                                </span>
-                                <span
-                                    style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Privacy Statement
-                                </span>
-
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-2"></div>
-                        <div class="col-12 col-lg-2">
-                            <div
-                                class="d-flex flex-column align-items-flex-start  flex-md-row flex-lg-row  align-items-md-center align-items-lg-end justify-content-end ">
-
-                                <span
-                                    style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Website Code Blauw
-                                </span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
-        </div>
 
+
+
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-between"
+                            style="margin-top:50px">
+                            <?php
+                            foreach (get_field("arrow_section") as $testimonails) {
+                                ?>
+                            <div class="col-lg"
+                                style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-4">
+                                    <img src="<?= $testimonails['img_1']['url'] ?>"
+                                        alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
+
+                                    <img src="<?= $testimonails['img_2']['url'] ?>"
+                                        alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_3']['url'] ?>"
+                                        alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_4']['url'] ?>"
+                                        alt=" <?= $testimonails['img_4']['alt'] ?>" class="arrow_section" />
+
+                                    <img src="<?= $testimonails['img_5']['url'] ?>"
+                                        alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_6']['url'] ?>"
+                                        alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_7']['url'] ?>"
+                                        alt=" <?= $testimonails['img_7']['alt'] ?>" class="arrow_section" />
+
+                                    <img src="<?= $testimonails['img_8']['url'] ?>"
+                                        alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
+
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Second Line  -->
+
+                <div class="row">
+                    <div class="col-12 col-lg-12">
+                        <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-around"
+                            style="margin-top:50px">
+
+                            <?php
+                            foreach (get_field("arrow_section_second_row") as $testimonails) {
+                                ?>
+                            <div class="col-lg"
+                                style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-around  gap-4">
+                                    <img src="<?= $testimonails['img_1']['url'] ?>"
+                                        alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
+
+                                    <img src="<?= $testimonails['img_2']['url'] ?>"
+                                        alt=" <?= $testimonails['img_2']['alt'] ?>" class="arrow_section" />
+
+                                    <img src="<?= $testimonails['img_3']['url'] ?>"
+                                        alt=" <?= $testimonails['img_3']['alt'] ?>" class="arrow_section" />
+
+                                    <img src="<?= $testimonails['img_4']['url'] ?>"
+                                        alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_5']['url'] ?>"
+                                        alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex " />
+
+                                    <img src="<?= $testimonails['img_6']['url'] ?>"
+                                        alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_7']['url'] ?>"
+                                        alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                        class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                    <img src="<?= $testimonails['img_8']['url'] ?>"
+                                        alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
+
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+
+            <div class="container" style="margin-top:100px; padding-bottom:50px;">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div
+                            class="d-flex flex-column align-items-flex-start flex-md-row  flex-lg-row align-items-lg-center justify-content-between gap-2 ">
+                            <span
+                                style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
+                                © Copyright 2024
+                            </span>
+
+
+                            <span
+                                style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
+                                Algemene leveringsvoorwaarden
+                            </span>
+                            <span
+                                style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
+                                Verwerkers overeenkomst
+                            </span>
+                            <span
+                                style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
+                                Privacy Statement
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2"></div>
+                    <div class="col-12 col-lg-2">
+                        <div
+                            class="d-flex flex-column align-items-flex-start  flex-md-row flex-lg-row  align-items-md-center align-items-lg-end justify-content-end ">
+
+                            <span
+                                style="color:#6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
+                                Website Code Blauw
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
 
         <!-- End of the first bg-color -->
