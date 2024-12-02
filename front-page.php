@@ -105,7 +105,7 @@
     }
 
     .client-btn {
-        border-radius: 14px;
+        border-radius: 100px;
         color: #FFFFFF;
         background-color: #E94271;
         /* width: 87px;
@@ -136,6 +136,20 @@
         line-height: 23.8px;
         font-weight: 700;
     }
+
+
+    .client2-btn {
+        border-radius: 100px;
+        color: #FFFFFF;
+        background-color: #E94271;
+        text-align: center;
+        /* font-size: 11px;
+        width: 103px;
+        height: 30px; */
+        padding: 4px 10px;
+        width: fit-content;
+    }
+
 
     .right_section {
         margin-top: 27px;
@@ -964,76 +978,78 @@
 
 
 
-            <!-- Sue_Partners Repeater On LG -->
-            <div class="container">
-                <div class="">
-                    <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                        style="margin-top:100px">
-                        <span class="col-lg-2 "
-                            style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
-                            SUE partners:</span>
-                        <?php
-                        foreach (get_field("sue_partners") as $sue) {
-                            ?>
-                        <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
-                            <div class="d-flex flex-row align-items-center justify-content-around">
-                                <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                    alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                    style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
-                                <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
-                                    <?= $sue["sue_partners_text"] ?>
-                                </h1>
-                                <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
-                                    class="" href="#">
-                                    <img src="<?= $sue['sue_partners_link']['url'] ?>"
-                                        alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                        style="width:4px; height:8px; object-fit:cover " />
-                                </a>
+            <div class="mask-group">
+
+
+                <!--  Sue_Partners Repeater  Swiper On Small -->
+                <div class="" style="margin-top:50px; margin-bottom: 60px;">
+
+                    <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
+                        <span
+                            style="color:#25325F;font-family: Manrope;font-size:16px;font-style: normal;font-weight: 700;line-height: 27.2px; ">
+                            SUE partners:
+                        </span>
+                    </div>
+
+                    <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
+                        <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
+                            <div class="swiper-wrapper">
+                                <?php
+                                foreach (get_field("sue_partners") as $sue) {
+                                    ?>
+                                <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
+                                    style="width:fit-content;">
+                                    <div
+                                        style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
+                                        <div class="d-flex flex-row align-items-center justify-content-around">
+                                            <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                                alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                                style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
+                                            <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
+                                                <?= $sue["sue_partners_text"] ?>
+                                            </h1>
+                                            <a style="border-radius:14px; background-color:; height:; width:;"
+                                                class="d-flex align-items-center" href="#">
+                                                <img src="<?= $sue['sue_partners_link']['url'] ?>"
+                                                    alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
+                                                    style="width:4px; height:8px; object-fit:cover " />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                                }
+                                ?>
                             </div>
                         </div>
-                        <?php
-                        }
-                        ?>
                     </div>
                 </div>
-            </div>
 
-
-
-            <!--  Sue_Partners Repeater  Swiper On Small -->
-            <div class="" style="margin-top:50px; margin-bottom: 60px;">
-
-                <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
-                    <span
-                        style="color:#25325F;font-family: Manrope;font-size:16px;font-style: normal;font-weight: 700;line-height: 27.2px; ">
-                        SUE partners:
-                    </span>
-                </div>
-
-                <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
-                    <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
-                        <div class="swiper-wrapper">
+                <!-- Sue_Partners Repeater On LG -->
+                <div class="container">
+                    <div class="">
+                        <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
+                            style="margin-top:100px">
+                            <span class="col-lg-2 "
+                                style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
+                                SUE partners:</span>
                             <?php
                             foreach (get_field("sue_partners") as $sue) {
                                 ?>
-                            <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
-                                style="width:fit-content;">
-                                <div
-                                    style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-around">
-                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                            alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                            style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
-                                        <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
-                                            <?= $sue["sue_partners_text"] ?>
-                                        </h1>
-                                        <a style="border-radius:14px; background-color:; height:; width:;"
-                                            class="d-flex align-items-center" href="#">
-                                            <img src="<?= $sue['sue_partners_link']['url'] ?>"
-                                                alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                                style="width:4px; height:8px; object-fit:cover " />
-                                        </a>
-                                    </div>
+                            <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
+                                <div class="d-flex flex-row align-items-center justify-content-around">
+                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                        alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                        style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                                    <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
+                                        <?= $sue["sue_partners_text"] ?>
+                                    </h1>
+                                    <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
+                                        class="" href="#">
+                                        <img src="<?= $sue['sue_partners_link']['url'] ?>"
+                                            alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
+                                            style="width:4px; height:8px; object-fit:cover " />
+                                    </a>
                                 </div>
                             </div>
                             <?php
@@ -1042,56 +1058,51 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- Client Story1 -->
-            <div class="container">
-                <div class="row row-cols-1 row-cols-lg-2 g-4">
-                    <?php foreach (get_field("client_story") as $testimonial) { ?>
-                    <div class="col">
-                        <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center"
-                            style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;">
-                            <div class="row g-0 align-items-center">
-                                <div class=" col-4 ">
-                                    <img src="<?= $testimonial['client_img']['url'] ?>"
-                                        alt="<?= $testimonial['client_img']['alt'] ?>"
-                                        class="client-img img-fluid rounded-start" />
-                                </div>
-                                <div class="col-8 col-md-7 col-lg-7">
-                                    <div class="card-body">
-                                        <div class="d-flex flex-row align-items-center justify-content-left gap-2">
-                                            <a class="client-btn" href="<?= $testimonial['client_story_btn']['url'] ?>">
-                                                <span>
-                                                    <?= $testimonial['client_story_btn']['title'] ?>
-                                                </span>
-                                            </a>
-                                            <h4 class="card-title" style="">
-                                                <?= $testimonial["client_name"] ?>
+                <!-- Client Story1 -->
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-lg-2 g-4">
+                        <?php foreach (get_field("client_story") as $testimonial) { ?>
+                        <div class="col">
+                            <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center"
+                                style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;">
+                                <div class="row g-0 align-items-center">
+                                    <div class=" col-4 ">
+                                        <img src="<?= $testimonial['client_img']['url'] ?>"
+                                            alt="<?= $testimonial['client_img']['alt'] ?>"
+                                            class="client-img img-fluid rounded-start" />
+                                    </div>
+                                    <div class="col-8 col-md-7 col-lg-7">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row align-items-center justify-content-left gap-2">
+                                                <a class="client-btn"
+                                                    href="<?= $testimonial['client_story_btn']['url'] ?>">
+                                                    <span>
+                                                        <?= $testimonial['client_story_btn']['title'] ?>
+                                                    </span>
+                                                </a>
+                                                <h4 class="card-title" style="">
+                                                    <?= $testimonial["client_name"] ?>
+                                                </h4>
+                                            </div>
+                                            <h4 class="card-text mt-2" style="">
+                                                <?= $testimonial["client_text"] ?>
+                                                <a href="#">
+                                                    <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                        alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                        style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
+                                                </a>
                                             </h4>
                                         </div>
-                                        <h4 class="card-text mt-2" style="">
-                                            <?= $testimonial["client_text"] ?>
-                                            <a href="#">
-                                                <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                    alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                    style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
-                                            </a>
-                                        </h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
-                    <?php } ?>
                 </div>
+
             </div>
-
-
-
-
-
-
 
         </div>
 
@@ -1350,9 +1361,9 @@
                                             <div class="col-8">
                                                 <div class="card-body">
                                                     <div
-                                                        class="d-flex flex-row align-items-center justify-content-left gap-4">
-                                                        <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>">
-                                                            <!--  style="width:94px; height:30px;" -->
+                                                        class="d-flex flex-row align-items-center justify-content-left gap-2">
+                                                        <a class="client2-btn" href="<?= $testimonial['btn']['url'] ?>">
+
                                                             <?= $testimonial['btn']['title'] ?>
                                                         </a>
                                                         <h4 class="card-title" style="">
@@ -1365,7 +1376,7 @@
                                                         <a href="#">
                                                             <img src="<?= $testimonial['client_link']['url'] ?>"
                                                                 alt="<?= $testimonial['client_link']['alt'] ?>" style="width:4px; height:8px; object-fit:cover;
-                                                        margin-left:4px;" />
+                                                        margin-left:8px;" />
                                                         </a>
                                                     </h4>
                                                 </div>
@@ -1682,7 +1693,7 @@
                                 <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                                     style="max-width:72px;height:72px;border-radius:15px; object-fit:cover" />
                                 <div class="d-flex flex-column">
-                                    <span class="first-name" style=" ">Firstnmae:</span>
+                                    <span class="first-name" style=" ">Firstname:</span>
 
                                     <span
                                         style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">Let's
