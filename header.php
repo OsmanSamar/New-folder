@@ -222,9 +222,9 @@
             </div>
         </nav>
 
-        <!-- Sidebar p-lg-0 on SM Screen  -->
-        <div class="offcanvas offcanvas-end p-4 " tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel" style=" background:; bottom:6%">
+        <!-- Sidebar p-lg-0 on SM Screen  bottom:6%  p-4-->
+        <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+            style=" background:; bottom:29%">
             <div class="offcanvas-header text-black border-bottom">
                 <!-- offcanvasNavbartitle/logo -->
 
@@ -354,7 +354,7 @@
 
                 </ul>
                 <!-- Arrow and Let's Talk on SM Screen-->
-                <div style="position: relative;bottom: -30%; ">
+                <!-- <div style="position: relative;bottom: -30%; ">
                     <div style="border-radius:30px;background:#25325F;width:100%;height: 101px; ">
                         <div class="d-flex align-items-center justify-content-center gap-3" style="">
                             <a href="<?= esc_url(home_url('/')); ?>"
@@ -371,12 +371,34 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
 
 
 
             </div>
+
+
+            <div class="offcanvas-header d-flex align-items-center justify-content-center gap-3 "
+                style="border-radius:;background:#25325F; ">
+
+
+                <div class="d-flex align-items-center justify-content-center gap-3" style="">
+                    <a href="<?= esc_url(home_url('/')); ?>"
+                        style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
+                        class="d-flex justify-content-center align-items-center">
+                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                            style="width:12px; height: 18px; margin:7px 0;  ">
+                    </a>
+                    <a href="<?= esc_url(home_url('/')); ?>"
+                        style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color: white;">
+                        Let's talk
+                    </a>
+                </div>
+
+            </div>
+
+
         </div>
 
 
