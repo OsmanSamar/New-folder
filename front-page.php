@@ -815,55 +815,96 @@
             </div>
             <!-- 1 -->
 
+            <!-- here Cutout -->
 
-            <!-- 2 -->
-            <!-- width:1280px; -->
-            <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:80px;">
-                <div class="container">
-                    <div class="row">
-                        <div class="d-flex flex-lg-row flex-row align-items-center justify-content-around gap-2"
-                            style="position:relative; padding:20px 20px">
-                            <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block">
-                            </div>
-                            <!-- Pagination -->
 
-                            <div class="col-2 col-lg-2 d-none d-md-block d-lg-block">
-                                <div class="swiper-pagination2"
-                                    style="position:relative;   transform: translateY(50%);  z-index:1;">
-                                </div>
+            <!-- End of container div -->
+        </div>
+
+        <!-- 2 -->
+        <!-- width:1280px; -->
+        <div class="bg-container col-12 col-lg-12" style="background:#25325F; border-radius:40px;margin-top:80px; ">
+            <div class="container">
+                <div class="row">
+                    <div class="d-flex flex-lg-row flex-row align-items-center justify-content-between gap-2"
+                        style="position:relative; padding:20px 20px">
+                        <!-- <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block"></div> -->
+
+
+                        <!-- Pagination -->
+                        <div class="col-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
+                            <div class="swiper-pagination2"
+                                style="position:relative;transform: translateY(50%);  z-index:1;">
                             </div>
-                            <!-- Button -->
-                            <div class="col-2 col-lg-2">
-                                <div style="position: relative; margin:0 ">
-                                    <a href="<?= get_field("trending_btn")['url'] ?>" style="" class="btn-swiper">
-                                        <?= get_field("trending_btn")['title'] ?>
-                                    </a>
-                                </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="col-2 col-lg-1">
+                            <div style="position: relative; margin:0 ">
+                                <a href="<?= get_field("trending_btn")['url'] ?>" style="" class="btn-swiper">
+                                    <?= get_field("trending_btn")['title'] ?>
+                                </a>
                             </div>
-                            <div class="text-swiper col-6 col-lg-4">
-                                <!-- Swiper Container -->
-                                <div class="swiper swiper-container"
-                                    style="flex-grow: 1; --swiper-pagination-color: #E94271;">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <span>There is space here for the title
+                        </div>
+
+                        <!-- Datum -->
+                        <!-- <div class="datum-swiper col-2 col-lg-1 d-none d-md-none d-lg-block">
+                            <div style="position:relative;">
+                                12.12.2024
+                            </div>
+                        </div> -->
+                        <div class="text-swiper col-6 col-lg-4">
+                            <!-- Swiper Container -->
+                            <div class="swiper swiper-container"
+                                style="flex-grow:1; --swiper-pagination-color: #E94271;">
+                                <!-- <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <span>There is space here for the title
+                                            of a
+                                            trending
+                                            article
+                                        </span>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <span>Scrolling Text Example 2</span>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <span>Scrolling Text Example 3</span>
+                                    </div>
+                                </div> -->
+
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <span class="slide-date">12.12.2024</span>
+                                            <span class="slide-text">There is space here for the title
                                                 of a
                                                 trending
-                                                article
-                                            </span>
+                                                article</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <span class="slide-date">12.12.2024</span>
+                                            <span class="slide-text">Scrolling Text Example 2</span>
                                         </div>
                                         <div class="swiper-slide">
-                                            <span>Scrolling Text Example 2</span>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <span>Scrolling Text Example 3</span>
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <span class="slide-date">12.12.2024</span>
+                                                <span class="slide-text">Scrolling Text Example </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="col-1 col-lg-2">
 
+
+
+
+                            <div class="d-none d-md-flex d-lg-flex">
+                                <div class="col-3 col-lg-1"></div>
+                            </div>
+                            <div class="col-1 col-lg-1">
                                 <div class="d-flex justify-content-end align-items-center">
                                     <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                         class="d-flex justify-content-center align-items-center" href="#">
@@ -873,183 +914,149 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="d-none d-md-flex d-lg-flex">
-                                <div class="col-3 col-lg-1"></div>
-                            </div>
+                            <!-- <div class="d-none d-md-flex d-lg-flex">
+                            <div class="col-3 col-lg-1"></div>
+                        </div> -->
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
-            <div class="col-12 col-lg-12 img-container" style="">
-                <!-- width:390px; -->
-                <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=" bg_img"
-                    style=" height: ;border-radius:40px; object-fit:cover" />
-            </div>
+        <div class="col-12 col-lg-12 img-container" style="">
+            <!-- width:390px; -->
+            <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class=" bg_img"
+                style=" height: ;border-radius:40px; object-fit:cover" />
+        </div>
 
-            <!-- Outcome Testimonials Section on Small Screens -->
-            <div class="container">
-                <div class="row d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none"
-                    style="margin-top:-195px;">
-                    <?php
-                    foreach (get_field("testimonials_section") as $testimonial) {
-                        ?>
-                    <div class="testimonial"
-                        style="border-radius:15px; background-color:#FFF; width:350px; height:104px; margin:15px 0;">
-                        <div style=" margin-top:2px;">
-                            <span
-                                style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px;">
-                                <?= $testimonial["num"] ?>
-                            </span>
-                            <span
-                                style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
-                                <?= $testimonial["sub_title"] ?>
-                            </span>
-                        </div>
-
-                        <div class="d-flex justify-content-end ">
-                            <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center" href="#">
-                                <img src="<?= get_field("schedule_link")['url'] ?>"
-                                    alt="<?= get_field("schedule_link")['alt'] ?>"
-                                    style="width:12px; height:18px; margin:7px 0;" />
-                            </a>
-                        </div>
-
-                        <h1 style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; ; ">
-                            <?= $testimonial["main_title"] ?>
-                        </h1>
-
-                    </div>
-                    <?php
-                    }
+        <!-- Outcome Testimonials Section on Small Screens -->
+        <div class="container">
+            <div class="row d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none"
+                style="margin-top:-195px;">
+                <?php
+                foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
-                </div>
-            </div>
-
-
-            <!-- Outcome Testimonials Section on LG and MD Screens -->
-            <div class="container">
-
-                <div class="row d-none d-md-flex d-lg-flex container2" style="">
-                    <?php
-                    foreach (get_field("testimonials_section") as $testimonial) {
-                        ?>
-                    <div class="testimonial-container" style="background-color:#FFF;border-radius:15px; ">
-                        <div style=" margin-top:25px; padding:0 20px">
-                            <span
-                                style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;">
-                                <?= $testimonial["num"] ?>
-                            </span>
-                            <span
-                                style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
-                                <?= $testimonial["sub_title"] ?>
-                            </span>
-                        </div>
-                        <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px ">
-                            <?= $testimonial["main_title"] ?>
-                        </h1>
-
-                        <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
-
-                        <p class=""
-                            style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px  ">
-                            <?= $testimonial["text"] ?>
-                        </p>
-
-                        <div class="d-flex align-items-center gap-2" style="padding:0 20px">
-                            <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center" href="#">
-                                <img src="<?= get_field("schedule_link")['url'] ?>"
-                                    alt="<?= get_field("schedule_link")['alt'] ?>"
-                                    style="width:12px; height:18px; margin:7px 0;" />
-                            </a>
-                            <span class="" style="font-size:16px;color:black;  ">
-                                <?= $testimonial["btn_text"] ?>
-                            </span>
-                        </div>
-                    </div>
-                    <?php
-                    }
-                    ?>
-                </div>
-            </div>
-
-
-
-            <div class="mask-group">
-
-
-                <!--  Sue_Partners Repeater  Swiper On Small -->
-                <div class="" style="margin-top:50px; margin-bottom: 60px;">
-
-                    <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
+                <div class="testimonial"
+                    style="border-radius:15px; background-color:#FFF; width:350px; height:104px; margin:15px 0;">
+                    <div style=" margin-top:2px;">
                         <span
-                            style="color:#25325F;font-family: Manrope;font-size:16px;font-style: normal;font-weight: 700;line-height: 27.2px; ">
-                            SUE partners:
+                            style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px;">
+                            <?= $testimonial["num"] ?>
+                        </span>
+                        <span
+                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
+                            <?= $testimonial["sub_title"] ?>
                         </span>
                     </div>
 
-                    <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
-                        <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
-                            <div class="swiper-wrapper">
-                                <?php
-                                foreach (get_field("sue_partners") as $sue) {
-                                    ?>
-                                <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
-                                    style="width:fit-content;">
-                                    <div
-                                        style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
-                                        <div class="d-flex flex-row align-items-center justify-content-around">
-                                            <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                                alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                                style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
-                                            <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
-                                                <?= $sue["sue_partners_text"] ?>
-                                            </h1>
-                                            <a style="border-radius:14px; background-color:; height:; width:;"
-                                                class="d-flex align-items-center" href="#">
-                                                <img src="<?= $sue['sue_partners_link']['url'] ?>"
-                                                    alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                                    style="width:4px; height:8px; object-fit:cover " />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php
-                                }
-                                ?>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-end ">
+                        <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
+                            class="d-flex justify-content-center align-items-center" href="#">
+                            <img src="<?= get_field("schedule_link")['url'] ?>"
+                                alt="<?= get_field("schedule_link")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" />
+                        </a>
+                    </div>
+
+                    <h1 style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; ; ">
+                        <?= $testimonial["main_title"] ?>
+                    </h1>
+
+                </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
+
+
+        <!-- Outcome Testimonials Section on LG and MD Screens -->
+        <div class="container">
+
+            <div class="row d-none d-md-flex d-lg-flex container2" style="">
+                <?php
+                foreach (get_field("testimonials_section") as $testimonial) {
+                    ?>
+                <div class="testimonial-container" style="background-color:#FFF;border-radius:15px; ">
+                    <div style=" margin-top:25px; padding:0 20px">
+                        <span
+                            style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;">
+                            <?= $testimonial["num"] ?>
+                        </span>
+                        <span
+                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
+                            <?= $testimonial["sub_title"] ?>
+                        </span>
+                    </div>
+                    <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px ">
+                        <?= $testimonial["main_title"] ?>
+                    </h1>
+
+                    <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
+
+                    <p class=""
+                        style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px  ">
+                        <?= $testimonial["text"] ?>
+                    </p>
+
+                    <div class="d-flex align-items-center gap-2" style="padding:0 20px">
+                        <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
+                            class="d-flex justify-content-center align-items-center" href="#">
+                            <img src="<?= get_field("schedule_link")['url'] ?>"
+                                alt="<?= get_field("schedule_link")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" />
+                        </a>
+                        <span class="" style="font-size:16px;color:black;  ">
+                            <?= $testimonial["btn_text"] ?>
+                        </span>
                     </div>
                 </div>
+                <?php
+                }
+                ?>
+            </div>
+        </div>
 
-                <!-- Sue_Partners Repeater On LG -->
-                <div class="container">
-                    <div class="">
-                        <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                            style="margin-top:100px">
-                            <span class="col-lg-2 "
-                                style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
-                                SUE partners:</span>
+
+
+        <div class="mask-group">
+
+
+            <!--  Sue_Partners Repeater  Swiper On Small -->
+            <div class="" style="margin-top:50px; margin-bottom: 60px;">
+
+                <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
+                    <span
+                        style="color:#25325F;font-family: Manrope;font-size:16px;font-style: normal;font-weight: 700;line-height: 27.2px; ">
+                        SUE partners:
+                    </span>
+                </div>
+
+                <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
+                    <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
+                        <div class="swiper-wrapper">
                             <?php
                             foreach (get_field("sue_partners") as $sue) {
                                 ?>
-                            <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
-                                <div class="d-flex flex-row align-items-center justify-content-around">
-                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                        alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                        style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
-                                    <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
-                                        <?= $sue["sue_partners_text"] ?>
-                                    </h1>
-                                    <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
-                                        class="" href="#">
-                                        <img src="<?= $sue['sue_partners_link']['url'] ?>"
-                                            alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
-                                            style="width:4px; height:8px; object-fit:cover " />
-                                    </a>
+                            <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
+                                style="width:fit-content;">
+                                <div
+                                    style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
+                                    <div class="d-flex flex-row align-items-center justify-content-around">
+                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                            alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                            style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
+                                        <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
+                                            <?= $sue["sue_partners_text"] ?>
+                                        </h1>
+                                        <a style="border-radius:14px; background-color:; height:; width:;"
+                                            class="d-flex align-items-center" href="#">
+                                            <img src="<?= $sue['sue_partners_link']['url'] ?>"
+                                                alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
+                                                style="width:4px; height:8px; object-fit:cover " />
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <?php
@@ -1058,53 +1065,86 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Client Story1 -->
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-lg-2 g-4">
-                        <?php foreach (get_field("client_story") as $testimonial) { ?>
-                        <div class="col">
-                            <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center"
-                                style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;">
-                                <div class="row g-0 align-items-center">
-                                    <div class=" col-4 ">
-                                        <img src="<?= $testimonial['client_img']['url'] ?>"
-                                            alt="<?= $testimonial['client_img']['alt'] ?>"
-                                            class="client-img img-fluid rounded-start" />
-                                    </div>
-                                    <div class="col-8 col-md-7 col-lg-7">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-row align-items-center justify-content-left gap-2">
-                                                <a class="client-btn"
-                                                    href="<?= $testimonial['client_story_btn']['url'] ?>">
-                                                    <span>
-                                                        <?= $testimonial['client_story_btn']['title'] ?>
-                                                    </span>
-                                                </a>
-                                                <h4 class="card-title" style="">
-                                                    <?= $testimonial["client_name"] ?>
-                                                </h4>
-                                            </div>
-                                            <h4 class="card-text mt-2" style="">
-                                                <?= $testimonial["client_text"] ?>
-                                                <a href="#">
-                                                    <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                        alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                        style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
-                                                </a>
+            <!-- Sue_Partners Repeater On LG -->
+            <div class="container">
+                <div class="">
+                    <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
+                        style="margin-top:100px">
+                        <span class="col-lg-2 "
+                            style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
+                            SUE partners:</span>
+                        <?php
+                        foreach (get_field("sue_partners") as $sue) {
+                            ?>
+                        <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
+                            <div class="d-flex flex-row align-items-center justify-content-around">
+                                <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                    alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                    style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                                <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
+                                    <?= $sue["sue_partners_text"] ?>
+                                </h1>
+                                <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
+                                    class="" href="#">
+                                    <img src="<?= $sue['sue_partners_link']['url'] ?>"
+                                        alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
+                                        style="width:4px; height:8px; object-fit:cover " />
+                                </a>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Client Story1 -->
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                    <?php foreach (get_field("client_story") as $testimonial) { ?>
+                    <div class="col">
+                        <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center"
+                            style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;">
+                            <div class="row g-0 align-items-center">
+                                <div class=" col-4 ">
+                                    <img src="<?= $testimonial['client_img']['url'] ?>"
+                                        alt="<?= $testimonial['client_img']['alt'] ?>"
+                                        class="client-img img-fluid rounded-start" />
+                                </div>
+                                <div class="col-8 col-md-7 col-lg-7">
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row align-items-center justify-content-left gap-2">
+                                            <a class="client-btn" href="<?= $testimonial['client_story_btn']['url'] ?>">
+                                                <span>
+                                                    <?= $testimonial['client_story_btn']['title'] ?>
+                                                </span>
+                                            </a>
+                                            <h4 class="card-title" style="">
+                                                <?= $testimonial["client_name"] ?>
                                             </h4>
                                         </div>
+                                        <h4 class="card-text mt-2" style="">
+                                            <?= $testimonial["client_text"] ?>
+                                            <a href="#">
+                                                <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                    alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                    style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
+                                            </a>
+                                        </h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
                     </div>
+                    <?php } ?>
                 </div>
-
             </div>
 
         </div>
+        <!-- Here new -->
 
         <!-- The blue block -->
         <div class="container" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
@@ -1358,7 +1398,7 @@
                                                 <img src="<?= $testimonial['img']['url'] ?>"
                                                     alt="<?= $testimonial['img']['alt'] ?>" class="client-img" />
                                             </div>
-                                            <div class="col-8">
+                                            <div class="col-8 col-lg-6">
                                                 <div class="card-body">
                                                     <div
                                                         class="d-flex flex-row align-items-center justify-content-left gap-2">
@@ -1896,7 +1936,8 @@
                             </div>
 
                             <div class="col-lg-4">
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2"> <span
+                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                                    <span
                                         style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
                                         <?= get_field("address_title") ?></span>
                                     <span
@@ -2126,6 +2167,9 @@
         </div>
 
     </div>
+
+
+
 
 
 
