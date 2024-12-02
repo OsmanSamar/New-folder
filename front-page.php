@@ -5,6 +5,68 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    /* .accordion-item {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .accordion-item:last-child {
+        border-bottom: none;
+    }
+
+    .accordion-link {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        text-decoration: none;
+        color: #333;
+        background-color: transparent;
+    }
+
+    .accordion-link:focus,
+    .accordion-link:hover {
+        text-decoration: none;
+        background-color: #f8f9fa;
+    }
+
+    .accordion-link.collapsed {
+        color: #666;
+    }
+
+    .accordion-body {
+        padding: 1rem;
+    } */
+
+
+    /*  */
+
+    .left-container {
+        border-radius: 30px;
+        margin-top: ;
+        color: white;
+        height: 264px;
+        background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 50px;
+        gap: 20px;
+        margin-left: 15px;
+    }
+
+    .first-name {
+
+        color: #9AA0B7;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px
+    }
+
     .newsletter-container {
         margin-top: 15px;
     }
@@ -13,8 +75,6 @@
         max-width: ;
         max-height: 492px;
         border: 0;
-        /* border: 1px solid #CBCFDE;
-        border-radius: 25px; */
         padding: 45px 20px;
         margin-top: -160px;
     }
@@ -89,7 +149,10 @@
     }
 
     .form_section {
-        height: 1091px;
+        border-radius: 30px;
+        background: #25325F;
+        margin-top: 150px;
+        height: 1400px;
     }
 
     .arrow_section {
@@ -124,15 +187,7 @@
         transition: all 0.3s ease-in-out;
     }
 
-    /* .custom-number {
-        .custom-title {}
 
-        &.active {
-            sjdfhksh .custom-title {}
-        }
-
-
-    } */
 
     .custom-number.active {
         background-color: #274083;
@@ -166,7 +221,7 @@
         object-fit: cover;
     }
 
-    /* Overlay styles */
+
     .overlay2 {
         position: relative;
         left: 50%;
@@ -225,11 +280,7 @@
 
     /* The first Card  */
     .client_card1 {
-        /* border-radius: 20px;
-        border: 1px solid #CBCFDE; */
         background: #EDF3F4;
-        /* width: 100%;
-        max-width: 546px;*/
         max-height: 172px;
         padding: 20px 0;
         border: 0;
@@ -238,16 +289,11 @@
 
     .client_card2 {
         border-radius: 20px;
-        /* border-radius: 20px;
-        border: 1px solid #CBCFDE;
-        background: #EDF3F4; */
-        /* width: 546px;
-        height: 172px; */
         border: 0;
         background: #EDF3F4;
     }
 
-    /* Responsive Design */
+
     @media (min-width: 768px) {
 
         .right_section {
@@ -327,11 +373,6 @@
 
         .client_card2 {
             border-radius: 20px;
-            /* border-radius: 20px;
-            border: 1px solid #CBCFDE;
-            background: #EDF3F4; */
-            /* width: 546px;
-            height: 172px; */
         }
 
         .client-img {
@@ -357,6 +398,19 @@
     }
 
     @media (min-width: 992px) {
+
+        .left-container {
+            height: 500px;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: normal;
+            margin-left: 15px;
+            margin-top: 50px;
+        }
 
         .newsletter-container {
             margin-top: 150px;
@@ -1161,8 +1215,8 @@
                     <div style="margin-top:160px; margin-bottom:;">
                         <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
 
-                            <!-- here for swiper block on the big blue background -->
-                            <div class="swiper mySwiper2 " style="flex-grow: 1;">
+                            <!-- Swiper block on the big blue background -->
+                            <!-- <div class="swiper mySwiper2 " style="flex-grow: 1;">
                                 <div class="swiper-wrapper">
                                     <?php
                                     foreach (get_field("testimonails_section") as $testimonails) {
@@ -1253,6 +1307,63 @@
                                         </div>
                                     </div>
 
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <div class="swiper-pagination1" style="position:relative;left: 42%;"></div>
+                            </div> -->
+
+
+                            <div class="swiper mySwiper2" style="flex-grow: 1;">
+                                <div class="swiper-wrapper">
+                                    <?php
+                                    $testimonails_left = get_field("testimonails_section");
+                                    $testimonails_right = get_field("testimonails_section_right");
+
+                                    // Testimonails merged
+                                    $merged_testimonails = array_merge($testimonails_left, $testimonails_right);
+
+                                    // Arrange the elements if each elements has number
+                                    usort($merged_testimonails, function ($a, $b) {
+                                        return $a['num'] - $b['num'];
+                                    });
+
+                                    // Display elements
+                                    foreach ($merged_testimonails as $testimonails) {
+                                        ?>
+                                    <div class="swiper-slide d-flex align-items-center justify-content-center w-fit"
+                                        style="width:fit-content;">
+                                        <div
+                                            style="border-radius:15px; background-color:white; width:350px;height:139px; margin:16px 10px;padding: 16px 10px;">
+                                            <div class="d-flex flex-row align-items-center justify-content-between">
+                                                <div
+                                                    class="d-flex flex-row align-items-center justify-content-around gap-2">
+                                                    <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
+                                                        <?= $testimonails["num"] ?>
+                                                    </span>
+                                                    <span
+                                                        style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
+                                                        <?= $testimonails["title"] ?>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex flex-row align-items gap-1">
+                                                <span
+                                                    style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                                    <?= $testimonails["text"] ?>
+                                                </span>
+                                                <a href="#"
+                                                    style="border-radius:8px;background-color: #E94271;height:30px; width:30px;"
+                                                    class="d-flex justify-content-center align-items-center">
+                                                    <img src="<?= $testimonails['link']['url'] ?>"
+                                                        alt="<?= $testimonails['link']['alt'] ?>"
+                                                        style="width:12px; height: 18px; margin:7px 0;" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <?php
                                     }
                                     ?>
@@ -1638,56 +1749,65 @@
             </div>
 
             <!-- Form Section -->
-            <div class="container form_section" style="border-radius:40px;background: #25325F; margin-top:150px;">
+            <div class="container form_section" style="">
                 <div class="row">
                     <div class="col-12 col-lg-3">
-                        <div class=""
-                            style="border-radius:40px; margin-top:; color:white;height: 500px; background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);">
-                            <div
-                                style="display: flex; flex-direction: column; justify-content: flex-start; margin-left:50px; margin-top:50px;">
+                        <div class="left-container" style="">
+                            <div class="left-content">
                                 <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                                     style="max-width:72px;height:72px;border-radius:15px; object-fit:cover" />
-                                <span
-                                    style="margin-top:50px; color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px ">Firstnmae:</span>
-                                <span
-                                    style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">Let's
-                                    talk</span>
-                                <div style=" border-bottom: 1px solid  white; margin:30px 0; width:204px;"></div>
-                            </div>
+                                <div class="d-flex flex-column">
+                                    <span class="first-name" style=" ">Firstnmae:</span>
 
-
-                            <div style=" margin-left:50px; margin-top:50px;">
-                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
-                                    <a href="#"
-                                        style="background: #E94271; height:30px; width:30px; border-radius: 8px;"
-                                        class="d-flex justify-content-center align-items-center">
-                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
-                                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
-                                            style="width:12px; height:18px; margin:7px 0;" />
-                                    </a>
                                     <span
-                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl</span>
+                                        style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">Let's
+                                        talk!
+                                    </span>
                                 </div>
 
-                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
-                                    <a href="#"
-                                        style="background-color:white; height:30px; width:30px; border-radius: 8px;"
-                                        class="d-flex justify-content-center align-items-center">
-                                        <img src="<?= get_field("tel_link")['url'] ?>"
-                                            alt="<?= get_field("tel_link")['alt'] ?>"
-                                            style="width:12px; height:18px; margin:7px 0;color:black" />
-                                    </a>
-                                    <span
-                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                        345 656 666</span>
+                                <div class="d-none d-lg-block"
+                                    style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;"></div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
+                            </div></a>
+
+
+
+                            <div style=" margin-left:15px; margin-top:10px;">
+                                <!-- email -->
+                                <div class="d-flex flex-row flex-lg-column gap-3">
+                                    <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                        <a href="#" style="background:#E94271;height:30px;width:30px;border-radius:8px;"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                                alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                                style="width:12px; height:18px; margin:7px 0;" />
+                                        </a>
+                                        <span
+                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl</span>
+                                    </div>
+
+                                    <!-- contact nummer -->
+                                    <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                        <a href="#"
+                                            style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <img src="<?= get_field("tel_link")['url'] ?>"
+                                                alt="<?= get_field("tel_link")['alt'] ?>"
+                                                style="width:12px; height:18px; margin:7px 0;color:black" />
+                                        </a>
+                                        <span
+                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                            345 656 666</span>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <!-- Right column -->
                     <div class="col-12 col-lg-9">
-                        <div
-                            style="border-radius:40px; border:1px solid gray; margin-top:10px; background-color:; color:white;height: 520px;">
+                        <div style=" margin:50px 12px">
                             <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="true"]')) ?>
                         </div>
                     </div>
@@ -1718,17 +1838,33 @@
                         <!-- Second Row -->
                         <div class="row" style="margin:50px 0;">
                             <div class="col-lg-4">
-                                <div class="accordion d-block d-lg-none" id="accordionExample">
+                                <!-- accordion -->
+                                <div class="    d-block d-lg-none" id="accordionExample">
                                     <!-- First Item -->
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                            <a href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
-                                                aria-expanded="true" aria-controls="collapseOne"
-                                                style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                                <?= get_field("contact_en_adres_on_sm") ?>
-                                            </a>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <a href="#collapseOne" class="accordion-button"
+                                                    data-bs-toggle="collapse" aria-expanded="true"
+                                                    aria-controls="collapseOne"
+                                                    style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                                    <?= get_field("contact_en_adres_on_sm") ?>
+                                                </a>
+
+                                            </h2>
+                                            <!-- DownAroow -->
+                                            <div>
+                                                <a class="d-flex justify-content-center align-items-center"
+                                                    href="#collapseOne" class="accordion-button"
+                                                    data-bs-toggle="collapse" aria-expanded="false"
+                                                    aria-controls="collapseOne">
+                                                    <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                        alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                        style="width:12px; height:12px; margin:7px 0; " />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div id="collapseOne" class="accordion-collapse collapse "
                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div class="accordion-body ">
                                                 <div class="d-flex flex-column align-items-flex-start ">
@@ -1750,16 +1886,34 @@
                                         </div>
                                     </div>
 
+                                    <div class="d-block d-lg-none"
+                                        style=" border-bottom: 1px solid  #25325F; margin:30px 0; "></div>
+
                                     <!-- Second Item -->
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                            <a href="#collapseTwo" class="accordion-button collapsed"
-                                                data-bs-toggle="collapse" aria-expanded="false"
-                                                aria-controls="collapseTwo"
-                                                style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                                <?= get_field("information") ?>
-                                            </a>
-                                        </h2>
+                                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <a href="#collapseTwo" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" aria-expanded="false"
+                                                    aria-controls="collapseTwo"
+                                                    style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                                    <?= get_field("information") ?>
+                                                </a>
+                                            </h2>
+
+
+                                            <!-- DownAroow -->
+                                            <div>
+                                                <a class="d-flex justify-content-center align-items-center"
+                                                    href="#collapseTwo" class="accordion-button collapsed"
+                                                    data-bs-toggle="collapse" aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                    <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                        alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                        style="width:12px; height:12px; margin:7px 0; " />
+                                                </a>
+                                            </div>
+                                        </div>
                                         <div id="collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
@@ -1783,7 +1937,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="d-block d-lg-none"
+                                        style=" border-bottom: 1px solid  #25325F; margin:30px 0; "></div>
                                 </div>
+
+
+
+
 
                                 <!-- LG -->
                                 <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
@@ -1832,6 +1992,7 @@
                                     <div class="d-flex flex-row align-items-center gap-2">
                                         <span> <?= get_field("vat") ?></span>
                                         <span> <?= get_field("account_num") ?></span>
+
                                     </div>
                                 </div>
                             </div>
@@ -2181,10 +2342,6 @@
         });
     });
     </script>
-
-
-
-
 
 
 
