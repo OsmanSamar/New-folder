@@ -639,6 +639,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: 120%;
+            text-align: left;
         }
 
 
@@ -763,6 +764,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 120%;
+        text-align: center;
     }
 
     .vl {
@@ -803,7 +805,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex d-lg-none" style="margin-top:50px;">
+                <!-- <div class="d-flex d-lg-none" style="margin-top:50px;">
                     <div class="row">
                         <div class="col-6 d-flex align-items-center justify-content-center" style="margin-bottom:64px;">
                             <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
@@ -818,12 +820,52 @@
                             </a>
                         </div>
                         <p class="right-text col-6">
-                            <!-- <?= get_field("right_text") ?> -->
+                            <?= get_field("right_text") ?>
                             Empowering organizations to innovate faster
                         </p>
 
                     </div>
+                </div> -->
+
+                <div class="d-flex flex-column align-items-center d-lg-none" style="margin-top:50px;">
+                    <div class="row">
+                        <p class=""
+                            style="text-align: center;color:#25325F;text-align: center;font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height:27px">
+                            <!-- <?= get_field("right_text") ?> -->
+                            Empowering organizations to innovate faster
+                        </p>
+
+                        <!-- <div class=" d-flex align-items-center justify-content-center" style="margin-bottom:64px;">
+                            <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
+                                                background-color: #E94271; height:30px; width:30px;"
+                                class="d-flex justify-content-center align-items-center">
+                                <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                                    style="width:12px; height:18px; margin:7px 0;  ">
+                            </a>
+                            <a href="<?= esc_url(home_url('/')); ?>"
+                                style="font-family: Manrope; font-size:14px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;margin: 0 10px;">
+                                Let's talk
+                            </a>
+                        </div> -->
+
+
+                    </div>
+                    <div class="d-flex d-lg-none  align-items-center justify-content-between"
+                        style="height:42px; padding:12px 15px; border-radius:8px; background:#E94271; gap:16px;">
+                        <a href="<?= esc_url(home_url('/')); ?>"
+                            class="d-flex justify-content-center align-items-center">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                                style="width:12px; height: 18px; margin:7px 0;  ">
+
+                        </a>
+                        <span
+                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">
+                            Let's talk</span>
+
+                    </div>
                 </div>
+
+
             </div>
             <!-- End of the first container div -->
         </div>
@@ -1151,7 +1193,7 @@
                                 <div class="container">
                                     <div class="col-12 col-md-12 ">
                                         <div class="card-body"
-                                            style="display: flex;align-items:flex-start ;justify-content: center; flex-direction: column;">
+                                            style="display:flex;align-items:flex-start ;justify-content: center; flex-direction: column;">
                                             <div class="d-flex  align-items-center justify-content-left gap-3 mt-2">
                                                 <a class="client-btn"
                                                     href="<?= $testimonial['client_story_btn']['url'] ?>">
@@ -2295,14 +2337,40 @@
     <!-- Swiper JS -->
 
     <script>
+    // let swiper1 = new Swiper('.swiper-container', {
+    //     loop: true, 
+    //     autoplay: { 
+    //         delay: 2000,
+    //     },
+    //     pagination: { 
+    //         el: '.swiper-pagination2',
+    //         clickable: true,
+    //     },
+
+    // })
+
     let swiper1 = new Swiper('.swiper-container', {
-        loop: true, //loop
-        pagination: { //pagination(dots)
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false, // Ensure autoplay resumes after interaction
+        },
+        pagination: {
             el: '.swiper-pagination2',
             clickable: true,
         },
+    });
 
-    })
+    // Stop autoplay on hover and resume on unhover
+    const swiperContainer = document.querySelector('.swiper-container');
+
+    swiperContainer.addEventListener('mouseenter', () => {
+        swiper1.autoplay.stop();
+    });
+
+    swiperContainer.addEventListener('mouseleave', () => {
+        swiper1.autoplay.start();
+    });
     </script>
 
 
@@ -2311,7 +2379,7 @@
     <!--  mySwiper1 -->
     <script>
     let swiper2 = new Swiper('.mySwiper1', {
-        slidesPerView: 1.3,
+        slidesPerView: 2.1,
         grabCursor: true,
         spaceBetween: 1,
 
@@ -2326,22 +2394,27 @@
 
         breakpoints: {
 
+            414: {
+                slidesPerView: 2.3,
+                spaceBetween: 1,
+
+            },
 
             540: {
-                slidesPerView: 2,
-                spaceBetween: 4,
+                slidesPerView: 2.2,
+                spaceBetween: 1,
 
             },
 
             556: {
-                slidesPerView: 2.5,
+                slidesPerView: 3.9,
 
 
-                spaceBetween: 4,
+                spaceBetween: 1,
             },
             992: {
 
-                slidesPerView: 3.5,
+                slidesPerView: 3.9,
                 spaceBetween: 0,
             }
 
@@ -2353,9 +2426,9 @@
 
     <script>
     let swiper3 = new Swiper('.mySwiper2', {
-        slidesPerView: 3,
+        slidesPerView: 1.1,
         grabCursor: true,
-        spaceBetween: 0,
+        spaceBetween: 1,
 
         pagination: {
             el: '.swiper-pagination1',
@@ -2370,19 +2443,19 @@
 
 
             410: {
-                slidesPerView: 3,
+                slidesPerView: 1.1,
                 spaceBetween: 0,
 
             },
 
             540: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.2,
                 spaceBetween: 2,
 
             },
 
             556: {
-                slidesPerView: 3,
+                slidesPerView: 2,
 
 
                 spaceBetween: 2,
