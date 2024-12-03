@@ -148,17 +148,17 @@
                 </ul>
 
                 <!-- Arrow and Let's Talk on LG Screen-->
-                <div class="d-none d-lg-flex align-items-center justify-content-center gap-3 ">
-                    <a href="<?= esc_url(home_url('/')); ?>"
-                        style="border-radius:8px;background-color: #E94271; height:30px; width:30px;"
-                        class="d-flex justify-content-center align-items-center">
+                <div class="d-none d-lg-flex  align-items-center justify-content-between"
+                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
+                    <a href="<?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
                         <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
                             style="width:12px; height: 18px; margin:7px 0;  ">
+
                     </a>
-                    <a href="<?= esc_url(home_url('/')); ?>"
-                        style="color:#25325F; font-style:normal; font-weight:600;line-height:15.6px;padding: 0 20px; text-align:center;font-family:Manrope;font-size: 13px;">
-                        Let's talk
-                    </a>
+                    <span
+                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">
+                        Let's talk</span>
+
                 </div>
 
 

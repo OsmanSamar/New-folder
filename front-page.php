@@ -5,6 +5,17 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    .slide-text {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .slide-text:hover {
+        overflow: visible;
+    }
+
     .mask-group {
         background-image: url("<?= esc_url(get_template_directory_uri()); ?>/images/maskgroup.png");
         background-size: cover;
@@ -984,7 +995,8 @@
                                 alt="<?= get_field("schedule_link")['alt'] ?>"
                                 style="width:12px; height:18px; margin:7px 0;" />
                         </a>
-                        <span class="" style="font-size:16px;color:black;  ">
+                        <span class=""
+                            style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%; /* 15.6px */">
                             <?= $testimonial["btn_text"] ?>
                         </span>
                     </div>
