@@ -10,11 +10,17 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
     }
 
-    .slide-text:hover {
+    /* .slide-text:hover {
         overflow: visible;
-    }
+    } */
 
     .mask-group {
         background-image: url("<?= esc_url(get_template_directory_uri()); ?>/images/maskgroup.png");
@@ -151,15 +157,15 @@
         white-space: nowrap;
         color: #FFF;
         font-family: Manrope;
-        font-size: 12px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 700;
         line-height: 180%;
-        background-color: #E94271;
+        background-color: #274083;
         border-radius: 100px;
         padding: 4px 8px;
-        width: 88px;
-        height: 33px;
+        width: 61px;
+        height: 30px;
     }
 
     .bg_img {
@@ -431,6 +437,13 @@
 
     @media (min-width: 992px) {
 
+        .slide-text {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         .left-container {
             height: 500px;
         }
@@ -488,7 +501,7 @@
         }
 
         .btn-swiper {
-            font-size: 14px;
+            font-size: 13px;
             padding: 4px 12px;
         }
 
@@ -844,38 +857,56 @@
 
 
                             <!-- Swiper Container -->
-                            <div class="text-swiper col-8 col-lg-5">
+                            <div class="text-swiper col-8 col-lg-6">
                                 <div class="swiper swiper-container"
                                     style="flex-grow:1; --swiper-pagination-color: #E94271;">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <span class="slide-date d-none d-lg-block"
-                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">12.12.2024</span>
-                                                <span class="slide-text">There is space here for the title
-                                                    of a
-                                                    trending
-                                                    article</span>
+                                                <!-- <span class="slide-date d-none d-lg-block"
+                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">12.12.2024
+                                                </span> -->
+                                                <span class="slide-text">
+                                                    Nulla facilisi. Duis at <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                    posuere, cursus
+                                                    justo vitae, <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                    dui fusce
+                                                    euismod rhoncus1
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <span class="slide-date d-none d-lg-block"
-                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">14.12.2024</span>
-                                                <span class="slide-text">There is space here for the title
-                                                    of a
-                                                    trending
-                                                    article2</span>
+                                                <!-- <span class="slide-date d-none d-lg-block"
+                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">14.12.2024
+                                                </span> -->
+                                                <span class="slide-text">
+                                                    Nulla facilisi. Duis at <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                    posuere, cursus
+                                                    justo vitae, <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                    dui fusce
+                                                    euismod rhoncus2
+                                                </span>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <span class="slide-date d-none d-lg-block"
-                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">16.12.2024</span>
-                                                <span class="slide-text">There is space here for the title
-                                                    of a
-                                                    trending
-                                                    article3</span>
+                                                <!-- <span class="slide-date d-none d-lg-block"
+                                                    style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">16.12.2024
+                                                </span> -->
+                                                <span class="slide-text">
+                                                    Nulla facilisi. Duis at <span
+                                                        style="color:#E94271; font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                    posuere, cursus
+                                                    justo vitae, <span
+                                                        style="color:#E94271; font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                    dui fusce
+                                                    euismod rhoncus3
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -884,13 +915,16 @@
                         </div>
 
                         <!-- Right Section: Arrow Button -->
-                        <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-end">
+                        <div class="col-lg-2 col-md-3 col-sm-12 d-flex align-items-center justify-content-end gap-3">
                             <a href="#" style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                 class="d-flex justify-content-center align-items-center">
                                 <img src="<?= get_field('arrow_btn')['url'] ?>"
                                     alt="<?= get_field('arrow_btn')['title'] ?>"
                                     style="width:12px; height:18px; object-fit:cover;">
                             </a>
+                            <span
+                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                more</span>
                         </div>
                     </div>
                 </div>
@@ -908,11 +942,11 @@
                 style=" height: ;border-radius:40px; object-fit:cover" />
 
             <!-- Arrow on Image -->
-            <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:relative ;top: -59%; left:49.9%;transform: translate(-50%, -50%);"
+            <!-- <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:relative ;top: -59%; left:49.9%;transform: translate(-50%, -50%);"
                 class="d-none d-lg-flex justify-content-center align-items-center" href="#testimonials">
                 <img src="<?= get_field("arrow_on_img")['url'] ?>" alt="<?= get_field("arrow_on_img")['alt'] ?>"
                     style="width:12px; height:18px; margin:7px 0;" />
-            </a>
+            </a> -->
 
         </div>
 
