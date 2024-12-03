@@ -958,8 +958,8 @@
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
                 <div class="testimonial"
-                    style="border-radius:15px; background-color:#FFF; width:350px; height:104px; margin:15px 0;">
-                    <div style=" margin-top:2px;">
+                    style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0;">
+                    <div style=" margin: 15px auto 2px auto; display: flex;align-items: center;gap:8px;">
                         <span
                             style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; font-family: Manrope;">
                             <?= $testimonial["num"] ?>
@@ -971,7 +971,7 @@
                     </div>
 
                     <div class="d-flex justify-content-end ">
-                        <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
+                        <a style="border-radius:8px; background-color:#274083; height:30px; width:30px;"
                             class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("schedule_link")['url'] ?>"
                                 alt="<?= get_field("schedule_link")['alt'] ?>"
@@ -979,10 +979,16 @@
                         </a>
                     </div>
 
-                    <h1
-                        style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; font-family: Manrope; ">
+                    <h1 style="color: #25325F; font-size:18px;font-weight:700;line-height:27px; font-family: Manrope; ">
                         <?= $testimonial["main_title"] ?>
                     </h1>
+
+                    <div style=" border-bottom: 0.5px solid  #25325F; margin:15px 8px;"></div>
+
+                    <p class=""
+                        style="font-size:13px;font-style:normal;font-weight:500; line-height:22px; color:#6A7291;padding:0 20px 0 0;font-family: Manrope; text-align: left;  ">
+                        <?= $testimonial["text"] ?>
+                    </p>
 
                 </div>
                 <?php
@@ -1000,7 +1006,7 @@
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
                 <div class="testimonial-container" style="background-color:#FFF;border-radius:15px; ">
-                    <div style=" margin-top:25px; padding:0 20px">
+                    <div style=" margin-top:25px; padding:0 20px; display: flex;align-items: center;gap: 11px;">
                         <span
                             style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;font-family: Manrope;">
                             <?= $testimonial["num"] ?>
@@ -1023,14 +1029,14 @@
                     </p>
 
                     <div class="d-flex align-items-center gap-2" style="padding:0 20px">
-                        <a style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
+                        <a style="border-radius:8px; background-color: #274083; height:30px; width:30px;"
                             class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("schedule_link")['url'] ?>"
                                 alt="<?= get_field("schedule_link")['alt'] ?>"
                                 style="width:12px; height:18px; margin:7px 0;" />
                         </a>
                         <span class=""
-                            style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%; /* 15.6px */">
+                            style="color:#25325F; font-family: Manrope;font-size:13px; font-style:normal; font-weight:600; line-height:15.6px;">
                             <?= $testimonial["btn_text"] ?>
                         </span>
                     </div>
