@@ -1054,12 +1054,12 @@
             <!--  Sue_Partners Repeater  Swiper On Small -->
             <div class="" style="margin-top:50px; margin-bottom: 60px;">
 
-                <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
+                <!-- <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
                     <span
                         style="color:#25325F;font-family: Manrope;font-size:16px;font-style: normal;font-weight: 700;line-height: 27.2px; ">
                         SUE partners:
                     </span>
-                </div>
+                </div> -->
 
                 <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
                     <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
@@ -1067,20 +1067,20 @@
                             <?php
                             foreach (get_field("sue_partners") as $sue) {
                                 ?>
-                            <div class="swiper-slide d-flex justify-content-center align-items-center w-fit"
+                            <div class="swiper-slide d-flex justify-content-center align-items-center"
                                 style="width:fit-content;">
-                                <div
-                                    style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-around">
+                                <!-- style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;" -->
+                                <div>
+                                    <div class="d-flex flex-row align-items-center justify-content-around gap-1"
+                                        style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
                                         <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                             alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
                                             style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
-                                        <h1
+                                        <!-- <h1
                                             style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px; font-family: Manrope; ">
                                             <?= $sue["sue_partners_text"] ?>
-                                        </h1>
-                                        <a style="border-radius:14px; background-color:; height:; width:;"
-                                            class="d-flex align-items-center" href="#">
+                                        </h1> -->
+                                        <a style="border-radius:14px; " class="d-flex align-items-center" href="#">
                                             <img src="<?= $sue['sue_partners_link']['url'] ?>"
                                                 alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
                                                 style="width:4px; height:8px; object-fit:cover " />
@@ -1099,23 +1099,24 @@
             <!-- Sue_Partners Repeater On LG -->
             <div class="container">
                 <div class="">
-                    <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                        style="margin-top:100px">
-                        <span class="col-lg-2 "
+                    <div class="row d-none d-md-none d-lg-flex flex-row align-items-center" style="margin-top:100px">
+                        <!-- <span class="col-lg-2 "
                             style="color:#25325F;font-family:Manrope; font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
-                            SUE partners:</span>
+                            SUE partners:
+                        </span> -->
                         <?php
                         foreach (get_field("sue_partners") as $sue) {
                             ?>
                         <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
-                            <div class="d-flex flex-row align-items-center justify-content-around">
+                            <div class="d-flex flex-row align-items-center justify-content-around gap-1"
+                                style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
                                 <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                     alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
                                     style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
-                                <h1
+                                <!-- <h1
                                     style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px; font-family:Manrope;">
                                     <?= $sue["sue_partners_text"] ?>
-                                </h1>
+                                </h1> -->
                                 <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
                                     class="" href="#">
                                     <img src="<?= $sue['sue_partners_link']['url'] ?>"
@@ -2292,9 +2293,9 @@
 
     <script>
     let swiper3 = new Swiper('.mySwiper2', {
-        slidesPerView: 1.1,
+        slidesPerView: 3,
         grabCursor: true,
-        spaceBetween: 1,
+        spaceBetween: 0,
 
         pagination: {
             el: '.swiper-pagination1',
@@ -2309,8 +2310,8 @@
 
 
             410: {
-                slidesPerView: 1.1,
-                spaceBetween: 2,
+                slidesPerView: 3,
+                spaceBetween: 0,
 
             },
 
@@ -2321,7 +2322,7 @@
             },
 
             556: {
-                slidesPerView: 2.1,
+                slidesPerView: 3,
 
 
                 spaceBetween: 2,
