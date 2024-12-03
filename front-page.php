@@ -92,10 +92,10 @@
     .client-btn {
         border-radius: 100px;
         color: #FFFFFF;
-        background-color: #E94271;
+        background-color: #CBCFDE;
         text-align: center;
         font-size: 13px;
-        width: 103px;
+        width: 69px;
         height: 30px;
         padding: 4px;
         font-family: Manrope;
@@ -318,10 +318,11 @@
 
     /* The first Card  */
     .client_card1 {
-        background: #EDF3F4;
-        max-height: 172px;
+        max-height: 234px;
         padding: 20px 0;
-        border: 0;
+        /* width: 546px; */
+        /* width: 546px;
+        height: 234px; */
     }
 
 
@@ -422,7 +423,7 @@
         }
 
         .client-btn {
-            width: 103px;
+            width: 69px;
             height: 30px;
             font-size: 14px;
             padding: 4px;
@@ -607,7 +608,7 @@
         }
 
         .client-btn {
-            width: 103px;
+            width: 79px;
             height: 30px;
             font-size: 14px;
             padding: 4px;
@@ -1132,8 +1133,64 @@
                 </div>
             </div>
 
-            <!-- Client Story1 -->
-            <div class="container">
+
+
+            <!-- Client Story1 on Sm Screen -->
+            <div class="container d-block d-md-block d-lg-none">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                    <?php foreach (get_field("client_story") as $testimonial) { ?>
+                    <div class="col">
+                        <div class="card  mb-3 d-flex flex-column align-items-center justify-content-center"
+                            style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;padding: 20px 0; ">
+                            <div class="row g-0 align-items-center">
+                                <div class="  ">
+                                    <img src="<?= $testimonial['client_img']['url'] ?>"
+                                        alt="<?= $testimonial['client_img']['alt'] ?>" class=" card-img-top"
+                                        style="width: 309px;border-radius: 15px;height: 118px;object-fit: cover;margin: 0 auto;display: flex; align-items: center;" />
+                                </div>
+                                <div class="container">
+                                    <div class="col-12 col-md-12 ">
+                                        <div class="card-body"
+                                            style="display: flex;align-items:flex-start ;justify-content: center; flex-direction: column;">
+                                            <div class="d-flex  align-items-center justify-content-left gap-3 mt-2">
+                                                <a class="client-btn"
+                                                    href="<?= $testimonial['client_story_btn']['url'] ?>">
+                                                    <span>
+                                                        <?= $testimonial['client_story_btn']['title'] ?>
+                                                    </span>
+                                                </a>
+                                                <h4 class="" style="color:#6A7291">
+                                                    <?= $testimonial["client_name"] ?>
+                                                </h4>
+                                            </div>
+                                            <h4 class=" mt-2"
+                                                style=" color: #25325F;font-family: Manrope;font-size:17px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                                <?= $testimonial["client_text"] ?>
+                                                <a href="#">
+                                                    <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                        alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                        style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
+                                                </a>
+                                            </h4>
+                                            <span class="mt-2"
+                                                style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px; text-align:left">
+                                                <?= $testimonial["client_sub_text"] ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+
+
+
+
+            <!-- Client Story1 on Lg Screen -->
+            <div class="container d-none d-md-none d-lg-block">
                 <div class="row row-cols-1 row-cols-lg-2 g-4">
                     <?php foreach (get_field("client_story") as $testimonial) { ?>
                     <div class="col">
@@ -1153,11 +1210,11 @@
                                                     <?= $testimonial['client_story_btn']['title'] ?>
                                                 </span>
                                             </a>
-                                            <h4 class="card-title" style="">
+                                            <h4 class="card-title">
                                                 <?= $testimonial["client_name"] ?>
                                             </h4>
                                         </div>
-                                        <h4 class="card-text mt-2" style="">
+                                        <h4 class="card-text mt-2">
                                             <?= $testimonial["client_text"] ?>
                                             <a href="#">
                                                 <img src="<?= $testimonial['client_link']['url'] ?>"
@@ -1165,6 +1222,10 @@
                                                     style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
                                             </a>
                                         </h4>
+                                        <span
+                                            style="color: var(--Primary-600, #25325F);leading-trim: both;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px; ">
+                                            <?= $testimonial["client_sub_text"] ?>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -1178,7 +1239,6 @@
         <!-- Here new -->
 
         <!-- The blue block container -->
-
         <div class=""
             style="border-radius:40px;background: #25325F; margin:80px auto; height: 850px; width: 100%; max-width: 1700px;">
             <div class="container">
