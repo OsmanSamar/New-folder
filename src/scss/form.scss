@@ -27,10 +27,57 @@
 .gform_description {
   color: #9aa0b7;
 
-  /* Desktop/Lead (Bold) */
   font-family: Manrope;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 27.2px;
 }
+.gform_required_legend {
+  color: #fff;
+}
+// .gfield_required gfield_required_asterisk {
+// }
+// .gform-field-label {
+//   color: #fff;
+//   font-family: Manrope;
+//   font-size: 13px;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: 180%;
+// }
+// .gform-label {
+//   color: #fff;
+//   font-family: Manrope;
+//   font-size: 13px;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: 180%;
+// }
+// .gfield_label {
+//   color: #fff;
+//   font-family: Manrope;
+//   font-size: 13px;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: 180%;
+// }
+
+/*Gravity  Forms field label */
+.gform-theme--framework,
+.gform-field-label,
+.gform-label,
+.gfield_label,
+.name-label {
+  // color: #fff;
+  color: red;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%;
+}
+
+// .gfield_label .gform-field-label {
+//   color: red;
+// }

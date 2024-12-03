@@ -5,6 +5,32 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    /* .swiper-pagination2 {
+        transform: translateY(50%);
+    }
+
+    .btn-swiper {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .bg-container {
+            padding: 20px;
+        }
+
+        .swiper-slide .slide-date {
+            display: inline-block !important;
+            margin-right: 10px;
+        }
+
+        .text-swiper {
+            flex-grow: 1;
+            width: 100%;
+        }
+    } */
+
+    /*  */
     .mask-group {
         background-image: url("<?= esc_url(get_template_directory_uri()); ?>/images/maskgroup.png");
         background-size: cover;
@@ -28,7 +54,7 @@
         margin-top: ;
         color: white;
         height: 264px;
-        background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+        /* background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%); */
     }
 
     .left-content {
@@ -38,7 +64,7 @@
         align-items: center;
         margin-top: 50px;
         gap: 20px;
-        margin-left: 15px;
+        /* margin-left: 15px; */
     }
 
     .first-name {
@@ -150,8 +176,11 @@
     .form_section {
         border-radius: 30px;
         background: #25325F;
-        margin-top: 150px;
+        /* margin: 150px auto; */
+        max-width: 1700px;
         height: 1400px;
+        margin: 150px auto 100px;
+
     }
 
     .arrow_section {
@@ -210,8 +239,9 @@
     .responsive-container {
         position: relative;
         width: 100%;
+        max-width: 1700px;
         overflow: hidden;
-        margin: 70px 0;
+        margin: 70px auto;
     }
 
     .background-image {
@@ -407,12 +437,12 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: normal;
-            margin-left: 15px;
+            /* margin-left: 15px; */
             margin-top: 50px;
         }
 
         .newsletter-container {
-            margin-top: 150px;
+            /* margin-top: 150px; */
         }
 
         .custom-container {
@@ -696,7 +726,12 @@
 
     .img-container {
         height: 350px;
-        margin-top: -120px;
+        /* margin-top: -120px; */
+        max-width: 1700px;
+        margin-top: -215px;
+        margin-left: auto;
+        margin-right: auto;
+
     }
 
     .bg-container {
@@ -775,21 +810,22 @@
             <!-- End of the first container div -->
         </div>
 
-        <!-- 2 -->
-        <div class="container">
-            <div class="bg-container" style="background:#25325F; border-radius:40px;margin-top:80px; ">
+        <!-- 2  class="container"-->
+        <div>
+            <div class="bg-container"
+                style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px;">
                 <div class="container">
-                    <div class="row">
-                        <div class="d-flex flex-lg-row flex-row align-items-center justify-content-between gap-2"
-                            style="position:relative; padding:20px 20px">
-                            <!-- <div class=" col-lg-1 col-md-2 d-none d-md-none d-lg-block"></div> -->
+                    <div class="row align-items-center justify-content-between" style="padding: 20px;">
+                        <!-- Left Section: Pagination, Button, Date, and Text -->
+                        <div class="d-flex flex-lg-row flex-row align-items-center gap-3 col-lg-10 col-md-9 col-sm-12">
 
                             <!-- Pagination -->
-                            <div class="col-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
+                            <div class=" col-md-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
                                 <div class="swiper-pagination2"
                                     style="position:relative;transform: translateY(50%);  z-index:1;">
                                 </div>
                             </div>
+
 
                             <!-- Button -->
                             <div class="col-2 col-lg-1">
@@ -803,8 +839,8 @@
                             </div>
 
 
-                            <div class="text-swiper col-6 col-lg-5">
-                                <!-- Swiper Container -->
+                            <!-- Swiper Container -->
+                            <div class="text-swiper col-8 col-lg-5">
                                 <div class="swiper swiper-container"
                                     style="flex-grow:1; --swiper-pagination-color: #E94271;">
                                     <div class="swiper-wrapper">
@@ -841,39 +877,34 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="d-none d-md-flex d-lg-flex">
-                                <div class="col-3 col-lg-1"></div>
-                            </div>
-                            <div class="col-1 col-lg-1">
-                                <div class="d-flex justify-content-end align-items-center">
-                                    <a style="border-radius:8px; background-color:white; height:30px; width:30px;"
-                                        class="d-flex justify-content-center align-items-center" href="#">
-                                        <img src="<?= get_field("arrow_btn")['url'] ?>"
-                                            alt="<?= get_field("arrow_btn")['title'] ?>"
-                                            style="width:12px; height:18px; margin:7px 0; object-fit:cover;" />
-                                    </a>
-                                </div>
-                            </div>
-
-                            <!-- <div class="d-none d-md-flex d-lg-flex">
-                                    <div class="col-3 col-lg-1"></div>
-                                </div> -->
+                        <!-- Right Section: Arrow Button -->
+                        <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-end">
+                            <a href="#" style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                class="d-flex justify-content-center align-items-center">
+                                <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                    alt="<?= get_field('arrow_btn')['title'] ?>"
+                                    style="width:12px; height:18px; object-fit:cover;">
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!--  -->
 
-        <!-- Img under the  -->
-        <div class="container col-12 col-lg-12 img-container">
+
+        <!-- Img under the container -->
+        <div class=" col-12 col-lg-12 img-container" style="">
 
 
             <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class="bg_img"
                 style=" height: ;border-radius:40px; object-fit:cover" />
 
-            <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:absolute ;top: 120%;left:49.9%;transform: translate(-50%, -50%);"
+            <!-- Arrow on Image -->
+            <a style="border-radius:8px; background-color:#25325F; height:30px; width:30px; position:relative ;top: -59%; left:49.9%;transform: translate(-50%, -50%);"
                 class="d-none d-lg-flex justify-content-center align-items-center" href="#testimonials">
                 <img src="<?= get_field("arrow_on_img")['url'] ?>" alt="<?= get_field("arrow_on_img")['alt'] ?>"
                     style="width:12px; height:18px; margin:7px 0;" />
@@ -1097,7 +1128,9 @@
         <!-- Here new -->
 
         <!-- The blue block container -->
-        <div class="container" style="border-radius:40px;background: #25325F; margin-top:80px;height: 850px;">
+
+        <div class=""
+            style="border-radius:40px;background: #25325F; margin:80px auto; height: 850px; width: 100%; max-width: 1700px;">
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
@@ -1305,6 +1338,7 @@
 
 
 
+
         <!-- SUE Insights -->
         <div class="container" style="margin-top:120px;">
             <div class="row">
@@ -1508,8 +1542,8 @@
 
 
 
-        <div class="container">
-            <!-- responsive-container With banks Block -->
+        <div>
+            <!-- responsive-container With banks Block class="container" -->
             <div class="row">
                 <div class="responsive-container">
                     <img src="<?= get_field("sue_customers_bg")['url'] ?>"
@@ -1689,16 +1723,16 @@
         </div> <!-- End of the Container -->
 
 
-        <!-- Form Section  -->
-        <div class=" container  form_section" style="">
+        <!-- Form Section   container  -->
+        <div class="form_section">
             <!-- container -->
-            <div class="">
+            <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-3">
-                        <div class="left-container" style="">
+                    <div class=" col-12 col-lg-3">
+                        <div class="left-container">
                             <div class="left-content">
                                 <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
-                                    style="max-width:72px;height:72px;border-radius:15px; object-fit:cover" />
+                                    style="max-width:72px; height:72px; border-radius:15px; object-fit:cover" />
                                 <div class="d-flex flex-column">
                                     <span class="first-name" style=" ">Firstname:</span>
 
@@ -1713,11 +1747,12 @@
                                 </div>
                             </div>
                             <div class="d-block d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
-                            </div></a>
+                            </div>
 
 
 
-                            <div style=" margin-left:15px; margin-top:10px;">
+
+                            <div style=" margin-left:; margin-top:10px;">
                                 <!-- email -->
                                 <div class="d-flex flex-row flex-lg-column gap-3">
                                     <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
@@ -1728,7 +1763,8 @@
                                                 style="width:12px; height:18px; margin:7px 0;" />
                                         </a>
                                         <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl</span>
+                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                        </span>
                                     </div>
 
                                     <!-- contact nummer -->
@@ -1742,7 +1778,8 @@
                                         </a>
                                         <span
                                             style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                            345 656 666</span>
+                                            345 656 666
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -1765,9 +1802,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <!-- First Row -->
-                    <div class=""
-                        style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; margin-top:150px;">
+                    <!-- First Row margin-top:150px; and newsletter-container also-->
+                    <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                         <span
                             style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin:10px 5px 0">
                             <?= get_field("information_title") ?>
@@ -1784,7 +1820,7 @@
                     <div class="row" style="margin:50px 0;">
                         <div class="col-lg-4">
                             <!-- accordion -->
-                            <div class="    d-block d-lg-none" id="accordionExample">
+                            <div class=" d-block d-lg-none" id="accordionExample">
                                 <!-- First Item -->
                                 <div class="accordion-item">
                                     <div class="d-flex flex-row align-items-center justify-content-between gap-3">
