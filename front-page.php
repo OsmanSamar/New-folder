@@ -5,32 +5,6 @@
 
 <main class="front-page flex-grow-1">
     <style>
-    /* .swiper-pagination2 {
-        transform: translateY(50%);
-    }
-
-    .btn-swiper {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-        .bg-container {
-            padding: 20px;
-        }
-
-        .swiper-slide .slide-date {
-            display: inline-block !important;
-            margin-right: 10px;
-        }
-
-        .text-swiper {
-            flex-grow: 1;
-            width: 100%;
-        }
-    } */
-
-    /*  */
     .mask-group {
         background-image: url("<?= esc_url(get_template_directory_uri()); ?>/images/maskgroup.png");
         background-size: cover;
@@ -103,10 +77,11 @@
         color: #FFFFFF;
         background-color: #E94271;
         text-align: center;
-        font-size: 11px;
+        font-size: 13px;
         width: 103px;
         height: 30px;
         padding: 4px;
+        font-family: Manrope;
     }
 
     .card-title {
@@ -115,6 +90,7 @@
         font-weight: 600;
         /* line-height: 27px; */
         margin: 2px 0;
+        font-family: Manrope;
     }
 
     .card-text {
@@ -136,6 +112,11 @@
         text-align: center;
         padding: 4px 10px;
         width: fit-content;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.4px;
     }
 
 
@@ -146,6 +127,7 @@
     .text-swiper {
         font-size: 11px;
         color: white;
+        font-family: Manrope;
 
     }
 
@@ -216,6 +198,17 @@
     }
 
 
+    .custom-title {
+        color: #FFF;
+
+        /* Desktop/Small (Bold) */
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 180%;
+        /* 23.4px */
+    }
 
     .custom-number.active {
         background-color: #274083;
@@ -275,7 +268,7 @@
         color: #FFF;
         padding: 5px 20px;
         border-radius: 40px;
-        font-family: Manrope, sans-serif;
+        font-family: Manrope;
         font-size: 0.8rem;
         font-weight: 700;
         margin-bottom: 15px;
@@ -284,8 +277,7 @@
 
     .main-title {
         color: #25325F;
-        font-family: Manrope, sans-serif;
-        font-size: 22px;
+        font-family: Manrope font-size: 22px;
         font-weight: 700;
         margin-bottom: 20px;
         text-align: center;
@@ -616,7 +608,8 @@
         }
 
         .left-text {
-            font-family: Sora;
+            /* font-family: Sora; */
+            font-family: "Sora", serif;
             font-size: 45px;
             font-style: normal;
             font-weight: 700;
@@ -923,11 +916,11 @@
                     style="border-radius:15px; background-color:#FFF; width:350px; height:104px; margin:15px 0;">
                     <div style=" margin-top:2px;">
                         <span
-                            style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px;">
+                            style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; font-family: Manrope;">
                             <?= $testimonial["num"] ?>
                         </span>
                         <span
-                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
+                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;font-family: Manrope;">
                             <?= $testimonial["sub_title"] ?>
                         </span>
                     </div>
@@ -941,7 +934,8 @@
                         </a>
                     </div>
 
-                    <h1 style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; ; ">
+                    <h1
+                        style="color: #25325F; font-size: 21px;font-weight:700;line-height:33.6px; font-family: Manrope; ">
                         <?= $testimonial["main_title"] ?>
                     </h1>
 
@@ -963,22 +957,23 @@
                 <div class="testimonial-container" style="background-color:#FFF;border-radius:15px; ">
                     <div style=" margin-top:25px; padding:0 20px">
                         <span
-                            style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;">
+                            style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;font-family: Manrope;">
                             <?= $testimonial["num"] ?>
                         </span>
                         <span
-                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;">
+                            style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;font-family: Manrope;">
                             <?= $testimonial["sub_title"] ?>
                         </span>
                     </div>
-                    <h1 style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px ">
+                    <h1
+                        style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px;font-family: Manrope; ">
                         <?= $testimonial["main_title"] ?>
                     </h1>
 
                     <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
 
                     <p class=""
-                        style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px  ">
+                        style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px;font-family: Manrope;  ">
                         <?= $testimonial["text"] ?>
                     </p>
 
@@ -1028,7 +1023,8 @@
                                         <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                             alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
                                             style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
-                                        <h1 style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px ">
+                                        <h1
+                                            style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px; font-family: Manrope; ">
                                             <?= $sue["sue_partners_text"] ?>
                                         </h1>
                                         <a style="border-radius:14px; background-color:; height:; width:;"
@@ -1054,7 +1050,7 @@
                     <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
                         style="margin-top:100px">
                         <span class="col-lg-2 "
-                            style="color:#25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
+                            style="color:#25325F;font-family:Manrope; font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
                             SUE partners:</span>
                         <?php
                         foreach (get_field("sue_partners") as $sue) {
@@ -1064,7 +1060,8 @@
                                 <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                     alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
                                     style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
-                                <h1 style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px ">
+                                <h1
+                                    style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px; font-family:Manrope;">
                                     <?= $sue["sue_partners_text"] ?>
                                 </h1>
                                 <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
@@ -1147,7 +1144,7 @@
                                 <!-- <span><?= get_field("blue_block_main_title_pink_word") ?></span> -->
                             </span>
                             <span
-                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:  27.2px;">
+                                style="color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:  27.2px;">
                                 <?= get_field("text") ?>
                             </span>
                             <!-- schedule_link -->
@@ -1160,7 +1157,7 @@
                                         style="width:12px; height:18px; margin:7px 0;" />
                                 </a>
                                 <span
-                                    style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color:#FFF;;">
+                                    style="font-family:Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color:#FFF;;">
                                     <?= get_field("schedule_text") ?>
                                 </span>
                             </div>
@@ -1183,11 +1180,11 @@
                                     <div class="d-flex flex-row align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-around gap-2">
                                             <span
-                                                style="color: #E94271;font-family Manropefont-size:15px;font-style:normal;font-weight:600;line-height:27px;">
+                                                style="color: #E94271;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
                                                 <?= $testimonails["num"] ?>
                                             </span>
                                             <span
-                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
+                                                style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope; font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
                                                 <?= $testimonails["title"] ?>
 
                                             </span>
@@ -1196,7 +1193,7 @@
                                     </div>
                                     <div style="margin:20px 0">
                                         <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px">
+                                            style="color: #FFF;font-family:Manrope; font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px">
                                             <?= $testimonails["text"] ?>
                                         </span>
                                     </div>
@@ -1233,11 +1230,11 @@
                                     <div class="d-flex flex-row align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-around gap-2">
                                             <span
-                                                style="color:  #E94271;font-family: Manropefont-size: 15px;font-style: normal;font-weight: 600;line-height: 27px ">
+                                                style="color:  #E94271;font-family:Manrope; font-size:15px; font-style: normal;font-weight: 600;line-height: 27px ">
                                                 <?= $testimonails["num"] ?>
                                             </span>
                                             <span
-                                                style="color: #9AA0B7;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height: 27px;">
+                                                style="color: #9AA0B7;font-family:Manrope; font-size:15px; font-style: normal;font-weight: 600;line-height: 27px;">
                                                 <?= $testimonails["title"] ?>
 
                                             </span>
@@ -1246,7 +1243,7 @@
 
                                     <div style="margin:20px 0">
                                         <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px;">
+                                            style="color: #FFF;font-family: Manrope; font-size: 21px;font-style: normal;font-weight: 700;line-height: 33.6px;">
                                             <?= $testimonails["text"] ?>
                                         </span>
                                     </div>
@@ -1299,18 +1296,18 @@
                                                 <div
                                                     class="d-flex flex-row align-items-center justify-content-around gap-2">
                                                     <span
-                                                        style="color:#E94271;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
+                                                        style="color:#E94271;font-family: Manrope; font-size: 15px;font-style: normal;font-weight: 600;line-height:27px;">
                                                         <?= $testimonails["num"] ?>
                                                     </span>
                                                     <span
-                                                        style="color: var(--Text, #6A7291);font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
+                                                        style="color:#6A7291; font-family:Manrope; font-size: 14px;font-style: normal;font-weight: 700;line-height:23.8px;">
                                                         <?= $testimonails["title"] ?>
                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="d-flex flex-row align-items gap-1">
                                                 <span
-                                                    style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                                    style="color: #25325F; font-family: Manrope; font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
                                                     <?= $testimonails["text"] ?>
                                                 </span>
                                                 <a href="#"
@@ -1344,7 +1341,7 @@
             <div class="row">
                 <div class="col-6 col-lg-6">
                     <span
-                        style="color:#6A7291;font-family: Manrope;font-size:15px;font-style:normal;font-weight: 600;line-height:27px;">
+                        style="color:#6A7291; font-family:Manrope; font-size:15px;font-style:normal;font-weight: 600;line-height:27px;">
                         <?= get_field("sue_insights") ?>
                     </span>
                 </div>
@@ -1358,7 +1355,7 @@
                                 style="width:12px; height:18px; margin:7px 0;" />
                         </a>
                         <span
-                            style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                            style="color: #25325F;font-family:Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                             <?= get_field("sue_insights_text") ?>
                         </span>
                     </div>
@@ -1434,16 +1431,16 @@
                     <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
                         style="margin-left:; color:#FFF; margin-top:60px; ">
                         <span
-                            style="background-color:#274083;width:243px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope;font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
+                            style="background-color:#274083;width:243px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope; font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
                             <?= get_field("sub_title") ?>
                         </span>
                         <span
-                            style="color:#25325F;font-family:Manrope;font-size:26px;font-style:normal;font-weight:700;line-height:39px; margin-bottom:15px;">
+                            style="color:#25325F;font-family:Manrope; font-size:26px;font-style:normal;font-weight:700;line-height:39px; margin-bottom:15px;">
                             <?= get_field("main_title") ?>
 
                         </span>
                         <span
-                            style="color:#6A7291;font-family:Manrope;font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:15px;">
+                            style="color:#6A7291;font-family:Manrope; font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:15px;">
                             <?= get_field("text") ?>
                         </span>
 
@@ -1457,7 +1454,7 @@
                                 <div class=" d-flex flex-row align-items-center justify-content-between  gap-3 mt-4"
                                     style="margin:20px 0;">
                                     <span
-                                        style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                                         <?= get_field("knowledge") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -1473,7 +1470,7 @@
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
                                     <span
-                                        style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                                         <?= get_field("client_stories") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -1488,7 +1485,7 @@
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
                                     <span
-                                        style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                                         <?= get_field("events") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -1507,7 +1504,7 @@
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
                                     <span
-                                        style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        style="color: #25325F;font-family: Manrope; font-size:13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                                         <?= get_field("resources") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -1522,7 +1519,7 @@
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
                                     <span
-                                        style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
                                         <?= get_field("video") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
