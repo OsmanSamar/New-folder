@@ -5,6 +5,17 @@
 
 <main class="front-page flex-grow-1">
     <style>
+
+        /* .blue-container{
+      flex-direction: column;
+    padding: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        } */
+
+
+
         .client2-img{
             width: 100% !important;
         height: 136px !important;
@@ -521,6 +532,13 @@
 
     @media (min-width: 992px) {
 
+/* 
+         .blue-container{
+    align-items: center;
+    justify-content: space-between;
+        } */
+
+
 
         .left-column::before {
     content: "";
@@ -988,7 +1006,7 @@
             <div class="bg-container"
                 style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px;">
                 <div class="container">
-                    <div class="row align-items-center justify-content-between" style="padding: 20px;">
+                    <div class="row  blue-container align-items-center justify-content-between" style="padding: 20px;">
                         <!-- Left Section: Pagination, Button, Date, and Text -->
                         <div
                             class="d-flex flex-lg-row flex-row align-items-center gap-3 col-lg-10 col-md-9 col-sm-12 col-10">
