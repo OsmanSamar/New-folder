@@ -5,6 +5,22 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    .left-column {
+        /* margin-left:23px; */
+        color: #FFF;
+        margin-top: 80px;
+        border-radius: 40px;
+        background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
+        height: 517px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+        padding: 0 8px;
+        width: 390px;
+
+    }
+
     .slide-text {
         display: block;
         white-space: nowrap;
@@ -335,6 +351,10 @@
 
     @media (min-width: 768px) {
 
+        .left-column {
+            height: 317px;
+        }
+
         .right_section {
             margin-top: 27px;
         }
@@ -437,6 +457,13 @@
     }
 
     @media (min-width: 992px) {
+
+        .left-column {
+            background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
+            width: 533px;
+            height: 760px;
+        }
+
 
         .slide-text {
             display: block;
@@ -1097,14 +1124,6 @@
 
             <!--Sue_Partners Repeater  Swiper On Small -->
             <div class="" style="margin-top:50px; margin-bottom: 60px;">
-
-                <!-- <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
-                    <span
-                        style="color:#25325F;font-family: Manrope;font-size:16px;font-style: normal;font-weight: 700;line-height: 27.2px; ">
-                        SUE partners:
-                    </span>
-                </div> -->
-
                 <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
                     <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
                         <div class="swiper-wrapper">
@@ -1113,18 +1132,16 @@
                                 ?>
                             <div class="swiper-slide d-flex justify-content-center align-items-center"
                                 style="width:fit-content;">
-                                <!-- style="border-radius:100px;border: 1px solid #CBCFDE;background: #EDF3F4; width:272px; height:49px; margin:0 8px; padding: 8px 0;" -->
                                 <div>
                                     <div class="d-flex flex-row align-items-center justify-content-around gap-1"
                                         style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
-                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                            alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                            style="width:35px;height:21px;flex-shrink: 0; object-fit: " />
-                                        <!-- <h1
-                                            style="color:#25325F;font-size: 14px;font-weight:600;line-height:27px; font-family: Manrope; ">
-                                            <?= $sue["sue_partners_text"] ?>
-                                        </h1> -->
-                                        <a style="border-radius:14px; " class="d-flex align-items-center" href="#">
+                                        <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
+                                            <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                                alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                                style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                                        </a>
+                                        <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
+                                            href="">
                                             <img src="<?= $sue['sue_partners_link']['url'] ?>"
                                                 alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
                                                 style="width:4px; height:8px; object-fit:cover " />
@@ -1144,27 +1161,22 @@
             <div class="container">
                 <div class="">
                     <div class="row d-none d-md-none d-lg-flex flex-row align-items-center" style="margin-top:100px">
-                        <!-- <span class="col-lg-2 "
-                            style="color:#25325F;font-family:Manrope; font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px; margin-bottom: 70px; ">
-                            SUE partners:
-                        </span> -->
+
                         <?php
                         foreach (get_field("sue_partners") as $sue) {
                             ?>
+
                         <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
                             <div class="d-flex flex-row align-items-center justify-content-around gap-1"
                                 style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
-                                <a href="/">
+                                <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
                                     <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                         alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
                                         style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
                                 </a>
-                                <!-- <h1
-                                    style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px; font-family:Manrope;">
-                                    <?= $sue["sue_partners_text"] ?>
-                                </h1> -->
+
                                 <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
-                                    class="" href="#">
+                                    class="" href="">
                                     <img src="<?= $sue['sue_partners_link']['url'] ?>"
                                         alt=" <?= $sue['sue_partners_link']['alt'] ?>" class=""
                                         style="width:4px; height:8px; object-fit:cover " />
@@ -1177,6 +1189,12 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+
+
 
 
 
@@ -1289,9 +1307,9 @@
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
-                    <div class="col-lg-4 ">
-                        <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
-                            style="margin-left:23px; color:#FFF; margin-top:80px;">
+                    <div class="col-lg-5 ">
+                        <div class="left-column d-flex flex-column align-items-flex-start justify-content-left gap-4"
+                            style="">
                             <span
                                 style="background-color:#274083;width:223px;height: 30px;border-radius:40px;color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height: 23.4px; padding: 3px 15px;">
                                 <?= get_field("sub_title") ?>
@@ -1319,13 +1337,10 @@
                                 </span>
                             </div>
                         </div>
-
-
-
                     </div>
 
 
-                    <div class="col-lg-2"></div>
+                    <div class="col-lg-1"></div>
 
                     <!-- Right Column First one -->
                     <div class="col-lg-3 d-none d-md-none d-lg-flex">
