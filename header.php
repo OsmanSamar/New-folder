@@ -24,7 +24,7 @@
     </script>
 </head>
 
-<body <?php body_class(); ?>>
+<body style="background:#EDF3F4;" <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
     <header class="header" style="margin-top:50px">

@@ -785,7 +785,8 @@
 
 
 
-    <div style="background:#EDF3F4; height:;">
+    <div style="height:;">
+        <!-- background:#EDF3F4 -->
 
         <div class="container">
 
@@ -1183,17 +1184,17 @@
                     <?php foreach (get_field("client_story") as $testimonial) { ?>
                     <div class="col">
                         <div class="card  mb-3 d-flex flex-column align-items-center justify-content-center"
-                            style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;padding: 20px 0; ">
+                            style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;padding: 20px 0; width: 100%; ">
                             <div class="row g-0 align-items-center">
-                                <div class="  ">
+                                <div class="  " style="padding: 0 4px;">
                                     <img src="<?= $testimonial['client_img']['url'] ?>"
                                         alt="<?= $testimonial['client_img']['alt'] ?>" class=" card-img-top"
-                                        style="width: 309px;border-radius: 15px;height: 118px;object-fit: cover;margin: 0 auto;display: flex; align-items: center;" />
+                                        style="width:100%; max-width:; border-radius: 15px; height: 118px;object-fit: cover; padding: 0 7px 0 7px;; display: flex; align-items: center;" />
                                 </div>
                                 <div class="container">
                                     <div class="col-12 col-md-12 ">
                                         <div class="card-body"
-                                            style="display:flex;align-items:flex-start ;justify-content: center; flex-direction: column;">
+                                            style="display:flex;align-items:flex-start ;justify-content: center; flex-direction: column; padding:1rem;">
                                             <div class="d-flex  align-items-center justify-content-left gap-3 mt-2">
                                                 <a class="client-btn"
                                                     href="<?= $testimonial['client_story_btn']['url'] ?>">
