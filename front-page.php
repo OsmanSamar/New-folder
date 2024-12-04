@@ -1095,7 +1095,7 @@
 
         <div class="mask-group">
 
-            <!--  Sue_Partners Repeater  Swiper On Small -->
+            <!--Sue_Partners Repeater  Swiper On Small -->
             <div class="" style="margin-top:50px; margin-bottom: 60px;">
 
                 <!-- <div class="col-12 d-block d-md-block d-lg-none" style="text-align:center; margin-bottom: 40px; ">
@@ -1154,9 +1154,11 @@
                         <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
                             <div class="d-flex flex-row align-items-center justify-content-around gap-1"
                                 style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
-                                <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                    alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                    style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                                <a href="/">
+                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                        alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                        style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                                </a>
                                 <!-- <h1
                                     style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px; font-family:Manrope;">
                                     <?= $sue["sue_partners_text"] ?>
@@ -1304,10 +1306,9 @@
                                 <?= get_field("text") ?>
                             </span>
                             <!-- schedule_link -->
-                            <div class=" d-flex flex-row align-items-center justify-content-left gap-3 mt-4">
-                                <a href="#"
-                                    style="border-radius:8px; background-color:#E94271; height:30px; width:30px;"
-                                    class="d-flex justify-content-center align-items-center">
+                            <div class=" d-flex flex-row align-items-center justify-content-left gap-3 mt-4"
+                                style="height:42px; padding:12px 15px; border-radius:8px; background:#E94271;width: fit-content; ">
+                                <a href="#" class="d-flex justify-content-center align-items-center">
                                     <img src="<?= get_field("schedule_link")['url'] ?>"
                                         alt="<?= get_field("schedule_link")['alt'] ?>"
                                         style="width:12px; height:18px; margin:7px 0;" />
@@ -1318,7 +1319,12 @@
                                 </span>
                             </div>
                         </div>
+
+
+
                     </div>
+
+
                     <div class="col-lg-2"></div>
 
                     <!-- Right Column First one -->
@@ -1332,9 +1338,10 @@
                                 foreach (get_field("testimonails_section") as $testimonails) {
                                     ?>
 
-                                <div class="" style="border-radius:15px;  width:350px; height:99px; margin:35px 0;">
+                                <div class=""
+                                    style="border-radius:15px;  width:350px; height:99px; margin:5px 0 95px 0;">
                                     <div class="d-flex flex-row align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-around gap-2">
+                                        <div class="d-flex flex-row align-items-center justify-content-around gap-3">
                                             <span
                                                 style="color: #E94271;font-family Manrope; font-size:15px;font-style:normal;font-weight:600;line-height:27px;">
                                                 <?= $testimonails["num"] ?>
@@ -1353,14 +1360,19 @@
                                             <?= $testimonails["text"] ?>
                                         </span>
                                     </div>
-                                    <a href="#"
-                                        style="border-radius:8px; background-color: #E94271; height:30px; width:30px; margin:10px 0;"
-                                        class="d-flex justify-content-center align-items-center" href="#">
+                                    <div class="d-flex flex-row align-items-center  gap-3">
+                                        <a href="#"
+                                            style="border-radius:8px; background-color:#274083; height:30px; width:30px; margin:10px 0;"
+                                            class="d-flex justify-content-center align-items-center" href="#">
 
-                                        <img src="<?= $testimonails['link']['url'] ?>"
-                                            alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                            style="width:12px; height: 18px; margin:7px 0;" />
-                                    </a>
+                                            <img src="<?= $testimonails['link']['url'] ?>"
+                                                alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                                style="width:12px; height: 18px; margin:7px 0;" />
+                                        </a>
+                                        <span
+                                            style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
+                                            more</span>
+                                    </div>
                                 </div>
                                 <?php
                                 }
@@ -1382,9 +1394,9 @@
                                     ?>
 
                                 <div class=""
-                                    style="border-radius:15px; background-color:; width:350px;height:99px; margin:35px 0;">
+                                    style="border-radius:15px; background-color:; width:350px;height:99px; margin:5px 0 95px 0;">
                                     <div class="d-flex flex-row align-items-center justify-content-between">
-                                        <div class="d-flex flex-row align-items-center justify-content-around gap-2">
+                                        <div class="d-flex flex-row align-items-center justify-content-around gap-3">
                                             <span
                                                 style="color:  #E94271;font-family:Manrope; font-size:15px; font-style: normal;font-weight: 600;line-height: 27px ">
                                                 <?= $testimonails["num"] ?>
@@ -1404,15 +1416,19 @@
                                         </span>
                                     </div>
 
-                                    <a href="#"
-                                        style="border-radius:8px; background-color: #E94271;height:30px; width:30px; margin:10px 0"
-                                        class="d-flex justify-content-center align-items-center" href="#">
+                                    <div class="d-flex flex-row align-items-center  gap-3">
+                                        <a href="#"
+                                            style="border-radius:8px; background-color:#274083; height:30px; width:30px; margin:10px 0;"
+                                            class="d-flex justify-content-center align-items-center" href="#">
 
-                                        <img src="<?= $testimonails['link']['url'] ?>"
-                                            alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                            style="width:12px; height: 18px; margin:7px 0;" />
-                                    </a>
-
+                                            <img src="<?= $testimonails['link']['url'] ?>"
+                                                alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                                style="width:12px; height: 18px; margin:7px 0;" />
+                                        </a>
+                                        <span
+                                            style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
+                                            more</span>
+                                    </div>
                                 </div>
                                 <?php
                                 }
@@ -1463,11 +1479,11 @@
                                             </div>
                                             <div class="d-flex flex-row align-items gap-1">
                                                 <span
-                                                    style="color: #25325F; font-family: Manrope; font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                                    style="color: #25325F; font-family: Manrope; font-size: 18px;font-style: normal;font-weight: 700;line-height: 27px; width: 86%;">
                                                     <?= $testimonails["text"] ?>
                                                 </span>
                                                 <a href="#"
-                                                    style="border-radius:8px;background-color: #E94271;height:30px; width:30px;"
+                                                    style="border-radius:8px;background-color:#274083; height:30px; width:30px;"
                                                     class="d-flex justify-content-center align-items-center">
                                                     <img src="<?= $testimonails['link']['url'] ?>"
                                                         alt="<?= $testimonails['link']['alt'] ?>"
