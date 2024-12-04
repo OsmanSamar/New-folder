@@ -380,7 +380,7 @@
 
 
             <div class="offcanvas-header d-flex align-items-center justify-content-center gap-3 "
-                style="border-radius:;background:#25325F; ">
+                style="border-radius:30px 30px 0 0;background:#25325F; ">
 
 
                 <div class="d-flex align-items-center justify-content-center gap-3" style="">
