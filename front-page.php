@@ -140,8 +140,8 @@
 
     .client2-btn {
         border-radius: 100px;
-        color: #FFFFFF;
-        background-color: #E94271;
+        color: #6A7291;
+        background: #CBCFDE;
         text-align: center;
         padding: 4px 10px;
         width: fit-content;
@@ -209,9 +209,9 @@
     .custom-pagination {
         display: flex;
         gap: 8px;
-        justify-content: flex-start;
         align-items: center;
         margin-bottom: 20px;
+        justify-content: space-between;
     }
 
     .custom-number {
@@ -233,14 +233,11 @@
 
     .custom-title {
         color: #FFF;
-
-        /* Desktop/Small (Bold) */
         font-family: Manrope;
         font-size: 13px;
         font-style: normal;
         font-weight: 700;
-        line-height: 180%;
-        /* 23.4px */
+        line-height: 23.4px;
     }
 
     .custom-number.active {
@@ -256,9 +253,9 @@
         white-space: nowrap;
     }
 
-    .custom-number.active .custom-title {
+    /* .custom-number.active .custom-title {
         display: inline-block;
-    }
+    } */
 
 
     /* Container for the background image and overlay */
@@ -343,16 +340,24 @@
 
 
     .client_card2 {
-        border-radius: 20px;
-        border: 0;
+
         background: #EDF3F4;
+        border-radius: 20px;
+        border: 1px solid #CBCFDE;
+
     }
 
 
     @media (min-width: 768px) {
+        .custom-number.active .custom-title {
+            display: inline-block;
+        }
 
         .left-column {
             height: 317px;
+            width: unset;
+            align-items: center;
+            justify-content: center;
         }
 
         .right_section {
@@ -374,10 +379,11 @@
         }
 
         .container2 {
-            display: flex;
+            display: flex !important;
             align-items: center;
             justify-content: center;
-            margin-top: -65px;
+            margin-top: -154px;
+            gap: 20px;
         }
 
         .testimonial-container {
@@ -458,10 +464,26 @@
 
     @media (min-width: 992px) {
 
+        /* Custom Pagination Numbers */
+        .custom-pagination {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+
+        .custom-number.active .custom-title {
+            display: inline-block;
+        }
+
         .left-column {
             background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
             width: 533px;
             height: 760px;
+            align-items: flex-start;
+            justify-content: left;
         }
 
 
@@ -608,6 +630,7 @@
         .container2 {
 
             margin-top: 250px;
+            gap: unset;
         }
 
         .testimonial-container {
@@ -616,11 +639,11 @@
             background-color: #EDF3F4;
             width: 390px;
             height: 287px;
-            margin: 0 18px;
+            margin: 0 25px;
         }
 
         .client_card2 {
-            border-radius: 20px;
+
             width: 546px;
             height: 172px;
         }
@@ -1024,7 +1047,7 @@
         <!-- Outcome Testimonials Section on Small Screens -->
         <div class="container" style="">
             <div class="row d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none"
-                style="margin-top:-195px;">
+                style="margin-top:-163px;">
                 <?php
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
@@ -1077,6 +1100,7 @@
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
                 <div class="testimonial-container" style="background-color:#FFF;border-radius:15px; ">
+                    <!-- num and title -->
                     <div style=" margin-top:25px; padding:0 20px; display: flex;align-items: center;gap: 11px;">
                         <span
                             style="color:#E94271;font-family:Manrope;font-size:15px;font-style:normal;font-weight:700;line-height:27px;font-family: Manrope;">
@@ -1087,18 +1111,20 @@
                             <?= $testimonial["sub_title"] ?>
                         </span>
                     </div>
+                    <!-- main_title -->
                     <h1
                         style="color: #25325F;font-size: 21px;font-weight:700; line-height:33.6px; padding:0 20px;font-family: Manrope; ">
                         <?= $testimonial["main_title"] ?>
                     </h1>
+                    <!-- border-bottom -->
 
                     <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
-
+                    <!-- text -->
                     <p class=""
                         style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px;font-family: Manrope;  ">
                         <?= $testimonial["text"] ?>
                     </p>
-
+                    <!-- Btn & text -->
                     <div class="d-flex align-items-center gap-2" style="padding:0 20px">
                         <a style="border-radius:8px; background-color: #274083; height:30px; width:30px;"
                             class="d-flex justify-content-center align-items-center" href="#">
@@ -1159,16 +1185,15 @@
 
             <!-- Sue_Partners Repeater On LG -->
             <div class="container">
-                <div class="">
-                    <div class="row d-none d-md-none d-lg-flex flex-row align-items-center" style="margin-top:100px">
+                <div class="row d-none d-md-none d-lg-flex flex-row align-items-center" style="margin-top:100px">
+                    <?php
+                    foreach (get_field("sue_partners") as $sue) {
+                        ?>
 
-                        <?php
-                        foreach (get_field("sue_partners") as $sue) {
-                            ?>
-
-                        <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
+                    <div class="col-lg">
+                        <div style="border-radius:15px; height:99px; margin:35px 0;">
                             <div class="d-flex flex-row align-items-center justify-content-around gap-1"
-                                style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
+                                style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4;width: 165px;height: 61px; ">
                                 <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
                                     <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                         alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
@@ -1183,10 +1208,10 @@
                                 </a>
                             </div>
                         </div>
-                        <?php
-                        }
-                        ?>
                     </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
 
@@ -1256,7 +1281,7 @@
             <div class="container d-none d-md-none d-lg-block">
                 <div class="row row-cols-1 row-cols-lg-2 g-4">
                     <?php foreach (get_field("client_story") as $testimonial) { ?>
-                    <div class="col">
+                    <div class="col-12 col-md-12 col-lg-6">
                         <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center"
                             style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;">
                             <div class="row g-0 align-items-center">
@@ -1454,7 +1479,7 @@
                     </div>
 
                     <!-- Left columns Repeater  Swiper -->
-                    <div style="margin-top:160px; margin-bottom:;">
+                    <div style="margin-top:36px; margin-bottom:;">
                         <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
 
                             <!-- Swiper block on the big blue background -->
@@ -1570,7 +1595,7 @@
                                             <div class="col-8 col-lg-6">
                                                 <div class="card-body">
                                                     <div
-                                                        class="d-flex flex-row align-items-center justify-content-left gap-2">
+                                                        class="d-flex flex-row align-items-center justify-content-left gap-3">
                                                         <a class="client2-btn" href="<?= $testimonial['btn']['url'] ?>">
 
                                                             <?= $testimonial['btn']['title'] ?>
@@ -1775,6 +1800,7 @@
                             class="icon" />
                     </div>
                 </div>
+
             </div><!-- End of responsive-container With banks Block -->
         </div>
 
@@ -1795,9 +1821,20 @@
 
                         <div class="custom-pagination">
 
+                            <div class="d-flex d-md-none d-lg-none justify-content-left">
+                                <a href="#" id="prevBtn"
+                                    style=" height:30px; width:30px; border-radius:8px; border: 1px solid #6A7291;"
+                                    class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("prev_btn")['url'] ?>"
+                                        alt="<?= get_field("prev_btn")['title'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0; object-fit:cover" />
+                                </a>
+                            </div>
+
                             <div class="custom-number active" data-index="0">
                                 1
-                                <span class="custom-title">Mi vel turpis vitae mi a id vitae</span>
+                                <span class="custom-title">Mi vel turpis vitae mi a id
+                                    vitae</span>
                             </div>
                             <div class="custom-number" data-index="1">2
 
@@ -1806,6 +1843,16 @@
                             <div class="custom-number" data-index="2">3
 
                                 <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
+                            </div>
+
+                            <div class="d-flex d-md-none d-lg-none justify-content-start">
+                                <a href="#" id="nextBtn"
+                                    style=" height:30px; width:30px; border-radius:8px; border: 1px solid #6A7291;"
+                                    class="d-flex justify-content-center align-items-center">
+                                    <img src="<?= get_field("next_btn")['url'] ?>"
+                                        alt="<?= get_field("next_btn")['title'] ?>"
+                                        style="width:12px; height:18px; margin:7px 0; object-fit:cover " />
+                                </a>
                             </div>
 
                             <div class="d-none d-md-flex d-lg-flex align-items-center gap-4"
