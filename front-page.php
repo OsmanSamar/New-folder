@@ -6,14 +6,30 @@
 <main class="front-page flex-grow-1">
     <style>
 
-        /* .blue-container{
-      flex-direction: column;
-    padding: 31px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-        } */
+   .partners-container{
+    border-radius:10px; 
+    border:1px solid #CBCFDE;
+     background:#EDF3F4; 
+     width:102px; 
+     height:52px;
+   }
 
+   .sue-img{
+   
+    
+   }
+
+         .img-container {
+        height: 350px;
+        /* margin-top: -120px; */
+        max-width: 1700px;
+        /* margin-top: -215px; */
+          /* margin-top: -96px; */
+          margin-top: -406px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
 
 
         .client2-img{
@@ -69,16 +85,10 @@
     margin-top: 114px;
 }
 
-
-
-       
-
-
-
     .slide-text {
         display: block;
-        white-space: nowrap;
-        overflow: hidden;
+        /* white-space: nowrap; */
+        overflow: hidden; 
         text-overflow: ellipsis;
         color: #FFF;
         font-family: Manrope;
@@ -86,6 +96,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 27.2px;
+      
     }
 
     /* .slide-text:hover {
@@ -162,15 +173,27 @@
     }
 
     .client-btn {
-        border-radius: 100px;
+        /* border-radius: 100px;
         color: #FFFFFF;
         background-color: #CBCFDE;
         text-align: center;
-        font-size: 13px;
+        font-size: 14px;
         width: 69px;
-        height: 30px;
+        height: 34px;
         padding: 4px;
-        font-family: Manrope;
+        font-family: Manrope; */
+        color: #6A7291;
+        background-color: #CBCFDE;
+        border-radius: 100px;
+font-family: Manrope;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; 
+  width: 69px;
+        height: 33px;
+        padding: 4px;
+         text-align: center;
     }
 
     .card-title {
@@ -410,6 +433,18 @@
 
     @media (min-width: 768px) {
 
+         .partners-container{
+        width: 165px;
+        height: 61px;
+        }
+
+        /* .sue-img{
+    width:55px; 
+    height:33px;
+     object-fit:cover;
+   } */
+
+
 
  .swiper_block{
     margin-top: 229px;
@@ -421,10 +456,8 @@
     position: absolute;
     top: -44px;
     left: -5px;
-   
     height: 513px;
-   /* background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%); */
-     background: red;
+   background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
     width: calc(100% + 11px + 0px);
     z-index: -1;
     border-radius: 40px;
@@ -735,7 +768,7 @@
 
         .container2 {
 
-            margin-top: 250px;
+            margin-top: -45px;
             gap: unset;
         }
 
@@ -785,7 +818,7 @@
 
         .img-container {
             height: 648px;
-            margin-top: -270px;
+            margin-top:-563px;
         }
 
         .left-text {
@@ -843,8 +876,8 @@
         .client-img {
             /* width: 135px !important;
             height: 108px !important; */
-            width: 159px !important;
-            height: 138px !important;
+            width: 166px !important;
+            height: 195px !important;
 
         }
     }
@@ -876,6 +909,7 @@
 
     .swiper-container {
         position: relative;
+        cursor: pointer;
     }
 
     .swiper-pagination {
@@ -899,15 +933,7 @@
 
     }
 
-    .img-container {
-        height: 350px;
-        /* margin-top: -120px; */
-        max-width: 1700px;
-        margin-top: -215px;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
+   
 
     .bg-container {
         height: 200px;
@@ -983,28 +1009,14 @@
 
                     </div>
                 </div> -->
-
-                <div class="d-flex flex-column align-items-center d-lg-none" style="margin-top:50px;">
+                    <!-- Small Screen -->
+                <div class="d-flex flex-column align-items-center d-lg-none" style="margin-top:30px;">
                     <div class="row">
                         <p class=""
-                            style="text-align: center;color:#25325F;text-align: center;font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height:27px">
+                            style="color:#25325F; text-align:center; font-family:Manrope; font-size:18px; font-style:normal;font-weight: 500;line-height:27px; width:256px; margin-bottom:30px;">
                             <!-- <?= get_field("right_text") ?> -->
-                            Empowering organizations to innovate faster
+                           <span style="font-weight: 700;">Empowering</span> organizations to  <span style="font-weight: 700;">innovate</span>  faster
                         </p>
-
-                        <!-- <div class=" d-flex align-items-center justify-content-center" style="margin-bottom:64px;">
-                            <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
-                                                background-color: #E94271; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center">
-                                <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                                    style="width:12px; height:18px; margin:7px 0;  ">
-                            </a>
-                            <a href="<?= esc_url(home_url('/')); ?>"
-                                style="font-family: Manrope; font-size:14px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;margin: 0 10px;">
-                                Let's talk
-                            </a>
-                        </div> -->
-
 
                     </div>
                     <div class="d-flex d-lg-none  align-items-center justify-content-between"
@@ -1030,12 +1042,12 @@
         <!-- 2  class="container"-->
         <div class="section-header">
             <div class="bg-container"
-                style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px;">
+                style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px; height:577px;">
                 <div class="container">
                     <div class="row  blue-container align-items-center justify-content-between" style="padding: 20px;">
                         <!-- Left Section: Pagination, Button, Date, and Text -->
                         <div
-                            class="d-flex flex-lg-row flex-row align-items-center gap-3 col-lg-10 col-md-9 col-sm-12 col-10">
+                            class="d-flex flex-lg-row flex-row align-items-center gap-3 col-lg-10 col-md-9 col-sm-12 col-10 d-none d-lg-flex">
 
                             <!-- Pagination -->
                             <div class=" col-md-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
@@ -1117,7 +1129,7 @@
 
                         <!-- Right Section: Arrow Button -->
                         <div
-                            class="col-lg-2 col-md-3 col-sm-12 col-2 d-flex align-items-center justify-content-end gap-3">
+                            class="col-lg-2 col-md-3 col-sm-12 col-2 d-flex align-items-center justify-content-end gap-3 d-none d-lg-flex">
                             <a href="#" style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                 class="d-flex justify-content-center align-items-center">
                                 <img src="<?= get_field('arrow_btn')['url'] ?>"
@@ -1129,6 +1141,82 @@
                                 more</span>
 
                         </div>
+
+                        <!-- Small Screen -->
+                         <div class="d-flex flex-column align-items-center justify-content-center d-lg-none gap-4">
+                              
+                                  <div style="position: relative; margin:0 ">
+                                    <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
+                                        <?= get_field("trending_btn")['title'] ?>
+                                    </a>
+                                </div>
+
+                                  <!-- Swiper Container -->
+                              <div class="text-swiper col-10 ">
+                                <div class="swiper swiper-container"
+                                    style="flex-grow:1; --swiper-pagination-color: #E94271;">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-column align-items-center gap-4">
+                                              
+                                                <span class="slide-text ">
+                                                    Nulla facilisi. Duis at <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                    posuere, cursus
+                                                    justo vitae, <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                    dui fusce
+                                                    euismod rhoncus1
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-column align-items-center gap-4">
+                                             
+                                                <span class="slide-text">
+                                                    Nulla facilisi. Duis at <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                    posuere, cursus
+                                                    justo vitae, <span
+                                                        style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                    dui fusce
+                                                    euismod rhoncus2
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="d-flex flex-column align-items-center gap-4 ">
+                                             
+                                                <span class="slide-text">
+                                                    Nulla facilisi. Duis at <span
+                                                        style="color:#E94271; font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                    posuere, cursus
+                                                    justo vitae, <span
+                                                        style="color:#E94271; font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                    dui fusce
+                                                    euismod rhoncus3
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- Right Section: Arrow Button -->
+                        <div
+                            class=" col-md-10 col-sm-10 col-10 d-flex align-items-center justify-content-center gap-2">
+                            <a href="#" style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                class="d-flex justify-content-center align-items-center">
+                                <img src="<?= get_field('arrow_btn')['url'] ?>" alt="<?= get_field('arrow_btn')['title'] ?>"
+                                        style="width:12px; height:18px; object-fit:cover;">
+                                </a>
+                                <span class="d-md-inline"
+                                    style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                    more</span>
+                            
+                            </div>
+
+                         </div>
                     </div>
                 </div>
             </div>
@@ -1151,8 +1239,9 @@
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
                 <div class="testimonial"
-                    style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0;">
-                    <div style=" margin: 15px auto 2px auto; display: flex;align-items: center;gap:8px;">
+                    style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0; padding: 20px;">
+                    <div style="margin:0 0 2px 0 ; display: flex;align-items: center;gap:8px;">
+                        <!-- margin: 15px auto 2px auto -->
                         <span
                             style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; font-family: Manrope;">
                             <?= $testimonial["num"] ?>
@@ -1163,23 +1252,27 @@
                         </span>
                     </div>
 
-                    <div class="d-flex justify-content-end ">
+                    <div class="d-flex justify-content-between ">
+                         <h1 style="color:#25325F; font-size:18px; font-weight:700; line-height:27px; font-family:Manrope; ">
+                        <?= $testimonial["main_title"] ?>
+                        </h1>
                         <a style="border-radius:8px; background-color:#274083; height:30px; width:30px;"
                             class="d-flex justify-content-center align-items-center" href="#">
                             <img src="<?= get_field("schedule_link")['url'] ?>"
                                 alt="<?= get_field("schedule_link")['alt'] ?>"
                                 style="width:12px; height:18px; margin:7px 0;" />
                         </a>
+                        
                     </div>
 
-                    <h1 style="color: #25325F; font-size:18px;font-weight:700;line-height:27px; font-family: Manrope; ">
+                    <!-- <h1 style="color: #25325F; font-size:18px;font-weight:700;line-height:27px; font-family: Manrope; ">
                         <?= $testimonial["main_title"] ?>
-                    </h1>
+                    </h1> -->
 
-                    <div style=" border-bottom: 0.5px solid  #25325F; margin:15px 8px;"></div>
+                    <div style=" border-bottom: 0.5px solid  #25325F; margin:15px 1px;"></div>
 
                     <p class=""
-                        style="font-size:13px;font-style:normal;font-weight:500; line-height:22px; color:#6A7291;padding:0 20px 0 0;font-family: Manrope; text-align: left;  ">
+                        style="font-size:13px; font-style:normal; font-weight:500; line-height:22px; color:#6A7291; padding: ; font-family: Manrope; text-align: left;  ">
                         <?= $testimonial["text"] ?>
                     </p>
 
@@ -1218,7 +1311,7 @@
                         </h1>
                         <!-- border-bottom -->
 
-                        <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 8px;"></div>
+                        <div style=" border-bottom: 0.5px solid  #25325F; margin:30px 19px;"></div>
                         <!-- text -->
                         <p class=""
                             style="font-size:13px;font-style: normal;font-weight: 500;line-height: 23.4px; color:#6A7291;padding:0 20px;font-family: Manrope;  ">
@@ -1260,12 +1353,11 @@
                             <div class="swiper-slide d-flex justify-content-center align-items-center"
                                 style="width:fit-content;">
                                 <div>
-                                    <div class="d-flex flex-row align-items-center justify-content-around gap-1"
-                                        style="border-radius: 6px;border: 1px solid #CBCFDE;background:  #EDF3F4;width: 165px;height: 61px;flex-shrink: 0; ">
+                                    <div class="d-flex flex-row align-items-center justify-content-evenly partners-container">
                                         <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
                                             <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                                 alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                                style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                                                style=" width:32px; height:19px; " />
                                         </a>
                                         <a style="border-radius:8px; height:; width:;display:flex; flex-direction: row; align-items: center;"
                                             href="">
@@ -1288,14 +1380,14 @@
             <!-- Sue_Partners Repeater On LG -->
             <div class="container">
                 <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                    style="margin-top:100px">
+                    style="margin-top:40px; margin-bottom:14px;">
                     <?php
                     foreach (get_field("sue_partners") as $sue) {
                         ?>
                     <div class="col-auto">
                         <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
                             <div style="border-radius:15px; height:99px; margin:35px 0;">
-                                <div class="d-flex flex-row align-items-center justify-content-around gap-1"
+                                <div class="d-flex flex-row align-items-center justify-content-evenly "
                                     style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4;width: 165px;height: 61px; ">
                                     <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                         alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
@@ -1321,39 +1413,39 @@
                     <?php foreach (get_field("client_story") as $testimonial) { ?>
                     <div class="col">
                         <div class="card  mb-3 d-flex flex-column align-items-center justify-content-center"
-                            style="border-radius: 20px;border: 1px solid #CBCFDE;background:#EDF3F4;padding: 20px 0; width: 100%; ">
+                            style="border-radius: 20px; border:1px solid #CBCFDE; background:#EDF3F4; padding: 15px 0; width: 100%; ">
                             <div class="row g-0 align-items-center">
-                                <div class="  " style="padding: 0 4px;">
+                                <div class="  " style="padding: 0 15px;">
                                     <img src="<?= $testimonial['client_img']['url'] ?>"
                                         alt="<?= $testimonial['client_img']['alt'] ?>" class=" card-img-top"
-                                        style="width:100%; max-width:; border-radius: 15px; height: 118px;object-fit: cover; padding: 0 7px 0 7px;; display: flex; align-items: center;" />
+                                        style="width:100%; max-width:; border-radius: 15px; height: 118px; object-fit: cover; padding: ; display: flex; align-items: center;" />
                                 </div>
                                 <div class="container">
                                     <div class="col-12 col-md-12 ">
                                         <div class="card-body"
                                             style="display:flex;align-items:flex-start ;justify-content: center; flex-direction: column; padding:1rem;">
-                                            <div class="d-flex  align-items-center justify-content-left gap-3 mt-2">
+                                            <div class="d-flex  align-items-center justify-content-left gap-3 mt-2 mb-2">
                                                 <a class="client-btn"
                                                     href="<?= $testimonial['client_story_btn']['url'] ?>">
-                                                    <span>
+                                                    <span">
                                                         <?= $testimonial['client_story_btn']['title'] ?>
                                                     </span>
                                                 </a>
-                                                <h4 class="" style="color:#6A7291">
+                                                <span style="color: #6A7291;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 24px;">
                                                     <?= $testimonial["client_name"] ?>
-                                                </h4>
+                                                </span>
                                             </div>
-                                            <h4 class=" mt-2"
-                                                style=" color: #25325F;font-family: Manrope;font-size:17px;font-style: normal;font-weight: 700;line-height: 27px;">
+                                            <span class=" mt-3"
+                                                style=" color:#25325F; font-family:Manrope; font-size:17px; font-style: normal;font-weight: 700;line-height: 27px; width:291px;">
                                                 <?= $testimonial["client_text"] ?>
                                                 <a href="#">
                                                     <img src="<?= $testimonial['client_link']['url'] ?>"
                                                         alt="<?= $testimonial['client_link']['alt'] ?>"
                                                         style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
                                                 </a>
-                                            </h4>
-                                            <span class="mt-2"
-                                                style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px; text-align:left">
+                                            </span>
+                                            <span class="mt-3"
+                                                style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 180%; text-align:left; width:288px;">
                                                 <?= $testimonial["client_sub_text"] ?>
                                             </span>
                                         </div>
@@ -2575,14 +2667,14 @@
 
             breakpoints: {
 
-                414: {
-                    slidesPerView: 2.3,
+                360: {
+                    slidesPerView: 3.2,
                     spaceBetween: 1,
 
                 },
 
                 540: {
-                    slidesPerView: 2.2,
+                    slidesPerView: 4.2,
                     spaceBetween: 1,
 
                 },
