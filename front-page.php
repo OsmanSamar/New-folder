@@ -362,12 +362,16 @@
 
     .custom-number {
         position: relative;
-        background-color: #f0f0f0;
+        /* background-color: #f0f0f0; */
+        border: 1px solid var(--Line, #CBCFDE);
+        border-radius: 100px;
         color: #000;
         font-size: 12px;
         font-weight: bold;
-        width: 40px;
-        height: 40px;
+        /* width: 40px;
+        height: 40px; */
+          width: 17px;
+        height: 30px;
         border-radius: 20px;
         display: flex;
         justify-content: center;
@@ -390,7 +394,7 @@
         background-color: #274083;
         color: #fff;
         width: auto;
-        padding: 0 20px;
+        padding: 0 6px;
     }
 
     .custom-number .custom-title {
@@ -502,6 +506,13 @@
 
 
     @media (min-width: 768px) {
+          .custom-number.active {
+        background-color: #274083;
+        color: #fff;
+        width: auto;
+        padding: 0 20px;
+    }
+
 
         .left-columns-repeater-swiper {
             margin-top: -96px;
@@ -654,6 +665,14 @@
     }
 
     @media (min-width: 992px) {
+
+          .custom-number.active {
+        background-color: #274083;
+        color: #fff;
+        width: auto;
+        padding: 0 20px;
+    }
+
 
         .second-arrow {
             margin-top: 70px
@@ -2147,7 +2166,7 @@
                                     </a>
                                 </div>
 
-                                <div class="custom-number active" data-index="0">
+                                <!-- <div class="custom-number active" data-index="0">
                                     1
                                     <span class="custom-title">Mi vel turpis vitae mi a id
                                         vitae</span>
@@ -2159,6 +2178,21 @@
                                 <div class="custom-number" data-index="2">3
 
                                     <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
+                                </div> -->
+                                <div class="d-flex align-items-center gap-1">
+                                      <div class="custom-number active" data-index="0">
+                                    1
+                                    <span class="custom-title">Mi vel turpis vitae mi a id
+                                        vitae</span>
+                                </div>
+                                <div class="custom-number" data-index="1">2
+
+                                    <span class="custom-title">Vel turpis lacus vitae mi mollis</span>
+                                </div>
+                                <div class="custom-number" data-index="2">3
+
+                                    <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
+                                </div>
                                 </div>
 
                                 <div class="d-flex d-md-none d-lg-none justify-content-start">
