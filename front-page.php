@@ -24,47 +24,7 @@
       border-radius: 15px;
     }
         
-    /* .left-column {
-        margin-left:23px;
-        color: #FFF;
-        margin-top: 80px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        padding: 0 8px;
-        position: relative;
-        width: fit-content;
-    }
-
-    .left-column::before {
-        position: absolute;
-        right: 0;
-        content: "";
-        background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
-        height: 100%;
-        width: calc(100% + 150px);
-        z-index: -1;
-         border-radius: 40px;
-         left: -150px;
-       
-
-    } */
-
-
- /* .left-column {
-            color: #FFF;
-            margin-top: 80px;
-            height: 517px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: left;
-            padding: 0 8px;
-            position: relative;
-            width: fit-content;
-        } */
-
+ 
 
         .left-column {
     /* margin-left: 23px; */
@@ -78,6 +38,35 @@
     position: relative;
     width: fit-content;
     z-index: 1; /* Ensure it stays above its background */
+    padding: 0 14px;
+}
+
+
+  .left-column::before {
+    /* content: "";
+    position: absolute;
+    top: 0; 
+    left: -109px; 
+    background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
+    height: 766px;
+    width: calc(100% + 150px + 0px); 
+    z-index: -1; 
+    border-radius: 40px;*/
+
+    content: "";
+    position: absolute;
+    top: -44px;
+    left: -5px;
+   
+    height: 513px;
+   background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
+    width: calc(100% + 11px + 0px);
+    z-index: -1;
+    border-radius: 40px;
+}
+
+.swiper_block{
+    margin-top: 114px;
 }
 
 
@@ -336,7 +325,9 @@
 
     .background-image {
         width: 100%;
-        height: auto;
+        /* height: auto; */
+        height: 350px;
+        border-radius: 30px;
         object-fit: cover;
     }
 
@@ -377,7 +368,9 @@
         font-family: Manrope font-size: 22px;
         font-weight: 700;
         margin-bottom: 20px;
-        text-align: center;
+        /* text-align: center; */
+        text-align: left;
+        margin-left:22px;
     }
 
     /* Icon container */
@@ -416,17 +409,37 @@
 
 
     @media (min-width: 768px) {
+
+
+ .swiper_block{
+    margin-top: 229px;
+           }
+
+
+ .left-column::before {
+    content: "";
+    position: absolute;
+    top: -44px;
+    left: -5px;
+   
+    height: 513px;
+   /* background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%); */
+     background: red;
+    width: calc(100% + 11px + 0px);
+    z-index: -1;
+    border-radius: 40px;
+}
+
+
+
+        .background-image {
+            height: auto;
+        }
         .custom-number.active .custom-title {
             display: inline-block;
         }
 
-        /* .left-column {
-            height: 317px;
-            width: unset;
-            align-items: center;
-            justify-content: center;
-        } */
-
+      
         .right_section {
             margin-top: 27px;
         }
@@ -532,13 +545,26 @@
 
     @media (min-width: 992px) {
 
+
+
+        .main-title{
+              text-align: center;
+              margin-left: 0;
+        }
+
+          .background-image {
+            height: auto;
+        }
+
 /* 
          .blue-container{
     align-items: center;
     justify-content: space-between;
         } */
 
-
+.left-column{
+    padding: 0;
+}
 
         .left-column::before {
     content: "";
@@ -1550,7 +1576,7 @@
 
                             <!-- Swiper block on the big blue background -->
                             <div class="swiper mySwiper2" style="flex-grow: 1;">
-                                <div class="swiper-wrapper">
+                                <div class="swiper-wrapper swiper_block">
                                     <?php
                                     $testimonails_left = get_field("testimonails_section");
                                     $testimonails_right = get_field("testimonails_section_right");
@@ -1824,7 +1850,9 @@
                     <img src="<?= get_field("sue_customers_bg")['url'] ?>"
                         alt="<?= get_field("sue_customers_bg")['alt'] ?>" class="background-image" />
                     <div class="overlay">
-                        <span class="sub-title"><?= get_field("sue_title") ?></span>
+                       <div style="display: flex;justify-content: left;align-items: flex-start;text-align: left; margin-right: 80px;" >
+                         <span class="sub-title"><?= get_field("sue_title") ?></span>
+                       </div>
                         <span class="main-title"><?= get_field("sue_main_title") ?>
 
                             <span class="main-title" style="color:#E94271"><?= get_field("sue_main_title_pink_word") ?>
