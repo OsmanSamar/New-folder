@@ -6,14 +6,15 @@
 <main class="front-page flex-grow-1">
     <style>
     .second-arrow {}
-    .newsletter_text{
-        margin:20px 0;
-         color:#25325F;
-         font-family: Manrope;
-          font-size:18px; 
-          font-style:normal;
-          font-weight:700;
-          line-height:27.2px
+
+    .newsletter_text {
+        margin: 20px 0;
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px
     }
 
     .information_title {
@@ -379,7 +380,7 @@
         font-weight: bold;
         /* width: 40px;
         height: 40px; */
-          width: 17px;
+        width: 17px;
         height: 30px;
         border-radius: 20px;
         display: flex;
@@ -515,12 +516,12 @@
 
 
     @media (min-width: 768px) {
-          .custom-number.active {
-        background-color: #274083;
-        color: #fff;
-        width: auto;
-        padding: 0 20px;
-    }
+        .custom-number.active {
+            background-color: #274083;
+            color: #fff;
+            width: auto;
+            padding: 0 20px;
+        }
 
 
         .left-columns-repeater-swiper {
@@ -675,18 +676,17 @@
 
     @media (min-width: 992px) {
 
-          .newsletter_text
-          {
-      
-          font-size:16px; 
+        .newsletter_text {
+
+            font-size: 16px;
         }
 
-          .custom-number.active {
-        background-color: #274083;
-        color: #fff;
-        width: auto;
-        padding: 0 20px;
-    }
+        .custom-number.active {
+            background-color: #274083;
+            color: #fff;
+            width: auto;
+            padding: 0 20px;
+        }
 
 
         .second-arrow {
@@ -2195,19 +2195,19 @@
                                     <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
                                 </div> -->
                                 <div class="d-flex align-items-center gap-1">
-                                      <div class="custom-number active" data-index="0">
-                                    1
-                                    <span class="custom-title">Mi vel turpis vitae mi a id
-                                        vitae</span>
-                                </div>
-                                <div class="custom-number" data-index="1">2
+                                    <div class="custom-number active" data-index="0">
+                                        1
+                                        <span class="custom-title">Mi vel turpis vitae mi a id
+                                            vitae</span>
+                                    </div>
+                                    <div class="custom-number" data-index="1">2
 
-                                    <span class="custom-title">Vel turpis lacus vitae mi mollis</span>
-                                </div>
-                                <div class="custom-number" data-index="2">3
+                                        <span class="custom-title">Vel turpis lacus vitae mi mollis</span>
+                                    </div>
+                                    <div class="custom-number" data-index="2">3
 
-                                    <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
-                                </div>
+                                        <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
+                                    </div>
                                 </div>
 
                                 <div class="d-flex d-md-none d-lg-none justify-content-start">
