@@ -6,6 +6,15 @@
 <main class="front-page flex-grow-1">
     <style>
     .second-arrow {}
+    .newsletter_text{
+        margin:20px 0;
+         color:#25325F;
+         font-family: Manrope;
+          font-size:18px; 
+          font-style:normal;
+          font-weight:700;
+          line-height:27.2px
+    }
 
     .information_title {
         color: #25325F;
@@ -665,6 +674,12 @@
     }
 
     @media (min-width: 992px) {
+
+          .newsletter_text
+          {
+      
+          font-size:16px; 
+        }
 
           .custom-number.active {
         background-color: #274083;
@@ -2337,7 +2352,7 @@
 
 
                                 <div style=" margin-left:; margin-top:10px;">
-                                    <!-- email -->
+                                    <!-- E_mail -->
                                     <div class="d-flex flex-row flex-lg-column gap-3">
                                         <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
                                             <a href="#"
@@ -2371,7 +2386,7 @@
 
                             </div>
                         </div>
-                        <!-- Right column -->
+                        <!-- Right column Contact Form -->
                         <div class="col-12 col-lg-9">
                             <div style=" margin:50px 12px">
                                 <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="true"]')) ?>
@@ -2637,12 +2652,19 @@
                                         style="height: 43px;width: 88px;">
                                 </a>
 
-                                <span
-                                    style="margin:20px 0; color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <span class="newsletter_text">
                                     <?= get_field("newsletter_text") ?>
                                 </span>
+
+                                <div>
+                                    <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="true"]')) ?>
+                                </div>
+
+
+
+
                                 <span
-                                    style=" color: #6A7291;leading-trim: both;text-edge: cap;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:  23.4px">
+                                    style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px">
                                     <?= get_field("privacy_statement") ?>
                                 </span>
                                 <!-- #25325F -->
