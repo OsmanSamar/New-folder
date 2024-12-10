@@ -26,6 +26,7 @@ function register_menu()
 }
 add_action('init', 'register_menu');
 
+
 // Return images directory
 function get_images_url($filename = '')
 {

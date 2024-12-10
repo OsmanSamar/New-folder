@@ -15,13 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--  -->
+    <style>
 
-    <!-- Get Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+      
+        </style>
+    
 </head>
 
 <body style="background:#EDF3F4;" <?php body_class(); ?>>
@@ -29,6 +27,7 @@
 
     <header class="header" style="margin-top:50px">
         <!-- Navbar -->
+       
         <nav class="navbar navbar-expand-lg  fixed-top" style="background: #EDF3F4; top:26px;">
             <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
@@ -38,17 +37,26 @@
                 </a>
 
                 <!-- Navbar Links -->
-                <ul class="navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1">
+                <?php
+                wp_nav_menu(array(
+                    'menu' => 'header-menu',
+                    'depth' => 2,
+                    'container' => false,
+                    // 'menu_class' => 'navbar-nav ms-auto',
+                    'menu_class' => 'navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1 gap-4',
+                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                ));
+                ?>
+                <!-- <ul class="navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-haspopup="true"
                             aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Diensten
-
-
+                           Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F; ">Action</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item"href="<?= esc_url(home_url('/consultancy')); ?>" style="color:#25325F; "></a></li>
                             <li><a class="dropdown-item" href="#" style="color:#25325F; ">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -58,11 +66,13 @@
                         </ul>
                     </li>
 
+                   
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Expertises
+                            Expertise
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
@@ -80,7 +90,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Producten
+                            Products
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
@@ -98,7 +108,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Industrieën
+                            Industries
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
@@ -131,7 +141,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Over ons
+                           About us
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#"
@@ -145,7 +155,9 @@
                             </li>
                         </ul>
                     </li>
-                </ul>
+
+                     
+                </ul> -->
 
                 <!-- Arrow and Let's Talk on LG Screen-->
                 <div class="d-none d-lg-flex  align-items-center justify-content-between"
@@ -246,7 +258,7 @@
                             role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
                             <!-- Diensten -->
-                            <span>Diensten</span>
+                            <span>Services</span>
                             <span class="dropdown-icon ms-2"></span>
 
                         </a>
@@ -265,7 +277,7 @@
                         <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span> Expertises</span>
+                            <span>Expertise</span>
                             <span class="dropdown-icon ms-2"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -284,7 +296,7 @@
                         <a class="nav-link dropdown-toggle  d-flex justify-content-between align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span> Producten</span>
+                            <span>Products</span>
                             <span class="dropdown-icon ms-2"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -303,7 +315,7 @@
                         <a class="nav-link dropdown-toggle  d-flex justify-content-between align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span>Industrieën</span>
+                            <span>Industries</span>
                             <span class="dropdown-icon ms-2"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -338,7 +350,7 @@
                         <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span> Over ons</span>
+                            <span>About us</span>
                             <span class="dropdown-icon ms-2"></span>
                         </a>
                         <ul class="dropdown-menu">
@@ -349,6 +361,24 @@
                             </li>
                             <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
                             </li>
+                        </ul>
+                    </li>
+
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
+                            <span> Services</span>
+                            <span class="dropdown-icon ms-2"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" style="color:#25325F">Consultancy</a></li>
+                            <!-- <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
+                            </li> -->
                         </ul>
                     </li>
 
