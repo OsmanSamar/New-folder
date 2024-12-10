@@ -96,12 +96,39 @@
 
 
     .block_blue {
-        height: 1080.03px;
+        height: 2000.03px;
         border-radius: 40px;
         background: #25325F;
         margin: 80px auto;
         width: 100%;
         max-width: 1700px;
+    }
+
+    .client-consultancy-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* justify-content: center; */
+        flex-direction: column;
+
+
+    }
+
+    .client-consultancy-title {
+
+        height: 40px;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+        margin-top: 83px;
+
+    }
+
+    .client-consultancy-link {
+        margin-top: 83px;
     }
 
     @media (min-width: 992px) {
@@ -132,6 +159,17 @@
 
             height: 815.03px;
         }
+
+        .client-consultancy-container {
+
+            flex-direction: row;
+
+        }
+
+        .client-consultancy-title {
+            width: 596px;
+        }
+
 
 
 
@@ -251,24 +289,37 @@
     <!-- New Section blue block -->
     <div class="block_blue">
         <div class="container">
-            <div class="row d-flex align-items-center justify-content-center" style="margin-top:100px;">
+            <div class=" client-consultancy-container ">
+                <p class="client-consultancy-title">
+                    <?= get_field("clients_about_our_consultancy_title") ?>
+                </p>
+                <a href="<?= get_field("clients_about_our_consultancy_link")['url'] ?>" class="client-consultancy-link">
+                    <img src=" <?= get_field("view_all_stories_img")['url'] ?>"
+                        alt="<?= get_field("view_all_stories_img")['alt'] ?>" />
+                </a>
+
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center" style="margin-top:;">
                 <?php
                 foreach (get_field("clients_consultancy_testimonials") as $testimonial) {
                     ?>
-                <div class="col-12 col-md-12 col-lg-4 mt-2 d-flex align-items-center justify-content-center">
-                    <div class="card" style="width:356px;height: 464px; border-radius:15px; background-color:#FFF;">
+                <div class="col-12 col-md-12 col-lg-4 d-flex align-items-center justify-content-censter"
+                    style="margin-top:38px">
+                    <div class="card" style="border-radius:15px; background-color:#FFF;">
+                        <!-- width:436px;height:514px; -->
                         <img src="<?= $testimonial["clients_img"]['url'] ?>"
                             alt="<?= $testimonial['clients_img']['alt'] ?>" class="card-img-top"
                             style="width:100%;height: 213px;border-radius: 20px;" />
 
                         <div class="card-body">
                             <div class="card-title d-flex align-items-center justify-content-center"
-                                style="width: 96px;height: 30px;border-radius: 100px;background: #E94271; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 23.4px; text-align:center">
+                                style="width: 96px;height: 30px;border-radius: 100px;background: #E94271; color: #FFF; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 700; line-height: 23.4px; text-align:center; margin:26px 0px;">
                                 <span>
                                     <?= $testimonial["clients_name"] ?>
                                 </span>
                             </div>
-                            <p style="color: #25325F;font-family: Manrope;font-size:18px;font-style: normal;font-weight: 700;line-height:33.6px; width:264px;"
+                            <p style="color: #25325F;font-family: Manrope;font-size:21px;font-style: normal;font-weight: 700;line-height:33.6px; width:264px;"
                                 class="card-text"> <?= $testimonial["clients_text"] ?></p>
 
                             <div class="d-flex justify-content-left align-items-center gap-2">
@@ -299,9 +350,6 @@
                                 <img src="<?= $testimonial["kpn"]['url'] ?>" alt="<?= $testimonial["kpn"]['alt'] ?>"
                                     class="" style="width: 62.952px;height: 24px;" />
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
