@@ -11,6 +11,14 @@
       grid-row: span 2 !important;
     }
   }
+  // .gfield {
+  //   order: 3; groter getal dus verder naar beneden order werkt van klein naar groot
+  // }
+  @media screen and (max-width: 991.9px) {
+    .gfield--type-textarea {
+      order: 2;
+    }
+  }
 }
 
 .gform_title {
@@ -36,32 +44,6 @@
 .gform_required_legend {
   color: #fff;
 }
-// .gfield_required gfield_required_asterisk {
-// }
-// .gform-field-label {
-//   color: #fff;
-//   font-family: Manrope;
-//   font-size: 13px;
-//   font-style: normal;
-//   font-weight: 700;
-//   line-height: 180%;
-// }
-// .gform-label {
-//   color: #fff;
-//   font-family: Manrope;
-//   font-size: 13px;
-//   font-style: normal;
-//   font-weight: 700;
-//   line-height: 180%;
-// }
-// .gfield_label {
-//   color: #fff;
-//   font-family: Manrope;
-//   font-size: 13px;
-//   font-style: normal;
-//   font-weight: 700;
-//   line-height: 180%;
-// }
 
 /*Gravity  Forms field label */
 .gform-theme--framework,
@@ -70,7 +52,7 @@
 .gfield_label,
 .name-label {
   // color: #fff;
-  color: white!important;
+  color: white !important;
   font-family: Manrope;
   font-size: 13px;
   font-style: normal;
@@ -78,8 +60,16 @@
   line-height: 180%;
 }
 
-// .gfield_label .gform-field-label {
-//   color: red;
-// }
+// Btn
+.gform-theme--foundation .gform_footer,
+.gform-theme--foundation .gform_page_footer {
+  justify-content: end;
+}
 
-
+.gform-theme--foundation .gform_button button {
+}
+.gform_footer,
+.gform_button button {
+  // background-color: #e94271 !important;
+  // text-align: right;
+}
