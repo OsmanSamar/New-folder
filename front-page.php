@@ -5,8 +5,6 @@
 
 <main class="front-page flex-grow-1">
     <style>
-    .second-arrow {}
-
     .newsletter_text {
         margin: 20px 0;
         color: #25325F;
@@ -2473,11 +2471,9 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="d-block d-lg-none"
                                         style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
                                     </div>
-
                                     <!-- Second Item -->
                                     <div class="accordion-item">
                                         <div class="d-flex flex-row align-items-center justify-content-between gap-3">
@@ -2489,8 +2485,6 @@
                                                     <?= get_field("address_title") ?>
                                                 </a>
                                             </h2>
-
-
                                             <!-- DownAroow -->
                                             <div>
                                                 <a class="d-flex justify-content-center align-items-center"
@@ -2526,12 +2520,9 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="d-block d-lg-none"
                                         style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
                                     </div>
-
-
                                     <!-- 3 -->
                                     <!-- Third Item -->
                                     <div class="accordion-item">
@@ -2544,8 +2535,6 @@
                                                     <?= get_field("information") ?>
                                                 </a>
                                             </h2>
-
-
                                             <!-- DownAroow -->
                                             <div>
                                                 <a class="d-flex justify-content-center align-items-center"
@@ -2581,13 +2570,10 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="d-block d-lg-none"
                                         style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
                                     </div>
-
                                 </div>
-
                                 <!-- LG -->
                                 <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
                                     <span
@@ -2597,11 +2583,8 @@
                                         style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
                                         <?= get_field("e_mail") ?></span>
                                     <span> <?= get_field("tele") ?></span>
-
                                 </div>
-
                             </div>
-
                             <div class="col-lg-4">
                                 <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
                                     <span
@@ -2612,7 +2595,6 @@
                                         <?= get_field("address") ?></span>
                                     <span> <?= get_field("city") ?></span>
                                 </div>
-
                             </div>
                             <div class="col-lg-4">
                                 <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
@@ -2620,10 +2602,7 @@
                                         style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
                                         <?= get_field("information") ?>
                                     </span>
-
-
                                     <div class="d-flex flex-row align-items-center gap-2">
-
                                         <span
                                             style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
                                             <?= get_field("kvk") ?>
@@ -2636,26 +2615,18 @@
                                     <div class="d-flex flex-row align-items-center gap-2">
                                         <span> <?= get_field("vat") ?></span>
                                         <span> <?= get_field("account_num") ?></span>
-
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
                     <!-- Gap between -->
                     <div class="d-none d-lg-flex col-lg-2"></div>
-
                     <!-- Newsletters -->
-
                     <div class="col-12 col-lg-4">
                         <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                             <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
-
                                 <!-- Logo -->
-
                                 <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
                                     <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
                                         style="height: 43px;width: 88px;">
@@ -2665,25 +2636,20 @@
                                     <?= get_field("newsletter_text") ?>
                                 </span>
 
-                                <div>
-                                    <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="true"]')) ?>
+                                <!-- <div>
+                                    <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="false"]')) ?>
+                                </div> -->
+                                <div class="email-field-container">
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                    <button type="submit" class="submit-btn">Submit</button>
                                 </div>
-
-
-
 
                                 <span
                                     style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px">
                                     <?= get_field("privacy_statement") ?>
                                 </span>
-                                <!-- #25325F -->
-
-
                             </div>
-
-
                         </div>
-
                     </div>
                 </div>
 
@@ -2695,14 +2661,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-12">
-                            <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-between"
+                            <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-around"
                                 style="margin-top:50px">
                                 <?php
                                 foreach (get_field("arrow_section") as $testimonails) {
                                     ?>
-                                <div class="col-lg"
-                                    style="border-radius:15px; background-color:;  height:99px; margin-top:35px ;">
-                                    <div class="d-flex flex-row align-items-center justify-content-between gap-4">
+                                <div class="col-lg" style="border-radius:15px; height:99px; margin-top:35px 0;">
+                                    <div class="d-flex  align-items-center justify-content-around gap-4">
                                         <img src="<?= $testimonails['img_1']['url'] ?>"
                                             alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
 
@@ -2745,15 +2710,14 @@
 
                     <div class="row">
                         <div class="col-12 col-lg-12">
-                            <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-around second-arrow"
+                            <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow"
                                 style="">
 
                                 <?php
                                 foreach (get_field("arrow_section_second_row") as $testimonails) {
                                     ?>
-                                <div class="col-lg"
-                                    style="border-radius:15px; background-color:;  height:99px; margin:35px 0;">
-                                    <div class="d-flex flex-row align-items-center justify-content-around  gap-4">
+                                <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
+                                    <div class="d-flex align-items-center justify-content-around  gap-4">
                                         <img src="<?= $testimonails['img_1']['url'] ?>"
                                             alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
 
@@ -2792,49 +2756,7 @@
                     </div>
                 </div>
 
-                <!-- Footer -->
 
-                <div class="container" style="margin-top:100px; padding-bottom:50px;">
-                    <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <div
-                                class="d-flex flex-column align-items-flex-start flex-md-row  flex-lg-row align-items-lg-center justify-content-between gap-3 ">
-                                <span
-                                    style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    © Copyright 2024
-                                </span>
-
-
-                                <span
-                                    style="color:#6A7291; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Algemene leveringsvoorwaarden
-                                </span>
-                                <span
-                                    style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Verwerkers overeenkomst
-                                </span>
-                                <span
-                                    style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Privacy Statement
-                                </span>
-
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-lg-2"></div>
-                        <div class="col-12 col-lg-2">
-                            <div
-                                class="d-flex flex-column align-items-flex-start  flex-md-row flex-lg-row  align-items-md-center align-items-lg-end justify-content-end ">
-
-                                <!-- <span
-                                    style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                                    Website Code Blauw
-                                </span> -->
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
 
 
             </div>
