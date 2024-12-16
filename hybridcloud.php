@@ -5,6 +5,57 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+    .first-name::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 21px;
+        opacity: 0.25;
+        background: #CBCFDE;
+        margin-left: 13px;
+        margin-right: 13px;
+        vertical-align: middle;
+    }
+
+    .lets-talk-title {
+        display: block;
+        color: #9AA0B7;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px
+    }
+
+
+    .lets-talk-gota-question {
+        display: block;
+        color: #FFF;
+        font-family: Sora;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 50.4px;
+    }
+
+    .container-let-talk {
+        display: flex;
+        /* align-items: center; */
+        align-items: flex-start;
+        /* justify-content: space-between; */
+        justify-content: space-around;
+        /* gap: 1rem; */
+        flex-direction: column;
+    }
+
+    .blue-container {
+        border-radius: 40px;
+        background: #25325F;
+        height: 412px;
+        max-width: 1700px;
+        padding: 47px;
+    }
+
     .hero_blue_block {
         height: 100%;
         border-radius: 40px;
@@ -103,22 +154,57 @@
         height: 52px;
     }
 
+    .sue-offering-container {
+        border-radius: 6px;
+        border: 1px solid #CBCFDE;
+        background: #EDF3F4;
+        width: 268px;
+        height: 52px;
+    }
+
     /* .swiper-title-on-sm {
         font-size: 12px;
     } */
 
+
+
+
     .block_blue {
-        height: 950px;
         border-radius: 40px;
         background: #274083;
         margin: 80px auto;
         width: 100%;
         max-width: 1700px;
         position: relative;
-        /* position: absolute; */
         overflow: hidden;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
     }
 
+    .blue_block_img img {
+        width: 100%;
+        height: auto;
+        border-radius: 40px;
+        object-fit: cover;
+    }
+
+    .left-side-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        text-align: left;
+        margin-top: 38px;
+    }
+
+    .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
 
     .first_btn {
         display: inline-flex;
@@ -142,22 +228,22 @@
         background: #25325F;
     }
 
-    .f-btn-text {
-        color: #274083;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
+    .se-btn-text {
+        color: #FFF
     }
 
+    .f-btn-text {
+        color: #274083;
+    }
+
+    .f-btn-text,
     .se-btn-text {
-        color: #FFF;
+
         font-family: Manrope;
-        font-size: 13px;
+        font-size: 12px;
         font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
+        font-weight: 500;
+        line-height: 19px;
     }
 
 
@@ -187,32 +273,6 @@
         text-align: center;
     }
 
-    /* .left-side-text {
-        width: ;
-        position: absolute;
-        top: 74%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        gap: 30px;
-    } */
-
-
-    .left-side-text {
-        width: 384px;
-        position: relative;
-        top: 74%;
-        left: 52%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        gap: 30px;
-    }
 
 
     .left2-text,
@@ -234,34 +294,110 @@
         gap: 4px;
     }
 
+
+    .testimonial-card {
+        border-radius: 15px;
+        background-color: #FFF;
+        /* max-width: 356px; */
+        height: 277px;
+        margin: 15px 0;
+        padding: 27px;
+        height: 337px;
+    }
+
+
+    .offering-num {
+        color: #E94271;
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 23.8px;
+    }
+
+    .offering-sub-title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 23.8px;
+        color: #6A7291;
+        font-family: Manrope;
+    }
+
+    .offering-main-title {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33.6px;
+    }
+
+    .divider {
+        border-bottom: 0.5px solid #25325F;
+        /* margin: 15px 1px; */
+    }
+
+    .offering-text {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #6A7291;
+        font-family: Manrope;
+        text-align: left;
+    }
+
+    .left-side-img-text {
+        display: flex;
+        /* align-items: center; */
+        gap: 1rem;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+
     @media (min-width: 768px) {
 
         .block_blue {
             height: 589px;
+            flex-direction: row;
         }
 
         .blue_block_img {
-            width: 353px;
-            height: 589px;
-            border-radius: 40px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
+            height: 100%;
 
         }
 
         .left-side-text {
-            width: 384px;
-            position: relative;
-            top: 80%;
-            left: 72%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: left;
-            gap: 30px;
+            position: absolute;
+            text-align: left;
+            gap: 20px;
+            max-width: 384px;
+            margin: auto 0;
+            top: 5%;
+            left: 50%;
         }
+
+        .btn-container {
+            gap: 1rem;
+        }
+
+        .left-side-img-text {
+            flex-direction: row;
+        }
+
+        .container-let-talk {
+            flex-direction: row;
+        }
+
+        .left-side-img-text {
+            align-items: center;
+        }
+
+        .blue-container {
+            height: 212px;
+        }
+
+
+
     }
 
     @media (min-width: 992px) {
@@ -278,8 +414,6 @@
 
         }
 
-
-
         .left-text,
         .right-text {
             width: 504px;
@@ -290,34 +424,27 @@
             height: 99px;
         }
 
-        .blue_block_img {
-            width: 533px;
-            height: 589px;
-            border-radius: 40px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: left;
+        .block_blue {
+            height: auto;
         }
 
-        /* .left-side-text {
-            top: 50%;
-        } */
+        .blue_block_img {
+            width: 100%;
+            height: auto;
+        }
 
         .left-side-text {
-            width: 384px;
-            position: relative;
-            top: 80%;
-            left: 92%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: left;
-            gap: 30px;
+            text-align: left;
+            position: absolute;
+            gap: 20px;
+            max-width: 384px;
+            margin: auto 0;
+            top: 25%;
+            left: 50%;
+        }
+
+        .btn-container {
+            gap: 1rem;
         }
 
         .text-on-blue-block {
@@ -331,6 +458,38 @@
 
         .left_col2 {
             width: 546px;
+        }
+
+
+
+        .f-btn-text,
+        .se-btn-text {
+            color: #274083;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+        }
+
+        .left-side-img-text {
+            flex-direction: row;
+        }
+
+        .container-let-talk {
+            flex-direction: row;
+        }
+
+        .left-side-img-text {
+            align-items: center;
+        }
+
+        .blue-container {
+            height: 212px;
+        }
+
+        .lets-talk-gota-question {
+            font-size: 35px;
         }
 
     }
@@ -470,39 +629,40 @@
 
 
     <div class="block_blue">
-        <div class="blue_block_img ">
-            <img src="<?= get_field("blue_block_img")['url'] ?>" alt="<?= get_field("blue_block_img")['alt'] ?>" />
-        </div>
         <div class="row">
-            <div class="col-12 col-lg-7">
-                <div class="left-side-text" style="">
-                    <div class="d-flex align-items-center justify-content-center gap-3">
-                        <div class="first_btn">
-                            <span class="f-btn-text">
-                                <?= get_field("gguus_meijer_text") ?>
-                            </span>
-                        </div>
-                        <div class="second-btn">
-                            <span class="se-btn-text"> <?= get_field("coo_text") ?></span>
-                        </div>
-                    </div>
-                    <span class="text-on-blue-block">
-                        <?= get_field("text_on_blue_block") ?></span>
-                    <div>
-                        <a href="<?= get_field("read_the_full_story_link")['url'] ?>" class="read-the-full-story-link ">
-                            <div
-                                style="background-color:white;width: 30px;height: 30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                                <img src="<?= get_field("read_the_full_story_img")['url'] ?>"
-                                    alt="<?= get_field("read_the_full_story_img")['alt'] ?>"
-                                    style="width: 12px;height: 18px;" />
+            <div class="col-12 col-md-6 col-lg-5 blue_block_img ">
+                <img src="<?= get_field("blue_block_img")['url'] ?>" alt="<?= get_field("blue_block_img")['alt'] ?>" />
+            </div>
+            <div class="">
+                <div class="col-12 col-md-6 col-lg-7 d-flex align-items-center justify-content-center">
+                    <div class="left-side-text">
+                        <div class="btn-container ">
+                            <div class="first_btn">
+                                <span class="f-btn-text">
+                                    <?= get_field("gguus_meijer_text") ?>
+                                </span>
                             </div>
-                            <?= get_field("read_the_full_story_link")['title'] ?>
+                            <div class="second-btn">
+                                <span class="se-btn-text"> <?= get_field("coo_text") ?></span>
+                            </div>
+                        </div>
+                        <span class="text-on-blue-block">
+                            <?= get_field("text_on_blue_block") ?></span>
+                        <div>
+                            <a href="<?= get_field("read_the_full_story_link")['url'] ?>"
+                                class="read-the-full-story-link ">
+                                <div
+                                    style="background-color:white;width: 30px;height: 30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                    <img src="<?= get_field("read_the_full_story_img")['url'] ?>"
+                                        alt="<?= get_field("read_the_full_story_img")['alt'] ?>"
+                                        style="width: 12px;height: 18px;" />
+                                </div>
+                                <?= get_field("read_the_full_story_link")['title'] ?>
 
-                        </a>
+                            </a>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -544,6 +704,168 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+    <!-- Testimonials Section on All Screens -->
+    <div class="container mt-5">
+        <div class="row gy-2">
+            <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="testimonial-card">
+                    <div class="d-flex align-items-center gap-2 mb-2">
+                        <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
+                        <span class="offering-sub-title"><?= $testimonial["offering_title"] ?></span>
+                    </div>
+                    <h2 class="offering-main-title"> <?= $testimonial["offering_main_title"] ?></h2>
+                    <div class="divider mb-3" style="margin: 15px 1px;"></div>
+                    <p class="offering-text"><?= $testimonial["offering_text"] ?></p>
+                    <a href="<?= $testimonial["offering_link"]['url'] ?>"
+                        class="d-flex align-items-center justify-content-left gap-3">
+                        <div
+                            style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                            <img src="<?= $testimonial["offering_img"]['url'] ?>"
+                                alt="<?= $testimonial["offering_img"]['alt'] ?>" style="width: 12px;height: 18px;" />
+                        </div>
+                        <?= $testimonial["offering_link"]['title'] ?>
+                    </a>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+
+
+
+
+    <!--Sue_Offering Repeater  Swiper On Small -->
+    <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
+        <div class="position-relative d-block d-lg-none align-items-center  ">
+            <div class="swipersue3 sue-offering-swiper3 ">
+                <div class="swiper-wrapper">
+                    <?php
+                    foreach (get_field("sue_offering_testimonials") as $sue) {
+                        ?>
+                    <div class="swiper-slide d-flex justify-content-center align-items-center"
+                        style="width:fit-content;">
+                        <div>
+                            <div
+                                class="d-flex flex-row align-items-center justify-content-evenly sue-offering-container">
+                                <a href=" <?= $sue['sue_offering_link']['url'] ?>" class="swiper-title-on-sm">
+                                    <div
+                                        style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                        <img src="<?= $sue['sue_offering_img']['url'] ?>"
+                                            alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
+                                            style="width: 12px;height: 18px;" />
+                                    </div>
+                                </a>
+                                <?= $sue['sue_offering_link']['title'] ?>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sue_Offering Repeater On LG -->
+    <div class="container">
+        <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
+            style="margin-top:40px; margin-bottom:14px;">
+            <?php
+            foreach (get_field("sue_offering_testimonials") as $sue) {
+                ?>
+            <div class="col-auto">
+                <a href=" <?= $sue['sue_offering_link']['url'] ?>">
+                    <div style="border-radius:6px; height:99px; margin:35px 0;">
+                        <div class="d-flex flex-row align-items-center justify-content-evenly "
+                            style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width: 356px; height: 65px; ">
+                            <div
+                                style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                <img src="<?= $sue['sue_offering_img']['url'] ?>"
+                                    alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
+                                    style="width: 12px;height: 18px;" />
+                            </div>
+                            <?= $sue['sue_offering_link']['title'] ?>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <?php
+            }
+            ?>
+        </div>
+    </div>
+
+
+    <div class="blue-container" style="">
+        <div class="container-let-talk" style="">
+            <!-- Left Side: Image and Texts -->
+            <div class="left-side-img-text" style="">
+                <img src="<?= get_field('lets_talk_img')['url'] ?>" alt="<?= get_field('lets_talk_img')['alt'] ?>"
+                    style="width: 110px;height: 110px; border:15px;">
+                <div>
+                    <div class="d-flex align-items-center">
+                        <span class="first-name"
+                            style="display: block; color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:27.2px "><?= get_field('lets_talk_first_name') ?></span>
+                        <span class="lets-talk-title"
+                            style="display: block; color:#9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px"><?= get_field('lets_talk_title') ?></span>
+                    </div>
+                    <br>
+                    <span class="lets-talk-gota-question" style=""><?= get_field('lets_talk_gota_question') ?></span>
+                </div>
+            </div>
+            <!-- Right Side: Text, Email, and Phone -->
+            <div
+                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:left; gap:1rem;">
+                <span style="color: #FFF;"><?= get_field('lets_talk_word') ?></span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div
+                        style="background-color:#E94271; width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <img src="<?= get_field('lets_talk_btn')['url'] ?>"
+                            alt="<?= get_field('lets_talk_btn')['alt'] ?>" style="width: 12px; height: 18px;">
+                    </div>
+                    <span style="color: #FFF;"><?= get_field('lets_talk_mail') ?></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div
+                        style="background-color:#FFF; width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <img src="<?= get_field('lets_talk_phone_link')['url'] ?>"
+                            alt="<?= get_field('lets_talk_phone_link')['alt'] ?>" style="width: 12px; height: 18px;">
+                    </div>
+                    <span style="color: #FFF;"><?= get_field('lets_talk_phone_number') ?></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -593,6 +915,58 @@
 
                 slidesPerView: 3,
                 spaceBetween: 1,
+            }
+
+
+        }
+    })
+    </script>
+
+
+    <script>
+    let swipersue3 = new Swiper('.sue-offering-swiper3', {
+        slidesPerView: 1.5,
+        grabCursor: true,
+        spaceBetween: 1,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+
+            360: {
+                slidesPerView: 1.4,
+                spaceBetween: 1,
+
+            },
+
+            540: {
+                slidesPerView: 2,
+                spaceBetween: 1,
+
+            },
+
+            556: {
+                slidesPerView: 2.7,
+
+
+                spaceBetween: 1,
+            },
+            992: {
+
+                slidesPerView: 2.7,
+                spaceBetween: 1,
+            },
+            1024: {
+
+                slidesPerView: 3,
+                spaceBetween: 0,
             }
 
 
