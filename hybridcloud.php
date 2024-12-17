@@ -498,6 +498,73 @@
         line-height: 27.2px;
     }
 
+
+    .form_section {
+        border-radius: 30px;
+        background: #25325F;
+        /* margin: 150px auto; */
+        max-width: 1700px;
+        height: 1400px;
+        margin: 150px auto 100px;
+
+    }
+
+    .left-container {
+        border-radius: 30px;
+        margin-top: ;
+        color: white;
+        height: 264px;
+        /* background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%); */
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 50px;
+        gap: 20px;
+        /* margin-left: 15px; */
+    }
+
+
+
+    .information_title {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+        margin: 10px 5px 0
+    }
+
+    .information_text {
+        color: var(--Text, #6A7291);
+        font-family: Manrope;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+        margin: 5px 0;
+        width: 326px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @media (min-width: 768px) {
 
         .img-on-blue-block {
@@ -641,6 +708,38 @@
             height: 837px;
         }
 
+
+        .form_section {
+
+            height: 550px;
+        }
+
+
+        .left-container {
+            height: 500px;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: normal;
+            /* margin-left: 15px; */
+            margin-top: 50px;
+        }
+
+        .information_title {
+            font-size: 16px;
+            line-height: 27px;
+
+        }
+
+        .information_text {
+            font-size: 16px;
+            width: 504px;
+        }
+
+
     }
     </style>
     <div class="" style="margin-top:190px; position:relative; max-width: 1700px; overflow: hidden;">
@@ -697,6 +796,7 @@
                         <?= get_field("left_text") ?></span>
                 </div>
             </div>
+
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col">
                     <span class="right-text">
@@ -1046,7 +1146,7 @@
                                 style="height: 213px; border-radius: 20px 20px 0 0;" />
                         </div>
                         <div class="card-body"
-                            style="border: 1px solid gray; border-top: none; border-radius: 0 0 20px 20px;">
+                            style="border: 1px solid #CBCFDE; border-top: none; border-radius: 0 0 20px 20px;">
                             <div class="card-title">
                                 <span><?= $testimonial["test_name"] ?></span>
                             </div>
@@ -1229,6 +1329,435 @@
 
 
     </div>
+
+
+
+    <!-- Form Section   container  -->
+    <div class="form_section">
+        <!-- container -->
+        <div class="container">
+            <div class="row">
+                <div class=" col-12 col-lg-3">
+                    <div class="left-container">
+                        <div class="left-content">
+                            <img src="<?= get_field("form_img")['url'] ?>" alt="<?= get_field("form_img")['alt'] ?>"
+                                style="max-width:72px; height:72px; border-radius:15px; object-fit:cover" />
+                            <div class="d-flex flex-column">
+                                <span class="first-name" style=" "><?= get_field("first_name") ?></span>
+                                <span
+                                    style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">
+                                    <?= get_field("lets_talk_text") ?>
+                                </span>
+                            </div>
+                            <div class="d-none d-lg-block"
+                                style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
+                            </div>
+                        </div>
+                        <div class="d-block d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
+                        </div>
+
+                        <div style="margin-top:5px;">
+                            <!-- E_mail -->
+                            <div class="d-flex flex-row flex-lg-column gap-2">
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                    <a href="#" style="background:#E94271;height:30px;width:30px;border-radius:8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;" />
+                                    </a>
+                                    <span
+                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                    </span>
+                                </div>
+                                <!-- contact nummer -->
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                    <a href="#"
+                                        style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("tel_link")['url'] ?>"
+                                            alt="<?= get_field("tel_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;color:black" />
+                                    </a>
+                                    <span
+                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                        345 656 666
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right column Contact Form -->
+                <div class="col-12 col-lg-9">
+                    <div class="row" style="margin-top:67px;">
+                        <div class="col-lg-4">
+                            <h2
+                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                                Are you ready to take the <span
+                                    style="color: var(--Secondary-600, #E94271);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%;">next
+                                    step</span>?</h2>
+                        </div>
+                        <div class="col-lg-7 offset-lg-1"
+                            style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
+                            porttitor vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
+                        </div>
+                    </div>
+                    <div style="margin-top:50px;">
+                        <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode(' [gravityform id="4" title="false" description="false"]')) ?>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8" style="">
+                            <span
+                                style="color:#9AA0B7;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px ">
+                                By sending this form you indicate that you have taken note of our  <span
+                                    style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%;">privacy
+                                    statement. </span>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Form Section -->
+
+
+
+
+
+
+    <!-- New Section -->
+    <div class="container">
+        <div class="row" style="margin-top:50px;">
+            <div class="col-12 col-lg-6 ">
+                <!-- First Row margin-top:150px; and newsletter-container also-->
+                <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
+                    <span class="information_title" style="">
+                        <?= get_field("information_title") ?>
+                    </span>
+                    <br>
+                    <span class="information_text">
+                        <?= get_field("information_text") ?>
+                    </span>
+                </div>
+                <!-- Second Row -->
+                <div class="row" style="margin:50px 0;">
+                    <div class="col-lg-4 ">
+                        <!-- accordion -->
+                        <div class=" d-block d-lg-none" id="accordionExample">
+                            <!-- First Item -->
+                            <div class="accordion-item">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <a href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
+                                            aria-expanded="true" aria-controls="collapseOne"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("contact_title") ?>
+                                        </a>
+
+                                    </h2>
+                                    <!-- DownAroow -->
+                                    <div>
+                                        <a class="d-flex justify-content-center align-items-center" href="#collapseOne"
+                                            class="accordion-button" data-bs-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                style="width:12px; height:12px; margin:7px 0; " />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body ">
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span
+                                                style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
+                                                <?= get_field("e_mail") ?>
+                                            </span>
+                                            <span>
+                                                <?= get_field("tele") ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                            </div>
+                            <!-- Second Item -->
+                            <div class="accordion-item">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <a href="#collapseTwo" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("address_title") ?>
+                                        </a>
+                                    </h2>
+                                    <!-- DownAroow -->
+                                    <div>
+                                        <a class="d-flex justify-content-center align-items-center" href="#collapseTwo"
+                                            class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                style="width:12px; height:12px; margin:7px 0; " />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span
+                                                style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                <?= get_field("address") ?></span>
+                                            <span> <?= get_field("city") ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                            </div>
+                            <!-- 3 -->
+                            <!-- Third Item -->
+                            <div class="accordion-item">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <a href="#collapseThree" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseThree"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("information") ?>
+                                        </a>
+                                    </h2>
+                                    <!-- DownAroow -->
+                                    <div>
+                                        <a class="d-flex justify-content-center align-items-center"
+                                            href="#collapseThree" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                style="width:12px; height:12px; margin:7px 0; " />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span
+                                                style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                                <?= get_field("kvk") ?>
+                                                <span
+                                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                    <?= get_field("kvk_num") ?>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span> <?= get_field("vat") ?> <span>
+                                                    <?= get_field("account_num") ?>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                            </div>
+                        </div>
+                        <!-- LG -->
+                        <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <span
+                                style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("contact_title") ?></span>
+                            <span
+                                style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                <?= get_field("e_mail") ?></span>
+                            <span> <?= get_field("tele") ?></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <span
+                                style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("address_title") ?></span>
+                            <span
+                                style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                <?= get_field("address") ?></span>
+                            <span> <?= get_field("city") ?></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <span
+                                style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("information") ?>
+                            </span>
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <span
+                                    style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                    <?= get_field("kvk") ?>
+                                </span>
+                                <span
+                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                    <?= get_field("kvk_num") ?>
+                                </span>
+                            </div>
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <span> <?= get_field("vat") ?></span>
+                                <span> <?= get_field("account_num") ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Gap between -->
+            <div class="d-none d-lg-flex col-lg-2"></div>
+            <!-- Newsletters -->
+            <div class="col-12 col-lg-4">
+                <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
+                    <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
+                        <!-- Logo -->
+                        <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
+                                style="height: 43px;width: 88px;">
+                        </a>
+
+                        <span class="newsletter_text">
+                            <?= get_field("newsletter_text") ?>
+                        </span>
+                        <!-- <div>
+                            <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="false" ]')) ?>
+                        </div> -->
+                        <div class="email-field-container">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </div>
+
+                        <span
+                            style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px">
+                            <?= get_field("privacy_statement") ?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Arrows container -->
+    <div class="container">
+        <div class="row gy-2">
+            <div class="col-12 col-lg-12">
+                <div class=" row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around"
+                    style="margin-top:50px">
+
+
+                    <?php
+                    foreach (get_field("arrow_section") as $testimonails) {
+                        ?>
+                    <div class="col-lg" style="border-radius:15px;   height:99px; margin-top:35px 0;">
+                        <div class="d-flex  align-items-center justify-content-around gap-4">
+                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                class="arrow_section" />
+
+                        </div>
+                    </div>
+                    <?php
+                    }
+                    ?>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Second Line  -->
+
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow">
+
+                    <?php
+                    foreach (get_field("arrow_section_second_row") as $testimonails) {
+                        ?>
+                    <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
+                        <div class="d-flex  align-items-center justify-content-around  gap-4">
+                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex " />
+
+                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                class="arrow_section" />
+
+                        </div>
+                    </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -992,24 +992,17 @@
                                 style="max-width:72px; height:72px; border-radius:15px; object-fit:cover" />
                             <div class="d-flex flex-column">
                                 <span class="first-name" style=" "><?= get_field("first_name") ?></span>
-
                                 <span
                                     style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">
-
                                     <?= get_field("lets_talk") ?>
                                 </span>
                             </div>
-
                             <div class="d-none d-lg-block"
                                 style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
                             </div>
                         </div>
                         <div class="d-block d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
                         </div>
-
-
-
-
                         <div style=" margin-left:; margin-top:10px;">
                             <!-- E_mail -->
                             <div class="d-flex flex-row flex-lg-column gap-3">
@@ -1024,7 +1017,6 @@
                                         style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
                                     </span>
                                 </div>
-
                                 <!-- contact nummer -->
                                 <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
                                     <a href="#"
@@ -1041,7 +1033,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <!-- Right column Contact Form -->
@@ -1063,22 +1054,17 @@
                     <!-- <div style=" margin:">
                         <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="false"]')) ?>
                     </div> -->
-
                     <div>
                         <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode(' [gravityform id="4" title="false" description="false"]')) ?>
-
                     </div>
                     <div class="row">
                         <div class="col-lg-8" style="">
                             <span
                                 style="color:#9AA0B7;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px ">
-
-
                                 By sending this form you indicate that you have taken note of our  <span
                                     style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%;">privacy
                                     statement. </span>
                             </span>
-
                         </div>
                     </div>
                 </div>
@@ -1281,192 +1267,185 @@
             <div class="d-none d-lg-flex col-lg-2"></div>
             <!-- Newsletters -->
             <div class="col-12 col-lg-4">
-                <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
-                    <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
+                <div style="display:flex;flex-direction: column; align-items: flex-start;  ">
+                    <div class="d-flex flex-column align-items-flex-start newsletter-container">
                         <!-- Logo -->
                         <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
                                 style="height: 43px;width: 88px;">
                         </a>
 
-                        <span class="newsletter_text">
+                        <span class="newsletter_text" style="margin:20px 0;">
                             <?= get_field("newsletter_text") ?>
                         </span>
 
                         <!-- <div>
                             <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="false" ]')) ?>
                         </div> -->
-                        <div class="email-field-container">
+                        <div class="email-field-container" style="margin:20px 0;">
                             <input type="email" id="email" name="email" placeholder="Enter your email" required>
                             <button type="submit" class="submit-btn">Submit</button>
                         </div>
 
                         <span
-                            style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px">
+                            style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px; margin:20px 0;">
                             <?= get_field("privacy_statement") ?>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
 
-        <!-- Arrows container -->
-        <div class="container">
-            <div class="row gy-2">
-                <div class="col-12 col-lg-12">
-                    <div class=" row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around"
-                        style="margin-top:50px">
+    <!-- Arrows container -->
+    <div class="container">
+        <div class="row gy-2">
+            <div class="col-12 col-lg-12">
+                <div class=" row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around"
+                    style="margin-top:50px">
 
 
-                        <?php
-                        foreach (get_field("arrow_section") as $testimonails) {
-                            ?>
-                        <div class="col-lg" style="border-radius:15px;   height:99px; margin-top:35px 0;">
-                            <div class="d-flex  align-items-center justify-content-around gap-4">
-                                <img src="<?= $testimonails['img_1']['url'] ?>"
-                                    alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
-
-                                <img src="<?= $testimonails['img_2']['url'] ?>"
-                                    alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_3']['url'] ?>"
-                                    alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_4']['url'] ?>"
-                                    alt=" <?= $testimonails['img_4']['alt'] ?>" class="arrow_section" />
-
-                                <img src="<?= $testimonails['img_5']['url'] ?>"
-                                    alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_6']['url'] ?>"
-                                    alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_7']['url'] ?>"
-                                    alt=" <?= $testimonails['img_7']['alt'] ?>" class="arrow_section" />
-
-                                <img src="<?= $testimonails['img_8']['url'] ?>"
-                                    alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
-
-                            </div>
-                        </div>
-                        <?php
-                        }
+                    <?php
+                    foreach (get_field("arrow_section") as $testimonails) {
                         ?>
+                    <div class="col-lg" style="border-radius:15px;   height:99px; margin-top:35px 0;">
+                        <div class="d-flex  align-items-center justify-content-around gap-4">
+                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                class="arrow_section" />
 
+                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                class="arrow_section" />
+
+                        </div>
                     </div>
+                    <?php
+                    }
+                    ?>
 
                 </div>
+
             </div>
-
-            <!-- Second Line  -->
-
-            <div class="row">
-                <div class="col-12 col-lg-12">
-                    <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow">
-
-                        <?php
-                        foreach (get_field("arrow_section_second_row") as $testimonails) {
-                            ?>
-                        <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
-                            <div class="d-flex  align-items-center justify-content-around  gap-4">
-                                <img src="<?= $testimonails['img_1']['url'] ?>"
-                                    alt=" <?= $testimonails['img_1']['alt'] ?>" class="arrow_section" />
-
-                                <img src="<?= $testimonails['img_2']['url'] ?>"
-                                    alt=" <?= $testimonails['img_2']['alt'] ?>" class="arrow_section" />
-
-                                <img src="<?= $testimonails['img_3']['url'] ?>"
-                                    alt=" <?= $testimonails['img_3']['alt'] ?>" class="arrow_section" />
-
-                                <img src="<?= $testimonails['img_4']['url'] ?>"
-                                    alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_5']['url'] ?>"
-                                    alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex " />
-
-                                <img src="<?= $testimonails['img_6']['url'] ?>"
-                                    alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_7']['url'] ?>"
-                                    alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
-
-                                <img src="<?= $testimonails['img_8']['url'] ?>"
-                                    alt=" <?= $testimonails['img_8']['alt'] ?>" class="arrow_section" />
-
-                            </div>
-                        </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
+        <!-- Second Line  -->
+
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow">
+
+                    <?php
+                    foreach (get_field("arrow_section_second_row") as $testimonails) {
+                        ?>
+                    <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
+                        <div class="d-flex  align-items-center justify-content-around  gap-4">
+                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                class="arrow_section" />
+
+                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex " />
+
+                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                class="arrow_section" />
+
+                        </div>
+                    </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
 
-        <!-- =---------------------------- -->
+
+    <!-- =---------------------------- -->
 
 
-        <!--  sue-partners-swiper -->
-        <script>
-        let swipersue = new Swiper('.sue-partners-swiper', {
-            slidesPerView: 2.1,
-            grabCursor: true,
-            spaceBetween: 1,
+    <!--  sue-partners-swiper -->
+    <script>
+    let swipersue = new Swiper('.sue-partners-swiper', {
+        slidesPerView: 2.1,
+        grabCursor: true,
+        spaceBetween: 1,
 
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+
+            360: {
+                slidesPerView: 3.2,
+                spaceBetween: 1,
+
             },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+
+            540: {
+                slidesPerView: 4.2,
+                spaceBetween: 1,
+
             },
 
-            breakpoints: {
-
-                360: {
-                    slidesPerView: 3.2,
-                    spaceBetween: 1,
-
-                },
-
-                540: {
-                    slidesPerView: 4.2,
-                    spaceBetween: 1,
-
-                },
-
-                556: {
-                    slidesPerView: 3.9,
+            556: {
+                slidesPerView: 3.9,
 
 
-                    spaceBetween: 1,
-                },
-                992: {
+                spaceBetween: 1,
+            },
+            992: {
 
-                    slidesPerView: 3.9,
-                    spaceBetween: 0,
-                }
-
-
+                slidesPerView: 3.9,
+                spaceBetween: 0,
             }
-        })
-        </script>
+
+
+        }
+    })
+    </script>
 </main>
 
 
