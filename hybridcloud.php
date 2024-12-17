@@ -291,12 +291,18 @@
         border-radius: 15px;
         background-color: #FFF;
         /* max-width: 356px; */
-        height: 277px;
         margin: 15px 0;
         padding: 27px;
         height: 337px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
+
+    .testimonial-card>* {
+        margin: 5px 0;
+    }
 
     .offering-num {
         color: #E94271;
@@ -722,15 +728,15 @@
             <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="testimonial-card">
-                    <div class="d-flex align-items-center gap-2 mbcol>
-                        <span class=" offering-num"><?= $testimonial["offering_num"] ?></span>
+                    <div class="d-flex align-items-center gap-2 mb col">
+                        <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
                         <span class="offering-sub-title"><?= $testimonial["offering_title"] ?></span>
                     </div>
                     <h2 class="offering-main-title"> <?= $testimonial["offering_main_title"] ?></h2>
                     <div class="divider mb-3" style="margin: 15px 1px;"></div>
                     <p class="offering-text"><?= $testimonial["offering_text"] ?></p>
                     <a href="<?= $testimonial["offering_link"]['url'] ?>"
-                        class="d-flex align-items-center justify-content-left gap-3">
+                        class="d-flex align-items-center justify-content-left gap-3" style="margin-top:20px;">
                         <div
                             style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
                             <img src="<?= $testimonial["offering_img"]['url'] ?>"
