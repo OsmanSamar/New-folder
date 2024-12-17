@@ -5,6 +5,19 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+    .articles_page_link::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 21px;
+        opacity: 0.25;
+        /* background: #CBCFDE; */
+        background: green;
+        margin-left: 13px;
+        margin-right: 13px;
+        vertical-align: middle;
+    }
+
     .first-name::after {
         content: "";
         display: inline-block;
@@ -370,6 +383,7 @@
         height: 837px;
         padding: 40px;
         margin-top: 50px;
+        height: 2050px;
     }
 
 
@@ -457,8 +471,32 @@
         line-height: 15.6px
     }
 
+    .why-sue-title {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+    }
 
+    .why-sue-text {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+    }
 
+    .why-sue-text1 {
+        color: #6A7291;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+    }
 
     @media (min-width: 768px) {
 
@@ -500,6 +538,13 @@
 
             max-width: 352px;
         }
+
+
+
+        .cloud-projects {
+            height: 1440px;
+        }
+
 
 
     }
@@ -590,6 +635,10 @@
 
         .lets-talk-gota-question {
             font-size: 35px;
+        }
+
+        .cloud-projects {
+            height: 837px;
         }
 
     }
@@ -986,13 +1035,18 @@
             </div>
 
 
+            <!-- Here -->
             <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
                 <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE;background: #FFF;">
-                        <img src="<?= $testimonial["test-img"]['url'] ?>" alt="<?= $testimonial['test-img']['alt'] ?>"
-                            class="card-img-top " style="height: 213px; border-radius:20px; #6A7291; " />
-                        <div class="card-body" style="border: 1px solid gray;border-radius: 20px;">
+                    <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
+                        <div style="position: relative;">
+                            <img src="<?= $testimonial["test-img"]['url'] ?>"
+                                alt="<?= $testimonial['test-img']['alt'] ?>" class="card-img-top"
+                                style="height: 213px; border-radius: 20px 20px 0 0;" />
+                        </div>
+                        <div class="card-body"
+                            style="border: 1px solid gray; border-top: none; border-radius: 0 0 20px 20px;">
                             <div class="card-title">
                                 <span><?= $testimonial["test_name"] ?></span>
                             </div>
@@ -1007,28 +1061,11 @@
                                     <?= $testimonial["test_type"] ?>
                                 </p>
                             </div>
-                            <!-- <div class="divider mb-3" style="margin: 15px 1px;"></div> -->
-                            <!-- <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center"
-                                        style="width: 30px; height: 30px; border-radius: 8px;background: #274083;">
-                                        <img src="<?= $testimonial["img_btn"]['url'] ?>"
-                                            alt="<?= $testimonial["img_btn"]['alt'] ?>"
-                                            style="width: 12px; height: 18px;" />
-                                    </div>
-                                    <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
-                                        <?= $testimonial["test_link"]['title'] ?>
-                                    </a>
-                                </div>
-                                <img src="<?= $testimonial["knp_img"]['url'] ?>"
-                                    alt="<?= $testimonial["knp_img"]['alt'] ?>" style="width: 63px; height: 24px;" />
-                            </div> -->
                         </div>
-
-                        <div class="d-flex  align-items-center  justify-content-between mt-4" style=" ">
-                            <div class="d-flex align-items-center  gap-2">
+                        <div class="d-flex align-items-center justify-content-between mt-4">
+                            <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px; border-radius: 8px;background: #274083;">
+                                    style="width: 30px; height: 30px; border-radius: 8px; background: #274083;">
                                     <img src="<?= $testimonial["img_btn"]['url'] ?>"
                                         alt="<?= $testimonial["img_btn"]['alt'] ?>"
                                         style="width: 12px; height: 18px;" />
@@ -1045,33 +1082,153 @@
                 <?php } ?>
             </div>
 
-
         </div>
     </div>
 
 
 
-    <div class="container">
+    <div class="container" style="margin-top:150px;">
 
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <span><?= get_field("why_sue_sub_title") ?></span>
-                <span><?= get_field("why_sue_title") ?></span>
-                <span><?= get_field("why_sue_text") ?> </span>
-                <span>Let's talk btn</span>
+            <div class="col-12 col-lg-5 ">
+                <div class="d-flex flex-column  justify-content-center align-items-start gap-5">
+                    <span class="left-btn"><?= get_field("why_sue_sub_title") ?></span>
+                    <span class="why-sue-title"><?= get_field("why_sue_title") ?></span>
+                    <span class="why-sue-text1"><?= get_field("why_sue_text") ?> </span>
+                    <!-- Let's talk btn -->
+                    <div class="d-flex justify-content-between align-items-center gap-2"
+                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
+                        <a href="<?= get_field("why_sue_link")['url'] ?>" target="_blank"
+                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                            <img src="<?= get_field("why_sue_img")['url'] ?>"
+                                alt="<?= get_field("why_sue_img")['alt'] ?>" style="width: 12px; height: 18px;" />
+                            <?= get_field("why_sue_link")['title'] ?>
+                        </a>
+                    </div>
+                </div>
 
             </div>
+            <div class=" col-lg-1"></div>
 
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 mt-5">
 
-                <span><?= get_field("why_sue_first_right_text") ?></span>
-                <span><?= get_field("why_sue_sec_right_text") ?></span>
+                <span class="why-sue-text"><?= get_field("why_sue_first_right_text") ?></span>
+                <span class="why-sue-text"><?= get_field("why_sue_sec_right_text") ?></span>
             </div>
         </div>
     </div>
 
 
 
+    <div class="container" style="margin-top:150px;">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <span class="cloud-projects-title">
+                    <?= get_field("related_hybrid_cloud_articles_title") ?>
+                </span>
+            </div>
+            <div class="col-12 col-lg-6">
+                <a href="<?= get_field("niew_all_our_knowledge_link")['url'] ?>"
+                    class="d-flex justify-content-end align-items-center gap-2 view-all-link" target="_blank">
+                    <div class="view-btn">
+                        <img src="<?= get_field("niew_all_our_knowledge_btn")['url'] ?>"
+                            alt="<?= get_field("niew_all_our_knowledge_btn")['alt'] ?>"
+                            style="width:12px; height:18px; margin:7px 0;" />
+                    </div>
+                    <?= get_field("niew_all_our_knowledge_link")['title'] ?>
+                </a>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
+            <?php foreach (get_field("hybrid_cloud_articles_testimonails") as $testimonial) { ?>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
+                    <img src="<?= $testimonial["articles_img"]['url'] ?>"
+                        alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
+                        style="height: 213px; border-radius:20px; #6A7291; " />
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span><?= $testimonial["articles_date"] ?></span>
+                        </div>
+
+
+                        <div class=" d-flex align-items-center  gap-2 ">
+                            <span class="card-text">
+                                <?= $testimonial["articles_text"] ?>
+                                <!-- Bekijken btn -->
+                                <a href="<?= $testimonial['articles_link']['url'] ?>">
+                                    <img src="<?= $testimonial["articles_btn"]['url'] ?>"
+                                        alt="<?= $testimonial["articles_btn"]['alt'] ?>"
+                                        style="width:4px; height: 8px; margin-left:8px;" />
+                                </a>
+                            </span>
+                        </div>
+
+
+
+
+                        <div class="d-flex justify-content-start align-items-center gap-2">
+                            <p class="industry_title">
+                                <?= $testimonial["articles_author"] ?>
+                            </p>
+                            <p class="industry">
+                                <?= $testimonial["articles_author_name"] ?>
+                            </p>
+                        </div>
+
+
+                        <div class="d-flex justify-content-start align-items-center gap-2" style="flex-wrap: wrap;">
+
+                            <a href="<?= $testimonial['articles_consultancy']['url'] ?>"
+                                class="d-block articles_page_link">
+
+                                <?= $testimonial['articles_consultancy']['title'] ?>
+                            </a>
+
+
+                            <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>"
+                                class="d-block articles_page_link">
+
+                                <?= $testimonial['articales_data_&_ai']['title'] ?>
+                            </a>
+
+
+                            <a href="<?= $testimonial['articales_financieel']['url'] ?> "
+                                class="d-block articles_page_link">
+
+                                <?= $testimonial['articales_financieel']['title'] ?>
+                            </a>
+
+
+
+                            <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
+                                class="d-block articles_page_link">
+
+                                <?= $testimonial['articales_gezondheidszorg']['title'] ?>
+                            </a>
+
+
+                            <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
+
+                                <?= $testimonial['articales_ecss']['title'] ?>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+
+
+    </div>
 
 
 

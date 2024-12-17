@@ -617,7 +617,7 @@
                                 </p>
                             </div>
                             <!-- Bejijken btn -->
-                            <!-- <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center gap-2">
                                     <div class="d-flex align-items-center justify-content-center"
                                         style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
@@ -631,10 +631,10 @@
                                 </div>
                                 <img src="<?= $testimonial["kpn"]['url'] ?>" alt="<?= $testimonial["kpn"]['alt'] ?>"
                                     style="width: 63px; height: 24px;" />
-                            </div> -->
+                            </div>
                         </div>
                         <!-- Bejijken btn -->
-                        <div class="d-flex justify-content-between align-items-center">
+                        <!-- <div class="d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center justify-content-center"
                                     style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
@@ -647,7 +647,7 @@
                             </div>
                             <img src="<?= $testimonial["kpn"]['url'] ?>" alt="<?= $testimonial["kpn"]['alt'] ?>"
                                 style="width: 63px; height: 24px;" />
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <?php } ?>
