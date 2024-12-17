@@ -616,10 +616,11 @@
                                     <?= $testimonial["industry"] ?>
                                 </p>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center">
+                            <!-- Bejijken btn -->
+                            <!-- <div class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center rounded bg-primary"
-                                        style="width: 30px; height: 30px;">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                        style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
                                         <img src="<?= $testimonial["bekijk"]['url'] ?>"
                                             alt="<?= $testimonial["bekijk"]['alt'] ?>"
                                             style="width: 12px; height: 18px;" />
@@ -630,7 +631,22 @@
                                 </div>
                                 <img src="<?= $testimonial["kpn"]['url'] ?>" alt="<?= $testimonial["kpn"]['alt'] ?>"
                                     style="width: 63px; height: 24px;" />
+                            </div> -->
+                        </div>
+                        <!-- Bejijken btn -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                    style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
+                                    <img src="<?= $testimonial["bekijk"]['url'] ?>"
+                                        alt="<?= $testimonial["bekijk"]['alt'] ?>" style="width: 12px; height: 18px;" />
+                                </div>
+                                <a href="<?= $testimonial['bekijk_btn']['url'] ?>" class="text-decoration-none">
+                                    <?= $testimonial["bekijk_btn"]['title'] ?>
+                                </a>
                             </div>
+                            <img src="<?= $testimonial["kpn"]['url'] ?>" alt="<?= $testimonial["kpn"]['alt'] ?>"
+                                style="width: 63px; height: 24px;" />
                         </div>
                     </div>
                 </div>

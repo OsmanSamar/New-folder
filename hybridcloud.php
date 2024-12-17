@@ -51,9 +51,9 @@
     .blue-container {
         border-radius: 40px;
         background: #25325F;
-        height: 412px;
+        height: 471px;
         max-width: 1700px;
-        padding: 47px;
+        padding: 30px;
     }
 
     .hero_blue_block {
@@ -123,6 +123,9 @@
         font-style: normal;
         font-weight: 700;
         line-height: 23.4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .left-text,
@@ -292,8 +295,10 @@
         background-color: #FFF;
         /* max-width: 356px; */
         margin: 15px 0;
-        padding: 27px;
-        height: 337px;
+        /* padding: 27px; */
+        /* height: 337px; */
+        padding: 27px 40px;
+        /* height: 399px; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -357,6 +362,102 @@
         padding: 24px;
 
     }
+
+    .cloud-projects {
+        border-radius: 40px;
+        background: #FFF;
+        max-width: 1700px;
+        height: 837px;
+        padding: 40px;
+        margin-top: 50px;
+    }
+
+
+
+
+    .cloud-projects-title {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+    }
+
+
+    .view-all-link {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px;
+    }
+
+
+    .view-btn {
+        background-color: #E94271;
+        height: 30px;
+        width: 30px;
+        border-radius: 8px;
+        background: #25325F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .card-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 30px;
+        border-radius: 100px;
+        background: #E94271;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.4px;
+        text-align: center;
+        margin: 26px 0px;
+    }
+
+
+    .card-text {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33.6px;
+        width: 264px;
+
+    }
+
+    .industry_title {
+        color: var(--Text, #6A7291);
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px
+    }
+
+
+    .industry {
+        color: var(--Primary-600, #25325F);
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px
+    }
+
+
 
 
     @media (min-width: 768px) {
@@ -429,15 +530,15 @@
 
         }
 
-        .left-text,
+        /* .left-text,
         .right-text {
             width: 504px;
-        }
+        } */
 
-        .title {
+        /* .title {
             width: 504px;
             height: 99px;
-        }
+        } */
 
         .block_blue {
             height: 589px;
@@ -455,13 +556,10 @@
             font-size: 21px;
         }
 
-        .right_col2 {
+        /* .right_col2 {
             width: 546px;
-        }
+        } */
 
-        .left_col2 {
-            width: 546px;
-        }
 
 
         .f-btn-text,
@@ -617,10 +715,11 @@
             foreach (get_field("sue_partner_testimonials") as $sue) {
                 ?>
             <div class="col-auto">
+                <!-- col-auto width: 365px;-->
                 <a href=" <?= $sue['sue_partners_link']['url'] ?>" target="_blank">
                     <div style="border-radius:15px; height:99px; margin:35px 0;">
                         <div class="d-flex flex-row align-items-center justify-content-evenly "
-                            style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width: 365px; height: 61px; ">
+                            style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width:365px ; height: 61px; ">
                             <img src="<?= $sue['sue_partners_img']['url'] ?>"
                                 alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
                                 style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
@@ -728,6 +827,8 @@
             <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="testimonial-card">
+
+
                     <div class="d-flex align-items-center gap-2 mb col">
                         <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
                         <span class="offering-sub-title"><?= $testimonial["offering_title"] ?></span>
@@ -744,6 +845,7 @@
                         </div>
                         <?= $testimonial["offering_link"]['title'] ?>
                     </a>
+
                 </div>
             </div>
             <?php } ?>
@@ -819,10 +921,10 @@
     </div>
 
 
-    <div class="blue-container" style="">
-        <div class="container-let-talk" style="">
+    <div class="blue-container">
+        <div class="container-let-talk">
             <!-- Left Side: Image and Texts -->
-            <div class="left-side-img-text" style="">
+            <div class="left-side-img-text">
                 <img src="<?= get_field('lets_talk_img')['url'] ?>" alt="<?= get_field('lets_talk_img')['alt'] ?>"
                     style="width: 110px;height: 110px; border:15px;">
                 <div>
@@ -862,9 +964,111 @@
 
 
 
+    <div class="cloud-projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <span class="cloud-projects-title">
+                        <?= get_field("cloud_projects_title") ?>
+                    </span>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <a href="<?= get_field("view_all_link")['url'] ?>"
+                        class="d-flex justify-content-end align-items-center gap-2 view-all-link">
+                        <div class="view-btn">
+                            <img src="<?= get_field("view_btn")['url'] ?>" alt="<?= get_field("view_btn")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" />
+                        </div>
+                        <?= get_field("view_all_link")['title'] ?>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
+                <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE;background: #FFF;">
+                        <img src="<?= $testimonial["test-img"]['url'] ?>" alt="<?= $testimonial['test-img']['alt'] ?>"
+                            class="card-img-top " style="height: 213px; border-radius:20px; #6A7291; " />
+                        <div class="card-body" style="border: 1px solid gray;border-radius: 20px;">
+                            <div class="card-title">
+                                <span><?= $testimonial["test_name"] ?></span>
+                            </div>
+                            <p class="card-text">
+                                <?= $testimonial["test_text"] ?>
+                            </p>
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <p class="industry_title">
+                                    <?= $testimonial["text_industry"] ?>
+                                </p>
+                                <p class="industry">
+                                    <?= $testimonial["test_type"] ?>
+                                </p>
+                            </div>
+                            <!-- <div class="divider mb-3" style="margin: 15px 1px;"></div> -->
+                            <!-- <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                        style="width: 30px; height: 30px; border-radius: 8px;background: #274083;">
+                                        <img src="<?= $testimonial["img_btn"]['url'] ?>"
+                                            alt="<?= $testimonial["img_btn"]['alt'] ?>"
+                                            style="width: 12px; height: 18px;" />
+                                    </div>
+                                    <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
+                                        <?= $testimonial["test_link"]['title'] ?>
+                                    </a>
+                                </div>
+                                <img src="<?= $testimonial["knp_img"]['url'] ?>"
+                                    alt="<?= $testimonial["knp_img"]['alt'] ?>" style="width: 63px; height: 24px;" />
+                            </div> -->
+                        </div>
+
+                        <div class="d-flex  align-items-center  justify-content-between mt-4" style=" ">
+                            <div class="d-flex align-items-center  gap-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                    style="width: 30px; height: 30px; border-radius: 8px;background: #274083;">
+                                    <img src="<?= $testimonial["img_btn"]['url'] ?>"
+                                        alt="<?= $testimonial["img_btn"]['alt'] ?>"
+                                        style="width: 12px; height: 18px;" />
+                                </div>
+                                <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
+                                    <?= $testimonial["test_link"]['title'] ?>
+                                </a>
+                            </div>
+                            <img src="<?= $testimonial["knp_img"]['url'] ?>" alt="<?= $testimonial["knp_img"]['alt'] ?>"
+                                style="width: 63px; height: 24px;" />
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+
+
+        </div>
+    </div>
 
 
 
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <span><?= get_field("why_sue_sub_title") ?></span>
+                <span><?= get_field("why_sue_title") ?></span>
+                <span><?= get_field("why_sue_text") ?> </span>
+                <span>Let's talk btn</span>
+
+            </div>
+
+            <div class="col-12 col-lg-6">
+
+                <span><?= get_field("why_sue_first_right_text") ?></span>
+                <span><?= get_field("why_sue_sec_right_text") ?></span>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -902,7 +1106,13 @@
         breakpoints: {
 
             360: {
-                slidesPerView: 1.6,
+                slidesPerView: 1.5,
+                spaceBetween: 1,
+
+            },
+
+            412: {
+                slidesPerView: 1.7,
                 spaceBetween: 1,
 
             },
@@ -921,7 +1131,7 @@
             },
             992: {
 
-                slidesPerView: 2.2,
+                slidesPerView: 3,
                 spaceBetween: 1,
             },
             1024: {
@@ -954,7 +1164,12 @@
         breakpoints: {
 
             360: {
-                slidesPerView: 1.4,
+                slidesPerView: 1.3,
+                spaceBetween: 1,
+
+            },
+            412: {
+                slidesPerView: 1.5,
                 spaceBetween: 1,
 
             },
@@ -979,7 +1194,7 @@
             1024: {
 
                 slidesPerView: 3,
-                spaceBetween: 0,
+                spaceBetween: 1,
             }
 
 
