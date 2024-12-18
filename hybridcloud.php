@@ -5,6 +5,15 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+    b,
+    strong {
+        color: #e94271;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 150%;
+    }
+
     .articles_page_link::after {
         content: "";
         display: inline-block;
@@ -279,7 +288,11 @@
         gap: 10px;
         text-align: left;
         margin-top: 20px;
+
     }
+
+
+
 
 
 
@@ -381,7 +394,7 @@
         background: #FFF;
         max-width: 1700px;
         height: 837px;
-        padding: 40px;
+        padding: 16px;
         margin-top: 50px;
         height: 2050px;
     }
@@ -392,7 +405,7 @@
     .cloud-projects-title {
         color: #25325F;
         font-family: Manrope;
-        font-size: 26px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
         line-height: 39px;
@@ -504,7 +517,7 @@
         background: #25325F;
         /* margin: 150px auto; */
         max-width: 1700px;
-        height: 1400px;
+        height: 1471px;
         margin: 150px auto 100px;
 
     }
@@ -553,6 +566,12 @@
 
 
 
+    .arrow_section {
+
+        width: 57.851px;
+        height: 92.371px;
+        flex-shrink: 0;
+    }
 
 
 
@@ -642,21 +661,9 @@
 
         }
 
-        /* .left-text,
-        .right-text {
-            width: 504px;
-        } */
-
-        /* .title {
-            width: 504px;
-            height: 99px;
-        } */
-
         .block_blue {
             height: 589px;
         }
-
-
 
 
         .btn-container {
@@ -667,10 +674,6 @@
             width: 534px;
             font-size: 21px;
         }
-
-        /* .right_col2 {
-            width: 546px;
-        } */
 
 
 
@@ -739,6 +742,27 @@
             width: 504px;
         }
 
+        .second-arrow {
+            margin-top: 70px
+        }
+
+        .arrow_section {
+            width: 87.239px;
+            height: 139.295px;
+            flex-shrink: 0;
+            object-fit: cover;
+            margin-right: 60px;
+        }
+
+
+        .cloud-projects-title {
+            font-size: 26px;
+        }
+
+        b,
+        strong {
+            font-size: 26px;
+        }
 
     }
     </style>
@@ -889,7 +913,7 @@
         </div>
     </div>
 
-    <!-- The Blue Block With Img& Text -->
+    <!-- The Blue Block With Img & Text -->
     <div class="block_blue">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5  ">
@@ -913,6 +937,17 @@
                         <?= get_field("text_on_blue_block") ?>
                     </span>
 
+                    <!-- <a href="<?= get_field("read_the_full_story_link")['url'] ?>" class="read-the-full-story-link ">
+                        <div
+                            style="background-color:white;width: 30px;height: 30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                            <img src="<?= get_field("read_the_full_story_img")['url'] ?>"
+                                alt="<?= get_field("read_the_full_story_img")['alt'] ?>"
+                                style="width: 12px;height: 18px;" />
+                        </div>
+                        <?= get_field("read_the_full_story_link")['title'] ?>
+                    </a> -->
+
+
                     <a href="<?= get_field("read_the_full_story_link")['url'] ?>" class="read-the-full-story-link ">
                         <div
                             style="background-color:white;width: 30px;height: 30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
@@ -922,6 +957,7 @@
                         </div>
                         <?= get_field("read_the_full_story_link")['title'] ?>
                     </a>
+
                 </div>
             </div>
 
@@ -1112,16 +1148,16 @@
     </div>
 
 
-
+    <!--cloud-projects Section  -->
     <div class="cloud-projects">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-6 col-lg-6">
                     <span class="cloud-projects-title">
                         <?= get_field("cloud_projects_title") ?>
                     </span>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-6 col-lg-6">
                     <a href="<?= get_field("view_all_link")['url'] ?>"
                         class="d-flex justify-content-end align-items-center gap-2 view-all-link">
                         <div class="view-btn">
@@ -1186,7 +1222,7 @@
     </div>
 
 
-
+    <!--Why-Sue  Section -->
     <div class="container" style="margin-top:150px;">
 
         <div class="row">
@@ -1219,15 +1255,17 @@
     </div>
 
 
-
+    <!-- Related Hybird Cloud articles -->
     <div class="container" style="margin-top:150px;">
         <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-6 col-lg-6">
+
                 <span class="cloud-projects-title">
                     <?= get_field("related_hybrid_cloud_articles_title") ?>
                 </span>
+
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-6 col-lg-6">
                 <a href="<?= get_field("niew_all_our_knowledge_link")['url'] ?>"
                     class="d-flex justify-content-end align-items-center gap-2 view-all-link" target="_blank">
                     <div class="view-btn">
@@ -1356,7 +1394,7 @@
                         <div class="d-block d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
                         </div>
 
-                        <div style="margin-top:5px;">
+                        <div style="margin-top:10px;">
                             <!-- E_mail -->
                             <div class="d-flex flex-row flex-lg-column gap-2">
                                 <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
@@ -1619,31 +1657,56 @@
                     </div>
                 </div>
             </div>
+
             <!-- Gap between -->
             <div class="d-none d-lg-flex col-lg-2"></div>
+
+
+            <!-- Newsletters -->
             <!-- Newsletters -->
             <div class="col-12 col-lg-4">
-                <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
-                    <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
+                <div>
+                    <!-- style="display:flex;flex-direction: column; align-items: flex-start;  " -->
+                    <div class="d-flex flex-column newsletter-container gap-2">
                         <!-- Logo -->
                         <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
                                 style="height: 43px;width: 88px;">
                         </a>
 
-                        <span class="newsletter_text">
+                        <span class="newsletter_text" style="margin:20px 0;">
                             <?= get_field("newsletter_text") ?>
                         </span>
+
                         <!-- <div>
-                            <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="false" ]')) ?>
-                        </div> -->
-                        <div class="email-field-container">
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                            <button type="submit" class="submit-btn">Submit</button>
+                           <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="false" ]')) ?>
+                          </div> -->
+                        <div class="email-field-container" style="margin:20px 0;">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                                style="margin-left:2px;">
+                            <!-- <button type="submit" class="submit-btn">Submit</button> -->
+
+
+                            <!-- Let's talk btn -->
+                            <div class="d-flex justify-content-between align-items-center gap-2 submit-btn"
+                                style="height:39.261px;padding: 12px 15px; border-radius: 8px;background: #274083 !important;">
+                                <a href="<?= get_field("submit_link")['url'] ?>" target="_blank"
+                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px;   justify-content: center; text-decoration: none; ">
+                                    <img src="<?= get_field("submit_img")['url'] ?>"
+                                        alt="<?= get_field("submit_img")['alt'] ?>"
+                                        style="width: 12px; height: 18px;" />
+                                    <?= get_field("submit_link")['title'] ?>
+                                </a>
+                            </div>
+
+
+
+
+
                         </div>
 
                         <span
-                            style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px">
+                            style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px; margin:20px 0;">
                             <?= get_field("privacy_statement") ?>
                         </span>
                     </div>
@@ -1703,13 +1766,12 @@
         </div>
 
         <!-- Second Line  -->
-
         <div class="row">
             <div class="col-12 col-lg-12">
                 <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow">
 
                     <?php
-                    foreach (get_field("arrow_section_second_row") as $testimonails) {
+                    foreach (get_field("arrow_section_secondm_row") as $testimonails) {
                         ?>
                     <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
                         <div class="d-flex  align-items-center justify-content-around  gap-4">
