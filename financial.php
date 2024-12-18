@@ -6,13 +6,20 @@
 <main class="financial flex-grow-1">
 
     <style>
+    .container-max-width {
+        border-radius: 30px;
+        max-width: 1700px;
+        height: 581px;
+        margin: 150px auto 100px;
+    }
+
     b,
     strong {
         color: #e94271;
-        font-family: Sora;
-        font-size: 16px;
-        font-style: normal;
-        line-height: 150%;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
     }
 
     .hero_white_block {
@@ -124,14 +131,9 @@
     .block_blue {
         border-radius: 40px;
         background: #274083;
-        /* margin: 80px auto;
-        width: 100%; */
         max-width: 1700px;
-        /* position: relative;
-        overflow: hidden;
-        padding: 20px;
-        display: flex; */
         flex-direction: column;
+        margin: 150px auto 100px;
     }
 
 
@@ -202,6 +204,7 @@
         height: 471px;
         max-width: 1700px;
         padding: 30px;
+        margin: 150px auto 100px;
     }
 
 
@@ -239,20 +242,23 @@
     @media (min-width: 992px) {
         .hero_white_block {
             width: 531px;
-            position: absolute;
-            bottom: 0;
+            /* position: absolute;
+            bottom: -71px; */
+            position: relative;
+            bottom: 429px;
             left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: left;
             padding: 30px;
+            height: 581.608px;
 
         }
 
         b,
         strong {
-            font-size: 26px;
+            font-size: inherit;
         }
 
 
@@ -277,9 +283,12 @@
 
     }
     </style>
-    <div class="" style="margin-top:190px; position:relative; max-width: 1700px; overflow: hidden;">
+
+    <!--  -->
+
+    <div class="container-max-width">
         <img src="<?= get_field("financial_hero_img")['url'] ?>" alt="<?= get_field("financial_hero_img")['title'] ?>"
-            class="" style="width: 100%; height: 581px; border-radius: 40px; object-fit: cover;" />
+            class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
         <div class="hero_white_block">
             <div class="container inner_block">
                 <div class="d-flex align-items-center justify-content-between gap-2">
@@ -311,7 +320,11 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+
+
 
 
     <!--Bijdragers Repeater  Swiper On Small -->

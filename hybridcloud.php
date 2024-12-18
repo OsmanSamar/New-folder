@@ -5,6 +5,14 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+    .container-max-width {
+        border-radius: 30px;
+        max-width: 1700px;
+        height: 581px;
+        margin: 150px auto 100px;
+
+    }
+
     b,
     strong {
         color: #e94271;
@@ -76,6 +84,7 @@
         height: 471px;
         max-width: 1700px;
         padding: 30px;
+        margin: 150px auto 100px;
     }
 
     .hero_blue_block {
@@ -197,14 +206,9 @@
     .block_blue {
         border-radius: 40px;
         background: #274083;
-        /* margin: 80px auto;
-        width: 100%; */
         max-width: 1700px;
-        /* position: relative;
-        overflow: hidden;
-        padding: 20px;
-        display: flex; */
-        flex-direction: column;
+        /* flex-direction: column; */
+        margin: 150px auto 100px;
     }
 
 
@@ -397,6 +401,7 @@
         padding: 16px;
         margin-top: 50px;
         height: 2050px;
+        margin: 150px auto 100px;
     }
 
 
@@ -409,6 +414,8 @@
         font-style: normal;
         font-weight: 700;
         line-height: 39px;
+
+
     }
 
 
@@ -650,14 +657,16 @@
 
         .hero_blue_block {
             width: 531px;
-            position: absolute;
-            bottom: 0;
+            /* position: absolute; */
+            position: relative;
+            bottom: 430px;
             left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: left;
             padding: 30px;
+            height: 584.608px;
 
         }
 
@@ -766,11 +775,12 @@
 
     }
     </style>
-    <div class="" style="margin-top:190px; position:relative; max-width: 1700px; overflow: hidden;">
+    <div class="container-max-width">
+
         <img src="<?= get_field("hybridcloud_hero")['url'] ?>" alt="<?= get_field("hybridcloud_hero")['title'] ?>"
             class="" style="width: 100%; height: 581px; border-radius: 40px; object-fit: cover;" />
-        <div class="hero_blue_block">
-            <div class="inner_block">
+        <div class=" hero_blue_block">
+            <div class="inner_block container">
                 <div class="d-flex align-items-center justify-content-between gap-2">
                     <div class="d-flex align-items-center justify-content-center rounded "
                         style="width: 30px; height: 30px; background-color:#FFF;">
@@ -800,6 +810,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 
@@ -820,7 +831,7 @@
                         <?= get_field("left_text") ?></span>
                 </div>
             </div>
-            <div class="col-lg-1"></div>
+            <div class="col-lg-1 d-md-none d-none"></div>
 
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col">
@@ -1514,7 +1525,7 @@
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ">
                                         <div class="d-flex flex-column align-items-flex-start ">
-                                            <span
+                                            ack <span
                                                 style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
                                                 <?= get_field("e_mail") ?>
                                             </span>

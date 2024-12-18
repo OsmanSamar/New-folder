@@ -6,6 +6,13 @@
 <main class="consultancy flex-grow-1">
 
     <style>
+    .container-max-width {
+        border-radius: 30px;
+        max-width: 1700px;
+        height: 581px;
+        margin: 150px auto 170px;
+    }
+
     .testimonial-card {
         border-radius: 15px;
         background-color: #FFF;
@@ -72,7 +79,9 @@
         align-items: center;
         justify-content: center;
         padding: 30px;
-        margin-top: -350px;
+        /* margin-top: -350px; */
+        /* margin-top: -152px; */
+        margin-top: -450px;
 
     }
 
@@ -400,14 +409,18 @@
     @media (min-width: 992px) {
         .hero_blue_block {
             width: 531px;
-            position: absolute;
-            bottom: 0;
+            /* position: absolute;
+            bottom: 0; */
+            position: relative;
+            bottom: 582px;
             left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: left;
             padding: 30px;
+            height: 581.608px;
+            margin-top: unset;
 
         }
 
@@ -495,17 +508,17 @@
 
     }
     </style>
-    <div class="" style="margin-top:190px; position:relative; max-width: 1700px; overflow: hidden;">
+    <div class="container-max-width">
 
         <!-- <a href="#" style="position: relative; display: inline-block;" class="">
             <img src="<?= get_field("consultancy_hero")['url'] ?>" alt="<?= get_field("consultancy_hero")['title'] ?>"
                 class="" style="width: 100%; height: 581px; border-radius: 40px; object-fit: cover;" />
         </a> -->
         <img src="<?= get_field("consultancy_hero")['url'] ?>" alt="<?= get_field("consultancy_hero")['title'] ?>"
-            class="" style="width: 100%; height: 581px; border-radius: 40px; object-fit: cover;" />
+            class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
 
         <div class="hero_blue_block">
-            <div class="inner_block">
+            <div class="container inner_block">
 
                 <div style="width:192px;height:100px;">
                     <a href="#">
