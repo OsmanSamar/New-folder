@@ -5,6 +5,93 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    button.btn {
+        width: 12rem;
+        height: auto;
+    }
+
+    button.btn .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        border-radius: 8px;
+        background-color: #274083;
+        height: 30px;
+        width: 30px;
+        margin: 10px 0;
+
+    }
+
+
+
+    button.btn .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+
+    button.btn .circle .icon.arrow::before {
+        position: absolute;
+        content: '';
+        top: -0.25rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    button.btn .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #282936;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    button:hover .circle {
+        width: 100%;
+    }
+
+    button:hover .circle .icon.arrow {
+        background: #fff;
+        -webkit-transform: translate(1rem, 0);
+        transform: translate(1rem, 0);
+    }
+
+    button:hover .button-text {
+        color: #fff;
+    }
+
+
+    /*  */
     .test-main-title {
         color: #25325F;
         font-size: 18px;
@@ -1816,7 +1903,7 @@
                                         </span>
                                     </div>
                                     <div class="d-flex flex-row align-items-center  gap-3">
-                                        <a href="#"
+                                        <!-- <a href="#"
                                             style="border-radius:8px; background-color:#274083; height:30px; width:30px; margin:10px 0;"
                                             class="d-flex justify-content-center align-items-center" href="#">
 
@@ -1826,7 +1913,25 @@
                                         </a>
                                         <span
                                             style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
-                                            more</span>
+                                            more</span> -->
+
+                                        <button class="btn">
+                                            <span class="circle">
+                                                <a href="#"
+                                                    class="d-flex justify-content-center align-items-center  arrow"
+                                                    href="#">
+
+                                                    <img src="<?= $testimonails['link']['url'] ?>"
+                                                        alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                                        style="width:12px; height: 18px; margin:7px 0;" />
+                                                </a>
+                                            </span>
+                                            <span
+                                                style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
+                                                more</span>
+                                        </button>
+
+
                                     </div>
                                 </div>
                                 <?php
