@@ -16,10 +16,77 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--  -->
     <style>
+    /* Navbar dropdown styles */
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        top: -100%;
+        /* Start hidden above the page */
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
 
-      
-        </style>
-    
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        top: 100%;
+        /* Drop down from the navbar */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown-menu .dropdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+        /* Spacing between elements */
+        border-right: 1px solid #ddd;
+        /* Divider between items */
+        padding: 15px;
+        min-width: 150px;
+    }
+
+    .dropdown-menu .dropdown-item:last-child {
+        border-right: none;
+    }
+
+    .dropdown-menu .dropdown-item h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .dropdown-menu .dropdown-item p {
+        font-size: 14px;
+        margin: 0;
+        color: #666;
+    }
+
+    .dropdown-menu .dropdown-item button {
+        background-color: #E94271;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .dropdown-menu .dropdown-item button:hover {
+        background-color: #c0365a;
+    }
+
+    /* Add spacing between dropdown items */
+    .dropdown-menu {
+        gap: 15px;
+        padding: 20px;
+    }
+    </style>
+
 </head>
 
 <body style="background:#EDF3F4;" <?php body_class(); ?>>
@@ -27,7 +94,7 @@
 
     <header class="header" style="margin-top:50px">
         <!-- Navbar -->
-       
+
         <nav class="navbar navbar-expand-lg  fixed-top" style="background: #EDF3F4; top:26px;">
             <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
@@ -364,7 +431,7 @@
                         </ul>
                     </li>
 
-                     <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false"
                             style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
