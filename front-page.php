@@ -2093,6 +2093,36 @@
                         </div>
                     </div>
 
+
+
+                    <!-- Here for test on md  -->
+
+                    <!-- Combined Items for Medium Screens -->
+                    <div class="col-md-12 d-lg-none">
+                        <div class="row d-flex flex-wrap gap-4">
+                            <?php
+                            $all_testimonials = array_merge(get_field("testimonails_section"), get_field("testimonails_section_right"));
+                            usort($all_testimonials, function ($a, $b) {
+                                return $a["num"] <=> $b["num"];
+                            });
+                            foreach ($all_testimonials as $testimonial) {
+                                ?>
+                            <div class="col-md-3 d-flex flex-column align-items-center justify-content-start">
+                                <div class="testimonial-item">
+                                    <span class="testimonial-num"><?= $testimonial["num"] ?></span>
+                                    <span class="testimonial-title"><?= $testimonial["title"] ?></span>
+                                    <span class="testimonial-text"><?= $testimonial["text"] ?></span>
+                                    <a href="#" class="btn btn-primary">Read more</a>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+                    <!-- End of  test on md -->
+
                     <!-- Left columns Repeater  Swiper -->
                     <div class="left-columns-repeater-swiper" style="">
                         <div class="position-relative d-flex d-md-none d-lg-none align-items-center  ">
