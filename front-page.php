@@ -1358,11 +1358,105 @@
                 style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px; height:577px;">
                 <div class="container">
                     <div class="row  blue-container align-items-center justify-content-between" style="padding: 20px;">
+
+
+                        <!-- new test -->
+
+                        <!-- Swiper Container -->
+                        <div class="swiper swiper-container" style="flex-grow:1; --swiper-pagination-color: #E94271;">
+                            <div class="swiper-wrapper">
+
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <div class="d-flex flex-row align-items-center justify-content-between w-100">
+                                        <!-- Left Section -->
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="swiper-pagination2"
+                                                style="position:relative; z-index:1; transform: translateY(50%);"></div>
+                                            <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
+                                                <?= get_field("trending_btn")['title'] ?>
+                                            </a>
+                                        </div>
+                                        <!-- Slide Content -->
+                                        <div class="text-swiper">
+                                            <span class="slide-text">
+                                                Nulla facilisi. Duis at <span
+                                                    style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                posuere, cursus justo vitae, <span
+                                                    style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                dui fusce euismod rhoncus1
+                                            </span>
+                                        </div>
+                                        <!-- Right Section -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="#"
+                                                style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                                    alt="<?= get_field('arrow_btn')['title'] ?>"
+                                                    style="width:12px; height:18px; object-fit:cover;">
+                                            </a>
+                                            <span
+                                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                                more</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Repeat for other slides -->
+                                <div class="swiper-slide">
+                                    <div class="d-flex flex-row align-items-center justify-content-between w-100">
+                                        <!-- Left Section -->
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div class="swiper-pagination2"
+                                                style="position:relative; z-index:1; transform: translateY(50%);"></div>
+                                            <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
+                                                <?= get_field("trending_btn")['title'] ?>
+                                            </a>
+                                        </div>
+                                        <!-- Slide Content -->
+                                        <div class="text-swiper">
+                                            <span class="slide-text">
+                                                Nulla facilisi. Duis at <span
+                                                    style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                posuere, cursus justo vitae, <span
+                                                    style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
+                                                dui fusce euismod rhoncus2
+                                            </span>
+                                        </div>
+                                        <!-- Right Section -->
+                                        <div class="d-flex align-items-center gap-2">
+                                            <a href="#"
+                                                style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                                    alt="<?= get_field('arrow_btn')['title'] ?>"
+                                                    style="width:12px; height:18px; object-fit:cover;">
+                                            </a>
+                                            <span
+                                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                                more</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- End of test -->
+
+
+
+
+
                         <!-- Left Section: Pagination, Button, Date, and Text -->
-                        <div
+                        <!-- <div
                             class="d-flex flex-lg-row flex-row align-items-center gap-3 col-lg-10 col-md-9 col-sm-12 col-10 d-none d-lg-flex">
 
-                            <!-- Pagination -->
+                            Pagination
                             <div class=" col-md-2 col-lg-1 d-none d-md-block d-lg-block ml-2">
                                 <div class="swiper-pagination2"
                                     style="position:relative;transform: translateY(50%);  z-index:1;">
@@ -1370,7 +1464,7 @@
                             </div>
 
 
-                            <!-- Button -->
+                            Button
                             <div class="col-2 col-lg-1">
                                 <div style="position: relative; margin:0 ">
 
@@ -1382,16 +1476,16 @@
                             </div>
 
 
-                            <!-- Swiper Container -->
+                            Swiper Container
                             <div class="text-swiper col-8 col-lg-6">
                                 <div class="swiper swiper-container"
                                     style="flex-grow:1; --swiper-pagination-color: #E94271;">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <!-- <span class="slide-date d-none d-lg-block"
+                                                <span class="slide-date d-none d-lg-block"
                                                     style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">12.12.2024
-                                                </span> -->
+                                                </span>
                                                 <span class="slide-text">
                                                     Nulla facilisi. Duis at <span
                                                         style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
@@ -1405,9 +1499,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <!-- <span class="slide-date d-none d-lg-block"
+                                                <span class="slide-date d-none d-lg-block"
                                                     style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">14.12.2024
-                                                </span> -->
+                                                </span>
                                                 <span class="slide-text">
                                                     Nulla facilisi. Duis at <span
                                                         style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
@@ -1421,9 +1515,9 @@
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-row align-items-center justify-content-between">
-                                                <!-- <span class="slide-date d-none d-lg-block"
+                                                <span class="slide-date d-none d-lg-block"
                                                     style="color: var(--Neutral-400, #9AA0B7);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 700;line-height:23.4px">16.12.2024
-                                                </span> -->
+                                                </span>
                                                 <span class="slide-text">
                                                     Nulla facilisi. Duis at <span
                                                         style="color:#E94271; font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
@@ -1438,10 +1532,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Right Section: Arrow Button -->
-                        <div
+                        <!-- <div
                             class="col-lg-2 col-md-3 col-sm-12 col-2 d-flex align-items-center justify-content-end gap-3 d-none d-lg-flex">
                             <a href="#" style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                 class="d-flex justify-content-center align-items-center">
@@ -1453,7 +1547,7 @@
                                 style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
                                 more</span>
 
-                        </div>
+                        </div> -->
 
                         <!-- Small Screen -->
                         <div class="d-flex flex-column align-items-center justify-content-center d-lg-none gap-4">
