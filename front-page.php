@@ -2961,6 +2961,7 @@
             </div> <!-- End of the Container -->
 
 
+
             <!-- Form Section   container  -->
             <div class="form_section">
                 <!-- container -->
@@ -2969,18 +2970,16 @@
                         <div class=" col-12 col-lg-3">
                             <div class="left-container">
                                 <div class="left-content">
-                                    <img src="<?= get_field("left_img")['url'] ?>"
-                                        alt="<?= get_field("left_img")['alt'] ?>"
+                                    <img src="<?= get_field("form_img")['url'] ?>"
+                                        alt="<?= get_field("form_img")['alt'] ?>"
                                         style="max-width:72px; height:72px; border-radius:15px; object-fit:cover" />
                                     <div class="d-flex flex-column">
-                                        <span class="first-name" style=" ">Firstname:</span>
-
+                                        <span class="first-name" style=" "><?= get_field("first_name") ?></span>
                                         <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">Let's
-                                            talk!
+                                            style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">
+                                            <?= get_field("lets_talk") ?>
                                         </span>
                                     </div>
-
                                     <div class="d-none d-lg-block"
                                         style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
                                     </div>
@@ -2988,28 +2987,30 @@
                                 <div class="d-block d-lg-none"
                                     style=" border-bottom: 1px solid  white; margin:30px 0; ">
                                 </div>
-
-
-
-
                                 <div style=" margin-left:; margin-top:10px;">
                                     <!-- E_mail -->
-                                    <div class="d-flex flex-row flex-lg-column gap-3">
-                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
-                                            <a href="#"
+                                    <div class="d-flex flex-row flex-lg-column gap-">
+                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                            <!-- <a href="#"
                                                 style="background:#E94271;height:30px;width:30px;border-radius:8px;"
                                                 class="d-flex justify-content-center align-items-center">
                                                 <img src="<?= get_field("sue_insights_link")['url'] ?>"
                                                     alt="<?= get_field("sue_insights_link")['alt'] ?>"
                                                     style="width:12px; height:18px; margin:7px 0;" />
+                                            </a> -->
+                                            <a href="#"
+                                                style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_field("tel_link")['url'] ?>"
+                                                    alt="<?= get_field("tel_link")['alt'] ?>"
+                                                    style="width:12px; height:18px; margin:7px 0;color:black" />
                                             </a>
                                             <span
                                                 style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
                                             </span>
                                         </div>
-
                                         <!-- contact nummer -->
-                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
                                             <a href="#"
                                                 style="background-color:white;height:30px;width:30px; border-radius: 8px;"
                                                 class="d-flex justify-content-center align-items-center">
@@ -3024,22 +3025,37 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <!-- Right column Contact Form -->
                         <div class="col-12 col-lg-9">
-                            <div class="row">
+                            <div class="row" style="margin-top:67px;">
                                 <div class="col-lg-4">
-                                    <h2>titel</h2>
+                                    <h2
+                                        style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                                        Are you ready to take the <span
+                                            style="color: var(--Secondary-600, #E94271);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%;">next
+                                            step</span>?</h2>
                                 </div>
-                                <div class="col-lg-7 offset-lg-1">
+                                <div class="col-lg-7 offset-lg-1"
+                                    style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
                                     porttitor vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
                                 </div>
                             </div>
-                            <div style=" margin:50px 12px">
+                            <div style=" margin:">
                                 <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="false"]')) ?>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-8" style="">
+                                    <span
+                                        style="color:#9AA0B7;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px ">
+                                        By sending this form you indicate that you have taken note of our  <span
+                                            style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%;">privacy
+                                            statement. </span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -3047,6 +3063,16 @@
 
             </div>
             <!-- End of Form Section -->
+
+
+
+
+
+
+
+
+
+
 
             <!-- New Section -->
             <div class="container">

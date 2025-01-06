@@ -52,7 +52,6 @@
 .gform-label,
 .gfield_label,
 .name-label {
-  // color: #fff;
   color: white !important;
   font-family: Manrope;
   font-size: 13px;
@@ -61,42 +60,33 @@
   line-height: 180%;
 }
 
-// Btn
+// Btn Replace
 .gform-theme--foundation .gform_footer,
 .gform-theme--foundation .gform_page_footer {
   justify-content: end;
 }
-
-.gform-theme--foundation .gform_button button {
+// BTN
+.gform_wrapper .gform_footer .gform_button {
+  padding: 12px 15px !important;
+  align-items: center;
+  border-radius: 8px !important;
+  background-color: #e94271 !important;
+  color: #fff !important;
+  border: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
 }
-.gform_footer,
-.gform_button button {
-  // background-color: #e94271 !important;
-  // text-align: right;
+
+.gform_heading .gform_required_legend {
+  display: flex !important;
+  justify-content: end !important;
 }
 
-// .email-field-container {
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-// }
-
-// .email-field-container input[type="email"] {
-//   width: 100%;
-//   padding-right: 100px;
-//   box-sizing: border-box;
-// }
-
-// .email-field-container .submit-btn {
-//   position: absolute;
-//   right: 0;
-//   height: 100%;
-//   border: none;
-//   background-color: #e94271;
-//   color: white;
-//   padding: 0 20px;
-//   cursor: pointer;
-//   border-radius: 0 5px 5px 0;
+// .comments-class {
+//   border-radius: 8px !important;
+//   background-color: #6a1111 !important;
+//   color: red !important;
+//   font-size: 14px !important;
 // }
 
 .email-field-container {
@@ -128,20 +118,3 @@
   align-items: center;
   justify-content: center;
 }
-
-// .email-field-container2 .submit-btn {
-//   position: absolute;
-//   right: 69px !important;
-//   top: 6px;
-//   bottom: 0;
-//   height: 36px;
-//   border: none;
-//   background-color: #274083 !important;
-//   color: white;
-//   padding: 12px 15px;
-//   cursor: pointer;
-//   border-radius: 4px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
