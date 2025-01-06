@@ -227,7 +227,7 @@
                 </ul> -->
 
                 <!-- Arrow and Let's Talk on LG Screen-->
-                <div class="d-none d-lg-flex  align-items-center justify-content-between"
+                <div class="d-none d-md-flex d-lg-flex  align-items-center justify-content-between"
                     style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
                     <a href="<?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
                         <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
