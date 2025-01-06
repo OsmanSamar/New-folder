@@ -614,7 +614,7 @@
         width: 100%;
         max-width: 1700px;
         overflow: hidden;
-        margin: 70px auto;
+        margin: 100px auto;
     }
 
     .background-image {
@@ -791,7 +791,8 @@
 
 
         .background-image {
-            height: auto;
+            /* height: auto; */
+            height: 444px;
         }
 
         .custom-number.active .custom-title {
@@ -844,14 +845,15 @@
         }
 
         .overlay2 {
-            position: relative;
-            top: 50%;
+            /* position: relative; */
+            position: absolute;
+            /* top: 50%; */
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-90%, 28%);
             background-color: #FFF;
             border-radius: 15px;
             width: 90%;
-            max-width: 400px;
+            max-width: 389px;
             padding: 32px;
             display: flex;
             flex-direction: column;
@@ -1958,7 +1960,7 @@
             </div>
 
         </div>
-        <!-- Here new -->
+
 
         <!-- The blue block container -->
         <div class="first-blue-block" style="">
@@ -2766,7 +2768,7 @@
             <!-- New Section -->
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-6 ">
+                    <div class="col-12 col-md-6 col-lg-6 ">
                         <!-- First Row margin-top:150px; and newsletter-container also-->
                         <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                             <span class="information_title" style="">
@@ -2779,11 +2781,11 @@
                             </span>
                         </div>
 
-                        <!-- Second Row -->
+                        <!-- Second Row  on Small Screen-->
                         <div class="row" style="margin:50px 0;">
-                            <div class="col-lg-4 ">
+                            <div class="col-lg-4  col-md-4">
                                 <!-- accordion -->
-                                <div class=" d-block d-lg-none" id="accordionExample">
+                                <div class=" d-block d-md-none d-lg-none" id="accordionExample">
                                     <!-- First Item -->
                                     <div class="accordion-item">
                                         <div class="d-flex flex-row align-items-center justify-content-between gap-3">
@@ -2858,17 +2860,6 @@
                                         <div id="collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
-
-                                                <!-- <div class="d-flex flex-column align-items-flex-start ">
-                                                    <span
-                                                        style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
-                                                        <?= get_field("kvk") ?>
-                                                        <span
-                                                            style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                                            <?= get_field("kvk_num") ?>
-                                                        </span>
-                                                    </span>
-                                                </div> -->
                                                 <div class="d-flex flex-column align-items-flex-start ">
                                                     <span
                                                         style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
@@ -2933,7 +2924,7 @@
                                     </div>
                                 </div>
                                 <!-- LG -->
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                                <div class="d-none d-md-flex d-lg-flex flex-column align-items-flex-start gap-2">
                                     <span
                                         style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
                                         <?= get_field("contact_title") ?></span>
@@ -2943,8 +2934,9 @@
                                     <span> <?= get_field("tele") ?></span>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="d-none d-md-flex d-lg-flex flex-column align-items-flex-start gap-2">
                                     <span
                                         style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
                                         <?= get_field("address_title") ?></span>
@@ -2954,8 +2946,8 @@
                                     <span> <?= get_field("city") ?></span>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="d-none d-md-flex d-lg-flex flex-column align-items-flex-start gap-2">
                                     <span
                                         style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
                                         <?= get_field("information") ?>
@@ -2979,9 +2971,9 @@
                         </div>
                     </div>
                     <!-- Gap between -->
-                    <div class="d-none d-lg-flex col-lg-2"></div>
+                    <div class="d-none  d-lg-flex  col-lg-2"></div>
                     <!-- Newsletters -->
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-md-2 col-lg-4">
                         <div style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                             <div class="d-flex flex-column align-items-flex-start gap-2 newsletter-container">
                                 <!-- Logo -->
