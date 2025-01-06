@@ -5,6 +5,15 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    .knowledge-links {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+    }
+
     b,
     strong {
         color: #e94271;
@@ -17,7 +26,7 @@
     .first-blue-block {
         border-radius: 40px;
         background: #25325F;
-        margin: 80px auto;
+        margin: 56px auto;
         height: 850px;
         width: 100%;
         max-width: 1700px;
@@ -256,11 +265,10 @@
     .main_title_knowledge {
         color: #25325F;
         font-family: Manrope;
-
         font-size: 22px;
         font-style: normal;
         font-weight: 700;
-        line-height: 39px;
+        line-height: 31px;
         margin-bottom: 15px;
         width: 290px;
 
@@ -638,7 +646,7 @@
     .overlay2 {
         position: relative;
         left: 50%;
-        transform: translate(-50%, -49%);
+        transform: translate(-50%, -64%);
         background-color: #FFF;
         border-radius: 15px;
         width: 90%;
@@ -675,7 +683,7 @@
         margin-bottom: 20px;
         /* text-align: center; */
         text-align: left;
-        margin-left: 22px;
+        /* margin-left: 22px; */
         margin-top: 24px;
     }
 
@@ -918,7 +926,20 @@
     }
 
     @media (min-width: 992px) {
-        .margin-class {}
+
+        .knowledge-links {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+        }
+
+
+        .margin-class {
+            margin: 8px;
+        }
 
 
 
@@ -1996,7 +2017,7 @@
                                 <?= get_field("sub_title") ?>
                             </span>
                             <span class="blue_block_main_title" style="">
-                                <?= get_field("main_title") ?>
+                                <?= get_field("main_title_1") ?>
                                 <!-- <span><?= get_field("blue_block_main_title_pink_word") ?></span> -->
                             </span>
                             <span class="blue_block_text" style="">
@@ -2313,10 +2334,6 @@
                                     <!-- justify-content-center -->
                                     <div class="row align-items-center">
                                         <div class="col-4 col-md-5 margin-class">
-                                            <!-- style="margin:8px;" -->
-                                            <!-- <img src="<?= $testimonial['img']['url'] ?>"
-                                                alt="<?= $testimonial['img']['alt'] ?>" class="client2-img" /> -->
-
                                             <?php if (!empty($testimonial['video'])) { ?>
                                             <!-- Video Section -->
                                             <div class="embed-responsive embed-responsive-16by9">
@@ -2332,7 +2349,7 @@
                                             <?php } ?>
                                         </div>
                                         <div class="col-8 col-md-5 col-lg-6">
-                                            <div class="card-body" style="padding:;">
+                                            <div class="" style="padding:;card-body">
                                                 <div
                                                     class="d-flex flex-row align-items-center justify-content-left gap-3">
                                                     <a class="client2-btn" href="<?= $testimonial['btn']['url'] ?>">
@@ -2554,7 +2571,7 @@
                     <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
                         style="margin-left:; color:#FFF; margin-top:60px; ">
                         <span
-                            style="background-color:#274083;width:203px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope; font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
+                            style="background-color:#274083;width:254px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope; font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
                             <?= get_field("sub_title") ?>
                         </span>
                         <span class="main_title_knowledge" style="">
@@ -2562,7 +2579,7 @@
 
                         </span>
                         <span
-                            style="color:#6A7291;font-family:Manrope; font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:15px;">
+                            style="color:#6A7291;font-family:Manrope; font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:25px;">
                             <?= get_field("text") ?>
                         </span>
 
@@ -2575,8 +2592,7 @@
 
                                 <div class=" d-flex flex-row align-items-center justify-content-between  gap-3 mt-4"
                                     style="margin:20px 0;">
-                                    <span
-                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <span class="knowledge-links">
                                         <?= get_field("knowledge") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -2591,8 +2607,7 @@
                             <div style="border-bottom: 0.5px solid  #25325F;">
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
-                                    <span
-                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <span class="knowledge-links">
                                         <?= get_field("client_stories") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -2606,8 +2621,7 @@
                             <div style="border-bottom: 0.5px solid  #25325F;">
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
-                                    <span
-                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <span class="knowledge-links">
                                         <?= get_field("events") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -2625,8 +2639,7 @@
                             <div style="border-bottom: 0.5px solid  #25325F;">
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
-                                    <span
-                                        style="color: #25325F;font-family: Manrope; font-size:13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <span class="knowledge-links">
                                         <?= get_field("resources") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -2640,8 +2653,7 @@
                             <div style="border-bottom: 0.5px solid  #25325F;">
                                 <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
                                     style="margin:20px 0;">
-                                    <span
-                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                    <span class="knowledge-links">
                                         <?= get_field("video") ?>
                                     </span>
                                     <a href="#" class="d-flex justify-content-center align-items-center">
@@ -2668,25 +2680,25 @@
                     <img src="<?= get_field("sue_customers_bg")['url'] ?>"
                         alt="<?= get_field("sue_customers_bg")['alt'] ?>" class="background-image" />
                     <div class="overlay">
-                        <div
-                            style="display: flex;justify-content: left;align-items: flex-start;text-align: left; margin-right: 80px;">
+                        <span
+                            style="display: flex;justify-content: left;align-items: flex-start;text-align: left; margin-right: 118px;">
                             <span class="sub-title"><?= get_field("sue_title") ?></span>
-                        </div>
-                        <span class="main-title"><?= get_field("sue_main_title") ?>
-                            <div class="row" style="margin-top: 48px;">
-                                <div class="icon-container col-12 col-lg-12">
-                                    <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                        alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                                    <img src="<?= get_field("bol_icon")['url'] ?>"
-                                        alt="<?= get_field("bol_icon")['alt'] ?>" class="icon" />
-                                </div>
-                            </div>
-                            <div class="icon-container">
-                                <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                        </span>
+                        <span class="main-title"><?= get_field("sue_main_title") ?></span>
+                        <div class="row" style="margin-top: 48px;">
+                            <div class="icon-container col-12 col-lg-12">
+                                <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                    alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                                <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
                                     class="icon" />
-                                <img src="<?= get_field("booking_icon")['url'] ?>"
-                                    alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
                             </div>
+                        </div>
+                        <div class="icon-container">
+                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                                class="icon" />
+                            <img src="<?= get_field("booking_icon")['url'] ?>"
+                                alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
+                        </div>
                     </div>
                 </div>
 
@@ -2716,12 +2728,21 @@
 
 
             <!-- New Section With Swiper On Right Side -->
-            <div class="container" style="margin-top:60px;">
+            <div class="container" style="margin-top:;">
+                <!-- margin-top:60px; -->
                 <div class="row">
                     <!-- Left Section -->
                     <div class="col12 col-lg-5 order-2 order-lg-1 custom-video">
                         <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                             style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover" />
+
+
+                        <!-- <div class="embed-responsive embed-responsive-21by9"
+                            style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+                                allowfullscreen></iframe>
+                        </div> -->
+
                     </div>
                     <!-- Right Section -->
                     <div class="col-12 col-lg-7 right_section order-1 order-lg-2">
@@ -2737,19 +2758,7 @@
                                     </a>
                                 </div>
 
-                                <!-- <div class="custom-number active" data-index="0">
-                                    1
-                                    <span class="custom-title">Mi vel turpis vitae mi a id
-                                        vitae</span>
-                                </div>
-                                <div class="custom-number" data-index="1">2
 
-                                    <span class="custom-title">Vel turpis lacus vitae mi mollis</span>
-                                </div>
-                                <div class="custom-number" data-index="2">3
-
-                                    <span class="custom-title">Turpis lacus vitae mi mollis volutpat</span>
-                                </div> -->
                                 <div class="d-flex align-items-center gap-1">
                                     <div class="custom-number active" data-index="0">
                                         1
@@ -2805,9 +2814,11 @@
                                 style="background-color:; width: 83%; margin: 0 ; overflow:hidden">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <span class="sample-slider-title">Mi vel turpis vitae mi a id vitae turpis lacus
+                                        <span class="sample-slider-title">Mi vel turpis vitae mi a id vitae
+                                            <strong>turpis lacus</strong>
                                             vitae mi mollis</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl
+                                        <p style="margin-top:2rem; margin-bottom:2rem">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Nulla egestas, nisl
                                             posuere
                                             porttitor
                                             vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
@@ -2827,8 +2838,10 @@
 
                                     </div>
                                     <div class="swiper-slide">
-                                        <span class="sample-slider-title">Vel turpis lacus vitae mi mollis</span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur
+                                        <span class="sample-slider-title">Vel turpis lacus <strong>vitae mi</strong>
+                                            mollis</span>
+                                        <p style="margin-top:2rem; margin-bottom:2rem">Lorem ipsum dolor sit amet,
+                                            consectetur
                                             adipiscing elit. Nulla egestas, nisl posuere
                                             porttitor
                                             vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
@@ -2847,8 +2860,10 @@
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <span class="sample-slider-title">Turpis lacus vitae mi mollis </span>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl
+                                        <span class="sample-slider-title">Turpis lacus <strong>vitae mi</strong> mollis
+                                        </span>
+                                        <p style="margin-top:2rem; margin-bottom:2rem">Lorem ipsum dolor sit amet,
+                                            consectetur adipiscing elit. Nulla egestas, nisl
                                             posuere
                                             porttitor
                                             vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
@@ -2870,6 +2885,76 @@
                             </div>
                         </div>
                     </div>
+
+
+
+                    <!-- Right Section -->
+                    <!-- <div class="col-12 col-lg-7 right_section order-1 order-lg-2">
+                        <div class="custom-container">
+                            <div class="custom-pagination">
+                                <div class="d-flex d-md-none d-lg-none justify-content-left">
+                                    <a href="#" id="prevBtn"
+                                        style="height:30px; width:30px; border-radius:8px; border: 1px solid #6A7291;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field('prev_btn')['url'] ?>"
+                                            alt="<?= get_field('prev_btn')['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0; object-fit:cover" />
+                                    </a>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-1">
+                                    <?php if (have_rows('custom_pagination')): ?>
+                                    <?php while (have_rows('custom_pagination')):
+                                        the_row(); ?>
+                                    <div class="custom-number" data-index="<?= get_sub_field('index') ?>">
+                                        <?= get_sub_field('number') ?>
+                                        <span class="custom-title"><?= get_sub_field('title') ?></span>
+                                    </div>
+                                    <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+
+                                <div class="d-flex d-md-none d-lg-none justify-content-start">
+                                    <a href="#" id="nextBtn"
+                                        style="height:30px; width:30px; border-radius:8px; border: 1px solid #6A7291;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field('next_btn')['url'] ?>"
+                                            alt="<?= get_field('next_btn')['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0; object-fit:cover" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style="border-bottom: 1px solid #CBCFDE; margin: 40px 0;"></div>
+
+                            <div class="swiper sample-slider" style="width: 83%; margin: 0; overflow:hidden">
+                                <div class="swiper-wrapper">
+                                    <?php if (have_rows('slider_repeater')): ?>
+                                    <?php while (have_rows('slider_repeater')):
+                                        the_row(); ?>
+                                    <div class="swiper-slide">
+                                        <span class="sample-slider-title"><?= get_sub_field('slide_title') ?></span>
+                                        <p><?= get_sub_field('slide_content') ?></p>
+                                        <div class="d-flex flex-row align-items-center justify-content-start gap-3">
+                                            <a href="<?= get_sub_field('button_url') ?>"
+                                                style="background-color:#25325F; height:30px; width:30px; border-radius: 8px;"
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_sub_field('button_icon')['url'] ?>"
+                                                    alt="<?= get_sub_field('button_icon')['alt'] ?>"
+                                                    style="width:12px; height:18px; margin:7px 0;" />
+                                            </a>
+                                            <span
+                                                style="color: #25325F; font-family: Manrope; font-size: 13px; font-style: normal; font-weight: 600; line-height: 15.6px;">Button</span>
+                                        </div>
+                                    </div>
+                                    <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
                 </div>
                 <!--End of  New Section With Swiper On Right Side -->
 
@@ -3321,7 +3406,7 @@
         <!-- ------------------------------------------------------------------- -->
 
 
-        <!-- Swiper1-->
+        <!-- swiper-container-->
 
         <script>
         let swiper1 = new Swiper('.swiper-container', {
@@ -3352,7 +3437,7 @@
 
 
 
-        <!--  mySwiper2 -->
+        <!--  mySwiper1 -->
         <script>
         let swiper2 = new Swiper('.mySwiper1', {
             slidesPerView: 2.1,
@@ -3401,7 +3486,7 @@
 
 
 
-        <!--  mySwiper3 -->
+        <!--  mySwiper2 -->
 
         <script>
         let swiper3 = new Swiper('.mySwiper2', {
@@ -3422,7 +3507,7 @@
 
 
                 350: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1.1,
                     spaceBetween: 0,
 
                 },
