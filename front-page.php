@@ -724,6 +724,14 @@
 
     @media (min-width: 768px) {
 
+
+
+        .custom-container {
+
+            margin-top: -96px;
+
+        }
+
         .first-blue-block {
             height: 983px;
         }
@@ -809,7 +817,7 @@
 
         .background-image {
             /* height: auto; */
-            height: 444px;
+            height: 471px;
         }
 
         .custom-number.active .custom-title {
@@ -1437,19 +1445,6 @@
                     </div>
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <!-- <div class="d-flex d-lg-none" style="margin-top:50px;">
                     <div class="row">
                         <div class="col-6 d-flex align-items-center justify-content-center" style="margin-bottom:64px;">
@@ -1529,8 +1524,7 @@
                                         <!-- Slide Content -->
                                         <div class="text-swiper">
                                             <span class="slide-text">
-                                                Nulla facilisi. Duis at <span
-                                                    style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
+                                                Nulla facilisi. Duis at <strong>nulla</strong>
                                                 posuere, cursus justo vitae, <span
                                                     style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">interdum</span>
                                                 dui fusce euismod rhoncus1
@@ -1634,12 +1628,6 @@
                         <div
                             class="d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none gap-4">
 
-                            <div style="position: relative; margin:0 ">
-                                <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
-                                    <?= get_field("trending_btn")['title'] ?>
-                                </a>
-                            </div>
-
                             <!-- Swiper Container -->
                             <div class="text-swiper col-10 ">
                                 <div class="swiper swiper-container"
@@ -1648,8 +1636,15 @@
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-column align-items-center gap-4">
 
+                                                <div style="position: relative; margin:0 ">
+                                                    <a href="<?= get_field("trending_btn")['url'] ?>"
+                                                        class="btn-swiper">
+                                                        <?= get_field("trending_btn")['title'] ?>
+                                                    </a>
+                                                </div>
+
                                                 <span class="slide-text ">
-                                                    Nulla facilisi. Duis at <span
+                                                    1 Nulla facilisi. Duis at <span
                                                         style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
                                                     posuere, cursus
                                                     justo vitae, <span
@@ -1657,13 +1652,36 @@
                                                     dui fusce
                                                     euismod rhoncus1
                                                 </span>
+
+                                                <!-- Right Section: Arrow Button -->
+                                                <div
+                                                    class=" col-md-10 col-sm-10 col-10 d-flex align-items-center justify-content-center gap-2">
+                                                    <a href="#"
+                                                        style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                                        class="d-flex justify-content-center align-items-center">
+                                                        <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                                            alt="<?= get_field('arrow_btn')['title'] ?>"
+                                                            style="width:12px; height:18px; object-fit:cover;">
+                                                    </a>
+                                                    <span class="d-md-inline"
+                                                        style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                                        more</span>
+
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-column align-items-center gap-4">
 
+                                                <div style="position: relative; margin:0 ">
+                                                    <a href="<?= get_field("trending_btn")['url'] ?>"
+                                                        class="btn-swiper">
+                                                        <?= get_field("trending_btn")['title'] ?>
+                                                    </a>
+                                                </div>
+
                                                 <span class="slide-text">
-                                                    Nulla facilisi. Duis at <span
+                                                    2 Nulla facilisi. Duis at <span
                                                         style="color:#E94271;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
                                                     posuere, cursus
                                                     justo vitae, <span
@@ -1671,13 +1689,36 @@
                                                     dui fusce
                                                     euismod rhoncus2
                                                 </span>
+
+                                                <!-- Right Section: Arrow Button -->
+                                                <div
+                                                    class=" col-md-10 col-sm-10 col-10 d-flex align-items-center justify-content-center gap-2">
+                                                    <a href="#"
+                                                        style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                                        class="d-flex justify-content-center align-items-center">
+                                                        <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                                            alt="<?= get_field('arrow_btn')['title'] ?>"
+                                                            style="width:12px; height:18px; object-fit:cover;">
+                                                    </a>
+                                                    <span class="d-md-inline"
+                                                        style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                                        more</span>
+
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="d-flex flex-column align-items-center gap-4 ">
 
+                                                <div style="position: relative; margin:0 ">
+                                                    <a href="<?= get_field("trending_btn")['url'] ?>"
+                                                        class="btn-swiper">
+                                                        <?= get_field("trending_btn")['title'] ?>
+                                                    </a>
+                                                </div>
+
                                                 <span class="slide-text">
-                                                    Nulla facilisi. Duis at <span
+                                                    3 Nulla facilisi. Duis at <span
                                                         style="color:#E94271; font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 170%;">nulla</span>
                                                     posuere, cursus
                                                     justo vitae, <span
@@ -1685,6 +1726,22 @@
                                                     dui fusce
                                                     euismod rhoncus3
                                                 </span>
+
+                                                <!-- Right Section: Arrow Button -->
+                                                <div
+                                                    class=" col-md-10 col-sm-10 col-10 d-flex align-items-center justify-content-center gap-2">
+                                                    <a href="#"
+                                                        style="border-radius:8px; background-color:white; height:30px; width:30px;"
+                                                        class="d-flex justify-content-center align-items-center">
+                                                        <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                                            alt="<?= get_field('arrow_btn')['title'] ?>"
+                                                            style="width:12px; height:18px; object-fit:cover;">
+                                                    </a>
+                                                    <span class="d-md-inline"
+                                                        style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
+                                                        more</span>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1692,20 +1749,6 @@
                             </div>
 
                             <!-- Right Section: Arrow Button -->
-                            <div
-                                class=" col-md-10 col-sm-10 col-10 d-flex align-items-center justify-content-center gap-2">
-                                <a href="#" style="border-radius:8px; background-color:white; height:30px; width:30px;"
-                                    class="d-flex justify-content-center align-items-center">
-                                    <img src="<?= get_field('arrow_btn')['url'] ?>"
-                                        alt="<?= get_field('arrow_btn')['title'] ?>"
-                                        style="width:12px; height:18px; object-fit:cover;">
-                                </a>
-                                <span class="d-md-inline"
-                                    style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
-                                    more</span>
-
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -2182,7 +2225,7 @@
 
                     <!-- Combined Items for Medium Screens -->
                     <div class="col-md-12 d-none d-md-block d-lg-none" style="margin-top:160px;">
-                        <div class="row d-flex flex-wrap gap-4 justify-content-center align-items-center">
+                        <div class="row d-flex flex-wrap gap- justify-content-center align-items-center">
                             <?php
                             $all_testimonials = array_merge(get_field("testimonails_section"), get_field("testimonails_section_right"));
                             usort($all_testimonials, function ($a, $b) {
@@ -2190,7 +2233,7 @@
                             });
                             foreach ($all_testimonials as $testimonial) {
                                 ?>
-                            <div class="col-md-3 d-flex flex-column  justify-content-start">
+                            <div class="col-md-4 d-flex flex-column  justify-content-start">
 
 
                                 <div class="d-flex flex-row  justify-content-between">
@@ -2285,6 +2328,11 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
             </div>
         </div> <!-- End of The blue block -->
 
@@ -2300,7 +2348,7 @@
                         <?= get_field("sue_insights") ?>
                     </span>
                 </div>
-                <div class="col-6 col-lg-6 ">
+                <div class="col-6 col-lg-6  d-block d-md-none d-lg-block">
                     <div class=" d-flex flex-row align-items-center justify-content-end gap-3">
                         <a href="#"
                             style="background-color:#E94271; height:30px; width:30px; border-radius:8px; background:#25325F;"
