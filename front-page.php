@@ -5,6 +5,15 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    .first-blue-block {
+        border-radius: 40px;
+        background: #25325F;
+        margin: 80px auto;
+        height: 850px;
+        width: 100%;
+        max-width: 1700px;
+    }
+
     /* button {
         position: relative;
         display: inline-block;
@@ -697,6 +706,10 @@
 
 
     @media (min-width: 768px) {
+
+        .first-blue-block {
+            height: 983px;
+        }
 
         .left-column {
             color: #FFF;
@@ -1948,8 +1961,7 @@
         <!-- Here new -->
 
         <!-- The blue block container -->
-        <div class=""
-            style="border-radius:40px;background: #25325F; margin:80px auto; height: 850px; width: 100%; max-width: 1700px;">
+        <div class="first-blue-block" style="">
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
@@ -2125,8 +2137,8 @@
                     <!-- Here for test on md  -->
 
                     <!-- Combined Items for Medium Screens -->
-                    <div class="col-md-12 d-none d-md-block d-lg-none">
-                        <div class="row d-flex flex-wrap gap-4">
+                    <div class="col-md-12 d-none d-md-block d-lg-none" style="margin-top:160px;">
+                        <div class="row d-flex flex-wrap gap-4 justify-content-center align-items-center">
                             <?php
                             $all_testimonials = array_merge(get_field("testimonails_section"), get_field("testimonails_section_right"));
                             usort($all_testimonials, function ($a, $b) {
@@ -2134,12 +2146,27 @@
                             });
                             foreach ($all_testimonials as $testimonial) {
                                 ?>
-                            <div class="col-md-3 d-flex flex-column align-items-center justify-content-start">
-                                <div class="testimonial-item">
-                                    <span class="testimonial-num"><?= $testimonial["num"] ?></span>
-                                    <span class="testimonial-title"><?= $testimonial["title"] ?></span>
-                                    <span class="testimonial-text"><?= $testimonial["text"] ?></span>
-                                    <a href="#" class="btn btn-primary">Read more</a>
+                            <div class="col-md-3 d-flex flex-column  justify-content-start">
+
+
+                                <div class="d-flex flex-row  justify-content-between">
+                                    <div class="d-flex flex-row  justify-content-around gap-3">
+                                        <span
+                                            style="color:  #E94271;font-family:Manrope; font-size:15px; font-style: normal;font-weight: 600;line-height: 27px ">
+                                            <?= $testimonial["num"] ?>
+                                        </span>
+                                        <span
+                                            style="color: #9AA0B7;font-family:Manrope; font-size:15px; font-style: normal;font-weight: 600;line-height: 27px;">
+                                            <?= $testimonial["title"] ?>
+
+                                        </span>
+                                    </div>
+                                </div>
+                                <div style="margin:12px 0">
+                                    <span
+                                        style="color: #FFF;font-family: Manrope; font-size:19px;font-style: normal;font-weight: 700;line-height: 33.6px;">
+                                        <?= $testimonial["text"] ?>
+                                    </span>
                                 </div>
                             </div>
                             <?php
