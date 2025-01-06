@@ -6,6 +6,15 @@
 <main class="consultancy flex-grow-1">
 
     <style>
+    b,
+    strong {
+        color: #e94271;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
+    }
+
     .container-max-width {
         border-radius: 30px;
         max-width: 1700px;
@@ -81,7 +90,8 @@
         padding: 30px;
         /* margin-top: -350px; */
         /* margin-top: -152px; */
-        margin-top: -450px;
+        /* margin-top: -450px; */
+        margin-top: -400px;
 
     }
 
@@ -141,15 +151,14 @@
     }
 
     .title {
-        color: var(--Primary-600, #25325F);
+        color: #25325F;
         font-family: Manrope;
         font-size: 26px;
         font-style: normal;
         font-weight: 700;
         line-height: 39px;
         margin: 27px 0px;
-        /* width: 504px;
-        height: 99px; */
+
 
     }
 
@@ -204,7 +213,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 33.6px;
-        width: 264px;
+        /* width: 264px; */
 
     }
 
@@ -255,12 +264,14 @@
         font-style: normal;
         font-weight: 700;
         line-height: 150%;
-        margin-top: 83px;
+        /* margin-top: 83px; */
+        margin-top: 69px;
 
     }
 
     .client-consultancy-link {
-        margin-top: 83px;
+        /* margin-top: 83px; */
+        /* margin-top: 69px; */
     }
 
 
@@ -401,12 +412,22 @@
     @media (min-width: 768px) {
 
         .block_blue {
-            height: 1390px;
+            height: 853px;
+        }
+
+        .card-text {
+            font-size: 19px;
         }
     }
 
 
     @media (min-width: 992px) {
+        .client-consultancy-link {
+            /* margin-top: 83px; */
+            margin-top: 69px;
+        }
+
+
         .hero_blue_block {
             width: 531px;
             /* position: absolute;
@@ -428,6 +449,12 @@
             width: 504px;
             height: 99px;
         }
+
+        b,
+        strong {
+            font-size: inherit;
+        }
+
 
         .left-text,
         .right-text {
@@ -510,10 +537,7 @@
     </style>
     <div class="container-max-width">
 
-        <!-- <a href="#" style="position: relative; display: inline-block;" class="">
-            <img src="<?= get_field("consultancy_hero")['url'] ?>" alt="<?= get_field("consultancy_hero")['title'] ?>"
-                class="" style="width: 100%; height: 581px; border-radius: 40px; object-fit: cover;" />
-        </a> -->
+
         <img src="<?= get_field("consultancy_hero")['url'] ?>" alt="<?= get_field("consultancy_hero")['title'] ?>"
             class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
 
@@ -550,19 +574,19 @@
 
     <div class="container">
         <div class="row" style="margin-top:100px;">
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" style="margin-top:40px;">
                 <div class="left_col">
                     <div class="left-btn">
                         <?= get_field("onsectetur_adipiscing_elit_title") ?>
                     </div>
                     <span class="title">
-                        <?= get_field("main_title") ?> </span>
+                        <?= get_field("main_title1") ?> </span>
 
-                    <span class="left-text" style="">
+                    <span class="left-text">
                         <?= get_field("left_text") ?></span>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" style="margin-top:40px;">
                 <div class="right_col">
                     <span class="right-text">
                         <?= get_field("second_text") ?>
@@ -578,7 +602,7 @@
     <div class="container mt-5">
         <div class="row gy-2">
             <?php foreach (get_field("expertise_testimonials") as $testimonial) { ?>
-            <div class="col-12 col-md-5 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-4">
                 <div class="testimonial-card">
                     <div class="d-flex align-items-center gap-2 mb-2">
                         <span class="expertise-num"><?= $testimonial["expertise_num"] ?></span>
@@ -609,7 +633,7 @@
 
             <div class="row d-flex align-items-center justify-content-start gy-4">
                 <?php foreach (get_field("clients_consultancy_testimonials") as $testimonial) { ?>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-4 col-lg-4">
                     <div class="card">
                         <img src="<?= $testimonial["clients_img"]['url'] ?>"
                             alt="<?= $testimonial['clients_img']['alt'] ?>" class="card-img-top "
