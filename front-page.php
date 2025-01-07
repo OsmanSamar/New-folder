@@ -32,186 +32,110 @@
         max-width: 1700px;
     }
 
-    /* button {
+    button {
         position: relative;
         display: inline-block;
         cursor: pointer;
         outline: none;
-        border: 0;
         vertical-align: middle;
         text-decoration: none;
+        border: 0;
         background: transparent;
         padding: 0;
         font-size: inherit;
         font-family: inherit;
     }
 
-    button.btn {
-        width: 12rem;
-        height: auto;
-    }
+    /* button.btn {
+        height: 18px;
+        width: 12px;
+    } */
 
-    button.btn .circle {
+    button .circle {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         position: relative;
-        display: block;
-        margin: 0;
-        border-radius: 8px;
-        background-color: #274083;
+        display: inline-flex;
+        justify-content: center;
         height: 30px;
         width: 30px;
-        margin: 10px 0;
-
+        border-radius: 8px;
+        background-color: #274083;
+        margin: 0;
     }
 
 
 
-    button.btn .circle .icon.arrow {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        left: 0.625rem;
-        width: 1.125rem;
-        height: 0.125rem;
-        background: none;
+
+    button .circle .icon {
+        /* transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); */
+        /* position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff; */
     }
 
-    button.btn .circle .icon.arrow::before {
-        position: absolute;
-        content: '';
-        top: -0.25rem;
-        right: 0.0625rem;
-        width: 0.625rem;
-        height: 0.625rem;
-        border-top: 0.125rem solid #fff;
-        border-right: 0.125rem solid #fff;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
+
+
+    button .circle .icon.arrow {
+        /* transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); 
+         position: absolute; 
+
+         left: 0.625rem; 
+         width: 1.125rem;
+        height: 0.125rem; 
+         background: none; 
+         transform: translateY(-50%); */
     }
 
-    button.btn .button-text {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+
+    button .circle .icon.arrow::before {
+        /* position: absolute;
+        content: ''; 
+         top: -0.25rem;
+        right: -0.0625rem;
+        left: 0;
+        width: 6px;
+        height: 6px; 
+         border-top: 0.125rem solid #fff; 
+         border-right: 0.125rem solid #fff; 
+        -webkit-transform: rotate(45deg); 
+         transform: rotate(45deg);
+        transform: translateY(-50%) rotate(45deg); */
+    }
+
+
+    button .button-text {
+        /* transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); */
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 0.75rem 0;
+        left: 24px;
         margin: 0 0 0 1.85rem;
-        color: #282936;
-        font-weight: 700;
-        line-height: 1.6;
+        color: #FFF;
+        font-size: 13px;
+        line-height: 15.6px;
         text-align: center;
-        text-transform: uppercase;
+
     }
 
+
     button:hover .circle {
-        width: 100%;
+        width: 8rem;
+        /* Expands the circle to include text */
+
     }
 
     button:hover .circle .icon.arrow {
         background: #fff;
-        -webkit-transform: translate(1rem, 0);
-        transform: translate(1rem, 0);
-    }
-
-    button:hover .button-text {
-        color: #fff;
-    } */
-
-
-
-    button {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        cursor: pointer;
-        outline: none;
-        border: 0;
-        background: transparent;
-        padding: 0;
-        font-size: inherit;
-        font-family: inherit;
-    }
-
-    button.btn {
-        height: auto;
-        /* Adjust the height of the button */
-        display: inline-flex;
-        align-items: center;
-        padding: 0;
-    }
-
-    button.btn .circle {
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        height: 3rem;
-        width: 3rem;
-        border-radius: 50%;
-        background-color: #274083;
-        overflow: hidden;
-        transition: all 0.4s ease-in-out;
-        margin-right: 1rem;
-        /* Adds space between the circle and the text */
-    }
-
-    button.btn .circle .icon.arrow {
-        width: 1.5rem;
-        height: 1.5rem;
-        transition: transform 0.4s ease-in-out;
-    }
-
-    button.btn .button-text {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #274083;
-        /* Text color outside the circle initially */
-        white-space: nowrap;
-        opacity: 1;
-        /* Text is visible initially */
-        transform: translateX(0);
-        /* Text is positioned normally */
-        transition: all 0.4s ease-in-out;
-    }
-
-    button.btn:hover .circle {
-        width: 12rem;
-        /* Expands the circle to include text */
-        border-radius: 8px;
-        /* Changes shape to accommodate text */
-    }
-
-    button.btn:hover .circle .icon.arrow {
-        transform: translateX(-2rem);
-        /* Moves the arrow icon left to make room for text */
-    }
-
-    button.btn:hover .button-text {
-        color: #fff;
-        /* Changes text color to white when the circle expands */
-        opacity: 1;
-        /* Keeps text visible */
-        transform: translateX(1rem);
-        /* Moves text inside the circle */
+        /* -webkit-transform: translate(1rem, 0);
+        transform: translate(1rem, 0); 
+         transform: none;
+         transform: translateY(-50%);
+        left: 8px; */
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*  */
     .test-main-title {
         color: #25325F;
         font-size: 18px;
@@ -2133,7 +2057,8 @@
                                             style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
                                             more</span> -->
 
-                                        <button class="btn">
+                                        <button>
+                                            <!-- class="btn" -->
                                             <span class="circle">
                                                 <a href="#"
                                                     class="d-flex justify-content-center align-items-center  arrow"
@@ -2141,7 +2066,7 @@
 
                                                     <img src="<?= $testimonails['link']['url'] ?>"
                                                         alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                                        style="width:12px; height: 18px; margin:7px 0;" />
+                                                        style="width:12px; height: 18px; margin:7px 0;" class="icon" />
                                                 </a>
 
                                             </span>
