@@ -98,8 +98,9 @@
 .email-field-container input[type="email"] {
   width: 356px !important;
   height: 48px !important;
-  padding-right: 100px;
-  box-sizing: border-box;
+  padding-right: 100px !important;
+  box-sizing: border-box !important;
+  border-radius: 8px !important;
 }
 
 .email-field-container .submit-btn {
@@ -109,7 +110,8 @@
   bottom: 0;
   height: 36px;
   border: none;
-  background-color: #e94271 !important;
+  background-color: #274083 !important;
+  // background-color: #e94271 !important;
   color: white;
   padding: 12px 15px;
   cursor: pointer;
