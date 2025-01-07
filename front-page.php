@@ -26,7 +26,7 @@
     .first-blue-block {
         border-radius: 40px;
         background: #25325F;
-        margin: 56px auto;
+        margin: 54px auto;
         height: 850px;
         width: 100%;
         max-width: 1700px;
@@ -650,7 +650,7 @@
         background-color: #FFF;
         border-radius: 15px;
         width: 90%;
-        max-width: 350px;
+        max-width: 349px;
         padding: 32px;
         display: flex;
         flex-direction: column;
@@ -672,7 +672,7 @@
         font-family: Manrope;
         font-size: 14px;
         font-weight: 700;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
     }
 
 
@@ -680,11 +680,11 @@
         color: #25325F;
         font-family: Manrope font-size: 22px;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 11px;
         /* text-align: center; */
         text-align: left;
         /* margin-left: 22px; */
-        margin-top: 24px;
+        margin-top: 13px;
     }
 
     /* Icon container */
@@ -733,7 +733,7 @@
         }
 
         .first-blue-block {
-            height: 983px;
+            height: 852px;
         }
 
         .left-column {
@@ -1203,7 +1203,7 @@
         }
 
         .resources {
-            margin-top: 40px;
+            margin-top: 35px;
         }
 
         .container2 {
@@ -1258,7 +1258,7 @@
 
         .img-container {
             height: 648px;
-            margin-top: -563px;
+            margin-top: -581px;
         }
 
         .left-text {
@@ -1876,7 +1876,7 @@
         <div class="mask-group container">
 
             <!--Sue_Partners Repeater  Swiper On Small -->
-            <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
+            <div class="partners" style="margin-top:47px; margin-bottom: 47px;">
                 <div class="position-relative d-flex d-md-flex d-lg-none align-items-center  ">
                     <div class=" swiper2 mySwiper1 " style="flex-grow: 1;">
                         <div class="swiper-wrapper">
@@ -2340,7 +2340,7 @@
 
 
         <!-- SUE Insights -->
-        <div class="container" style="margin-top:120px;">
+        <div class="container" style="margin-top:65px;">
             <div class="row">
                 <div class="col-6 col-lg-6">
                     <span
@@ -2375,7 +2375,7 @@
                     <!-- Client Story2  container-->
                     <div class="row ">
                         <!-- gy-2 -->
-                        <div class="col-lg-5 col-md-8" style="margin-top:60px;">
+                        <div class="col-lg-5 col-md-8" style="margin-top:55px;">
                             <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
                             <div class="col">
                                 <div class="card client_card2 mb-3 d-flex flex-row align-items-center ">
@@ -2733,7 +2733,7 @@
                             <span class="sub-title"><?= get_field("sue_title") ?></span>
                         </span>
                         <span class="main-title"><?= get_field("sue_main_title") ?></span>
-                        <div class="row" style="margin-top: 48px;">
+                        <div class="row" style="margin-top: 27px;">
                             <div class="icon-container col-12 col-lg-12">
                                 <img src="<?= get_field("rabobank_icon")['url'] ?>"
                                     alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
