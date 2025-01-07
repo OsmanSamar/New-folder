@@ -42,17 +42,18 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 5px;
+        gap: 2px;
         /* Spacing between elements */
         border-right: 1px solid #ddd;
+        height: 100px;
         /* Divider between items */
-        padding: 15px;
+        /* padding: 30px; */
         min-width: 150px;
     }
 
-    .dropdown-menu .dropdown-item:last-child {
+    /* .dropdown-menu .dropdown-item:last-child {
         border-right: none;
-    }
+    } */
 
     .dropdown-menu .dropdown-item h4 {
         font-size: 16px;
@@ -82,8 +83,9 @@
 
     /* Add spacing between dropdown items */
     .dropdown-menu {
-        gap: 15px;
-        padding: 20px;
+        gap: 2px;
+        padding: 80px 250px;
+        background-color: #FFF;
     }
     </style>
 
