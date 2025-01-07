@@ -46,67 +46,20 @@
         font-family: inherit;
     }
 
-    /* button.btn {
-        height: 18px;
-        width: 12px;
-    } */
-
     button .circle {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: relative;
-        display: inline-flex;
         justify-content: center;
+        display: inline-flex;
+        position: relative;
+        z-index: 1;
         height: 30px;
         width: 30px;
-        border-radius: 8px;
-        background-color: #274083;
-        margin: 0;
     }
-
-
-
-
-    button .circle .icon {
-        /* transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); */
-        /* position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background: #fff; */
-    }
-
-
-
-    button .circle .icon.arrow {
-        /* transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); 
-         position: absolute; 
-
-         left: 0.625rem; 
-         width: 1.125rem;
-        height: 0.125rem; 
-         background: none; 
-         transform: translateY(-50%); */
-    }
-
-
-    button .circle .icon.arrow::before {
-        /* position: absolute;
-        content: ''; 
-         top: -0.25rem;
-        right: -0.0625rem;
-        left: 0;
-        width: 6px;
-        height: 6px; 
-         border-top: 0.125rem solid #fff; 
-         border-right: 0.125rem solid #fff; 
-        -webkit-transform: rotate(45deg); 
-         transform: rotate(45deg);
-        transform: translateY(-50%) rotate(45deg); */
-    }
-
+    /* button .button-text{
+        position: relative;
+        z-index: 2;
+    } */
 
     button .button-text {
-        /* transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1); */
         position: absolute;
         top: 0;
         left: 24px;
@@ -115,25 +68,36 @@
         font-size: 13px;
         line-height: 15.6px;
         text-align: center;
-
+        z-index: 2;
     }
 
 
-    button:hover .circle {
+    button .circle::before {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+        border-radius: 8px;
+        background-color: #274083;
+        margin: 0;
+        content: '';
+        z-index: -1;
+    }
+    
+    button:hover .circle::before {
         width: 8rem;
         /* Expands the circle to include text */
 
     }
 
+
+
     button:hover .circle .icon.arrow {
         background: #fff;
-        /* -webkit-transform: translate(1rem, 0);
-        transform: translate(1rem, 0); 
-         transform: none;
-         transform: translateY(-50%);
-        left: 8px; */
+       
     }
-
 
 
     .test-main-title {
@@ -1427,7 +1391,8 @@
                 style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px; height:577px;">
                 <div class="container">
                     <div class="row  blue-container align-items-center justify-content-between" style="padding: 20px;">
-
+                    <div class="swiper-pagination2"
+                    style="position:relative; z-index:1; transform: translateY(50%);"></div>
                         <!-- Swiper Container -->
                         <div class="swiper swiper-container" style="flex-grow:1; --swiper-pagination-color: #E94271;">
                             <div class="swiper-wrapper">
@@ -1438,8 +1403,7 @@
                                         class="d-none d-md-flex d-lg-flex flex-row align-items-center justify-content-between w-100">
                                         <!-- Left Section -->
                                         <div class="d-flex align-items-center gap-3">
-                                            <div class="swiper-pagination2"
-                                                style="position:relative; z-index:1; transform: translateY(50%);"></div>
+                                          
 
                                             <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
                                                 <?= get_field("trending_btn")['title'] ?>
@@ -3415,7 +3379,7 @@
                 disableOnInteraction: false, // Ensure autoplay resumes after interaction
             },
             pagination: {
-                el: '.swiper-pagination2',
+                el: document.querySelector('.swiper-pagination2'),
 
                 clickable: true,
             },

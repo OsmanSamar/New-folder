@@ -117,116 +117,7 @@
                     'walker' => new WP_Bootstrap_Navwalker(),
                 ));
                 ?>
-                <!-- <ul class="navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-haspopup="true"
-                            aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                           Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item"href="<?= esc_url(home_url('/consultancy')); ?>" style="color:#25325F; "></a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F; ">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
 
-                   
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Expertise
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Products
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Industries
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                            Insights
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height:15.6px;padding: 0 20px; text-align: center;font-family: Manrope;font-size: 13px;">
-                           About us
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"
-                                    style="color:#25325F;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%;">Action</a>
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                     
-                </ul> -->
 
                 <!-- Arrow and Let's Talk on LG Screen-->
                 <div class="d-none d-md-flex d-lg-flex  align-items-center justify-content-between"
@@ -241,8 +132,6 @@
                         Let's talk</span>
 
                 </div>
-
-
 
                 <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
