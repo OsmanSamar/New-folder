@@ -764,8 +764,8 @@
 
     <!-- Second Section -->
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-5" style="margin-top:40px;">
+        <div class="row" style="margin-top:50px;">
+            <div class="col-12 col-md-6 col-lg-5">
                 <div class="left_col">
                     <div class="left-btn">
                         <?= get_field("onsectetur_adipiscing_elit_title") ?>
@@ -778,7 +778,7 @@
                 </div>
             </div>
             <div class="d-none d-lg-block col-lg-1"></div>
-            <div class="col-12 col-md-6 col-lg-6" style="margin-top:40px;">
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col">
                     <span class="right-text">
                         <?= get_field("second_text") ?>

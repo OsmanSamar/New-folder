@@ -5,780 +5,831 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
-    .container-max-width {
-        border-radius: 30px;
-        max-width: 1700px;
-        height: 581px;
-        margin: 150px auto 100px;
+        .container-max-width {
+            border-radius: 30px;
+            max-width: 1700px;
+            height: 581px;
+            margin: 200px auto 10px;
+        }
 
-    }
-
-    b,
-    strong {
-        color: #e94271;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        line-height: 150%;
-    }
-
-    .articles_page_link::after {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 21px;
-        opacity: 0.25;
-        /* background: #CBCFDE; */
-        background: green;
-        margin-left: 13px;
-        margin-right: 13px;
-        vertical-align: middle;
-    }
-
-    .first-name::after {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 21px;
-        opacity: 0.25;
-        background: #CBCFDE;
-        margin-left: 13px;
-        margin-right: 13px;
-        vertical-align: middle;
-    }
-
-    .lets-talk-title {
-        display: block;
-        color: #9AA0B7;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px
-    }
+        .container-max-width img {
+            display: none;
+        }
 
 
-    .lets-talk-gota-question {
-        display: block;
-        color: #FFF;
-        font-family: Sora;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 50.4px;
-    }
+        b,
+        strong {
+            color: #e94271;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            line-height: 150%;
+        }
 
-    .container-let-talk {
-        display: flex;
-        /* align-items: center; */
-        align-items: flex-start;
-        /* justify-content: space-between; */
-        justify-content: space-around;
-        /* gap: 1rem; */
-        flex-direction: column;
-    }
+        .articles_page_link::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 21px;
+            opacity: 0.25;
+            /* background: #CBCFDE; */
+            background: green;
+            margin-left: 13px;
+            margin-right: 13px;
+            vertical-align: middle;
+        }
 
-    .blue-container {
-        border-radius: 40px;
-        background: #25325F;
-        height: 471px;
-        max-width: 1700px;
-        padding: 30px;
-        margin: 150px auto 100px;
-    }
+        .first-name::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 21px;
+            opacity: 0.25;
+            background: #CBCFDE;
+            margin-left: 13px;
+            margin-right: 13px;
+            vertical-align: middle;
+        }
 
-    .hero_blue_block {
-        height: 100%;
-        border-radius: 40px;
-        background: #25325F;
-        position: relative;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        margin-top: -152px;
-    }
-
-    .inner_block {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        margin: 10px 60px;
-    }
-
-    .hero_title {
-        color: #FFF;
-        font-family: Sora;
-        font-size: 45px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 54px;
-        margin-top: 45px;
-        margin-bottom: 31px;
-    }
-
-    .hero_text {
-        color: #9AA0B7;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        width: 353px;
-        /* height: 158px; */
-        margin-bottom: 31px;
-    }
-
-    .left_col,
-    .right_col {
-        display: flex;
-        align-items: flex-start;
-        justify-content: left;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .left-btn {
-        width: 209px;
-        height: 34px;
-        border-radius: 100px;
-        background: #274083;
-        padding: 3px 11px;
-        text-align: center;
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left-text,
-    .right-text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-    .title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-        margin: 30px 0px;
-    }
+        .lets-talk-title {
+            display: block;
+            color: #9AA0B7;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px
+        }
 
 
-    .partners-container {
-        border-radius: 6px;
-        border: 1px solid #CBCFDE;
-        background: #EDF3F4;
-        width: 232px;
-        height: 52px;
-    }
+        .lets-talk-gota-question {
+            display: block;
+            color: #FFF;
+            font-family: Sora;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 50.4px;
+        }
 
-    .sue-offering-container {
-        border-radius: 6px;
-        border: 1px solid #CBCFDE;
-        background: #EDF3F4;
-        width: 268px;
-        height: 52px;
-    }
+        .container-let-talk {
+            display: flex;
+            /* align-items: center; */
+            align-items: flex-start;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+            /* gap: 1rem; */
+            flex-direction: column;
+        }
 
-    /* .swiper-title-on-sm {
+        .blue-container {
+            border-radius: 40px;
+            background: #25325F;
+            height: 471px;
+            max-width: 1700px;
+            padding: 30px;
+            margin: 150px auto 100px;
+        }
+
+        .hero_blue_block {
+            height: 100%;
+            border-radius: 40px;
+            background: #25325F;
+            position: relative;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            margin-top: -152px;
+        }
+
+        .inner_block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: left;
+            margin: 10px 60px;
+        }
+
+        .hero_title {
+            color: #FFF;
+            font-family: Sora;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 54px;
+            margin-top: 45px;
+            margin-bottom: 31px;
+        }
+
+        .hero_text {
+            color: #9AA0B7;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            width: 353px;
+            /* height: 158px; */
+            margin-bottom: 31px;
+        }
+
+        .left_col,
+        .right_col {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .left-btn {
+            width: 209px;
+            height: 34px;
+            border-radius: 100px;
+            background: #274083;
+            padding: 3px 11px;
+            text-align: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-text,
+        .right-text {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+        }
+
+        .title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            margin: 30px 0px;
+        }
+
+
+        .partners-container {
+            border-radius: 6px;
+            border: 1px solid #CBCFDE;
+            background: #EDF3F4;
+            width: 232px;
+            height: 52px;
+        }
+
+        .sue-offering-container {
+            border-radius: 6px;
+            border: 1px solid #CBCFDE;
+            background: #EDF3F4;
+            width: 268px;
+            height: 52px;
+        }
+
+        /* .swiper-title-on-sm {
         font-size: 12px;
     } */
 
 
 
 
-    .block_blue {
-        border-radius: 40px;
-        background: #274083;
-        max-width: 1700px;
-        /* flex-direction: column; */
-        margin: 150px auto 100px;
-    }
-
-
-
-
-    .btn-container {
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        gap: 0.5rem;
-        margin-bottom: 20px;
-    }
-
-    .first_btn {
-        display: inline-flex;
-        height: 30px;
-        padding: 3px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 100px;
-        background: #FFF;
-    }
-
-    .second-btn {
-        display: inline-flex;
-        height: 30px;
-        padding: 3px 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 100px;
-        background: #25325F;
-    }
-
-    .se-btn-text {
-        color: white;
-    }
-
-    .f-btn-text {
-        color: #274083;
-    }
-
-    .f-btn-text {
-        color: #274083;
-    }
-
-    .f-btn-text,
-    .se-btn-text {
-
-        font-family: Manrope;
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 19px;
-    }
-
-
-    .text-on-blue-block {
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-        /* width: 534px; */
-        height: 238px;
-    }
-
-
-    .read-the-full-story-link {
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 15.6px;
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        gap: 10px;
-        text-align: left;
-        margin-top: 20px;
-
-    }
-
-
-
-
-
-
-    .left2-text,
-    .right2-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 27px;
-    }
-
-    .left_col2,
-    .right_col2 {
-        display: flex;
-        align-items: flex-start;
-        justify-content: left;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-
-    .testimonial-card {
-        border-radius: 15px;
-        background-color: #FFF;
-        /* max-width: 356px; */
-        margin: 15px 0;
-        /* padding: 27px; */
-        /* height: 337px; */
-        padding: 27px 40px;
-        /* height: 399px; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-
-    .testimonial-card>* {
-        margin: 5px 0;
-    }
-
-    .offering-num {
-        color: #E94271;
-        font-family: Manrope;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-    }
-
-    .offering-sub-title {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-        color: #6A7291;
-        font-family: Manrope;
-    }
-
-    .offering-main-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-    }
-
-    .divider {
-        border-bottom: 0.5px solid #25325F;
-        /* margin: 15px 1px; */
-    }
-
-    .offering-text {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 22px;
-        color: #6A7291;
-        font-family: Manrope;
-        text-align: left;
-    }
-
-    .left-side-img-text {
-        display: flex;
-        /* align-items: center; */
-        gap: 1rem;
-        justify-content: flex-start;
-        flex-direction: column;
-    }
-
-
-    .left-side-width {
-        margin-top: 50px;
-        padding: 24px;
-
-    }
-
-    .cloud-projects {
-        border-radius: 40px;
-        background: #FFF;
-        max-width: 1700px;
-        height: 837px;
-        padding: 16px;
-        margin-top: 50px;
-        height: 2050px;
-        margin: 150px auto 100px;
-    }
-
-
-
-
-    .cloud-projects-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-
-
-    }
-
-
-    .view-all-link {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 15.6px;
-    }
-
-
-    .view-btn {
-        background-color: #E94271;
-        height: 30px;
-        width: 30px;
-        border-radius: 8px;
-        background: #25325F;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-
-    .card-title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 96px;
-        height: 30px;
-        border-radius: 100px;
-        background: #E94271;
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-        text-align: center;
-        margin: 26px 0px;
-    }
-
-
-    .card-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-        width: 264px;
-
-    }
-
-    .industry_title {
-        color: var(--Text, #6A7291);
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 15.6px
-    }
-
-
-    .industry {
-        color: var(--Primary-600, #25325F);
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 15.6px
-    }
-
-    .why-sue-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-    }
-
-    .why-sue-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 27px;
-    }
-
-    .why-sue-text1 {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-
-    .form_section {
-        border-radius: 30px;
-        background: #25325F;
-        /* margin: 150px auto; */
-        max-width: 1700px;
-        height: 1471px;
-        margin: 150px auto 100px;
-
-    }
-
-    .left-container {
-        border-radius: 30px;
-        margin-top: ;
-        color: white;
-        height: 264px;
-        /* background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%); */
-    }
-
-    .left-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 50px;
-        gap: 20px;
-        /* margin-left: 15px; */
-    }
-
-
-
-    .information_title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        margin: 10px 5px 0
-    }
-
-    .information_text {
-        color: var(--Text, #6A7291);
-        font-family: Manrope;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        margin: 5px 0;
-        width: 326px;
-    }
-
-
-
-
-    .arrow_section {
-
-        width: 57.851px;
-        height: 92.371px;
-        flex-shrink: 0;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    @media (min-width: 768px) {
-
-        .img-on-blue-block {
-            height: 589px;
-            border-radius: 40px;
-            object-fit: cover;
-        }
-
         .block_blue {
-            height: 589px;
-            /* flex-direction: row; */
+            border-radius: 40px;
+            background: #274083;
+            max-width: 1700px;
+            /* flex-direction: column; */
+            margin: 150px auto 100px;
         }
 
 
 
 
         .btn-container {
-            gap: 1rem;
-        }
-
-        .left-side-img-text {
-            flex-direction: row;
-        }
-
-        .container-let-talk {
-            flex-direction: row;
-        }
-
-        .left-side-img-text {
-            align-items: center;
-        }
-
-        .blue-container {
-            height: 212px;
-        }
-
-        .left-side-width {
-
-            max-width: 352px;
-        }
-
-
-
-        .cloud-projects {
-            height: 1440px;
-        }
-
-
-
-    }
-
-    @media (min-width: 992px) {
-
-        .img-on-blue-block {
-            height: 589px;
-            border-radius: 40px;
-            object-fit: cover;
-        }
-
-        .left-side-width {
-            max-width: 584px;
-            padding: 10px;
-        }
-
-        .hero_blue_block {
-            width: 531px;
-            /* position: absolute; */
-            position: relative;
-            bottom: 430px;
-            left: 0;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: left;
-            padding: 30px;
-            height: 584.608px;
-
+            gap: 0.5rem;
+            margin-bottom: 20px;
         }
 
-        .block_blue {
-            height: 589px;
+        .first_btn {
+            display: inline-flex;
+            height: 30px;
+            padding: 3px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100px;
+            background: #FFF;
         }
 
-
-        .btn-container {
-            gap: 1rem;
+        .second-btn {
+            display: inline-flex;
+            height: 30px;
+            padding: 3px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 100px;
+            background: #25325F;
         }
 
-        .text-on-blue-block {
-            width: 534px;
-            font-size: 21px;
+        .se-btn-text {
+            color: white;
         }
 
+        .f-btn-text {
+            color: #274083;
+        }
 
+        .f-btn-text {
+            color: #274083;
+        }
 
         .f-btn-text,
         .se-btn-text {
 
             font-family: Manrope;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 19px;
+        }
+
+
+        .text-on-blue-block {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+            /* width: 534px; */
+            height: 238px;
+        }
+
+
+        .read-the-full-story-link {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
+            text-align: left;
+            margin-top: 20px;
+
+        }
+
+
+
+
+
+
+        .left2-text,
+        .right2-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 27px;
+        }
+
+        .left_col2,
+        .right_col2 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+
+        .testimonial-card {
+            border-radius: 15px;
+            background-color: #FFF;
+            /* max-width: 356px; */
+            margin: 15px 0;
+            /* padding: 27px; */
+            /* height: 337px; */
+            padding: 27px 40px;
+            /* height: 399px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .testimonial-card>* {
+            margin: 5px 0;
+        }
+
+        .offering-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+        }
+
+        .offering-sub-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+            color: #6A7291;
+            font-family: Manrope;
+        }
+
+        .offering-main-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+        }
+
+        .divider {
+            border-bottom: 0.5px solid #25325F;
+            /* margin: 15px 1px; */
+        }
+
+        .offering-text {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #6A7291;
+            font-family: Manrope;
+            text-align: left;
+        }
+
+        .left-side-img-text {
+            display: flex;
+            /* align-items: center; */
+            gap: 1rem;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+
+
+        .left-side-width {
+            margin-top: 50px;
+            padding: 24px;
+
+        }
+
+        .cloud-projects {
+            border-radius: 40px;
+            background: #FFF;
+            max-width: 1700px;
+            height: 837px;
+            padding: 16px;
+            margin-top: 50px;
+            height: 2050px;
+            margin: 150px auto 100px;
+        }
+
+
+
+
+        .cloud-projects-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+
+
+        }
+
+
+        .view-all-link {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+        }
+
+
+        .view-btn {
+            background-color: #E94271;
+            height: 30px;
+            width: 30px;
+            border-radius: 8px;
+            background: #25325F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+        .card-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 96px;
+            height: 30px;
+            border-radius: 100px;
+            background: #E94271;
+            color: #FFF;
+            font-family: Manrope;
             font-size: 13px;
             font-style: normal;
             font-weight: 700;
             line-height: 23.4px;
+            text-align: center;
+            margin: 26px 0px;
         }
 
-        .left-side-img-text {
-            flex-direction: row;
+
+        .card-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+            width: 264px;
+
         }
 
-        .container-let-talk {
-            flex-direction: row;
+        .industry_title {
+            color: var(--Text, #6A7291);
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px
         }
 
-        .left-side-img-text {
-            align-items: center;
+
+        .industry {
+            color: var(--Primary-600, #25325F);
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px
         }
 
-        .blue-container {
-            height: 212px;
+        .why-sue-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
         }
 
-        .lets-talk-gota-question {
-            font-size: 35px;
+        .why-sue-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 27px;
         }
 
-        .cloud-projects {
-            height: 837px;
+        .why-sue-text1 {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
         }
 
 
         .form_section {
+            border-radius: 30px;
+            background: #25325F;
+            /* margin: 150px auto; */
+            max-width: 1700px;
+            height: 1471px;
+            margin: 150px auto 100px;
 
-            height: 550px;
         }
 
-
         .left-container {
-            height: 500px;
+            border-radius: 30px;
+            margin-top: ;
+            color: white;
+            height: 264px;
+            /* background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%); */
         }
 
         .left-content {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: flex-start;
-            align-items: normal;
-            /* margin-left: 15px; */
+            align-items: center;
             margin-top: 50px;
+            gap: 20px;
+            /* margin-left: 15px; */
         }
 
-        .information_title {
-            font-size: 16px;
-            line-height: 27px;
 
+
+        .information_title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            margin: 10px 5px 0
         }
 
         .information_text {
-            font-size: 16px;
-            width: 504px;
+            color: var(--Text, #6A7291);
+            font-family: Manrope;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            margin: 5px 0;
+            width: 326px;
         }
 
-        .second-arrow {
-            margin-top: 70px
-        }
+
+
 
         .arrow_section {
-            width: 87.239px;
-            height: 139.295px;
+
+            width: 57.851px;
+            height: 92.371px;
             flex-shrink: 0;
-            object-fit: cover;
-            margin-right: 60px;
         }
 
 
-        .cloud-projects-title {
-            font-size: 26px;
+
+
+
+
+
+
+
+
+
+
+        @media (min-width: 768px) {
+
+
+            .hero_blue_block {
+                width: 531px;
+                position: relative;
+                bottom: 582px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 581.608px;
+                margin-top: unset;
+
+            }
+
+
+            .container-max-width img {
+                display: block;
+            }
+
+
+            .img-on-blue-block {
+                height: 589px;
+                border-radius: 40px;
+                object-fit: cover;
+            }
+
+            .block_blue {
+                height: 589px;
+                /* flex-direction: row; */
+            }
+
+
+
+
+            .btn-container {
+                gap: 1rem;
+            }
+
+            .left-side-img-text {
+                flex-direction: row;
+            }
+
+            .container-let-talk {
+                flex-direction: row;
+            }
+
+            .left-side-img-text {
+                align-items: center;
+            }
+
+            .blue-container {
+                height: 212px;
+            }
+
+            .left-side-width {
+
+                max-width: 352px;
+            }
+
+
+
+            .cloud-projects {
+                height: 1440px;
+            }
+
+
+
         }
 
-        b,
-        strong {
-            font-size: 26px;
-        }
+        @media (min-width: 992px) {
 
-    }
+            .img-on-blue-block {
+                height: 589px;
+                border-radius: 40px;
+                object-fit: cover;
+            }
+
+            .left-side-width {
+                max-width: 584px;
+                padding: 10px;
+            }
+
+            .hero_blue_block {
+                width: 531px;
+                position: relative;
+                /* bottom: 430px; */
+                bottom: 580px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                /* justify-content: left; */
+                justify-content: center;
+                padding: 30px;
+                /* height: 584.608px; */
+                height: 100%;
+                margin-top: unset;
+
+            }
+
+            .block_blue {
+                height: 589px;
+            }
+
+
+            .btn-container {
+                gap: 1rem;
+            }
+
+            .text-on-blue-block {
+                width: 534px;
+                font-size: 21px;
+            }
+
+
+
+            .f-btn-text,
+            .se-btn-text {
+
+                font-family: Manrope;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 23.4px;
+            }
+
+            .left-side-img-text {
+                flex-direction: row;
+            }
+
+            .container-let-talk {
+                flex-direction: row;
+            }
+
+            .left-side-img-text {
+                align-items: center;
+            }
+
+            .blue-container {
+                height: 212px;
+            }
+
+            .lets-talk-gota-question {
+                font-size: 35px;
+            }
+
+            .cloud-projects {
+                height: 837px;
+            }
+
+
+            .form_section {
+
+                height: 550px;
+            }
+
+
+            .left-container {
+                height: 500px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: normal;
+                /* margin-left: 15px; */
+                margin-top: 50px;
+            }
+
+            .information_title {
+                font-size: 16px;
+                line-height: 27px;
+
+            }
+
+            .information_text {
+                font-size: 16px;
+                width: 504px;
+            }
+
+            .second-arrow {
+                margin-top: 70px
+            }
+
+            .arrow_section {
+                width: 87.239px;
+                height: 139.295px;
+                flex-shrink: 0;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+
+
+            .cloud-projects-title {
+                font-size: 26px;
+            }
+
+            b,
+            strong {
+                font-size: 26px;
+            }
+
+        }
     </style>
-    <div class="container-max-width">
 
+
+
+    <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
+        <a href="<?= get_field("back_to_home")['url'] ?>"
+            class="d-flex justify-content-center align-items-center gap-2">
+            <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
+                style="width:20px; height:20px; margin:7px 0;" />
+
+            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
+                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
+            <span class="first">Expertises</span>
+            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
+                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
+            <span class="last">Hybird Cloud</span>
+        </a>
+    </div>
+
+
+
+
+
+    <!-- Hero Section -->
+    <div class="container-max-width">
         <img src="<?= get_field("hybridcloud_hero")['url'] ?>" alt="<?= get_field("hybridcloud_hero")['title'] ?>"
-            class="" style="width: 100%; height: 581px; border-radius: 40px; object-fit: cover;" />
+            class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
         <div class=" hero_blue_block">
             <div class="inner_block container">
                 <div class="d-flex align-items-center justify-content-between gap-2">
@@ -810,15 +861,14 @@
                 </div>
             </div>
         </div>
-
     </div>
-
+    <!-- End of Hero Section -->
 
 
 
     <!-- Second Section -->
     <div class="container">
-        <div class="row" style="margin-top:100px;">
+        <div class="row" style="margin-top:50px;">
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="left_col">
                     <div class="left-btn">
@@ -853,10 +903,10 @@
                     <?php
                     foreach (get_field("sue_partner_testimonials") as $sue) {
                         ?>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"
-                        style="width:fit-content;">
-                        <div>
-                            <!-- <div class="d-flex flex-row align-items-center justify-content-evenly partners-container">
+                        <div class="swiper-slide d-flex justify-content-center align-items-center"
+                            style="width:fit-content;">
+                            <div>
+                                <!-- <div class="d-flex flex-row align-items-center justify-content-evenly partners-container">
                                 <a href=" <?= $sue['sue_partners_link']['url'] ?>" class="swiper-title-on-sm"
                                     target="_blank">
                                     <img src="<?= $sue['sue_partners_img']['url'] ?>"
@@ -868,22 +918,22 @@
                                     alt=" <?= $sue['sue_partners_btn']['alt'] ?>" class=""
                                     style="width:4px; height:8px; object-fit:cover " />
                             </div> -->
-                            <a href=" <?= $sue['sue_partners_link']['url'] ?>" class="swiper-title-on-sm"
-                                target="_blank">
-                                <div
-                                    class="d-flex flex-row align-items-center justify-content-evenly partners-container">
-                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                        alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                        style=" width:32px; height:19px; " />
-                                    <?= $sue['sue_partners_link']['title'] ?>
-                                    <img src="<?= $sue['sue_partners_btn']['url'] ?>"
-                                        alt=" <?= $sue['sue_partners_btn']['alt'] ?>" class=""
-                                        style="width:4px; height:8px; object-fit:cover " />
-                                </div>
-                            </a>
+                                <a href=" <?= $sue['sue_partners_link']['url'] ?>" class="swiper-title-on-sm"
+                                    target="_blank">
+                                    <div
+                                        class="d-flex flex-row align-items-center justify-content-evenly partners-container">
+                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                            alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                            style=" width:32px; height:19px; " />
+                                        <?= $sue['sue_partners_link']['title'] ?>
+                                        <img src="<?= $sue['sue_partners_btn']['url'] ?>"
+                                            alt=" <?= $sue['sue_partners_btn']['alt'] ?>" class=""
+                                            style="width:4px; height:8px; object-fit:cover " />
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -899,27 +949,27 @@
             <?php
             foreach (get_field("sue_partner_testimonials") as $sue) {
                 ?>
-            <div class="col-auto">
-                <!-- col-auto width: 365px;-->
-                <a href=" <?= $sue['sue_partners_link']['url'] ?>" target="_blank">
-                    <div style="border-radius:15px; height:99px; margin:35px 0;">
-                        <div class="d-flex flex-row align-items-center justify-content-evenly "
-                            style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width:365px ; height: 61px; ">
-                            <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
+                <div class="col-auto">
+                    <!-- col-auto width: 365px;-->
+                    <a href=" <?= $sue['sue_partners_link']['url'] ?>" target="_blank">
+                        <div style="border-radius:15px; height:99px; margin:35px 0;">
+                            <div class="d-flex flex-row align-items-center justify-content-evenly "
+                                style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width:365px ; height: 61px; ">
+                                <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                    alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                    style="width:56px;height:33px;flex-shrink: 0; object-fit: " />
 
-                            <?= $sue['sue_partners_link']['title'] ?>
-                            <img src="<?= $sue['sue_partners_btn']['url'] ?>"
-                                alt=" <?= $sue['sue_partners_btn']['alt'] ?>" class=""
-                                style="width:4px; height:8px; object-fit:cover " />
+                                <?= $sue['sue_partners_link']['title'] ?>
+                                <img src="<?= $sue['sue_partners_btn']['url'] ?>"
+                                    alt=" <?= $sue['sue_partners_btn']['alt'] ?>" class=""
+                                    style="width:4px; height:8px; object-fit:cover " />
 
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -1022,29 +1072,29 @@
     <div class="container mt-5">
         <div class="row gy-2">
             <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="testimonial-card">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="testimonial-card">
 
 
-                    <div class="d-flex align-items-center gap-2 mb col">
-                        <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
-                        <span class="offering-sub-title"><?= $testimonial["offering_title"] ?></span>
-                    </div>
-                    <h2 class="offering-main-title"> <?= $testimonial["offering_main_title"] ?></h2>
-                    <div class="divider mb-3" style="margin: 15px 1px;"></div>
-                    <p class="offering-text"><?= $testimonial["offering_text"] ?></p>
-                    <a href="<?= $testimonial["offering_link"]['url'] ?>"
-                        class="d-flex align-items-center justify-content-left gap-3" style="margin-top:20px;">
-                        <div
-                            style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                            <img src="<?= $testimonial["offering_img"]['url'] ?>"
-                                alt="<?= $testimonial["offering_img"]['alt'] ?>" style="width: 12px;height: 18px;" />
+                        <div class="d-flex align-items-center gap-2 mb col">
+                            <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
+                            <span class="offering-sub-title"><?= $testimonial["offering_title"] ?></span>
                         </div>
-                        <?= $testimonial["offering_link"]['title'] ?>
-                    </a>
+                        <h2 class="offering-main-title"> <?= $testimonial["offering_main_title"] ?></h2>
+                        <div class="divider mb-3" style="margin: 15px 1px;"></div>
+                        <p class="offering-text"><?= $testimonial["offering_text"] ?></p>
+                        <a href="<?= $testimonial["offering_link"]['url'] ?>"
+                            class="d-flex align-items-center justify-content-left gap-3" style="margin-top:20px;">
+                            <div
+                                style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                <img src="<?= $testimonial["offering_img"]['url'] ?>"
+                                    alt="<?= $testimonial["offering_img"]['alt'] ?>" style="width: 12px;height: 18px;" />
+                            </div>
+                            <?= $testimonial["offering_link"]['title'] ?>
+                        </a>
 
+                    </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </div>
@@ -1060,25 +1110,25 @@
                     <?php
                     foreach (get_field("sue_offering_testimonials") as $sue) {
                         ?>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"
-                        style="width:fit-content;">
-                        <div>
-                            <div
-                                class="d-flex flex-row align-items-center justify-content-evenly sue-offering-container">
-                                <a href=" <?= $sue['sue_offering_link']['url'] ?>" class="swiper-title-on-sm">
-                                    <div
-                                        style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                                        <img src="<?= $sue['sue_offering_img']['url'] ?>"
-                                            alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
-                                            style="width: 12px;height: 18px;" />
-                                    </div>
-                                </a>
-                                <?= $sue['sue_offering_link']['title'] ?>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center"
+                            style="width:fit-content;">
+                            <div>
+                                <div
+                                    class="d-flex flex-row align-items-center justify-content-evenly sue-offering-container">
+                                    <a href=" <?= $sue['sue_offering_link']['url'] ?>" class="swiper-title-on-sm">
+                                        <div
+                                            style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                            <img src="<?= $sue['sue_offering_img']['url'] ?>"
+                                                alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
+                                                style="width: 12px;height: 18px;" />
+                                        </div>
+                                    </a>
+                                    <?= $sue['sue_offering_link']['title'] ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -1094,24 +1144,24 @@
             <?php
             foreach (get_field("sue_offering_testimonials") as $sue) {
                 ?>
-            <div class="col-auto">
-                <a href=" <?= $sue['sue_offering_link']['url'] ?>">
-                    <div style="border-radius:6px; height:99px; margin:35px 0;">
-                        <div class="d-flex flex-row align-items-center justify-content-evenly "
-                            style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width: 356px; height: 65px; ">
-                            <div
-                                style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                                <img src="<?= $sue['sue_offering_img']['url'] ?>"
-                                    alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
-                                    style="width: 12px;height: 18px;" />
+                <div class="col-auto">
+                    <a href=" <?= $sue['sue_offering_link']['url'] ?>">
+                        <div style="border-radius:6px; height:99px; margin:35px 0;">
+                            <div class="d-flex flex-row align-items-center justify-content-evenly "
+                                style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width: 356px; height: 65px; ">
+                                <div
+                                    style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                    <img src="<?= $sue['sue_offering_img']['url'] ?>"
+                                        alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
+                                        style="width: 12px;height: 18px;" />
+                                </div>
+                                <?= $sue['sue_offering_link']['title'] ?>
                             </div>
-                            <?= $sue['sue_offering_link']['title'] ?>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -1186,51 +1236,51 @@
             <!-- Here -->
             <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
                 <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
-                        <img src="<?= $testimonial["test-img"]['url'] ?>" alt="<?= $testimonial['test-img']['alt'] ?>"
-                            class="card-img-top " style="height: 213px; border-radius:20px;" />
-                        <!-- CARD BODY -->
-                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
-                            style="background-color:; overflow:hidden;">
-                            <div class="card-title">
-                                <span><?= $testimonial["test_name"] ?></span>
-                            </div>
-                            <p class="card-text">
-                                <?= $testimonial["test_text"] ?>
-                            </p>
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <p class="industry_title">
-                                    <?= $testimonial["text_industry"] ?>
-                                </p>
-                                <p class="industry">
-                                    <?= $testimonial["test_type"] ?>
-                                </p>
-                            </div>
-
-                            <div class="bottom-border position-absolute"
-                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
-                            </div>
-                        </div>
-                        <!-- END OF CARD BODY -->
-                        <!-- Bejijken btn -->
-                        <div class=" card-body d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
-                                    <img src="<?= $testimonial["img_btn"]['url'] ?>"
-                                        alt="<?= $testimonial["img_btn"]['alt'] ?>"
-                                        style="width: 12px; height: 18px;" />
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
+                            <img src="<?= $testimonial["test-img"]['url'] ?>" alt="<?= $testimonial['test-img']['alt'] ?>"
+                                class="card-img-top " style="height: 213px; border-radius:20px;" />
+                            <!-- CARD BODY -->
+                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                                style="background-color:; overflow:hidden;">
+                                <div class="card-title">
+                                    <span><?= $testimonial["test_name"] ?></span>
                                 </div>
-                                <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
-                                    <?= $testimonial["test_link"]['title'] ?>
-                                </a>
+                                <p class="card-text">
+                                    <?= $testimonial["test_text"] ?>
+                                </p>
+                                <div class="d-flex justify-content-start align-items-center gap-2">
+                                    <p class="industry_title">
+                                        <?= $testimonial["text_industry"] ?>
+                                    </p>
+                                    <p class="industry">
+                                        <?= $testimonial["test_type"] ?>
+                                    </p>
+                                </div>
+
+                                <div class="bottom-border position-absolute"
+                                    style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                                </div>
                             </div>
-                            <img src="<?= $testimonial["knp_img"]['url'] ?>" alt="<?= $testimonial["knp_img"]['alt'] ?>"
-                                style="width: 63px; height: 24px;" />
+                            <!-- END OF CARD BODY -->
+                            <!-- Bejijken btn -->
+                            <div class=" card-body d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                        style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
+                                        <img src="<?= $testimonial["img_btn"]['url'] ?>"
+                                            alt="<?= $testimonial["img_btn"]['alt'] ?>"
+                                            style="width: 12px; height: 18px;" />
+                                    </div>
+                                    <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
+                                        <?= $testimonial["test_link"]['title'] ?>
+                                    </a>
+                                </div>
+                                <img src="<?= $testimonial["knp_img"]['url'] ?>" alt="<?= $testimonial["knp_img"]['alt'] ?>"
+                                    style="width: 63px; height: 24px;" />
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
 
@@ -1300,84 +1350,84 @@
 
         <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
             <?php foreach (get_field("hybrid_cloud_articles_testimonails") as $testimonial) { ?>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
-                    <img src="<?= $testimonial["articles_img"]['url'] ?>"
-                        alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
-                        style="height: 213px; border-radius:20px; #6A7291; " />
-                    <div class="card-body">
-                        <div class="card-title">
-                            <span><?= $testimonial["articles_date"] ?></span>
-                        </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
+                        <img src="<?= $testimonial["articles_img"]['url'] ?>"
+                            alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
+                            style="height: 213px; border-radius:20px; #6A7291; " />
+                        <div class="card-body">
+                            <div class="card-title">
+                                <span><?= $testimonial["articles_date"] ?></span>
+                            </div>
 
 
-                        <div class=" d-flex align-items-center  gap-2 ">
-                            <span class="card-text">
-                                <?= $testimonial["articles_text"] ?>
-                                <!-- Bekijken btn -->
-                                <a href="<?= $testimonial['articles_link']['url'] ?>">
-                                    <img src="<?= $testimonial["articles_btn"]['url'] ?>"
-                                        alt="<?= $testimonial["articles_btn"]['alt'] ?>"
-                                        style="width:4px; height: 8px; margin-left:8px;" />
+                            <div class=" d-flex align-items-center  gap-2 ">
+                                <span class="card-text">
+                                    <?= $testimonial["articles_text"] ?>
+                                    <!-- Bekijken btn -->
+                                    <a href="<?= $testimonial['articles_link']['url'] ?>">
+                                        <img src="<?= $testimonial["articles_btn"]['url'] ?>"
+                                            alt="<?= $testimonial["articles_btn"]['alt'] ?>"
+                                            style="width:4px; height: 8px; margin-left:8px;" />
+                                    </a>
+                                </span>
+                            </div>
+
+
+
+
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <p class="industry_title">
+                                    <?= $testimonial["articles_author"] ?>
+                                </p>
+                                <p class="industry">
+                                    <?= $testimonial["articles_author_name"] ?>
+                                </p>
+                            </div>
+
+
+                            <div class="d-flex justify-content-start align-items-center gap-2" style="flex-wrap: wrap;">
+
+                                <a href="<?= $testimonial['articles_consultancy']['url'] ?>"
+                                    class="d-block articles_page_link">
+
+                                    <?= $testimonial['articles_consultancy']['title'] ?>
                                 </a>
-                            </span>
-                        </div>
+
+
+                                <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>"
+                                    class="d-block articles_page_link">
+
+                                    <?= $testimonial['articales_data_&_ai']['title'] ?>
+                                </a>
+
+
+                                <a href="<?= $testimonial['articales_financieel']['url'] ?> "
+                                    class="d-block articles_page_link">
+
+                                    <?= $testimonial['articales_financieel']['title'] ?>
+                                </a>
 
 
 
+                                <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
+                                    class="d-block articles_page_link">
 
-                        <div class="d-flex justify-content-start align-items-center gap-2">
-                            <p class="industry_title">
-                                <?= $testimonial["articles_author"] ?>
-                            </p>
-                            <p class="industry">
-                                <?= $testimonial["articles_author_name"] ?>
-                            </p>
-                        </div>
+                                    <?= $testimonial['articales_gezondheidszorg']['title'] ?>
+                                </a>
 
 
-                        <div class="d-flex justify-content-start align-items-center gap-2" style="flex-wrap: wrap;">
+                                <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
 
-                            <a href="<?= $testimonial['articles_consultancy']['url'] ?>"
-                                class="d-block articles_page_link">
+                                    <?= $testimonial['articales_ecss']['title'] ?>
+                                </a>
 
-                                <?= $testimonial['articles_consultancy']['title'] ?>
-                            </a>
-
-
-                            <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>"
-                                class="d-block articles_page_link">
-
-                                <?= $testimonial['articales_data_&_ai']['title'] ?>
-                            </a>
-
-
-                            <a href="<?= $testimonial['articales_financieel']['url'] ?> "
-                                class="d-block articles_page_link">
-
-                                <?= $testimonial['articales_financieel']['title'] ?>
-                            </a>
-
-
-
-                            <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
-                                class="d-block articles_page_link">
-
-                                <?= $testimonial['articales_gezondheidszorg']['title'] ?>
-                            </a>
-
-
-                            <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
-
-                                <?= $testimonial['articales_ecss']['title'] ?>
-                            </a>
+                            </div>
 
                         </div>
 
                     </div>
-
                 </div>
-            </div>
             <?php } ?>
         </div>
 
@@ -1744,35 +1794,35 @@
                     <?php
                     foreach (get_field("arrow_section") as $testimonails) {
                         ?>
-                    <div class="col-lg" style="border-radius:15px;   height:99px; margin-top:35px 0;">
-                        <div class="d-flex  align-items-center justify-content-around gap-4">
-                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
-                                class="arrow_section" />
+                        <div class="col-lg" style="border-radius:15px;   height:99px; margin-top:35px 0;">
+                            <div class="d-flex  align-items-center justify-content-around gap-4">
+                                <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                    class="arrow_section" />
 
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
 
@@ -1789,35 +1839,35 @@
                     <?php
                     foreach (get_field("arrow_section_secondm_row") as $testimonails) {
                         ?>
-                    <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
-                        <div class="d-flex  align-items-center justify-content-around  gap-4">
-                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
-                                class="arrow_section" />
+                        <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
+                            <div class="d-flex  align-items-center justify-content-around  gap-4">
+                                <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex " />
+                                <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex " />
 
-                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                    class="arrow_section" />
 
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -1853,117 +1903,117 @@
 
     <!--  sue-partners-swiper -->
     <script>
-    let swipersue2 = new Swiper('.sue-partners-swiper2', {
-        slidesPerView: 1.5,
-        grabCursor: true,
-        spaceBetween: 1,
+        let swipersue2 = new Swiper('.sue-partners-swiper2', {
+            slidesPerView: 1.5,
+            grabCursor: true,
+            spaceBetween: 1,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-
-            360: {
-                slidesPerView: 1.5,
-                spaceBetween: 1,
-
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
 
-            412: {
-                slidesPerView: 1.7,
-                spaceBetween: 1,
+            breakpoints: {
 
-            },
+                360: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 1,
 
-            540: {
-                slidesPerView: 2.5,
-                spaceBetween: 1,
+                },
 
-            },
+                412: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 1,
 
-            556: {
-                slidesPerView: 3,
+                },
+
+                540: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 1,
+
+                },
+
+                556: {
+                    slidesPerView: 3,
 
 
-                spaceBetween: 1,
-            },
-            992: {
+                    spaceBetween: 1,
+                },
+                992: {
 
-                slidesPerView: 3,
-                spaceBetween: 1,
-            },
-            1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 1,
+                },
+                1024: {
 
-                slidesPerView: 3,
-                spaceBetween: 1,
+                    slidesPerView: 3,
+                    spaceBetween: 1,
+                }
+
+
             }
-
-
-        }
-    })
+        })
     </script>
 
 
     <script>
-    let swipersue3 = new Swiper('.sue-offering-swiper3', {
-        slidesPerView: 1.5,
-        grabCursor: true,
-        spaceBetween: 1,
+        let swipersue3 = new Swiper('.sue-offering-swiper3', {
+            slidesPerView: 1.5,
+            grabCursor: true,
+            spaceBetween: 1,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-
-            360: {
-                slidesPerView: 1.3,
-                spaceBetween: 1,
-
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            412: {
-                slidesPerView: 1.5,
-                spaceBetween: 1,
-
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
 
-            540: {
-                slidesPerView: 2,
-                spaceBetween: 1,
+            breakpoints: {
 
-            },
+                360: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 1,
 
-            556: {
-                slidesPerView: 2.7,
+                },
+                412: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 1,
+
+                },
+
+                540: {
+                    slidesPerView: 2,
+                    spaceBetween: 1,
+
+                },
+
+                556: {
+                    slidesPerView: 2.7,
 
 
-                spaceBetween: 1,
-            },
-            992: {
+                    spaceBetween: 1,
+                },
+                992: {
 
-                slidesPerView: 2.7,
-                spaceBetween: 1,
-            },
-            1024: {
+                    slidesPerView: 2.7,
+                    spaceBetween: 1,
+                },
+                1024: {
 
-                slidesPerView: 3,
-                spaceBetween: 1,
+                    slidesPerView: 3,
+                    spaceBetween: 1,
+                }
+
+
             }
-
-
-        }
-    })
+        })
     </script>
 
 </main>
