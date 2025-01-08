@@ -148,17 +148,24 @@
 }
 
 .email-field-container input[type="email"] {
-  width: 356px !important;
+  // width: 356px !important;
+  width: 316px !important;
   height: 48px !important;
   padding-right: 100px !important;
   box-sizing: border-box !important;
   border-radius: 8px !important;
+  position: absolute !important;
+  // top: 0px;
+  // right: 39px;
 }
 
 .email-field-container .submit-btn {
-  position: absolute;
-  right: 65px !important;
-  top: 6px;
+  // position: absolute;
+  // right: 65px !important;
+  // top: 6px;
+  position: relative !important;
+  top: 0px;
+  left: 211px;
   bottom: 0;
   height: 36px;
   border: none;

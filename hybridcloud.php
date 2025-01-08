@@ -5,6 +5,14 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+        .cloud-projects-row {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+
+
         .container-max-width {
             border-radius: 30px;
             max-width: 1700px;
@@ -88,7 +96,8 @@
             height: 471px;
             max-width: 1700px;
             padding: 30px;
-            margin: 150px auto 100px;
+            /* margin: 150px auto 100px; */
+            margin: 50px auto 10px;
         }
 
         .hero_blue_block {
@@ -180,7 +189,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: 39px;
-            margin: 30px 0px;
+            margin: 10px 0px;
         }
 
 
@@ -212,7 +221,8 @@
             background: #274083;
             max-width: 1700px;
             /* flex-direction: column; */
-            margin: 150px auto 100px;
+            /* margin: 150px auto 100px; */
+            margin: 20px auto;
         }
 
 
@@ -328,7 +338,8 @@
             border-radius: 15px;
             background-color: #FFF;
             /* max-width: 356px; */
-            margin: 15px 0;
+            /* margin: 15px 0; */
+            margin: 10px 0;
             /* padding: 27px; */
             /* height: 337px; */
             padding: 27px 40px;
@@ -405,7 +416,8 @@
             padding: 16px;
             margin-top: 50px;
             height: 2050px;
-            margin: 150px auto 100px;
+            /* margin: 150px auto 100px; */
+            margin: 50px auto 10px;
         }
 
 
@@ -414,7 +426,7 @@
         .cloud-projects-title {
             color: #25325F;
             font-family: Manrope;
-            font-size: 16px;
+            font-size: 26px;
             font-style: normal;
             font-weight: 700;
             line-height: 39px;
@@ -426,10 +438,13 @@
         .view-all-link {
             color: #25325F;
             font-family: Manrope;
-            font-size: 13px;
+            font-size: 26px;
             font-style: normal;
             font-weight: 600;
             line-height: 15.6px;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
         }
 
 
@@ -461,7 +476,7 @@
             font-weight: 700;
             line-height: 23.4px;
             text-align: center;
-            margin: 26px 0px;
+            margin: 16px 0px;
         }
 
 
@@ -529,7 +544,7 @@
             /* margin: 150px auto; */
             max-width: 1700px;
             height: 1471px;
-            margin: 150px auto 100px;
+            margin: 50px auto 50px;
 
         }
 
@@ -550,8 +565,6 @@
             gap: 20px;
             /* margin-left: 15px; */
         }
-
-
 
         .information_title {
             color: #25325F;
@@ -574,25 +587,12 @@
             width: 326px;
         }
 
-
-
-
         .arrow_section {
 
             width: 57.851px;
             height: 92.371px;
             flex-shrink: 0;
         }
-
-
-
-
-
-
-
-
-
-
 
 
         @media (min-width: 768px) {
@@ -665,10 +665,41 @@
             }
 
 
+            .view-all-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 21px;
 
+            }
+
+            .cloud-projects-title {
+                font-size: 23px;
+            }
+
+            b,
+            strong {
+                font-size: inherit;
+            }
         }
 
         @media (min-width: 992px) {
+
+            .cloud-projects-row {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+            }
+
+
+            .view-all-link {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 13px;
+
+            }
 
             .img-on-blue-block {
                 height: 589px;
@@ -799,7 +830,7 @@
 
             b,
             strong {
-                font-size: 26px;
+                font-size: inherit;
             }
 
         }
@@ -881,8 +912,7 @@
                         <?= get_field("left_text") ?></span>
                 </div>
             </div>
-            <div class="col-lg-1 d-md-none d-none"></div>
-
+            <div class="d-none d-md-none d-lg-block col-lg-1"></div>
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col">
                     <span class="right-text">
@@ -896,7 +926,8 @@
 
 
     <!--Sue_Partners Repeater  Swiper On Small -->
-    <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
+    <div class="partners" style="margin-top:25px; margin-bottom:;">
+        <!-- margin-bottom: 60px -->
         <div class="position-relative d-block d-lg-none align-items-center  ">
             <div class="swipersue2 sue-partners-swiper2 ">
                 <div class="swiper-wrapper">
@@ -906,18 +937,7 @@
                         <div class="swiper-slide d-flex justify-content-center align-items-center"
                             style="width:fit-content;">
                             <div>
-                                <!-- <div class="d-flex flex-row align-items-center justify-content-evenly partners-container">
-                                <a href=" <?= $sue['sue_partners_link']['url'] ?>" class="swiper-title-on-sm"
-                                    target="_blank">
-                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                        alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                        style=" width:32px; height:19px; " />
-                                </a>
-                                <?= $sue['sue_partners_link']['title'] ?>
-                                <img src="<?= $sue['sue_partners_btn']['url'] ?>"
-                                    alt=" <?= $sue['sue_partners_btn']['alt'] ?>" class=""
-                                    style="width:4px; height:8px; object-fit:cover " />
-                            </div> -->
+
                                 <a href=" <?= $sue['sue_partners_link']['url'] ?>" class="swiper-title-on-sm"
                                     target="_blank">
                                     <div
@@ -943,9 +963,10 @@
 
 
     <!-- Sue_Partners Repeater On LG -->
-    <div class="container">
+    <div class="container mt-5">
         <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-            style="margin-top:40px; margin-bottom:14px;">
+            style=" margin-bottom:;">
+            <!-- margin-top:40px; margin-bottom:14px; -->
             <?php
             foreach (get_field("sue_partner_testimonials") as $sue) {
                 ?>
@@ -1028,8 +1049,9 @@
 
     <!-- Fifth Section -->
     <div class="container">
-        <div class="row" style="margin-top:100px;">
-            <div class="col-12 col-md-6 col-lg-6">
+        <div class="row mt-5">
+            <!-- style="margin-top:100px;" -->
+            <div class="col-12 col-md-6 col-lg-5">
                 <div class="left_col2">
                     <div class="left-btn">
                         <?= get_field("left_btn_title") ?>
@@ -1041,25 +1063,15 @@
 
                     <span class="left2-text" style="">
                         <?= get_field("f_text_on_left") ?></span>
-                    <span class="left2-text" style="">
-                        <?= get_field("se_left_on_text") ?></span>
                 </div>
             </div>
+            <div class="d-none d-md-none d-lg-block col-lg-1"></div>
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col2">
                     <span class="right2-text">
                         <?= get_field("f_text_on_right") ?>
                     </span>
-                    <span class="right2-text">
-                        <?= get_field("se_text_on_right") ?>
-                    </span>
-                    <span class="right2-text">
-                        <?= get_field("third_text_on_right") ?>
-                    </span>
-
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -1067,15 +1079,12 @@
 
 
 
-
     <!-- Testimonials Section on All Screens -->
-    <div class="container mt-5">
+    <div class="container mt-2">
         <div class="row gy-2">
             <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
                 <div class="col-12 col-md-6 col-lg-6">
                     <div class="testimonial-card">
-
-
                         <div class="d-flex align-items-center gap-2 mb col">
                             <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
                             <span class="offering-sub-title"><?= $testimonial["offering_title"] ?></span>
@@ -1092,7 +1101,6 @@
                             </div>
                             <?= $testimonial["offering_link"]['title'] ?>
                         </a>
-
                     </div>
                 </div>
             <?php } ?>
@@ -1102,8 +1110,8 @@
 
 
 
-    <!--Sue_Offering Repeater  Swiper On Small -->
-    <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
+    <!--Sue_Offering Repeater  Swiper On Small  margin-bottom: 60px;-->
+    <div class="partners" style="margin-top:20px; margin-bottom: ; ">
         <div class="position-relative d-block d-lg-none align-items-center  ">
             <div class="swipersue3 sue-offering-swiper3 ">
                 <div class="swiper-wrapper">
@@ -1139,8 +1147,8 @@
 
     <!-- Sue_Offering Repeater On LG -->
     <div class="container">
-        <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-            style="margin-top:40px; margin-bottom:14px;">
+        <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between" style="">
+            <!-- margin-top:40px; margin-bottom:14px; -->
             <?php
             foreach (get_field("sue_offering_testimonials") as $sue) {
                 ?>
@@ -1213,15 +1221,16 @@
     <!--cloud-projects Section  -->
     <div class="cloud-projects">
         <div class="container">
-            <div class="row">
-                <div class="col-6 col-lg-6">
+            <div class="row cloud-projects-row mt-2">
+                <div class="col-12 col-lg-6">
                     <span class="cloud-projects-title">
                         <?= get_field("cloud_projects_title") ?>
                     </span>
                 </div>
-                <div class="col-6 col-lg-6">
+                <div class="col-12 col-lg-6">
                     <a href="<?= get_field("view_all_link")['url'] ?>"
-                        class="d-flex justify-content-end align-items-center gap-2 view-all-link">
+                        class="d-flex  align-items-center gap-2 view-all-link">
+                        <!-- justify-content-end -->
                         <div class="view-btn">
                             <img src="<?= get_field("view_btn")['url'] ?>" alt="<?= get_field("view_btn")['alt'] ?>"
                                 style="width:12px; height:18px; margin:7px 0;" />
@@ -1231,9 +1240,6 @@
 
                 </div>
             </div>
-
-
-            <!-- Here -->
             <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
                 <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
                     <div class="col-12 col-md-6 col-lg-4">
@@ -1289,11 +1295,11 @@
 
 
     <!--Why-Sue  Section -->
-    <div class="container" style="margin-top:150px;">
+    <div class="container">
 
-        <div class="row">
-            <div class="col-12 col-lg-5 ">
-                <div class="d-flex flex-column  justify-content-center align-items-start gap-5">
+        <div class="row " style="margin-top:50px;">
+            <div class="col-12 col-md-6 col-lg-5 ">
+                <div class="d-flex flex-column  justify-content-center align-items-start gap-3">
                     <span class="left-btn"><?= get_field("why_sue_sub_title") ?></span>
                     <span class="why-sue-title"><?= get_field("why_sue_title") ?></span>
                     <span class="why-sue-text1"><?= get_field("why_sue_text") ?> </span>
@@ -1312,28 +1318,24 @@
             </div>
             <div class=" col-lg-1"></div>
 
-            <div class="col-12 col-lg-6 mt-5">
-
+            <div class="col-12 col-lg-6 ">
                 <span class="why-sue-text"><?= get_field("why_sue_first_right_text") ?></span>
-                <span class="why-sue-text"><?= get_field("why_sue_sec_right_text") ?></span>
             </div>
         </div>
     </div>
 
 
     <!-- Related Hybird Cloud articles -->
-    <div class="container" style="margin-top:150px;">
-        <div class="row">
-            <div class="col-6 col-lg-6">
-
+    <div class="container" style="margin-top:50px;">
+        <div class="row cloud-projects-row">
+            <div class="col-12 col-md-6 col-lg-6">
                 <span class="cloud-projects-title">
                     <?= get_field("related_hybrid_cloud_articles_title") ?>
                 </span>
-
             </div>
-            <div class="col-6 col-lg-6">
+            <div class="col-12  col-md-6  col-lg-6">
                 <a href="<?= get_field("niew_all_our_knowledge_link")['url'] ?>"
-                    class="d-flex justify-content-end align-items-center gap-2 view-all-link" target="_blank">
+                    class="d-flex align-items-center gap-2 view-all-link" target="_blank">
                     <div class="view-btn">
                         <img src="<?= get_field("niew_all_our_knowledge_btn")['url'] ?>"
                             alt="<?= get_field("niew_all_our_knowledge_btn")['alt'] ?>"
@@ -1354,17 +1356,17 @@
                     <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
                         <img src="<?= $testimonial["articles_img"]['url'] ?>"
                             alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
-                            style="height: 213px; border-radius:20px; #6A7291; " />
-                        <div class="card-body">
+                            style="height: 213px; border-radius:20px; " />
+
+                        <!-- CARD BODY -->
+                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                            style="background-color:; overflow:hidden;">
                             <div class="card-title">
                                 <span><?= $testimonial["articles_date"] ?></span>
                             </div>
-
-
                             <div class=" d-flex align-items-center  gap-2 ">
                                 <span class="card-text">
                                     <?= $testimonial["articles_text"] ?>
-                                    <!-- Bekijken btn -->
                                     <a href="<?= $testimonial['articles_link']['url'] ?>">
                                         <img src="<?= $testimonial["articles_btn"]['url'] ?>"
                                             alt="<?= $testimonial["articles_btn"]['alt'] ?>"
@@ -1372,11 +1374,7 @@
                                     </a>
                                 </span>
                             </div>
-
-
-
-
-                            <div class="d-flex justify-content-start align-items-center gap-2">
+                            <div class="d-flex justify-content-start align-items-center gap-2" style="margin-top:15px;">
                                 <p class="industry_title">
                                     <?= $testimonial["articles_author"] ?>
                                 </p>
@@ -1384,48 +1382,32 @@
                                     <?= $testimonial["articles_author_name"] ?>
                                 </p>
                             </div>
-
-
-                            <div class="d-flex justify-content-start align-items-center gap-2" style="flex-wrap: wrap;">
-
-                                <a href="<?= $testimonial['articles_consultancy']['url'] ?>"
-                                    class="d-block articles_page_link">
-
-                                    <?= $testimonial['articles_consultancy']['title'] ?>
-                                </a>
-
-
-                                <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>"
-                                    class="d-block articles_page_link">
-
-                                    <?= $testimonial['articales_data_&_ai']['title'] ?>
-                                </a>
-
-
-                                <a href="<?= $testimonial['articales_financieel']['url'] ?> "
-                                    class="d-block articles_page_link">
-
-                                    <?= $testimonial['articales_financieel']['title'] ?>
-                                </a>
-
-
-
-                                <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
-                                    class="d-block articles_page_link">
-
-                                    <?= $testimonial['articales_gezondheidszorg']['title'] ?>
-                                </a>
-
-
-                                <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
-
-                                    <?= $testimonial['articales_ecss']['title'] ?>
-                                </a>
-
+                            <div class="bottom-border position-absolute"
+                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
                             </div>
-
                         </div>
-
+                        <!-- END OF CARD BODY -->
+                        <!-- Bekijken btn -->
+                        <div class="card-body d-flex justify-content-start align-items-center gap-2"
+                            style="flex-wrap: wrap;">
+                            <a href="<?= $testimonial['articles_consultancy']['url'] ?>" class="d-block articles_page_link">
+                                <?= $testimonial['articles_consultancy']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>" class="d-block articles_page_link">
+                                <?= $testimonial['articales_data_&_ai']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_financieel']['url'] ?> "
+                                class="d-block articles_page_link">
+                                <?= $testimonial['articales_financieel']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
+                                class="d-block articles_page_link">
+                                <?= $testimonial['articales_gezondheidszorg']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
+                                <?= $testimonial['articales_ecss']['title'] ?>
+                            </a>
+                        </div>
                     </div>
                 </div>
             <?php } ?>
@@ -1438,14 +1420,14 @@
 
     <!-- Form Section   container  -->
     <div class="form_section">
-        <!-- container -->
-        <div class="container">
+
+        <div div class="container">
             <div class="row">
                 <div class=" col-12 col-lg-3">
                     <div class="left-container">
                         <div class="left-content">
                             <img src="<?= get_field("form_img")['url'] ?>" alt="<?= get_field("form_img")['alt'] ?>"
-                                style="max-width:72px; height:72px; border-radius:15px; object-fit:cover" />
+                                style="width:120px; height:120px; border-radius:15px; object-fit:cover" />
                             <div class="d-flex flex-column">
                                 <span class="first-name" style=" "><?= get_field("first_name") ?></span>
                                 <span
@@ -1549,7 +1531,7 @@
                     </span>
                 </div>
                 <!-- Second Row -->
-                <div class="row" style="margin:50px 0;">
+                <div class="row" style="margin:35px 0;">
                     <div class="col-lg-4 ">
                         <!-- accordion -->
                         <div class=" d-block d-lg-none" id="accordionExample">
@@ -1579,7 +1561,7 @@
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body ">
                                         <div class="d-flex flex-column align-items-flex-start ">
-                                            ack <span
+                                            <span
                                                 style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
                                                 <?= get_field("e_mail") ?>
                                             </span>
@@ -1590,7 +1572,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
                             </div>
                             <!-- Second Item -->
                             <div class="accordion-item">
@@ -1625,9 +1607,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
                             </div>
-                            <!-- 3 -->
+
                             <!-- Third Item -->
                             <div class="accordion-item">
                                 <div class="d-flex flex-row align-items-center justify-content-between gap-3">
@@ -1674,7 +1656,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:30px 0; ">
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
                             </div>
                         </div>
                         <!-- LG -->
@@ -1716,7 +1698,7 @@
                                 </span>
                             </div>
                             <div class="d-flex flex-row align-items-center gap-2">
-                                <span> <?= get_field("vat") ?></span>
+                                <!-- <span> <?= get_field("vat") ?></span> -->
                                 <span> <?= get_field("account_num") ?></span>
                             </div>
                         </div>
@@ -1727,8 +1709,6 @@
             <!-- Gap between -->
             <div class="d-none d-lg-flex col-lg-2"></div>
 
-
-            <!-- Newsletters -->
             <!-- Newsletters -->
             <div class="col-12 col-lg-4">
                 <div>
@@ -1753,7 +1733,7 @@
                             <!-- <button type="submit" class="submit-btn">Submit</button> -->
 
 
-                            <!-- Let's talk btn -->
+                            <!-- Btn & text -->
                             <div class="d-flex justify-content-between align-items-center gap-2 submit-btn"
                                 style="height:39.261px;padding: 12px 15px; border-radius: 8px;background: #274083 !important;">
                                 <a href="<?= get_field("submit_link")['url'] ?>" target="_blank"
@@ -1764,10 +1744,6 @@
                                     <?= get_field("submit_link")['title'] ?>
                                 </a>
                             </div>
-
-
-
-
 
                         </div>
 

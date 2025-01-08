@@ -371,7 +371,8 @@
 
         /*  */
         .block_blue {
-            height: 2000.03px;
+            /* height: 2000.03px; */
+            height: 1974px;
             border-radius: 40px;
             background: #25325F;
             margin: 50px auto;
@@ -624,10 +625,7 @@
             }
 
 
-            /* .left-text,
-        .right-text {
-            width: 504px;
-        } */
+
 
             .block_blue {
 
@@ -868,6 +866,7 @@
                             <img src="<?= $testimonial["clients_img"]['url'] ?>"
                                 alt="<?= $testimonial['clients_img']['alt'] ?>" class="card-img-top "
                                 style="height: 213px; border-radius:20px;" />
+
                             <!-- CARD BODY -->
                             <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
                                 style="background-color:; overflow:hidden;">
@@ -1338,7 +1337,7 @@
     <!-- New Section -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-lg-6 ">
+            <div class="col-12 col-lg-6">
                 <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                     <span class="information_title" style="">
                         <?= get_field("information_title") ?>
@@ -1427,7 +1426,7 @@
                             </div>
                             <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
                             </div>
-                            <!-- 3 -->
+
                             <!-- Third Item -->
                             <div class="accordion-item">
                                 <div class="d-flex flex-row align-items-center justify-content-between gap-3">
@@ -1527,8 +1526,10 @@
             <div class="d-none d-lg-flex col-lg-2"></div>
             <!-- Newsletters -->
             <div class="col-12 col-lg-4">
-                <div style="display:flex;flex-direction: column; align-items: flex-start;  ">
-                    <div class="d-flex flex-column align-items-flex-start newsletter-container">
+                <div>
+                    <!-- style="display:flex;flex-direction: column; align-items: flex-start;  " -->
+                    <div class="d-flex flex-column newsletter-container gap-2">
+                        <!-- d-flex flex-column align-items-flex-start newsletter-container -->
                         <!-- Logo -->
                         <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
@@ -1542,15 +1543,26 @@
                         <!-- <div>
                             <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="3" title="false" ]')) ?>
                         </div> -->
-                        <div class="email-field-container">
-                            <input type="email" id="email" name="email" placeholder="Email address" required>
+                        <div class="email-field-container" style="margin:20px 0;">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
                             <!-- Btn & text -->
-                            <button type="submit"
+                            <!-- <button type="submit"
                                 class="submit-btn d-flex justify-content-center align-items-center gap-2"> <img
                                     src="<?= get_field("subscribe_btn")['url'] ?>"
                                     alt="<?= get_field("subscribe_btn")['alt'] ?>"
                                     style="width:12px; height:18px; margin:7px 0;" />Subscribe
-                            </button>
+                            </button> -->
+
+                            <div class="d-flex justify-content-between align-items-center gap-2 submit-btn"
+                                style="height:39.261px;padding: 12px 15px; border-radius: 8px;background: #274083 !important;">
+                                <a href="<?= get_field("submit_link")['url'] ?>" target="_blank"
+                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px;   justify-content: center; text-decoration: none; ">
+                                    <img src="<?= get_field("submit_img")['url'] ?>"
+                                        alt="<?= get_field("submit_img")['alt'] ?>"
+                                        style="width: 12px; height: 18px;" />
+                                    <?= get_field("submit_link")['title'] ?>
+                                </a>
+                            </div>
                         </div>
 
                         <span
