@@ -762,8 +762,9 @@
                         <img src="<?= $testimonial["clients_img"]['url'] ?>"
                             alt="<?= $testimonial['clients_img']['alt'] ?>" class="card-img-top "
                             style="height: 213px; border-radius:20px;" />
-                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10"
-                            style="border-raduis:30px 30px 0 0; border-bottom:1px solid #dee2e6;">
+                        <!-- CARD BODY -->
+                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                            style="background-color:; overflow:hidden;">
                             <div class="card-title">
                                 <span><?= $testimonial["clients_name"] ?></span>
                             </div>
@@ -778,12 +779,11 @@
                                     <?= $testimonial["industry"] ?>
                                 </p>
                             </div>
-
-                            <!-- Bejijken btn -->
-
+                            <div class="bottom-border position-absolute"
+                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                            </div>
                         </div>
-
-
+                        <!-- END OF CARD BODY -->
                         <!-- Bejijken btn -->
                         <div class=" card-body d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center gap-2">
@@ -824,7 +824,7 @@
                     </p>
 
                     <!-- Talk to an export btn -->
-                    <div class="d-flex justify-content-between align-items-center gap-2"
+                    <div class="d-flex justify-content-between align-items-center gap-2" non
                         style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
                         <a href="<?= get_field("talk_to_an_expert_btn")['url'] ?>"
                             style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">

@@ -1188,13 +1188,11 @@
                 <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
-                        <div style="position: relative;">
-                            <img src="<?= $testimonial["test-img"]['url'] ?>"
-                                alt="<?= $testimonial['test-img']['alt'] ?>" class="card-img-top"
-                                style="height: 213px; border-radius: 20px 20px 0 0;" />
-                        </div>
-                        <div class="card-body"
-                            style="border: 1px solid #CBCFDE; border-top: none; border-radius: 0 0 20px 20px;">
+                        <img src="<?= $testimonial["test-img"]['url'] ?>" alt="<?= $testimonial['test-img']['alt'] ?>"
+                            class="card-img-top " style="height: 213px; border-radius:20px;" />
+                        <!-- CARD BODY -->
+                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                            style="background-color:; overflow:hidden;">
                             <div class="card-title">
                                 <span><?= $testimonial["test_name"] ?></span>
                             </div>
@@ -1209,11 +1207,17 @@
                                     <?= $testimonial["test_type"] ?>
                                 </p>
                             </div>
+
+                            <div class="bottom-border position-absolute"
+                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                            </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mt-4">
+                        <!-- END OF CARD BODY -->
+                        <!-- Bejijken btn -->
+                        <div class=" card-body d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center gap-2">
                                 <div class="d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px; border-radius: 8px; background: #274083;">
+                                    style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
                                     <img src="<?= $testimonial["img_btn"]['url'] ?>"
                                         alt="<?= $testimonial["img_btn"]['alt'] ?>"
                                         style="width: 12px; height: 18px;" />
