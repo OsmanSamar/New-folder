@@ -5,6 +5,13 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+        .name-class {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
         .cloud-projects-row {
             display: flex;
             flex-direction: column;
@@ -20,7 +27,7 @@
             margin: 200px auto 10px;
         }
 
-        .container-max-width img {
+        .container-max-width .container-img {
             display: none;
         }
 
@@ -397,8 +404,12 @@
             display: flex;
             /* align-items: center; */
             gap: 1rem;
-            justify-content: flex-start;
-            flex-direction: column;
+            /* justify-content: flex-start;
+            flex-direction: column; */
+            justify-content: center;
+            flex-direction: row;
+            align-items: flex-start;
+
         }
 
 
@@ -599,7 +610,7 @@
 
 
             .hero_blue_block {
-                width: 531px;
+                width: 458px;
                 position: relative;
                 bottom: 582px;
                 left: 0;
@@ -614,7 +625,7 @@
             }
 
 
-            .container-max-width img {
+            .container-max-width .container-img {
                 display: block;
             }
 
@@ -681,9 +692,19 @@
             strong {
                 font-size: inherit;
             }
+
+            .inner_block {
+
+                margin: unset;
+            }
         }
 
         @media (min-width: 992px) {
+            .name-class {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
 
             .cloud-projects-row {
                 display: flex;
@@ -715,16 +736,13 @@
             .hero_blue_block {
                 width: 531px;
                 position: relative;
-                /* bottom: 430px; */
                 bottom: 580px;
                 left: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                /* justify-content: left; */
                 justify-content: center;
                 padding: 30px;
-                /* height: 584.608px; */
                 height: 100%;
                 margin-top: unset;
 
@@ -833,6 +851,11 @@
                 font-size: inherit;
             }
 
+            .inner_block {
+
+                margin: 10px 60px;
+            }
+
         }
     </style>
 
@@ -860,7 +883,7 @@
     <!-- Hero Section -->
     <div class="container-max-width">
         <img src="<?= get_field("hybridcloud_hero")['url'] ?>" alt="<?= get_field("hybridcloud_hero")['title'] ?>"
-            class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
+            class="container-img" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
         <div class=" hero_blue_block">
             <div class="inner_block container">
                 <div class="d-flex align-items-center justify-content-between gap-2">
@@ -1183,7 +1206,8 @@
                 <img src="<?= get_field('lets_talk_img')['url'] ?>" alt="<?= get_field('lets_talk_img')['alt'] ?>"
                     style="width: 110px;height: 110px; border:15px;">
                 <div>
-                    <div class="d-flex align-items-center">
+                    <div class=" name-class ">
+                        <!-- align-items-center -->
                         <span class="first-name"
                             style="display: block; color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:27.2px "><?= get_field('lets_talk_first_name') ?></span>
                         <span class="lets-talk-title"

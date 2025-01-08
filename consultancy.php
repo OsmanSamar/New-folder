@@ -130,7 +130,7 @@
 
 
 
-        .container-max-width img {
+        .container-max-width .container-img {
             display: none;
         }
 
@@ -382,9 +382,11 @@
 
         .client-consultancy-container {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            /* align-items: center;
+            justify-content: space-between; */
             flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
 
 
         }
@@ -398,16 +400,13 @@
             font-style: normal;
             font-weight: 700;
             line-height: 150%;
-            /* margin-top: 83px; */
-            margin-top: 83px;
+
+            margin-top: 50px;
             margin-bottom: 10px;
 
         }
 
-        .client-consultancy-link {
-            /* margin-top: 83px; */
-            /* margin-top: 69px; */
-        }
+
 
 
         .inner_block2 {
@@ -544,15 +543,38 @@
             width: 326px;
         }
 
+        .client-consultancy-link {
+            color: white;
+            font-size: 26px;
+        }
+
         @media (min-width: 768px) {
 
+            .client-consultancy-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+            }
 
-            .container-max-width img {
+            .inner_block {
+
+                margin: unset;
+            }
+
+            .client-consultancy-link {
+                margin-top: 50px;
+                font-size: 26px;
+
+            }
+
+
+            .container-max-width .container-img {
                 display: block;
             }
 
             .hero_blue_block {
-                width: 531px;
+                width: 458px;
                 position: relative;
                 bottom: 582px;
                 left: 0;
@@ -584,10 +606,17 @@
 
 
         @media (min-width: 992px) {
+
+            .inner_block {
+
+                margin: 10px 60px;
+            }
+
             .client-consultancy-link {
                 margin-top: 83px;
                 margin-bottom: 10px;
                 /* margin-top: 69px; */
+                font-size: 16px;
             }
 
 
@@ -727,7 +756,7 @@
     <!-- Hero Section -->
     <div class="container-max-width">
         <img src="<?= get_field("consultancy_hero")['url'] ?>" alt="<?= get_field("consultancy_hero")['title'] ?>"
-            class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
+            class="container-img" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
         <div class="hero_blue_block">
             <div class="container inner_block">
                 <div style="width:192px;height:100px;">
@@ -819,7 +848,8 @@
 
 
 
-                <div class=" d-flex flex-row align-items-center justify-content-end gap-3 " style="color:white;">
+                <div class=" d-flex flex-row align-items-center justify-content-end gap-3 client-consultancy-link"
+                    style=" ">
 
                     <a href="<?= get_field("clients_about_our_consultancy_link")['url'] ?>"
                         style="background-color:white; height:30px; width:30px; border-radius:8px; "
