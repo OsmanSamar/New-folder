@@ -18,7 +18,8 @@
     <style>
     /* Navbar dropdown styles */
     .navbar-nav .dropdown-menu {
-        position: absolute;
+        /* position: absolute; */
+        position: fixed;
         top: -100%;
         /* Start hidden above the page */
         left: 0;
@@ -28,34 +29,45 @@
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease-in-out;
+        /* left: 50%;
+        transform: translateX(-50%); */
+        background-color: red;
+
     }
 
-    .navbar-nav .dropdown:hover .dropdown-menu {
+    /* .navbar-nav .dropdown:hover .dropdown-menu {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+    } */
+
+    .navbar-nav .dropdown-menu.show {
         top: 100%;
         /* Drop down from the navbar */
         opacity: 1;
         visibility: visible;
+        /* transform: translateX(-50%); */
+        width: 100%;
     }
 
     .dropdown-menu .dropdown-item {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2px;
-        /* Spacing between elements */
-        border-right: 1px solid #ddd;
-        height: 100px;
+        /* align-items: center; */
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 10px 36px;
+        height: 100%;
+        flex-grow: 1;
         /* Divider between items */
-        /* padding: 30px; */
-        min-width: 150px;
+        border-right: 1px solid #cbcfde;
     }
 
     /* .dropdown-menu .dropdown-item:last-child {
         border-right: none;
     } */
 
-    .dropdown-menu .dropdown-item h4 {
+    /* .dropdown-menu .dropdown-item h4 {
         font-size: 16px;
         font-weight: bold;
         margin: 0;
@@ -65,9 +77,9 @@
         font-size: 14px;
         margin: 0;
         color: #666;
-    }
+    } */
 
-    .dropdown-menu .dropdown-item button {
+    /* .dropdown-menu .dropdown-item button {
         background-color: #E94271;
         color: #fff;
         border: none;
@@ -79,12 +91,12 @@
 
     .dropdown-menu .dropdown-item button:hover {
         background-color: #c0365a;
-    }
+    } */
 
     /* Add spacing between dropdown items */
     .dropdown-menu {
-        gap: 2px;
-        padding: 80px 250px;
+        /* gap: 2px; */
+        padding: 80px 450px;
         background-color: #FFF;
     }
     </style>
