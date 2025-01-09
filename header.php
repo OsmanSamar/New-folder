@@ -331,12 +331,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" style="color:#25325F">Consultancy</a></li>
-                            <!-- <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li> -->
+
                         </ul>
                     </li>
 
