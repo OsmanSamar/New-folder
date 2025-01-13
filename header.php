@@ -16,89 +16,125 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--  -->
     <style>
-    /* Navbar dropdown styles */
-    .navbar-nav .dropdown-menu {
-        /* position: absolute; */
-        position: fixed;
-        top: -100%;
-        /* Start hidden above the page */
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
-        /* left: 50%;
+        /* Navbar dropdown styles */
+        .navbar-nav .dropdown-menu {
+            position: fixed;
+            top: -100%;
+            /* Start hidden above the page */
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            /* left: 50%;
         transform: translateX(-50%); */
-        background-color: red;
+            background-color: red;
 
-    }
+        }
 
-    /* .navbar-nav .dropdown:hover .dropdown-menu {
-        top: 100%;
-        opacity: 1;
-        visibility: visible;
-    } */
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            top: 100%;
+            opacity: 1;
+            visibility: visible;
+            /* transform: translateX(-50%); */
+            width: 100%;
+        }
 
-    .navbar-nav .dropdown-menu.show {
-        top: 100%;
-        /* Drop down from the navbar */
-        opacity: 1;
-        visibility: visible;
-        /* transform: translateX(-50%); */
-        width: 100%;
-    }
+        /* new */
+        /* .navbar {
+            position: absolute;
+            z-index: 1000;
+        }
 
-    .dropdown-menu .dropdown-item {
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 10px 36px;
-        height: 100%;
-        flex-grow: 1;
-        /* Divider between items */
-        border-right: 1px solid #cbcfde;
-    }
+        .navbar-nav .dropdown-menu {
+            z-index: 1050;
+        } */
 
-    /* .dropdown-menu .dropdown-item:last-child {
+        .dropdown-menu .dropdown-item {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 10px 36px;
+            height: 100%;
+            flex-grow: 1;
+            /* Divider between items */
+            border-right: 1px solid #cbcfde;
+        }
+
+        /* .dropdown-menu .dropdown-item:last-child {
         border-right: none;
     } */
 
-    /* .dropdown-menu .dropdown-item h4 {
-        font-size: 16px;
-        font-weight: bold;
-        margin: 0;
-    }
 
-    .dropdown-menu .dropdown-item p {
-        font-size: 14px;
-        margin: 0;
-        color: #666;
-    } */
 
-    /* .dropdown-menu .dropdown-item button {
-        background-color: #E94271;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-        cursor: pointer;
-    }
 
-    .dropdown-menu .dropdown-item button:hover {
-        background-color: #c0365a;
-    } */
 
-    /* Add spacing between dropdown items */
-    .dropdown-menu {
-        /* gap: 2px; */
-        padding: 80px 450px;
-        background-color: #FFF;
-    }
+
+        /*  spacing between dropdown items */
+        .dropdown-menu {
+            /* gap: 2px; */
+            padding: 80px 450px;
+            background-color: #FFF;
+        }
+
+
+
+        /* Sidebar Dropdown Menu */
+        .sidebar-nav .dropdown-menu {
+            position: static;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            background-color: #f8f9fa;
+
+        }
+
+        /* Show dropdown on toggle */
+        .sidebar-nav .dropdown-menu.show {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+        }
+
+        /* Sidebar Dropdown Items */
+        .sidebar-nav .dropdown-item {
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .sidebar-nav .dropdown-item:hover {
+            background-color: #e9ecef;
+            color: #000;
+        }
+
+        /* Styling Parent Items in Sidebar */
+        .sidebar-nav .menu-item-has-children>a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .sidebar-nav .menu-item-has-children>a:after {
+            content: '\f107';
+            /* Font Awesome down arrow */
+            font-family: FontAwesome;
+            margin-left: 8px;
+        }
+
+        /* Change arrow direction when menu is open */
+        .sidebar-nav .menu-item-has-children.show>a:after {
+            content: '\f106';
+            /* Font Awesome up arrow */
+        }
     </style>
 
 </head>
@@ -132,7 +168,7 @@
 
 
                 <!-- Arrow and Let's Talk on LG Screen-->
-                <div class="d-none d-md-flex d-lg-flex  align-items-center justify-content-between"
+                <!-- <div class="d-none d-md-flex d-lg-flex  align-items-center justify-content-between"
                     style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
                     <a href="<?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
                         <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
@@ -143,258 +179,158 @@
                         style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">
                         Let's talk</span>
 
-                </div>
+                </div> -->
 
-                <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
+                <!-- <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
                     aria-label="Toggle navigation" style=" ">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon"></span>
                     <span class="hamburger-icon">
                         <span class="line line-1"></span>
                         <span class="line line-2"></span>
                         <span class="line line-3"></span>
                     </span>
 
-                </button>
+                </button> -->
+
+                <div class="d-flex align-items-center gap-3">
+                    <!-- Arrow and Let's Talk Section -->
+                    <div class="arrow-letstalk d-none d-md-flex align-items-center justify-content-between"
+                        style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
+                        <a href="<?= esc_url(home_url('/')); ?>"
+                            class="d-flex justify-content-center align-items-center">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                                style="width:12px; height: 18px; margin:7px 0;">
+                        </a>
+                        <span
+                            style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
+                            Let's talk
+                        </span>
+                    </div>
+
+                    <!-- Hamburger Icon -->
+                    <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="hamburger-icon">
+                            <span class="line line-1"></span>
+                            <span class="line line-2"></span>
+                            <span class="line line-3"></span>
+                        </span>
+                    </button>
+                </div>
+
 
 
                 <style>
-                .hamburger-icon {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    width: 30px;
-                    height: 20px;
-                    position: relative;
-                }
+                    .arrow-letstalk {
+                        margin-left: auto;
+                        /* Push to the right */
+                    }
 
-                .hamburger-icon .line {
-                    display: block;
-                    height: 4px;
-                    background-color: #25325F;
-                    border-radius: 2px;
-                    transition: all 0.3s ease;
+                    /* Hamburger Icon Alignment */
+                    .navbar-toggler {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
 
-                }
+                    /* Media Query for md Screens */
+                    @media (max-width: 991.98px) {
+                        .arrow-letstalk {
+                            margin-left: auto;
+                            /* Align to the right */
+                        }
 
-                .hamburger-icon .line-1,
-                .hamburger-icon .line-2 {
-                    width: 100%;
+                        .navbar-toggler {
+                            margin-left: 10px;
+                            /* Add spacing next to Arrow and Let's Talk */
+                        }
+                    }
 
-                }
 
-                .hamburger-icon .line-3 {
-                    width: 60%;
+                    .hamburger-icon {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 30px;
+                        height: 20px;
+                        position: relative;
+                    }
 
-                    align-self: flex-end;
+                    .hamburger-icon .line {
+                        display: block;
+                        height: 4px;
+                        background-color: #25325F;
+                        border-radius: 2px;
+                        transition: all 0.3s ease;
 
-                }
+                    }
+
+                    .hamburger-icon .line-1,
+                    .hamburger-icon .line-2 {
+                        width: 100%;
+
+                    }
+
+                    .hamburger-icon .line-3 {
+                        width: 60%;
+
+                        align-self: flex-end;
+
+                    }
                 </style>
-
-                <!-- ----------------------------------------------------- -->
-                <!-- Toggle Button slidebar on Lg -->
-                <!-- <button class="btn  btn-outline-light shadow-none border-0 d-none d-lg-block p-4" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                    style=" background-color: #25325F; color: #25325F;">
-                    <span class="navbar-toggler-icon" style="color: #25325F;"></span>
-                </button> -->
-
-
 
             </div>
         </nav>
 
-        <!-- Sidebar p-lg-0 on SM Screen  bottom:6%  p-4-->
-        <div class="offcanvas offcanvas-end  " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-            style=" background:; bottom:29%">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+            style="background: #EDF3F4; bottom: 29%;">
             <div class="offcanvas-header text-black border-bottom">
-                <!-- offcanvasNavbartitle/logo -->
-
-                <a class=" offcanvas-title" href="<?= esc_url(home_url('/')); ?>">
+                <!-- Offcanvas Navbar Title/Logo -->
+                <a class="offcanvas-title" href="<?= esc_url(home_url('/')); ?>">
                     <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
-                        style="height:43px;width: 88px;" id="offcanvasNavbarLabel">
+                        style="height: 43px; width: 88px;" id="offcanvasNavbarLabel">
                 </a>
-
-                <button type="button" class="btn-close btn-close-#25325F shadow-none" data-bs-dismiss="offcanvas"
-                    aria-label="Close">
-                </button>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
 
-            <!-- Sidebar Body p-lg-0 display: flex;flex-direction: column; -->
+            <!-- Sidebar Body -->
             <div class="offcanvas-body">
-                <ul class="navbar-nav fs-5 d-flex align-items-left justify-content-start">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <!-- Diensten -->
-                            <span>Services</span>
-                            <span class="dropdown-icon ms-2"></span>
-
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span>Expertise</span>
-                            <span class="dropdown-icon ms-2"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle  d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span>Products</span>
-                            <span class="dropdown-icon ms-2"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle  d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span>Industries</span>
-                            <span class="dropdown-icon ms-2"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span>Insights</span>
-                            <span class="dropdown-icon ms-2"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span>About us</span>
-                            <span class="dropdown-icon ms-2"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Action</a></li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle d-flex justify-content-between align-items-center" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                            style="color:#25325F; font-style: normal;font-weight: 600;line-height: 120%;">
-                            <span> Services</span>
-                            <span class="dropdown-icon ms-2"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" style="color:#25325F">Consultancy</a></li>
-
-                        </ul>
-                    </li>
-
-                </ul>
-                <!-- Arrow and Let's Talk on SM Screen-->
-                <!-- <div style="position: relative;bottom: -30%; ">
-                    <div style="border-radius:30px;background:#25325F;width:100%;height: 101px; ">
-                        <div class="d-flex align-items-center justify-content-center gap-3" style="">
-                            <a href="<?= esc_url(home_url('/')); ?>"
-                                style="border-radius:8px;
-                                                                        background-color: #E94271; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center">
-                                <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                                    style="width:12px; height: 18px; margin:7px 0;  ">
-                            </a>
-                            <a href="<?= esc_url(home_url('/')); ?>"
-                                style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color: white;">
-                                Let's talk
-                            </a>
-                        </div>
-
-                    </div>
-                </div> -->
-
-
-
-
+                <?php
+                wp_nav_menu(array(
+                    'menu' => 'header-menu',
+                    'depth' => 2,
+                    'container' => false,
+                    'menu_class' => 'navbar-nav fs-5 d-flex flex-column align-items-start gap-3',
+                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                ));
+                ?>
             </div>
 
-
-            <div class="offcanvas-header d-flex align-items-center justify-content-center gap-3 "
-                style="border-radius:30px 30px 0 0;background:#25325F; ">
-
-
-                <div class="d-flex align-items-center justify-content-center gap-3" style="">
-                    <a href="<?= esc_url(home_url('/')); ?>"
-                        style="border-radius:8px; background-color: #E94271; height:30px; width:30px;"
-                        class="d-flex justify-content-center align-items-center">
-                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                            style="width:12px; height: 18px; margin:7px 0;  ">
-                    </a>
-                    <a href="<?= esc_url(home_url('/')); ?>"
-                        style="font-family: Manrope; font-size:13px; font-style: normal; font-weight: 600; line-height: 120%; color: white;">
-                        Let's talk
-                    </a>
-                </div>
-
+            <!-- Optional Footer Section -->
+            <div class="offcanvas-footer d-flex align-items-center justify-content-center gap-3"
+                style="border-radius: 30px 30px 0 0; background: #25325F; height:72px;">
+                <a href="<?= esc_url(home_url('/')); ?>"
+                    style="border-radius: 8px; background-color: #E94271; height: 30px; width: 30px;"
+                    class="d-flex justify-content-center align-items-center">
+                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                        style="width: 12px; height: 18px; margin: 7px 0;">
+                </a>
+                <a href="<?= esc_url(home_url('/')); ?>"
+                    style="font-family: Manrope; font-size: 13px; font-weight: 600; color: white;">
+                    Let's Talk
+                </a>
             </div>
 
 
         </div>
+
+
+
+
 
 
     </header>
