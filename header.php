@@ -34,13 +34,22 @@
 
         }
 
-        .navbar-nav .dropdown:hover .dropdown-menu {
+
+        .navbar-nav .dropdown-menu.show {
             top: 100%;
+            /* Drop down from the navbar */
             opacity: 1;
             visibility: visible;
             /* transform: translateX(-50%); */
             width: 100%;
         }
+
+        /* .navbar-nav .dropdown:hover .dropdown-menu {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+    } */
+
 
         /* new */
         /* .navbar {

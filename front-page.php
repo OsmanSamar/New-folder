@@ -1008,11 +1008,34 @@
                 height: auto;
             }
 
-            /* 
-         .blue-container{
-    align-items: center;
-    justify-content: space-between;
-        } */
+            /* here */
+            .blue-container {
+                display: flex;
+                align-items: center;
+
+                justify-content: space-between;
+
+                padding: 20px;
+            }
+
+            .swiper-pagination2 {
+                flex-shrink: 0;
+                /* Prevent shrinking */
+                margin-right: 20px;
+                /* Optional: Adjust spacing */
+                position: relative;
+                z-index: 1;
+                /* Ensure it appears above the background */
+            }
+
+            .swiper-container {
+                flex-grow: 1;
+                /* Allow the swiper container to fill the remaining space */
+            }
+
+            /*  */
+
+
 
             .left-column {
                 padding: 0;
@@ -1488,9 +1511,15 @@
             <div class="bg-container"
                 style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px; height:577px;">
                 <div class="container">
-                    <div class="row  blue-container align-items-center justify-content-between" style="padding: 20px;">
+                    <!-- row -->
+                    <div class="  blue-container d-flex align-items-center justify-content-between"
+                        style="padding: 20px; ">
+                        <!-- Pagination -->
+                        <!-- <div class="swiper-pagination2"
+                            style="position:relative; z-index:1; transform: translateY(50%);"></div> -->
                         <div class="swiper-pagination2"
-                            style="position:relative; z-index:1; transform: translateY(50%);"></div>
+                            style="z-index: 1; margin-left: 10px; display:flex; align-items:center; width:90px; justify-content:center;padding:20px;">
+                        </div>
                         <!-- Swiper Container -->
                         <div class="swiper swiper-container" style="flex-grow:1; --swiper-pagination-color: #E94271;">
                             <div class="swiper-wrapper">
@@ -1501,8 +1530,6 @@
                                         class="d-none d-md-flex d-lg-flex flex-row align-items-center justify-content-between w-100">
                                         <!-- Left Section -->
                                         <div class="d-flex align-items-center gap-3">
-
-
                                             <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
                                                 <?= get_field("trending_btn")['title'] ?>
                                             </a>
