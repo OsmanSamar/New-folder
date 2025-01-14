@@ -28,12 +28,7 @@
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease-in-out;
-        /* left: 50%;
-        transform: translateX(-50%); */
         background-color: red;
-
-
-
         max-width: 100%;
         width: fit-content;
         left: 50%;
@@ -48,9 +43,6 @@
         /* Drop down from the navbar */
         opacity: 1;
         visibility: visible;
-        /* transform: translateX(-50%); */
-
-
         max-width: 100%;
         width: fit-content;
         left: 50%;
@@ -59,27 +51,12 @@
 
     }
 
-    /* .navbar-nav .dropdown:hover .dropdown-menu {
-        top: 100%;
-        opacity: 1;
-        visibility: visible;
-    } */
 
-
-    /* new */
-    /* .navbar {
-            position: absolute;
-            z-index: 1000;
-        }
-
-        .navbar-nav .dropdown-menu {
-            z-index: 1050;
-        } */
 
     .dropdown-menu .dropdown-item {
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
+
         align-items: flex-start;
         justify-content: space-between;
         padding: 10px 36px;
@@ -100,8 +77,7 @@
 
     /*  spacing between dropdown items */
     .dropdown-menu {
-        /* gap: 2px; */
-        /* padding: 80px 450px; */
+
         background-color: #FFF;
     }
 
@@ -154,10 +130,10 @@
         margin-left: 8px;
     }
 
-    /* Change arrow direction when menu is open */
+
     .sidebar-nav .menu-item-has-children.show>a:after {
         content: '\f106';
-        /* Font Awesome up arrow */
+
     }
 
     .navbar .menu-item {
@@ -196,31 +172,7 @@
                 ?>
 
 
-                <!-- Arrow and Let's Talk on LG Screen-->
-                <!-- <div class="d-none d-md-flex d-lg-flex  align-items-center justify-content-between"
-                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
-                    <a href="<?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
-                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                            style="width:12px; height: 18px; margin:7px 0;  ">
 
-                    </a>
-                    <span
-                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">
-                        Let's talk</span>
-
-                </div> -->
-
-                <!-- <button class="navbar-toggler shadow-none border-0 d-block d-lg-none" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                    aria-label="Toggle navigation" style=" ">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="hamburger-icon">
-                        <span class="line line-1"></span>
-                        <span class="line line-2"></span>
-                        <span class="line line-3"></span>
-                    </span>
-
-                </button> -->
 
                 <div class="d-flex align-items-center gap-3">
                     <!-- Arrow and Let's Talk Section -->
@@ -268,12 +220,12 @@
                 @media (max-width: 991.98px) {
                     .arrow-letstalk {
                         margin-left: auto;
-                        /* Align to the right */
+
                     }
 
                     .navbar-toggler {
                         margin-left: 10px;
-                        /* Add spacing next to Arrow and Let's Talk */
+
                     }
                 }
 
