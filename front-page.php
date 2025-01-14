@@ -5,6 +5,10 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    .right-col-form {
+        margin-top: unset;
+    }
+
     .img-form-container {
         display: flex;
         align-items: center;
@@ -910,11 +914,23 @@
             font-size: 13px;
         }
 
+        .border-left {
+            border-left: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0 20px 60px;
+            row-gap: 16px;
+        }
+
 
 
     }
 
     @media (min-width: 992px) {
+
+        .right-col-form {
+            margin-top: 67px;
+        }
 
         .hidden-text {
             display: inline;
@@ -3015,151 +3031,132 @@
 
             <!-- Form Section container  -->
             <div class="form_section">
-                <!-- container -->
                 <div class="container">
                     <div class="row">
                         <div class=" col-12 col-lg-3">
+
+                            <!-- here -->
+                            <div class="row d-block d-md-none d-lg-none" style="margin-top:67px;">
+                                <div class="col-lg-4">
+                                    <h2
+                                        style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                                        <?= get_field("are_u_ready") ?>
+                                    </h2>
+                                </div>
+                                <div class="col-lg-7 offset-lg-1"
+                                    style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
+                                    <?= get_field("form_text") ?>
+
+                                </div>
+                            </div>
+                            <!-- here -->
+                            <div class="d-block d-md-none d-lg-none"
+                                style=" border-bottom: 1px solid  white; margin:30px 0">
+                            </div>
                             <div class="left-container">
                                 <div class="left-content">
-                                    <div class=" img-form-container ">
+                                    <img src="<?= get_field("form_img")['url'] ?>"
+                                        alt="<?= get_field("form_img")['alt'] ?>"
+                                        style="width:120px; height:120px; border-radius:15px; object-fit:cover; object-position:center" />
+                                    <div class="d-flex flex-column">
+                                        <span class="first-name" style=" "><?= get_field("first_name") ?></span>
+                                        <span class="d-none d-md-flex d-lg-flex"
+                                            style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">
+                                            <?= get_field("lets_talk") ?>
+                                        </span>
+                                        <div style=" margin-left:; margin-top:10px;" class="d-flex d-md-none d-lg-none">
+                                            <!-- E_mail -->
+                                            <div class="d-flex flex-column flex-lg-column gap-">
+                                                <div
+                                                    class=" d-flex flex-row align-items-center justify-content-start gap-2">
+
+                                                    <a href="#"
+                                                        style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                        class="d-flex justify-content-center align-items-center">
+                                                        <img src="<?= get_field("tel_link")['url'] ?>"
+                                                            alt="<?= get_field("tel_link")['alt'] ?>"
+                                                            style="width:12px; height:18px; margin:7px 0;color:black" />
+                                                    </a>
+                                                    <span
+                                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                                    </span>
+                                                    <!-- e_mail -->
+                                                </div>
+                                                <!-- contact nummer -->
+                                                <div
+                                                    class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                                    <a href="#"
+                                                        style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                        class="d-flex justify-content-center align-items-center">
+                                                        <img src="<?= get_field("tel_link")['url'] ?>"
+                                                            alt="<?= get_field("tel_link")['alt'] ?>"
+                                                            style="width:12px; height:18px; margin:7px 0;color:black" />
+                                                    </a>
+                                                    <span
+                                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                                        345 656 666
+                                                        <!-- tel_num -->
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
-                                        <img src="<?= get_field("form_img")['url'] ?>"
-                                            alt="<?= get_field("form_img")['alt'] ?>"
-                                            style="width:120px; height:120px; border-radius:15px; object-fit:cover" />
-                                        <div class="d-flex flex-column">
-                                            <span class="first-name d-none d-md-flex d-lg-flex"
-                                                style=" "><?= get_field("first_name") ?></span>
-                                            <span class="d-none d-md-flex d-lg-flex"
-                                                style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">
-                                                <?= get_field("lets_talk") ?>
-                                            </span>
+
+                                    </div>
+
+                                    <!-- Md -->
+                                    <div style=" margin-top:10px;" class="d-none d-md-flex d-lg-none  border-left">
+                                        <!-- E_mail -->
+                                        <div class="d-flex flex-column flex-lg-column gap-">
+                                            <div
+                                                class=" d-flex flex-row align-items-center justify-content-start gap-2">
+
+                                                <a href="#"
+                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                    class="d-flex justify-content-center align-items-center">
+                                                    <img src="<?= get_field("tel_link")['url'] ?>"
+                                                        alt="<?= get_field("tel_link")['alt'] ?>"
+                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
+                                                </a>
+                                                <span
+                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                                </span>
+                                                <!-- e_mail -->
+                                            </div>
+                                            <!-- contact nummer -->
+                                            <div
+                                                class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                                <a href="#"
+                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                    class="d-flex justify-content-center align-items-center">
+                                                    <img src="<?= get_field("tel_link")['url'] ?>"
+                                                        alt="<?= get_field("tel_link")['alt'] ?>"
+                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
+                                                </a>
+                                                <span
+                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                                    345 656 666
+                                                    <!-- tel_num -->
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="d-none d-lg-block"
+                                    <!-- MD -->
+                                    <!-- here -->
+                                    <div class="d-none d-md-none d-lg-block"
                                         style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
                                     </div>
-
-                                    <!-- d-Lg en Md -->
-                                    <div style=" margin-left:; margin-top:10px; " class="d-none d-md-none d-lg-flex">
-                                        <!-- E_mail -->
-                                        <div
-                                            class="d-flex flex-column  gap-2 align-items-center justify-content-center">
-                                            <div class=" d-flex  align-items-center justify-content-start gap-2">
-                                                <a href="#"
-                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                    class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_field("tel_link")['url'] ?>"
-                                                        alt="<?= get_field("tel_link")['alt'] ?>"
-                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
-                                                </a>
-                                                <span
-                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
-                                                </span>
-                                            </div>
-                                            <!-- contact nummer -->
-                                            <div class=" d-flex  align-items-center justify-content-start gap-2">
-                                                <a href="#"
-                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                    class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_field("tel_link")['url'] ?>"
-                                                        alt="<?= get_field("tel_link")['alt'] ?>"
-                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
-                                                </a>
-                                                <span
-                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                                    345 656 666
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- On MD SCREEN -->
-
-                                    <div class="d-none d-md-flex d-lg-none"
-                                        style=" margin-left:; margin-top:10px; border-left:1px solid #FFF; padding: 20px 0 20px 60px; ">
-                                        <!-- E_mail -->
-                                        <div
-                                            class="d-flex flex-column  gap-2 align-items-center justify-content-center">
-                                            <div class=" d-flex  align-items-center justify-content-start gap-2">
-                                                <a href="#"
-                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                    class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_field("tel_link")['url'] ?>"
-                                                        alt="<?= get_field("tel_link")['alt'] ?>"
-                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
-                                                </a>
-                                                <span
-                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
-                                                </span>
-                                            </div>
-                                            <!-- contact nummer -->
-                                            <div class=" d-flex  align-items-center justify-content-start gap-2">
-                                                <a href="#"
-                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                    class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_field("tel_link")['url'] ?>"
-                                                        alt="<?= get_field("tel_link")['alt'] ?>"
-                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
-                                                </a>
-                                                <span
-                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                                    345 656 666
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- ON SM SCREEN -->
-
-
-
-                                    <div class="d-block d-md-none d-lg-none" style="  margin-top:10px; ">
-                                        <span class="first-name " style=" "><?= get_field("first_name") ?></span>
-                                        <!-- E_mail -->
-                                        <div class="d-flex flex-column  gap- align-items-center justify-content-center">
-
-                                            <div class=" d-flex  align-items-center justify-content-start gap-2">
-                                                <a href="#"
-                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                    class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_field("tel_link")['url'] ?>"
-                                                        alt="<?= get_field("tel_link")['alt'] ?>"
-                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
-                                                </a>
-                                                <span
-                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
-                                                </span>
-                                            </div>
-                                            <!-- contact nummer -->
-                                            <div class=" d-flex  align-items-center justify-content-start gap-2">
-                                                <a href="#"
-                                                    style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                    class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_field("tel_link")['url'] ?>"
-                                                        alt="<?= get_field("tel_link")['alt'] ?>"
-                                                        style="width:12px; height:18px; margin:7px 0;color:black" />
-                                                </a>
-                                                <span
-                                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                                    345 656 666
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
-                                <!-- ............................. -->
-
-                                <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-                                <!-- <div class="d-block d-lg-none"
+                                <!-- here -->
+                                <div class="d-none  d-lg-none"
                                     style=" border-bottom: 1px solid  white; margin:30px 0; ">
                                 </div>
-                                <div style=" margin-left:; margin-top:10px;">
-                                    E_mail
+                                <div style=" margin-left:; margin-top:;" class="d-none d-md-none d-lg-flex">
+                                    <!-- E_mail -->
                                     <div class="d-flex flex-row flex-lg-column gap-">
                                         <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+
                                             <a href="#"
                                                 style="background-color:white;height:30px;width:30px; border-radius: 8px;"
                                                 class="d-flex justify-content-center align-items-center">
@@ -3170,8 +3167,9 @@
                                             <span
                                                 style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
                                             </span>
+                                            <!-- e_mail -->
                                         </div>
-                                        contact nummer
+                                        <!-- contact nummer -->
                                         <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
                                             <a href="#"
                                                 style="background-color:white;height:30px;width:30px; border-radius: 8px;"
@@ -3183,49 +3181,47 @@
                                             <span
                                                 style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
                                                 345 656 666
+                                                <!-- tel_num -->
                                             </span>
                                         </div>
                                     </div>
-                                </div> -->
-
-                                <!-- here -->
+                                </div>
                             </div>
                         </div>
                         <!-- Right column Contact Form -->
-                        <div class="col-12 col-lg-9">
-                            <div class="row" style="margin-top:67px;">
+                        <div class="col-12  col-lg-9">
+                            <!-- here -->
+                            <div class="row d-none d-md-flex d-lg-flex right-col-form" style="">
                                 <div class="col-lg-4">
                                     <h2
                                         style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
-                                        Are you ready to take the <span
-                                            style="color: var(--Secondary-600, #E94271);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%;">next
-                                            step</span>?</h2>
+                                        <?= get_field("are_u_ready") ?>
+                                    </h2>
                                 </div>
                                 <div class="col-lg-7 offset-lg-1"
                                     style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas, nisl posuere
-                                    porttitor vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
+                                    <?= get_field("form_text") ?>
+
                                 </div>
                             </div>
-                            <div style=" margin:">
+                            <!-- here Form -->
+                            <div>
                                 <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="false"]')) ?>
                             </div>
-
                             <div class="row">
                                 <div class="col-lg-8" style="">
                                     <span
                                         style="color:#9AA0B7;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px ">
-                                        By sending this form you indicate that you have taken note of our  <span
-                                            style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 120%;">privacy
-                                            statement. </span>
+                                        <?= get_field("privacy_text") ?>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
             <!-- End of Form Section -->
 
 

@@ -22,9 +22,17 @@
   //   }
   // }
 
+  // Sm Screen
   @media screen and (max-width: 991.9px) {
     .gfield--type-textarea {
-      order: 0;
+      order: 1 !important;
+    }
+  }
+
+  // LG Screen
+  @media (min-width: 992px) {
+    .gfield--type-textarea {
+      order: 0 !important;
     }
   }
 }
@@ -67,10 +75,6 @@
 }
 
 // Btn Replace
-// .gform-theme--foundation .gform_footer,
-// .gform-theme--foundation .gform_page_footer {
-//   justify-content: end !important;
-// }
 
 /* Default: Center align for small screens */
 .gform-theme--foundation .gform_footer,
@@ -157,16 +161,9 @@
   border-radius: 8px !important;
   position: relative !important;
   padding-left: 6px !important;
-  // position: absolute !important;
-  // top: 0px;
-  // right: 39px;
 }
 
 .email-field-container .submit-btn {
-  // position: absolute;
-  // right: 65px !important;
-  // top: 6px;
-  // position: relative !important;
   position: absolute !important;
   top: 6px !important;
   right: 6px !important;
@@ -174,7 +171,6 @@
   height: 36px;
   border: none;
   background-color: #274083 !important;
-  // background-color: #e94271 !important;
   color: white;
   padding: 12px 15px;
   cursor: pointer;
@@ -182,4 +178,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.gform_heading .gform_required_legend p span {
+  content: "required";
+}
+
+// New Styling
+
+.gform-theme--foundation .gfield textarea.medium {
+  min-block-size: 10.5rem !important;
+  height: 100px !important;
 }
