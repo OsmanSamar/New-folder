@@ -6,11 +6,127 @@
 <main class="financial flex-grow-1">
 
     <style>
+    .right-side,
+    .right_col2 {
+        margin-top: 40px;
+
+    }
+
+    .why-sue-title {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+    }
+
+    .why-sue-text {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 27px;
+    }
+
+    .why-sue-text1 {
+        color: #6A7291;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+    }
+
+    .cloud-projects {
+        border-radius: 40px;
+        background: #FFF;
+        max-width: 1700px;
+        height: 837px;
+        padding: 16px;
+        margin-top: 50px;
+        height: 1745px;
+        /* margin: 150px auto 100px; */
+        margin: 50px auto 10px;
+    }
+
+    .cloud-projects-title {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+    }
+
+    .cloud-projects-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+
+    .view-all-link {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px;
+
+    }
+
+
+    .view-btn {
+        background-color: #E94271;
+        height: 30px;
+        width: 30px;
+        border-radius: 8px;
+        background: #25325F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .challenge-title {
+        color: #CBCFDE;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27px;
+    }
+
+    .challenge-text {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33.6px;
+        margin-top: 20px;
+    }
+
+    .first-name-name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right-col-form {
+        margin-top: unset;
+    }
+
     .container-max-width {
         border-radius: 30px;
         max-width: 1700px;
         height: 581px;
-        margin: 150px auto 100px;
+        margin: 200px auto 10px;
+    }
+
+    .container-max-width .container-img {
+        display: none;
     }
 
     b,
@@ -67,7 +183,13 @@
         margin-bottom: 31px;
     }
 
-
+    .left_col2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2px;
+    }
 
     .left_col,
     .right_col {
@@ -75,7 +197,7 @@
         align-items: flex-start;
         justify-content: left;
         flex-direction: column;
-        gap: 4px;
+        gap: 1px;
     }
 
     .left-btn {
@@ -113,7 +235,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 39px;
-        margin: 30px 0px;
+        margin: 10px auto;
     }
 
     .left-text,
@@ -133,7 +255,7 @@
         background: #274083;
         max-width: 1700px;
         flex-direction: column;
-        margin: 150px auto 100px;
+        margin: 50px auto 10px;
     }
 
 
@@ -201,19 +323,120 @@
     .blue-container {
         border-radius: 40px;
         background: #25325F;
-        height: 471px;
+        height: 400px;
         max-width: 1700px;
         padding: 30px;
-        margin: 150px auto 100px;
+        margin: 2rem auto;
+    }
+
+    .first-name::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 21px;
+        opacity: 0.25;
+        background: #CBCFDE;
+        margin-left: 13px;
+        margin-right: 13px;
+        vertical-align: middle;
+    }
+
+    .lets-talk-title {
+        display: block;
+        color: #9AA0B7;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px
     }
 
 
+    .lets-talk-gota-question {
+        display: block;
+        color: #FFF;
+        font-family: Sora;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28.4px;
+    }
 
+    .container-let-talk {
+        display: flex;
+        /* align-items: center; */
+        align-items: flex-start;
+        /* justify-content: space-between; */
+        justify-content: space-around;
+        /* gap: 1rem; */
+        flex-direction: column;
+    }
 
+    .left-side-img-text {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
 
+    }
+
+    .name-class {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .form_section {
+        border-radius: 30px;
+        background: #25325F;
+        max-width: 1700px;
+        height: 1400px;
+        margin: 50px auto 50px;
+    }
+
+    .left-container {
+        border-radius: 30px;
+        margin-top: ;
+        color: white;
+        height: 264px;
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        gap: 50px;
+
+    }
 
 
     @media (min-width: 768px) {
+        .left-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+        .border-left {
+            border-left: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0 20px 60px;
+            row-gap: 16px;
+        }
+
+        .right-side,
+        .right_col2 {
+            margin-top: unset;
+        }
+
+        .container-max-width .container-img {
+            display: block;
+        }
 
         .img-on-blue-block {
             height: 589px;
@@ -231,30 +454,171 @@
             max-width: 352px;
         }
 
+        .blue-container {
+            height: 212px;
+        }
+
+        .container-let-talk {
+            flex-direction: row;
+        }
+
+        .left-side-img-text {
+            align-items: center;
+            flex-direction: row;
+        }
 
 
+        .first-name-name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
 
+        .hero_white_block {
+            width: 458px;
+            position: relative;
+            bottom: 582px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 30px;
+            height: 581.608px;
+            margin-top: unset;
+        }
+
+        .inner_block {
+            margin: unset;
+        }
+
+        .cloud-projects {
+            height: 1200px;
+        }
+
+        .cloud-projects-row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+        }
+
+        .cloud-projects-title {
+            font-size: 23px;
+        }
+
+        .view-all-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 21px;
+
+        }
 
 
     }
 
 
     @media (min-width: 992px) {
+
+        .form_section {
+            height: 550px;
+        }
+
+
+        .left-container {
+            height: 500px;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: normal;
+            margin-top: 67px;
+        }
+
+        .right-side,
+        .right_col2 {
+            margin-top: unset;
+        }
+
+        .view-all-link {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 13px;
+
+        }
+
+        .cloud-projects {
+            height: 706px;
+        }
+
+        .cloud-projects-title {
+            font-size: 26px;
+        }
+
+        .inner_block {
+            margin: 10px 60px;
+        }
+
+        .first-name-name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .blue-container {
+            height: 212px;
+        }
+
+        .container-let-talk {
+            flex-direction: row;
+        }
+
+        .left-side-img-text {
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .name-class {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .lets-talk-gota-question {
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 50.4px;
+        }
+
+
+
+
+
+        .right-col-form {
+            margin-top: 67px;
+        }
+
         .hero_white_block {
             width: 531px;
-            /* position: absolute;
-            bottom: -71px; */
             position: relative;
-            bottom: 429px;
+            bottom: 580px;
             left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: left;
+            justify-content: center;
             padding: 30px;
-            height: 581.608px;
+            height: 100%;
+            margin-top: unset;
 
         }
+
+
+
 
         b,
         strong {
@@ -263,18 +627,22 @@
 
 
         .block_blue {
-            height: 589px;
+            /* height: 589px; */
+            height: 540px;
         }
 
         .img-on-blue-block {
-            height: 589px;
+            height: 540px;
             border-radius: 40px;
             object-fit: cover;
         }
 
         .left-side-width {
-            max-width: 584px;
+            max-width: 694px;
             padding: 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 70px;
         }
 
 
@@ -284,11 +652,27 @@
     }
     </style>
 
-    <!--  -->
+    <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
+        <a href="<?= get_field("back_to_home")['url'] ?>"
+            class="d-flex justify-content-center align-items-center gap-2">
+            <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
+                style="width:20px; height:20px; margin:7px 0;" />
 
+            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
+                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
+            <span class="first">Industries</span>
+            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
+                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
+            <span class="last">Financial</span>
+        </a>
+    </div>
+
+
+
+    <!-- Hero Section -->
     <div class="container-max-width">
         <img src="<?= get_field("financial_hero_img")['url'] ?>" alt="<?= get_field("financial_hero_img")['title'] ?>"
-            class="" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
+            class="container-img" style=" height: 580px; border-radius: 40px; object-fit: cover;" />
         <div class="hero_white_block">
             <div class="container inner_block">
                 <div class="d-flex align-items-center justify-content-between gap-2">
@@ -322,7 +706,7 @@
         </div>
 
     </div>
-
+    <!-- End of Hero Section -->
 
 
 
@@ -358,9 +742,6 @@
     </div>
 
 
-
-
-
     <!-- Bijdragers Repeater On LG -->
     <div class="container">
         <div class="row d-none d-md-none d-lg-flex align-items-center justify-content-between"
@@ -390,7 +771,7 @@
 
     <!-- Third Section -->
     <div class="container">
-        <div class="row" style="margin-top:100px;">
+        <div class="row" style="margin-top:50px;">
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="left_col">
                     <div class="left-btn">
@@ -404,7 +785,7 @@
                 </div>
             </div>
 
-            <div class=" col-lg-1"></div>
+            <div class=" col-lg-1 d-none d-lg-block"></div>
 
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col">
@@ -418,30 +799,45 @@
     </div>
 
 
-
     <!-- The Blue Block With Img & Text -->
     <div class="block_blue">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-5  ">
+            <div class="col-12 col-md-6 col-lg-5">
                 <img src="<?= get_field("blue_block_img")['url'] ?>" alt="<?= get_field("blue_block_img")['alt'] ?>"
-                    class="img-on-blue-block" style="" />
+                    class="img-on-blue-block" />
             </div>
-            <div class="col-12 col-md-6 col-lg-7 d-flex align-items-center justify-content-center">
-                <div class="left-side-width" style="">
-
-
+            <div class="col-lg-1 d-none"></div>
+            <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-around">
+                <div class="left-side-width">
+                    <div class="row">
+                        <?php
+                        $testimonials = get_field("challenge_testimonials");
+                        foreach ($testimonials as $index => $testimonial) {
+                            if ($index % 2 == 0 && $index != 0) {
+                                echo '</div><div class="row">';
+                            }
+                            ?>
+                        <div class="col-12 col-lg-6">
+                            <div class="testimonial">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="offering-num"><?= $testimonial["num"] ?></span>
+                                    <span class="challenge-title"><?= $testimonial["title"] ?></span>
+                                </div>
+                                <h3 class="challenge-text"><?= $testimonial["text_cha"] ?></h3>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-
-
-
     <!-- Fifth Section -->
     <div class="container">
-        <div class="row" style="margin-top:100px;">
+        <div class="row" style="margin-top:50px;">
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="left_col2">
                     <div class="left-btn">
@@ -458,7 +854,8 @@
                         <?= get_field("se_left_on_text") ?></span>
                 </div>
             </div>
-            <div class=" col-lg-1"></div>
+            <div class=" col-lg-1 d-none d-lg-block"></div>
+
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="right_col2">
                     <span class="right2-text">
@@ -477,9 +874,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <!-- Testimonials Section on All Screens -->
     <div class="container mt-5">
@@ -512,11 +906,8 @@
         </div>
     </div>
 
-
-
-
     <!--Sue_Offering Repeater  Swiper On Small -->
-    <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
+    <div class="partners" style="margin-top:30px; margin-bottom: ;">
         <div class="position-relative d-block d-lg-none align-items-center  ">
             <div class="swiperoffer sue-offering-swiper ">
                 <div class="swiper-wrapper">
@@ -526,8 +917,8 @@
                     <div class="swiper-slide d-flex justify-content-center align-items-center"
                         style="width:fit-content;">
                         <div>
-                            <div
-                                class="d-flex flex-row align-items-center justify-content-evenly sue-offering-container">
+                            <div class="d-flex flex-row align-items-center justify-content-evenly "
+                                style="font-size:16px; gap:9px;">
                                 <a href=" <?= $sue['sue_offering_link']['url'] ?>" class="swiper-title-on-sm">
                                     <div
                                         style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
@@ -553,7 +944,7 @@
     <!-- Sue_Offering Repeater On LG -->
     <div class="container">
         <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-            style="margin-top:40px; margin-bottom:14px;">
+            style="margin-top:; margin-bottom:;">
             <?php
             foreach (get_field("sue_offering_testimonials") as $sue) {
                 ?>
@@ -582,17 +973,17 @@
 
 
 
-
+    <!-- Blue-container -->
     <div class="blue-container">
         <div class="container-let-talk">
             <!-- Left Side: Image and Texts -->
             <div class="left-side-img-text">
                 <img src="<?= get_field('lets_talk_img')['url'] ?>" alt="<?= get_field('lets_talk_img')['alt'] ?>"
-                    style="width: 110px;height: 110px; border:15px;">
+                    style="width: 120px;height: 120px; border:15px;">
                 <div>
-                    <div class="d-flex align-items-center">
+                    <div class="first-name-name ">
                         <span class="first-name"
-                            style="display: block; color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:27.2px "><?= get_field('lets_talk_first_name') ?></span>
+                            style="display: flex; color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:27.2px "><?= get_field('lets_talk_first_name') ?></span>
                         <span class="lets-talk-title"
                             style="display: block; color:#9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px"><?= get_field('lets_talk_title') ?></span>
                     </div>
@@ -602,7 +993,7 @@
             </div>
             <!-- Right Side: Text, Email, and Phone -->
             <div
-                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:left; gap:1rem;">
+                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:left; gap:0.7rem;">
                 <span style="color: #FFF;"><?= get_field('lets_talk_word') ?></span>
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
                     <div
@@ -624,6 +1015,400 @@
         </div>
     </div>
 
+
+    <!--cloud-projects Section  -->
+    <div class="cloud-projects">
+        <div class="container">
+            <div class="row cloud-projects-row mt-2">
+                <div class="col-12 col-lg-6 col-md-6">
+                    <span class="cloud-projects-title">
+                        <?= get_field("cloud_projects_title") ?>
+                    </span>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                    <a href="<?= get_field("view_all_link")['url'] ?>"
+                        class="d-flex  align-items-center gap-2 view-all-link">
+                        <!-- justify-content-end -->
+                        <div class="view-btn">
+                            <img src="<?= get_field("view_btn")['url'] ?>" alt="<?= get_field("view_btn")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" />
+                        </div>
+                        <?= get_field("view_all_link")['title'] ?>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
+                <?php foreach (get_field("financial_projects_testimonials") as $testimonial) { ?>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
+                        <img src="<?= $testimonial["test_img"]['url'] ?>" alt="<?= $testimonial['test_img']['alt'] ?>"
+                            class="card-img-top " style="height: 213px; border-radius:20px;" />
+                        <!-- CARD BODY -->
+                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                            style="background-color:; overflow:hidden;">
+                            <div class="card-title">
+                                <span><?= $testimonial["test_name"] ?></span>
+                            </div>
+                            <p class="card-text">
+                                <?= $testimonial["test_text"] ?>
+                            </p>
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <p class="industry_title">
+                                    <?= $testimonial["text_industry"] ?>
+                                </p>
+                                <p class="industry">
+                                    <?= $testimonial["test_type"] ?>
+                                </p>
+                            </div>
+
+                            <div class="bottom-border position-absolute"
+                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                            </div>
+                        </div>
+                        <!-- END OF CARD BODY -->
+                        <!-- Bejijken btn -->
+                        <div class=" card-body d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="d-flex align-items-center justify-content-center"
+                                    style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
+                                    <img src="<?= $testimonial["img_btn"]['url'] ?>"
+                                        alt="<?= $testimonial["img_btn"]['alt'] ?>"
+                                        style="width: 12px; height: 18px;" />
+                                </div>
+                                <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
+                                    <?= $testimonial["test_link"]['title'] ?>
+                                </a>
+                            </div>
+                            <img src="<?= $testimonial["knp_img"]['url'] ?>" alt="<?= $testimonial["knp_img"]['alt'] ?>"
+                                style="width: 63px; height: 24px;" />
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--Why-Sue  Section -->
+    <div class="container">
+
+        <div class="row " style="margin-top:50px;">
+            <div class="col-12 col-md-6 col-lg-5 ">
+                <div class="d-flex flex-column  justify-content-center align-items-start gap-3">
+                    <span class="left-btn"><?= get_field("why_sue_sub_title") ?></span>
+                    <span class="why-sue-title"><?= get_field("why_sue_title") ?></span>
+                    <span class="why-sue-text1"><?= get_field("why_sue_text") ?> </span>
+                    <!-- Let's talk btn -->
+                    <div class="d-flex justify-content-between align-items-center gap-2"
+                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
+                        <a href="<?= get_field("why_sue_link")['url'] ?>" target="_blank"
+                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                            <img src="<?= get_field("why_sue_img")['url'] ?>"
+                                alt="<?= get_field("why_sue_img")['alt'] ?>" style="width: 12px; height: 18px;" />
+                            <?= get_field("why_sue_link")['title'] ?>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class=" col-lg-1 d-lg-block d-none"></div>
+
+            <div class="col-12 col-lg-6 col-md-6 right-side ">
+                <span class="why-sue-text"><?= get_field("why_sue_first_right_text") ?></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Form Section   container  -->
+    <div class="form_section">
+        <div class="container">
+            <div class="row">
+                <div class=" col-12 col-lg-3">
+
+                    <!-- here -->
+                    <div class="row d-block d-md-none d-lg-none" style="margin-top:40px;">
+                        <div class="col-lg-4">
+                            <h2
+                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                                <?= get_field("r_u_ready") ?>
+                            </h2>
+                        </div>
+                        <div class="col-lg-7 offset-lg-1"
+                            style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
+                            <?= get_field("form_text") ?>
+                        </div>
+                    </div>
+                    <!-- here -->
+                    <div class="d-block d-md-none d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0">
+                    </div>
+                    <div class="left-container">
+                        <div class="left-content">
+                            <img src="<?= get_field("form_img")['url'] ?>" alt="<?= get_field("form_img")['alt'] ?>"
+                                style="width:120px; height:120px; border-radius:15px; object-fit:cover; object-position:center" />
+                            <div class="d-flex flex-column">
+                                <span style=" ">
+                                    <!-- class="first-name"  -->
+                                    <?= get_field("first_name_form") ?>
+                                </span>
+                                <span class="d-none d-md-flex d-lg-flex">
+
+                                    <a href="<?= get_field("lets_talk")['url'] ?>"
+                                        style="color:  #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                                        <?= get_field("lets_talk")['title'] ?>
+                                    </a>
+                                </span>
+
+
+                                <div style="  margin-top:10px;" class="d-flex d-md-none d-lg-none">
+                                    <!-- E_mail -->
+                                    <div class="d-flex flex-column flex-lg-column ">
+                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+
+                                            <a href="#"
+                                                style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_field("tel_link")['url'] ?>"
+                                                    alt="<?= get_field("tel_link")['alt'] ?>"
+                                                    style="width:12px; height:18px; margin:7px 0;color:black" />
+                                            </a>
+                                            <span
+                                                style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                            </span>
+                                            <!-- e_mail -->
+                                        </div>
+                                        <!-- contact nummer -->
+                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                            <a href="#"
+                                                style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                                class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_field("tel_link")['url'] ?>"
+                                                    alt="<?= get_field("tel_link")['alt'] ?>"
+                                                    style="width:12px; height:18px; margin:7px 0;color:black" />
+                                            </a>
+                                            <span
+                                                style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                                345 656 666
+                                                <!-- tel_num -->
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Md -->
+                            <div style=" margin-top:10px;" class="d-none d-md-flex d-lg-none  border-left">
+                                <!-- E_mail -->
+                                <div class="d-flex flex-column flex-lg-column">
+                                    <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+
+                                        <a href="#"
+                                            style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <img src="<?= get_field("tel_link")['url'] ?>"
+                                                alt="<?= get_field("tel_link")['alt'] ?>"
+                                                style="width:12px; height:18px; margin:7px 0;color:black" />
+                                        </a>
+                                        <span
+                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                        </span>
+                                        <!-- e_mail -->
+                                    </div>
+                                    <!-- contact nummer -->
+                                    <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                        <a href="#"
+                                            style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                            class="d-flex justify-content-center align-items-center">
+                                            <img src="<?= get_field("tel_link")['url'] ?>"
+                                                alt="<?= get_field("tel_link")['alt'] ?>"
+                                                style="width:12px; height:18px; margin:7px 0;color:black" />
+                                        </a>
+                                        <span
+                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                            345 656 666
+                                            <!-- tel_num -->
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- MD -->
+                            <!-- here -->
+                            <div class="d-none d-md-none d-lg-block"
+                                style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
+                            </div>
+                        </div>
+                        <!-- here -->
+                        <div class="d-none  d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
+                        </div>
+                        <div class="d-none d-md-none d-lg-flex">
+                            <!-- E_mail -->
+                            <div class="d-flex flex-row flex-lg-column ">
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+
+                                    <a href="#"
+                                        style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("tel_link")['url'] ?>"
+                                            alt="<?= get_field("tel_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;color:black" />
+                                    </a>
+                                    <span
+                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
+                                    </span>
+                                    <!-- e_mail -->
+                                </div>
+                                <!-- contact nummer -->
+                                <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                    <a href="#"
+                                        style="background-color:white;height:30px;width:30px; border-radius: 8px;"
+                                        class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("tel_link")['url'] ?>"
+                                            alt="<?= get_field("tel_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;color:black" />
+                                    </a>
+                                    <span
+                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
+                                        345 656 666
+                                        <!-- tel_num -->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right column Contact Form -->
+                <div class="col-12  col-lg-9">
+                    <!-- here -->
+                    <div class="row d-none d-md-flex d-lg-flex right-col-form" style="">
+                        <div class="col-lg-4">
+                            <h2
+                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                                <?= get_field("r_u_ready") ?>
+                            </h2>
+                        </div>
+                        <div class="col-lg-7 offset-lg-1"
+                            style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
+                            <?= get_field("form_text") ?>
+
+                        </div>
+                    </div>
+                    <!-- here Form -->
+                    <div>
+                        <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="false"]')) ?>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8" style="">
+                            <span
+                                style="color:#9AA0B7;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px ">
+                                <?= get_field("privacy_text") ?>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Form Section -->
+
+
+
+    <!-- Related Hybird Cloud articles -->
+    <div class="container" style="margin-top:50px;">
+        <div class="row cloud-projects-row">
+            <div class="col-12 col-md-6 col-lg-6">
+                <span class="cloud-projects-title">
+                    <?= get_field("related_hybrid_cloud_articles_title") ?>
+                </span>
+            </div>
+            <div class="col-12  col-md-6  col-lg-6">
+                <a href="<?= get_field("niew_all_our_knowledge_link")['url'] ?>"
+                    class="d-flex align-items-center gap-2 view-all-link" target="_blank">
+                    <div class="view-btn">
+                        <img src="<?= get_field("niew_all_our_knowledge_btn")['url'] ?>"
+                            alt="<?= get_field("niew_all_our_knowledge_btn")['alt'] ?>"
+                            style="width:12px; height:18px; margin:7px 0;" />
+                    </div>
+                    <?= get_field("niew_all_our_knowledge_link")['title'] ?>
+                </a>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
+            <?php foreach (get_field("hybrid_cloud_articles_testimonails") as $testimonial) { ?>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
+                    <img src="<?= $testimonial["articles_img"]['url'] ?>"
+                        alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
+                        style="height: 213px; border-radius:20px; " />
+
+                    <!-- CARD BODY -->
+                    <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                        style="background-color:; overflow:hidden;">
+                        <div class="card-title">
+                            <span><?= $testimonial["articles_date"] ?></span>
+                        </div>
+                        <div class=" d-flex align-items-center  gap-2 ">
+                            <span class="card-text">
+                                <?= $testimonial["articles_text"] ?>
+                                <a href="<?= $testimonial['articles_link']['url'] ?>">
+                                    <img src="<?= $testimonial["articles_btn"]['url'] ?>"
+                                        alt="<?= $testimonial["articles_btn"]['alt'] ?>"
+                                        style="width:4px; height: 8px; margin-left:8px;" />
+                                </a>
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-2" style="margin-top:15px;">
+                            <p class="industry_title">
+                                <?= $testimonial["articles_author"] ?>
+                            </p>
+                            <p class="industry">
+                                <?= $testimonial["articles_author_name"] ?>
+                            </p>
+                        </div>
+                        <div class="bottom-border position-absolute"
+                            style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                        </div>
+                    </div>
+                    <!-- END OF CARD BODY -->
+                    <!-- Bekijken btn -->
+                    <div class="card-body d-flex justify-content-start align-items-center gap-2"
+                        style="flex-wrap: wrap;">
+                        <a href="<?= $testimonial['articles_consultancy']['url'] ?>" class="d-block articles_page_link">
+                            <?= $testimonial['articles_consultancy']['title'] ?>
+                        </a>
+                        <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>" class="d-block articles_page_link">
+                            <?= $testimonial['articales_data_&_ai']['title'] ?>
+                        </a>
+                        <a href="<?= $testimonial['articales_financieel']['url'] ?> "
+                            class="d-block articles_page_link">
+                            <?= $testimonial['articales_financieel']['title'] ?>
+                        </a>
+                        <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
+                            class="d-block articles_page_link">
+                            <?= $testimonial['articales_gezondheidszorg']['title'] ?>
+                        </a>
+                        <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
+                            <?= $testimonial['articales_ecss']['title'] ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+
+
+    </div>
 
 
 

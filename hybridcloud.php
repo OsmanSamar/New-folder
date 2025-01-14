@@ -5,6 +5,12 @@
 
 <main class="hybridcloud flex-grow-1">
     <style>
+    .first-name-name {
+        display: flex;
+        flex-direction: column;
+
+    }
+
     .right-col-form {
         margin-top: unset;
     }
@@ -18,7 +24,7 @@
 
     .cloud-projects-row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
 
     }
@@ -94,10 +100,10 @@
         display: block;
         color: #FFF;
         font-family: Sora;
-        font-size: 17px;
+        font-size: 16px;
         font-style: normal;
-        font-weight: 600;
-        line-height: 50.4px;
+        font-weight: 400;
+        line-height: 28.4px;
     }
 
     .container-let-talk {
@@ -113,7 +119,7 @@
     .blue-container {
         border-radius: 40px;
         background: #25325F;
-        height: 471px;
+        height: 400px;
         max-width: 1700px;
         padding: 30px;
         /* margin: 150px auto 100px; */
@@ -450,7 +456,7 @@
     .cloud-projects-title {
         color: #25325F;
         font-family: Manrope;
-        font-size: 26px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: 39px;
@@ -462,7 +468,7 @@
     .view-all-link {
         color: #25325F;
         font-family: Manrope;
-        font-size: 26px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 600;
         line-height: 15.6px;
@@ -670,9 +676,9 @@
             gap: 1rem;
         }
 
-        .left-side-img-text {
+        /* .left-side-img-text {
             flex-direction: row;
-        }
+        } */
 
         .container-let-talk {
             flex-direction: row;
@@ -680,6 +686,7 @@
 
         .left-side-img-text {
             align-items: center;
+            flex-direction: row;
         }
 
         .blue-container {
@@ -726,9 +733,23 @@
             justify-content: space-between;
 
         }
+
+        .first-name-name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
     }
 
     @media (min-width: 992px) {
+
+
+        .first-name-name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
         .name-class {
             display: flex;
             flex-direction: row;
@@ -803,9 +824,9 @@
             line-height: 23.4px;
         }
 
-        .left-side-img-text {
-            flex-direction: row;
-        }
+        /* .left-side-img-text {
+                flex-direction: row;
+            } */
 
         .container-let-talk {
             flex-direction: row;
@@ -813,6 +834,7 @@
 
         .left-side-img-text {
             align-items: center;
+            flex-direction: row;
         }
 
         .blue-container {
@@ -821,6 +843,8 @@
 
         .lets-talk-gota-question {
             font-size: 35px;
+            font-weight: 600;
+            line-height: 50.4px;
         }
 
         .cloud-projects {
@@ -1238,17 +1262,17 @@
             <!-- Left Side: Image and Texts -->
             <div class="left-side-img-text">
                 <img src="<?= get_field('lets_talk_img')['url'] ?>" alt="<?= get_field('lets_talk_img')['alt'] ?>"
-                    style="width: 110px;height: 110px; border:15px;">
+                    style="width: 120px;height: 120px; border:15px;">
                 <div>
-                    <div class=" name-class ">
-                        <!-- align-items-center -->
+                    <div class="first-name-name">
+
                         <span class="first-name"
                             style="display: block; color: #9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height:27.2px "><?= get_field('lets_talk_first_name') ?></span>
                         <span class="lets-talk-title"
                             style="display: block; color:#9AA0B7;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px"><?= get_field('lets_talk_title') ?></span>
                     </div>
                     <br>
-                    <span class="lets-talk-gota-question" style=""><?= get_field('lets_talk_gota_question') ?></span>
+                    <span class="lets-talk-gota-question"><?= get_field('lets_talk_gota_question') ?></span>
                 </div>
             </div>
             <!-- Right Side: Text, Email, and Phone -->
@@ -1280,12 +1304,12 @@
     <div class="cloud-projects">
         <div class="container">
             <div class="row cloud-projects-row mt-2">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 col-md-6">
                     <span class="cloud-projects-title">
                         <?= get_field("cloud_projects_title") ?>
                     </span>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 col-md-6">
                     <a href="<?= get_field("view_all_link")['url'] ?>"
                         class="d-flex  align-items-center gap-2 view-all-link">
                         <!-- justify-content-end -->
@@ -1374,9 +1398,9 @@
                 </div>
 
             </div>
-            <div class=" col-lg-1"></div>
+            <div class=" col-lg-1 d-lg-block d-none"></div>
 
-            <div class="col-12 col-lg-6 ">
+            <div class="col-12 col-lg-6 col-md-6 ">
                 <span class="why-sue-text"><?= get_field("why_sue_first_right_text") ?></span>
             </div>
         </div>
@@ -1477,8 +1501,6 @@
 
 
     <!-- Form Section   container  -->
-
-
     <div class="form_section">
         <div class="container">
             <div class="row">
@@ -1665,21 +1687,6 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- End of Form Section -->
 
 
