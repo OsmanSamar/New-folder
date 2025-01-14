@@ -3036,7 +3036,7 @@
                         <div class=" col-12 col-lg-3">
 
                             <!-- here -->
-                            <div class="row d-block d-md-none d-lg-none" style="margin-top:67px;">
+                            <div class="row d-block d-md-none d-lg-none" style="margin-top:40px;">
                                 <div class="col-lg-4">
                                     <h2
                                         style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
