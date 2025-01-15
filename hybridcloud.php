@@ -1303,7 +1303,7 @@
     <!--cloud-projects Section  -->
     <div class="cloud-projects">
         <div class="container">
-            <div class="row cloud-projects-row mt-2">
+            <div class="row cloud-projects-row mt-5">
                 <div class="col-12 col-lg-6 col-md-6">
                     <span class="cloud-projects-title">
                         <?= get_field("cloud_projects_title") ?>
@@ -1322,7 +1322,7 @@
 
                 </div>
             </div>
-            <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
+            <div class="row d-flex align-items-center justify-content-start gy-4 mt-1">
                 <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">

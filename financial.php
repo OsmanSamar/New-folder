@@ -6,650 +6,684 @@
 <main class="financial flex-grow-1">
 
     <style>
-    .right-side,
-    .right_col2 {
-        margin-top: 40px;
-
-    }
-
-    .why-sue-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-    }
-
-    .why-sue-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 27px;
-    }
-
-    .why-sue-text1 {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-    .cloud-projects {
-        border-radius: 40px;
-        background: #FFF;
-        max-width: 1700px;
-        height: 837px;
-        padding: 16px;
-        margin-top: 50px;
-        height: 1745px;
-        /* margin: 150px auto 100px; */
-        margin: 50px auto 10px;
-    }
-
-    .cloud-projects-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-    }
-
-    .cloud-projects-row {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-    }
-
-
-    .view-all-link {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 15.6px;
-
-    }
-
-
-    .view-btn {
-        background-color: #E94271;
-        height: 30px;
-        width: 30px;
-        border-radius: 8px;
-        background: #25325F;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .challenge-title {
-        color: #CBCFDE;
-        font-family: Manrope;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 27px;
-    }
-
-    .challenge-text {
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-        margin-top: 20px;
-    }
-
-    .first-name-name {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .right-col-form {
-        margin-top: unset;
-    }
-
-    .container-max-width {
-        border-radius: 30px;
-        max-width: 1700px;
-        height: 581px;
-        margin: 200px auto 10px;
-    }
-
-    .container-max-width .container-img {
-        display: none;
-    }
-
-    b,
-    strong {
-        color: #e94271;
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        line-height: inherit;
-    }
-
-    .hero_white_block {
-        height: 100%;
-        border-radius: 40px;
-        background: #FFF;
-        position: relative;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        margin-top: -152px;
-    }
-
-    .inner_block {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        margin: 10px 60px;
-    }
-
-    .hero_title {
-        color: #25325F;
-        font-family: Sora;
-        font-size: 45px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 54px;
-        margin-top: 45px;
-        margin-bottom: 31px;
-    }
-
-    .hero_text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        width: 353px;
-        /* height: 158px; */
-        margin-bottom: 31px;
-    }
-
-    .left_col2 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .left_col,
-    .right_col {
-        display: flex;
-        align-items: flex-start;
-        justify-content: left;
-        flex-direction: column;
-        gap: 1px;
-    }
-
-    .left-btn {
-        width: 209px;
-        height: 34px;
-        border-radius: 100px;
-        background: #274083;
-        padding: 3px 11px;
-        text-align: center;
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left-text,
-    .right-text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-    .title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-        margin: 10px auto;
-    }
-
-    .left-text,
-    .right-text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-
-
-    .block_blue {
-        border-radius: 40px;
-        background: #274083;
-        max-width: 1700px;
-        flex-direction: column;
-        margin: 50px auto 10px;
-    }
-
-
-    .left-side-width {
-        margin-top: 50px;
-        padding: 24px;
-
-    }
-
-    .testimonial-card {
-        border-radius: 15px;
-        background-color: #FFF;
-        margin: 15px 0;
-        padding: 27px 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-
-    .testimonial-card>* {
-        margin: 5px 0;
-    }
-
-    .offering-num {
-        color: #E94271;
-        font-family: Manrope;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-    }
-
-    .offering-sub-title {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-        color: #6A7291;
-        font-family: Manrope;
-    }
-
-    .offering-main-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-    }
-
-    .divider {
-        border-bottom: 0.5px solid #25325F;
-        /* margin: 15px 1px; */
-    }
-
-    .offering-text {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 22px;
-        color: #6A7291;
-        font-family: Manrope;
-        text-align: left;
-    }
-
-
-    .blue-container {
-        border-radius: 40px;
-        background: #25325F;
-        height: 400px;
-        max-width: 1700px;
-        padding: 30px;
-        margin: 2rem auto;
-    }
-
-    .first-name::after {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 21px;
-        opacity: 0.25;
-        background: #CBCFDE;
-        margin-left: 13px;
-        margin-right: 13px;
-        vertical-align: middle;
-    }
-
-    .lets-talk-title {
-        display: block;
-        color: #9AA0B7;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px
-    }
-
-
-    .lets-talk-gota-question {
-        display: block;
-        color: #FFF;
-        font-family: Sora;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 28.4px;
-    }
-
-    .container-let-talk {
-        display: flex;
-        /* align-items: center; */
-        align-items: flex-start;
-        /* justify-content: space-between; */
-        justify-content: space-around;
-        /* gap: 1rem; */
-        flex-direction: column;
-    }
-
-    .left-side-img-text {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-direction: row;
-        align-items: flex-start;
-
-    }
-
-    .name-class {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-    .form_section {
-        border-radius: 30px;
-        background: #25325F;
-        max-width: 1700px;
-        height: 1400px;
-        margin: 50px auto 50px;
-    }
-
-    .left-container {
-        border-radius: 30px;
-        margin-top: ;
-        color: white;
-        height: 264px;
-    }
-
-    .left-content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 30px;
-        gap: 50px;
-
-    }
-
-
-    @media (min-width: 768px) {
-        .left-content {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-
-        .border-left {
-            border-left: 1px solid white;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 0 20px 60px;
-            row-gap: 16px;
-        }
-
         .right-side,
         .right_col2 {
-            margin-top: unset;
+            margin-top: 40px;
+
         }
 
-        .container-max-width .container-img {
-            display: block;
+        .why-sue-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
         }
 
-        .img-on-blue-block {
-            height: 589px;
-            border-radius: 40px;
-            object-fit: cover;
+        .why-sue-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 27px;
         }
 
-        .block_blue {
-            height: 589px;
-            /* flex-direction: row; */
-        }
-
-        .left-side-width {
-
-            max-width: 352px;
-        }
-
-        .blue-container {
-            height: 212px;
-        }
-
-        .container-let-talk {
-            flex-direction: row;
-        }
-
-        .left-side-img-text {
-            align-items: center;
-            flex-direction: row;
-        }
-
-
-        .first-name-name {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .hero_white_block {
-            width: 458px;
-            position: relative;
-            bottom: 582px;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 30px;
-            height: 581.608px;
-            margin-top: unset;
-        }
-
-        .inner_block {
-            margin: unset;
+        .why-sue-text1 {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
         }
 
         .cloud-projects {
-            height: 1200px;
+            border-radius: 40px;
+            background: #FFF;
+            max-width: 1700px;
+            height: 837px;
+            padding: 16px;
+            margin-top: 50px;
+            height: 1745px;
+            /* margin: 150px auto 100px; */
+            margin: 50px auto 10px;
+        }
+
+        .cloud-projects-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
         }
 
         .cloud-projects-row {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: flex-start;
 
         }
 
-        .cloud-projects-title {
-            font-size: 23px;
-        }
 
         .view-all-link {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+
+        }
+
+
+        .view-btn {
+            background-color: #E94271;
+            height: 30px;
+            width: 30px;
+            border-radius: 8px;
+            background: #25325F;
             display: flex;
+            align-items: center;
             justify-content: center;
-            align-items: center;
+        }
+
+        .challenge-title {
+            color: #CBCFDE;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 27px;
+        }
+
+        .challenge-text {
+            color: #FFF;
+            font-family: Manrope;
             font-size: 21px;
-
-        }
-
-
-    }
-
-
-    @media (min-width: 992px) {
-
-        .form_section {
-            height: 550px;
-        }
-
-
-        .left-container {
-            height: 500px;
-        }
-
-        .left-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: normal;
-            margin-top: 67px;
-        }
-
-        .right-side,
-        .right_col2 {
-            margin-top: unset;
-        }
-
-        .view-all-link {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            font-size: 13px;
-
-        }
-
-        .cloud-projects {
-            height: 706px;
-        }
-
-        .cloud-projects-title {
-            font-size: 26px;
-        }
-
-        .inner_block {
-            margin: 10px 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+            margin-top: 20px;
         }
 
         .first-name-name {
             display: flex;
-            flex-direction: row;
-            align-items: center;
+            flex-direction: column;
         }
-
-        .blue-container {
-            height: 212px;
-        }
-
-        .container-let-talk {
-            flex-direction: row;
-        }
-
-        .left-side-img-text {
-            align-items: center;
-            flex-direction: row;
-        }
-
-        .name-class {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-        }
-
-        .lets-talk-gota-question {
-            font-size: 35px;
-            font-weight: 600;
-            line-height: 50.4px;
-        }
-
-
-
-
 
         .right-col-form {
-            margin-top: 67px;
+            margin-top: unset;
+        }
+
+        .container-max-width {
+            border-radius: 30px;
+            max-width: 1700px;
+            height: 581px;
+            margin: 200px auto 10px;
+        }
+
+        .container-max-width .container-img {
+            display: none;
+        }
+
+        b,
+        strong {
+            color: #e94271;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            line-height: inherit;
         }
 
         .hero_white_block {
-            width: 531px;
+            height: 100%;
+            border-radius: 40px;
+            background: #FFF;
             position: relative;
-            bottom: 580px;
             left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            margin-top: -152px;
+        }
+
+        .inner_block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: left;
+            margin: 10px 60px;
+        }
+
+        .hero_title {
+            color: #25325F;
+            font-family: Sora;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 54px;
+            margin-top: 45px;
+            margin-bottom: 31px;
+        }
+
+        .hero_text {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            width: 353px;
+            /* height: 158px; */
+            margin-bottom: 31px;
+        }
+
+        .left_col2 {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            padding: 30px;
-            height: 100%;
-            margin-top: unset;
-
+            gap: 2px;
         }
 
-
-
-
-        b,
-        strong {
-            font-size: inherit;
+        .left_col,
+        .right_col {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            flex-direction: column;
+            gap: 1px;
         }
+
+        .left-btn {
+            width: 209px;
+            height: 34px;
+            border-radius: 100px;
+            background: #274083;
+            padding: 3px 11px;
+            text-align: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-text,
+        .right-text {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+        }
+
+        .title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            margin: 10px auto;
+        }
+
+        .left-text,
+        .right-text {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+        }
+
 
 
         .block_blue {
-            /* height: 589px; */
-            height: 540px;
+            border-radius: 40px;
+            background: #274083;
+            max-width: 1700px;
+            flex-direction: column;
+            margin: 50px auto 10px;
         }
 
-        .img-on-blue-block {
-            height: 540px;
-            border-radius: 40px;
-            object-fit: cover;
-        }
 
         .left-side-width {
-            max-width: 694px;
-            padding: 10px;
+            margin-top: 50px;
+            padding: 24px;
+
+        }
+
+        .testimonial-card {
+            border-radius: 15px;
+            background-color: #FFF;
+            margin: 15px 0;
+            padding: 27px 40px;
             display: flex;
             flex-direction: column;
-            row-gap: 70px;
+            justify-content: space-between;
+        }
+
+
+        .testimonial-card>* {
+            margin: 5px 0;
+        }
+
+        .offering-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+        }
+
+        .offering-sub-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+            color: #6A7291;
+            font-family: Manrope;
+        }
+
+        .offering-main-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+        }
+
+        .divider {
+            border-bottom: 0.5px solid #25325F;
+            /* margin: 15px 1px; */
+        }
+
+        .offering-text {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #6A7291;
+            font-family: Manrope;
+            text-align: left;
+        }
+
+
+        .blue-container {
+            border-radius: 40px;
+            background: #25325F;
+            height: 400px;
+            max-width: 1700px;
+            padding: 30px;
+            margin: 2rem auto;
+        }
+
+
+        .articles_page_link::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 21px;
+            opacity: 0.25;
+            /* background: #CBCFDE; */
+            background: green;
+            margin-left: 13px;
+            margin-right: 13px;
+            vertical-align: middle;
+        }
+
+        .first-name::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 21px;
+            opacity: 0.25;
+            background: #CBCFDE;
+            margin-left: 13px;
+            margin-right: 13px;
+            vertical-align: middle;
+        }
+
+        .lets-talk-title {
+            display: block;
+            color: #9AA0B7;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px
+        }
+
+
+        .lets-talk-gota-question {
+            display: block;
+            color: #FFF;
+            font-family: Sora;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28.4px;
+        }
+
+        .container-let-talk {
+            display: flex;
+            /* align-items: center; */
+            align-items: flex-start;
+            /* justify-content: space-between; */
+            justify-content: space-around;
+            /* gap: 1rem; */
+            flex-direction: column;
+        }
+
+        .left-side-img-text {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-direction: row;
+            align-items: flex-start;
+
+        }
+
+        .name-class {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .form_section {
+            border-radius: 30px;
+            background: #25325F;
+            max-width: 1700px;
+            height: 1400px;
+            margin: 50px auto 50px;
+        }
+
+        .left-container {
+            border-radius: 30px;
+            margin-top: ;
+            color: white;
+            height: 264px;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
+
+        }
+
+        .arrow_section {
+
+            width: 57.851px;
+            height: 92.371px;
+            flex-shrink: 0;
         }
 
 
 
+        @media (min-width: 768px) {
+            .left-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
 
 
-    }
+            .border-left {
+                border-left: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0 20px 60px;
+                row-gap: 16px;
+            }
+
+            .right-side,
+            .right_col2 {
+                margin-top: unset;
+            }
+
+            .container-max-width .container-img {
+                display: block;
+            }
+
+            .img-on-blue-block {
+                height: 589px;
+                border-radius: 40px;
+                object-fit: cover;
+            }
+
+            .block_blue {
+                height: 589px;
+                /* flex-direction: row; */
+            }
+
+            .left-side-width {
+
+                max-width: 352px;
+            }
+
+            .blue-container {
+                height: 212px;
+            }
+
+            .container-let-talk {
+                flex-direction: row;
+            }
+
+            .left-side-img-text {
+                align-items: center;
+                flex-direction: row;
+            }
+
+
+            .first-name-name {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .hero_white_block {
+                width: 458px;
+                position: relative;
+                bottom: 582px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 581.608px;
+                margin-top: unset;
+            }
+
+            .inner_block {
+                margin: unset;
+            }
+
+            .cloud-projects {
+                height: 1200px;
+            }
+
+            .cloud-projects-row {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+            }
+
+            .cloud-projects-title {
+                font-size: 23px;
+            }
+
+            .view-all-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 21px;
+
+            }
+
+
+        }
+
+
+        @media (min-width: 992px) {
+
+            .form_section {
+                height: 550px;
+            }
+
+
+            .left-container {
+                height: 500px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: normal;
+                margin-top: 67px;
+            }
+
+            .right-side,
+            .right_col2 {
+                margin-top: unset;
+            }
+
+            .view-all-link {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 13px;
+
+            }
+
+            .cloud-projects {
+                height: 706px;
+            }
+
+            .cloud-projects-title {
+                font-size: 26px;
+            }
+
+            .inner_block {
+                margin: 10px 60px;
+            }
+
+            .first-name-name {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .blue-container {
+                height: 212px;
+            }
+
+            .container-let-talk {
+                flex-direction: row;
+            }
+
+            .left-side-img-text {
+                align-items: center;
+                flex-direction: row;
+            }
+
+            .name-class {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+            .lets-talk-gota-question {
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 50.4px;
+            }
+
+
+
+
+
+            .right-col-form {
+                margin-top: 67px;
+            }
+
+            .hero_white_block {
+                width: 531px;
+                position: relative;
+                bottom: 580px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 100%;
+                margin-top: unset;
+
+            }
+
+
+
+
+            b,
+            strong {
+                font-size: inherit;
+            }
+
+
+            .block_blue {
+                /* height: 589px; */
+                height: 540px;
+            }
+
+            .img-on-blue-block {
+                height: 540px;
+                border-radius: 40px;
+                object-fit: cover;
+            }
+
+            .left-side-width {
+                max-width: 694px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 70px;
+            }
+
+
+            .second-arrow {
+                margin-top: 70px
+            }
+
+            .arrow_section {
+                width: 87.239px;
+                height: 139.295px;
+                flex-shrink: 0;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+
+
+
+
+        }
     </style>
 
     <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
@@ -719,21 +753,21 @@
                     <?php
                     foreach (get_field("bijdragers_testimonials") as $sue) {
                         ?>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"
-                        style="width:fit-content;">
-                        <div>
-                            <a href=" <?= $sue['bijdragers_testimonials_link']['url'] ?>" class="swiper-title-on-sm"
-                                target="_blank">
-                                <div
-                                    class="d-flex flex-row align-items-center justify-content-evenly partners-container">
-                                    <img src="<?= $sue['bijdragers_testimonials_img']['url'] ?>"
-                                        alt=" <?= $sue['bijdragers_testimonials_img']['alt'] ?>" class=""
-                                        style="background:#EDF3F4; width:185px ; height: 61px; object-fit:cover; border-radius: 6px; border: 1px solid #CBCFDE;" />
-                                </div>
-                            </a>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center"
+                            style="width:fit-content;">
+                            <div>
+                                <a href=" <?= $sue['bijdragers_testimonials_link']['url'] ?>" class="swiper-title-on-sm"
+                                    target="_blank">
+                                    <div
+                                        class="d-flex flex-row align-items-center justify-content-evenly partners-container">
+                                        <img src="<?= $sue['bijdragers_testimonials_img']['url'] ?>"
+                                            alt=" <?= $sue['bijdragers_testimonials_img']['alt'] ?>" class=""
+                                            style="background:#EDF3F4; width:185px ; height: 61px; object-fit:cover; border-radius: 6px; border: 1px solid #CBCFDE;" />
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -749,21 +783,21 @@
             <?php
             foreach (get_field("bijdragers_testimonials") as $sue) {
                 ?>
-            <div class="col-auto">
-                <!-- col-auto width: 365px;-->
-                <a href=" <?= $sue['bijdragers_testimonials_link']['url'] ?>" target="_blank">
-                    <div style="border-radius:; height:99px; margin:35px 0;">
-                        <div class="d-flex flex-row align-items-center justify-content-center ">
-                            <!--  style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width:165px ; height: 61px; " -->
-                            <img src="<?= $sue['bijdragers_testimonials_img']['url'] ?>"
-                                alt=" <?= $sue['bijdragers_testimonials_img']['alt'] ?>" class="sue-img"
-                                style="background:#EDF3F4; width:185px ; height: 61px; object-fit:cover; border-radius: 6px; border: 1px solid #CBCFDE;" />
+                <div class="col-auto">
+                    <!-- col-auto width: 365px;-->
+                    <a href=" <?= $sue['bijdragers_testimonials_link']['url'] ?>" target="_blank">
+                        <div style="border-radius:; height:99px; margin:35px 0;">
+                            <div class="d-flex flex-row align-items-center justify-content-center ">
+                                <!--  style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width:165px ; height: 61px; " -->
+                                <img src="<?= $sue['bijdragers_testimonials_img']['url'] ?>"
+                                    alt=" <?= $sue['bijdragers_testimonials_img']['alt'] ?>" class="sue-img"
+                                    style="background:#EDF3F4; width:185px ; height: 61px; object-fit:cover; border-radius: 6px; border: 1px solid #CBCFDE;" />
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -817,16 +851,16 @@
                                 echo '</div><div class="row">';
                             }
                             ?>
-                        <div class="col-12 col-lg-6">
-                            <div class="testimonial">
-                                <div class="d-flex align-items-center gap-2">
-                                    <span class="offering-num"><?= $testimonial["num"] ?></span>
-                                    <span class="challenge-title"><?= $testimonial["title"] ?></span>
+                            <div class="col-12 col-lg-6">
+                                <div class="testimonial">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="offering-num"><?= $testimonial["num"] ?></span>
+                                        <span class="challenge-title"><?= $testimonial["title"] ?></span>
+                                    </div>
+                                    <h3 class="challenge-text"><?= $testimonial["text_cha"] ?></h3>
                                 </div>
-                                <h3 class="challenge-text"><?= $testimonial["text_cha"] ?></h3>
                             </div>
-                        </div>
-                        <?php
+                            <?php
                         }
                         ?>
                     </div>
@@ -879,29 +913,29 @@
     <div class="container mt-5">
         <div class="row gy-2">
             <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
-            <div class="col-12 col-md-6 col-lg-6">
-                <div class="testimonial-card">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="testimonial-card">
 
 
-                    <div class="d-flex align-items-center gap-2 mb col">
-                        <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
-                        <span class="offering-sub-title"><?= $testimonial["offering_sub_title"] ?></span>
-                    </div>
-                    <h2 class="offering-main-title"> <?= $testimonial["offering_main_title"] ?></h2>
-                    <div class="divider mb-3" style="margin: 15px 1px;"></div>
-                    <p class="offering-text"><?= $testimonial["offering_text"] ?></p>
-                    <a href="<?= $testimonial["offering_link"]['url'] ?>"
-                        class="d-flex align-items-center justify-content-left gap-3" style="margin-top:20px;">
-                        <div
-                            style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                            <img src="<?= $testimonial["offering_img"]['url'] ?>"
-                                alt="<?= $testimonial["offering_img"]['alt'] ?>" style="width: 12px;height: 18px;" />
+                        <div class="d-flex align-items-center gap-2 mb col">
+                            <span class="offering-num"><?= $testimonial["offering_num"] ?></span>
+                            <span class="offering-sub-title"><?= $testimonial["offering_sub_title"] ?></span>
                         </div>
-                        <?= $testimonial["offering_link"]['title'] ?>
-                    </a>
+                        <h2 class="offering-main-title"> <?= $testimonial["offering_main_title"] ?></h2>
+                        <div class="divider mb-3" style="margin: 15px 1px;"></div>
+                        <p class="offering-text"><?= $testimonial["offering_text"] ?></p>
+                        <a href="<?= $testimonial["offering_link"]['url'] ?>"
+                            class="d-flex align-items-center justify-content-left gap-3" style="margin-top:20px;">
+                            <div
+                                style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                <img src="<?= $testimonial["offering_img"]['url'] ?>"
+                                    alt="<?= $testimonial["offering_img"]['alt'] ?>" style="width: 12px;height: 18px;" />
+                            </div>
+                            <?= $testimonial["offering_link"]['title'] ?>
+                        </a>
 
+                    </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </div>
@@ -914,25 +948,25 @@
                     <?php
                     foreach (get_field("sue_offering_testimonials") as $sue) {
                         ?>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"
-                        style="width:fit-content;">
-                        <div>
-                            <div class="d-flex flex-row align-items-center justify-content-evenly "
-                                style="font-size:16px; gap:9px;">
-                                <a href=" <?= $sue['sue_offering_link']['url'] ?>" class="swiper-title-on-sm">
-                                    <div
-                                        style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                                        <img src="<?= $sue['sue_offering_img']['url'] ?>"
-                                            alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
-                                            style="width: 12px;height: 18px;" />
-                                    </div>
-                                </a>
-                                <?= $sue['sue_offering_link']['title'] ?>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center"
+                            style="width:fit-content;">
+                            <div>
+                                <div class="d-flex flex-row align-items-center justify-content-evenly "
+                                    style="font-size:16px; gap:9px;">
+                                    <a href=" <?= $sue['sue_offering_link']['url'] ?>" class="swiper-title-on-sm">
+                                        <div
+                                            style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                            <img src="<?= $sue['sue_offering_img']['url'] ?>"
+                                                alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
+                                                style="width: 12px;height: 18px;" />
+                                        </div>
+                                    </a>
+                                    <?= $sue['sue_offering_link']['title'] ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -948,24 +982,24 @@
             <?php
             foreach (get_field("sue_offering_testimonials") as $sue) {
                 ?>
-            <div class="col-auto">
-                <a href=" <?= $sue['sue_offering_link']['url'] ?>">
-                    <div style="border-radius:6px; height:99px; margin:35px 0;">
-                        <div class="d-flex flex-row align-items-center justify-content-evenly "
-                            style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width: 356px; height: 65px; ">
-                            <div
-                                style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
-                                <img src="<?= $sue['sue_offering_img']['url'] ?>"
-                                    alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
-                                    style="width: 12px;height: 18px;" />
+                <div class="col-auto">
+                    <a href=" <?= $sue['sue_offering_link']['url'] ?>">
+                        <div style="border-radius:6px; height:99px; margin:35px 0;">
+                            <div class="d-flex flex-row align-items-center justify-content-evenly "
+                                style="border-radius: 6px;border: 1px solid #CBCFDE;background:#EDF3F4; width: 356px; height: 65px; ">
+                                <div
+                                    style="background-color:#274083; width:30px; height:30px; border-radius:8px; display: flex; align-items: center;justify-content: center;">
+                                    <img src="<?= $sue['sue_offering_img']['url'] ?>"
+                                        alt=" <?= $sue['sue_offering_img']['alt'] ?>" class="sue-img"
+                                        style="width: 12px;height: 18px;" />
+                                </div>
+                                <?= $sue['sue_offering_link']['title'] ?>
                             </div>
-                            <?= $sue['sue_offering_link']['title'] ?>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -1019,7 +1053,7 @@
     <!--cloud-projects Section  -->
     <div class="cloud-projects">
         <div class="container">
-            <div class="row cloud-projects-row mt-2">
+            <div class="row cloud-projects-row mt-5">
                 <div class="col-12 col-lg-6 col-md-6">
                     <span class="cloud-projects-title">
                         <?= get_field("cloud_projects_title") ?>
@@ -1039,53 +1073,53 @@
                 </div>
             </div>
 
-            <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
+            <div class="row d-flex align-items-center justify-content-start gy-4 mt-1">
                 <?php foreach (get_field("financial_projects_testimonials") as $testimonial) { ?>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
-                        <img src="<?= $testimonial["test_img"]['url'] ?>" alt="<?= $testimonial['test_img']['alt'] ?>"
-                            class="card-img-top " style="height: 213px; border-radius:20px;" />
-                        <!-- CARD BODY -->
-                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
-                            style="background-color:; overflow:hidden;">
-                            <div class="card-title">
-                                <span><?= $testimonial["test_name"] ?></span>
-                            </div>
-                            <p class="card-text">
-                                <?= $testimonial["test_text"] ?>
-                            </p>
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <p class="industry_title">
-                                    <?= $testimonial["text_industry"] ?>
-                                </p>
-                                <p class="industry">
-                                    <?= $testimonial["test_type"] ?>
-                                </p>
-                            </div>
-
-                            <div class="bottom-border position-absolute"
-                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
-                            </div>
-                        </div>
-                        <!-- END OF CARD BODY -->
-                        <!-- Bejijken btn -->
-                        <div class=" card-body d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
-                                    <img src="<?= $testimonial["img_btn"]['url'] ?>"
-                                        alt="<?= $testimonial["img_btn"]['alt'] ?>"
-                                        style="width: 12px; height: 18px;" />
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
+                            <img src="<?= $testimonial["test_img"]['url'] ?>" alt="<?= $testimonial['test_img']['alt'] ?>"
+                                class="card-img-top " style="height: 213px; border-radius:20px;" />
+                            <!-- CARD BODY -->
+                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                                style="background-color:; overflow:hidden;">
+                                <div class="card-title">
+                                    <span><?= $testimonial["test_name"] ?></span>
                                 </div>
-                                <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
-                                    <?= $testimonial["test_link"]['title'] ?>
-                                </a>
+                                <p class="card-text">
+                                    <?= $testimonial["test_text"] ?>
+                                </p>
+                                <div class="d-flex justify-content-start align-items-center gap-2">
+                                    <p class="industry_title">
+                                        <?= $testimonial["text_industry"] ?>
+                                    </p>
+                                    <p class="industry">
+                                        <?= $testimonial["test_type"] ?>
+                                    </p>
+                                </div>
+
+                                <div class="bottom-border position-absolute"
+                                    style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                                </div>
                             </div>
-                            <img src="<?= $testimonial["knp_img"]['url'] ?>" alt="<?= $testimonial["knp_img"]['alt'] ?>"
-                                style="width: 63px; height: 24px;" />
+                            <!-- END OF CARD BODY -->
+                            <!-- Bejijken btn -->
+                            <div class=" card-body d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                        style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
+                                        <img src="<?= $testimonial["img_btn"]['url'] ?>"
+                                            alt="<?= $testimonial["img_btn"]['alt'] ?>"
+                                            style="width: 12px; height: 18px;" />
+                                    </div>
+                                    <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
+                                        <?= $testimonial["test_link"]['title'] ?>
+                                    </a>
+                                </div>
+                                <img src="<?= $testimonial["knp_img"]['url'] ?>" alt="<?= $testimonial["knp_img"]['alt'] ?>"
+                                    style="width: 63px; height: 24px;" />
+                            </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
 
@@ -1319,12 +1353,12 @@
 
 
 
-    <!-- Related Hybird Cloud articles -->
+    <!-- Related Financial articles -->
     <div class="container" style="margin-top:50px;">
         <div class="row cloud-projects-row">
             <div class="col-12 col-md-6 col-lg-6">
                 <span class="cloud-projects-title">
-                    <?= get_field("related_hybrid_cloud_articles_title") ?>
+                    <?= get_field("related_financial_articles_title") ?>
                 </span>
             </div>
             <div class="col-12  col-md-6  col-lg-6">
@@ -1345,68 +1379,402 @@
 
 
         <div class="row d-flex align-items-center justify-content-start gy-4 mt-5">
-            <?php foreach (get_field("hybrid_cloud_articles_testimonails") as $testimonial) { ?>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
-                    <img src="<?= $testimonial["articles_img"]['url'] ?>"
-                        alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
-                        style="height: 213px; border-radius:20px; " />
+            <?php foreach (get_field("financial_articles_testimonails") as $testimonial) { ?>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card" style=" border-radius: 20px;border: 1px solid #CBCFDE; background-color:#EDF3F4;">
+                        <img src="<?= $testimonial["articles_img"]['url'] ?>"
+                            alt="<?= $testimonial['articles_img']['alt'] ?>" class="card-img-top "
+                            style="height: 213px; border-radius:20px; " />
 
-                    <!-- CARD BODY -->
-                    <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
-                        style="background-color:; overflow:hidden;">
-                        <div class="card-title">
-                            <span><?= $testimonial["articles_date"] ?></span>
+                        <!-- CARD BODY -->
+                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                            style="background-color:; overflow:hidden;">
+                            <div class="card-title">
+                                <span><?= $testimonial["articles_date"] ?></span>
+                            </div>
+                            <div class=" d-flex align-items-center  gap-2 ">
+                                <span class="card-text">
+                                    <?= $testimonial["articles_text"] ?>
+                                    <a href="<?= $testimonial['articles_link']['url'] ?>">
+                                        <img src="<?= $testimonial["articles_btn"]['url'] ?>"
+                                            alt="<?= $testimonial["articles_btn"]['alt'] ?>"
+                                            style="width:4px; height: 8px; margin-left:8px;" />
+
+                                    </a>
+
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-center gap-2" style="margin-top:15px;">
+                                <p class="industry_title">
+                                    <?= $testimonial["articles_author"] ?>
+                                </p>
+                                <p class="industry">
+                                    <?= $testimonial["articles_author_name"] ?>
+                                </p>
+                            </div>
+                            <div class="bottom-border position-absolute"
+                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                            </div>
                         </div>
-                        <div class=" d-flex align-items-center  gap-2 ">
-                            <span class="card-text">
-                                <?= $testimonial["articles_text"] ?>
-                                <a href="<?= $testimonial['articles_link']['url'] ?>">
-                                    <img src="<?= $testimonial["articles_btn"]['url'] ?>"
-                                        alt="<?= $testimonial["articles_btn"]['alt'] ?>"
-                                        style="width:4px; height: 8px; margin-left:8px;" />
-                                </a>
-                            </span>
+                        <!-- END OF CARD BODY -->
+                        <!-- Bekijken btn -->
+                        <div class="card-body d-flex justify-content-start align-items-center gap-2"
+                            style="flex-wrap: wrap;">
+                            <a href="<?= $testimonial['articles_consultancy']['url'] ?>" class="d-block articles_page_link">
+                                <?= $testimonial['articles_consultancy']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>" class="d-block articles_page_link">
+                                <?= $testimonial['articales_data_&_ai']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_financieel']['url'] ?> "
+                                class="d-block articles_page_link">
+                                <?= $testimonial['articales_financieel']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
+                                class="d-block articles_page_link">
+                                <?= $testimonial['articales_gezondheidszorg']['title'] ?>
+                            </a>
+                            <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
+                                <?= $testimonial['articales_ecss']['title'] ?>
+                            </a>
                         </div>
-                        <div class="d-flex justify-content-start align-items-center gap-2" style="margin-top:15px;">
-                            <p class="industry_title">
-                                <?= $testimonial["articles_author"] ?>
-                            </p>
-                            <p class="industry">
-                                <?= $testimonial["articles_author_name"] ?>
-                            </p>
-                        </div>
-                        <div class="bottom-border position-absolute"
-                            style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
-                        </div>
-                    </div>
-                    <!-- END OF CARD BODY -->
-                    <!-- Bekijken btn -->
-                    <div class="card-body d-flex justify-content-start align-items-center gap-2"
-                        style="flex-wrap: wrap;">
-                        <a href="<?= $testimonial['articles_consultancy']['url'] ?>" class="d-block articles_page_link">
-                            <?= $testimonial['articles_consultancy']['title'] ?>
-                        </a>
-                        <a href="<?= $testimonial['articales_data_&_ai']['url'] ?>" class="d-block articles_page_link">
-                            <?= $testimonial['articales_data_&_ai']['title'] ?>
-                        </a>
-                        <a href="<?= $testimonial['articales_financieel']['url'] ?> "
-                            class="d-block articles_page_link">
-                            <?= $testimonial['articales_financieel']['title'] ?>
-                        </a>
-                        <a href="<?= $testimonial['articales_gezondheidszorg']['url'] ?> "
-                            class="d-block articles_page_link">
-                            <?= $testimonial['articales_gezondheidszorg']['title'] ?>
-                        </a>
-                        <a href="<?= $testimonial['articales_ecss']['url'] ?>" class="href">
-                            <?= $testimonial['articales_ecss']['title'] ?>
-                        </a>
                     </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
 
+
+    </div>
+
+
+
+    <!-- New Section -->
+    <div class="container">
+        <div class="row" style="margin-top:50px;">
+            <div class="col-12 col-lg-6 ">
+                <!-- First Row margin-top:150px; and newsletter-container also-->
+                <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
+                    <span class="information_title" style="">
+                        <?= get_field("information_title") ?>
+                    </span>
+                    <br>
+                    <span class="information_text">
+                        <?= get_field("information_text") ?>
+                    </span>
+                </div>
+                <!-- Second Row -->
+                <div class="row" style="margin:35px 0;">
+                    <div class="col-lg-4 ">
+                        <!-- accordion -->
+                        <div class=" d-block d-lg-none" id="accordionExample">
+                            <!-- First Item -->
+                            <div class="accordion-item">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <a href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
+                                            aria-expanded="true" aria-controls="collapseOne"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("contact_title") ?>
+                                        </a>
+
+                                    </h2>
+                                    <!-- DownAroow -->
+                                    <div>
+                                        <a class="d-flex justify-content-center align-items-center" href="#collapseOne"
+                                            class="accordion-button" data-bs-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                style="width:12px; height:12px; margin:7px 0; " />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body ">
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span
+                                                style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
+                                                <?= get_field("e_mail") ?>
+                                            </span>
+                                            <span>
+                                                <?= get_field("tele") ?>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
+                            </div>
+                            <!-- Second Item -->
+                            <div class="accordion-item">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <a href="#collapseTwo" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("address_title") ?>
+                                        </a>
+                                    </h2>
+                                    <!-- DownAroow -->
+                                    <div>
+                                        <a class="d-flex justify-content-center align-items-center" href="#collapseTwo"
+                                            class="accordion-button collapsed" data-bs-toggle="collapse"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                style="width:12px; height:12px; margin:7px 0; " />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span
+                                                style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                <?= get_field("address") ?></span>
+                                            <span> <?= get_field("city") ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
+                            </div>
+
+                            <!-- Third Item -->
+                            <div class="accordion-item">
+                                <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <a href="#collapseThree" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseThree"
+                                            style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
+                                            <?= get_field("information") ?>
+                                        </a>
+                                    </h2>
+                                    <!-- DownAroow -->
+                                    <div>
+                                        <a class="d-flex justify-content-center align-items-center"
+                                            href="#collapseThree" class="accordion-button collapsed"
+                                            data-bs-toggle="collapse" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
+                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                                style="width:12px; height:12px; margin:7px 0; " />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span
+                                                style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                                <?= get_field("kvk") ?>
+                                                <span
+                                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                                    <?= get_field("kvk_num") ?>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="d-flex flex-column align-items-flex-start ">
+                                            <span> <?= get_field("vat") ?> <span>
+                                                    <?= get_field("account_num") ?>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-block d-lg-none" style=" border-bottom: 1px solid  #25325F; margin:16px 0; ">
+                            </div>
+                        </div>
+                        <!-- LG -->
+                        <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <span
+                                style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("contact_title") ?></span>
+                            <span
+                                style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                <?= get_field("e_mail") ?></span>
+                            <span> <?= get_field("tele") ?></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <span
+                                style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("address_title") ?></span>
+                            <span
+                                style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                <?= get_field("address") ?></span>
+                            <span> <?= get_field("city") ?></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
+                            <span
+                                style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
+                                <?= get_field("information") ?>
+                            </span>
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <span
+                                    style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
+                                    <?= get_field("kvk") ?>
+                                </span>
+                                <span
+                                    style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
+                                    <?= get_field("kvk_num") ?>
+                                </span>
+                            </div>
+                            <div class="d-flex flex-row align-items-center gap-2">
+                                <!-- <span> <?= get_field("vat") ?></span> -->
+                                <span> <?= get_field("account_num") ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gap between -->
+            <div class="d-none d-lg-flex col-lg-2"></div>
+
+            <!-- Newsletters -->
+            <div class="col-12 col-lg-4">
+                <div>
+                    <!-- style="display:flex;flex-direction: column; align-items: flex-start;  " -->
+                    <div class="d-flex flex-column newsletter-container gap-2">
+                        <!-- Logo -->
+                        <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
+                                style="height: 43px;width: 88px;">
+                        </a>
+
+                        <span class="newsletter_text" style="margin:20px 0;">
+                            <?= get_field("newsletter_text") ?>
+                        </span>
+
+                        <div class="email-field-container" style="margin:20px 0;">
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required
+                                style="margin-left:2px;">
+
+                            <!-- Btn & text -->
+                            <div class="d-flex justify-content-between align-items-center gap-2 submit-btn"
+                                style="height:39.261px;padding: 12px 15px; border-radius: 8px;background: #274083 !important;">
+                                <a href="<?= get_field("submit_link")['url'] ?>" target="_blank"
+                                    style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px;   justify-content: center; text-decoration: none; ">
+                                    <img src="<?= get_field("submit_img")['url'] ?>"
+                                        alt="<?= get_field("submit_img")['alt'] ?>"
+                                        style="width: 12px; height: 18px;" />
+                                    <?= get_field("submit_link")['title'] ?>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <span
+                            style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px; margin:20px 0;">
+                            <?= get_field("privacy_statement") ?>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Arrows container -->
+    <div class="container">
+        <div class="row gy-2">
+            <div class="col-12 col-lg-12">
+                <div class=" row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around"
+                    style="margin-top:50px">
+
+
+                    <?php
+                    foreach (get_field("arrow_section") as $testimonails) {
+                        ?>
+                        <div class="col-lg" style="border-radius:15px;   height:99px; margin-top:35px 0;">
+                            <div class="d-flex  align-items-center justify-content-around gap-4">
+                                <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                    class="arrow_section" />
+
+                                <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                    class="arrow_section" />
+
+                                <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                    class="arrow_section" />
+
+                                <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                    class="arrow_section" />
+
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Second Line  -->
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow">
+
+                    <?php
+                    foreach (get_field("arrow_section_secondm_row") as $testimonails) {
+                        ?>
+                        <div class="col-lg" style="border-radius:15px;  height:99px; margin:35px 0;">
+                            <div class="d-flex  align-items-center justify-content-around  gap-4">
+                                <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
+                                    class="arrow_section" />
+
+                                <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
+                                    class="arrow_section" />
+
+                                <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
+                                    class="arrow_section" />
+
+                                <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex " />
+
+                                <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+
+                                <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
+                                    class="arrow_section" />
+
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -1438,118 +1806,118 @@
 
     <!-- Bijdragers-swiper -->
     <script>
-    let swiperbijdragers = new Swiper('.bijdragers-swiper', {
-        slidesPerView: 1.5,
-        grabCursor: true,
-        spaceBetween: 1,
+        let swiperbijdragers = new Swiper('.bijdragers-swiper', {
+            slidesPerView: 1.5,
+            grabCursor: true,
+            spaceBetween: 1,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-
-            360: {
-                slidesPerView: 1.8,
-                spaceBetween: 1,
-
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
 
-            412: {
-                slidesPerView: 1.9,
-                spaceBetween: 1,
+            breakpoints: {
 
-            },
+                360: {
+                    slidesPerView: 1.8,
+                    spaceBetween: 1,
 
-            540: {
-                slidesPerView: 3.3,
-                spaceBetween: 1,
+                },
 
-            },
+                412: {
+                    slidesPerView: 1.9,
+                    spaceBetween: 1,
 
-            556: {
-                slidesPerView: 3.6,
+                },
+
+                540: {
+                    slidesPerView: 3.3,
+                    spaceBetween: 1,
+
+                },
+
+                556: {
+                    slidesPerView: 3.6,
 
 
-                spaceBetween: 1,
-            },
-            992: {
+                    spaceBetween: 1,
+                },
+                992: {
 
-                slidesPerView: 4.3,
-                spaceBetween: 1,
-            },
-            1024: {
+                    slidesPerView: 4.3,
+                    spaceBetween: 1,
+                },
+                1024: {
 
-                slidesPerView: 5,
-                spaceBetween: 1,
+                    slidesPerView: 5,
+                    spaceBetween: 1,
+                }
+
+
             }
-
-
-        }
-    })
+        })
     </script>
 
 
 
     <script>
-    let swiperoffer = new Swiper('.sue-offering-swiper', {
-        slidesPerView: 1.5,
-        grabCursor: true,
-        spaceBetween: 1,
+        let swiperoffer = new Swiper('.sue-offering-swiper', {
+            slidesPerView: 1.5,
+            grabCursor: true,
+            spaceBetween: 1,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-
-            360: {
-                slidesPerView: 1.3,
-                spaceBetween: 1,
-
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
             },
-            412: {
-                slidesPerView: 1.5,
-                spaceBetween: 1,
-
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
 
-            540: {
-                slidesPerView: 2,
-                spaceBetween: 1,
+            breakpoints: {
 
-            },
+                360: {
+                    slidesPerView: 1.3,
+                    spaceBetween: 1,
 
-            556: {
-                slidesPerView: 2.7,
+                },
+                412: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 1,
+
+                },
+
+                540: {
+                    slidesPerView: 2,
+                    spaceBetween: 1,
+
+                },
+
+                556: {
+                    slidesPerView: 2.7,
 
 
-                spaceBetween: 1,
-            },
-            992: {
+                    spaceBetween: 1,
+                },
+                992: {
 
-                slidesPerView: 2.7,
-                spaceBetween: 1,
-            },
-            1024: {
+                    slidesPerView: 2.7,
+                    spaceBetween: 1,
+                },
+                1024: {
 
-                slidesPerView: 3,
-                spaceBetween: 1,
+                    slidesPerView: 3,
+                    spaceBetween: 1,
+                }
+
+
             }
-
-
-        }
-    })
+        })
     </script>
 
 
