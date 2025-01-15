@@ -78,6 +78,20 @@
         line-height: 23.4px;
     }
 
+    .swiper-container {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .swiper-container .swiper-pagination {
+        bottom: -30px !important;
+    }
+
+
+    .swiper-pagination-bullet {
+        background-color: #FFF !important;
+    }
 
     @media (min-width: 992px) {
 
@@ -120,6 +134,67 @@
                         <?= get_field("hero_sub_title") ?>
 
                     </span>
+                    <span class="hero-title my-4">
+                        <?= get_field("hero_main_title") ?>
+                    </span>
+                    <span class="hero-text">
+                        <?= get_field("hero_text") ?>
+                    </span>
+                    <!-- Talk to an export btn -->
+                    <div class="d-flex justify-content-between align-items-center gap-2"
+                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
+                        <a href="<?= get_field("request_demo")['url'] ?>"
+                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                            <img src="<?= get_field("request_arrow")['url'] ?>"
+                                alt="<?= get_field("request_arrow")['alt'] ?>" style="width: 12px; height: 18px;" />
+                            <?= get_field("request_demo")['title'] ?>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
+            </div>
+
+        </div>
+
+        <!-- 3 -->
+        <div style="margin-top:80px;">
+            <div class="swiper-container">
+                <div class="swiperimg offering-swiper">
+                    <div class="swiper-wrapper">
+                        <?php
+                        foreach (get_field("testimonials") as $testimonial) {
+                            ?>
+                        <!-- height:auto; -->
+                        <div class="swiper-slide" style="width:fit-content; "
+                            style="height:35vw; max-height:500px; margin:0 12px;">
+
+                            <img src="<?= $testimonial['url'] ?>" alt="<?= $testimonial['alt'] ?>"
+                                class="w- h- objectfit-cover" />
+                            <!-- style="width: 736px;height: 352px;" -->
+
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div>
+            <!-- class="container" -->
+            <div class="row " style="margin-top:210px;">
+                <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
+                <div
+                    class="d-inline-flex align-items-center justify-content-center flex-column gap-3 col-lg-6 col-12 col-md-6">
+                    <span class="left-btn">
+                        <?= get_field("hero_sub_title") ?>
+
+                    </span>
 
                     <span class="hero-title my-4">
                         <?= get_field("hero_main_title") ?>
@@ -139,81 +214,97 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- 3 -->
-
-        <div style="margin-top:80px;">
-            <div class="">
-                <div class="swiperimg offering-swiper">
-                    <div class="swiper-wrapper">
-                        <?php
-                        foreach (get_field("testimonials") as $testimonial) {
-
-                            ?>
-
-                        <div class="swiper-slide" style="width:fit-content; height:auto;">
-
-                            <img src="<?= $testimonial['url'] ?>" alt="<?= $testimonial['alt'] ?>"
-                                class="w-100 h-100 objectfit-cover" style="" />
-
-                        </div>
-
-
-                        <?php
-                        }
-                        ?>
-
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
-
-
-
-
-    <!--  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script>
     let swiperimg = new Swiper('.offering-swiper', {
@@ -255,7 +346,7 @@
             },
             1024: {
 
-                slidesPerView: 3,
+                slidesPerView: 1.7,
             }
 
 

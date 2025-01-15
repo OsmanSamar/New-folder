@@ -168,6 +168,9 @@
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                     'walker' => new WP_Bootstrap_Navwalker(),
 
+
+
+
                 ));
                 ?>
 
@@ -286,7 +289,8 @@
                     'container' => false,
                     'menu_class' => 'navbar-nav fs-5 d-flex flex-column align-items-start gap-3',
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker' => new WP_Bootstrap_Navwalker(),
+                    //'walker' => new WP_Bootstrap_Navwalker(),
+                
                 ));
                 ?>
             </div>
