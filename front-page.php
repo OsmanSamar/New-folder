@@ -136,21 +136,26 @@
         width: 30px;
     }
 
-    /* button .button-text{
-        position: relative;
-        z-index: 2;
-    } */
+
 
     button .button-text {
-        position: absolute;
-        top: 0;
+        /* position: absolute; 
+        top: 0;*/
+        position: relative;
+        top: -4px;
         left: 24px;
-        margin: 0 0 0 1.85rem;
+        margin: 0 0 0 0.05rem;
         color: #FFF;
         font-size: 13px;
         line-height: 15.6px;
         text-align: center;
         z-index: 2;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
     }
 
 
