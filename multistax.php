@@ -199,7 +199,8 @@
 
     button {
         position: relative;
-        display: inline-block;
+        /* display: inline-block; */
+        display: inline-grid;
         cursor: pointer;
         outline: none;
         vertical-align: middle;
@@ -227,7 +228,7 @@
         position: relative;
         top: -24px;
         left: 24px;
-        margin: 0 0 0 3.55rem;
+        margin: 0 0 0 1.55rem;
         color: #FFF;
         font-size: 13px;
         line-height: 15.6px;
@@ -265,6 +266,136 @@
     }
 
 
+    .block_blue {
+        height: 1974px;
+        border-radius: 40px;
+        background: #25325F;
+        margin: 50px auto;
+        width: 100vw;
+        max-width: 1700px;
+    }
+
+    .cloud-projects-row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .view-all-link {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px;
+    }
+
+
+    .view-btn {
+        background-color: #FFF;
+        height: 30px;
+        width: 30px;
+        border-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .card-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 96px;
+        height: 30px;
+        border-radius: 100px;
+        background: #E94271;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.4px;
+        text-align: center;
+        margin: 16px 0px;
+    }
+
+
+    .card-text {
+        color: #25325F;
+        font-family: Manrope;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33.6px;
+        width: 264px;
+
+    }
+
+    .industry_title {
+        color: var(--Text, #6A7291);
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px
+    }
+
+
+    .industry {
+        color: var(--Primary-600, #25325F);
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px
+    }
+
+
+    .cloud-projects-title {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+    }
+
+
+    .left-side-width {
+        margin-top: 50px;
+        padding: 24px;
+
+    }
+
+    .offering-num {
+        color: #E94271;
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 23.8px;
+    }
+
+    .challenge-title {
+        color: #CBCFDE;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27px;
+    }
+
+    .challenge-text {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33.6px;
+        margin-top: 20px;
+    }
 
 
 
@@ -273,6 +404,34 @@
             background: #25325F;
             height: 380px;
         }
+
+
+        .block_blue {
+            height: 853px;
+        }
+
+        .cloud-projects-row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+
+        .view-all-link {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .cloud-projects-title {
+            font-size: 23px;
+        }
+
+        .left-side-width {
+            max-width: 352px;
+        }
+
     }
 
 
@@ -288,6 +447,39 @@
             font-size: 36px;
         }
 
+        button .button-text {
+
+            top: -33px;
+        }
+
+        .block_blue {
+            height: 815.03px;
+        }
+
+
+        .cloud-projects {
+            height: 837px;
+        }
+
+        .view-all-link {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .cloud-projects-title {
+            font-size: 26px;
+        }
+
+
+        .left-side-width {
+            max-width: 694px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 70px;
+        }
 
     }
     </style>
@@ -295,8 +487,8 @@
 
 
 
-    <div class="container">
-        <!-- 1 -->
+    <div class="">
+        <!-- 1   class="container" -->
         <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
             <a href="<?= get_field("back_to_home")['url'] ?>"
                 class="d-flex justify-content-center align-items-center gap-2">
@@ -314,7 +506,7 @@
 
 
         <!-- 2 -->
-        <div>
+        <div class="container">
             <!-- class="container" -->
             <div class="row " style="margin-top:210px;">
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
@@ -347,31 +539,7 @@
         </div>
 
         <!-- 3 -->
-        <!-- <div style="margin-top:80px;">
-            <div class="swiper-container">
-                <div class="swiperimg offering-swiper">
-                    <div class="swiper-wrapper">
-                        <?php
-                        foreach (get_field("testimonials") as $testimonial) {
-                            ?>
-                        <div class="swiper-slide" style="width:fit-content; "
-                            style="height:35vw; max-height:500px; margin:0 12px;">
-
-                            <img src="<?= $testimonial['url'] ?>" alt="<?= $testimonial['alt'] ?>"
-                                class="w- h- objectfit-cover" />
-                        </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-                Add Pagination
-                <div class="swiper-pagination"></div>
-            </div>
-        </div> -->
-
-        <!-- 3 -->
-        <div style="margin-top:80px;">
+        <div class="container" style="margin-top:80px;">
             <div class="swiper-container">
                 <div class="swiperimg offering-swiper">
                     <div class="swiper-wrapper">
@@ -490,19 +658,19 @@
         </div>
 
         <!-- 7 -->
-        <div class="containe">
+        <div class="container mt-5">
             <div class="row ">
                 <div class="col-lg-1 d-none d-lg-block"></div>
                 <div class="col-lg-5 col-md-5 d-flex flex-wrap ">
-                    <span class="left-btn mb-1">
+                    <span class="left-btn mb-2">
 
                         <?= get_field("sbu_title_left") ?>
                     </span>
-                    <span class="main-left-title mb-1">
+                    <span class="main-left-title mb-2">
 
                         <?= get_field("main_title_left") ?>
                     </span>
-                    <span class="left-text  mb-1">
+                    <span class="left-text  mb-2">
 
                         <?= get_field("left_text") ?>
                     </span>
@@ -521,8 +689,6 @@
                     </button>
                 </div>
 
-
-
                 <div class="col-lg-1 col-md-1 d-md-block d-none d-lg-block"></div>
                 <div class="col-lg-5 col-md-6">
 
@@ -534,6 +700,206 @@
                 <div class="col-lg-1 d-none d-lg-block"></div>
             </div>
         </div>
+
+
+        <!-- 8 -->
+        <div class="container mt-5">
+            <div class="row ">
+                <div class="col-lg-1 d-none d-lg-block"></div>
+                <div class="col-lg-5 col-md-6">
+                    <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
+                        class="w-100 h-100 objectfit-cover" style=" border-radius:40px; " />
+                </div>
+                <div class="col-lg-5 col-md-5 d-flex flex-wrap ">
+                    <span class="left-btn mb-2">
+
+                        <?= get_field("sbu_title_left") ?>
+                    </span>
+                    <span class="main-left-title mb-2">
+
+                        <?= get_field("main_title_left") ?>
+                    </span>
+                    <span class="left-text  mb-2">
+
+                        <?= get_field("left_text") ?>
+                    </span>
+                    <!-- Talk to an export btn -->
+                    <button>
+                        <span class="circle">
+                            <a href="<?= get_field("lets_talk_link")['url'] ?>"
+                                class="d-flex justify-content-center align-items-center  arrow" href="#">
+                                <img src="<?= get_field("lets_talk_img")['url'] ?>"
+                                    alt="<?= get_field("lets_talk_img")['alt'] ?>"
+                                    style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                            </a>
+                        </span>
+                        <!-- <?= get_field("lets_talk_link")['title'] ?> -->
+                        <span class="button-text">Let's talk</span>
+                    </button>
+                </div>
+
+                <div class="col-lg-1 col-md-1 d-md-block d-none d-lg-block"></div>
+
+
+
+                <div class="col-lg-1 d-none d-lg-block"></div>
+            </div>
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="block_blue">
+            <div class="container">
+                <!-- class="container" -->
+
+                <div class="row px-5 py-5">
+                    <div class="col-lg-4 col-md-6 col-12 d-flex flex-wrap" style="margin:30px auto">
+                        <span class="left-btn mb-2">
+
+                            <?= get_field("sbu_title_left") ?>
+                        </span>
+                        <span class="main-left-title mb-2">
+
+                            <?= get_field("main_title_left") ?>
+                        </span>
+                        <span class="left-text  mb-2">
+
+                            <?= get_field("left_text") ?>
+                        </span>
+                        <!-- Talk to an export btn -->
+                        <div class="d-flex justify-content-between align-items-center gap-2"
+                            style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
+                            <a href="<?= get_field("request_demo")['url'] ?>"
+                                style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                                <img src="<?= get_field("request_arrow")['url'] ?>"
+                                    alt="<?= get_field("request_arrow")['alt'] ?>" style="width: 12px; height: 18px;" />
+                                <?= get_field("request_demo")['title'] ?>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 d-none d-lg-block"></div>
+
+                    <div class="col-lg-6 col-md-6 col-12">
+
+                        <div class=" d-flex align-items-center justify-content-around">
+                            <div class="left-side-width">
+                                <div class="row">
+                                    <?php
+                                    $testimonials = get_field("challenge_testimonials");
+                                    foreach ($testimonials as $index => $testimonial) {
+                                        if ($index % 2 == 0 && $index != 0) {
+                                            echo '</div><div class="row">';
+                                        }
+                                        ?>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="testimonial">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="offering-num"><?= $testimonial["num"] ?></span>
+                                                <span class="challenge-title"><?= $testimonial["title"] ?></span>
+                                            </div>
+                                            <h3 class="challenge-text"><?= $testimonial["text_cha"] ?></h3>
+                                        </div>
+                                    </div>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- 10 -->
+
+
+
+        <!--cloud-projects Section  -->
+        <div class="cloud-projects">
+            <div class="container">
+                <div class="row cloud-projects-row mt-5">
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <span class="cloud-projects-title">
+                            <?= get_field("cloudprojects_title") ?>
+                        </span>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-6">
+                        <a href="<?= get_field("view_all_link")['url'] ?>"
+                            class="d-flex  align-items-center gap-2 view-all-link">
+                            <!-- justify-content-end -->
+                            <div class="view-btn">
+                                <img src="<?= get_field("view_btn")['url'] ?>" alt="<?= get_field("view_btn")['alt'] ?>"
+                                    style="width:12px; height:18px; margin:7px 0;" />
+                            </div>
+                            <?= get_field("view_all_link")['title'] ?>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-start gy-4 mt-1">
+                    <?php foreach (get_field("cloud_projects_testimonials") as $testimonial) { ?>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card" style="border-radius: 20px; border: 1px solid #CBCFDE; background: #FFF;">
+                            <img src="<?= $testimonial["test_img"]['url'] ?>"
+                                alt="<?= $testimonial['test_img']['alt'] ?>" class="card-img-top "
+                                style="height: 213px; border-radius:20px; object-fit:cover;" />
+                            <!-- CARD BODY -->
+                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                                style="background-color:; overflow:hidden;">
+                                <div class="card-title">
+                                    <span><?= $testimonial["test_name"] ?></span>
+                                </div>
+                                <p class="card-text">
+                                    <?= $testimonial["test_text"] ?>
+                                </p>
+                                <div class="d-flex justify-content-start align-items-center gap-2">
+                                    <p class="industry_title">
+                                        <?= $testimonial["text_industry"] ?>
+                                    </p>
+                                    <p class="industry">
+                                        <?= $testimonial["test_type"] ?>
+                                    </p>
+                                </div>
+
+                                <div class="bottom-border position-absolute"
+                                    style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                                </div>
+                            </div>
+                            <!-- END OF CARD BODY -->
+                            <!-- Bejijken btn -->
+                            <div class=" card-body d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                        style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
+                                        <img src="<?= $testimonial["img_btn"]['url'] ?>"
+                                            alt="<?= $testimonial["img_btn"]['alt'] ?>"
+                                            style="width: 12px; height: 18px;" />
+                                    </div>
+                                    <a href="<?= $testimonial['test_link']['url'] ?>" class="text-decoration-none">
+                                        <?= $testimonial["test_link"]['title'] ?>
+                                    </a>
+                                </div>
+                                <img src="<?= $testimonial["knp_img"]['url'] ?>"
+                                    alt="<?= $testimonial["knp_img"]['alt'] ?>" style="width: 63px; height: 24px;" />
+                            </div>
+                        </div>
+                    </div>
+                    <?php } ?>
+                </div>
+
+            </div>
+        </div>
+
+
 
 
 
