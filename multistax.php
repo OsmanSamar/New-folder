@@ -1078,11 +1078,10 @@
                                     </span>
 
 
-                                    <div style="  margin-top:10px;" class="d-flex d-md-none d-lg-none">
+                                    <div style=" margin-top:10px;" class="d-flex d-md-none d-lg-none">
                                         <!-- E_mail -->
                                         <div class="d-flex flex-column flex-lg-column ">
-                                            <div
-                                                class=" d-flex flex-row align-items-center justify-content-start gap-2">
+                                            <div class="d-flex flex-row align-items-center justify-content-start gap-2">
 
                                                 <a href="#"
                                                     style="background-color:white;height:30px;width:30px; border-radius: 8px;"

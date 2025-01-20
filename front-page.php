@@ -2800,11 +2800,11 @@
 
 
             <!-- New Section With Swiper On Right Side -->
-            <div class="container" style="margin-top:;">
+            <div class="container">
                 <!-- margin-top:60px; -->
                 <div class="row">
                     <!-- Left Section -->
-                    <div class="col12 col-lg-5 order-2 order-lg-1 custom-video">
+                    <div class="col-12 col-lg-5 order-2 order-lg-1 custom-video">
                         <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                             style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover" />
 
