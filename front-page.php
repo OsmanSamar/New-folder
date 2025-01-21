@@ -1550,7 +1550,7 @@
                                     <div
                                         class="d-none d-md-flex d-lg-flex flex-row align-items-center justify-content-between w-100">
                                         <!-- Left Section -->
-                                        <div class="d-flex align-items-center gap-3">
+                                        <div class="d-flex align-items-center gap-1">
                                             <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
                                                 <?= get_field("trending_btn")['title'] ?>
                                             </a>
@@ -1558,15 +1558,15 @@
                                         <!-- Slide Content -->
                                         <div class="text-swiper">
                                             <span class="slide-text">
-                                                Nulla facilisi. Duis at <strong>nulla</strong>
-                                                posuere, cursus justo vitae,<span id="dots">...</span>
-                                                <span class="hidden-text"><strong>interdum</strong> dui fusce euismod
+                                                1Nulla facilisi.Duis at<strong>nulla</strong>
+                                                posuere,cursus justo vitae,<span id="dots">...</span>
+                                                <span class="hidden-text"><strong>interdum</strong>dui fusce euismod
                                                     rhoncus1</span>
                                             </span>
                                         </div>
 
                                         <!-- Right Section -->
-                                        <div class="d-lg-flex d-md-none align-items-center gap-2">
+                                        <div class="d-lg-flex d-md-none align-items-center gap-1">
                                             <a href="#"
                                                 style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                                 class="d-flex justify-content-center align-items-center">
@@ -1586,7 +1586,7 @@
                                     <div
                                         class="d-none d-md-flex d-lg-flex flex-row align-items-center justify-content-between w-100">
                                         <!-- Left Section -->
-                                        <div class="d-flex align-items-center gap-3">
+                                        <div class="d-flex align-items-center gap-1">
                                             <div class="swiper-pagination2"
                                                 style="position:relative; z-index:1; transform: translateY(50%);"></div>
                                             <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
@@ -1596,14 +1596,14 @@
                                         <!-- Slide Content -->
                                         <div class="text-swiper">
                                             <span class="slide-text">
-                                                Nulla facilisi. Duis at <strong>nulla</strong>
-                                                posuere, cursus justo vitae,<span id="dots">...</span>
-                                                <span class="hidden-text"><strong>interdum</strong> dui fusce euismod
-                                                    rhoncus2</span>
+                                                2Nulla facilisi.Duis at <strong>nulla</strong>
+                                                posuere,cursus justo vitae,<span id="dots">...</span>
+                                                <span class="hidden-text"><strong>interdum</strong>dui fusce euismod
+                                                    rhoncus</span>
                                             </span>
                                         </div>
                                         <!-- Right Section -->
-                                        <div class="d-lg-flex d-md-none align-items-center gap-2">
+                                        <div class="d-lg-flex d-md-none align-items-center gap-1">
                                             <a href="#"
                                                 style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                                 class="d-flex justify-content-center align-items-center">
@@ -1618,13 +1618,13 @@
                                     </div>
                                 </div>
 
-                                <!-- Repeat for other slides -->
+                                <!-- Slide 3 -->
                                 <div class="swiper-slide">
                                     <div
-                                        class="d-none d-md-block d-lg-flex flex-row align-items-center justify-content-between w-100">
+                                        class="d-none d-md-flex d-lg-flex flex-row align-items-center justify-content-between w-100">
                                         <!-- Left Section -->
-                                        <div class="d-flex align-items-center gap-3">
-                                            <div class="swiper-pagination4"
+                                        <div class="d-flex align-items-center gap-1">
+                                            <div class="swiper-pagination2"
                                                 style="position:relative; z-index:1; transform: translateY(50%);"></div>
                                             <a href="<?= get_field("trending_btn")['url'] ?>" class="btn-swiper">
                                                 <?= get_field("trending_btn")['title'] ?>
@@ -1633,14 +1633,14 @@
                                         <!-- Slide Content -->
                                         <div class="text-swiper">
                                             <span class="slide-text">
-                                                Nulla facilisi. Duis at <strong>nulla</strong>
-                                                posuere, cursus justo vitae,<span id="dots">...</span>
-                                                <span class="hidden-text"><strong>interdum</strong> dui fusce euismod
-                                                    rhoncus3</span>
+                                                3Nulla facilisi.Duis at <strong>nulla</strong>
+                                                posuere,cursus justo vitae,<span id="dots">...</span>
+                                                <span class="hidden-text"><strong>interdum</strong>dui fusce euismod
+                                                    rhoncus</span>
                                             </span>
                                         </div>
                                         <!-- Right Section -->
-                                        <div class="d-lg-flex d-md-none align-items-center gap-2">
+                                        <div class="d-lg-flex d-md-none align-items-center gap-1">
                                             <a href="#"
                                                 style="border-radius:8px; background-color:white; height:30px; width:30px;"
                                                 class="d-flex justify-content-center align-items-center">
@@ -1654,6 +1654,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
                         </div>
 
