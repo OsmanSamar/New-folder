@@ -6,124 +6,6 @@
 <main class="consultancy flex-grow-1">
 
     <style>
-    /* 3 */
-    /* button .circle3 {
-        justify-content: center;
-        display: inline-flex;
-        position: relative;
-        z-index: 1;
-        height: 30px;
-        width: 30px;
-    }
-
-    button .button-text3 {
-        position: relative;
-        top: -24px;
-        left: 12px;
-        margin: 0 0 0 1.55rem;
-        color: #FFF;
-        font-size: 13px;
-        line-height: 15.6px;
-        text-align: center;
-        z-index: 2;
-        font-family: Manrope;
-        font-style: normal;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        line-height: 15.6px;
-    }
-
-    button .circle3::before {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-radius: 8px;
-        background-color: #FFF;
-        margin: 0;
-        content: '';
-        z-index: -1;
-    }
-
-    button:hover .circle3::before {
-        width: 10rem;
-    }
-
-    button:hover .button-text3 {
-        color: #274083;
-    }
-
-    .right-col-form {
-        margin-top: unset;
-    }
-
-    button {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        outline: none;
-        vertical-align: middle;
-        text-decoration: none;
-        border: 0;
-        background: transparent;
-        padding: 0;
-        font-size: inherit;
-        font-family: inherit;
-    }
-
-    button .circle2 {
-        justify-content: center;
-        display: inline-flex;
-        position: relative;
-        z-index: 1;
-        height: 30px;
-        width: 30px;
-    }
-
-    button .button-text2 {
-        position: absolute;
-        top: 0;
-        left: 24px;
-        margin: 0 0 0 1.85rem;
-        color: #FFF;
-        font-size: 13px;
-        line-height: 15.6px;
-        text-align: center;
-        z-index: 2;
-    }
-
-    button .circle2::before {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-radius: 8px;
-        background-color: #FFF;
-        margin: 0;
-        content: '';
-        z-index: -1;
-    }
-
-
-    button:hover .circle2::before {
-        width: 8rem;
-    }
-
-    button:hover .circle2 .icon.arrow {
-        background: #fff;
-    } */
-
-
-
-
-
-
-    /*  */
     b,
     strong {
         color: #e94271;
@@ -189,8 +71,6 @@
         display: none;
     }
 
-
-
     .hero_blue_block {
         position: static;
         margin-top: 0;
@@ -205,7 +85,6 @@
     .testimonial-card {
         border-radius: 15px;
         background-color: #FFF;
-        /* max-width: 356px; */
         height: 277px;
         margin: 15px 0;
         padding: 27px;
@@ -229,9 +108,7 @@
     }
 
     .expertise-main-title {
-
         color: #25325F;
-
         font-family: Manrope;
         font-size: 21px;
         font-style: normal;
@@ -241,7 +118,6 @@
 
     .divider {
         border-bottom: 0.5px solid #25325F;
-        /* margin: 15px 1px; */
     }
 
     .expertise-text {
@@ -253,26 +129,17 @@
         text-align: left;
     }
 
-
-
     .hero_blue_block {
-        /* width: 531px; */
         height: 100%;
         border-radius: 40px;
         background: #25325F;
         position: relative;
-        /* bottom: 350px; */
         left: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 30px;
-        /* margin-top: -350px; */
-        /* margin-top: -152px; */
-        /* margin-top: -450px; */
-        /* margin-top: -400px; */
-
     }
 
 
@@ -307,7 +174,6 @@
         font-weight: 700;
         line-height: 27.2px;
         width: 353px;
-        /* height: 158px; */
         margin-bottom: 31px;
     }
 
@@ -358,9 +224,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: 27.2px;
-
     }
-
 
     .card {
         border-radius: 20px;
@@ -369,7 +233,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
 
     .card-img-top {
@@ -401,8 +264,6 @@
         font-style: normal;
         font-weight: 700;
         line-height: 33.6px;
-        /* width: 264px; */
-
     }
 
     .industry_title {
@@ -424,9 +285,8 @@
         line-height: 15.6px
     }
 
-    /*  */
+
     .block_blue {
-        /* height: 2000.03px; */
         height: 1974px;
         border-radius: 40px;
         background: #25325F;
@@ -437,17 +297,12 @@
 
     .client-consultancy-container {
         display: flex;
-        /* align-items: center;
-            justify-content: space-between; */
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-
-
     }
 
     .client-consultancy-title {
-
         height: 40px;
         color: #FFF;
         font-family: Manrope;
@@ -455,28 +310,20 @@
         font-style: normal;
         font-weight: 700;
         line-height: 150%;
-
         margin-top: 50px;
         margin-bottom: 10px;
-
     }
-
-
-
 
     .inner_block2 {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: left;
-
     }
 
     .profit-block {
         border-radius: 15px;
         background: white;
-        /* max-width: 545px; */
-        /* height: 316.956px; */
         height: auto;
         padding: 42px;
     }
@@ -520,11 +367,9 @@
     }
 
     .client_card2 {
-
         background: #EDF3F4;
         border-radius: 20px;
         border: 1px solid #CBCFDE;
-
     }
 
     .client2-btn {
@@ -544,11 +389,9 @@
     .form_section {
         border-radius: 30px;
         background: #25325F;
-        /* margin: 150px auto; */
         max-width: 1700px;
         height: 1400px;
         margin: 50px auto 50px;
-
     }
 
     .left-container {
@@ -562,15 +405,12 @@
     .left-content {
         display: flex;
         flex-direction: row;
-        /* justify-content: flex-start; */
         align-items: center;
         margin-top: 30px;
         gap: 50px;
-        /* margin-left: 15px; */
     }
 
     .arrow_section {
-
         width: 57.851px;
         height: 92.371px;
         flex-shrink: 0;
@@ -609,74 +449,14 @@
         transition: transform 0.2s ease;
     }
 
-    /*  */
-    /* button {
-        
-        display: inline-grid;
-        cursor: pointer;
-        outline: none;
-        vertical-align: middle;
-        text-decoration: none;
-        border: 0;
-        background: transparent;
-        padding: 0;
-        font-size: inherit;
-        font-family: inherit;
-    }
-
-    button .circle2 {
-        justify-content: center;
-        display: inline-flex;
-        position: relative;
-        z-index: 1;
-        height: 30px;
-        width: 30px;
-    }
-
-
-    button .button-text2 {
-        position: relative;
-        top: -24px;
-        left: 12px;
-        margin: 0 0 0 1.55rem;
-        color: #274083;
-        font-size: 13px;
-        line-height: 15.6px;
-        text-align: center;
-        z-index: 2;
-        font-family: Manrope;
-        font-style: normal;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-       
-        line-height: 15.6px;
-    }
-
-    button .circle2::before {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        border-radius: 8px;
-        background-color: #274083;
-        margin: 0;
-        content: '';
-        z-index: -1;
-    } */
-
     .arrow_section button:hover .circle2::before {
         width: 8rem;
     }
-
 
     button:hover .button-text2 {
         color: #FFF;
     }
 
-    /*  */
 
     @media (min-width: 768px) {
 
@@ -707,7 +487,7 @@
             width: 458px;
             position: relative;
             bottom: 582px;
-            le ft: 0;
+            left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -715,15 +495,12 @@
             padding: 30px;
             height: 581.608px;
             margin-top: unset;
-
         }
 
         .hero_text,
         .hero_title {
             text-align: left;
         }
-
-
 
         .block_blue {
             height: 853px;
@@ -764,15 +541,12 @@
         .client-consultancy-link {
             margin-top: 83px;
             margin-bottom: 10px;
-            /* margin-top: 69px; */
             font-size: 16px;
         }
 
 
         .hero_blue_block {
             width: 531px;
-            /* position: absolute;
-            bottom: 0; */
             position: relative;
             bottom: 582px;
             left: 0;
@@ -781,7 +555,6 @@
             align-items: flex-start;
             justify-content: center;
             padding: 30px;
-            /* height: 581.608px; */
             height: 100%;
             margin-top: unset;
 
@@ -801,9 +574,6 @@
         strong {
             font-size: inherit;
         }
-
-
-
 
         .block_blue {
 
@@ -836,7 +606,6 @@
 
         .form_section {
             height: 550px;
-            /* margin: unset; */
         }
 
         .left-container {
@@ -848,7 +617,6 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: normal;
-            /* margin-left: 15px; */
             margin-top: 67px;
         }
 
