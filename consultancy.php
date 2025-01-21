@@ -552,6 +552,12 @@
             font-size: 26px;
         }
 
+
+        .letstalk-btn a:hover img {
+            transform: translateX(6px);
+            transition: transform 0.2s ease;
+        }
+
         @media (min-width: 768px) {
 
             .client-consultancy-container {
@@ -796,7 +802,7 @@
                     <?= get_field("hero_text") ?>
                 </span>
                 <!-- Talk to an export btn -->
-                <div class="d-flex justify-content-between align-items-center gap-2"
+                <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
                     style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
                     <a href="<?= get_field("talk_to_an_expert_btn")['url'] ?>" style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; 
                                                         align-items: center; gap:8px; text-decoration: none; ">
@@ -982,7 +988,7 @@
                     </p>
 
                     <!-- Talk to an export btn -->
-                    <div class="d-flex justify-content-between align-items-center gap-2" non
+                    <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
                         style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
                         <a href="<?= get_field("talk_to_an_expert_btn")['url'] ?>"
                             style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">

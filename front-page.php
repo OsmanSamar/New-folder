@@ -5,6 +5,12 @@
 
 <main class="front-page flex-grow-1">
     <style>
+    .letstalk-btn a:hover img {
+        transform: translateX(6px);
+        transition: transform 0.2s ease;
+    }
+
+
     .right-col-form {
         margin-top: unset;
     }
@@ -113,6 +119,82 @@
         max-width: 1700px;
     }
 
+    /* Button1 */
+
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        vertical-align: middle;
+        text-decoration: none;
+        border: 0;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    button .circle1 {
+        justify-content: center;
+        display: inline-flex;
+        position: relative;
+        z-index: 1;
+        height: 30px;
+        width: 30px;
+    }
+
+    button .button-text1 {
+        position: relative;
+        top: -4px;
+        left: 1px;
+        margin: 0 0 0 0.05rem;
+        /* color: #FFF; */
+        font-size: 13px;
+        line-height: 15.6px;
+        text-align: center;
+        z-index: 2;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #25325F;
+
+    }
+
+    button .circle1::before {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        background-color: #FFF;
+        margin: 0;
+        content: '';
+        z-index: -1;
+    }
+
+    button:hover .circle1::before {
+        width: 9rem;
+        /* Expands the circle to include text */
+    }
+
+    button:hover .circle1 .icon1.arrow1 {
+        background: #fff;
+    }
+
+    button:hover .button-text1:hover {
+        color: #25325F;
+        z-index: 3;
+    }
+
+
+    /* Button1 */
+
     button {
         position: relative;
         display: inline-block;
@@ -136,8 +218,6 @@
         width: 30px;
     }
 
-
-
     button .button-text {
         /* position: absolute; 
         top: 0;*/
@@ -158,7 +238,6 @@
         text-decoration: none;
     }
 
-
     button .circle::before {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         position: absolute;
@@ -176,14 +255,10 @@
     button:hover .circle::before {
         width: 8rem;
         /* Expands the circle to include text */
-
     }
-
-
 
     button:hover .circle .icon.arrow {
         background: #fff;
-
     }
 
 
@@ -1527,7 +1602,7 @@
             <!-- End of the first container div -->
         </div>
 
-        <!-- Swiper Container  class="container"-->
+        <!-- 2Swiper Container  class="container"-->
         <div class="section-header">
             <div class="bg-container"
                 style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px; height:577px;">
@@ -1578,6 +1653,25 @@
                                                 style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px">Learn
                                                 more</span>
                                         </div>
+
+                                        <!-- class="btn" -->
+                                        <!-- <div class="d-flex flex-row  d-lg-flex d-md-none align-items-center ">
+                                            <button>
+                                                <span class="circle1">
+                                                    <a href="#"
+                                                        class="d-flex justify-content-center align-items-center  arrow1"
+                                                        href="#">
+
+                                                        <img src="<?= get_field('arrow_btn')['url'] ?>"
+                                                            alt="<?= get_field('arrow_btn')['title'] ?>"
+                                                            style="width:12px; height:18px; object-fit:content;"
+                                                            class="icon1">
+                                                    </a>
+                                                </span>
+                                                <span class="button-text1">Read More</span>
+                                            </button>
+                                        </div> -->
+
                                     </div>
                                 </div>
 
@@ -1886,7 +1980,7 @@
                             <?= $testimonial["text"] ?>
                         </p>
                         <!-- Btn & text -->
-                        <div class="d-flex align-items-center gap-2" style="padding:0 20px; margin-bottom:20px;">
+                        <!-- <div class="d-flex align-items-center gap-2" style="padding:0 20px; margin-bottom:20px;">
                             <a style="border-radius:8px; background-color: #274083; height:30px; width:30px;"
                                 class="d-flex justify-content-center align-items-center" href="#">
                                 <img src="<?= get_field("schedule_link")['url'] ?>"
@@ -1897,7 +1991,34 @@
                                 style="color:#25325F; font-family: Manrope;font-size:13px; font-style:normal; font-weight:600; line-height:15.6px;">
                                 <?= $testimonial["btn_text"] ?>
                             </span>
+                        </div> -->
+                        <!--  -->
+
+                        <div class="d-flex flex-row align-items-center">
+                            <button>
+                                <!-- class="btn" -->
+                                <span class="circle">
+                                    <a href="#" class="d-flex justify-content-center align-items-center  arrow">
+                                        <img src="<?= get_field("schedule_link")['url'] ?>"
+                                            alt="<?= get_field("schedule_link")['alt'] ?>"
+                                            style="width:12px; height:18px; margin:7px 0;" class="icon" />
+                                    </a>
+                                </span>
+                                <span class="button-text"
+                                    style="color:#25325F; font-family: Manrope;font-size:13px; font-style:normal; font-weight:600; line-height:15.6px;">
+                                    <?= $testimonial["btn_text"] ?>
+                                </span>
+                            </button>
                         </div>
+
+
+
+
+
+
+
+
+                        <!--  -->
                     </div>
                 </div>
                 <?php
@@ -2102,7 +2223,7 @@
                                 <?= get_field("text") ?>
                             </span>
                             <!-- schedule_link -->
-                            <div class=" d-flex flex-row align-items-center justify-content-left gap-3 mt-4"
+                            <div class=" d-flex flex-row align-items-center justify-content-left gap-3 mt-4  letstalk-btn"
                                 style="height:42px; padding:12px 15px; border-radius:8px; background:#E94271;width: fit-content; ">
                                 <a href="#" class="d-flex justify-content-center align-items-center">
                                     <img src="<?= get_field("schedule_link")['url'] ?>"
@@ -2116,6 +2237,8 @@
                             </div>
                         </div>
                     </div>
+
+
 
 
                     <div class="col-lg-1"></div>
@@ -2156,18 +2279,6 @@
                                         </span>
                                     </div>
                                     <div class="d-flex flex-row align-items-center  gap-3">
-                                        <!-- <a href="#"
-                                            style="border-radius:8px; background-color:#274083; height:30px; width:30px; margin:10px 0;"
-                                            class="d-flex justify-content-center align-items-center" href="#">
-
-                                            <img src="<?= $testimonails['link']['url'] ?>"
-                                                alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                                style="width:12px; height: 18px; margin:7px 0;" />
-                                        </a>
-                                        <span
-                                            style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
-                                            more</span> -->
-
                                         <button>
                                             <!-- class="btn" -->
                                             <span class="circle">
@@ -2186,8 +2297,6 @@
                                                 more</span> -->
                                             <span class="button-text">Read More</span>
                                         </button>
-
-
                                     </div>
                                 </div>
                                 <?php
