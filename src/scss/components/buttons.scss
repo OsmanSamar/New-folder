@@ -170,7 +170,7 @@ button .circle.white-circle::before {
   background-color: #ffffff;
 }
 button .circle.pink-circle::before {
-  background-color: #ffc0cb;
+  background-color: #e94271;
 }
 
 // button:hover .button-text.blue {
@@ -216,12 +216,18 @@ button .button-text.blue2 {
   }
 }
 
+button .button-text.pink {
+  left: 1px;
+  color: white;
+  z-index: 3;
+}
+
 button:hover .button-text.pink {
-  color: #d81b60;
+  // color: #e94271;
   z-index: 3;
 }
 button:hover .button-text.pink:hover {
-  color: white;
+  // color: white;
   z-index: 3;
 }
 
