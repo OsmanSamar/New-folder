@@ -7,7 +7,7 @@
 
     <style>
     /* 3 */
-    button .circle3 {
+    /* button .circle3 {
         justify-content: center;
         display: inline-flex;
         position: relative;
@@ -116,7 +116,7 @@
 
     button:hover .circle2 .icon.arrow {
         background: #fff;
-    }
+    } */
 
 
 
@@ -610,9 +610,8 @@
     }
 
     /*  */
-    button {
-        position: relative;
-        /* display: inline-block; */
+    /* button {
+        
         display: inline-grid;
         cursor: pointer;
         outline: none;
@@ -650,7 +649,7 @@
         font-weight: 600;
         display: flex;
         align-items: center;
-        /* text-decoration: none; */
+       
         line-height: 15.6px;
     }
 
@@ -666,7 +665,7 @@
         margin: 0;
         content: '';
         z-index: -1;
-    }
+    } */
 
     .arrow_section button:hover .circle2::before {
         width: 8rem;
@@ -974,12 +973,18 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="testimonial-card">
                     <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="expertise-num"><?= $testimonial["expertise_num"] ?></span>
-                        <span class="expertise-sub-title"><?= $testimonial["expertise_sub_title"] ?></span>
+                        <span class="expertise-num">
+                            <?= $testimonial["expertise_num"] ?></span>
+                        <span class="expertise-sub-title">
+                            <?= $testimonial["expertise_sub_title"] ?></span>
                     </div>
-                    <h2 class="expertise-main-title"> <?= $testimonial["expertise_main_title"] ?></h2>
+                    <h2 class="expertise-main-title">
+                        <?= $testimonial["expertise_main_title"] ?>
+                    </h2>
                     <div class="divider mb-3" style="margin: 15px 1px;"></div>
-                    <p class="expertise-text"><?= $testimonial["expertise_text"] ?></p>
+                    <p class="expertise-text">
+                        <?= $testimonial["expertise_text"] ?>
+                    </p>
                 </div>
             </div>
             <?php } ?>
@@ -1036,7 +1041,8 @@
                         <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
                             style="background-color:; overflow:hidden;">
                             <div class="card-title">
-                                <span><?= $testimonial["clients_name"] ?></span>
+                                <span>
+                                    <?= $testimonial["clients_name"] ?></span>
                             </div>
                             <p class="card-text">
                                 <?= $testimonial["clients_text"] ?>
@@ -1056,37 +1062,22 @@
                         <!-- END OF CARD BODY -->
                         <!-- Bejijken btn -->
                         <div class=" card-body d-flex justify-content-between align-items-center">
-                            <!-- <div class="d-flex align-items-center gap-2">
-                                <div class="d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px;  border-radius: 8px;background: #274083;">
-                                    <img src="<?= $testimonial["bekijk"]['url'] ?>"
-                                        alt="<?= $testimonial["bekijk"]['alt'] ?>" style="width: 12px; height: 18px;" />
-                                </div>
-                                <a href="<?= $testimonial['bekijk_btn']['url'] ?>" class="text-decoration-none">
-                                    <?= $testimonial["bekijk_btn"]['title'] ?>
-                                </a>
-                            </div> -->
-
                             <button>
-                                <span class="circle2">
+                                <span class="circle blue-circle">
                                     <a href="#" class="d-flex justify-content-center align-items-center  arrow">
                                         <img src="<?= $testimonial["bekijk"]['url'] ?>"
                                             alt="<?= $testimonial["bekijk"]['alt'] ?>"
                                             style="width: 12px; height: 18px; margin:7px 0" class="icon" />
                                     </a>
                                 </span>
-                                <a href="<?= $testimonial['bekijk_btn']['url'] ?>" class=" button-text2">
+                                <a href="<?= $testimonial['bekijk_btn']['url'] ?>" class=" button-text blue2">
                                     <?= $testimonial["bekijk_btn"]['title'] ?>
                                 </a>
                             </button>
 
-                            <img src="<?= $testimonial["kpn"]['url'] ?>" alt="<?= $testimonial["kpn"]['alt'] ?>"
+                            <img src="<?= $testimonial["kpn"]['url'] ?>" alt=" <?= $testimonial["kpn"]['alt'] ?>"
                                 style="width: 63px; height: 24px;" />
                         </div>
-
-
-
-
 
                     </div>
                 </div>
@@ -1140,7 +1131,7 @@
                             <?php foreach (get_field("profit_testimonials") as $testimonial) { ?>
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <img src="<?= $testimonial["profit_img"]['url'] ?>"
-                                    alt="<?= $testimonial['profit_img']['alt'] ?>" class=""
+                                    alt=" <?= $testimonial['profit_img']['alt'] ?>" class=""
                                     style="width: 15px;height: 16px;" />
                                 <span class="expertise-sub-title"><?= $testimonial["profit_text"] ?></span>
                             </div>
@@ -1183,35 +1174,36 @@
                         <?php
                         }
                         ?>
+                        </d iv>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Sue_Partners Repeater On LG -->
-        <div class="container">
-            <?php for ($i = 0; $i < 4; $i++) { // Loop to repeat the block four times ?>
-            <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                style="margin-top:; margin-bottom:;">
-                <?php foreach (get_field("sue_partners") as $sue) { ?>
-                <div class="col-auto">
-                    <a href="<?= $sue['sue_partners_link_url']['url'] ?>">
-                        <div style="border-radius: 6px;background: var(--Neutral-light, #EDF3F4); height:76px;">
-                            <!--  margin:35px 0; -->
-                            <div class="d-flex flex-row align-items-center justify-content-evenly"
-                                style="border-radius: 6px; border: 1px solid #CBCFDE; background:#EDF3F4; width: 165px; height: 61px;">
-                                <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                    alt="<?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                    style="width:56px; height:33px; flex-shrink: 0;" />
+            <!-- Sue_Partners Repeater On LG -->
+            <div class="container">
+                <?php for ($i = 0; $i < 4; $i++) { // Loop to repeat the block four times ?>
+                <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
+                    style="margin-top:; margin-bottom:;">
+                    <?php foreach (get_field("sue_partners") as $sue) { ?>
+                    <div class="col-auto">
+                        <a href="<?= $sue['sue_partners_link_url']['url'] ?>">
+                            <div style="border-radius: 6px;background: var(--Neutral-light, #EDF3F4); height:76px;">
+                                <!--  margin:35px 0; -->
+                                <div class="d-flex flex-row align-items-center justify-content-evenly"
+                                    style="border-radius: 6px; border: 1px solid #CBCFDE; background:#EDF3F4; width: 165px; height: 61px;">
+                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                        alt="<?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                        style="width:56px; height:33px; flex-shrink: 0;" />
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <?php } ?>
                 </div>
                 <?php } ?>
             </div>
-            <?php } ?>
-        </div>
 
+        </div>
     </div>
 
 
@@ -1243,7 +1235,7 @@
 
                     <!-- 4 -->
                     <!-- <button>
-                        <span class="circle3">
+                            <span class="circle3">
                             <a href="#" class="d-flex justify-content-center align-items-center  arrow">
                                 <img src="<?= get_field("view_all_stories_img")['url'] ?>"
                                     alt="<?= get_field("view_all_stories_img")['alt'] ?>"
@@ -1285,6 +1277,7 @@
                                                     class="d-flex flex-row align-items-center justify-content-left gap-3">
                                                     <a class="client2-btn" href="<?= $testimonial['btn']['url'] ?>">
 
+
                                                         <?= $testimonial['btn']['title'] ?>
                                                     </a>
                                                     <h4 class=""
@@ -1298,7 +1291,7 @@
                                                     <a href="#">
                                                         <img src="<?= $testimonial['client_link']['url'] ?>"
                                                             alt="<?= $testimonial['client_link']['alt'] ?>" style="width:4px; height:8px; object-fit:cover;
-                                                            margin-left:8px;" />
+                                                                margin-left:8px;" />
                                                     </a>
                                                 </h4>
                                             </div>
@@ -1437,194 +1430,11 @@
     </div> <!-- End of container div -->
 
 
-    <!-- Form Section   container  -->
-    <div class="form_section">
-        <div class="container">
-            <div class="row">
-                <div class=" col-12 col-lg-3">
 
-                    <!-- here -->
-                    <div class="row d-block d-md-none d-lg-none" style="margin-top:40px;">
-                        <div class="col-lg-4">
-                            <h2
-                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
-                                <?= get_field("r_u_ready") ?>
-                            </h2>
-                        </div>
-                        <div class="col-lg-7 offset-lg-1"
-                            style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
-                            <?= get_field("form_text") ?>
-                        </div>
-                    </div>
-                    <!-- here -->
-                    <div class="d-block d-md-none d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0">
-                    </div>
-                    <div class="left-container">
-                        <div class="left-content">
-                            <img src="<?= get_field("form_img")['url'] ?>" alt="<?= get_field("form_img")['alt'] ?>"
-                                style="width:120px; height:120px; border-radius:15px; object-fit:cover; object-position:center" />
-                            <div class="d-flex flex-column">
-                                <span class="first-name" style=" "><?= get_field("first_name") ?></span>
-                                <span class="d-none d-md-flex d-lg-flex"
-                                    style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700; line-height:39px">
-                                    <?= get_field("lets_talk") ?>
-                                </span>
-                                <div style="  margin-top:10px;" class="d-flex d-md-none d-lg-none">
-                                    <!-- E_mail -->
-                                    <div class="d-flex flex-column flex-lg-column ">
-                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-
-                                            <a href="#"
-                                                style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                class="d-flex justify-content-center align-items-center">
-                                                <img src="<?= get_field("form_link")['url'] ?>"
-                                                    alt="<?= get_field("form_link")['alt'] ?>"
-                                                    style="width:12px; height:18px; margin:7px 0;color:black" />
-                                            </a>
-                                            <span
-                                                style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
-                                            </span>
-                                            <!-- e_mail -->
-                                        </div>
-                                        <!-- contact nummer -->
-                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-                                            <a href="#"
-                                                style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                                class="d-flex justify-content-center align-items-center">
-                                                <img src="<?= get_field("form_link")['url'] ?>"
-                                                    alt="<?= get_field("form_link")['alt'] ?>"
-                                                    style="width:12px; height:18px; margin:7px 0;color:black" />
-                                            </a>
-                                            <span
-                                                style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                                345 656 666
-                                                <!-- tel_num -->
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-
-                            <!-- Md -->
-                            <div style=" margin-top:10px;" class="d-none d-md-flex d-lg-none  border-left">
-                                <!-- E_mail -->
-                                <div class="d-flex flex-column flex-lg-column">
-                                    <div class=" d-flex flex-row align-tems-center justify-content-start gap-2">
-
-                                        <a href="#"
-                                            style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                            class="d-flex justify-content-center align-items-center">
-                                            <img src="<?= get_field("form_link")['url'] ?>"
-                                                alt="<?= get_field("form_link")['alt'] ?>"
-                                                style="width:12px; height:18px; margin:7px 0;color:black" />
-                                        </a>
-                                        <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
-                                        </span>
-                                        <!-- e_mail -->
-                                    </div>
-                                    <!-- contact nummer -->
-                                    <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-                                        <a href="#"
-                                            style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                            class="d-flex justify-content-center align-items-center">
-                                            <img src="<?= get_field("form_link")['url'] ?>"
-                                                alt="<?= get_field("form_link")['alt'] ?>"
-                                                style="width:12px; height:18px; margin:7px 0;color:black" />
-                                        </a>
-                                        <span
-                                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                            345 656 666
-                                            <!-- tel_num -->
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- MD -->
-                            <!-- LG -->
-                            <div class="d-none d-md-none d-lg-block"
-                                style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
-                            </div>
-                        </div>
-                        <!-- here -->
-                        <div class="d-none  d-lg-none" style=" border-bottom: 1px solid  white; margin:30px 0; ">
-                        </div>
-                        <div class="d-none d-md-none d-lg-flex">
-                            <!-- E_mail -->
-                            <div class="d-flex flex-row flex-lg-column ">
-                                <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-                                    <button>
-                                        <span class="circle3">
-                                            <a href="#" class="d-flex justify-content-center align-items-center  arrow"
-                                                href="#">
-                                                <img src="<?= get_field("form_link")['url'] ?>"
-                                                    alt="<?= get_field("form_link")['alt'] ?>"
-                                                    style="width: 12px; height: 18px; margin:7px 0" class="icon" />
-                                            </a>
-                                        </span>
-                                        <a href="#" class="button-text3"
-                                            style="font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                            voornaam@sue.nl
-                                        </a>
-                                    </button>
-                                </div>
-                                <!-- contact nummer -->
-                                <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-                                    <button>
-                                        <span class="circle3">
-                                            <a href="#" class="d-flex justify-content-center align-items-center  arrow">
-                                                <img src="<?= get_field("form_link")['url'] ?>"
-                                                    alt="<?= get_field("form_link")['alt'] ?>"
-                                                    style="width: 12px; height: 18px; margin:7px 0" class="icon" />
-                                            </a>
-                                        </span>
-                                        <a href="#" class="button-text3"
-                                            style="font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                            +31345 656 666
-                                        </a>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Right column Contact Form -->
-                <div class="col-12  col-lg-9">
-                    <!-- here -->
-                    <div class="row d-none d-md-flex d-lg-flex right-col-form">
-                        <div class="col-lg-4">
-                            <h2
-                                style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
-                                <?= get_field("r_u_ready") ?>
-                            </h2>
-                        </div>
-                        <div class="col-lg-7 offset-lg-1"
-                            style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
-                            <?= get_field("form_text") ?>
-
-                        </div>
-                    </div>
-                    <!-- here Form -->
-                    <div>
-                        <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="1" title="false" description="false"]')) ?>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <span
-                                style="color:#9AA0B7;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height:23.4px ">
-                                <?= get_field("privacy_text") ?>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <!-- Form Section container  -->
+    <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
+
 
 
 
@@ -1689,7 +1499,5 @@
     })
     </script>
 </main>
-
-
 
 <?php get_footer() ?>

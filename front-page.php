@@ -23,75 +23,6 @@
         gap: 10px;
     }
 
-
-
-    /* .profile-img {
-            max-width: 72px;
-            height: 72px;
-            border-radius: 15px;
-            object-fit: cover;
-        }
-
-        .content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .first-name {
-            font-family: Manrope, sans-serif;
-            font-weight: 700;
-            font-size: 26px;
-            color: #FFF;
-        }
-
-        .lets-talk {
-            font-family: Manrope, sans-serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: #FFF;
-            line-height: 39px;
-        }
-
-        .line {
-            border-bottom: 1px solid white;
-            width: 204px;
-            margin: 30px 0;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-info .icon-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 8px;
-        }
-
-        .contact-info span {
-            font-family: Manrope, sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            color: #FFF;
-            line-height: 15.6px;
-        } */
-
-
-
-
-
-
-
-
-
-    /*  */
     .knowledge-links {
         color: #25325F;
         font-family: Manrope;
@@ -118,10 +49,6 @@
         width: 100%;
         max-width: 1700px;
     }
-
-    /* Button1 */
-
-
 
     .test-main-title {
         color: #25325F;
@@ -218,9 +145,7 @@
         height: 52px;
     }
 
-    /* .sue-img{
-   
-         } */
+
 
     .img-container {
         height: 350px;
@@ -241,8 +166,6 @@
         object-fit: cover;
         border-radius: 15px;
     }
-
-
 
     .left-column {
         color: #FFF;
@@ -301,9 +224,6 @@
 
     }
 
-    /* .slide-text:hover {
-        overflow: visible;
-    } */
 
     .mask-group {
         background-image: url("<?= esc_url(get_template_directory_uri()); ?>/images/maskgroup.png");
@@ -341,14 +261,6 @@
         gap: 20px;
         /* margin-left: 15px; */
     }
-
-    /* .left-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 50px;
-        gap: 20px;
-    } */
 
     .first-name {
 
@@ -542,9 +454,7 @@
         white-space: nowrap;
     }
 
-    /* .custom-number.active .custom-title {
-        display: inline-block;
-    } */
+
 
 
     /* Container for the background image and overlay */
@@ -630,11 +540,9 @@
 
 
     .client_card2 {
-
         background: #EDF3F4;
         border-radius: 20px;
         border: 1px solid #CBCFDE;
-
     }
 
     .hidden-text {
@@ -653,13 +561,8 @@
 
         }
 
-
-
-
         .custom-container {
-
             margin-top: -96px;
-
         }
 
         .first-blue-block {
@@ -679,7 +582,6 @@
             text-align: center;
         }
 
-
         .blue_block_main_title {
             font-size: 26px;
             line-height: 150%;
@@ -688,12 +590,10 @@
         }
 
 
-
         .blue_block_text {
             font-size: 16px;
             width: 530px;
         }
-
 
 
         .custom-number.active {
@@ -715,14 +615,6 @@
             gap: 14px;
 
         }
-
-        /* .sue-img{
-    width:55px; 
-    height:33px;
-     object-fit:cover;
-   } */
-
-
 
         .swiper_block {
             margin-top: 229px;
@@ -984,12 +876,7 @@
 
 
 
-        /* .swiper-container {
-            flex-grow: 1;
-            
-        } */
 
-        /*  */
 
 
 
@@ -1840,44 +1727,20 @@
                             <?= $testimonial["text"] ?>
                         </p>
                         <!-- Btn & text -->
-                        <!-- <div class="d-flex align-items-center gap-2" style="padding:0 20px; margin-bottom:20px;">
-                            <a style="border-radius:8px; background-color: #274083; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center" href="#">
-                                <img src="<?= get_field("schedule_link")['url'] ?>"
-                                    alt="<?= get_field("schedule_link")['alt'] ?>"
-                                    style="width:12px; height:18px; margin:7px 0;" />
-                            </a>
-                            <span class="d-none d-md-block"
-                                style="color:#25325F; font-family: Manrope;font-size:13px; font-style:normal; font-weight:600; line-height:15.6px;">
-                                <?= $testimonial["btn_text"] ?>
-                            </span>
-                        </div> -->
-                        <!--  -->
-
                         <div class="d-flex flex-row align-items-center">
                             <button>
                                 <!-- class="btn" -->
-                                <span class="circle">
-                                    <a href="#" class="d-flex justify-content-center align-items-center  arrow">
-                                        <img src="<?= get_field("schedule_link")['url'] ?>"
-                                            alt="<?= get_field("schedule_link")['alt'] ?>"
-                                            style="width:12px; height:18px; margin:7px 0;" class="icon" />
+                                <span class="circle blue-circle">
+                                    <a href="#" class="d-flex justify-content-center align-items-center  arrow"
+                                        href="#">
+                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                            alt=" <?= get_field("sue_insights_link")['alt'] ?>" class=""
+                                            style="width:12px; height: 18px; margin:7px 0;" class="icon" />
                                     </a>
                                 </span>
-                                <span class="button-text blue" style="">
-                                    <?= $testimonial["btn_text"] ?>
-                                </span>
+                                <span class="button-text blue2">Buttom</span>
                             </button>
                         </div>
-
-
-
-
-
-
-
-
-                        <!--  -->
                     </div>
                 </div>
                 <?php
@@ -2108,15 +1971,11 @@
 
                             <div class="row  d-flex flex-cloumn align-items-center justify-content-between gap-4"
                                 style=" margin-top:103px; margin-bottom:103px;">
-
-
                                 <?php
                                 foreach (get_field("testimonails_section") as $testimonails) {
                                     ?>
-
                                 <div class=""
                                     style="border-radius:15px; width:261px; height:168px; margin:0px 0 40px 0;">
-
                                     <div class="d-flex flex-row align-items-center justify-content-between">
                                         <div class="d-flex flex-row align-items-center justify-content-around gap-3">
                                             <span
@@ -2140,21 +1999,16 @@
                                     <div class="d-flex flex-row align-items-center  gap-3">
                                         <button>
                                             <!-- class="btn" -->
-                                            <span class="circle">
+                                            <span class="circle blue-circle">
                                                 <a href="#"
                                                     class="d-flex justify-content-center align-items-center  arrow"
                                                     href="#">
-
                                                     <img src="<?= $testimonails['link']['url'] ?>"
                                                         alt=" <?= $testimonails['link']['alt'] ?>" class=""
                                                         style="width:12px; height: 18px; margin:7px 0;" class="icon" />
                                                 </a>
-
                                             </span>
-                                            <!-- <span
-                                                style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
-                                                more</span> -->
-                                            <span class="button-text">Read More</span>
+                                            <span class="button-text blue">Read More</span>
                                         </button>
                                     </div>
                                 </div>
@@ -2202,17 +2056,19 @@
                                     </div>
 
                                     <div class="d-flex flex-row align-items-center  gap-3">
-                                        <a href="#"
-                                            style="border-radius:8px; background-color:#274083; height:30px; width:30px; margin:10px 0;"
-                                            class="d-flex justify-content-center align-items-center" href="#">
-
-                                            <img src="<?= $testimonails['link']['url'] ?>"
-                                                alt=" <?= $testimonails['link']['alt'] ?>" class=""
-                                                style="width:12px; height: 18px; margin:7px 0;" />
-                                        </a>
-                                        <span
-                                            style="color:#FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">Read
-                                            more</span>
+                                        <button>
+                                            <!-- class="btn" -->
+                                            <span class="circle blue-circle">
+                                                <a href="#"
+                                                    class="d-flex justify-content-center align-items-center  arrow"
+                                                    href="#">
+                                                    <img src="<?= $testimonails['link']['url'] ?>"
+                                                        alt=" <?= $testimonails['link']['alt'] ?>" class=""
+                                                        style="width:12px; height: 18px; margin:7px 0;" class="icon" />
+                                                </a>
+                                            </span>
+                                            <span class="button-text blue">Read More</span>
+                                        </button>
                                     </div>
                                 </div>
                                 <?php
@@ -2876,16 +2732,20 @@
                                             vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
                                         </p>
                                         <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
-                                            <a href="#"
-                                                style="background-color: #25325F; height:30px; width:30px; border-radius: 8px;"
-                                                class="d-flex justify-content-center align-items-center">
-                                                <img src="<?= get_field("sue_insights_link")['url'] ?>"
-                                                    alt="<?= get_field("sue_insights_link")['alt'] ?>"
-                                                    style="width:12px; height:18px; margin:7px 0;" />
-                                            </a>
-
-                                            <span
-                                                style="color: #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:  15.6px">Buttom</span>
+                                            <button>
+                                                <!-- class="btn" -->
+                                                <span class="circle blue-circle">
+                                                    <a href="#"
+                                                        class="d-flex justify-content-center align-items-center  arrow"
+                                                        href="#">
+                                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                                            alt=" <?= get_field("sue_insights_link")['alt'] ?>" class=""
+                                                            style="width:12px; height: 18px; margin:7px 0;"
+                                                            class="icon" />
+                                                    </a>
+                                                </span>
+                                                <span class="button-text blue2">Buttom</span>
+                                            </button>
                                         </div>
 
                                     </div>
@@ -2900,15 +2760,20 @@
                                         </p>
 
                                         <div class="d-flex flex-row align-items-center justify-content-start gap-3">
-                                            <a href="#"
-                                                style="background-color:#25325F;; height:30px; width:30px; border-radius: 8px;"
-                                                class="d-flex justify-content-center align-items-center">
-                                                <img src="<?= get_field("sue_insights_link")['url'] ?>"
-                                                    alt="<?= get_field("sue_insights_link")['alt'] ?>"
-                                                    style="width:12px; height:18px; margin:7px 0;" />
-                                            </a>
-                                            <span
-                                                style="color:  #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:  15.6px">Buttom</span>
+                                            <button>
+                                                <!-- class="btn" -->
+                                                <span class="circle blue-circle">
+                                                    <a href="#"
+                                                        class="d-flex justify-content-center align-items-center  arrow"
+                                                        href="#">
+                                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                                            alt=" <?= get_field("sue_insights_link")['alt'] ?>" class=""
+                                                            style="width:12px; height: 18px; margin:7px 0;"
+                                                            class="icon" />
+                                                    </a>
+                                                </span>
+                                                <span class="button-text blue2">Buttom</span>
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
@@ -2920,7 +2785,7 @@
                                             porttitor
                                             vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
                                         </p>
-                                        <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
+                                        <!-- <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
                                             <a href="#"
                                                 style="background-color:#25325F;; height:30px; width:30px; border-radius: 8px;"
                                                 class="d-flex justify-content-center align-items-center">
@@ -2930,6 +2795,23 @@
                                             </a>
                                             <span
                                                 style="color:  #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:  15.6px">Buttom</span>
+                                        </div> -->
+
+                                        <div class="d-flex flex-row align-items-center justify-content-start  gap-3">
+                                            <button>
+                                                <!-- class="btn" -->
+                                                <span class="circle blue-circle">
+                                                    <a href="#"
+                                                        class="d-flex justify-content-center align-items-center  arrow"
+                                                        href="#">
+                                                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                                            alt=" <?= get_field("sue_insights_link")['alt'] ?>" class=""
+                                                            style="width:12px; height: 18px; margin:7px 0;"
+                                                            class="icon" />
+                                                    </a>
+                                                </span>
+                                                <span class="button-text blue2">Buttom</span>
+                                            </button>
                                         </div>
 
                                     </div>

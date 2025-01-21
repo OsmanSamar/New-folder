@@ -1,83 +1,104 @@
-button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  vertical-align: middle;
-  text-decoration: none;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
-}
+// button {
+//   position: relative;
+//   display: inline-block;
+//   cursor: pointer;
+//   outline: none;
+//   vertical-align: middle;
+//   text-decoration: none;
+//   border: 0;
+//   background: transparent;
+//   padding: 0;
+//   font-size: inherit;
+//   font-family: inherit;
+// }
 
-button .circle1 {
-  justify-content: center;
-  display: inline-flex;
-  position: relative;
-  z-index: 1;
-  height: 30px;
-  width: 30px;
-}
+// button .circle {
+//   justify-content: center;
+//   display: inline-flex;
+//   position: relative;
+//   z-index: 1;
+//   height: 30px;
+//   width: 30px;
+// }
 
-button .button-text {
-  /* position: absolute; 
-      top: 0;*/
-  position: relative;
-  top: -4px;
-  left: 24px;
-  margin: 0 0 0 0.05rem;
-  color: #fff;
-  font-size: 13px;
-  line-height: 15.6px;
-  text-align: center;
-  z-index: 2;
-  font-family: Manrope;
-  font-style: normal;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-}
+// button .button-text {
+//   position: relative;
+//   top: -4px;
+//   left: 24px;
+//   margin: 0 0 0 0.05rem;
+//   // color: #fff;
+//   font-size: 13px;
+//   line-height: 15.6px;
+//   text-align: center;
+//   z-index: 2;
+//   font-family: Manrope;
+//   font-style: normal;
+//   font-weight: 600;
+//   display: inline-flex;
+//   align-items: center;
+//   text-decoration: none;
+// }
 
-button .button-text.blue {
-  left: 1px;
-  color: #25325f;
-  &:hover {
-    color: white;
-  }
-}
+// button .button-text.blue {
+//   left: 1px;
+//   color: #25325f;
+//   &:hover {
+//     color: white;
+//   }
+// }
 
-button .circle1::before {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 8px;
-  background-color: #fff;
-  margin: 0;
-  content: "";
-  z-index: -1;
-}
+// button .button-text.white {
+//   left: 1px;
 
-button:hover .circle1::before {
-  width: 9rem;
-  /* Expands the circle to include text */
-}
+//   color: white;
+//   &:hover {
+//     color: #25325f;
+//   }
+// }
 
-button:hover .circle1 .icon1.arrow1 {
-  background: #fff;
-}
+// button .circle::before {
+//   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   border-radius: 8px;
+//   background-color: #fff;
+//   margin: 0;
+//   content: "";
+//   z-index: -1;
+// }
 
-button:hover .button-text1:hover {
-  color: #25325f;
-  z-index: 3;
-}
+// button:hover .circle::before {
+//   width: 14rem;
+//    Expands the circle to include text
+// }
 
-/* Button1 */
+// button:hover .circle1 .icon1.arrow1 {
+//   background: #fff;
+// }
+
+// button:hover .button-text1:hover {
+//   color: #25325f;
+//   z-index: 3;
+// }
+
+//
+// button .button-text{
+//     color: black;
+//     background-color: white;
+//     text-decoration: underline;
+
+//     &.white{
+//         background-color: black;
+//         color: white;
+//     }
+// }
+
+// <button>
+// <span class="button-text white">test</span>
+// </button>
 
 button {
   position: relative;
@@ -102,6 +123,23 @@ button .circle {
   width: 30px;
 }
 
+button .button-text {
+  position: relative;
+  top: -4px;
+  left: 3px;
+  margin: 0 0 0 0.05rem;
+  font-size: 13px;
+  line-height: 15.6px;
+  text-align: center;
+  z-index: 2;
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 button .circle::before {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
@@ -110,32 +148,84 @@ button .circle::before {
   top: 0;
   left: 0;
   border-radius: 8px;
-  background-color: #274083;
   margin: 0;
   content: "";
   z-index: -1;
 }
 
 button:hover .circle::before {
-  width: 8rem;
-  /* Expands the circle to include text */
+  width: 9rem;
+  //  Expands the circle to include text
 }
 
-button:hover .circle .icon.arrow {
-  background: #fff;
+button:hover .circle.blue-circle::before {
+  width: 7rem;
+  //  Expands the circle to include text
 }
 
-// button .button-text{
-//     color: black;
-//     background-color: white;
-//     text-decoration: underline;
+button .circle.blue-circle::before {
+  background-color: #274083;
+}
+button .circle.white-circle::before {
+  background-color: #ffffff;
+}
+button .circle.pink-circle::before {
+  background-color: #ffc0cb;
+}
 
-//     &.white{
-//         background-color: black;
-//         color: white;
-//     }
+// button:hover .button-text.blue {
+//   color: #25325f;
+//   z-index: 3;
+// }
+// button:hover .button-text.blue:hover {
+//   color: white;
+//   z-index: 3;
 // }
 
-// <button>
-// <span class="button-text white">test</span>
-// </button>
+// button:hover .button-text.blue {
+//   left: 1px;
+//   color: white;
+//   z-index: 3;
+//   &:hover {
+//     color: white;
+//     z-index: 3;
+//   }
+// }
+
+.button-text.blue {
+  left: 1px;
+  color: white;
+  z-index: 3;
+}
+
+button .button-text.white {
+  left: 1px;
+  color: white;
+  &:hover {
+    color: #25325f;
+    z-index: 3;
+  }
+}
+button .button-text.blue2 {
+  left: 1px;
+  color: #25325f;
+
+  &:hover {
+    color: white;
+    z-index: 3;
+  }
+}
+
+button:hover .button-text.pink {
+  color: #d81b60;
+  z-index: 3;
+}
+button:hover .button-text.pink:hover {
+  color: white;
+  z-index: 3;
+}
+
+button:hover .button-text:hover {
+  // color: #25325f;
+  z-index: 3;
+}
