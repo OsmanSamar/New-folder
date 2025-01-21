@@ -172,10 +172,6 @@
                     'menu_class' => 'navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1 gap-4',
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                     'walker' => new WP_Bootstrap_Navwalker(),
-
-
-
-
                 ));
                 ?>
 
@@ -186,7 +182,7 @@
                     <!-- Arrow and Let's Talk Section -->
                     <div class="arrow-letstalk d-none d-md-flex align-items-center justify-content-between letstalk-btn"
                         style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
-                        <a href="<?= esc_url(home_url('/')); ?>"
+                        <a href="<?= esc_url(home_url('/contact')); ?>"
                             class="d-flex justify-content-center align-items-center">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
                                 style="width:12px; height: 18px; margin:7px 0;">
