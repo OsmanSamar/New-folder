@@ -53,7 +53,7 @@
                     </span>
                     <br>
                     <span class="information_text">
-                        <?= get_field("information_text") ?>
+                        <?= get_field("footer_tekst", 'option') ?>
                     </span>
                 </div>
                 <!-- Second Row -->
@@ -247,7 +247,7 @@
                         </a>
 
                         <span class="newsletter_text" style="margin:20px 0;">
-                            <?= get_field("newsletter_text") ?>
+                            <?= get_field("newsletter_text", 'option') ?>
                         </span>
 
                         <div class="email-field-container" style="margin:20px 0;">

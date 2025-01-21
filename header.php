@@ -274,7 +274,7 @@
         </nav>
 
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-            style="background: #EDF3F4; bottom: 29%;">
+            style="background: #EDF3F4; bottom: 0%;width:100%">
             <div class="offcanvas-header text-black border-bottom">
                 <!-- Offcanvas Navbar Title/Logo -->
                 <a class="offcanvas-title" href="<?= esc_url(home_url('/')); ?>">
