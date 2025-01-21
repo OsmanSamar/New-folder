@@ -7,308 +7,109 @@
 
 
     <style>
-    .back-to-home {
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
-    .back-to-home a {
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .back-to-home img {
-        margin-left: 5px;
-        vertical-align: middle;
-    }
-
-    .last {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-    }
-
-    b,
-    strong {
-        color: #e94271;
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        line-height: inherit;
-    }
-
-    .container-max-width {
-        border-radius: 30px;
-        max-width: 1700px;
-        height: 581px;
-        margin: 200px auto 10px;
-
-    }
-
-
-    .hero_blue_block {
-
-        height: 100%;
-        border-radius: 40px;
-        background: #25325F;
-        position: relative;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        margin-top: -400px;
-
-    }
-
-
-    .inner_block {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        margin: 10px 60px;
-    }
-
-    .hero_title {
-        color: #FFF;
-        font-family: Sora;
-        font-size: 45px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 54px;
-        margin-bottom: 31px;
-    }
-
-    .hero_text {
-        color: #9AA0B7;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        width: 353px;
-        margin-bottom: 31px;
-    }
-
-
-    .container-max-width img {
-        display: none;
-    }
-
-    .hero_blue_block {
-        position: static;
-        margin-top: 0;
-    }
-
-    .hero_text,
-    .hero_title {
-        text-align: left;
-    }
-
-
-    .left_col,
-    .right_col {
-        display: flex;
-        align-items: flex-start;
-        justify-content: left;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .left-btn {
-        width: 209px;
-        height: 34px;
-        border-radius: 100px;
-        background: #274083;
-        padding: 3px 11px;
-        text-align: center;
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-        margin: 27px 0px;
-    }
-
-    .left-text,
-    .right-text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-    .testimonial-card {
-        border-radius: 15px;
-        background-color: #FFF;
-        height: 277px;
-        margin: 15px 0;
-        padding: 27px;
-
-    }
-
-    .expertise-num {
-        color: #E94271;
-        font-family: Manrope;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-    }
-
-    .expertise-sub-title {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-        color: #6A7291;
-        font-family: Manrope;
-    }
-
-    .expertise-main-title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-    }
-
-    .divider {
-        border-bottom: 0.5px solid #25325F;
-    }
-
-    .expertise-text {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 22px;
-        color: #6A7291;
-        font-family: Manrope;
-        text-align: left;
-    }
-
-
-    .left-container {
-        border-radius: 30px;
-        margin-top: ;
-        color: white;
-        height: 264px;
-
-    }
-
-
-    .left-content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 30px;
-        gap: 50px;
-
-    }
-
-    .first-name {
-
-        color: #9AA0B7;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-
-        line-height: 6.2px;
-    }
-
-    .form_section {
-        border-radius: 30px;
-        background: #25325F;
-        max-width: 1700px;
-        height: 1400px;
-        margin: 50px auto 50px;
-
-    }
-
-    .arrow_section {
-
-        width: 57.851px;
-        height: 92.371px;
-        flex-shrink: 0;
-    }
-
-
-    .information_title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        margin: 10px 5px 0
-    }
-
-    .information_text {
-        color: var(--Text, #6A7291);
-        font-family: Manrope;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        margin: 5px 0;
-        width: 326px;
-    }
-
-
-    .right-col-form {
-        margin-top: unset;
-    }
-
-
-    @media(min-width: 768px) {
-
-        .first-name {
-            line-height: 27.2px;
+        .back-to-home {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            padding: 10px 20px;
+            border-radius: 10px;
         }
 
-        .container-max-width img {
-            display: block;
+        .back-to-home a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
         }
+
+        .back-to-home img {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        .last {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+        }
+
+        b,
+        strong {
+            color: #e94271;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            line-height: inherit;
+        }
+
+        .container-max-width {
+            border-radius: 30px;
+            max-width: 1700px;
+            height: 581px;
+            margin: 200px auto 10px;
+
+        }
+
 
         .hero_blue_block {
-            width: 531px;
+
+            height: 100%;
+            border-radius: 40px;
+            background: #25325F;
             position: relative;
-            bottom: 582px;
             left: 0;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             padding: 30px;
-            height: 581.608px;
-            margin-top: unset;
+            margin-top: -400px;
 
+        }
+
+
+        .inner_block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: left;
+            margin: 10px 60px;
+        }
+
+        .hero_title {
+            color: #FFF;
+            font-family: Sora;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 54px;
+            margin-bottom: 31px;
+        }
+
+        .hero_text {
+            color: #9AA0B7;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            width: 353px;
+            margin-bottom: 31px;
+        }
+
+
+        .container-max-width img {
+            display: none;
+        }
+
+        .hero_blue_block {
+            position: static;
+            margin-top: 0;
         }
 
         .hero_text,
@@ -316,95 +117,294 @@
             text-align: left;
         }
 
-        .border-left {
-            border-left: 1px solid white;
+
+        .left_col,
+        .right_col {
             display: flex;
+            align-items: flex-start;
+            justify-content: left;
             flex-direction: column;
-            padding: 20px 0 20px 60px;
-            row-gap: 16px;
+            gap: 4px;
         }
 
-        .left-content {
+        .left-btn {
+            width: 209px;
+            height: 34px;
+            border-radius: 100px;
+            background: #274083;
+            padding: 3px 11px;
+            text-align: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
+            justify-content: center;
+            align-items: center;
         }
 
-    }
-
-
-    @media (min-width: 992px) {
-
-        .right-col-form {
-            margin-top: 67px;
+        .title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            margin: 27px 0px;
         }
 
-        .first-name {
+        .left-text,
+        .right-text {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
             line-height: 27.2px;
         }
 
-        .hero_blue_block {
-            width: 531px;
-            position: relative;
-            bottom: 582px;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 30px;
-            height: 100%;
-            margin-top: unset;
+        .testimonial-card {
+            border-radius: 15px;
+            background-color: #FFF;
+            height: 277px;
+            margin: 15px 0;
+            padding: 27px;
+
         }
 
-        .hero_text,
-        .hero_title {
+        .expertise-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+        }
+
+        .expertise-sub-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+            color: #6A7291;
+            font-family: Manrope;
+        }
+
+        .expertise-main-title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+        }
+
+        .divider {
+            border-bottom: 0.5px solid #25325F;
+        }
+
+        .expertise-text {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #6A7291;
+            font-family: Manrope;
             text-align: left;
         }
 
 
         .left-container {
-            height: 500px;
+            border-radius: 30px;
+            margin-top: ;
+            color: white;
+            height: 264px;
+
         }
+
 
         .left-content {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: normal;
-            margin-top: 50px;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
+
         }
 
+        .first-name {
+
+            color: #9AA0B7;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+
+            line-height: 6.2px;
+        }
 
         .form_section {
-            height: 550px;
-        }
+            border-radius: 30px;
+            background: #25325F;
+            max-width: 1700px;
+            height: 1400px;
+            margin: 50px auto 50px;
 
+        }
 
         .arrow_section {
-            width: 87.239px;
-            height: 139.295px;
+
+            width: 57.851px;
+            height: 92.371px;
             flex-shrink: 0;
-            object-fit: cover;
-            margin-right: 60px;
         }
 
-        .second-arrow {
-            margin-top: 70px
-        }
 
         .information_title {
-            font-size: 16px;
-            line-height: 27px;
-
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            margin: 10px 5px 0
         }
 
         .information_text {
-            font-size: 16px;
-            width: 504px;
+            color: var(--Text, #6A7291);
+            font-family: Manrope;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            margin: 5px 0;
+            width: 326px;
         }
-    }
+
+
+        .right-col-form {
+            margin-top: unset;
+        }
+
+
+        @media(min-width: 768px) {
+
+            .first-name {
+                line-height: 27.2px;
+            }
+
+            .container-max-width img {
+                display: block;
+            }
+
+            .hero_blue_block {
+                width: 531px;
+                position: relative;
+                bottom: 582px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 581.608px;
+                margin-top: unset;
+
+            }
+
+            .hero_text,
+            .hero_title {
+                text-align: left;
+            }
+
+            .border-left {
+                border-left: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0 20px 60px;
+                row-gap: 16px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+            }
+
+        }
+
+
+        @media (min-width: 992px) {
+
+            .right-col-form {
+                margin-top: 67px;
+            }
+
+            .first-name {
+                line-height: 27.2px;
+            }
+
+            .hero_blue_block {
+                width: 531px;
+                position: relative;
+                bottom: 582px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 100%;
+                margin-top: unset;
+            }
+
+            .hero_text,
+            .hero_title {
+                text-align: left;
+            }
+
+
+            .left-container {
+                height: 500px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: normal;
+                margin-top: 50px;
+            }
+
+
+            .form_section {
+                height: 550px;
+            }
+
+
+            .arrow_section {
+                width: 87.239px;
+                height: 139.295px;
+                flex-shrink: 0;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+
+            .second-arrow {
+                margin-top: 70px
+            }
+
+            .information_title {
+                font-size: 16px;
+                line-height: 27px;
+
+            }
+
+            .information_text {
+                font-size: 16px;
+                width: 504px;
+            }
+        }
     </style>
 
 
@@ -471,34 +471,34 @@
     <div class="container mt-5">
         <div class="row gy-2">
             <?php foreach (get_field("expertise_testimonials") as $testimonial) { ?>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="testimonial-card">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="expertise-num">
-                            <?= $testimonial["expertise_num"] ?></span>
-                        <span class="expertise-sub-title"><?= $testimonial["expertise_sub_title"] ?></span>
-                    </div>
-                    <h2 class="expertise-main-title"> <?= $testimonial["expertise_main_title"] ?></h2>
-                    <div class="divider mb-3" style="margin: 15px 1px;"></div>
-                    <p class="expertise-text"><?= $testimonial["expertise_text"] ?></p>
-                    <!-- Btn & text -->
-                    <div class="d-flex align-items-center  gap-2" style=" margin-bottom:20px;">
-                        <button>
-                            <span class="circle blue-circle">
-                                <a href="#" class="d-flex justify-content-center align-items-center  arrow" href="#">
-                                    <img src="<?= $testimonial["expertise_img"]['url'] ?>"
-                                        alt="<?= $testimonial["expertise_img"]['alt'] ?>"
-                                        style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="expertise-num">
+                                <?= $testimonial["expertise_num"] ?></span>
+                            <span class="expertise-sub-title"><?= $testimonial["expertise_sub_title"] ?></span>
+                        </div>
+                        <h2 class="expertise-main-title"> <?= $testimonial["expertise_main_title"] ?></h2>
+                        <div class="divider mb-3" style="margin: 15px 1px;"></div>
+                        <p class="expertise-text"><?= $testimonial["expertise_text"] ?></p>
+                        <!-- Btn & text -->
+                        <div class="d-flex align-items-center  gap-2" style=" margin-bottom:20px;">
+                            <button>
+                                <span class="circle blue-circle">
+                                    <a href="#" class="d-flex justify-content-center align-items-center  arrow" href="#">
+                                        <img src="<?= $testimonial["expertise_img"]['url'] ?>"
+                                            alt="<?= $testimonial["expertise_img"]['alt'] ?>"
+                                            style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                                    </a>
+                                </span>
+                                <a href="<?= $testimonial["expertise_btn"]['url'] ?>"
+                                    class="text-decoration-none button-text blue2">
+                                    <?= $testimonial["expertise_btn"]['title'] ?>
                                 </a>
-                            </span>
-                            <a href="<?= $testimonial["expertise_btn"]['url'] ?>"
-                                class="text-decoration-none button-text blue2">
-                                <?= $testimonial["expertise_btn"]['title'] ?>
-                            </a>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php } ?>
         </div>
     </div>

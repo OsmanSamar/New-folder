@@ -2819,11 +2819,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
                 <!--End of  New Section With Swiper On Right Side -->
             </div> <!-- End of the Container -->
@@ -2833,16 +2828,6 @@
             <!-- Form Section container  -->
             <?php get_template_part('components/form') ?>
             <!-- End of Form Section -->
-
-
-
-
-
-
-
-
-
-
 
             <!-- New Section -->
 
