@@ -16,6 +16,11 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--  -->
     <style>
+    .letstalk-btn a:hover img {
+        transform: translateX(6px);
+        transition: transform 0.2s ease;
+    }
+
     /* Navbar dropdown styles */
     .navbar-nav .dropdown-menu {
         position: fixed;
@@ -179,7 +184,7 @@
 
                 <div class="d-flex align-items-center gap-3">
                     <!-- Arrow and Let's Talk Section -->
-                    <div class="arrow-letstalk d-none d-md-flex align-items-center justify-content-between"
+                    <div class="arrow-letstalk d-none d-md-flex align-items-center justify-content-between letstalk-btn"
                         style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
                         <a href="<?= esc_url(home_url('/')); ?>"
                             class="d-flex justify-content-center align-items-center">
@@ -296,8 +301,8 @@
             </div>
 
             <!-- Optional Footer Section -->
-            <div class="offcanvas-footer d-flex align-items-center justify-content-center gap-3"
-                style="border-radius: 30px 30px 0 0; background: #25325F; height:72px;">
+            <!-- <div class="offcanvas-footer d-flex  align-items-center justify-content-center gap-3 "
+                style="border-radius: 30px 30px 0 0; ; background: #25325F; height:72px;">
                 <a href="<?= esc_url(home_url('/')); ?>"
                     style="border-radius: 8px; background-color: #E94271; height: 30px; width: 30px;"
                     class="d-flex justify-content-center align-items-center">
@@ -308,7 +313,38 @@
                     style="font-family: Manrope; font-size: 13px; font-weight: 600; color: white;">
                     Let's Talk
                 </a>
+            </div> -->
+
+            <!-- Arrow and Let's Talk Section -->
+            <!-- <div style="border-radius: 30px 30px 0 0; d-flexbackground: #25325F; height:72px; offcanvas-footer">
+                <div class=" arrow-letstalk d-flex align-items-center justify-content-between letstalk-btn"
+                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
+                    <a href="<?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
+                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                            style="width:12px; height: 18px; margin:7px 0;">
+                    </a>
+                    <span
+                        style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
+                        Let's talk
+                    </span>
+                </div>
+            </div> -->
+
+            <div class="offcanvas-footer d-flex  align-items-center justify-content-center gap-3 "
+                style="border-radius: 30px 30px 0 0; ; background: #25325F; height:72px;">
+                <div class="d-flex align-items-center justify-content-center gap-3 letstalk-btn"
+                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271;">
+                    <a href=" <?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
+                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
+                            style="width:12px; height: 18px; margin:7px 0;">
+                    </a>
+                    <span
+                        style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
+                        Let's talk
+                    </span>
+                </div>
             </div>
+
 
 
         </div>
