@@ -7,6 +7,120 @@
 
 
     <style>
+        button {
+            position: relative;
+            display: inline-grid;
+            cursor: pointer;
+            outline: none;
+            vertical-align: middle;
+            text-decoration: none;
+            border: 0;
+            background: transparent;
+            padding: 0;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        button .circle2 {
+            justify-content: center;
+            display: inline-flex;
+            position: relative;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        button .button-text2 {
+            position: relative;
+            top: -24px;
+            left: 12px;
+            margin: 0 0 0 1.55rem;
+            color: #274083;
+            font-size: 13px;
+            line-height: 15.6px;
+            text-align: center;
+            z-index: 2;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            line-height: 15.6px;
+        }
+
+        button .circle2::before {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+            background-color: #274083;
+            margin: 0;
+            content: '';
+            z-index: -1;
+        }
+
+        button:hover .circle2::before {
+            width: 8rem;
+        }
+
+        button:hover .button-text2 {
+            color: #FFF;
+        }
+
+        /* 3 */
+        button .circle3 {
+            justify-content: center;
+            display: inline-flex;
+            position: relative;
+            z-index: 1;
+            height: 30px;
+            width: 30px;
+        }
+
+        button .button-text3 {
+            position: relative;
+            top: -24px;
+            left: 12px;
+            margin: 0 0 0 1.55rem;
+            color: #FFF;
+            font-size: 13px;
+            line-height: 15.6px;
+            text-align: center;
+            z-index: 2;
+            font-family: Manrope;
+            font-style: normal;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            line-height: 15.6px;
+        }
+
+        button .circle3::before {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 8px;
+            background-color: #FFF;
+            margin: 0;
+            content: '';
+            z-index: -1;
+        }
+
+        button:hover .circle3::before {
+            width: 10rem;
+        }
+
+        button:hover .button-text3 {
+            color: #274083;
+        }
+
+        /*  */
         .back-to-home {
             position: absolute;
             top: 80px;
@@ -502,14 +616,28 @@
 
                         <!-- Btn & text -->
                         <div class="d-flex align-items-center  gap-2" style=" margin-bottom:20px;">
-                            <a href="<?= $testimonial["expertise_btn"]['url'] ?>"
+                            <!-- <a href="<?= $testimonial["expertise_btn"]['url'] ?>"
                                 style="border-radius:8px; background-color: #274083; height:30px; width:30px;"
                                 class="d-flex justify-content-center align-items-center">
                                 <img src="<?= $testimonial["expertise_img"]['url'] ?>"
                                     alt="<?= $testimonial["expertise_img"]['alt'] ?>"
                                     style="width:12px; height:18px; margin:7px 0;" />
                             </a>
-                            <?= $testimonial["expertise_btn"]['title'] ?>
+                            <?= $testimonial["expertise_btn"]['title'] ?> -->
+
+                            <button>
+                                <span class="circle2">
+                                    <a href="#" class="d-flex justify-content-center align-items-center  arrow" href="#">
+                                        <img src="<?= $testimonial["expertise_img"]['url'] ?>"
+                                            alt="<?= $testimonial["expertise_img"]['alt'] ?>"
+                                            style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                                    </a>
+                                </span>
+                                <a href="<?= $testimonial["expertise_btn"]['url'] ?>"
+                                    class="text-decoration-none button-text2">
+                                    <?= $testimonial["expertise_btn"]['title'] ?>
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -556,13 +684,13 @@
                                     <!-- E_mail -->
                                     <div class="d-flex flex-column flex-lg-column gap-">
                                         <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-
+                                            <!-- e_mail -->
                                             <a href="#"
                                                 style="background-color:white;height:30px;width:30px; border-radius: 8px;"
                                                 class="d-flex justify-content-center align-items-center">
                                                 <img src="<?= get_field("link_btn")['url'] ?>"
                                                     alt="<?= get_field("link_btn")['alt'] ?>"
-                                                    style="width:12px; height:18px; margin:7px 0;color:black" />
+                                                    style="width:12px; height:18px; margin:7px 0;" />
                                             </a>
                                             <span
                                                 style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
@@ -639,8 +767,7 @@
                             <!-- E_mail -->
                             <div class="d-flex flex-row flex-lg-column gap-">
                                 <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-
-                                    <a href="#"
+                                    <!-- <a href="#"
                                         style="background-color:white;height:30px;width:30px; border-radius: 8px;"
                                         class="d-flex justify-content-center align-items-center">
                                         <img src="<?= get_field("link_btn")['url'] ?>"
@@ -649,23 +776,42 @@
                                     </a>
                                     <span
                                         style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px; margin:30px 0">voornaam@sue.nl
-                                    </span>
+                                    </span> -->
+
+                                    <button>
+                                        <span class="circle3">
+                                            <a href="#" class="d-flex justify-content-center align-items-center  arrow"
+                                                href="#">
+                                                <img src="<?= get_field("link_btn")['url'] ?>"
+                                                    alt="<?= get_field("link_btn")['alt'] ?>"
+                                                    style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                                            </a>
+                                        </span>
+                                        <a href="#" class="button-text3"
+                                            style="font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                            voornaam@sue.nl
+                                        </a>
+
+                                    </button>
                                     <!-- e_mail -->
                                 </div>
                                 <!-- contact nummer -->
                                 <div class=" d-flex flex-row align-items-center justify-content-start gap-2">
-                                    <a href="#"
-                                        style="background-color:white;height:30px;width:30px; border-radius: 8px;"
-                                        class="d-flex justify-content-center align-items-center">
-                                        <img src="<?= get_field("link_btn")['url'] ?>"
-                                            alt="<?= get_field("link_btn")['alt'] ?>"
-                                            style="width:12px; height:18px; margin:7px 0;color:black" />
-                                    </a>
-                                    <span
-                                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">+31
-                                        345 656 666
-                                        <!-- tel_num -->
-                                    </span>
+                                    <button>
+                                        <span class="circle3">
+                                            <a href="#" class="d-flex justify-content-center align-items-center  arrow"
+                                                href="#">
+                                                <img src="<?= get_field("link_btn")['url'] ?>"
+                                                    alt="<?= get_field("link_btn")['alt'] ?>"
+                                                    style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                                            </a>
+                                        </span>
+                                        <a href="#" class="button-text3"
+                                            style="font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                            +31345 656 666
+                                        </a>
+
+                                    </button>
                                 </div>
                             </div>
                         </div>
