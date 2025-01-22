@@ -424,7 +424,8 @@
 
 
     <!-- Hero Section -->
-    <div class="container-max-width">
+    <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+        data-aos-duration="1000" data-aos-easing="ease-in-out">
         <img src="<?= get_field("hero_img")['url'] ?>" alt="<?= get_field("hero_img")['title'] ?>" class=""
             style=" height: 581px; border-radius: 40px; object-fit: cover;" />
         <div class="hero_blue_block">
@@ -443,7 +444,8 @@
     <!-- Second Section -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="left_col">
                     <div class="left-btn">
                         <?= get_field("services_title") ?>
@@ -456,7 +458,8 @@
                 </div>
             </div>
             <div class="d-none d-lg-block col-lg-1"></div>
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="right_col">
                     <span class="right-text">
                         <?= get_field("services_right_text") ?>
@@ -468,7 +471,8 @@
 
 
     <!-- Testimonials Section on All Screens -->
-    <div class="container mt-5">
+    <div class="container mt-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
         <div class="row gy-2">
             <?php foreach (get_field("expertise_testimonials") as $testimonial) { ?>
                 <div class="col-12 col-md-6 col-lg-4">

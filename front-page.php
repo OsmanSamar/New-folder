@@ -1732,7 +1732,7 @@
                                 <?= $testimonial["text"] ?>
                             </p>
                             <!-- Btn & text -->
-                            <div class="d-flex flex-row align-items-center">
+                            <div class="d-flex flex-row align-items-center" style="padding: 0 19px;">
                                 <button>
                                     <!-- class="btn" -->
                                     <span class="circle blue-circle">

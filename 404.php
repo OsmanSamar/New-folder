@@ -1,5 +1,5 @@
-<?php get_header() ?> 
-   
+<?php get_header() ?>
+
 <main id="page" class="404">
     <div class="container">
         <h1>404 - Pagina niet gevonden</h1>

@@ -708,7 +708,8 @@
 
 
     <!-- Hero Section -->
-    <div class="container-max-width">
+    <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+        data-aos-duration="500" data-aos-easing="ease-in-out">
         <img src="<?= get_field("financial_hero_img")['url'] ?>" alt="<?= get_field("financial_hero_img")['title'] ?>"
             class="container-img" style=" height: 580px; border-radius: 40px; object-fit: cover;" />
         <div class="hero_white_block">
@@ -810,7 +811,8 @@
     <!-- Third Section -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="left_col">
                     <div class="left-btn">
                         <?= get_field("left_btn") ?>
@@ -825,7 +827,8 @@
 
             <div class=" col-lg-1 d-none d-lg-block"></div>
 
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="right_col">
                     <span class="right-text">
                         <?= get_field("second_text") ?>
@@ -838,7 +841,8 @@
 
 
     <!-- The Blue Block With Img & Text -->
-    <div class="block_blue">
+    <div class="block_blue" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+        data-aos-easing="ease-in-out">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5">
                 <img src="<?= get_field("blue_block_img")['url'] ?>" alt="<?= get_field("blue_block_img")['alt'] ?>"
@@ -876,7 +880,8 @@
     <!-- Fifth Section -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="left_col2">
                     <div class="left-btn">
                         <?= get_field("left_btn_title") ?>
@@ -894,7 +899,8 @@
             </div>
             <div class=" col-lg-1 d-none d-lg-block"></div>
 
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="right_col2">
                     <span class="right2-text">
                         <?= get_field("f_text_on_right") ?>
@@ -914,7 +920,8 @@
     </div>
 
     <!-- Testimonials Section on All Screens -->
-    <div class="container mt-5">
+    <div class="container mt-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+        data-aos-easing="ease-in-out">
         <div class="row gy-2">
             <?php foreach (get_field("offering_testimonails") as $testimonial) { ?>
                 <div class="col-12 col-md-6 col-lg-6">
@@ -1028,7 +1035,8 @@
 
 
     <!-- Blue-container -->
-    <div class="blue-container">
+    <div class="blue-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+        data-aos-easing="ease-in-out">
         <div class="container-let-talk">
             <!-- Left Side: Image and Texts -->
             <div class="left-side-img-text">
@@ -1071,7 +1079,8 @@
 
 
     <!--cloud-projects Section  -->
-    <div class="cloud-projects">
+    <div class="cloud-projects" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+        data-aos-easing="ease-in-out">
         <div class="container">
             <div class="row cloud-projects-row mt-5">
                 <div class="col-12 col-lg-6 col-md-6">
@@ -1165,7 +1174,8 @@
     <div class="container">
 
         <div class="row " style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5 ">
+            <div class="col-12 col-md-6 col-lg-5 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="d-flex flex-column  justify-content-center align-items-start gap-3">
                     <span class="left-btn"><?= get_field("why_sue_sub_title") ?></span>
                     <span class="why-sue-title"><?= get_field("why_sue_title") ?></span>
@@ -1185,7 +1195,8 @@
             </div>
             <div class=" col-lg-1 d-lg-block d-none"></div>
 
-            <div class="col-12 col-lg-6 col-md-6 right-side ">
+            <div class="col-12 col-lg-6 col-md-6 right-side " data-aos="fade-left" data-aos-offset="100"
+                data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease-in-out">
                 <span class="why-sue-text"><?= get_field("why_sue_first_right_text") ?></span>
             </div>
         </div>
@@ -1200,7 +1211,8 @@
 
 
     <!-- Related Financial articles -->
-    <div class="container" style="margin-top:50px;">
+    <div class="container" style="margin-top:50px;" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+        data-aos-duration="500" data-aos-easing="ease-in-out">
         <div class="row cloud-projects-row">
             <div class="col-12 col-md-6 col-lg-6">
                 <span class="cloud-projects-title">

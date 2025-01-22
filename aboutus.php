@@ -94,9 +94,10 @@
 
         .center-left {
             position: absolute;
-            top: 50%;
+            /* top: 50%; */
             left: 50%;
-            transform: translate(-50%, -50%);
+            /* transform: translate(-50%, -50%); */
+            transform: translate(-50%, -159%);
             width: 385px;
             height: 250px;
             background-color: #FFF;
@@ -319,11 +320,16 @@
                 top: 50%;
                 /* Added left */
                 left: 50%;
-                transform: translate(-76%, -50%);
+                /* transform: translate(-76%, -50%); */
+                transform: translate(-76%, -131%);
                 width: 449px;
                 height: 355px;
                 background-color: #FFF;
                 border-radius: 20px;
+            }
+
+            .center-left-text {
+                font-size: 28px;
             }
 
             .border-container {
@@ -400,11 +406,12 @@
 
             .center-left {
                 position: absolute;
-                top: 50%;
-                /* left: -33%; */
-                transform: translate(-100%, -50%);
+                /* top: 50%; */
+                /* transform: translate(-100%, -50%); */
                 /* left: 50%;
                 transform: translate(-90%, -50%); */
+                /* new */
+                transform: translate(-100%, -132%);
                 width: 449px;
                 height: 355px;
                 background-color: #FFF;
@@ -511,7 +518,8 @@
 
     <!-- 2 -->
     <!-- Hero Section -->
-    <div class="container-max-width">
+    <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+        data-aos-duration="500" data-aos-easing="ease-in-out">
         <img src="<?= get_field("aboutus_hero_img")['url'] ?>" alt="<?= get_field("aboutus_hero_img")['title'] ?>"
             class="container-img" style=" height: 580px; border-radius: 40px; object-fit: cover;" />
         <div class="row">
@@ -528,7 +536,8 @@
     <!-- 3 -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="400" data-aos-easing="ease-in-out">
                 <div class="left_col">
                     <div class="left-btn">
                         <?= get_field("left_btn") ?>
@@ -543,7 +552,8 @@
 
             <div class=" col-lg-1 d-none d-lg-block"></div>
 
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="400" data-aos-easing="ease-in-out">
                 <div class="right_col">
                     <span class="right-text">
                         <?= get_field("second_text") ?>
@@ -621,7 +631,8 @@
     <div class="container-max-width" style="  margin: 100px auto 10px;">
         <img src="<?= get_field("img_section")['url'] ?>" alt="<?= get_field("img_section")['title'] ?>"
             class="container-img" style=" height: 580px; border-radius: 40px; object-fit: cover;" />
-        <div class="container">
+        <div class="container" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50" data-aos-duration="400"
+            data-aos-easing="ease-in-out">
             <div class="row">
                 <div class="col-lg-5 col-md-6">
                     <div class="center-left">
@@ -642,7 +653,8 @@
 
 
     <!-- 6 -->
-    <div class="border-container">
+    <div class="border-container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+        data-aos-easing="ease-in-out">
         <div class="container">
             <div class="row">
                 <?php foreach (get_field("testimonials") as $testimonial) {
@@ -668,7 +680,8 @@
 
     <!-- 7 -->
     <!-- The Blue Block With Img & Text -->
-    <div class="block_blue">
+    <div class="block_blue" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+        data-aos-easing="ease-in-out">
         <div class="container">
             <div class="row">
 
@@ -726,7 +739,8 @@
     <!-- 8 -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5">
+            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="left_col">
                     <div class="left-btn">
                         <?= get_field("left_btn") ?>
@@ -741,7 +755,8 @@
 
             <div class=" col-lg-1 d-none d-lg-block"></div>
 
-            <div class="col-12 col-md-6 col-lg-6">
+            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="right_col">
                     <span class="right-text">
                         <?= get_field("second_text") ?>
@@ -755,13 +770,15 @@
     <!-- 9 -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-12 col-lg-5">
+            <div class="col-12 col-md-12 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="500" data-aos-easing="ease-in-out">
                 <img src="<?= get_field("left_img_aboutus")['url'] ?>" alt="<?= get_field("left_img_aboutus")['alt'] ?>"
                     style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover" />
             </div>
 
             <!-- Right Section -->
-            <div class="col-12 col-lg-7 right_section order-1 order-lg-2">
+            <div class="col-12 col-lg-7 right_section order-1 order-lg-2" data-aos="fade-left" data-aos-offset="100"
+                data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease-in-out">
                 <div class="custom-container" style="">
                     <div class="custom-pagination">
                         <div class="d-flex d-md-none d-lg-none justify-content-left">

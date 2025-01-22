@@ -352,7 +352,8 @@
         </div>
 
         <!-- 2 -->
-        <div class="border-container" style="margin-top:210px;">
+        <div class="border-container" style="margin-top:210px;" data-aos="fade-up" data-aos-offset="100"
+            data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease-in-out">
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="container-max-width">
@@ -511,7 +512,8 @@
 
         <!-- 3 -->
 
-        <div class="border-container2">
+        <div class="border-container2" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="500" data-aos-easing="ease-in-out">
             <div class="container">
                 <div class="row">
                     <?php foreach (get_field("testimonials") as $testimonial) {

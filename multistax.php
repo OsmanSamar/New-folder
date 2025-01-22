@@ -29,7 +29,9 @@
             color: #39456E;
             /* background: linear-gradient(147deg, rgba(36, 50, 95, 0.00) 9.21%, #263E7B 107.54%); */
             /* background: #263E7B; */
-            background: #263E61;
+            /* background: #263E61; */
+            background: linear-gradient(90deg, #25325f, #274083);
+            ;
             min-height: 100vh;
 
         }
@@ -564,19 +566,24 @@
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
                 <div
                     class="d-inline-flex align-items-center justify-content-center flex-column gap-3 col-lg-6 col-12 col-md-12">
-                    <span class="left-btn">
+                    <span class="left-btn" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="500" data-aos-easing="ease-in-out">
                         <?= get_field("hero_sub_title") ?>
 
                     </span>
-                    <span class="hero-title my-4">
+                    <span class="hero-title my-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="500" data-aos-easing="ease-in-out">
                         <?= get_field("hero_main_title") ?>
                     </span>
-                    <span class="hero-text">
+                    <span class="hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="500" data-aos-easing="ease-in-out">
                         <?= get_field("hero_text") ?>
                     </span>
                     <!-- Talk to an export btn -->
                     <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
-                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
+                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;"
+                        data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
                         <a href="<?= get_field("request_demo")['url'] ?>"
                             style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
                             <img src="<?= get_field("request_arrow")['url'] ?>"
@@ -619,8 +626,8 @@
 
 
         <!-- 4 -->
-        <div>
-            <!-- class="container" -->
+        <!-- <div>
+            
             <div class="row " style="margin-top:150px;">
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
                 <div
@@ -635,7 +642,7 @@
                         <?= get_field("hero_text") ?>
                     </span>
 
-                    <!-- Talk to an export btn -->
+                    
                     <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
                         style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
                         <a href="<?= get_field("request_demo")['url'] ?>"
@@ -648,11 +655,48 @@
                 </div>
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
             </div>
+        </div> -->
+
+        <div class="">
+            <!-- class="container" -->
+            <div class="row " style="margin-top:210px;">
+                <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
+                <div
+                    class="d-inline-flex align-items-center justify-content-center flex-column gap-3 col-lg-6 col-12 col-md-12">
+                    <span class="left-btn" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="500" data-aos-easing="ease-in-out">
+                        <?= get_field("hero_sub_title") ?>
+
+                    </span>
+                    <span class="hero-title my-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="500" data-aos-easing="ease-in-out">
+                        <?= get_field("hero_main_title") ?>
+                    </span>
+                    <span class="hero-text" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="500" data-aos-easing="ease-in-out">
+                        <?= get_field("hero_text") ?>
+                    </span>
+                    <!-- Talk to an export btn -->
+                    <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
+                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;"
+                        data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
+                        <a href="<?= get_field("request_demo")['url'] ?>"
+                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                            <img src="<?= get_field("request_arrow")['url'] ?>"
+                                alt="<?= get_field("request_arrow")['alt'] ?>" style="width: 12px; height: 18px;" />
+                            <?= get_field("request_demo")['title'] ?>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
+            </div>
+
         </div>
 
-
         <!--5  Testimonials Section on All Screens -->
-        <div class="container mt-5">
+        <div class="container mt-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="row gy-2">
                 <?php foreach (get_field("expertise_testimonials") as $testimonial) { ?>
                     <div class="col-12 col-md-6 col-lg-4">
@@ -673,7 +717,8 @@
 
         <!-- 6 -->
         <!-- Sue_Partners Repeater On All Screen-->
-        <div class="blue-block-partner">
+        <div class="blue-block-partner" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="row">
                 <div class="col-md-10 col-lg-6 mx-auto text-center pt-4">
                     <span class="left-btn" style="margin-top:40px;">
@@ -713,7 +758,8 @@
         <div class="container mt-5">
             <div class="row ">
                 <div class="col-lg-1 d-none d-lg-block"></div>
-                <div class="col-lg-5 col-md-5 d-flex flex-wrap ">
+                <div class="col-lg-5 col-md-5 d-flex flex-wrap " data-aos="fade-right" data-aos-offset="100"
+                    data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <span class="left-btn mb-2">
 
                         <?= get_field("sbu_title_left") ?>
@@ -740,15 +786,13 @@
                         <span class="button-text pink">Let's talk</span>
                     </button>
                 </div>
-
                 <div class="col-lg-1 col-md-1 d-md-block d-none d-lg-block"></div>
-                <div class="col-lg-5 col-md-6">
+                <div class="col-lg-5 col-md-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="500" data-aos-easing="ease-in-out">
 
                     <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                         class="w-100 h-100 objectfit-cover" style=" border-radius:40px; " />
                 </div>
-
-
                 <div class="col-lg-1 d-none d-lg-block"></div>
             </div>
         </div>
@@ -758,11 +802,14 @@
         <div class="container mt-5">
             <div class="row ">
                 <div class="col-lg-1 d-none d-lg-block"></div>
-                <div class="col-lg-5 col-md-6">
+                <div class="col-lg-5 col-md-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="500" data-aos-easing="ease-in-out">
                     <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                         class="w-100 h-100 objectfit-cover" style=" border-radius:40px; " />
                 </div>
-                <div class="col-lg-5 col-md-5 d-flex flex-wrap ">
+                <div class="col-lg-1 col-md-1 d-md-block d-none d-lg-block"></div>
+                <div class="col-lg-5 col-md-5 d-flex flex-wrap " data-aos="fade-left" data-aos-offset="100"
+                    data-aos-delay="50" data-aos-duration="500" data-aos-easing="ease-in-out">
                     <span class="left-btn mb-2">
 
                         <?= get_field("sbu_title_left") ?>
@@ -789,18 +836,15 @@
                         <span class="button-text pink">Let's talk</span>
                     </button>
                 </div>
-
                 <div class="col-lg-1 col-md-1 d-md-block d-none d-lg-block"></div>
-
-
-
                 <div class="col-lg-1 d-none d-lg-block"></div>
             </div>
         </div>
 
 
         <!-- 9 -->
-        <div class="block_blue">
+        <div class="block_blue" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+            data-aos-easing="ease-in-out">
             <div class="container">
                 <!-- class="container" -->
                 <div class="row px-5 py-5">
@@ -866,7 +910,8 @@
 
         <!-- 10 -->
         <!--cloud-projects Section  -->
-        <div class="cloud-projects">
+        <div class="cloud-projects" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
+            data-aos-easing="ease-in-out">
             <div class="container">
                 <div class="row cloud-projects-row mt-5">
                     <div class="col-12 col-lg-6 col-md-6">

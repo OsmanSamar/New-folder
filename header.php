@@ -42,7 +42,8 @@
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease-in-out;
-            background-color: red;
+            /* background-color: red; */
+            background-color: #FFF;
             max-width: 100%;
             width: fit-content;
             left: 50%;
