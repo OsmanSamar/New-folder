@@ -16,134 +16,134 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!--  -->
     <style>
-    .letstalk-btn a:hover img {
-        transform: translateX(6px);
-        transition: transform 0.2s ease;
-    }
+        .letstalk-btn a:hover img {
+            transform: translateX(6px);
+            transition: transform 0.2s ease;
+        }
 
-    /* Navbar dropdown styles */
-    .navbar-nav .dropdown-menu {
-        position: fixed;
-        top: -100%;
-        /* Start hidden above the page */
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
-        background-color: red;
-        max-width: 100%;
-        width: fit-content;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 3rem;
+        /* Navbar dropdown styles */
+        .navbar-nav .dropdown-menu {
+            position: fixed;
+            top: -100%;
+            /* Start hidden above the page */
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            background-color: red;
+            max-width: 100%;
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 3rem;
 
-    }
-
-
-    .navbar-nav .dropdown-menu.show {
-        top: 100%;
-        /* Drop down from the navbar */
-        opacity: 1;
-        visibility: visible;
-        max-width: 100%;
-        width: fit-content;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 3rem;
-
-    }
+        }
 
 
+        .navbar-nav .dropdown-menu.show {
+            top: 100%;
+            /* Drop down from the navbar */
+            opacity: 1;
+            visibility: visible;
+            max-width: 100%;
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 3rem;
 
-    .dropdown-menu .dropdown-item {
-        display: flex;
-        flex-direction: column;
-
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 10px 36px;
-        height: 100%;
-        flex-grow: 1;
-        /* Divider between items */
-        border-right: 1px solid #cbcfde;
-    }
-
-    .dropdown-menu .menu-item:last-child .dropdown-item {
-        border-right: none;
-    }
+        }
 
 
+
+        .dropdown-menu .dropdown-item {
+            display: flex;
+            flex-direction: column;
+
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 10px 36px;
+            height: 100%;
+            flex-grow: 1;
+            /* Divider between items */
+            border-right: 1px solid #cbcfde;
+        }
+
+        .dropdown-menu .menu-item:last-child .dropdown-item {
+            border-right: none;
+        }
 
 
 
 
-    /*  spacing between dropdown items */
-    .dropdown-menu {
-
-        background-color: #FFF;
-    }
 
 
+        /*  spacing between dropdown items */
+        .dropdown-menu {
 
-    /* Sidebar Dropdown Menu */
-    .sidebar-nav .dropdown-menu {
-        position: static;
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        background-color: #f8f9fa;
-
-    }
-
-    /* Show dropdown on toggle */
-    .sidebar-nav .dropdown-menu.show {
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-    }
-
-    /* Sidebar Dropdown Items */
-    .sidebar-nav .dropdown-item {
-        padding: 10px 15px;
-        font-size: 1rem;
-        color: #333;
-        text-decoration: none;
-    }
-
-    .sidebar-nav .dropdown-item:hover {
-        background-color: #e9ecef;
-        color: #000;
-    }
-
-    /* Styling Parent Items in Sidebar */
-    .sidebar-nav .menu-item-has-children>a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .sidebar-nav .menu-item-has-children>a:after {
-        content: '\f107';
-        /* Font Awesome down arrow */
-        font-family: FontAwesome;
-        margin-left: 8px;
-    }
+            background-color: #FFF;
+        }
 
 
-    .sidebar-nav .menu-item-has-children.show>a:after {
-        content: '\f106';
 
-    }
+        /* Sidebar Dropdown Menu */
+        .sidebar-nav .dropdown-menu {
+            position: static;
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            background-color: #f8f9fa;
 
-    .navbar .menu-item {
-        position: unset;
-    }
+        }
+
+        /* Show dropdown on toggle */
+        .sidebar-nav .dropdown-menu.show {
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+        }
+
+        /* Sidebar Dropdown Items */
+        .sidebar-nav .dropdown-item {
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .sidebar-nav .dropdown-item:hover {
+            background-color: #e9ecef;
+            color: #000;
+        }
+
+        /* Styling Parent Items in Sidebar */
+        .sidebar-nav .menu-item-has-children>a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .sidebar-nav .menu-item-has-children>a:after {
+            content: '\f107';
+            /* Font Awesome down arrow */
+            font-family: FontAwesome;
+            margin-left: 8px;
+        }
+
+
+        .sidebar-nav .menu-item-has-children.show>a:after {
+            content: '\f106';
+
+        }
+
+        .navbar .menu-item {
+            position: unset;
+        }
     </style>
 
 </head>
@@ -158,7 +158,7 @@
             <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
-                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
+                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/Logo.svg" alt="Logo"
                         style="height: 43px;width: 88px;">
                 </a>
 
@@ -208,62 +208,62 @@
 
 
                 <style>
-                .arrow-letstalk {
-                    margin-left: auto;
-                    /* Push to the right */
-                }
-
-                /* Hamburger Icon Alignment */
-                .navbar-toggler {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                /* Media Query for md Screens */
-                @media (max-width: 991.98px) {
                     .arrow-letstalk {
                         margin-left: auto;
-
+                        /* Push to the right */
                     }
 
+                    /* Hamburger Icon Alignment */
                     .navbar-toggler {
-                        margin-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    /* Media Query for md Screens */
+                    @media (max-width: 991.98px) {
+                        .arrow-letstalk {
+                            margin-left: auto;
+
+                        }
+
+                        .navbar-toggler {
+                            margin-left: 10px;
+
+                        }
+                    }
+
+
+                    .hamburger-icon {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 30px;
+                        height: 20px;
+                        position: relative;
+                    }
+
+                    .hamburger-icon .line {
+                        display: block;
+                        height: 4px;
+                        background-color: #25325F;
+                        border-radius: 2px;
+                        transition: all 0.3s ease;
 
                     }
-                }
 
+                    .hamburger-icon .line-1,
+                    .hamburger-icon .line-2 {
+                        width: 100%;
 
-                .hamburger-icon {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    width: 30px;
-                    height: 20px;
-                    position: relative;
-                }
+                    }
 
-                .hamburger-icon .line {
-                    display: block;
-                    height: 4px;
-                    background-color: #25325F;
-                    border-radius: 2px;
-                    transition: all 0.3s ease;
+                    .hamburger-icon .line-3 {
+                        width: 60%;
 
-                }
+                        align-self: flex-end;
 
-                .hamburger-icon .line-1,
-                .hamburger-icon .line-2 {
-                    width: 100%;
-
-                }
-
-                .hamburger-icon .line-3 {
-                    width: 60%;
-
-                    align-self: flex-end;
-
-                }
+                    }
                 </style>
 
             </div>
@@ -274,7 +274,7 @@
             <div class="offcanvas-header text-black border-bottom">
                 <!-- Offcanvas Navbar Title/Logo -->
                 <a class="offcanvas-title" href="<?= esc_url(home_url('/')); ?>">
-                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
+                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/Logo.svg" alt="Logo"
                         style="height: 43px; width: 88px;" id="offcanvasNavbarLabel">
                 </a>
                 <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"

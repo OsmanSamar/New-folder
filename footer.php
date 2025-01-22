@@ -241,8 +241,12 @@
                     <!-- style="display:flex;flex-direction: column; align-items: flex-start;  " -->
                     <div class="d-flex flex-column newsletter-container gap-2">
                         <!-- Logo -->
-                        <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
+                        <!-- <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/logo.svg" alt="Logo"
+                                style="height: 43px;width: 88px;">
+                        </a> -->
+                        <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">
+                            <img src="<?= esc_url(get_template_directory_uri()); ?>/images/Logo.svg" alt="Logo"
                                 style="height: 43px;width: 88px;">
                         </a>
 
