@@ -5,450 +5,229 @@
 
 <main class="aboutus flex-grow-1">
     <style>
-    b,
-    strong {
-        color: #e94271;
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        line-height: inherit;
-    }
-
-    .container-max-width {
-        position: relative;
-        text-align: center;
-        border-radius: 40px;
-        max-width: 1700px;
-        height: 581px;
-        margin: 200px auto 10px;
-    }
-
-    .centered {
-        position: absolute;
-        top: 68%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .hero-text {
-        color: #FFF;
-        text-align: center;
-        font-feature-settings: 'ss01'on;
-        font-family: Sora, sans-serif;
-        font-size: 38px;
-        font-weight: 700;
-        line-height: 1.2;
-        padding: 0;
-        margin: 0;
-
-    }
-
-    .left_col,
-    .right_col {
-        display: flex;
-        align-items: flex-start;
-        justify-content: left;
-        flex-direction: column;
-        gap: 1px;
-    }
-
-    .left-btn {
-        /* width: 209px; */
-        width: fit-content;
-        height: 34px;
-        border-radius: 100px;
-        background: #274083;
-        padding: 3px 11px;
-        text-align: center;
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left-text,
-    .right-text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-    .title {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-        margin: 10px auto;
-    }
-
-
-    .center-left {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 385px;
-        height: 250px;
-        background-color: #FFF;
-        border-radius: 20px;
-    }
-
-    .center-left-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 32px;
-        text-align: left;
-
-    }
-
-
-
-    .border-container {
-        border-radius: 40px;
-        max-width: 1700px;
-        height: 576px;
-        border-radius: 40px;
-        border: 1px solid #CBCFDE;
-        margin: 100px auto 10px;
-
-    }
-
-
-    .testi-num {
-        color: #E94271;
-        font-family: Manrope;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-    }
-
-    .testi-title {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-        color: #6A7291;
-        font-family: Manrope;
-    }
-
-    .testi-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-    }
-
-    .block_blue {
-        border-radius: 40px;
-        background: #25325F;
-        max-width: 1700px;
-        flex-direction: column;
-        margin: 50px auto 10px;
-        display: flex;
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .title-block {
-        color: #FFF;
-        /* Desktop/H3 */
-        font-family: Manrope;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 39px;
-    }
-
-    .left-text-block {
-        color: #9AA0B7;
-
-        /* Desktop/Lead (Bold) */
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-    }
-
-
-    /* .left-side-width {
-        margin-top: 50px;
-        padding: 24px;
-
-    } */
-
-    .offering-num {
-        color: #E94271;
-        font-family: Manrope;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-    }
-
-    .challenge-title {
-        color: #9AA0B7;
-        font-family: Manrope;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 27px;
-    }
-
-    .challenge-text {
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-    }
-
-    .first-row {
-        margin-bottom: 20px;
-    }
-
-    .custom-container {
-        max-width: ;
-        max-height: 492px;
-        border: 1px solid #CBCFDE;
-        border-radius: 25px;
-        padding: 45px 20px;
-        margin-top: -160px;
-        margin-bottom: 30px;
-    }
-
-
-    /* Custom Pagination Numbers */
-    .custom-pagination {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        margin-bottom: 20px;
-        justify-content: space-between;
-    }
-
-
-    .custom-number {
-        position: relative;
-        border: 1px solid var(--Line, #CBCFDE);
-        border-radius: 100px;
-        color: #000;
-        font-size: 12px;
-        font-weight: bold;
-        width: 17px;
-        height: 30px;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-    }
-
-
-    .custom-title {
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-    }
-
-    .custom-number.active {
-        background-color: #274083;
-        color: #fff;
-        width: auto;
-        padding: 0 6px;
-    }
-
-    .custom-number .custom-title {
-        display: none;
-        margin-left: 10px;
-        white-space: nowrap;
-    }
-
-    .right_section {
-        margin-top: 188px;
-    }
-
-    .form_section {
-        border-radius: 30px;
-        background: #25325F;
-        max-width: 1700px;
-        height: 1400px;
-        margin: 50px auto 50px;
-    }
-
-    .left-container {
-        border-radius: 30px;
-        margin-top: ;
-        color: white;
-        height: 264px;
-    }
-
-    .left-content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 30px;
-        gap: 50px;
-    }
-
-    .right-col-form {
-        margin-top: unset;
-    }
-
-    @media (min-width: 768px) {
-
-        .center-left {
-            position: absolute;
-            top: 50%;
-            /* Added left */
-            left: 50%;
-            transform: translate(-76%, -50%);
-            width: 449px;
-            height: 355px;
-            background-color: #FFF;
-            border-radius: 20px;
-        }
-
-        .border-container {
-            height: 278px;
-        }
-
-        .block_blue {
-            height: 589px;
-        }
-
-
-        .first-row {
-            margin-bottom: 60px;
-        }
-
-        .custom-container {
-            margin-top: -96px;
-        }
-
-        .custom-number.active .custom-title {
-            display: inline-block;
-        }
-
-        .right_section {
-            margin-top: 115px;
-        }
-
-        .border-left {
-            border-left: 1px solid white;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 0 20px 60px;
-            row-gap: 16px;
-        }
-
-
-        .form_section {
-            height: 1098px;
-        }
-
-        .left-content {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 50px;
-            gap: 20px;
-        }
-
-
-    }
-
-
-
-    @media (min-width: 992px) {
-
         b,
         strong {
+            color: #e94271;
+            font-family: inherit;
             font-size: inherit;
+            font-style: inherit;
+            line-height: inherit;
+        }
+
+        .container-max-width {
+            position: relative;
+            text-align: center;
+            border-radius: 40px;
+            max-width: 1700px;
+            height: 581px;
+            margin: 200px auto 10px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 68%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .hero-text {
-            font-family: Sora;
-            font-size: 45px;
-            font-style: normal;
+            color: #FFF;
+            text-align: center;
+            font-feature-settings: 'ss01' on;
+            font-family: Sora, sans-serif;
+            font-size: 38px;
             font-weight: 700;
-            line-height: 54px;
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+
         }
 
-        .partner-container {
-            width: 165px;
-            height: 61px;
+        .left_col,
+        .right_col {
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            flex-direction: column;
+            gap: 1px;
         }
+
+        .left-btn {
+            /* width: 209px; */
+            width: fit-content;
+            height: 34px;
+            border-radius: 100px;
+            background: #274083;
+            padding: 3px 11px;
+            text-align: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left-text,
+        .right-text {
+            color: #6A7291;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+        }
+
+        .title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 39px;
+            margin: 10px auto;
+        }
+
 
         .center-left {
             position: absolute;
             top: 50%;
-            /* left: -33%; */
-            transform: translate(-100%, -50%);
-            /* left: 50%;
-                transform: translate(-90%, -50%); */
-            width: 449px;
-            height: 355px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 385px;
+            height: 250px;
             background-color: #FFF;
             border-radius: 20px;
         }
 
         .center-left-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px;
+            text-align: left;
+
+        }
+
+
+
+        .border-container {
+            border-radius: 40px;
+            max-width: 1700px;
+            height: 576px;
+            border-radius: 40px;
+            border: 1px solid #CBCFDE;
+            margin: 100px auto 10px;
+        }
+
+
+        .testi-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+        }
+
+        .testi-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+            color: #6A7291;
+            font-family: Manrope;
+        }
+
+        .testi-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+        }
+
+        .block_blue {
+            border-radius: 40px;
+            background: #25325F;
+            max-width: 1700px;
+            flex-direction: column;
+            margin: 50px auto 10px;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .title-block {
+            color: #FFF;
+            /* Desktop/H3 */
+            font-family: Manrope;
             font-size: 26px;
+            font-style: normal;
             font-weight: 700;
             line-height: 39px;
         }
 
-        .border-container {
-            height: 263px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .left-text-block {
+            color: #9AA0B7;
+
+            /* Desktop/Lead (Bold) */
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
         }
 
-        .block_blue {
 
-            height: 540px;
+        /* .left-side-width {
+        margin-top: 50px;
+        padding: 24px;
+
+    } */
+
+        .offering-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
         }
 
-        .left-side-width {
-            max-width: 694px;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            row-gap: 70px;
+        .challenge-title {
+            color: #9AA0B7;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 27px;
+        }
+
+        .challenge-text {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
         }
 
         .first-row {
-            margin-bottom: unset;
+            margin-bottom: 20px;
         }
 
         .custom-container {
             max-width: ;
+            max-height: 492px;
             border: 1px solid #CBCFDE;
             border-radius: 25px;
             padding: 45px 20px;
-            margin-top: 0;
-            height: 423px;
+            margin-top: -160px;
+            margin-bottom: 30px;
         }
 
 
@@ -456,46 +235,266 @@
         .custom-pagination {
             display: flex;
             gap: 8px;
-            justify-content: flex-start;
             align-items: center;
             margin-bottom: 20px;
+            justify-content: space-between;
         }
+
 
         .custom-number {
-            font-size: 16px;
+            position: relative;
+            border: 1px solid var(--Line, #CBCFDE);
+            border-radius: 100px;
+            color: #000;
+            font-size: 12px;
+            font-weight: bold;
+            width: 17px;
+            height: 30px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
 
-        .custom-number.active .custom-title {
-            display: inline-block;
+        .custom-title {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+        }
+
+        .custom-number.active {
+            background-color: #274083;
+            color: #fff;
+            width: auto;
+            padding: 0 6px;
+        }
+
+        .custom-number .custom-title {
+            display: none;
+            margin-left: 10px;
+            white-space: nowrap;
         }
 
         .right_section {
-            margin-top: 0;
+            margin-top: 188px;
         }
 
-
         .form_section {
-            height: 550px;
+            border-radius: 30px;
+            background: #25325F;
+            max-width: 1700px;
+            height: 1400px;
+            margin: 50px auto 50px;
         }
 
         .left-container {
-            height: 500px;
+            border-radius: 30px;
+            margin-top: ;
+            color: white;
+            height: 264px;
         }
 
         .left-content {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: normal;
-            margin-top: 67px;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
         }
 
         .right-col-form {
-            margin-top: 67px;
+            margin-top: unset;
         }
 
-    }
+        @media (min-width: 768px) {
+
+            .center-left {
+                position: absolute;
+                top: 50%;
+                /* Added left */
+                left: 50%;
+                transform: translate(-76%, -50%);
+                width: 449px;
+                height: 355px;
+                background-color: #FFF;
+                border-radius: 20px;
+            }
+
+            .border-container {
+                height: 278px;
+            }
+
+            .block_blue {
+                height: 589px;
+            }
+
+
+            .first-row {
+                margin-bottom: 60px;
+            }
+
+            .custom-container {
+                margin-top: -96px;
+            }
+
+            .custom-number.active .custom-title {
+                display: inline-block;
+            }
+
+            .right_section {
+                margin-top: 115px;
+            }
+
+            .border-left {
+                border-left: 1px solid white;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0 20px 60px;
+                row-gap: 16px;
+            }
+
+
+            .form_section {
+                height: 1098px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 50px;
+                gap: 20px;
+            }
+
+
+        }
+
+
+
+        @media (min-width: 992px) {
+
+            b,
+            strong {
+                font-size: inherit;
+            }
+
+            .hero-text {
+                font-family: Sora;
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 54px;
+            }
+
+            .partner-container {
+                width: 165px;
+                height: 61px;
+            }
+
+            .center-left {
+                position: absolute;
+                top: 50%;
+                /* left: -33%; */
+                transform: translate(-100%, -50%);
+                /* left: 50%;
+                transform: translate(-90%, -50%); */
+                width: 449px;
+                height: 355px;
+                background-color: #FFF;
+                border-radius: 20px;
+            }
+
+            .center-left-text {
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 39px;
+            }
+
+            .border-container {
+                height: 263px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .block_blue {
+
+                height: 540px;
+            }
+
+            .left-side-width {
+                max-width: 694px;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 70px;
+            }
+
+            .first-row {
+                margin-bottom: unset;
+            }
+
+            .custom-container {
+                max-width: ;
+                border: 1px solid #CBCFDE;
+                border-radius: 25px;
+                padding: 45px 20px;
+                margin-top: 0;
+                height: 423px;
+            }
+
+
+            /* Custom Pagination Numbers */
+            .custom-pagination {
+                display: flex;
+                gap: 8px;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .custom-number {
+                font-size: 16px;
+            }
+
+
+            .custom-number.active .custom-title {
+                display: inline-block;
+            }
+
+            .right_section {
+                margin-top: 0;
+            }
+
+
+            .form_section {
+                height: 550px;
+            }
+
+            .left-container {
+                height: 500px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: normal;
+                margin-top: 67px;
+            }
+
+            .right-col-form {
+                margin-top: 67px;
+            }
+
+        }
     </style>
 
     <!-- 1 -->
@@ -565,23 +564,23 @@
                     <?php
                     foreach (get_field("aboutus_testimonials") as $sue) {
                         ?>
-                    <div class="swiper-slide d-flex justify-content-center align-items-center"
-                        style="width:fit-content;">
-                        <div class="d-flex flex-row align-items-center justify-content-center gap-4 partners-container">
-                            <a href=" <?= $sue['aboutus_testimonials_link']['url'] ?>" target=" _blank">
-                                <div class="d-flex flex-row align-items-center justify-content-evenly partners-container"
-                                    style="border-radius:8px;border:1px solid #CBCFDE; background:#EDF3F4; width:165px;height:61px;">
-                                    <img src="<?= $sue['aboutus_testimonials_img']['url'] ?>"
-                                        alt=" <?= $sue['aboutus_testimonials_img']['alt'] ?>" class=""
-                                        style="width:56px;height:45px;flex-shrink: 0; object-fit:content" />
-                                    <img src="<?= $sue['aboutus_testimonials_img_link']['url'] ?>"
-                                        alt=" <?= $sue['aboutus_testimonials_img_link']['alt'] ?>" class="sue-img"
-                                        style="width:4px; height:8px;object-fit:content" />
-                                </div>
-                            </a>
+                        <div class="swiper-slide d-flex justify-content-center align-items-center"
+                            style="width:fit-content;">
+                            <div class="d-flex flex-row align-items-center justify-content-center gap-4 partners-container">
+                                <a href=" <?= $sue['aboutus_testimonials_link']['url'] ?>" target=" _blank">
+                                    <div class="d-flex flex-row align-items-center justify-content-evenly partners-container"
+                                        style="border-radius:8px;border:1px solid #CBCFDE; background:#EDF3F4; width:165px;height:61px;">
+                                        <img src="<?= $sue['aboutus_testimonials_img']['url'] ?>"
+                                            alt=" <?= $sue['aboutus_testimonials_img']['alt'] ?>" class=""
+                                            style="width:56px;height:45px;flex-shrink: 0; object-fit:content" />
+                                        <img src="<?= $sue['aboutus_testimonials_img_link']['url'] ?>"
+                                            alt=" <?= $sue['aboutus_testimonials_img_link']['alt'] ?>" class="sue-img"
+                                            style="width:4px; height:8px;object-fit:content" />
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -597,21 +596,21 @@
             <?php
             foreach (get_field("aboutus_testimonials") as $sue) {
                 ?>
-            <div class="col-auto partner-item">
-                <a href=" <?= $sue['aboutus_testimonials_link']['url'] ?>" target="_blank">
-                    <div class="d-flex flex-row align-items-center justify-content-evenly partner-container "
-                        style="border-radius:8px;border:1px solid #CBCFDE; background:#EDF3F4;  ">
-                        <img src="<?= $sue['aboutus_testimonials_img']['url'] ?>"
-                            alt=" <?= $sue['aboutus_testimonials_img']['alt'] ?>" class="sue-img"
-                            style="width:56px;height:45px;flex-shrink: 0; object-fit:content" />
-                        <img src="<?= $sue['aboutus_testimonials_img_link']['url'] ?>"
-                            alt=" <?= $sue['aboutus_testimonials_img_link']['alt'] ?>" class="sue-img"
-                            style="width:4px; height:8px;  object-fit:content" />
-                    </div>
-                </a>
-            </div>
+                <div class="col-auto partner-item">
+                    <a href=" <?= $sue['aboutus_testimonials_link']['url'] ?>" target="_blank">
+                        <div class="d-flex flex-row align-items-center justify-content-evenly partner-container "
+                            style="border-radius:8px;border:1px solid #CBCFDE; background:#EDF3F4;  ">
+                            <img src="<?= $sue['aboutus_testimonials_img']['url'] ?>"
+                                alt=" <?= $sue['aboutus_testimonials_img']['alt'] ?>" class="sue-img"
+                                style="width:56px;height:45px;flex-shrink: 0; object-fit:content" />
+                            <img src="<?= $sue['aboutus_testimonials_img_link']['url'] ?>"
+                                alt=" <?= $sue['aboutus_testimonials_img_link']['alt'] ?>" class="sue-img"
+                                style="width:4px; height:8px;  object-fit:content" />
+                        </div>
+                    </a>
+                </div>
 
-            <?php
+                <?php
             }
             ?>
         </div>
@@ -648,19 +647,19 @@
             <div class="row">
                 <?php foreach (get_field("testimonials") as $testimonial) {
                     ?>
-                <div class="col-12 col-lg-3 col-md-6">
-                    <div class=" d-flex flex-column justify-content-center gap-2"
-                        style="margin:20px; align-items:flex-start;">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="testi-num"><?= $testimonial["num"] ?></span>
-                            <span class="testi-title"><?= $testimonial["title_tes"] ?></span>
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <div class=" d-flex flex-column justify-content-center gap-2"
+                            style="margin:20px; align-items:flex-start;">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="testi-num"><?= $testimonial["num"] ?></span>
+                                <span class="testi-title"><?= $testimonial["title_tes"] ?></span>
+                            </div>
+                            <h3 class="testi-text"><?= $testimonial["text_tes"] ?></h3>
                         </div>
-                        <h3 class="testi-text"><?= $testimonial["text_tes"] ?></h3>
+
                     </div>
 
-                </div>
-
-                <?php
+                    <?php
                 }
                 ?>
             </div>
@@ -703,16 +702,16 @@
                                     echo '</div><div class="row">';
                                 }
                                 ?>
-                            <div class="col-12 col-md-6 col-lg-6">
-                                <div class="testimonial">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="offering-num"><?= $testimonial["num"] ?></span>
-                                        <span class="challenge-title"><?= $testimonial["title"] ?></span>
+                                <div class="col-12 col-md-6 col-lg-6">
+                                    <div class="testimonial">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="offering-num"><?= $testimonial["num"] ?></span>
+                                            <span class="challenge-title"><?= $testimonial["title"] ?></span>
+                                        </div>
+                                        <h3 class="challenge-text"><?= $testimonial["text_cha"] ?></h3>
                                     </div>
-                                    <h3 class="challenge-text"><?= $testimonial["text_cha"] ?></h3>
                                 </div>
-                            </div>
-                            <?php
+                                <?php
                             }
                             ?>
                         </div>
@@ -984,96 +983,96 @@
 
     <!--Aboutus-swiper -->
     <script>
-    let swiperaboutus = new Swiper('.aboutus-swiper', {
-        slidesPerView: 1.5,
-        grabCursor: true,
-        spaceBetween: 1,
+        let swiperaboutus = new Swiper('.aboutus-swiper', {
+            slidesPerView: 1.5,
+            grabCursor: true,
+            spaceBetween: 1,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-
-            360: {
-                slidesPerView: 2.2,
-                spaceBetween: 1,
-
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
 
-            412: {
-                slidesPerView: 2.3,
-                spaceBetween: 1,
+            breakpoints: {
 
-            },
+                360: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 1,
 
-            540: {
-                slidesPerView: 4.3,
-                spaceBetween: 1,
+                },
 
-            },
+                412: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 1,
 
-            556: {
-                slidesPerView: 4.3,
-                spaceBetween: 1,
-            },
-            992: {
+                },
 
-                slidesPerView: 4.3,
-                spaceBetween: 1,
-            },
-            1024: {
+                540: {
+                    slidesPerView: 4.3,
+                    spaceBetween: 1,
 
-                slidesPerView: 6,
-                spaceBetween: 1,
+                },
+
+                556: {
+                    slidesPerView: 4.3,
+                    spaceBetween: 1,
+                },
+                992: {
+
+                    slidesPerView: 4.3,
+                    spaceBetween: 1,
+                },
+                1024: {
+
+                    slidesPerView: 6,
+                    spaceBetween: 1,
+                }
+
+
             }
-
-
-        }
-    })
+        })
     </script>
 
 
 
 
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const swiper = new Swiper('.sample-slider', {
-            loop: false,
-            navigation: {
-                nextEl: "#nextBtn",
-                prevEl: "#prevBtn",
-            },
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.sample-slider', {
+                loop: false,
+                navigation: {
+                    nextEl: "#nextBtn",
+                    prevEl: "#prevBtn",
+                },
 
-        });
+            });
 
-        // Custom Pagination
-        const numbers = document.querySelectorAll('.custom-number');
-        numbers.forEach((number, index) => {
-            number.addEventListener('click', () => {
-                // Remove active class from all numbers
+            // Custom Pagination
+            const numbers = document.querySelectorAll('.custom-number');
+            numbers.forEach((number, index) => {
+                number.addEventListener('click', () => {
+                    // Remove active class from all numbers
+                    numbers.forEach(num => num.classList.remove('active'));
+
+                    // Add active class to clicked number
+                    number.classList.add('active');
+
+                    // Slide to the corresponding index
+                    swiper.slideTo(index);
+                });
+            });
+
+            // Update custom pagination on slide change
+            swiper.on('slideChange', function () {
+                const activeIndex = swiper.activeIndex;
                 numbers.forEach(num => num.classList.remove('active'));
-
-                // Add active class to clicked number
-                number.classList.add('active');
-
-                // Slide to the corresponding index
-                swiper.slideTo(index);
+                numbers[activeIndex].classList.add('active');
             });
         });
-
-        // Update custom pagination on slide change
-        swiper.on('slideChange', function() {
-            const activeIndex = swiper.activeIndex;
-            numbers.forEach(num => num.classList.remove('active'));
-            numbers[activeIndex].classList.add('active');
-        });
-    });
     </script>
 
 
