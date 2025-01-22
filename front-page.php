@@ -1357,7 +1357,7 @@
                         style="padding: 20px; ">
                         <!-- Pagination -->
                         <div class="swiper-pagination2 d-none d-md-flex d-lg-flex align-items-center justify-content-center"
-                            style="z-index: 1; margin-left: 10px;  width:90px; padding:20px;">
+                            style="z-index: 1; margin-left: 10px;  width:100px; padding:20px;">
                         </div>
 
 
