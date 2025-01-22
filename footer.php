@@ -1,35 +1,35 @@
 <footer class="footer">
 
     <style>
-    .arrow_section {
-
-        width: 57.851px;
-        height: 92.371px;
-        flex-shrink: 0;
-    }
-
-    .submit-btn a:hover img {
-        transform: translateX(6px);
-        transition: transform 0.2s ease;
-    }
-
-
-
-
-    @media (min-width: 992px) {
-
-        .second-arrow {
-            margin-top: 70px
-        }
-
         .arrow_section {
-            width: 87.239px;
-            height: 139.295px;
+
+            width: 57.851px;
+            height: 92.371px;
             flex-shrink: 0;
-            object-fit: cover;
-            margin-right: 60px;
         }
-    }
+
+        .submit-btn a:hover img {
+            transform: translateX(6px);
+            transition: transform 0.2s ease;
+        }
+
+
+
+
+        @media (min-width: 992px) {
+
+            .second-arrow {
+                margin-top: 70px
+            }
+
+            .arrow_section {
+                width: 87.239px;
+                height: 139.295px;
+                flex-shrink: 0;
+                object-fit: cover;
+                margin-right: 60px;
+            }
+        }
     </style>
 
 </footer>
@@ -49,7 +49,7 @@
                 <!-- First Row margin-top:150px; and newsletter-container also-->
                 <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                     <span class="information_title" style="">
-                        <?= get_field("information_title") ?>
+                        <?= get_field("footersubtitle", 'option') ?>
                     </span>
                     <br>
                     <span class="information_text">
@@ -68,7 +68,7 @@
                                         <a href="#collapseOne" class="accordion-button" data-bs-toggle="collapse"
                                             aria-expanded="true" aria-controls="collapseOne"
                                             style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                            <?= get_field("contact_title") ?>
+                                            <?= get_field("companyinfo", 'option') ?>
                                         </a>
 
                                     </h2>
@@ -77,8 +77,8 @@
                                         <a class="d-flex justify-content-center align-items-center" href="#collapseOne"
                                             class="accordion-button" data-bs-toggle="collapse" aria-expanded="false"
                                             aria-controls="collapseOne">
-                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                            <img src="<?= get_field("downarrow", 'option')['url'] ?>"
+                                                alt="<?= get_field("downarrow", 'option')['title'] ?>"
                                                 style="width:12px; height:12px; margin:7px 0; " />
                                         </a>
                                     </div>
@@ -89,10 +89,10 @@
                                         <div class="d-flex flex-column align-items-flex-start ">
                                             <span
                                                 style="color: #6A7291; font-family: Manrope; font-size: 15px; font-style: normal; font-weight: 600; line-height: 27px;">
-                                                <?= get_field("e_mail") ?>
+                                                <?= get_field("email", 'option') ?>
                                             </span>
                                             <span>
-                                                <?= get_field("tele") ?>
+                                                <?= get_field("phone", 'option') ?>
                                             </span>
                                         </div>
                                     </div>
@@ -107,7 +107,7 @@
                                         <a href="#collapseTwo" class="accordion-button collapsed"
                                             data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo"
                                             style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                            <?= get_field("address_title") ?>
+                                            <?= get_field("adresstitle", 'option') ?>
                                         </a>
                                     </h2>
                                     <!-- DownAroow -->
@@ -115,8 +115,8 @@
                                         <a class="d-flex justify-content-center align-items-center" href="#collapseTwo"
                                             class="accordion-button collapsed" data-bs-toggle="collapse"
                                             aria-expanded="false" aria-controls="collapseTwo">
-                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                            <img src="<?= get_field("downarrow", 'option')['url'] ?>"
+                                                alt="<?= get_field("downarrow", 'option')['title'] ?>"
                                                 style="width:12px; height:12px; margin:7px 0; " />
                                         </a>
                                     </div>
@@ -127,8 +127,8 @@
                                         <div class="d-flex flex-column align-items-flex-start ">
                                             <span
                                                 style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                                <?= get_field("address") ?></span>
-                                            <span> <?= get_field("city") ?></span>
+                                                <?= get_field("adres", 'option') ?></span>
+                                            <span> <?= get_field("city", 'option') ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -144,7 +144,7 @@
                                             data-bs-toggle="collapse" aria-expanded="false"
                                             aria-controls="collapseThree"
                                             style="color: #25325F; font-family: Manrope; font-size: 16px; font-style: normal; font-weight: 700; line-height: 27.2px;">
-                                            <?= get_field("information") ?>
+                                            <?= get_field("informationtitle", 'option') ?>
                                         </a>
                                     </h2>
                                     <!-- DownAroow -->
@@ -153,8 +153,8 @@
                                             href="#collapseThree" class="accordion-button collapsed"
                                             data-bs-toggle="collapse" aria-expanded="false"
                                             aria-controls="collapseThree">
-                                            <img src="<?= get_field("contact_en_adres_collapse")['url'] ?>"
-                                                alt="<?= get_field("contact_en_adres_collapse")['title'] ?>"
+                                            <img src="<?= get_field("downarrow", 'option')['url'] ?>"
+                                                alt="<?= get_field("downarrow", 'option')['title'] ?>"
                                                 style="width:12px; height:12px; margin:7px 0; " />
                                         </a>
                                     </div>
@@ -166,17 +166,17 @@
                                         <div class="d-flex flex-column align-items-flex-start ">
                                             <span
                                                 style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
-                                                <?= get_field("kvk") ?>
+                                                <!-- <?= get_field("kvk") ?> -->
                                                 <span
                                                     style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                                    <?= get_field("kvk_num") ?>
+                                                    <?= get_field("kvk", 'option') ?>
                                                 </span>
                                             </span>
                                         </div>
                                         <div class="d-flex flex-column align-items-flex-start ">
-                                            <span> <?= get_field("vat") ?> <span>
-                                                    <?= get_field("account_num") ?>
-                                                </span>
+                                            <!-- <span> <?= get_field("vat") ?> <span> -->
+                                            <?= get_field("btw", 'option') ?>
+                                            </span>
                                             </span>
                                         </div>
                                     </div>
@@ -189,43 +189,43 @@
                         <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
                             <span
                                 style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                <?= get_field("contact_title") ?></span>
+                                <?= get_field("companyinfo", 'option') ?></span>
                             <span
                                 style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                <?= get_field("e_mail") ?></span>
-                            <span> <?= get_field("tele") ?></span>
+                                <?= get_field("email", 'option') ?></span>
+                            <span> <?= get_field("phone", 'option') ?></span>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
                             <span
                                 style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                <?= get_field("address_title") ?></span>
+                                <?= get_field("adresstitle", 'option') ?></span>
                             <span
                                 style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
-                                <?= get_field("address") ?></span>
-                            <span> <?= get_field("city") ?></span>
+                                <?= get_field("adres", 'option') ?></span>
+                            <span> <?= get_field("city", 'option') ?></span>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="d-none d-md-none d-lg-flex flex-column align-items-flex-start gap-2">
                             <span
                                 style="color:  #25325F;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 700;line-height: 27.2px">
-                                <?= get_field("information") ?>
+                                <?= get_field("informationtitle", 'option') ?>
                             </span>
                             <div class="d-flex flex-row align-items-center gap-2">
                                 <span
                                     style="color: #6A7291;font-family: nformatifont-size: 15px;font-style: normal;font-weight: 600;line-height:27px ">
-                                    <?= get_field("kvk") ?>
+                                    <?= get_field("kvk", 'option') ?>
                                 </span>
-                                <span
+                                <!-- <span
                                     style="color:  #6A7291;font-family: Manrope;font-size: 15px;font-style: normal;font-weight: 600;line-height:  27px ">
                                     <?= get_field("kvk_num") ?>
-                                </span>
+                                </span> -->
                             </div>
                             <div class="d-flex flex-row align-items-center gap-2">
                                 <!-- <span> <?= get_field("vat") ?></span> -->
-                                <span> <?= get_field("account_num") ?></span>
+                                <span> <?= get_field("btw", 'option') ?></span>
                             </div>
                         </div>
                     </div>
@@ -257,12 +257,12 @@
                             <!-- Btn & text -->
                             <div class="d-flex justify-content-between align-items-center gap-2 submit-btn"
                                 style="height:39.261px;padding: 12px 15px; border-radius: 8px;background: #274083 !important;">
-                                <a href="<?= get_field("submit_link")['url'] ?>" target="_blank"
+                                <a href="<?= get_field("submitlink", 'option')['url'] ?>" target="_blank"
                                     style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px;   justify-content: center; text-decoration: none; ">
-                                    <img src="<?= get_field("submit_img")['url'] ?>"
-                                        alt="<?= get_field("submit_img")['alt'] ?>"
+                                    <img src="<?= get_field("submitimg", 'option')['url'] ?>"
+                                        alt="<?= get_field("submitimg", 'option')['alt'] ?>"
                                         style="width: 12px; height: 18px;" />
-                                    <?= get_field("submit_link")['title'] ?>
+                                    <?= get_field("submitlink", 'option')['title'] ?>
                                 </a>
                             </div>
 
@@ -286,37 +286,37 @@
                 <div class="row d-flex d-md-flex d-lg-flex flex-row align-items-center justify-content-around"
                     style="margin-top:50px">
                     <?php
-                    foreach (get_field("arrow_section") as $testimonails) {
+                    foreach (get_field("arrowsection", 'option') as $testimonails) {
                         ?>
-                    <div class="col-lg" style="border-radius:15px; height:99px; margin-top:35px 0;">
-                        <div class="d-flex  align-items-center justify-content-around gap-4">
-                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
-                                class="arrow_section" />
+                        <div class="col-lg" style="border-radius:15px; height:99px; margin-top:35px 0;">
+                            <div class="d-flex  align-items-center justify-content-around gap-4">
+                                <img src="<?= $testimonails['img1']['url'] ?>" alt=" <?= $testimonails['img1']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img2']['url'] ?>" alt=" <?= $testimonails['img2']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img3']['url'] ?>" alt=" <?= $testimonails['img3']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img4']['url'] ?>" alt=" <?= $testimonails['img4']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img5']['url'] ?>" alt=" <?= $testimonails['img5']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img6']['url'] ?>" alt=" <?= $testimonails['img6']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img7']['url'] ?>" alt=" <?= $testimonails['img7']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img8']['url'] ?>" alt=" <?= $testimonails['img8']['alt'] ?>"
+                                    class="arrow_section" />
 
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -332,37 +332,37 @@
                     style="">
 
                     <?php
-                    foreach (get_field("arrow_section_second_row") as $testimonails) {
+                    foreach (get_field("secondarrowsection", 'option') as $testimonails) {
                         ?>
-                    <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
-                        <div class="d-flex align-items-center justify-content-around  gap-4">
-                            <img src="<?= $testimonails['img_1']['url'] ?>" alt=" <?= $testimonails['img_1']['alt'] ?>"
-                                class="arrow_section" />
+                        <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
+                            <div class="d-flex align-items-center justify-content-around  gap-4">
+                                <img src="<?= $testimonails['img1']['url'] ?>" alt=" <?= $testimonails['img1']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_2']['url'] ?>" alt=" <?= $testimonails['img_2']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img2']['url'] ?>" alt=" <?= $testimonails['img2']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_3']['url'] ?>" alt=" <?= $testimonails['img_3']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img3']['url'] ?>" alt=" <?= $testimonails['img3']['alt'] ?>"
+                                    class="arrow_section" />
 
-                            <img src="<?= $testimonails['img_4']['url'] ?>" alt=" <?= $testimonails['img_4']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img4']['url'] ?>" alt=" <?= $testimonails['img4']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_5']['url'] ?>" alt=" <?= $testimonails['img_5']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex " />
+                                <img src="<?= $testimonails['img5']['url'] ?>" alt=" <?= $testimonails['img5']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex " />
 
-                            <img src="<?= $testimonails['img_6']['url'] ?>" alt=" <?= $testimonails['img_6']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img6']['url'] ?>" alt=" <?= $testimonails['img6']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_7']['url'] ?>" alt=" <?= $testimonails['img_7']['alt'] ?>"
-                                class="arrow_section d-none d-md-flex d-lg-flex" />
+                                <img src="<?= $testimonails['img7']['url'] ?>" alt=" <?= $testimonails['img7']['alt'] ?>"
+                                    class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                            <img src="<?= $testimonails['img_8']['url'] ?>" alt=" <?= $testimonails['img_8']['alt'] ?>"
-                                class="arrow_section" />
+                                <img src="<?= $testimonails['img8']['url'] ?>" alt=" <?= $testimonails['img8']['alt'] ?>"
+                                    class="arrow_section" />
 
+                            </div>
                         </div>
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
                 </div>
@@ -394,21 +394,24 @@
                 class="d-flex flex-column align-items-flex-start flex-md-row  flex-lg-row align-items-lg-center justify-content-between gap-3 ">
                 <span
                     style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                    © Copyright 2024
+                    <?= get_field("copyright", 'option') ?>
                 </span>
 
 
                 <span
                     style="color:#6A7291; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                    Algemene leveringsvoorwaarden
+
+                    <?= get_field("agemenevoorwaarden", 'option') ?>
                 </span>
                 <span
                     style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                    Verwerkers overeenkomst
+
+                    <?= get_field("verwerkersovereenkomst", 'option') ?>
                 </span>
                 <span
                     style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-                    Privacy Statement
+                    <?= get_field("privacystatement", 'option') ?>
+
                 </span>
 
             </div>
@@ -418,8 +421,6 @@
         <div class="col-12 col-lg-2">
             <div
                 class="d-flex flex-column align-items-flex-start  flex-md-row flex-lg-row  align-items-md-center align-items-lg-end justify-content-end ">
-
-
             </div>
 
         </div>
