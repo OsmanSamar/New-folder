@@ -45,7 +45,8 @@
     <!-- New Section -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-lg-6 ">
+            <div class="col-12 col-lg-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <!-- First Row margin-top:150px; and newsletter-container also-->
                 <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
                     <span class="information_title" style="">
@@ -236,7 +237,8 @@
             <div class="d-none d-lg-flex col-lg-2"></div>
 
             <!-- Newsletters -->
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div>
                     <!-- style="display:flex;flex-direction: column; align-items: flex-start;  " -->
                     <div class="d-flex flex-column newsletter-container gap-2">

@@ -2,7 +2,8 @@
 $formulier = get_field('formulier_groep');
 ?>
 
-<div class="form_section">
+<div class="form_section" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+    data-aos-easing="ease-in-out">
     <div class="container">
         <div class="row">
             <div class=" col-12 col-lg-3">

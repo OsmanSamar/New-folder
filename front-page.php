@@ -477,7 +477,10 @@
 
         .overlay2 {
             position: relative;
-            left: 50%;
+            /* left: 50%;
+        top: 30%; */
+            left: 8%;
+            top: -15%;
             transform: translate(-50%, -64%);
             background-color: #FFF;
             border-radius: 15px;
@@ -692,10 +695,11 @@
             }
 
             .overlay2 {
-                /* position: relative; */
                 position: absolute;
                 /* top: 50%; */
-                left: 50%;
+                /* left: 50%; */
+                top: 7%;
+                left: 9%;
                 transform: translate(-90%, 28%);
                 background-color: #FFF;
                 border-radius: 15px;
@@ -704,8 +708,6 @@
                 padding: 32px;
                 display: flex;
                 flex-direction: column;
-                /* align-items: center;
-            text-align: center; */
                 align-items: flex-start;
                 text-align: left;
             }
@@ -1110,7 +1112,8 @@
 
             .img-container {
                 height: 648px;
-                margin-top: -581px;
+                /* margin-top: -581px; */
+                margin-top: -570px;
             }
 
             .left-text {
@@ -1147,9 +1150,11 @@
             /* Overlay styles */
             .overlay {
                 position: absolute;
-                top: 50%;
-                left: 24%;
-                transform: translate(-50%, -50%);
+                /* top: 50%;
+                left: 24%; */
+                top: 19%;
+                left: 9%;
+                /* transform: translate(-50%, -50%); */
                 background-color: white;
                 border-radius: 14px;
                 width: 90%;
@@ -1262,9 +1267,9 @@
     <div style="height:;">
         <!-- background:#EDF3F4 -->
 
-        <div class="container">
-
-            <!-- 1 -->
+        <!-- 1 -->
+        <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
             <div class="container first-container" style=" padding-top:">
                 <div class=" row">
                     <div class="d-flex d-md-none d-lg-flex align-items-center justify-content-between">
@@ -1279,10 +1284,6 @@
                         </p>
                     </div>
                 </div>
-
-
-
-
                 <div class=" row">
                     <div class=" col-12  d-md-flex d-lg-none d-none align-items-center justify-content-between">
                         <span class=" col-md-7" style="font-size:28px;">
@@ -1296,7 +1297,6 @@
                         </p>
                     </div>
                 </div>
-
                 <!-- <div class="d-flex d-lg-none" style="margin-top:50px;">
                     <div class="row">
                         <div class="col-6 d-flex align-items-center justify-content-center" style="margin-bottom:64px;">
@@ -1335,27 +1335,25 @@
                             class="d-flex justify-content-center align-items-center">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
                                 style="width:12px; height: 18px; margin:7px 0;  ">
-
                         </a>
                         <span
                             style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px">
                             Let's talk</span>
-
                     </div>
                 </div>
-
-
             </div>
-            <!-- End of the first container div -->
         </div>
 
-        <!-- 2Swiper Container  class="container"-->
-        <div class="section-header">
+
+
+        <!-- 2 Swiper Container  class="container"-->
+        <div class="section-header" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="bg-container"
                 style="background:#25325F; border-radius:40px; margin:80px auto; max-width:1700px; height:577px;">
                 <div class="container">
                     <!-- row -->
-                    <div class="  blue-container d-block d-lg-flex d-md-flex align-items-center justify-content-between"
+                    <div class=" blue-container d-block d-lg-flex d-md-flex align-items-center justify-content-between"
                         style="padding: 20px; ">
                         <!-- Pagination -->
                         <div class="swiper-pagination2 d-none d-md-flex d-lg-flex align-items-center justify-content-center"
@@ -1629,19 +1627,25 @@
                     </div>
                 </div>
             </div>
+            <!-- Img under the container -->
+            <div class=" col-12 col-lg-12 img-container" style="">
+                <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class="bg_img"
+                    style=" height: ;border-radius:40px; object-fit:cover" />
+            </div>
         </div>
         <!-- Img under the container -->
-        <div class=" col-12 col-lg-12 img-container" style="">
+        <!-- <div class=" col-12 col-lg-12 img-container" style="">
             <img src="<?= get_field("bg_img")['url'] ?>" alt="<?= get_field("bg_img")['title'] ?>" class="bg_img"
                 style=" height: ;border-radius:40px; object-fit:cover" />
-        </div>
+        </div> -->
 
 
 
 
 
         <!-- Outcome Testimonials Section on Small Screens -->
-        <div class="container" style="">
+        <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
             <div class="row d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none"
                 style="margin-top:-163px;">
                 <?php
@@ -1695,7 +1699,8 @@
 
 
         <!-- Outcome Testimonials Section on Lg and MD Screens -->
-        <div class="container" id="testimonials">
+        <div class="container" id="testimonials" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="row  d-none d-md-flex d-lg-flex container2  ">
                 <!-- container2 gy-2 -->
                 <?php
@@ -1926,7 +1931,8 @@
 
 
         <!-- The blue block container -->
-        <div class="first-blue-block" style="">
+        <div class="first-blue-block" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+            data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
@@ -2362,7 +2368,8 @@
                 <!-- Right Column Knowledge And Resources -->
                 <div class="d-none d-lg-none d-md-flex">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
                             <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
                                 style="margin-left:; color:#FFF; margin-top:60px; ">
                                 <span
@@ -2383,7 +2390,9 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-5">
                             <div class="row">
-                                <div class="col-12 col-lg-6 col-md-12 resources" style="margin-top:40px;">
+                                <div class="col-12 col-lg-6 col-md-12 resources" style="margin-top:40px;"
+                                    data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                                    data-aos-duration="1000" data-aos-easing="ease-in-out">
 
                                     <div style="border-bottom: 0.5px solid   #25325F; ">
 
@@ -2434,7 +2443,9 @@
 
                                 </div>
 
-                                <div class="col-12 col-lg-6 col-md-12 resources " style="margin-top:;">
+                                <div class="col-12 col-lg-6 col-md-12 resources " data-aos="fade-left"
+                                    data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                                    data-aos-easing="ease-in-out">
 
                                     <div style="border-bottom: 0.5px solid  #25325F;">
                                         <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
@@ -2474,7 +2485,8 @@
                     </div>
                 </div>
 
-                <div class="col-12  col-lg-4 d-md-none d-lg-block">
+                <div class="col-12  col-lg-4 d-md-none d-lg-block" data-aos="fade-left" data-aos-offset="100"
+                    data-aos-delay="50" data-aos-duration="1000">
 
                     <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
                         style="margin-left:; color:#FFF; margin-top:60px; ">
@@ -2587,7 +2599,8 @@
                 <div class="responsive-container">
                     <img src="<?= get_field("sue_customers_bg")['url'] ?>"
                         alt="<?= get_field("sue_customers_bg")['alt'] ?>" class="background-image" />
-                    <div class="overlay">
+                    <div class="overlay" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
                         <span
                             style="display: flex;justify-content: left;align-items: flex-start;text-align: left; margin-right: 118px;">
                             <span class="sub-title"><?= get_field("sue_title") ?></span>
@@ -2608,9 +2621,33 @@
                                 alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
                         </div>
                     </div>
+
+                    <div class="overlay2" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                        data-aos-duration="1000" data-aos-easing="ease-in-out">
+
+                        <span class="sub-title"><?= get_field("sue_title") ?></span>
+                        <span class="main-title"><?= get_field("sue_main_title") ?></span>
+
+                        <div class="row">
+                            <div class="icon-container col-12 col-lg-12">
+                                <img src="<?= get_field("rabobank_icon")['url'] ?>"
+                                    alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
+                                <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
+                                    class="icon" />
+                            </div>
+                        </div>
+                        <div class="icon-container">
+                            <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
+                                class="icon" />
+                            <img src="<?= get_field("booking_icon")['url'] ?>"
+                                alt="<?= get_field("booking_icon")['alt'] ?>" class="icon" />
+                        </div>
+                    </div>
                 </div>
 
-                <div class="overlay2">
+                <!-- <div class="overlay2" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+
                     <span class="sub-title"><?= get_field("sue_title") ?></span>
                     <span class="main-title"><?= get_field("sue_main_title") ?></span>
 
@@ -2628,7 +2665,7 @@
                         <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
                             class="icon" />
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- End of responsive-container With banks Block -->
 
@@ -2640,7 +2677,9 @@
                 <!-- margin-top:60px; -->
                 <div class="row">
                     <!-- Left Section -->
-                    <div class="col-12 col-lg-5 order-2 order-lg-1 custom-video">
+                    <div class="col-12 col-lg-5 order-2 order-lg-1 custom-video" data-aos="fade-right"
+                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
                         <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                             style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover" />
 
@@ -2653,7 +2692,9 @@
 
                     </div>
                     <!-- Right Section -->
-                    <div class="col-12 col-lg-7 right_section order-1 order-lg-2">
+                    <div class="col-12 col-lg-7 right_section order-1 order-lg-2" data-aos="fade-left"
+                        data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                        data-aos-easing="ease-in-out">
                         <div class="custom-container" style="">
                             <div class="custom-pagination">
                                 <div class="d-flex d-md-none d-lg-none justify-content-left">
@@ -2850,7 +2891,7 @@
             let swiper1 = new Swiper('.swiper-container', {
                 loop: true,
                 autoplay: {
-                    delay: 2000,
+                    delay: 6000,
                     disableOnInteraction: false, // Ensure autoplay resumes after interaction
                 },
                 pagination: {
@@ -3011,9 +3052,6 @@
                 });
             });
         </script>
-
-
-
 </main>
 
 <?php get_footer() ?>

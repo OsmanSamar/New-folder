@@ -14,7 +14,16 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!--  -->
+    <!-- Swiper -->
+
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS -->
+
+
+
     <style>
         .letstalk-btn a:hover img {
             transform: translateX(6px);
@@ -144,6 +153,17 @@
         .navbar .menu-item {
             position: unset;
         }
+
+        .navbar ul li a {
+            color: #25325F;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+
+        }
     </style>
 
 </head>
@@ -151,10 +171,21 @@
 <body style="background:#EDF3F4;" <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- AOS -->
+
+
     <header class="header" style="margin-top:50px">
         <!-- Navbar -->
 
-        <nav class="navbar navbar-expand-lg  fixed-top" style="background: #EDF3F4; top:26px;">
+        <nav class="navbar navbar-expand-lg  fixed-top" style="background: #EDF3F4; top:26px; ">
             <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
                 <a class="navbar-brand fs-4" href="<?= esc_url(home_url('/')); ?>">

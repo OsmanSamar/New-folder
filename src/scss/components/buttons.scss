@@ -101,14 +101,23 @@ button .button-text.white {
     z-index: 3;
   }
 }
+// button .button-text.blue2 {
+//   left: 1px;
+//   color: #25325f;
+
+//   &:hover {
+//     color: white;
+//     z-index: 3;
+//   }
+// }
+
 button .button-text.blue2 {
   left: 1px;
   color: #25325f;
+}
 
-  &:hover {
-    color: white;
-    z-index: 3;
-  }
+button:hover .button-text.blue2 {
+  color: white;
 }
 
 button .button-text.pink {
