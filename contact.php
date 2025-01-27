@@ -341,6 +341,8 @@
     }
     </style>
     <div>
+
+
         <!-- 1   class="container" -->
         <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
             <a href="<?= get_field("backtohome")['url'] ?>"
@@ -460,10 +462,10 @@
 
 
         <!-- 2 -->
-        <div class="container">
-            <!-- class="container" -->
+        <!-- <div class="container">
+           
             <div class="row " style="margin-top:210px;"></div>
-        </div>
+        </div> -->
 
         <!-- 11 -->
         <!-- Form Section container  -->
@@ -529,14 +531,39 @@
                                 <span class="testi-num"><?= $testimonial["num"] ?></span>
                                 <span class="testi-title"><?= $testimonial["titletes"] ?></span>
                             </div>
+                            <!-- <h3 class="testi-text"><?= $testimonial["mail"] ?></h3> -->
+
+                            <?php if (!empty($testimonial['mail'])) { ?>
+                            <!-- Mail Section  -->
                             <h3 class="testi-text"><?= $testimonial["mail"] ?></h3>
+
+                            <?php } elseif (!empty($testimonial['social']['url'])) { ?>
+                            <!-- Socail Section -->
+                            <a href="<?= $testimonial['social']['url'] ?>">
+                                <?= $testimonial['social']['alt'] ?>
+                                <!-- Display the alt text as the link text -->
+                            </a>
+
+                            <?php } ?>
+
+
+
+
+
+
                         </div>
 
                     </div>
-
                     <?php
                     }
                     ?>
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
