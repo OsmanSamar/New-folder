@@ -32,6 +32,7 @@
         color: black;
         font-size: 16px;
         font-weight: bold;
+        pointer: cursor;
     }
 
     .back-to-home img {
@@ -714,6 +715,7 @@
 
         .margin-class {
             margin: 8px;
+
         }
 
 
@@ -724,18 +726,23 @@
 
 
     <div class="back-to-home" style="margin-top:23px; margin-bottom:23px; ">
-        <a href="<?= get_field("back_to_home")['url'] ?>"
-            class="d-flex justify-content-center align-items-center gap-2">
-            <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
-                style="width:20px; height:20px; margin:7px 0;" />
+        <div class="d-flex justify-content-center align-items-center gap-2">
+            <a href="<?= get_field("back_to_home")['url'] ?>">
+                <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
+                    style="width:20px; height:20px; margin:7px 0;" />
+            </a>
+            <a href="<?= get_field("backtoservice")['url'] ?>" style="pointer: cursor">
+                <span class="separator">
+                    <img src="<?= get_field("separator")['url'] ?>" alt="<?= get_field("separator")['alt'] ?>"
+                        style="width:3px; height:6px; " />
+                </span>
+                <span class="first">Services</span>
+            </a>
 
             <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
                     alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-            <span class="first">Services</span>
-            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
             <span class="last">Consultancy</span>
-        </a>
+        </div>
     </div>
 
 
@@ -773,101 +780,101 @@
                         <?= get_field("talk_to_an_expert_btn")['title'] ?>
                     </a>
                 </div>
+                i/div>
             </div>
         </div>
-    </div>
-    <!-- End of Hero Section -->
+        <!-- End of Hero Section -->
 
 
 
-    <!-- Second Section -->
-    <div class="container">
-        <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="left_col">
-                    <div class="left-btn">
-                        <?= get_field("onsectetur_adipiscing_elit_title") ?>
-                    </div>
-                    <span class="title">
-                        <?= get_field("main_title1") ?> </span>
-
-                    <span class="left-text">
-                        <?= get_field("left_text") ?></span>
-                </div>
-            </div>
-            <div class="d-none d-lg-block col-lg-1"></div>
-            <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="right_col">
-                    <span class="right-text">
-                        <?= get_field("second_text") ?>
-                    </span>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Testimonials Section on All Screens -->
-    <div class="container mt-5">
-        <div class="row gy-2">
-            <?php
-            $delay = 0; //Delay
-            foreach (get_field("expertise_testimonials") as $testimonial) { ?>
-            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                data-aos-duration="800">
-                <!-- data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out" -->
-                <div class="testimonial-card">
-                    <div class="d-flex align-items-center gap-2 mb-2">
-                        <span class="expertise-num">
-                            <?= $testimonial["expertise_num"] ?></span>
-                        <span class="expertise-sub-title">
-                            <?= $testimonial["expertise_sub_title"] ?></span>
-                    </div>
-                    <h2 class="expertise-main-title">
-                        <?= $testimonial["expertise_main_title"] ?>
-                    </h2>
-                    <div class="divider mb-3" style="margin: 15px 1px;"></div>
-                    <p class="expertise-text">
-                        <?= $testimonial["expertise_text"] ?>
-                    </p>
-                </div>
-            </div>
-            <?php
-                $delay += 300;
-            } ?>
-        </div>
-    </div>
-
-
-    <!-- New Section blue block -->
-    <div class="block_blue" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-        data-aos-easing="ease-in-out">
+        <!-- Second Section -->
         <div class="container">
-            <div class="client-consultancy-container my-5">
-                <p class="client-consultancy-title">
-                    <?= get_field("clients_about_our_consultancy_title") ?>
-                </p>
+            <div class="row" style="margin-top:50px;">
+                <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="left_col">
+                        <div class="left-btn">
+                            <?= get_field("onsectetur_adipiscing_elit_title") ?>
+                        </div>
+                        <span class="title">
+                            <?= get_field("main_title1") ?> </span>
+
+                        <span class="left-text">
+                            <?= get_field("left_text") ?></span>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-1"></div>
+                <div class="col-12 col-md-6 col-lg-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="right_col">
+                        <span class="right-text">
+                            <?= get_field("second_text") ?>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Testimonials Section on All Screens -->
+        <div class="container mt-5">
+            <div class="row gy-2">
+                <?php
+                $delay = 0; //Delay
+                foreach (get_field("expertise_testimonials") as $testimonial) { ?>
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    data-aos-duration="800">
+                    <!-- data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out" -->
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="expertise-num">
+                                <?= $testimonial["expertise_num"] ?></span>
+                            <span class="expertise-sub-title">
+                                <?= $testimonial["expertise_sub_title"] ?></span>
+                        </div>
+                        <h2 class="expertise-main-title">
+                            <?= $testimonial["expertise_main_title"] ?>
+                        </h2>
+                        <div class="divider mb-3" style="margin: 15px 1px;"></div>
+                        <p class="expertise-text">
+                            <?= $testimonial["expertise_text"] ?>
+                        </p>
+                    </div>
+                </div>
+                <?php
+                    $delay += 300;
+                } ?>
+            </div>
+        </div>
+
+
+        <!-- New Section blue block -->
+        <div class="block_blue" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
+            <div class="container">
+                <div class="client-consultancy-container my-5">
+                    <p class="client-consultancy-title">
+                        <?= get_field("clients_about_our_consultancy_title") ?>
+                    </p>
 
 
 
 
-                <div class=" d-flex flex-row align-items-center justify-content-end gap-1 client-consultancy-link">
+                    <div class=" d-flex flex-row align-items-center justify-content-end gap-1 client-consultancy-link">
 
-                    <a href="<?= get_field("clients_about_our_consultancy_link")['url'] ?>"
-                        style="background-color:white; height:30px; width:30px; border-radius:8px; "
-                        class="d-flex justify-content-center align-items-center ">
-                        <img src="<?= get_field("view_all_stories_img")['url'] ?>"
-                            alt="<?= get_field("view_all_stories_img")['alt'] ?>"
-                            style="width:12px; height:18px; margin:7px 0;" class="" />
+                        <a href="<?= get_field("clients_about_our_consultancy_link")['url'] ?>"
+                            style="background-color:white; height:30px; width:30px; border-radius:8px; "
+                            class="d-flex justify-content-center align-items-center ">
+                            <img src="<?= get_field("view_all_stories_img")['url'] ?>"
+                                alt="<?= get_field("view_all_stories_img")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" class="" />
 
-                    </a>
-                    <?= get_field("clients_about_our_consultancy_link")['title'] ?>
-                    <!-- 3 -->
-                    <!-- <button>
+                        </a>
+                        <?= get_field("clients_about_our_consultancy_link")['title'] ?>
+                        <!-- 3 -->
+                        <!-- <button>
                         <span class="circle3">
                             <a href="#" class="d-flex justify-content-center align-items-center  arrow">
                                 <img src="<?= get_field("view_all_stories_img")['url'] ?>"
@@ -879,214 +886,214 @@
                             <?= get_field("clients_about_our_consultancy_link")['title'] ?>
                         </a>
                     </button> -->
+                    </div>
                 </div>
-            </div>
-            <div class="row d-flex align-items-center justify-content-start gy-4">
-                <?php foreach (get_field("clients_consultancy_testimonials") as $testimonial) { ?>
-                <div class="col-12 col-md-4 col-lg-4">
-                    <div class="card">
-                        <img src="<?= $testimonial["clients_img"]['url'] ?>"
-                            alt="<?= $testimonial['clients_img']['alt'] ?>" class="card-img-top "
-                            style="height: 213px; border-radius:20px;" />
+                <div class="row d-flex align-items-center justify-content-start gy-4">
+                    <?php foreach (get_field("clients_consultancy_testimonials") as $testimonial) { ?>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card">
+                            <img src="<?= $testimonial["clients_img"]['url'] ?>"
+                                alt="<?= $testimonial['clients_img']['alt'] ?>" class="card-img-top "
+                                style="height: 213px; border-radius:20px;" />
 
-                        <!-- CARD BODY -->
-                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
-                            style="background-color:; overflow:hidden;">
-                            <div class="card-title">
-                                <span>
-                                    <?= $testimonial["clients_name"] ?></span>
-                            </div>
-                            <p class="card-text">
-                                <?= $testimonial["clients_text"] ?>
-                            </p>
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <p class="industry_title">
-                                    <?= $testimonial["industry_title"] ?>
+                            <!-- CARD BODY -->
+                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                                style="background-color:; overflow:hidden;">
+                                <div class="card-title">
+                                    <span>
+                                        <?= $testimonial["clients_name"] ?></span>
+                                </div>
+                                <p class="card-text">
+                                    <?= $testimonial["clients_text"] ?>
                                 </p>
-                                <p class="industry">
-                                    <?= $testimonial["industry"] ?>
-                                </p>
-                            </div>
-                            <div class="bottom-border position-absolute"
-                                style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
-                            </div>
-                        </div>
-                        <!-- END OF CARD BODY -->
-                        <!-- Bejijken btn -->
-                        <div class=" card-body d-flex justify-content-between align-items-center">
-                            <button>
-                                <span class="circle blue-circle">
-                                    <a href="#" class="d-flex justify-content-center align-items-center  arrow">
-                                        <img src="<?= $testimonial["bekijk"]['url'] ?>"
-                                            alt="<?= $testimonial["bekijk"]['alt'] ?>"
-                                            style="width: 12px; height: 18px; margin:7px 0" class="icon" />
-                                    </a>
-                                </span>
-                                <a href="<?= $testimonial['bekijk_btn']['url'] ?>" class=" button-text blue2">
-                                    <?= $testimonial["bekijk_btn"]['title'] ?>
-                                </a>
-                            </button>
-
-                            <img src="<?= $testimonial["kpn"]['url'] ?>" alt=" <?= $testimonial["kpn"]['alt'] ?>"
-                                style="width: 63px; height: 24px;" />
-                        </div>
-
-                    </div>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-
-                <div class="inner_block2 gap-4">
-                    <span class="left-btn">
-                        <?= get_field("workforce_certifications_sub_title") ?>
-                    </span>
-                    <h1 class="workforce_certifications_main_title">
-                        <?= get_field("workforce_certifications_main_title") ?>
-                    </h1>
-                    <p class="workforce_certifications_text">
-                        <?= get_field("workforce_certifications_text") ?>
-                    </p>
-
-                    <!-- Talk to an export btn -->
-                    <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
-                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
-                        <a href="<?= get_field("talk_to_an_expert_btn")['url'] ?>"
-                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
-                            <img src="<?= get_field("talk_to_an_expert_img")['url'] ?>"
-                                alt="<?= get_field("talk_to_an_expert_img")['alt'] ?>"
-                                style="width: 12px; height: 18px;" />
-                            <?= get_field("talk_to_an_expert_btn")['title'] ?>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="col-12 col-md-6 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <div class="profit-block">
-                    <div class="">
-                        <!-- inner_block  gap-4 -->
-                        <h1 class="profit_title">
-                            <?= get_field("how_you_can_profit_title") ?>
-                        </h1>
-                        <div class="d-flex flex-column gap-2">
-                            <?php foreach (get_field("profit_testimonials") as $testimonial) { ?>
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <img src="<?= $testimonial["profit_img"]['url'] ?>"
-                                    alt=" <?= $testimonial['profit_img']['alt'] ?>" class=""
-                                    style="width: 15px;height: 16px;" />
-                                <span class="expertise-sub-title"><?= $testimonial["profit_text"] ?></span>
-                            </div>
-                            <div class="divider mb-1" style="max-width: 461px;"></div>
-                            <?php } ?>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <div>
-        <!--Sue_Partners Repeater  Swiper On Small -->
-        <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
-            <div class="position-relative d-block d-lg-none align-items-center  ">
-                <div class=" swipersue sue-partners-swiper ">
-                    <div class="swiper-wrapper">
-                        <?php
-                        foreach (get_field("sue_partners") as $sue) {
-                            ?>
-                        <div class="swiper-slide d-flex justify-content-center align-items-center"
-                            style="width:fit-content;">
-                            <div>
-                                <div
-                                    class="d-flex flex-row align-items-center justify-content-evenly partners-container">
-                                    <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
-                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                            alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                            style=" width:32px; height:19px; " />
-                                    </a>
-
+                                <div class="d-flex justify-content-start align-items-center gap-2">
+                                    <p class="industry_title">
+                                        <?= $testimonial["industry_title"] ?>
+                                    </p>
+                                    <p class="industry">
+                                        <?= $testimonial["industry"] ?>
+                                    </p>
+                                </div>
+                                <div class="bottom-border position-absolute"
+                                    style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
                                 </div>
                             </div>
-                        </div>
-                        <?php
-                        }
-                        ?>
-                        </d iv>
-                    </div>
-                </div>
-            </div>
+                            <!-- END OF CARD BODY -->
+                            <!-- Bejijken btn -->
+                            <div class=" card-body d-flex justify-content-between align-items-center">
+                                <button>
+                                    <span class="circle blue-circle">
+                                        <a href="#" class="d-flex justify-content-center align-items-center  arrow">
+                                            <img src="<?= $testimonial["bekijk"]['url'] ?>"
+                                                alt="<?= $testimonial["bekijk"]['alt'] ?>"
+                                                style="width: 12px; height: 18px; margin:7px 0" class="icon" />
+                                        </a>
+                                    </span>
+                                    <a href="<?= $testimonial['bekijk_btn']['url'] ?>" class=" button-text blue2">
+                                        <?= $testimonial["bekijk_btn"]['title'] ?>
+                                    </a>
+                                </button>
 
-            <!-- Sue_Partners Repeater On LG -->
-            <div class="container">
-                <?php for ($i = 0; $i < 4; $i++) { // Loop to repeat the block four times ?>
-                <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
-                    style="margin-top:; margin-bottom:;">
-                    <?php foreach (get_field("sue_partners") as $sue) { ?>
-                    <div class="col-auto">
-                        <a href="<?= $sue['sue_partners_link_url']['url'] ?>">
-                            <div style="border-radius: 6px;background: var(--Neutral-light, #EDF3F4); height:76px;">
-                                <!--  margin:35px 0; -->
-                                <div class="d-flex flex-row align-items-center justify-content-evenly"
-                                    style="border-radius: 6px; border: 1px solid #CBCFDE; background:#EDF3F4; width: 165px; height: 61px;">
-                                    <img src="<?= $sue['sue_partners_img']['url'] ?>"
-                                        alt="<?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
-                                        style="width:56px; height:33px; flex-shrink: 0;" />
-                                </div>
+                                <img src="<?= $testimonial["kpn"]['url'] ?>" alt=" <?= $testimonial["kpn"]['alt'] ?>"
+                                    style="width: 63px; height: 24px;" />
                             </div>
-                        </a>
+
+                        </div>
                     </div>
                     <?php } ?>
                 </div>
-                <?php } ?>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+
+                    <div class="inner_block2 gap-4">
+                        <span class="left-btn">
+                            <?= get_field("workforce_certifications_sub_title") ?>
+                        </span>
+                        <h1 class="workforce_certifications_main_title">
+                            <?= get_field("workforce_certifications_main_title") ?>
+                        </h1>
+                        <p class="workforce_certifications_text">
+                            <?= get_field("workforce_certifications_text") ?>
+                        </p>
+
+                        <!-- Talk to an export btn -->
+                        <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
+                            style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
+                            <a href="<?= get_field("talk_to_an_expert_btn")['url'] ?>"
+                                style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                                <img src="<?= get_field("talk_to_an_expert_img")['url'] ?>"
+                                    alt="<?= get_field("talk_to_an_expert_img")['alt'] ?>"
+                                    style="width: 12px; height: 18px;" />
+                                <?= get_field("talk_to_an_expert_btn")['title'] ?>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col-12 col-md-6 col-lg-6 " data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+                    <div class="profit-block">
+                        <div class="">
+                            <!-- inner_block  gap-4 -->
+                            <h1 class="profit_title">
+                                <?= get_field("how_you_can_profit_title") ?>
+                            </h1>
+                            <div class="d-flex flex-column gap-2">
+                                <?php foreach (get_field("profit_testimonials") as $testimonial) { ?>
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <img src="<?= $testimonial["profit_img"]['url'] ?>"
+                                        alt=" <?= $testimonial['profit_img']['alt'] ?>" class=""
+                                        style="width: 15px;height: 16px;" />
+                                    <span class="expertise-sub-title"><?= $testimonial["profit_text"] ?></span>
+                                </div>
+                                <div class="divider mb-1" style="max-width: 461px;"></div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-    </div>
 
 
 
-    <!-- SUE Insights -->
-    <div class="container" style="margin-top:120px;">
-        <div class="row">
-            <div class="col-6 col-lg-6">
-                <span
-                    style="color:#6A7291; font-family:Manrope; font-size:15px;font-style:normal;font-weight: 600;line-height:27px;">
-                    <?= get_field("sue_insights") ?>
-                </span>
+        <div>
+            <!--Sue_Partners Repeater  Swiper On Small -->
+            <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
+                <div class="position-relative d-block d-lg-none align-items-center  ">
+                    <div class=" swipersue sue-partners-swiper ">
+                        <div class="swiper-wrapper">
+                            <?php
+                            foreach (get_field("sue_partners") as $sue) {
+                                ?>
+                            <div class="swiper-slide d-flex justify-content-center align-items-center"
+                                style="width:fit-content;">
+                                <div>
+                                    <div
+                                        class="d-flex flex-row align-items-center justify-content-evenly partners-container">
+                                        <a href=" <?= $sue['sue_partners_link_url']['url'] ?>">
+                                            <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                                alt=" <?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                                style=" width:32px; height:19px; " />
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                            </d iv>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sue_Partners Repeater On LG -->
+                <div class="container">
+                    <?php for ($i = 0; $i < 4; $i++) { // Loop to repeat the block four times ?>
+                    <div class="row d-none d-md-none d-lg-flex flex-row align-items-center justify-content-between"
+                        style="margin-top:; margin-bottom:;">
+                        <?php foreach (get_field("sue_partners") as $sue) { ?>
+                        <div class="col-auto">
+                            <a href="<?= $sue['sue_partners_link_url']['url'] ?>">
+                                <div style="border-radius: 6px;background: var(--Neutral-light, #EDF3F4); height:76px;">
+                                    <!--  margin:35px 0; -->
+                                    <div class="d-flex flex-row align-items-center justify-content-evenly"
+                                        style="border-radius: 6px; border: 1px solid #CBCFDE; background:#EDF3F4; width: 165px; height: 61px;">
+                                        <img src="<?= $sue['sue_partners_img']['url'] ?>"
+                                            alt="<?= $sue['sue_partners_img']['alt'] ?>" class="sue-img"
+                                            style="width:56px; height:33px; flex-shrink: 0;" />
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <?php } ?>
+                </div>
+
             </div>
-            <div class="col-6 col-lg-6 ">
-                <div class=" d-flex flex-row align-items-center justify-content-end gap-3">
-                    <a href="#"
-                        style="background-color:#E94271; height:30px; width:30px; border-radius:8px; background:#25325F;"
-                        class="d-flex justify-content-center align-items-center">
-                        <img src="<?= get_field("sue_insights_link")['url'] ?>"
-                            alt="<?= get_field("sue_insights_link")['alt'] ?>"
-                            style="width:12px; height:18px; margin:7px 0;" />
-                    </a>
-                    <span
-                        style="color: #25325F;font-family:Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                        <?= get_field("sue_insights_text") ?>
-                    </span>
+        </div>
 
-                    <!-- 4 -->
-                    <!-- <button>
+
+
+        <!-- SUE Insights -->
+        <div class="container" style="margin-top:120px;">
+            <div class="row">
+                <div class="col-6 col-lg-6">
+                    <span
+                        style="color:#6A7291; font-family:Manrope; font-size:15px;font-style:normal;font-weight: 600;line-height:27px;">
+                        <?= get_field("sue_insights") ?>
+                    </span>
+                </div>
+                <div class="col-6 col-lg-6 ">
+                    <div class=" d-flex flex-row align-items-center justify-content-end gap-3">
+                        <a href="#"
+                            style="background-color:#E94271; height:30px; width:30px; border-radius:8px; background:#25325F;"
+                            class="d-flex justify-content-center align-items-center">
+                            <img src="<?= get_field("sue_insights_link")['url'] ?>"
+                                alt="<?= get_field("sue_insights_link")['alt'] ?>"
+                                style="width:12px; height:18px; margin:7px 0;" />
+                        </a>
+                        <span
+                            style="color: #25325F;font-family:Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                            <?= get_field("sue_insights_text") ?>
+                        </span>
+
+                        <!-- 4 -->
+                        <!-- <button>
                             <span class="circle3">
                             <a href="#" class="d-flex justify-content-center align-items-center  arrow">
                                 <img src="<?= get_field("view_all_stories_img")['url'] ?>"
@@ -1099,17 +1106,17 @@
                         </a>
                     </button> -->
 
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div style=" border-bottom:0.5px solid  #CBCFDE; margin:30px 0;"></div>
-        <!-- End of SUE Insights -->
-
+            <div style=" border-bottom:0.5px solid  #CBCFDE; margin:30px 0;"></div>
+            <!-- End of SUE Insights -->
 
 
-        <div class="row">
-            <!-- <div class="col-12 col-lg-5 col-md-12  mask-group ">
+
+            <div class="row">
+                <!-- <div class="col-12 col-lg-5 col-md-12  mask-group ">
                 Client Story2  container
                 <div class=" ">
                     <div class="row gy-2">
@@ -1163,20 +1170,81 @@
             </div> -->
 
 
-            <div class="col-12 col-lg-5 d-md-none d-flex d-lg-flex  mask-group ">
-                <!-- Client Story2  container-->
-                <div class="row ">
-                    <!-- gy-2 -->
-                    <div class="col-lg-5 col-md-8" style="margin-top:55px;">
+                <div class="col-12 col-lg-5 d-md-none d-flex d-lg-flex  mask-group ">
+                    <!-- Client Story2  container-->
+                    <div class="row ">
+                        <!-- gy-2 -->
+                        <div class="col-lg-5 col-md-8" style="margin-top:55px;">
+                            <?php
+                            $delay = 0;
+                            foreach (get_field("article_testimonails") as $testimonial) {
+                                ?>
+                            <div class="col" data-aos="fade-right" data-aos-delay="<?= $delay ?>"
+                                data-aos-duration="800">
+                                <div class="card client_card2 mb-3 d-flex flex-row align-items-center ">
+                                    <!-- justify-content-center -->
+                                    <div class="row align-items-center">
+                                        <div class="col-4 col-md-5 margin-class">
+                                            <?php if (!empty($testimonial['video'])) { ?>
+                                            <!-- Video Section -->
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe class="embed-responsive-item" src="<?= $testimonial['video'] ?>"
+                                                    allowfullscreen
+                                                    style="width: 100%; height: 138px; border-radius: 15px;"></iframe>
+                                            </div>
+                                            <?php } elseif (!empty($testimonial['img']['url'])) { ?>
+                                            <!-- Image Section -->
+                                            <img src="<?= $testimonial['img']['url'] ?>"
+                                                alt="<?= $testimonial['img']['alt'] ?>" class="card-img-top"
+                                                style="width: 100%; border-radius: 15px; height: 138px; object-fit: cover;" />
+                                            <?php } ?>
+                                        </div>
+                                        <div class="col-8 col-md-5 col-lg-6">
+                                            <div class="" style="padding:;card-body">
+                                                <div
+                                                    class="d-flex flex-row align-items-center justify-content-left gap-3">
+                                                    <a class="client2-btn" href="<?= $testimonial['btn']['url'] ?>">
+
+                                                        <?= $testimonial['btn']['title'] ?>
+                                                    </a>
+                                                    <h4 class="card-title1" style="">
+                                                        <?= $testimonial["client_name"] ?>
+                                                    </h4>
+                                                </div>
+                                                <h4 class="card-text1 mt-2"
+                                                    style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
+                                                    <?= $testimonial["text"] ?>
+                                                    <a href="#">
+                                                        <img src="<?= $testimonial['client_link']['url'] ?>"
+                                                            alt="<?= $testimonial['client_link']['alt'] ?>" style="width:4px; height:8px; object-fit:cover;
+                                                        margin-left:8px;" />
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php
+                                $delay += 300;
+                            } ?>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Client Story2 on Sm and MS Screen replaced row-cols-lg-2 with row-cols-md-2 -->
+                <div class="container d-none d-md-block d-lg-none">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
                         <?php
                         $delay = 0;
                         foreach (get_field("article_testimonails") as $testimonial) {
                             ?>
-                        <div class="col" data-aos="fade-right" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
-                            <div class="card client_card2 mb-3 d-flex flex-row align-items-center ">
-                                <!-- justify-content-center -->
-                                <div class="row align-items-center">
-                                    <div class="col-4 col-md-5 margin-class">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
+                            <div class="card mb-3 d-flex flex-column align-items-center justify-content-center"
+                                style="border-radius: 20px; border:1px solid #CBCFDE; background:#EDF3F4; padding: 15px 0; width: 100%;">
+                                <div class="row g-0 align-items-center">
+                                    <div class="container" style="padding: 0 15px;">
                                         <?php if (!empty($testimonial['video'])) { ?>
                                         <!-- Video Section -->
                                         <div class="embed-responsive embed-responsive-16by9">
@@ -1191,26 +1259,26 @@
                                             style="width: 100%; border-radius: 15px; height: 138px; object-fit: cover;" />
                                         <?php } ?>
                                     </div>
-                                    <div class="col-8 col-md-5 col-lg-6">
-                                        <div class="" style="padding:;card-body">
-                                            <div class="d-flex flex-row align-items-center justify-content-left gap-3">
-                                                <a class="client2-btn" href="<?= $testimonial['btn']['url'] ?>">
-
-                                                    <?= $testimonial['btn']['title'] ?>
+                                    <div class="col-12 col-md-12">
+                                        <div class="card-body" style="padding: 1rem;">
+                                            <div class="d-flex align-items-center justify-content-left gap-3 mt-2 mb-2">
+                                                <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>">
+                                                    <span><?= $testimonial['btn']['title'] ?></span>
                                                 </a>
-                                                <h4 class="card-title1" style="">
+                                                <span
+                                                    style="color: #6A7291;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 24px;">
                                                     <?= $testimonial["client_name"] ?>
-                                                </h4>
+                                                </span>
                                             </div>
-                                            <h4 class="card-text1 mt-2"
-                                                style="color:#25325F;font-size: 15px;font-weight:600;line-height:27px;">
+                                            <span class="mt-3"
+                                                style="color:#25325F; font-family:Manrope; font-size:17px; font-style: normal;font-weight: 700;line-height: 27px; width:291px;">
                                                 <?= $testimonial["text"] ?>
                                                 <a href="#">
                                                     <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                        alt="<?= $testimonial['client_link']['alt'] ?>" style="width:4px; height:8px; object-fit:cover;
-                                                        margin-left:8px;" />
+                                                        alt="<?= $testimonial['client_link']['alt'] ?>"
+                                                        style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
                                                 </a>
-                                            </h4>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -1221,199 +1289,137 @@
                         } ?>
                     </div>
                 </div>
-            </div>
 
 
-            <!-- Client Story2 on Sm and MS Screen replaced row-cols-lg-2 with row-cols-md-2 -->
-            <div class="container d-none d-md-block d-lg-none">
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <?php
-                    $delay = 0;
-                    foreach (get_field("article_testimonails") as $testimonial) {
-                        ?>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
-                        <div class="card mb-3 d-flex flex-column align-items-center justify-content-center"
-                            style="border-radius: 20px; border:1px solid #CBCFDE; background:#EDF3F4; padding: 15px 0; width: 100%;">
-                            <div class="row g-0 align-items-center">
-                                <div class="container" style="padding: 0 15px;">
-                                    <?php if (!empty($testimonial['video'])) { ?>
-                                    <!-- Video Section -->
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" src="<?= $testimonial['video'] ?>"
-                                            allowfullscreen
-                                            style="width: 100%; height: 138px; border-radius: 15px;"></iframe>
-                                    </div>
-                                    <?php } elseif (!empty($testimonial['img']['url'])) { ?>
-                                    <!-- Image Section -->
-                                    <img src="<?= $testimonial['img']['url'] ?>" alt="<?= $testimonial['img']['alt'] ?>"
-                                        class="card-img-top"
-                                        style="width: 100%; border-radius: 15px; height: 138px; object-fit: cover;" />
-                                    <?php } ?>
+                <div class="d-none d-md-none d-lg-block col-lg-2 ">
+
+                </div>
+                <div class="d-none d-md-none d-lg-block col-lg-1 ">
+                    <div>
+                        <!--Verticall line On Lg Screen  -->
+                        <div class=" d-none d-lg-flex "
+                            style=" width:1px; height:692px; background: #CBCFDE; position:relative; top:-27px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column  Knowledge And ReSources-->
+                <div class="col-12 col-lg-4" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out">
+
+                    <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
+                        style="margin-left:; color:#FFF; margin-top:60px; ">
+                        <span
+                            style="background-color:#274083;width:203px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope; font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
+                            <?= get_field("sub_title") ?>
+                        </span>
+                        <span class="main_title_knowledge"
+                            style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                            <?= get_field("main_title") ?>
+
+                        </span>
+                        <span
+                            style="color:#6A7291;font-family:Manrope; font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:15px;">
+                            <?= get_field("text") ?>
+                        </span>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-lg-6 resources" style="margin-top:;">
+
+                            <div style="border-bottom: 0.5px solid   #25325F; ">
+
+                                <div class=" d-flex flex-row align-items-center justify-content-between  gap-3 mt-4"
+                                    style="margin:20px 0;">
+                                    <span
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        <?= get_field("knowledge") ?>
+                                    </span>
+                                    <a href="#" class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("knowledgel_ink")['url'] ?>"
+                                            alt="<?= get_field("knowledgel_ink")['alt'] ?>"
+                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                    </a>
                                 </div>
-                                <div class="col-12 col-md-12">
-                                    <div class="card-body" style="padding: 1rem;">
-                                        <div class="d-flex align-items-center justify-content-left gap-3 mt-2 mb-2">
-                                            <a class="client-btn" href="<?= $testimonial['btn']['url'] ?>">
-                                                <span><?= $testimonial['btn']['title'] ?></span>
-                                            </a>
-                                            <span
-                                                style="color: #6A7291;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 24px;">
-                                                <?= $testimonial["client_name"] ?>
-                                            </span>
-                                        </div>
-                                        <span class="mt-3"
-                                            style="color:#25325F; font-family:Manrope; font-size:17px; font-style: normal;font-weight: 700;line-height: 27px; width:291px;">
-                                            <?= $testimonial["text"] ?>
-                                            <a href="#">
-                                                <img src="<?= $testimonial['client_link']['url'] ?>"
-                                                    alt="<?= $testimonial['client_link']['alt'] ?>"
-                                                    style="width:4px; height:8px; object-fit:cover; margin-left:8px;" />
-                                            </a>
-                                        </span>
-                                    </div>
+
+                            </div>
+
+                            <div style="border-bottom: 0.5px solid  #25325F;">
+                                <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                    style="margin:20px 0;">
+                                    <span
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        <?= get_field("client_stories") ?>
+                                    </span>
+                                    <a href="#" class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("client_stories_link")['url'] ?>"
+                                            alt="<?= get_field("client_stories_link")['alt'] ?>"
+                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style="border-bottom: 0.5px solid  #25325F;">
+                                <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                    style="margin:20px 0;">
+                                    <span
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        <?= get_field("events") ?>
+                                    </span>
+                                    <a href="#" class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("events_link")['url'] ?>"
+                                            alt="<?= get_field("client_stories_link")['alt'] ?>"
+                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-lg-6 resources " style="margin-top:;">
+
+                            <div style="border-bottom: 0.5px solid  #25325F;">
+                                <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                    style="margin:20px 0;">
+                                    <span
+                                        style="color: #25325F;font-family: Manrope; font-size:13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        <?= get_field("resources") ?>
+                                    </span>
+                                    <a href="#" class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("resources_link")['url'] ?>"
+                                            alt="<?= get_field("resources_link")['alt'] ?>"
+                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div style="border-bottom: 0.5px solid  #25325F;">
+                                <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
+                                    style="margin:20px 0;">
+                                    <span
+                                        style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                        <?= get_field("video") ?>
+                                    </span>
+                                    <a href="#" class="d-flex justify-content-center align-items-center">
+                                        <img src="<?= get_field("videos_link")['url'] ?>"
+                                            alt="<?= get_field("videos_link")['alt'] ?>"
+                                            style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php
-                        $delay += 300;
-                    } ?>
-                </div>
-            </div>
-
-
-            <div class="d-none d-md-none d-lg-block col-lg-2 ">
-
-            </div>
-            <div class="d-none d-md-none d-lg-block col-lg-1 ">
-                <div>
-                    <!--Verticall line On Lg Screen  -->
-                    <div class=" d-none d-lg-flex "
-                        style=" width:1px; height:692px; background: #CBCFDE; position:relative; top:-27px;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column  Knowledge And ReSources-->
-            <div class="col-12 col-lg-4" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-
-                <div class="d-flex flex-column align-items-flex-start justify-content-left gap-4"
-                    style="margin-left:; color:#FFF; margin-top:60px; ">
-                    <span
-                        style="background-color:#274083;width:203px;height:30px;border-radius:40px;color:#FFF;font-family:Manrope; font-size:13px;font-style:normal;font-weight:700;line-height:23.4px;text-align:center;padding:4px 0;margin-bottom:15px; ">
-                        <?= get_field("sub_title") ?>
-                    </span>
-                    <span class="main_title_knowledge"
-                        style="color: var(--Primary-600, #25325F);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
-                        <?= get_field("main_title") ?>
-
-                    </span>
-                    <span
-                        style="color:#6A7291;font-family:Manrope; font-size:16px;font-style:normal;font-weight:700;line-height:27.2px; margin-bottom:15px;">
-                        <?= get_field("text") ?>
-                    </span>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-12 col-lg-6 resources" style="margin-top:;">
-
-                        <div style="border-bottom: 0.5px solid   #25325F; ">
-
-                            <div class=" d-flex flex-row align-items-center justify-content-between  gap-3 mt-4"
-                                style="margin:20px 0;">
-                                <span
-                                    style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                    <?= get_field("knowledge") ?>
-                                </span>
-                                <a href="#" class="d-flex justify-content-center align-items-center">
-                                    <img src="<?= get_field("knowledgel_ink")['url'] ?>"
-                                        alt="<?= get_field("knowledgel_ink")['alt'] ?>"
-                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <div style="border-bottom: 0.5px solid  #25325F;">
-                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
-                                style="margin:20px 0;">
-                                <span
-                                    style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                    <?= get_field("client_stories") ?>
-                                </span>
-                                <a href="#" class="d-flex justify-content-center align-items-center">
-                                    <img src="<?= get_field("client_stories_link")['url'] ?>"
-                                        alt="<?= get_field("client_stories_link")['alt'] ?>"
-                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div style="border-bottom: 0.5px solid  #25325F;">
-                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
-                                style="margin:20px 0;">
-                                <span
-                                    style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                    <?= get_field("events") ?>
-                                </span>
-                                <a href="#" class="d-flex justify-content-center align-items-center">
-                                    <img src="<?= get_field("events_link")['url'] ?>"
-                                        alt="<?= get_field("client_stories_link")['alt'] ?>"
-                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                </a>
-                            </div>
-                        </div>
 
                     </div>
-
-                    <div class="col-12 col-lg-6 resources " style="margin-top:;">
-
-                        <div style="border-bottom: 0.5px solid  #25325F;">
-                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
-                                style="margin:20px 0;">
-                                <span
-                                    style="color: #25325F;font-family: Manrope; font-size:13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                    <?= get_field("resources") ?>
-                                </span>
-                                <a href="#" class="d-flex justify-content-center align-items-center">
-                                    <img src="<?= get_field("resources_link")['url'] ?>"
-                                        alt="<?= get_field("resources_link")['alt'] ?>"
-                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div style="border-bottom: 0.5px solid  #25325F;">
-                            <div class=" d-flex flex-row align-items-center justify-content-between gap-3 mt-4"
-                                style="margin:20px 0;">
-                                <span
-                                    style="color: #25325F;font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                    <?= get_field("video") ?>
-                                </span>
-                                <a href="#" class="d-flex justify-content-center align-items-center">
-                                    <img src="<?= get_field("videos_link")['url'] ?>"
-                                        alt="<?= get_field("videos_link")['alt'] ?>"
-                                        style="width:4px; height:8px; object-fit:cover; margin-left:2px;" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-        </div> <!-- End of Client Story2 and Right column -->
-    </div> <!-- End of container div -->
+            </div> <!-- End of Client Story2 and Right column -->
+        </div> <!-- End of container div -->
 
 
 
-    <!-- Form Section container  -->
-    <?php get_template_part('components/form') ?>
-    <!-- End of Form Section -->
-
-
-
+        <!-- Form Section container  -->
+        <?php get_template_part('components/form') ?>
+        <!-- End of Form Section -->
 
 
 
@@ -1426,55 +1432,58 @@
 
 
 
-    <!-- =---------------------------- -->
 
 
-    <!--  sue-partners-swiper -->
-    <script>
-    let swipersue = new Swiper('.sue-partners-swiper', {
-        slidesPerView: 2.1,
-        grabCursor: true,
-        spaceBetween: 1,
 
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+        <!-- =---------------------------- -->
 
-        breakpoints: {
 
-            360: {
-                slidesPerView: 3.2,
-                spaceBetween: 1,
+        <!--  sue-partners-swiper -->
+        <script>
+        let swipersue = new Swiper('.sue-partners-swiper', {
+            slidesPerView: 2.1,
+            grabCursor: true,
+            spaceBetween: 1,
 
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
 
-            540: {
-                slidesPerView: 4.2,
-                spaceBetween: 1,
+            breakpoints: {
 
-            },
+                360: {
+                    slidesPerView: 3.2,
+                    spaceBetween: 1,
 
-            556: {
-                slidesPerView: 3.9,
+                },
+
+                540: {
+                    slidesPerView: 4.2,
+                    spaceBetween: 1,
+
+                },
+
+                556: {
+                    slidesPerView: 3.9,
 
 
-                spaceBetween: 1,
-            },
-            992: {
+                    spaceBetween: 1,
+                },
+                992: {
 
-                slidesPerView: 3.9,
-                spaceBetween: 0,
+                    slidesPerView: 3.9,
+                    spaceBetween: 0,
+                }
+
+
             }
-
-
-        }
-    })
-    </script>
+        })
+        </script>
 </main>
 
 <?php get_footer() ?>
