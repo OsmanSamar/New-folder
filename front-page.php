@@ -479,13 +479,14 @@
         position: relative;
         /* left: 50%;
         top: 30%; */
-        left: 8%;
+        left: 7%;
         top: -15%;
-        transform: translate(-50%, -64%);
+        /* transform: translate(-50%, -64%); */
         background-color: #FFF;
         border-radius: 15px;
         width: 90%;
-        max-width: 349px;
+        /* max-width: 349px; */
+        max-width: 316px;
         padding: 32px;
         display: flex;
         flex-direction: column;
@@ -1270,11 +1271,11 @@
         <!-- 1 -->
         <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out">
-            <div class="container first-container" style=" padding-top:">
+            <div class="container first-container">
                 <div class=" row">
                     <div class="d-flex d-md-none d-lg-flex align-items-center justify-content-between">
                         <span class="left-text ">
-                            <!-- Cloud complexity made <span style="color:#E94271">simple</span> -->
+                            <!-- Cloud Complexity Text -->
                             <?= get_field("left_text") ?>
                             <span style="color:#E94271"><?= get_field("left_text_pink_word") ?></span>
                         </span>
@@ -1297,31 +1298,11 @@
                         </p>
                     </div>
                 </div>
-                <!-- <div class="d-flex d-lg-none" style="margin-top:50px;">
-                    <div class="row">
-                        <div class="col-6 d-flex align-items-center justify-content-center" style="margin-bottom:64px;">
-                            <a href="<?= esc_url(home_url('/')); ?>" style="border-radius:8px;
-                                background-color: #E94271; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center">
-                                <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                                    style="width:12px; height:18px; margin:7px 0;  ">
-                            </a>
-                            <a href="<?= esc_url(home_url('/')); ?>"
-                                style="font-family: Manrope; font-size:14px; font-style: normal; font-weight: 600; line-height: 120%; color: #25325F;margin: 0 10px;">
-                                Let's talk
-                            </a>
-                        </div>
-                        <p class="right-text col-6">
-                            <?= get_field("right_text") ?>
-                            Empowering organizations to innovate faster
-                        </p>
 
-                    </div>
-                </div> -->
                 <!-- Small Screen -->
                 <div class="d-flex flex-column align-items-center d-md-none  d-lg-none" style="margin-top:30px;">
                     <div class="row">
-                        <p class=""
+                        <p
                             style="color:#25325F; text-align:center; font-family:Manrope; font-size:18px; font-style:normal;font-weight: 500;line-height:27px; width:256px; margin-bottom:30px;">
                             <!-- <?= get_field("right_text") ?> -->
                             <span style="font-weight: 700;">Empowering</span> organizations to <span
@@ -1644,15 +1625,18 @@
 
 
         <!-- Outcome Testimonials Section on Small Screens -->
-        <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-            data-aos-easing="ease-in-out">
+        <div class="container">
+            <!--  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" -->
             <div class="row d-flex flex-column align-items-center justify-content-center d-md-none d-lg-none"
                 style="margin-top:-163px;">
                 <?php
+                $delay = 0;
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
                 <div class="testimonial"
-                    style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0; padding: 20px;">
+                    style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0; padding: 20px;"
+                    data-aos="fade-up" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
                     <div style="margin:0 0 2px 0 ; display: flex;align-items: center;gap:8px;">
                         <!-- margin: 15px auto 2px auto -->
                         <span
@@ -1692,6 +1676,7 @@
 
                 </div>
                 <?php
+                    $delay += 300;
                 }
                 ?>
             </div>
@@ -1704,9 +1689,11 @@
             <div class="row  d-none d-md-flex d-lg-flex container2  ">
                 <!-- container2 gy-2 -->
                 <?php
+                $delay = 0;
                 foreach (get_field("testimonials_section") as $testimonial) {
                     ?>
-                <div class="col-lg-4 col-md-4 col-12">
+                <div class="col-lg-4 col-md-4 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    data-aos-duration="800">
                     <div class="testimonial-container " style="background-color:#FFF;border-radius:15px; ">
                         <!-- num and title -->
                         <div style=" margin-top:25px;padding:0 20px; display:flex;align-items:center;gap: 11px;">
@@ -1749,6 +1736,8 @@
                     </div>
                 </div>
                 <?php
+                    $delay += 300;
+
                 }
                 ?>
             </div>
@@ -1829,8 +1818,13 @@
             <!-- Client Story1 on Sm Screen replaced row-cols-lg-2 with row-cols-md-2 -->
             <div class="container d-block d-md-block d-lg-none">
                 <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <?php foreach (get_field("client_story") as $testimonial) { ?>
-                    <div class="col">
+                    <?php
+                    $index = 0;
+                    $delay = 0;
+                    foreach (get_field("client_story") as $testimonial) {
+                        $aos_effect = ($index % 2 === 0) ? "fade-right" : "fade-left";
+                        ?>
+                    <div class="col" data-aos="<?= $aos_effect ?>">
                         <div class="card  mb-3 d-flex flex-column align-items-center justify-content-center"
                             style="border-radius: 20px; border:1px solid #CBCFDE; background:#EDF3F4; padding: 15px 0; width: 100%; ">
                             <div class="row g-0 align-items-center">
@@ -1875,7 +1869,10 @@
                             </div>
                         </div>
                     </div>
-                    <?php } ?>
+                    <?php
+                        $index++;
+                        $delay += 300;
+                    } ?>
                 </div>
             </div>
 
@@ -1887,10 +1884,10 @@
                 <div class="row row-cols-1 row-cols-lg-2 g-4">
                     <?php
                     $index = 0;
+                    $delay = 0;
+
                     foreach (get_field("client_story") as $testimonial) {
                         $aos_effect = ($index % 2 === 0) ? "fade-right" : "fade-left";
-
-
                         ?>
                     <div class="col-12 col-md-12 col-lg-6" data-aos="<?= $aos_effect ?>">
                         <div class="card client_card1 mb-3 d-flex flex-row align-items-center justify-content-center"
@@ -1932,6 +1929,7 @@
                     </div>
                     <?php
                         $index++;
+                        $delay += 300;
                     } ?>
                 </div>
             </div>
@@ -2251,8 +2249,12 @@
                     <div class="row ">
                         <!-- gy-2 -->
                         <div class="col-lg-5 col-md-8" style="margin-top:55px;">
-                            <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
-                            <div class="col">
+                            <?php
+                            $delay = 0;
+                            foreach (get_field("article_testimonails") as $testimonial) {
+                                ?>
+                            <div class="col" data-aos="fade-right" data-aos-delay="<?= $delay ?>"
+                                data-aos-duration="800">
                                 <div class="card client_card2 mb-3 d-flex flex-row align-items-center ">
                                     <!-- justify-content-center -->
                                     <div class="row align-items-center">
@@ -2297,7 +2299,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php } ?>
+                            <?php
+                                $delay += 300;
+                            } ?>
                         </div>
                     </div>
                 </div>
@@ -2307,8 +2311,11 @@
                 <!-- Client Story2 on Sm and MS Screen replaced row-cols-lg-2 with row-cols-md-2 -->
                 <div class="container d-none d-md-block d-lg-none">
                     <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <?php foreach (get_field("article_testimonails") as $testimonial) { ?>
-                        <div class="col-md-4">
+                        <?php
+                        $delay = 0;
+                        foreach (get_field("article_testimonails") as $testimonial) {
+                            ?>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
                             <div class="card mb-3 d-flex flex-column align-items-center justify-content-center"
                                 style="border-radius: 20px; border:1px solid #CBCFDE; background:#EDF3F4; padding: 15px 0; width: 100%;">
                                 <div class="row g-0 align-items-center">
@@ -2352,7 +2359,9 @@
                                 </div>
                             </div>
                         </div>
-                        <?php } ?>
+                        <?php
+                            $delay += 300;
+                        } ?>
                     </div>
                 </div>
 
