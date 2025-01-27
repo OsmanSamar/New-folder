@@ -1,35 +1,35 @@
 <footer class="footer">
 
     <style>
+    .arrow_section {
+
+        width: 57.851px;
+        height: 92.371px;
+        flex-shrink: 0;
+    }
+
+    .submit-btn a:hover img {
+        transform: translateX(6px);
+        transition: transform 0.2s ease;
+    }
+
+
+
+
+    @media (min-width: 992px) {
+
+        .second-arrow {
+            margin-top: 70px
+        }
+
         .arrow_section {
-
-            width: 57.851px;
-            height: 92.371px;
+            width: 87.239px;
+            height: 139.295px;
             flex-shrink: 0;
+            object-fit: cover;
+            margin-right: 60px;
         }
-
-        .submit-btn a:hover img {
-            transform: translateX(6px);
-            transition: transform 0.2s ease;
-        }
-
-
-
-
-        @media (min-width: 992px) {
-
-            .second-arrow {
-                margin-top: 70px
-            }
-
-            .arrow_section {
-                width: 87.239px;
-                height: 139.295px;
-                flex-shrink: 0;
-                object-fit: cover;
-                margin-right: 60px;
-            }
-        }
+    }
     </style>
 
 </footer>
@@ -45,7 +45,7 @@
     <!-- New Section -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
-            <div class="col-12 col-lg-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+            <div class="col-12 col-md-6 col-lg-6 " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <!-- First Row margin-top:150px; and newsletter-container also-->
                 <div class="" style="display:flex;flex-direction: column; align-items: flex-start;gap: 2px; ">
@@ -237,7 +237,7 @@
             <div class="d-none d-lg-flex col-lg-2"></div>
 
             <!-- Newsletters -->
-            <div class="col-12 col-lg-4" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div>
                     <!-- style="display:flex;flex-direction: column; align-items: flex-start;  " -->
@@ -294,35 +294,35 @@
                     <?php
                     foreach (get_field("arrowsection", 'option') as $testimonails) {
                         ?>
-                        <div class="col-lg" style="border-radius:15px; height:99px; margin-top:35px 0;">
-                            <div class="d-flex  align-items-center justify-content-around gap-4">
-                                <img src="<?= $testimonails['img1']['url'] ?>" alt=" <?= $testimonails['img1']['alt'] ?>"
-                                    class="arrow_section" />
+                    <div class="col-lg" style="border-radius:15px; height:99px; margin-top:35px 0;">
+                        <div class="d-flex  align-items-center justify-content-around gap-4">
+                            <img src="<?= $testimonails['img1']['url'] ?>" alt=" <?= $testimonails['img1']['alt'] ?>"
+                                class="arrow_section" />
 
-                                <img src="<?= $testimonails['img2']['url'] ?>" alt=" <?= $testimonails['img2']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img2']['url'] ?>" alt=" <?= $testimonails['img2']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img3']['url'] ?>" alt=" <?= $testimonails['img3']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img3']['url'] ?>" alt=" <?= $testimonails['img3']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img4']['url'] ?>" alt=" <?= $testimonails['img4']['alt'] ?>"
-                                    class="arrow_section" />
+                            <img src="<?= $testimonails['img4']['url'] ?>" alt=" <?= $testimonails['img4']['alt'] ?>"
+                                class="arrow_section" />
 
-                                <img src="<?= $testimonails['img5']['url'] ?>" alt=" <?= $testimonails['img5']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img5']['url'] ?>" alt=" <?= $testimonails['img5']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img6']['url'] ?>" alt=" <?= $testimonails['img6']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img6']['url'] ?>" alt=" <?= $testimonails['img6']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img7']['url'] ?>" alt=" <?= $testimonails['img7']['alt'] ?>"
-                                    class="arrow_section" />
+                            <img src="<?= $testimonails['img7']['url'] ?>" alt=" <?= $testimonails['img7']['alt'] ?>"
+                                class="arrow_section" />
 
-                                <img src="<?= $testimonails['img8']['url'] ?>" alt=" <?= $testimonails['img8']['alt'] ?>"
-                                    class="arrow_section" />
+                            <img src="<?= $testimonails['img8']['url'] ?>" alt=" <?= $testimonails['img8']['alt'] ?>"
+                                class="arrow_section" />
 
-                            </div>
                         </div>
-                        <?php
+                    </div>
+                    <?php
                     }
                     ?>
                 </div>
@@ -340,35 +340,35 @@
                     <?php
                     foreach (get_field("secondarrowsection", 'option') as $testimonails) {
                         ?>
-                        <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
-                            <div class="d-flex align-items-center justify-content-around  gap-4">
-                                <img src="<?= $testimonails['img1']['url'] ?>" alt=" <?= $testimonails['img1']['alt'] ?>"
-                                    class="arrow_section" />
+                    <div class="col-lg" style="border-radius:15px; height:99px; margin:35px 0;">
+                        <div class="d-flex align-items-center justify-content-around  gap-4">
+                            <img src="<?= $testimonails['img1']['url'] ?>" alt=" <?= $testimonails['img1']['alt'] ?>"
+                                class="arrow_section" />
 
-                                <img src="<?= $testimonails['img2']['url'] ?>" alt=" <?= $testimonails['img2']['alt'] ?>"
-                                    class="arrow_section" />
+                            <img src="<?= $testimonails['img2']['url'] ?>" alt=" <?= $testimonails['img2']['alt'] ?>"
+                                class="arrow_section" />
 
-                                <img src="<?= $testimonails['img3']['url'] ?>" alt=" <?= $testimonails['img3']['alt'] ?>"
-                                    class="arrow_section" />
+                            <img src="<?= $testimonails['img3']['url'] ?>" alt=" <?= $testimonails['img3']['alt'] ?>"
+                                class="arrow_section" />
 
-                                <img src="<?= $testimonails['img4']['url'] ?>" alt=" <?= $testimonails['img4']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img4']['url'] ?>" alt=" <?= $testimonails['img4']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img5']['url'] ?>" alt=" <?= $testimonails['img5']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex " />
+                            <img src="<?= $testimonails['img5']['url'] ?>" alt=" <?= $testimonails['img5']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex " />
 
-                                <img src="<?= $testimonails['img6']['url'] ?>" alt=" <?= $testimonails['img6']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img6']['url'] ?>" alt=" <?= $testimonails['img6']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img7']['url'] ?>" alt=" <?= $testimonails['img7']['alt'] ?>"
-                                    class="arrow_section d-none d-md-flex d-lg-flex" />
+                            <img src="<?= $testimonails['img7']['url'] ?>" alt=" <?= $testimonails['img7']['alt'] ?>"
+                                class="arrow_section d-none d-md-flex d-lg-flex" />
 
-                                <img src="<?= $testimonails['img8']['url'] ?>" alt=" <?= $testimonails['img8']['alt'] ?>"
-                                    class="arrow_section" />
+                            <img src="<?= $testimonails['img8']['url'] ?>" alt=" <?= $testimonails['img8']['alt'] ?>"
+                                class="arrow_section" />
 
-                            </div>
                         </div>
-                        <?php
+                    </div>
+                    <?php
                     }
                     ?>
                 </div>
