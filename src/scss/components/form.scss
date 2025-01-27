@@ -79,8 +79,14 @@
 /* Default: Center align for small screens */
 .gform-theme--foundation .gform_footer,
 .gform-theme--foundation .gform_page_footer {
-  justify-content: center !important;
+  justify-content: end !important;
 }
+// @media (min-width: 768px) {
+//   .gform-theme--foundation .gform_footer,
+//   .gform-theme--foundation .gform_page_footer {
+//     justify-content: end !important;
+//   }
+// }
 
 /* For large screens: Align to the end */
 @media (min-width: 1024px) {
