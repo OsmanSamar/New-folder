@@ -5,7 +5,17 @@
 
 <main class="multistax flex-grow-1  d-flex  justify-content-center w-100   bg ">
     <!--  bg -->
+
+
     <style>
+        .left-img {
+            margin-top: 15px;
+        }
+
+        .right-img {
+            margin-bottom: 15px;
+        }
+
         .letstalk-btn a:hover img {
             transform: translateX(6px);
             transition: transform 0.2s ease;
@@ -360,15 +370,26 @@
             border-radius: 30px;
             background: #25325F;
             max-width: 1700px;
-            height: 1400px;
+            /* height: 1400px; */
             margin: 50px auto 50px;
+        }
+
+        .test-block::before {
+            content: " ";
+            position: absolute;
+            background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+            top: 0;
+            z-index: -1;
+            border-radius: 30px;
+            width: 97%;
+            height: 100%;
         }
 
         .left-container {
             border-radius: 30px;
-            margin-top: ;
             color: white;
             height: 264px;
+            padding: 0 26px;
         }
 
         .left-content {
@@ -390,6 +411,9 @@
 
         }
 
+        .container-fourth {
+            margin-top: 147px;
+        }
 
         @media (min-width: 768px) {
             .blue-block-partner {
@@ -451,9 +475,22 @@
 
             .view-all-link {
                 display: flex;
-                justify-content: center;
+                /* justify-content: center; */
+                justify-content: end;
                 align-items: center;
                 font-size: 21px;
+            }
+
+            .container-fourth {
+                margin-top: 147px;
+            }
+
+            .left-img {
+                margin-top: unset;
+            }
+
+            .right-img {
+                margin-bottom: unset;
             }
 
 
@@ -473,12 +510,13 @@
             }
 
             .block_blue {
-                height: 815.03px;
+                /* height: 815.03px; */
+                height: 770.03px;
             }
 
 
             .cloud-projects {
-                height: 837px;
+                /* height: 837px; */
             }
 
             .view-all-link {
@@ -507,12 +545,14 @@
 
             .swiper-container .swiper-pagination {
                 position: relative;
-                bottom: -59px !important;
+                /* bottom: -59px !important; */
+                bottom: 105px !important;
             }
 
 
             .form_section {
-                height: 550px;
+                /* height: 550px; */
+                height: 575px;
             }
 
             .left-container {
@@ -535,6 +575,18 @@
                 font-size: 26px;
             }
 
+            .container-fourth {
+                margin-top: 10px;
+            }
+
+            .left-img {
+                margin-top: unset;
+            }
+
+            .right-img {
+                margin-bottom: unset;
+            }
+
         }
     </style>
 
@@ -542,6 +594,8 @@
 
 
     <div class="">
+
+
         <!-- 1   class="container" -->
         <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
             <a href="<?= get_field("back_to_home")['url'] ?>"
@@ -569,7 +623,6 @@
                     <span class="left-btn" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="500" data-aos-easing="ease-in-out">
                         <?= get_field("hero_sub_title") ?>
-
                     </span>
                     <span class="hero-title my-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="500" data-aos-easing="ease-in-out">
@@ -594,7 +647,6 @@
                 </div>
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
             </div>
-
         </div>
 
         <!-- 3 container -->
@@ -603,11 +655,13 @@
                 <div class="swiperimgoffering offering-swiper1">
                     <div class="swiper-wrapper">
                         <?php
+                        $delay = 0;
                         foreach (get_field("testimonials") as $testimonial) {
                             ?>
                             <!-- height:auto; -->
-                            <div class="swiper-slide" style="width:fit-content; "
-                                style="height:35vw; max-height:500px; margin:0 12px;">
+                            <div class="swiper-slide" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                                data-aos-duration="800"
+                                style="height:35vw; max-height:500px; margin:0 12px; width:fit-content;">
 
                                 <img src="<?= $testimonial['url'] ?>" alt="<?= $testimonial['alt'] ?>"
                                     class="w- h- objectfit-cover" />
@@ -615,6 +669,7 @@
 
                             </div>
                             <?php
+                            $delay += 300;
                         }
                         ?>
                     </div>
@@ -625,48 +680,16 @@
         </div>
 
 
+
         <!-- 4 -->
-        <!-- <div>
-            
-            <div class="row " style="margin-top:150px;">
-                <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
-                <div
-                    class="d-inline-flex align-items-center justify-content-center flex-column gap-3 col-lg-6 col-12 col-md-12">
-                    <span class="left-btn">
-                        <?= get_field("hero_sub_title") ?>
-                    </span>
-                    <span class="hero-title my-4">
-                        <?= get_field("hero_main_title") ?>
-                    </span>
-                    <span class="hero-text">
-                        <?= get_field("hero_text") ?>
-                    </span>
-
-                    
-                    <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
-                        style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
-                        <a href="<?= get_field("request_demo")['url'] ?>"
-                            style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
-                            <img src="<?= get_field("request_arrow")['url'] ?>"
-                                alt="<?= get_field("request_arrow")['alt'] ?>" style="width: 12px; height: 18px;" />
-                            <?= get_field("request_demo")['title'] ?>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
-            </div>
-        </div> -->
-
-        <div class="">
-            <!-- class="container" -->
-            <div class="row " style="margin-top:210px;">
+        <div class="container">
+            <div class="row  container-fourth">
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
                 <div
                     class="d-inline-flex align-items-center justify-content-center flex-column gap-3 col-lg-6 col-12 col-md-12">
                     <span class="left-btn" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="500" data-aos-easing="ease-in-out">
                         <?= get_field("hero_sub_title") ?>
-
                     </span>
                     <span class="hero-title my-4" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                         data-aos-duration="500" data-aos-easing="ease-in-out">
@@ -691,15 +714,18 @@
                 </div>
                 <div class="col-lg-3 d-md-none d-none d-lg-block"></div>
             </div>
-
         </div>
+
 
         <!--5  Testimonials Section on All Screens -->
         <div class="container mt-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
             data-aos-duration="1000" data-aos-easing="ease-in-out">
             <div class="row gy-2">
-                <?php foreach (get_field("expertise_testimonials") as $testimonial) { ?>
-                    <div class="col-12 col-md-6 col-lg-4">
+                <?php
+                $delay = 0;
+                foreach (get_field("expertise_testimonials") as $testimonial) { ?>
+                    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                        data-aos-duration="800">
                         <div class="testimonial-card">
                             <div class="d-flex align-items-center gap-2 mb-2">
                                 <span class="expertise-num"><?= $testimonial["expertise_num"] ?></span>
@@ -710,7 +736,9 @@
                             <p class="expertise-text"><?= $testimonial["expertise_text"] ?></p>
                         </div>
                     </div>
-                <?php } ?>
+                    <?php
+                    $delay += 300;
+                } ?>
             </div>
         </div>
 
@@ -787,7 +815,7 @@
                     </button>
                 </div>
                 <div class="col-lg-1 col-md-1 d-md-block d-none d-lg-block"></div>
-                <div class="col-lg-5 col-md-6" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                <div class="col-lg-5 col-md-6 left-img" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="500" data-aos-easing="ease-in-out">
 
                     <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
@@ -802,7 +830,7 @@
         <div class="container mt-5">
             <div class="row ">
                 <div class="col-lg-1 d-none d-lg-block"></div>
-                <div class="col-lg-5 col-md-6" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                <div class="col-lg-5 col-md-6 right-img" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="500" data-aos-easing="ease-in-out">
                     <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                         class="w-100 h-100 objectfit-cover" style=" border-radius:40px; " />

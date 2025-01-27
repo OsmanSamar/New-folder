@@ -716,7 +716,8 @@
 
         .view-all-link {
             display: flex;
-            justify-content: center;
+            /* justify-content: center; */
+            justify-content: end;
             align-items: center;
             font-size: 21px;
 
