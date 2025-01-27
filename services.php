@@ -213,12 +213,22 @@
         }
 
 
+        .test-block::before {
+            content: " ";
+            position: absolute;
+            background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+            top: 0;
+            z-index: -1;
+            border-radius: 30px;
+            width: 97%;
+            height: 99.9%;
+        }
+
         .left-container {
             border-radius: 30px;
-            margin-top: ;
             color: white;
             height: 264px;
-
+            padding: 0 26px;
         }
 
 
@@ -232,7 +242,6 @@
         }
 
         .first-name {
-
             color: #9AA0B7;
             font-family: Manrope;
             font-size: 16px;
@@ -246,9 +255,8 @@
             border-radius: 30px;
             background: #25325F;
             max-width: 1700px;
-            height: 1400px;
+            /* height: 1400px; */
             margin: 50px auto 50px;
-
         }
 
         .arrow_section {
@@ -474,8 +482,11 @@
     <div class="container mt-5" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
         data-aos-easing="ease-in-out">
         <div class="row gy-2">
-            <?php foreach (get_field("expertise_testimonials") as $testimonial) { ?>
-                <div class="col-12 col-md-6 col-lg-4">
+            <?php
+            $delay = 0;
+            foreach (get_field("expertise_testimonials") as $testimonial) { ?>
+                <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    data-aos-duration="800">
                     <div class="testimonial-card">
                         <div class="d-flex align-items-center gap-2 mb-2">
                             <span class="expertise-num">
@@ -503,7 +514,10 @@
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+                <?php
+
+                $delay += 300;
+            } ?>
         </div>
     </div>
 
