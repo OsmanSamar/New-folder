@@ -39,38 +39,6 @@
     }
 
 
-    /* .back-to-home {
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
-    .back-to-home a {
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-        pointer: cursor;
-    }
-
-    .back-to-home img {
-        margin-left: 5px;
-        vertical-align: middle;
-    } */
-
-
-    .first {
-        /* color: #25325F;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px; */
-    }
 
     .last {
         color: #25325F;
