@@ -8,6 +8,25 @@
 
 
     <style>
+    .back-to-home a span.first {
+        color: rgb(113, 124, 158);
+        margin-right: .5rem;
+        transition: .2s ease;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.4px;
+    }
+
+    .back-to-home a img:hover {
+        opacity: 0.5;
+    }
+
+    .back-to-home a span.first:hover {
+        color: #25325F;
+    }
+
     .letstalk-btn a:hover img {
         transform: translateX(6px);
         transition: transform 0.2s ease;
@@ -705,23 +724,27 @@
     }
     </style>
 
+    <!-- 1 -->
     <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
-        <a href="<?= get_field("back_to_home")['url'] ?>"
-            class="d-flex justify-content-center align-items-center gap-2">
-            <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
-                style="width:20px; height:20px; margin:7px 0;" />
-
-            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-            <span class="first">Industries</span>
+        <div class="d-flex justify-content-center align-items-center gap-2">
+            <a href="<?= get_field("backtohome")['url'] ?>">
+                <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
+                    style="width:20px; height:20px; margin:7px 0;" />
+            </a>
+            <a href="<?= get_field("backtoindustries")['url'] ?>">
+                <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
+                        alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
+                <span class="first">Industries</span>
+            </a>
             <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
                     alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
             <span class="last">Financial</span>
-        </a>
+        </div>
+
     </div>
 
 
-
+    <!-- 2 -->
     <!-- Hero Section -->
     <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
         data-aos-duration="500" data-aos-easing="ease-in-out">
@@ -750,7 +773,7 @@
                 <div class="d-flex justify-content-between align-items-center gap-2 letstalk-btn"
                     style="height:42.261px;padding: 12px 15px; border-radius: 8px;background: #E94271;">
                     <a href="<?= get_field("talk_to_an_expert_btn")['url'] ?>"
-                        style="color: #FFF;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
+                        style="color: #FFF;font-family: Manrope;font-size: 13pxyfont-style: normal;font-weight: 600;line-height: 15.6px; display: flex; align-items: center; gap:8px; text-decoration: none; ">
                         <img src="<?= get_field("talk_to_an_expert_img")['url'] ?>"
                             alt="<?= get_field("talk_to_an_expert_img")['alt'] ?>" style="width: 12px; height: 18px;" />
                         <?= get_field("talk_to_an_expert_btn")['title'] ?>
@@ -764,7 +787,7 @@
 
 
 
-
+    <!-- 3 -->
     <!--Bijdragers Repeater  Swiper On Small -->
     <div class="partners" style="margin-top:50px; margin-bottom: 60px;">
         <div class="position-relative d-block d-lg-none align-items-center  justify-content-between ">
@@ -795,7 +818,7 @@
         </div>
     </div>
 
-
+    <!-- 3 -->
     <!-- Bijdragers Repeater On LG -->
     <div class="container">
         <div class="row d-none d-md-none d-lg-flex align-items-center justify-content-between"
@@ -823,7 +846,7 @@
         </div>
     </div>
 
-    <!-- Third Section -->
+    <!-- 4 -->
     <div class="container">
         <div class="row" style="margin-top:50px;">
             <div class="col-12 col-md-6 col-lg-5" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
@@ -854,7 +877,7 @@
         </div>
     </div>
 
-
+    <!-- 5 -->
     <!-- The Blue Block With Img & Text -->
     <div class="block_blue" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="500"
         data-aos-easing="ease-in-out">
@@ -863,7 +886,8 @@
                 <img src="<?= get_field("blue_block_img")['url'] ?>" alt="<?= get_field("blue_block_img")['alt'] ?>"
                     class="img-on-blue-block" />
             </div>
-            <div class="col-lg-1 d-none"></div>
+            <div class="col-lg-1 d-none d-lg-block"></div>
+
             <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-around">
                 <div class="left-side-width">
                     <div class="row">
@@ -874,7 +898,7 @@
                                 echo '</div><div class="row">';
                             }
                             ?>
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-5">
                             <div class="testimonial">
                                 <div class="d-flex align-items-center gap-2">
                                     <span class="offering-num"><?= $testimonial["num"] ?></span>

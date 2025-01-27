@@ -25,146 +25,156 @@
 
 
     <style>
-        .letstalk-btn a:hover img {
-            transform: translateX(6px);
-            transition: transform 0.2s ease;
-        }
+    .letstalk-btn a:hover img {
+        transform: translateX(6px);
+        transition: transform 0.2s ease;
+    }
 
-        /* Navbar dropdown styles */
-        .navbar-nav .dropdown-menu {
-            position: fixed;
-            top: -100%;
-            /* Start hidden above the page */
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease-in-out;
-            /* background-color: red; */
-            background-color: #FFF;
-            max-width: 100%;
-            width: fit-content;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 3rem;
+    /* Navbar dropdown styles */
+    .navbar-nav .dropdown-menu {
+        position: fixed;
+        top: -100%;
+        /* Start hidden above the page */
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        /* background-color: red; */
+        background-color: #FFF;
+        max-width: 100%;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 3rem;
+    }
 
-        }
+    .navbar-nav .dropdown-menu.show {
+        top: 100%;
+        /* Drop down from the navbar */
+        opacity: 1;
+        visibility: visible;
+        max-width: 100%;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 3rem;
 
-
-        .navbar-nav .dropdown-menu.show {
-            top: 100%;
-            /* Drop down from the navbar */
-            opacity: 1;
-            visibility: visible;
-            max-width: 100%;
-            width: fit-content;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 3rem;
-
-        }
+    }
 
 
+    .dropdown-menu .dropdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        /* padding: 20px 36px; */
+        padding: 36px 42px;
+        height: 100%;
+        flex-grow: 1;
+        /* Divider between items */
+        border-right: 1px solid #cbcfde;
+    }
 
-        .dropdown-menu .dropdown-item {
-            display: flex;
-            flex-direction: column;
+    .dropdown-menu .menu-item:last-child .dropdown-item {
+        border-right: none;
+    }
 
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 10px 36px;
-            height: 100%;
-            flex-grow: 1;
-            /* Divider between items */
-            border-right: 1px solid #cbcfde;
-        }
+    /*  spacing between dropdown items */
+    .dropdown-menu {
+        background-color: #FFF;
+    }
 
-        .dropdown-menu .menu-item:last-child .dropdown-item {
-            border-right: none;
-        }
+    .navbar .menu-item {
+        position: unset;
+    }
 
-
-
-
-
-
-        /*  spacing between dropdown items */
-        .dropdown-menu {
-
-            background-color: #FFF;
-        }
-
-
-
-        /* Sidebar Dropdown Menu */
-        .sidebar-nav .dropdown-menu {
-            position: static;
-            visibility: hidden;
-            opacity: 0;
-            height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-            background-color: #f8f9fa;
-
-        }
-
-        /* Show dropdown on toggle */
-        .sidebar-nav .dropdown-menu.show {
-            visibility: visible;
-            opacity: 1;
-            height: auto;
-        }
-
-        /* Sidebar Dropdown Items */
-        .sidebar-nav .dropdown-item {
-            padding: 10px 15px;
-            font-size: 1rem;
-            color: #333;
-            text-decoration: none;
-        }
-
-        .sidebar-nav .dropdown-item:hover {
-            background-color: #e9ecef;
-            color: #000;
-        }
-
-        /* Styling Parent Items in Sidebar */
-        .sidebar-nav .menu-item-has-children>a {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .sidebar-nav .menu-item-has-children>a:after {
-            content: '\f107';
-            /* Font Awesome down arrow */
-            font-family: FontAwesome;
-            margin-left: 8px;
-        }
+    .navbar ul li a {
+        color: #25325F;
+        text-align: center;
+        font-family: Manrope;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px;
+    }
 
 
-        .sidebar-nav .menu-item-has-children.show>a:after {
-            content: '\f106';
+    /* Sidebar Dropdown Menu */
+    /* .sidebar-nav .dropdown-menu {
+        position: static;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        background-color: #f8f9fa;
+    } */
 
-        }
+    /* Show dropdown on toggle */
+    /* .sidebar-nav .dropdown-menu.show {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    } */
 
-        .navbar .menu-item {
-            position: unset;
-        }
+    /* Sidebar Dropdown Items */
+    /* .sidebar-nav .dropdown-item {
+        padding: 10px 15px;
+        font-size: 1rem;
+        color: red;
+        text-decoration: none;
+    }
 
-        .navbar ul li a {
-            color: #25325F;
-            text-align: center;
-            font-family: Manrope;
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 15.6px;
+    .sidebar-nav .dropdown-item:hover {
+        background-color: #e9ecef;
+        color: #000;
+    } */
 
-        }
+    /* Styling Parent Items in Sidebar */
+    /* .sidebar-nav .menu-item-has-children>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sidebar-nav .menu-item-has-children>a:after {
+        content: '\f107';
+        margin-left: 8px;
+    }
+
+
+    .sidebar-nav .menu-item-has-children.show>a:after {
+        content: '\f106';
+    }
+
+   
+    /* }  */
+
+
+    .offcanvas-body ul li ul li {
+
+        background-color: red;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        border-bottom: 1px solid black;
+    }
+
+    /* .menu-item {
+        width: 100%;
+        background-color: aliceblue;
+    }
+
+    .offcanvas-body .navbar-nav {
+        background-color: aqua;
+    } */
     </style>
 
 </head>
@@ -172,20 +182,17 @@
 <body style="background:#EDF3F4;" <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+    AOS.init();
     </script>
-
     <!-- AOS -->
 
-
     <header class="header" style="margin-top:50px">
-        <!-- Navbar -->
 
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg  fixed-top" style="background: #EDF3F4; top:26px; ">
             <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo -->
@@ -194,7 +201,7 @@
                         style="height: 43px;width: 88px;">
                 </a>
 
-                <!-- Navbar Links -->
+                <!-- Navbar Links  LG-->
                 <?php
                 wp_nav_menu(array(
                     'menu' => 'header-menu',
@@ -207,22 +214,19 @@
                 ));
                 ?>
 
-
-
-
                 <div class="d-flex align-items-center gap-3">
                     <!-- Arrow and Let's Talk Section -->
                     <div class="arrow-letstalk d-none d-md-flex align-items-center justify-content-between letstalk-btn"
                         style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
                         <a href="<?= esc_url(home_url('/contact')); ?>"
-                            class="d-flex justify-content-center align-items-center">
+                            class="d-flex justify-content-center align-items-center gap-2">
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
                                 style="width:12px; height: 18px; margin:7px 0;">
+                            <span
+                                style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
+                                Let's talk
+                            </span>
                         </a>
-                        <span
-                            style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
-                            Let's talk
-                        </span>
                     </div>
 
                     <!-- Hamburger Icon -->
@@ -240,62 +244,56 @@
 
 
                 <style>
+                .arrow-letstalk {
+                    margin-left: auto;
+                    /* Push to the right */
+                }
+
+                /* Hamburger Icon Alignment */
+                .navbar-toggler {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* Media Query for md Screens */
+                @media (max-width: 991.98px) {
                     .arrow-letstalk {
                         margin-left: auto;
-                        /* Push to the right */
                     }
 
-                    /* Hamburger Icon Alignment */
                     .navbar-toggler {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        margin-left: 10px;
                     }
+                }
 
-                    /* Media Query for md Screens */
-                    @media (max-width: 991.98px) {
-                        .arrow-letstalk {
-                            margin-left: auto;
+                .hamburger-icon {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 30px;
+                    height: 20px;
+                    position: relative;
+                }
 
-                        }
+                .hamburger-icon .line {
+                    display: block;
+                    height: 4px;
+                    background-color: #25325F;
+                    border-radius: 2px;
+                    transition: all 0.3s ease;
 
-                        .navbar-toggler {
-                            margin-left: 10px;
+                }
 
-                        }
-                    }
+                .hamburger-icon .line-1,
+                .hamburger-icon .line-2 {
+                    width: 100%;
+                }
 
-
-                    .hamburger-icon {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        width: 30px;
-                        height: 20px;
-                        position: relative;
-                    }
-
-                    .hamburger-icon .line {
-                        display: block;
-                        height: 4px;
-                        background-color: #25325F;
-                        border-radius: 2px;
-                        transition: all 0.3s ease;
-
-                    }
-
-                    .hamburger-icon .line-1,
-                    .hamburger-icon .line-2 {
-                        width: 100%;
-
-                    }
-
-                    .hamburger-icon .line-3 {
-                        width: 60%;
-
-                        align-self: flex-end;
-
-                    }
+                .hamburger-icon .line-3 {
+                    width: 60%;
+                    align-self: flex-end;
+                }
                 </style>
 
             </div>
@@ -320,7 +318,7 @@
                     'menu' => 'header-menu',
                     'depth' => 2,
                     'container' => false,
-                    'menu_class' => 'navbar-nav fs-5 d-flex flex-column align-items-start gap-3',
+                    'menu_class' => 'navbar-nav fs-5 d-flex flex-column align-items-center gap-3 w-100',
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                     //'walker' => new WP_Bootstrap_Navwalker(),
                 
@@ -328,53 +326,21 @@
                 ?>
             </div>
 
-            <!-- Optional Footer Section -->
-            <!-- <div class="offcanvas-footer d-flex  align-items-center justify-content-center gap-3 "
-                style="border-radius: 30px 30px 0 0; ; background: #25325F; height:72px;">
-                <a href="<?= esc_url(home_url('/')); ?>"
-                    style="border-radius: 8px; background-color: #E94271; height: 30px; width: 30px;"
-                    class="d-flex justify-content-center align-items-center">
-                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                        style="width: 12px; height: 18px; margin: 7px 0;">
-                </a>
-                <a href="<?= esc_url(home_url('/')); ?>"
-                    style="font-family: Manrope; font-size: 13px; font-weight: 600; color: white;">
-                    Let's Talk
-                </a>
-            </div> -->
-
-            <!-- Arrow and Let's Talk Section -->
-            <!-- <div style="border-radius: 30px 30px 0 0; d-flexbackground: #25325F; height:72px; offcanvas-footer">
-                <div class=" arrow-letstalk d-flex align-items-center justify-content-between letstalk-btn"
-                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; gap:10px;">
-                    <a href="<?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
-                        <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
-                            style="width:12px; height: 18px; margin:7px 0;">
-                    </a>
-                    <span
-                        style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
-                        Let's talk
-                    </span>
-                </div>
-            </div> -->
-
             <div class="offcanvas-footer d-flex  align-items-center justify-content-center gap-3 "
                 style="border-radius: 30px 30px 0 0; ; background: #25325F; height:72px;">
-                <div class="d-flex align-items-center justify-content-center gap-3 letstalk-btn"
+                <div class="d-flex align-items-center justify-content-between letstalk-btn"
                     style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271;">
-                    <a href=" <?= esc_url(home_url('/')); ?>" class="d-flex justify-content-center align-items-center">
+                    <a href="<?= esc_url(home_url('/contact')); ?>"
+                        class="d-flex justify-content-center align-items-center gap-2">
                         <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg" alt="Arrow"
                             style="width:12px; height: 18px; margin:7px 0;">
+                        <span
+                            style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
+                            Let's talk
+                        </span>
                     </a>
-                    <span
-                        style="color: #FFF; font-family: Manrope; font-size: 13px; font-weight: 600; line-height:15.6px;">
-                        Let's talk
-                    </span>
                 </div>
             </div>
-
-
-
         </div>
 
 

@@ -512,6 +512,10 @@
             margin-top: 67px;
         }
 
+        .back-to-home a img:hover {
+            opacity: 0.5;
+        }
+
     }
     </style>
 

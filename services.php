@@ -418,11 +418,15 @@
             width: 504px;
         }
     }
+
+    .breadcrumb a img:hover {
+        opacity: 0.5;
+    }
     </style>
 
 
     <!-- 1 -->
-    <div class="back-to-home" style="margin-top:23px; margin-bottom:23px; ">
+    <div class="back-to-home  breadcrumb" style="margin-top:23px; margin-bottom:23px; ">
         <a href="<?= get_field("back_to_home")['url'] ?>"
             class="d-flex justify-content-center align-items-center gap-2">
             <img src="<?= get_field("back_home_btn")['url'] ?>" alt="
