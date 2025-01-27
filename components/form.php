@@ -4,12 +4,13 @@ $formulier = get_field('formulier_groep');
 
 <div class="form_section" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
     data-aos-easing="ease-in-out">
-    <div class="container">
+    <div>
+        <!--  class="container" -->
         <div class="row">
-            <div class=" col-12 col-lg-3">
+            <div class="col-12 col-lg-3 test-block position-relative">
 
                 <!-- Left Side -->
-                <div class="row d-block d-md-none d-lg-none" style="margin-top:40px;">
+                <div class="row d-block d-md-none d-lg-none" style="margin-top:40px; padding:0 20px;">
                     <div class="col-lg-4">
                         <h2
                             style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
@@ -152,7 +153,7 @@ $formulier = get_field('formulier_groep');
                 </div>
             </div>
             <!-- Right column Contact Form -->
-            <div class="col-12  col-lg-9">
+            <div class="col-12  col-lg-9" style="padding: 0 26px; ">
                 <!-- here -->
                 <div class="row d-none d-md-flex d-lg-flex right-col-form" style="">
                     <div class="col-lg-4">

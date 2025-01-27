@@ -241,14 +241,55 @@
         margin-left: 10px;
     }
 
+    /* <div class="container " style="margin-top:350px">
+            <div class="row g-0" style="margin-top:50px;background-color:red;  border-radius:20px; ">
+                <div class="col-lg-6 p-5 test-block" style="position:relative;">
+                    <h1>hoiiiiiiiiiiiiiiiiiiii</h1>
+                </div>
+                <div class="col-lg-6 p-5">
 
+                    <h1>hoiiiiiiiiiiiiiiiiiiii</h1>
+                </div>
+            </div>
+        </div> 
+            .test-block::before {
+        content: " ";
+        position: absolute;
+        background-color: blue;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
 
+    }
+        
+        
+        */
+
+    .test-block::before {
+        content: " ";
+        position: absolute;
+        /* background-color: red; */
+        background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+        top: 0;
+        /* left: 0; */
+        /* z-index: 0; */
+        z-index: -1;
+        border-radius: 30px;
+        width: 97%;
+        /* height: 100%; */
+        height: 99.9%;
+
+    }
+
+    /* Form left container */
     .left-container {
         border-radius: 30px;
-        margin-top: ;
         color: white;
         height: 264px;
-        /* background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%); */
+        padding: 0 26px;
     }
 
     .left-content {
