@@ -52,9 +52,6 @@ $id = 1519;
         margin-top: unset;
     }
 
-
-
-
     .container-max-width {
         border-radius: 30px;
         /* max-width: 1700px; */
@@ -65,7 +62,6 @@ $id = 1519;
     .container-max-width .container-img {
         display: none;
     }
-
 
     .hero_white_block {
         height: 100%;
@@ -81,9 +77,6 @@ $id = 1519;
         position: static;
         margin-top: 0;
     }
-
-
-
 
     .inner_block {
         display: flex;
@@ -116,8 +109,6 @@ $id = 1519;
         font-style: normal;
         font-weight: 700;
         line-height: 27.2px;
-        /* width: 353px;
-        margin-bottom: 31px; */
     }
 
     .left-btn {
@@ -146,10 +137,63 @@ $id = 1519;
         font-style: normal;
         font-weight: 700;
         line-height: 27.2px;
-        /* width: 353px;
-        margin-bottom: 33px; */
     }
 
+    .desc {
+        border-bottom: 7px solid green;
+    }
+
+    .date {
+        border-left: unset;
+
+    }
+
+    .resource-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: space-between; */
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        height: 80px;
+        /* padding: 16px; */
+        /* padding: 8px; */
+        margin-bottom: 250px;
+        /* overflow: hidden; */
+    }
+
+    .resource-item:hover {
+        background-color: #f9f9f9;
+    }
+
+    .resource-item>div:first-child {
+        border-left: none;
+    }
+
+    .resource-item .arrow img {
+        width: 12px;
+        height: 18px;
+    }
+
+    /* .resource-item>div {
+        padding: 0 10px;
+        border-left: 1px solid #ccc;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    } */
+
+    .border-end {
+        border-left: 1px solid red;
+    }
+
+    .border-left {
+        border-left: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 20px 60px;
+        row-gap: 16px;
+    }
 
     @media (min-width: 768px) {
         .container-max-width .container-img {
@@ -159,7 +203,6 @@ $id = 1519;
         .hero_white_block {
             width: 380px;
             position: relative;
-            /* bottom: 582px; */
             bottom: 302px;
             left: 0;
             display: flex;
@@ -167,7 +210,6 @@ $id = 1519;
             align-items: flex-start;
             justify-content: center;
             padding: 30px;
-            /* height: 581.608px; */
             margin-top: unset;
         }
 
@@ -181,7 +223,7 @@ $id = 1519;
         }
 
         .border-left {
-            border-left: 1px solid white;
+            border-left: 1px solid red;
             display: flex;
             flex-direction: column;
             padding: 20px 0 20px 60px;
@@ -195,6 +237,10 @@ $id = 1519;
     }
 
     @media (min-width: 992px) {
+
+        .border-top {
+            border-top: 1px solid red;
+        }
 
         b,
         strong {
@@ -239,51 +285,21 @@ $id = 1519;
             margin: 10px 60px;
             gap: 37px;
         }
-    }
 
-    .resource-item {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        /* justify-content: space-between; */
-        border: 1px solid #ccc;
-        border-radius: 15px;
-        height: 80px;
-        /* padding: 16px; */
-        /* padding: 8px; */
-        margin-bottom: 10px;
-        /* overflow: hidden; */
-    }
+        .desc {
+            border-bottom: unset;
+        }
 
-    .resource-item:hover {
-        background-color: #f9f9f9;
-    }
+        .date {
+            border-left: 1px solid red;
 
-    .resource-item>div:first-child {
-        border-left: none;
+        }
     }
-
-    .resource-item .arrow img {
-        width: 12px;
-        height: 18px;
-    }
-
-    /* .resource-item>div {
-        padding: 0 10px;
-        border-left: 1px solid #ccc;
-        height: 80px;
-        display: flex;
-        align-items: center;
-    } */
     </style>
-
-
 
     <!-- BreadCrumb Section -->
     <?php get_template_part('components/breadcrumb') ?>
     <!--End  Of BreadCrumb Section -->
-
-
 
     <!-- Hero Section -->
     <div class="container container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -317,19 +333,6 @@ $id = 1519;
         </div>
     </div>
 
-
-
-
-
-
-    <!-- Form Section container  -->
-    <?php get_template_part('components/form') ?>
-    <!-- End of Form Section -->
-
-
-
-
-
     <?php
     $posts = get_posts([
         'post_type' => 'resources',
@@ -348,33 +351,49 @@ $id = 1519;
                         <?= $post->post_title ?>
                     </span>
                 </div>
-                <div class="col-12 col-lg-5 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 "
+                <div class="col-12 col-lg-5 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
                     style="background-color:">
                     <div class="description">
                         <?= $fields['voorbeeld'] ?>
                     </div>
                 </div>
-                <div class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 "
-                    style="border-left:1px solid red;background-color: ">
-                    <div class="date">
+                <div class="d-none d-lg-flex col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 date "
+                    style="background-color: ">
+                    <div class="">
                         Published <?= $fields['datum'] ?>
                     </div>
                 </div>
 
-                <div class="col flex-shrink-0  justify-content-center  d-flex align-items-center h-100"
+                <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
                     style="background-color:">
                     <div class="d-flex align-items-center justify-content-center rounded  arrow"
                         style="width: 30px; height: 30px; background-color:#274083;">
                         <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
                     </div>
                 </div>
+                <!-- SM Screen -->
+                <div class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4 date flex-row"
+                    style="background-color:">
+                    <div class="date">
+                        Published <?= $fields['datum'] ?>
+                    </div>
+                    <div class="d-flex d-lg-none border-left"></div>
+                    <div class="d-flex align-items-center justify-content-center rounded  arrow"
+                        style="width: 30px; height: 30px; background-color:#274083;">
+                        <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                    </div>
+                </div>
+
             </a>
         </div>
     </div>
     <?php
     }
+    wp_reset_postdata();
     ?>
-
+    <!-- Form Section container  -->
+    <?php get_template_part('components/form') ?>
+    <!-- End of Form Section -->
 
 
 </main>
