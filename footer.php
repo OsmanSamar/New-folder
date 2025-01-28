@@ -251,15 +251,12 @@
                             <img src="<?= esc_url(get_template_directory_uri()); ?>/images/Logo.svg" alt="Logo"
                                 style="height: 43px;width: 88px;">
                         </a>
-
                         <span class="newsletter_text" style="margin:20px 0;">
                             <?= get_field("newsletter_text", 'option') ?>
                         </span>
-
                         <div class="email-field-container" style="margin:20px 0;">
                             <input type="email" id="email" name="email" placeholder="Enter your email" required
                                 style="margin-left:2px;">
-
                             <!-- Btn & text -->
                             <div class="d-flex justify-content-between align-items-center gap-2 submit-btn"
                                 style="height:39.261px;padding: 12px 15px; border-radius: 8px;background: #274083 !important;">
@@ -271,9 +268,7 @@
                                     <?= get_field("submitlink", 'option')['title'] ?>
                                 </a>
                             </div>
-
                         </div>
-
                         <span
                             style=" color:#6A7291; font-family: Manrope; font-size: 13px;font-style: normal;font-weight: 500; line-height: 23.4px; margin:20px 0;">
                             <?= get_field("privacy_statement") ?>
@@ -326,12 +321,11 @@
                     }
                     ?>
                 </div>
-
             </div>
         </div>
 
-        <!-- Second Line  -->
 
+        <!-- Second Line  -->
         <div class="row">
             <div class="col-12 col-lg-12">
                 <div class="row d-flex d-md-flex d-lg-flex  align-items-center justify-content-around second-arrow"
@@ -376,23 +370,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--  -->
     <div class="row mt-5">
         <div class="col-12 col-lg-8">
@@ -402,33 +379,25 @@
                     style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
                     <?= get_field("copyright", 'option') ?>
                 </span>
-
-
                 <span
                     style="color:#6A7291; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-
                     <?= get_field("agemenevoorwaarden", 'option') ?>
                 </span>
                 <span
                     style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
-
                     <?= get_field("verwerkersovereenkomst", 'option') ?>
                 </span>
                 <span
                     style="color:#6A7291;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 500;line-height: 23.4px">
                     <?= get_field("privacystatement", 'option') ?>
-
                 </span>
-
             </div>
         </div>
-
         <div class="col-12 col-lg-2"></div>
         <div class="col-12 col-lg-2">
             <div
                 class="d-flex flex-column align-items-flex-start  flex-md-row flex-lg-row  align-items-md-center align-items-lg-end justify-content-end ">
             </div>
-
         </div>
     </div>
 </div>

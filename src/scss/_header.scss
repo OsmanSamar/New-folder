@@ -26,3 +26,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .offcanvas-body ul li {
   margin-bottom: 1rem;
 }
+
+#breadcrumbs span:first-child > a {
+  font-size: 0;
+  background-image: url("/sue/wp-content/themes/New folder/images/home.svg");
+  width: 20px;
+  height: 20px;
+  // display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
