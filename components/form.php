@@ -13,12 +13,12 @@ $formulier = get_field('formulier_groep');
                 <div class="row d-block d-md-none d-lg-none" style="margin-top:40px; padding:0 20px;">
                     <div class="col-lg-4">
                         <h2
-                            style="color: var(--Secondary-400, #FFF);font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
+                            style="color: #FFF;font-family: Manrope;font-size: 26px;font-style: normal;font-weight: 700;line-height: 150%; /* 39px */">
                             <?= $formulier['form_question'] ?>
                         </h2>
                     </div>
                     <div class="col-lg-7 offset-lg-1"
-                        style="color: var(--Neutral-400, #9AA0B7); font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
+                        style="color: #9AA0B7; font-family: Manrope;font-size: 16px; font-style: normal;  font-weight: 700; line-height: 170%; /* 27.2px */">
                         <?= $formulier['formtext'] ?>
                     </div>
                 </div>
@@ -30,7 +30,7 @@ $formulier = get_field('formulier_groep');
                         <img src="<?= $formulier['image']['url'] ?>" alt="<?= $formulier['image']['alt'] ?>"
                             style="width:120px; height:120px; border-radius:15px; object-fit:cover; object-position:center" />
                         <div class="d-flex flex-column">
-                            <span class="first-name" style=" ">
+                            <span class="first-name">
                                 <?= $formulier['name'] ?>
                             </span>
                             <span class="d-none d-md-flex d-lg-flex"
@@ -108,7 +108,7 @@ $formulier = get_field('formulier_groep');
 
                         <!--LG -->
                         <div class="d-none d-md-none d-lg-block"
-                            style=" border-bottom: 1px solid  white; margin:30px 0;width:204px;">
+                            style="border-bottom: 1px solid  white; margin:30px 0;width:204px;">
                         </div>
                     </div>
                     <!-- LG -->

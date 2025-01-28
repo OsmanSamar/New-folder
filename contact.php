@@ -342,20 +342,11 @@
     </style>
     <div>
 
+        <!-- BreadCrumb Section -->
+        <?php get_template_part('components/breadcrumb') ?>
+        <!--End  Of BreadCrumb Section -->
 
-        <!-- 1   class="container" -->
-        <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
-            <a href="<?= get_field("backtohome")['url'] ?>"
-                class="d-flex justify-content-center align-items-center gap-2">
-                <img src="<?= get_field("backhomebtn")['url'] ?>" alt="<?= get_field("backhomebtn")['alt'] ?>"
-                    style="width:20px; height:20px; margin:7px 0;" />
 
-                <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                        alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px; " /> </span>
-                <span class="first">Contact us</span>
-
-            </a>
-        </div>
 
         <!-- 2 -->
         <div class="border-container" style="margin-top:210px;" data-aos="fade-up" data-aos-offset="100"
@@ -454,14 +445,7 @@
 
 
 
-
-
-
-
-
-
-
-        <!-- 2 -->
+        <!-- 3 -->
         <!-- <div class="container">
            
             <div class="row " style="margin-top:210px;"></div>
@@ -516,8 +500,7 @@
         </div> -->
 
 
-        <!-- 3 -->
-
+        <!-- 4 -->
         <div class="border-container2" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
             data-aos-duration="500" data-aos-easing="ease-in-out">
             <div class="container">

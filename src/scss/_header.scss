@@ -29,12 +29,66 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 #breadcrumbs span:first-child > a {
   font-size: 0;
-  background-image: url("/sue/wp-content/themes/New folder/images/home.svg");
-  width: 20px;
-  height: 20px;
-  // display: inline-block;
+  background-image: url("/sue/wp-content/themes/New folder/images/backhome.svg");
+  background-repeat: no-repeat;
+  background-size: contain; /* Ensure the image fits within the element */
+  width: 18px;
+  height: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   object-fit: cover;
+  margin-top: 1px;
+}
+
+#breadcrumbs span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#breadcrumbs span:first-child > a:hover {
+  opacity: 0.5;
+}
+
+#breadcrumbs span:nth-child(2) > a {
+  // color: #39456e;
+  color: rgb(113, 124, 158);
+  transition: color 0.2s ease;
+
+  // transition: 0.2s ease;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+#breadcrumbs span:nth-child(3) > a {
+  color: rgb(113, 124, 158);
+  transition: color 0.2s ease;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+#breadcrumbs span:nth-child(2) > a:hover {
+  color: #25325f;
+}
+
+/* Ensure the styling only applies when there are exactly three spans with links */
+#breadcrumbs span:nth-child(2) > a:only-of-type {
+  // color: #39456e;
+  transition: color 0.2s ease;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+#breadcrumbs span:nth-child(2) > a:only-of-type:hover {
+  color: #25325f;
 }

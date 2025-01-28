@@ -7,8 +7,8 @@
 
     <!-- 1 -->
     <div class="back-to-home d-flex align-items-center justify-content-center"
-        style="margin-top:170px; margin-bottom:; ">
-        <?php if (false) {
+        style="margin-top:123px; margin-bottom:-123px; ">
+        <!-- <?php if (false) {
             ?> <a href="<?= $breadcrumb['backtohome']['url'] ?>"
             class="d-flex justify-content-center align-items-center gap-2">
             <img src="<?= $breadcrumb['backtohomeimg']['url'] ?>" alt="<?= $breadcrumb['backtohomeimg']['alt'] ?>"
@@ -24,7 +24,7 @@
         </a>
         <?php
         }
-        ?>
+        ?> -->
         <?php
         if (function_exists('yoast_breadcrumb')) {
             yoast_breadcrumb('<p id="breadcrumbs">', '</p>');

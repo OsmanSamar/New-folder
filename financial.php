@@ -724,24 +724,9 @@
     }
     </style>
 
-    <!-- 1 -->
-    <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
-        <div class="d-flex justify-content-center align-items-center gap-2">
-            <a href="<?= get_field("backtohome")['url'] ?>">
-                <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
-                    style="width:20px; height:20px; margin:7px 0;" />
-            </a>
-            <a href="<?= get_field("backtoindustries")['url'] ?>">
-                <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                        alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-                <span class="first">Industries</span>
-            </a>
-            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-            <span class="last">Financial</span>
-        </div>
-
-    </div>
+    <!-- BreadCrumb Section -->
+    <?php get_template_part('components/breadcrumb') ?>
+    <!--End  Of BreadCrumb Section -->
 
 
     <!-- 2 -->

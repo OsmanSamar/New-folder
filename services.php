@@ -7,37 +7,6 @@
 
 
     <style>
-    .back-to-home {
-        position: absolute;
-        top: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 10;
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-
-    .back-to-home a {
-        text-decoration: none;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-    .back-to-home img {
-        margin-left: 5px;
-        vertical-align: middle;
-    }
-
-    .last {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-    }
-
     b,
     strong {
         color: #e94271;
@@ -51,13 +20,11 @@
         border-radius: 30px;
         max-width: 1700px;
         height: 581px;
-        margin: 200px auto 10px;
-
+        margin: 50px auto 20px;
     }
 
 
     .hero_blue_block {
-
         height: 100%;
         border-radius: 40px;
         background: #25325F;
@@ -69,7 +36,6 @@
         justify-content: center;
         padding: 30px;
         margin-top: -400px;
-
     }
 
 
@@ -425,19 +391,12 @@
     </style>
 
 
-    <!-- 1 -->
-    <div class="back-to-home  breadcrumb" style="margin-top:23px; margin-bottom:23px; ">
-        <a href="<?= get_field("back_to_home")['url'] ?>"
-            class="d-flex justify-content-center align-items-center gap-2">
-            <img src="<?= get_field("back_home_btn")['url'] ?>" alt="
-            <?= get_field("back_home_btn")['alt'] ?>" style="width:20px; height:20px; margin:7px 0;" />
 
-            <span class="separator"><img src="<?= get_field("separator")['url'] ?>" alt="
-                <?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-            <span class="last">Services</span>
-        </a>
+    <!-- BreadCrumb Section -->
+    <div style="margin-bottom:unset">
+        <?php get_template_part('components/breadcrumb') ?>
     </div>
-
+    <!--End  Of BreadCrumb Section -->
 
 
     <!-- Hero Section -->

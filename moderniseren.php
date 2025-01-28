@@ -4,123 +4,115 @@
 ?>
 
 <main class="moderniseren flex-grow-1">
-    <style>
-        b,
-        strong {
-            color: #e94271;
-            font-family: inherit;
-            font-size: inherit;
-            font-style: inherit;
-            line-height: inherit;
-        }
 
+    <style>
+    b,
+    strong {
+        color: #e94271;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
+    }
+
+    .blue-container {
+        border-radius: 40px;
+        background: #25325F;
+        height: 400px;
+        max-width: 1700px;
+        padding: 30px;
+        margin: 2rem auto;
+    }
+
+    .container-let-talk {
+        display: flex;
+
+        align-items: flex-start;
+
+        justify-content: space-around;
+
+        flex-direction: column;
+    }
+
+    .left-side-img-text {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    .name-class {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    @media (min-width: 768px) {
         .blue-container {
-            border-radius: 40px;
-            background: #25325F;
-            height: 400px;
-            max-width: 1700px;
-            padding: 30px;
-            margin: 2rem auto;
+            height: 212px;
         }
 
         .container-let-talk {
-            display: flex;
-
-            align-items: flex-start;
-
-            justify-content: space-around;
-
-            flex-direction: column;
+            flex-direction: row;
         }
 
         .left-side-img-text {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
+            align-items: center;
             flex-direction: row;
-            align-items: flex-start;
+        }
 
+
+        .first-name-name {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        b,
+        strong {
+            font-size: inherit;
+        }
+
+        .blue-container {
+            height: 212px;
+        }
+
+        .container-let-talk {
+            flex-direction: row;
+        }
+
+        .left-side-img-text {
+            align-items: center;
+            flex-direction: row;
         }
 
         .name-class {
             display: flex;
-            justify-content: center;
-            flex-direction: column;
-
+            flex-direction: row;
+            justify-content: flex-start;
         }
 
-        @media (min-width: 768px) {
-            .blue-container {
-                height: 212px;
-            }
-
-            .container-let-talk {
-                flex-direction: row;
-            }
-
-            .left-side-img-text {
-                align-items: center;
-                flex-direction: row;
-            }
-
-
-            .first-name-name {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
+        .lets-talk-gota-question {
+            font-size: 35px;
+            font-weight: 600;
+            line-height: 50.4px;
         }
-
-        @media (min-width: 992px) {
-
-            b,
-            strong {
-                font-size: inherit;
-            }
-
-            .blue-container {
-                height: 212px;
-            }
-
-            .container-let-talk {
-                flex-direction: row;
-            }
-
-            .left-side-img-text {
-                align-items: center;
-                flex-direction: row;
-            }
-
-            .name-class {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-start;
-            }
-
-            .lets-talk-gota-question {
-                font-size: 35px;
-                font-weight: 600;
-                line-height: 50.4px;
-            }
-        }
+    }
     </style>
     <div>
 
-        <!--1-->
-        <div class="back-to-home" style="margin-top:170px;  ">
-            <a href="<?= get_field("backtohome")['url'] ?>"
-                class="d-flex justify-content-center align-items-center gap-2">
-                <img src="<?= get_field("backhomeimg")['url'] ?>" alt="<?= get_field("backhomeimg")['alt'] ?>"
-                    style="width:20px; height:20px; margin:7px 0;" />
 
-                <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                        alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px; " /> </span>
-                <span class="first">Services</span>
-                <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                        alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-                <span class="last">Moderniseren</span>
-            </a>
-        </div>
+        <!-- BreadCrumb Section -->
+        <?php get_template_part('components/breadcrumb') ?>
+        <!--End  Of BreadCrumb Section -->
+
+
 
         <!-- 2 -->
         <div class="container">

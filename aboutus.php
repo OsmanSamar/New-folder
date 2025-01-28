@@ -377,9 +377,6 @@
         }
 
 
-        /* .form_section {
-            height: 1098px;
-        } */
 
         .left-content {
             display: flex;
@@ -512,26 +509,17 @@
             margin-top: 67px;
         }
 
-        .back-to-home a img:hover {
-            opacity: 0.5;
-        }
+
 
     }
     </style>
 
-    <!-- 1 -->
-    <div class="back-to-home" style="margin-top:170px; margin-bottom:-123px; ">
-        <a href="<?= get_field("back_to_home")['url'] ?>"
-            class="d-flex justify-content-center align-items-center gap-2">
-            <img src="<?= get_field("back_home_btn")['url'] ?>" alt="<?= get_field("back_home_btn")['alt'] ?>"
-                style="width:20px; height:20px; margin:7px 0;" />
-            <span class="separator"><img src="<?= get_field("separator")['url'] ?>"
-                    alt="<?= get_field("separator")['alt'] ?>" style="width:3px; height:6px;" /> </span>
-            <span class="first">About us</span>
-        </a>
-    </div>
 
-    <!-- 2 -->
+    <!-- BreadCrumb Section -->
+    <?php get_template_part('components/breadcrumb') ?>
+    <!--End  Of BreadCrumb Section -->
+
+
     <!-- Hero Section -->
     <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
         data-aos-duration="500" data-aos-easing="ease-in-out">

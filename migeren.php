@@ -6,6 +6,10 @@
 <main class="migeren flex-grow-1">
     <div>
 
+        <!-- BreadCrumb Section -->
+        <?php get_template_part('components/breadcrumb') ?>
+        <!--End  Of BreadCrumb Section -->
+
     </div>
 
 
