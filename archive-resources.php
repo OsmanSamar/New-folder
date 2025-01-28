@@ -57,8 +57,8 @@ $id = 1519;
 
     .container-max-width {
         border-radius: 30px;
-        max-width: 1700px;
-        height: 581px;
+        /* max-width: 1700px; */
+        min-height: 381px;
         margin: 200px auto 10px;
     }
 
@@ -67,10 +67,10 @@ $id = 1519;
     }
 
 
-    .hero_blue_block {
+    .hero_white_block {
         height: 100%;
         border-radius: 40px;
-        background: #25325F;
+        background: #FFF;
         position: relative;
         left: 0;
         display: flex;
@@ -78,13 +78,12 @@ $id = 1519;
         align-items: center;
         justify-content: center;
         padding: 30px;
-    }
-
-
-    .hero_blue_block {
         position: static;
         margin-top: 0;
     }
+
+
+
 
     .inner_block {
         display: flex;
@@ -113,14 +112,43 @@ $id = 1519;
     .hero_text {
         color: #9AA0B7;
         font-family: Manrope;
-        font-size: 16px;
+        font-size: 36px;
         font-style: normal;
         font-weight: 700;
         line-height: 27.2px;
-        width: 353px;
-        margin-bottom: 31px;
+        /* width: 353px;
+        margin-bottom: 31px; */
     }
 
+    .left-btn {
+        width: fit-content;
+        height: 34px;
+        border-radius: 100px;
+        background: #274083;
+        padding: 3px 11px;
+        text-align: center;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .hero_text {
+        color: #9AA0B7;
+        font-family: Manrope;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+        /* width: 353px;
+        margin-bottom: 33px; */
+    }
 
 
     @media (min-width: 768px) {
@@ -128,17 +156,18 @@ $id = 1519;
             display: block;
         }
 
-        .hero_blue_block {
-            width: 458px;
+        .hero_white_block {
+            width: 380px;
             position: relative;
-            bottom: 582px;
+            /* bottom: 582px; */
+            bottom: 302px;
             left: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             padding: 30px;
-            height: 581.608px;
+            /* height: 581.608px; */
             margin-top: unset;
         }
 
@@ -157,6 +186,10 @@ $id = 1519;
             flex-direction: column;
             padding: 20px 0 20px 60px;
             row-gap: 16px;
+        }
+
+        .inner_block {
+            gap: 36px;
         }
 
     }
@@ -188,10 +221,10 @@ $id = 1519;
             margin-top: 67px;
         }
 
-        .hero_blue_block {
+        .hero_white_block {
             width: 531px;
             position: relative;
-            bottom: 582px;
+            bottom: 303px;
             left: 0;
             display: flex;
             flex-direction: column;
@@ -204,8 +237,44 @@ $id = 1519;
 
         .inner_block {
             margin: 10px 60px;
+            gap: 37px;
         }
     }
+
+    .resource-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: space-between; */
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        height: 80px;
+        /* padding: 16px; */
+        /* padding: 8px; */
+        margin-bottom: 10px;
+        /* overflow: hidden; */
+    }
+
+    .resource-item:hover {
+        background-color: #f9f9f9;
+    }
+
+    .resource-item>div:first-child {
+        border-left: none;
+    }
+
+    .resource-item .arrow img {
+        width: 12px;
+        height: 18px;
+    }
+
+    /* .resource-item>div {
+        padding: 0 10px;
+        border-left: 1px solid #ccc;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    } */
     </style>
 
 
@@ -217,56 +286,36 @@ $id = 1519;
 
 
     <!-- Hero Section -->
-    <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+    <div class="container container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
         data-aos-duration="1000" data-aos-easing="ease-in-out">
-        <img src="<?= get_field("heroimg", $id)['url'] ?>" alt="<?= get_field("heroimg")['title'] ?>"
-            class="container-img" style=" height: 581px; border-radius: 40px; object-fit: cover;" />
-        <div class="hero_blue_block">
-            <div class="container inner_block">
-                <div class="d-flex align-items-center justify-content-between gap-2">
-                    <div class="d-flex align-items-center justify-content-center rounded "
-                        style="width: 30px; height: 30px; background-color:#FFF;">
-                        <img src="<?= get_field("back_img")['url'] ?>" alt="<?= get_field("back_img")['alt'] ?>"
-                            style="width: 12px; height: 18px;" />
+        <div class="row">
+            <div class="">
+                <img src="<?= get_field("heroimg", $id)['url'] ?>" alt="<?= get_field("heroimg")['title'] ?>"
+                    class="container-img" style=" height: 302px; border-radius: 40px; object-fit: cover;" />
+            </div>
+            <div class="hero_white_block ">
+                <div class="container inner_block">
+                    <span class="left-btn">
+                        <?= get_field("herotitle") ?>
+                    </span>
+                    <span class="hero_text">
+                        <?= get_field("herotext") ?>
+                    </span>
+                    <div class="d-flex align-items-center justify-content-between gap-2">
+                        <div class="d-flex align-items-center justify-content-center rounded "
+                            style="width: 30px; height: 30px; background-color:#274083;">
+                            <img src="<?= get_field("backimg")['url'] ?>" alt="<?= get_field("backimg")['alt'] ?>"
+                                style="width: 12px; height: 18px;" />
+                        </div>
+                        <a href="<?= get_field("backlink")['url'] ?>"
+                            style="color:#274083;; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
+                            <?= get_field("backlink")['title'] ?>
+                        </a>
                     </div>
-                    <a href="<?= get_field("backlink")['url'] ?>"
-                        style="color:#FFF; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
-
-
-                        <?= get_field("backlink")['title'] ?>
-                    </a>
                 </div>
-                <span class="hero_title">
-                    <?= get_field("herotitle") ?>
-                </span>
-                <span class="hero_text">
-                    <?= get_field("herotext") ?>
-                </span>
-
-
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -277,6 +326,10 @@ $id = 1519;
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
 
+
+
+
+
     <?php
     $posts = get_posts([
         'post_type' => 'resources',
@@ -285,28 +338,44 @@ $id = 1519;
 
     foreach ($posts as $post) {
         $fields = get_fields($post->ID);
-
         ?>
-    <a href="<?= get_permalink($post) ?>">
-        <div class="title">
-            <?= $post->post_title ?>
-        </div>
-        <div class="description">
-            <?= $fields['voorbeeld'] ?>
-        </div>
-        <div class="date">
-            published
-            <?= $fields['datum'] ?>
-        </div>
+    <div class="container">
+        <div class="row">
+            <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
+                <div class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4"
+                    style="background-color:#274083; border-radius:15px 0px 0px 15px;">
+                    <span class="title ">
+                        <?= $post->post_title ?>
+                    </span>
+                </div>
+                <div class="col-12 col-lg-5 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 "
+                    style="background-color:">
+                    <div class="description">
+                        <?= $fields['voorbeeld'] ?>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 "
+                    style="border-left:1px solid red;background-color: ">
+                    <div class="date">
+                        Published <?= $fields['datum'] ?>
+                    </div>
+                </div>
 
-        <div class="arrow">
-            <img src="/arrow.svg" alt="">
+                <div class="col flex-shrink-0  justify-content-center  d-flex align-items-center h-100"
+                    style="background-color:">
+                    <div class="d-flex align-items-center justify-content-center rounded  arrow"
+                        style="width: 30px; height: 30px; background-color:#274083;">
+                        <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                    </div>
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
     <?php
-
     }
     ?>
+
+
 
 </main>
 
