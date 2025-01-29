@@ -83,14 +83,89 @@ hallo
 
         .next-section {
             margin-top: 70px;
-            padding: 20px;
+            /* padding: 20px;
             background-color: #274083;
             color: white;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 8px; */
         }
 
+        .left-btn {
+            width: fit-content;
+            height: 34px;
+            border-radius: 100px;
+            background: #274083;
+            padding: 3px 11px;
+            text-align: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .first_title {
+            color: #25325F;
+            font-family: Sora;
+            font-size: 29px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 44px;
+            margin-top: 45px;
+            margin-bottom: 31px;
+        }
+
+        .first_text {
+
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        .form_section {
+            border-radius: 30px;
+            background: #25325F;
+            max-width: 1700px;
+            /* height: 1400px; */
+            margin: 50px auto 50px;
+        }
+
+        .test-block::before {
+            content: " ";
+            position: absolute;
+            background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+            top: 0;
+            z-index: -1;
+            border-radius: 30px;
+            width: 97%;
+            height: 100%;
+        }
+
+        .left-container {
+            border-radius: 30px;
+            color: white;
+            height: 264px;
+            padding: 0 26px;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
+        }
+
+        .right-col-form {
+            margin-top: unset;
+        }
 
 
         @media (min-width: 768px) {
@@ -120,6 +195,25 @@ hallo
             .hero_title {
                 font-size: 35px;
             }
+
+
+            .left-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 50px;
+                gap: 20px;
+            }
+
+            .border-left {
+                border-left: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                padding: 20px 0 20px 60px;
+                row-gap: 16px;
+            }
+
         }
 
         @media(min-width: 992px) {
@@ -140,6 +234,27 @@ hallo
 
             .hero_title {
                 font-size: 35px;
+            }
+
+
+            .form_section {
+                height: 571px;
+            }
+
+            .left-container {
+                height: 500px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: normal;
+                margin-top: 67px;
+            }
+
+            .right-col-form {
+                margin-top: 67px;
             }
 
         }
@@ -179,26 +294,41 @@ hallo
 
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-4 sidebar">
-                    <!-- <h3>Sidebar </h3>
-                    <p>The first text</p> -->
-
+                <div class="col-lg-3 sidebar">
                     <?php foreach (get_field("stickysidecontent") as $content) {
-                        // var_dump($content);
+                        //   var_dump($content);
                         if ($content['acf_fc_layout'] == 'text') {
                             ?>
-                            <h3><?= $content['firsttitle'] ?></h3>
-                            <div><?= $content['firsttext'] ?></div>
-                            <h3><?= $content['secondtitle'] ?></h3>
-                            <div><?= $content['secondtext'] ?></div>
-                            <div><?= $content['thirdtitle'] ?></div>
+                            <h3 class="left-btn"><?= $content['firsttitle'] ?></h3>
+                            <div style="margin-top: 2rem; margin-bottom: 2rem;"><?= $content['firsttext'] ?></div>
+                            <h3 class="left-btn"><?= $content['secondtitle'] ?></h3>
+                            <div class="d-flex justify-content-start align-items-baseline gap-2"
+                                style="margin-top: 2rem; margin-bottom: 2rem;">
+                                <a href="#vivamusnoncommodonulla" class="d-flex align-items-center text-decoration-none">
+                                    <p class="mb-0"><?= $content['secondtext'] ?></p>
+                                    <div class="d-flex align-items-center justify-content-center ms-2">
+                                        <img src="<?= $content['arrowimg']['url'] ?>" alt="<?= $content['arrowimg']['alt'] ?>"
+                                            style="width: 4px; height: 8px;" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-start align-items-baseline gap-2">
+                                <a href="#pellentesquebibendumefficiturduisedconvallistinciduntelitegetiaculis"
+                                    class="d-flex align-items-center text-decoration-none">
+                                    <p class="mb-0"><?= $content['thirdtitle'] ?></p>
+                                    <div class="d-flex align-items-center justify-content-center ms-2">
+                                        <img src="<?= $content['arrowimg']['url'] ?>" alt="<?= $content['arrowimg']['alt'] ?>"
+                                            style="width: 4px; height: 8px;" />
+                                    </div>
+                                </a>
+                            </div>
                             <?php
                         }
                     }
                     ?>
                 </div>
 
+                <div class="col-lg-1 d-none d-lg-block"></div>
 
                 <div class="col-lg-8 content">
 
@@ -206,10 +336,18 @@ hallo
                         // var_dump($content);
                         if ($content['acf_fc_layout'] == 'text') {
                             ?>
-                            <h3><?= $content['firsttitel'] ?></h3>
-                            <div><?= $content['firsttext'] ?></div>
-                            <h3><?= $content['secondtitel'] ?></h3>
-                            <div><?= $content['secondtext'] ?></div>
+
+                            <div id="vivamusnoncommodonulla">
+                                <h1 class="first_title"><?= $content['firsttitel'] ?></h1>
+                                <span class="first_text"> <?= $content['firsttext'] ?></span>
+                            </div>
+
+                            <div id="pellentesquebibendumefficiturduisedconvallistinciduntelitegetiaculis">
+                                <h1 class="first_title">
+                                    <?= $content['secondtitel'] ?>
+                                </h1>
+                                <span class="first_text"> <?= $content['secondtext'] ?></span>
+                            </div>
                             <?php
                         }
                     }
@@ -220,18 +358,13 @@ hallo
         </div>
 
 
+
+
         <section class="next-section">
-            <h3>Next Section</h3>
-            <p>Vivamus non commodo nulla
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean gravida, urna quis faucibus
-                dapibus, nisi augue convallis metus, eget pretium orci felis et mauris. Curabitur tristique odio
-                turpis, id iaculis justo viverra a. Cras et venenatis dolor, sed maximus dolor. Mauris elementum
-                elit urna, sit amet tristique justo sagittis sit amet. Donec vehicula ligula nisl, nec laoreet
-                erat tempor et. Donec nec cursus sapien. Donec bibendum hendrerit ullamcorper. Integer
-                sollicitudin, urna a placerat venenatis, ligula mauris tincidunt nisl, in eleifend eros nunc in
-                leo. Nunc sit amet nisl vitae nisl pulvinar efficitur. In scelerisque sed diam porttitor
-                egestas. Maecenas id neque ac odio porttitor tempus at eget purus. Vivamus non commodo nulla.
-            </p>
+            <!-- Form Section container  -->
+            <?php get_template_part('components/form') ?>
+            <!-- End of Form Section -->
+
         </section>
 
 

@@ -175,13 +175,7 @@ $id = 1519;
             height: 18px;
         }
 
-        /* .resource-item>div {
-        padding: 0 10px;
-        border-left: 1px solid #ccc;
-        height: 80px;
-        display: flex;
-        align-items: center;
-    } */
+
 
         .border-end {
             border-left: 1px solid red;
