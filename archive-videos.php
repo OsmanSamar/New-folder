@@ -381,8 +381,6 @@ $id = 1564;
                                         <?= $content['videotitle'] ?>
                                     </div>
                                 </div>
-
-
                                 <div class="d-flex align-items-center justify-content-start gap-2"
                                     style="margin-top: 1rem; margin-left:1rem">
                                     <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
@@ -420,6 +418,22 @@ $id = 1564;
                     <div class="video-right" style="flex: 1; padding: 20px;">
                         <h2 id="modalTitleText"></h2>
                         <p id="modalText"></p>
+
+                        <!-- Let's talk btn -->
+                        <div class=" d-flex align-items-center justify-content-between ">
+                            <a href="<?= esc_url(home_url('/contact')); ?>"
+                                class="d-flex justify-content-center align-items-center gap-2">
+                                <div class=" d-flex align-items-center justify-content-between"
+                                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; ">
+                                    <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg"
+                                        alt="Arrow" style="width:12px; height: 18px; margin:7px 0;">
+                                </div>
+                                <span
+                                    style="color: #6A7291; font-family: Manrope; font-size: 16px; font-weight: 700; line-height:15.6px;">
+                                    Let's talk
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -446,23 +460,23 @@ $id = 1564;
             const modalTitleText = document.getElementById("modalTitleText");
             const modalText = document.getElementById("modalText");
 
-            // When clicking on a video
-            videoTriggers.forEach(trigger => {
-                trigger.addEventListener("click", function () {
-                    const videoSrc = this.getAttribute("data-video");
-                    const videoTitle = this.getAttribute("data-title");
-                    const videoDescription = this.getAttribute("data-text");
+        // When clicking on a video
+        videoTri ggers.forEach(trigger => {
+            trig ger.addEventListener("click", function () {
+                const videoSrc = this.getAttribute("data-video");
+                const videoTitle = this.getAttribute("data-title");
+                const videoDescription = this.getAttribute("data-text");
 
-                    modalTitle.innerText = videoTitle;
-                    modalTitleText.innerText = videoTitle;
-                    modalText.innerText = videoDescription;
-                    modalVideo.src = videoSrc + "?autoplay=1"; // Autoplay when modal opens
-                });
+                modalTitle.innerText = videoTitle;
+                modalTitleText.innerText = videoTitle;
+                modalText.innerText = videoDescription;
+                modalVideo.src = videoSrc + "?autoplay=1"; // Autoplay when modal opens
+            });
             });
 
             // Stop video when modal closes
             modal.addEventListener("hidden.bs.modal", function () {
-                modalVideo.src = "";
+            script modalVideo.src = "";
             });
         });
     </script>
