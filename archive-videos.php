@@ -460,23 +460,23 @@ $id = 1564;
             const modalTitleText = document.getElementById("modalTitleText");
             const modalText = document.getElementById("modalText");
 
-        // When clicking on a video
-        videoTri ggers.forEach(trigger => {
-            trig ger.addEventListener("click", function () {
-                const videoSrc = this.getAttribute("data-video");
-                const videoTitle = this.getAttribute("data-title");
-                const videoDescription = this.getAttribute("data-text");
+            // When clicking on a video
+            videoTriggers.forEach(trigger => {
+                trigger.addEventListener("click", function () {
+                    const videoSrc = this.getAttribute("data-video");
+                    const videoTitle = this.getAttribute("data-title");
+                    const videoDescription = this.getAttribute("data-text");
 
-                modalTitle.innerText = videoTitle;
-                modalTitleText.innerText = videoTitle;
-                modalText.innerText = videoDescription;
-                modalVideo.src = videoSrc + "?autoplay=1"; // Autoplay when modal opens
-            });
+                    modalTitle.innerText = videoTitle;
+                    modalTitleText.innerText = videoTitle;
+                    modalText.innerText = videoDescription;
+                    modalVideo.src = videoSrc + "?autoplay=1"; // Autoplay when modal opens
+                });
             });
 
             // Stop video when modal closes
             modal.addEventListener("hidden.bs.modal", function () {
-            script modalVideo.src = "";
+                modalVideo.src = "";
             });
         });
     </script>
