@@ -64,16 +64,16 @@ $id = 1564;
         }
 
         .hero_white_block {
-            height: 100%;
+            height: 306px;
             border-radius: 40px;
-            background: #FFF;
+            background: #25325f;
             position: relative;
             left: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 30px;
+            padding: 53px;
             position: static;
             margin-top: 0;
         }
@@ -103,7 +103,7 @@ $id = 1564;
         }
 
         .hero_text {
-            color: #9AA0B7;
+            color: #FFF;
             font-family: Manrope;
             font-size: 36px;
             font-style: normal;
@@ -115,7 +115,8 @@ $id = 1564;
             width: fit-content;
             height: 34px;
             border-radius: 100px;
-            background: #274083;
+            /* background: #274083; */
+            background: #FFF;
             padding: 3px 11px;
             text-align: center;
             color: #FFF;
@@ -131,7 +132,8 @@ $id = 1564;
 
 
         .hero_text {
-            color: #9AA0B7;
+            /* color: #9AA0B7; */
+            color: #FFF;
             font-family: Manrope;
             font-size: 36px;
             font-style: normal;
@@ -140,8 +142,82 @@ $id = 1564;
         }
 
 
+        .articles_page_link::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 21px;
+            opacity: 0.25;
+            /* background: #CBCFDE; */
+            background: green;
+            margin-left: 13px;
+            margin-right: 13px;
+            vertical-align: middle;
+        }
+
+
+
+        .video-title-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Video Popup Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 60%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .video-modal-content {
+            display: flex;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .video-left {
+            width: 60%;
+        }
+
+        .video-right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+
 
         @media (min-width: 768px) {
+
+            .container-max-width {
+                margin-bottom: -240px;
+            }
+
             .container-max-width .container-img {
                 display: block;
             }
@@ -184,11 +260,13 @@ $id = 1564;
 
         @media (min-width: 992px) {
 
-
-
             b,
             strong {
                 font-size: inherit;
+            }
+
+            .container-max-width {
+                margin-bottom: -240px;
             }
 
             .form_section {
@@ -214,14 +292,13 @@ $id = 1564;
             .hero_white_block {
                 width: 531px;
                 position: relative;
-                bottom: 303px;
+                bottom: 306px;
                 left: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
                 padding: 30px;
-                height: 100%;
                 margin-top: unset;
             }
 
@@ -248,7 +325,7 @@ $id = 1564;
             </div>
             <div class="hero_white_block ">
                 <div class="container inner_block">
-                    <span class="left-btn">
+                    <span class="left-btn" style="color:#25325f;">
                         <?= get_field("herotitle") ?>
                     </span>
                     <span class="hero_text">
@@ -256,12 +333,12 @@ $id = 1564;
                     </span>
                     <div class="d-flex align-items-center justify-content-between gap-2">
                         <div class="d-flex align-items-center justify-content-center rounded "
-                            style="width: 30px; height: 30px; background-color:#274083;">
+                            style="width: 30px; height: 30px; background-color:#FFF;">
                             <img src="<?= get_field("backimg")['url'] ?>" alt="<?= get_field("backimg")['alt'] ?>"
                                 style="width: 12px; height: 18px;" />
                         </div>
                         <a href="<?= get_field("backlink")['url'] ?>"
-                            style="color:#274083;; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
+                            style="color:#FFF; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
                             <?= get_field("backlink")['title'] ?>
                         </a>
                     </div>
@@ -270,64 +347,49 @@ $id = 1564;
         </div>
     </div>
 
-    <?php
-    $posts = get_posts([
-        'post_type' => 'videos',
-        'numberposts' => -1
-    ]);
 
-    foreach ($posts as $post) {
-        $fields = get_fields($post->ID);
-        ?>
-        <div class="container">
-            <div class="row">
-                <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4"
-                        style="background-color:#274083; border-radius:15px 0px 0px 15px;">
-                        <span class="title ">
-                            <?= $post->post_title ?>
-                        </span>
-                    </div>
-                    <div class="col-12 col-lg-5 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
-                        style="background-color:">
-                        <div class="description">
-                            <?= $fields['voorbeeld'] ?>
-                        </div>
-                    </div>
-                    <div class="d-none d-lg-flex col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 date "
-                        style="background-color: ">
-                        <div class="">
-                            Published <?= $fields['datum'] ?>
-                        </div>
-                    </div>
+    <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+        data-aos-easing="ease-in-out">
+        <div class="row">
+            <?php
+            $delay = 0;
+            foreach (get_field("videos") as $content) { ?>
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    data-aos-duration="800">
 
-                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
-                        style="background-color:">
-                        <div class="d-flex align-items-center justify-content-center rounded  arrow"
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                    <div class="video-card"
+                        style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
+                        <div class="video-container" style="position: relative;">
+                            <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
+                                allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: pointer;"
+                                data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>"
+                                data-video="<?= $content['video'] ?>">
+                            </iframe>
+                            <!-- Video Title Overlay -->
+                            <div class="video-title-overlay">
+                                <?= $content['videotitle'] ?>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start gap-2"
+                            style="margin-top: 1rem; margin-left:1rem">
+                            <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
+                            <span> <?= $content['videotext'] ?></span>
                         </div>
                     </div>
-                    <!-- SM Screen -->
-                    <div class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4 date flex-row"
-                        style="background-color:">
-                        <div class="date">
-                            Published <?= $fields['datum'] ?>
-                        </div>
-                        <div class="d-flex d-lg-none border-left"></div>
-                        <div class="d-flex align-items-center justify-content-center rounded  arrow"
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
-                        </div>
-                    </div>
-
-                </a>
-            </div>
+                </div>
+                <?php
+                $delay += 300;
+            }
+            ?>
         </div>
-        <?php
-    }
-    wp_reset_postdata();
-    ?>
+    </div>
+
+
+
+
+
+
+
     <!-- Form Section container  -->
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->

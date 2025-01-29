@@ -271,7 +271,6 @@ $id = 1519;
                 align-items: flex-start;
                 justify-content: center;
                 padding: 30px;
-                height: 100%;
                 margin-top: unset;
             }
 
