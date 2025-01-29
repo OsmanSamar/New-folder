@@ -362,36 +362,37 @@ $id = 1564;
             <div class="row">
                 <?php
                 $delay = 0;
-                foreach (get_field("videos") as $content) {
-                    if ($content['acf_fc_layout'] == 'videos') { ?>
-                        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                            data-aos-duration="800">
-                            <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-                            <div class="video-card"
-                                style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
-                                <div class="video-container" style="position: relative;">
-                                    <!-- Video iframe with data attributes -->
-                                    <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
-                                        allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: ;"
-                                        data-bs-toggle="modal" data-bs-target="#videoModal" data-video="<?= $content['video'] ?>"
-                                        data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>">
-                                    </iframe>
-                                    <!-- Video Title Overlay -->
-                                    <div class="video-title-overlay">
-                                        <?= $content['videotitle'] ?>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-start gap-2"
-                                    style="margin-top: 1rem; margin-left:1rem">
-                                    <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
-                                    <span> <?= $content['videotext'] ?></span>
-                                </div>
+                $content = $fields; ?>
+                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                    data-aos-duration="800">
+                    <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+                    <div class="video-card"
+                        style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
+                        <div class="video-container" style="position: relative;">
+                            <!-- Video iframe with data attributes -->
+                            <!-- <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
+                                allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: ;"
+                                data-bs-toggle="modal" data-bs-target="#videoModal" data-video="<?= $content['video'] ?>"
+                                data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>">
+                            </iframe> -->
+                            <!-- Video Title Overlay -->
+                            <img src="<?= $content['thumbnail']['url'] ?>" alt="<?= $content['thumbnail']['alt'] ?>"
+                                data-bs-toggle="modal" data-bs-target="#videoModal" data-video="<?= $content['video'] ?>"
+                                data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>">
+                            <div class="video-title-overlay">
+                                <?= $content['videotitle'] ?>
                             </div>
                         </div>
-                        <?php
-                        $delay += 300;
-                    }
-                } ?>
+                        <div class="d-flex align-items-center justify-content-start gap-2"
+                            style="margin-top: 1rem; margin-left:1rem">
+                            <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
+                            <span> <?= $content['videotext'] ?></span>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                $delay += 300;
+                ?>
             </div>
         </div>
         <?php
@@ -463,6 +464,7 @@ $id = 1564;
             // When clicking on a video
             videoTriggers.forEach(trigger => {
                 trigger.addEventListener("click", function () {
+                    console.log('clickie')
                     const videoSrc = this.getAttribute("data-video");
                     const videoTitle = this.getAttribute("data-title");
                     const videoDescription = this.getAttribute("data-text");
