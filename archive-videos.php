@@ -348,42 +348,124 @@ $id = 1564;
     </div>
 
 
-    <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+
+
+    <?php
+    $posts = get_posts([
+        'post_type' => 'videos',
+        'numberposts' => -1
+    ]);
+
+    foreach ($posts as $post) {
+        $fields = get_fields($post->ID);
+        ?>
+        <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
+            <div class="row">
+                <?php
+                $delay = 0;
+                foreach (get_field("videos") as $content) {
+                    if ($content['acf_fc_layout'] == 'videos') { ?>
+                        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                            data-aos-duration="800">
+                            <div style="margin-top: 2rem; margin-bottom: 2rem;">
+                            </div>
+                            <div class="video-card"
+                                style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
+                                <div class="video-container" style="position: relative;">
+                                    <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
+                                        allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: pointer;"
+                                        data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>"
+                                        data-video="<?= $content['video'] ?>">
+                                    </iframe>
+                                    <div class="video-title-overlay">
+                                        <?= $content['videotitle'] ?>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-start gap-2"
+                                    style="margin-top: 1rem; margin-left:1rem">
+                                    <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
+                                    <span> <?= $content['videotext'] ?></span>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                        $delay += 300;
+
+                    }
+                } ?>
+            </div>
+        </div>
+
+
+
+
+
+
+        <?php
+    }
+    wp_reset_postdata();
+    ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ....................... -->
+
+    <!-- <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
         data-aos-easing="ease-in-out">
         <div class="row">
             <?php
             $delay = 0;
-            foreach (get_field("videos") as $content) { ?>
-                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                    data-aos-duration="800">
-
-                    <div class="video-card"
-                        style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
-                        <div class="video-container" style="position: relative;">
-                            <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
-                                allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: pointer;"
-                                data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>"
-                                data-video="<?= $content['video'] ?>">
-                            </iframe>
-                            <!-- Video Title Overlay -->
-                            <div class="video-title-overlay">
-                                <?= $content['videotitle'] ?>
+            foreach (get_field("videos") as $content) {
+                if ($content['acf_fc_layout'] == 'videos') { ?>
+                    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                        data-aos-duration="800">
+                        <div style="margin-top: 2rem; margin-bottom: 2rem;">
+                        </div>
+                        <div class="video-card"
+                            style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
+                            <div class="video-container" style="position: relative;">
+                                <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
+                                    allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: pointer;"
+                                    data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>"
+                                    data-video="<?= $content['video'] ?>">
+                                </iframe>
+                                <div class="video-title-overlay">
+                                    <?= $content['videotitle'] ?>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-start gap-2"
+                                style="margin-top: 1rem; margin-left:1rem">
+                                <span class="d-block articles_page_link"> <?= $content['vidoenum'] ?></span>
+                                <span> <?= $content['videotext'] ?></span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start gap-2"
-                            style="margin-top: 1rem; margin-left:1rem">
-                            <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
-                            <span> <?= $content['videotext'] ?></span>
-                        </div>
                     </div>
-                </div>
-                <?php
-                $delay += 300;
-            }
-            ?>
-        </div>
-    </div>
+                    <?php
+                    $delay += 300;
 
+                }
+            } ?>
+        </div>
+    </div> -->
 
 
 
@@ -397,4 +479,4 @@ $id = 1564;
 
 </main>
 
-<?php get_footer() ?>
+<?php get_footer() ?>ter
