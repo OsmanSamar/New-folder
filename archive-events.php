@@ -1,9 +1,9 @@
 <?php
 get_header();
 $id = 1519;
-//Template Name: resources archive
+//Template Name: events archive
 ?>
-<main class="resources flex-grow-1">
+<main class="events flex-grow-1">
     <style>
         b,
         strong {
@@ -139,61 +139,7 @@ $id = 1519;
             line-height: 27.2px;
         }
 
-        .desc {
-            border-bottom: 7px solid green;
-        }
 
-        .date {
-            border-left: unset;
-
-        }
-
-        .resource-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            /* justify-content: space-between; */
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            height: 80px;
-            /* padding: 16px; */
-            /* padding: 8px; */
-            margin-bottom: 250px;
-            /* overflow: hidden; */
-        }
-
-        .resource-item:hover {
-            background-color: #f9f9f9;
-        }
-
-        .resource-item>div:first-child {
-            border-left: none;
-        }
-
-        .resource-item .arrow img {
-            width: 12px;
-            height: 18px;
-        }
-
-        /* .resource-item>div {
-        padding: 0 10px;
-        border-left: 1px solid #ccc;
-        height: 80px;
-        display: flex;
-        align-items: center;
-    } */
-
-        .border-end {
-            border-left: 1px solid red;
-        }
-
-        .border-left {
-            border-left: 1px solid white;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 0 20px 60px;
-            row-gap: 16px;
-        }
 
         @media (min-width: 768px) {
             .container-max-width .container-img {
@@ -238,9 +184,7 @@ $id = 1519;
 
         @media (min-width: 992px) {
 
-            .border-top {
-                border-top: 1px solid red;
-            }
+
 
             b,
             strong {
@@ -286,14 +230,7 @@ $id = 1519;
                 gap: 37px;
             }
 
-            .desc {
-                border-bottom: unset;
-            }
 
-            .date {
-                border-left: 1px solid red;
-
-            }
         }
     </style>
 
@@ -335,7 +272,7 @@ $id = 1519;
 
     <?php
     $posts = get_posts([
-        'post_type' => 'resources',
+        'post_type' => 'events',
         'numberposts' => -1
     ]);
 

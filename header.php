@@ -19,91 +19,94 @@
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!-- AOS -->
 
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollTrigger -->
 
 
     <style>
-    .letstalk-btn a:hover img {
-        transform: translateX(6px);
-        transition: transform 0.2s ease;
-    }
+        .letstalk-btn a:hover img {
+            transform: translateX(6px);
+            transition: transform 0.2s ease;
+        }
 
-    /* Navbar dropdown styles */
-    .navbar-nav .dropdown-menu {
-        position: fixed;
-        top: -100%;
-        /* Start hidden above the page */
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
-        /* background-color: red; */
-        background-color: #FFF;
-        max-width: 100%;
-        width: fit-content;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 3rem;
-    }
+        /* Navbar dropdown styles */
+        .navbar-nav .dropdown-menu {
+            position: fixed;
+            top: -100%;
+            /* Start hidden above the page */
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+            /* background-color: red; */
+            background-color: #FFF;
+            max-width: 100%;
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 3rem;
+        }
 
-    .navbar-nav .dropdown-menu.show {
-        top: 100%;
-        /* Drop down from the navbar */
-        opacity: 1;
-        visibility: visible;
-        max-width: 100%;
-        width: fit-content;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 3rem;
+        .navbar-nav .dropdown-menu.show {
+            top: 100%;
+            /* Drop down from the navbar */
+            opacity: 1;
+            visibility: visible;
+            max-width: 100%;
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 3rem;
 
-    }
-
-
-    .dropdown-menu .dropdown-item {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-        /* padding: 20px 36px; */
-        padding: 36px 42px;
-        height: 100%;
-        flex-grow: 1;
-        /* Divider between items */
-        border-right: 1px solid #cbcfde;
-    }
-
-    .dropdown-menu .menu-item:last-child .dropdown-item {
-        border-right: none;
-    }
-
-    /*  spacing between dropdown items */
-    .dropdown-menu {
-        background-color: #FFF;
-    }
-
-    .navbar .menu-item {
-        position: unset;
-    }
-
-    .navbar ul li a {
-        color: #25325F;
-        text-align: center;
-        font-family: Manrope;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 15.6px;
-    }
+        }
 
 
-    /* Sidebar Dropdown Menu */
-    /* .sidebar-nav .dropdown-menu {
+        .dropdown-menu .dropdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            /* padding: 20px 36px; */
+            padding: 36px 42px;
+            height: 100%;
+            flex-grow: 1;
+            /* Divider between items */
+            border-right: 1px solid #cbcfde;
+        }
+
+        .dropdown-menu .menu-item:last-child .dropdown-item {
+            border-right: none;
+        }
+
+        /*  spacing between dropdown items */
+        .dropdown-menu {
+            background-color: #FFF;
+        }
+
+        .navbar .menu-item {
+            position: unset;
+        }
+
+        .navbar ul li a {
+            color: #25325F;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+        }
+
+
+        /* Sidebar Dropdown Menu */
+        /* .sidebar-nav .dropdown-menu {
         position: static;
         visibility: hidden;
         opacity: 0;
@@ -113,15 +116,15 @@
         background-color: #f8f9fa;
     } */
 
-    /* Show dropdown on toggle */
-    /* .sidebar-nav .dropdown-menu.show {
+        /* Show dropdown on toggle */
+        /* .sidebar-nav .dropdown-menu.show {
         visibility: visible;
         opacity: 1;
         height: auto;
     } */
 
-    /* Sidebar Dropdown Items */
-    /* .sidebar-nav .dropdown-item {
+        /* Sidebar Dropdown Items */
+        /* .sidebar-nav .dropdown-item {
         padding: 10px 15px;
         font-size: 1rem;
         color: red;
@@ -133,8 +136,8 @@
         color: #000;
     } */
 
-    /* Styling Parent Items in Sidebar */
-    /* .sidebar-nav .menu-item-has-children>a {
+        /* Styling Parent Items in Sidebar */
+        /* .sidebar-nav .menu-item-has-children>a {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -155,19 +158,19 @@
     /* }  */
 
 
-    .offcanvas-body ul li ul li {
+        .offcanvas-body ul li ul li {
 
-        background-color: red;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 25px;
-        border-bottom: 1px solid black;
-    }
+            background-color: red;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            border-bottom: 1px solid black;
+        }
 
-    /* .menu-item {
+        /* .menu-item {
         width: 100%;
         background-color: aliceblue;
     }
@@ -186,7 +189,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-    AOS.init();
+        AOS.init();
     </script>
     <!-- AOS -->
 
@@ -244,56 +247,56 @@
 
 
                 <style>
-                .arrow-letstalk {
-                    margin-left: auto;
-                    /* Push to the right */
-                }
-
-                /* Hamburger Icon Alignment */
-                .navbar-toggler {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                /* Media Query for md Screens */
-                @media (max-width: 991.98px) {
                     .arrow-letstalk {
                         margin-left: auto;
+                        /* Push to the right */
                     }
 
+                    /* Hamburger Icon Alignment */
                     .navbar-toggler {
-                        margin-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                     }
-                }
 
-                .hamburger-icon {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    width: 30px;
-                    height: 20px;
-                    position: relative;
-                }
+                    /* Media Query for md Screens */
+                    @media (max-width: 991.98px) {
+                        .arrow-letstalk {
+                            margin-left: auto;
+                        }
 
-                .hamburger-icon .line {
-                    display: block;
-                    height: 4px;
-                    background-color: #25325F;
-                    border-radius: 2px;
-                    transition: all 0.3s ease;
+                        .navbar-toggler {
+                            margin-left: 10px;
+                        }
+                    }
 
-                }
+                    .hamburger-icon {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 30px;
+                        height: 20px;
+                        position: relative;
+                    }
 
-                .hamburger-icon .line-1,
-                .hamburger-icon .line-2 {
-                    width: 100%;
-                }
+                    .hamburger-icon .line {
+                        display: block;
+                        height: 4px;
+                        background-color: #25325F;
+                        border-radius: 2px;
+                        transition: all 0.3s ease;
 
-                .hamburger-icon .line-3 {
-                    width: 60%;
-                    align-self: flex-end;
-                }
+                    }
+
+                    .hamburger-icon .line-1,
+                    .hamburger-icon .line-2 {
+                        width: 100%;
+                    }
+
+                    .hamburger-icon .line-3 {
+                        width: 60%;
+                        align-self: flex-end;
+                    }
                 </style>
 
             </div>
