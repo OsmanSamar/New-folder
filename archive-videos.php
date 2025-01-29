@@ -348,8 +348,6 @@ $id = 1564;
     </div>
 
 
-
-
     <?php
     $posts = get_posts([
         'post_type' => 'videos',
@@ -368,20 +366,23 @@ $id = 1564;
                     if ($content['acf_fc_layout'] == 'videos') { ?>
                         <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
                             data-aos-duration="800">
-                            <div style="margin-top: 2rem; margin-bottom: 2rem;">
-                            </div>
+                            <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
                             <div class="video-card"
                                 style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
                                 <div class="video-container" style="position: relative;">
+                                    <!-- Video iframe with data attributes -->
                                     <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
-                                        allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: pointer;"
-                                        data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>"
-                                        data-video="<?= $content['video'] ?>">
+                                        allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: ;"
+                                        data-bs-toggle="modal" data-bs-target="#videoModal" data-video="<?= $content['video'] ?>"
+                                        data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>">
                                     </iframe>
+                                    <!-- Video Title Overlay -->
                                     <div class="video-title-overlay">
                                         <?= $content['videotitle'] ?>
                                     </div>
                                 </div>
+
+
                                 <div class="d-flex align-items-center justify-content-start gap-2"
                                     style="margin-top: 1rem; margin-left:1rem">
                                     <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
@@ -391,84 +392,39 @@ $id = 1564;
                         </div>
                         <?php
                         $delay += 300;
-
                     }
                 } ?>
             </div>
         </div>
-
-
-
-
-
-
         <?php
     }
     wp_reset_postdata();
     ?>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- ....................... -->
-
-    <!-- <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-        data-aos-easing="ease-in-out">
-        <div class="row">
-            <?php
-            $delay = 0;
-            foreach (get_field("videos") as $content) {
-                if ($content['acf_fc_layout'] == 'videos') { ?>
-                    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                        data-aos-duration="800">
-                        <div style="margin-top: 2rem; margin-bottom: 2rem;">
-                        </div>
-                        <div class="video-card"
-                            style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
-                            <div class="video-container" style="position: relative;">
-                                <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
-                                    allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: pointer;"
-                                    data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>"
-                                    data-video="<?= $content['video'] ?>">
-                                </iframe>
-                                <div class="video-title-overlay">
-                                    <?= $content['videotitle'] ?>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-start gap-2"
-                                style="margin-top: 1rem; margin-left:1rem">
-                                <span class="d-block articles_page_link"> <?= $content['vidoenum'] ?></span>
-                                <span> <?= $content['videotext'] ?></span>
-                            </div>
-                        </div>
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="modalTitle" class="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex">
+                    <!-- Left: Video -->
+                    <div class="video-left" style="flex: 1;">
+                        <iframe id="modalVideo" class="embed-responsive-item" allowfullscreen
+                            style="width: 100%; height: 100%; border-radius: 15px;"></iframe>
                     </div>
-                    <?php
-                    $delay += 300;
-
-                }
-            } ?>
+                    <!-- Right: Video Title and Text -->
+                    <div class="video-right" style="flex: 1; padding: 20px;">
+                        <h2 id="modalTitleText"></h2>
+                        <p id="modalText"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div> -->
-
-
-
+    </div>
 
 
 
@@ -477,6 +433,41 @@ $id = 1564;
     <!-- End of Form Section -->
 
 
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videoTriggers = document.querySelectorAll(".video-trigger");
+            const modal = document.getElementById("videoModal");
+            const modalVideo = document.getElementById("modalVideo");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalTitleText = document.getElementById("modalTitleText");
+            const modalText = document.getElementById("modalText");
+
+            // When clicking on a video
+            videoTriggers.forEach(trigger => {
+                trigger.addEventListener("click", function () {
+                    const videoSrc = this.getAttribute("data-video");
+                    const videoTitle = this.getAttribute("data-title");
+                    const videoDescription = this.getAttribute("data-text");
+
+                    modalTitle.innerText = videoTitle;
+                    modalTitleText.innerText = videoTitle;
+                    modalText.innerText = videoDescription;
+                    modalVideo.src = videoSrc + "?autoplay=1"; // Autoplay when modal opens
+                });
+            });
+
+            // Stop video when modal closes
+            modal.addEventListener("hidden.bs.modal", function () {
+                modalVideo.src = "";
+            });
+        });
+    </script>
+
+
 </main>
 
-<?php get_footer() ?>ter
+<?php get_footer() ?>
