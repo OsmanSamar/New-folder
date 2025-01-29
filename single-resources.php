@@ -1,5 +1,3 @@
-hallo
-
 <?php get_header();
 
 //Template Name: post-1
@@ -67,17 +65,19 @@ hallo
 
 
         .sidebar {
-            position: sticky;
+            /* position: sticky; */
             top: 20px;
             height: fit-content;
             padding: 15px;
             border-radius: 8px;
-            padding-top: 120px;
+            padding-top: unset;
+            order: 2 !important
         }
 
 
         .content {
             padding: 15px;
+            order: 1 !important
         }
 
 
@@ -207,11 +207,20 @@ hallo
             }
 
             .border-left {
-                border-left: 1px solid red;
+                border-left: 1px solid white;
                 display: flex;
                 flex-direction: column;
                 padding: 20px 0 20px 60px;
                 row-gap: 16px;
+            }
+
+            .sidebar {
+                order: 1 !important;
+                padding-top: unset;
+            }
+
+            .content {
+                order: 2 !important
             }
 
         }
@@ -257,9 +266,19 @@ hallo
                 margin-top: 67px;
             }
 
+            .sidebar {
+                order: 1 !important;
+                padding-top: 120px;
+            }
+
+            .content {
+                order: 2 !important;
+                margin-left: 3rem;
+            }
+
         }
     </style>
-    <div>
+    <div style="margin-top:180px;">
 
         <!-- BreadCrumb Section -->
         <?php get_template_part('components/breadcrumb') ?>
@@ -294,7 +313,7 @@ hallo
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 sidebar">
+                <div class="col-lg-3 sidebar sticky-lg-top ">
                     <?php foreach (get_field("stickysidecontent") as $content) {
                         //   var_dump($content);
                         if ($content['acf_fc_layout'] == 'text') {
@@ -304,7 +323,7 @@ hallo
                             <h3 class="left-btn"><?= $content['secondtitle'] ?></h3>
                             <div class="d-flex justify-content-start align-items-baseline gap-2"
                                 style="margin-top: 2rem; margin-bottom: 2rem;">
-                                <a href="#vivamusnoncommodonulla" class="d-flex align-items-center text-decoration-none">
+                                <a href="#vivamusnoncommodonulla" class="d-flex align-items-baseline text-decoration-none">
                                     <p class="mb-0"><?= $content['secondtext'] ?></p>
                                     <div class="d-flex align-items-center justify-content-center ms-2">
                                         <img src="<?= $content['arrowimg']['url'] ?>" alt="<?= $content['arrowimg']['alt'] ?>"
@@ -314,7 +333,7 @@ hallo
                             </div>
                             <div class="d-flex justify-content-start align-items-baseline gap-2">
                                 <a href="#pellentesquebibendumefficiturduisedconvallistinciduntelitegetiaculis"
-                                    class="d-flex align-items-center text-decoration-none">
+                                    class="d-flex align-items-baseline text-decoration-none">
                                     <p class="mb-0"><?= $content['thirdtitle'] ?></p>
                                     <div class="d-flex align-items-center justify-content-center ms-2">
                                         <img src="<?= $content['arrowimg']['url'] ?>" alt="<?= $content['arrowimg']['alt'] ?>"
@@ -328,7 +347,7 @@ hallo
                     ?>
                 </div>
 
-                <div class="col-lg-1 d-none d-lg-block"></div>
+                <!-- <div class="col-lg-1 d-none d-lg-block"></div> -->
 
                 <div class="col-lg-8 content">
 
@@ -375,8 +394,4 @@ hallo
 
 
 
-</main>
-
-
-
-<?php get_footer() ?>
+</main><?php get_footer() ?>
