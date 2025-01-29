@@ -168,19 +168,6 @@
         }
 
 
-        .articles_page_link::after {
-            content: "";
-            display: inline-block;
-            width: 1px;
-            height: 21px;
-            opacity: 0.25;
-            /* background: #CBCFDE; */
-            background: green;
-            margin-left: 13px;
-            margin-right: 13px;
-            vertical-align: middle;
-        }
-
         @media (min-width: 768px) {
 
             .container-max-width .container-img {
@@ -324,46 +311,6 @@
 
 
 
-
-        <div class="container">
-            <div class="row">
-                <?php foreach (get_field("videos") as $content) {
-                    if ($content['acf_fc_layout'] == 'videos') { ?>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div style="margin-top: 2rem; margin-bottom: 2rem;">
-                                <!-- <?= $content['firsttext'] ?> -->
-                            </div>
-                            <div style="background-color:#FFF;height: 290px;border-radius: 30px;">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="<?= $content['video'] ?>" allowfullscreen
-                                        style="width: 100%; height: 218px; border-radius: 15px;"></iframe>
-                                </div>
-                                <span style="margin-top: 1rem; margin-left:1rem"> <?= $content['videotitle'] ?></span>
-                                <div class="d-flex align-items-center justify-content-start gap-2"
-                                    style="margin-top: 1rem; margin-left:1rem">
-                                    <span class="d-block articles_page_link"> <?= $content['vidoenum'] ?></span>
-                                    <span> <?= $content['videotext'] ?></span>
-                                </div>
-                            </div>
-                        </div>
-                    <?php }
-                } ?>
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 sidebar sticky-lg-top ">
@@ -400,15 +347,10 @@
                     ?>
                 </div>
 
-                <!-- <div class="col-lg-1 d-none d-lg-block"></div> -->
-
                 <div class="col-lg-8 content">
-
                     <?php foreach (get_field("content") as $content) {
                         // var_dump($content);
-                        if ($content['acf_fc_layout'] == 'text') {
-                            ?>
-
+                        if ($content['acf_fc_layout'] == 'text') { ?>
                             <div id="vivamusnoncommodonulla">
                                 <h1 class="first_title"><?= $content['firsttitel'] ?></h1>
                                 <span class="first_text"> <?= $content['firsttext'] ?></span>
@@ -424,7 +366,6 @@
                         }
                     }
                     ?>
-
                 </div>
             </div>
         </div>
@@ -436,7 +377,6 @@
             <!-- Form Section container  -->
             <?php get_template_part('components/form') ?>
             <!-- End of Form Section -->
-
         </section>
 
 
@@ -447,4 +387,8 @@
 
 
 
-</main><?php get_footer() ?>
+
+
+
+</main>
+<?php get_footer() ?>
