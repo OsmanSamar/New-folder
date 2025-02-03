@@ -196,8 +196,9 @@ $id = 1519;
 
             .hero_white_block {
                 width: 380px;
-                position: relative;
-                bottom: 302px;
+                /* position: relative; */
+                position: absolute;
+                bottom: 76px;
                 left: 0;
                 display: flex;
                 flex-direction: column;

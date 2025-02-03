@@ -178,9 +178,9 @@ $id = 1576;
 
         @media (min-width: 768px) {
 
-            .container-max-width {
+            /* .container-max-width {
                 margin-bottom: -240px;
-            }
+            } */
 
             .container-max-width .container-img {
                 display: block;
@@ -188,8 +188,9 @@ $id = 1576;
 
             .hero_white_block {
                 width: 380px;
-                position: relative;
-                bottom: 302px;
+                /* position: relative; */
+                position: absolute;
+                bottom: 76px;
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -223,9 +224,9 @@ $id = 1576;
         }
 
         @media (min-width: 992px) {
-            .container-max-width {
+            /* .container-max-width {
                 margin-bottom: -240px;
-            }
+            } */
 
             .hero_text {
                 font-size: 46px;
