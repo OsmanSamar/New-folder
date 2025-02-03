@@ -5,6 +5,10 @@
 
 <main class="single-resources flex-grow-1">
     <style>
+        ::selection {
+            background-color: rgb(216, 98, 131);
+        }
+
         strong {
             color: #e94271;
             font-family: inherit;
@@ -381,12 +385,6 @@
 
 
     </div>
-
-
-
-
-
-
 
 
 

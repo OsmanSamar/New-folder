@@ -6,7 +6,7 @@
 <main class="contact flex-grow-1">
 
     <style>
-    /* ::BEFORE UITLEGGEN
+        /* ::BEFORE UITLEGGEN
         
           /* .test-block::before {
         content: " ";
@@ -24,321 +24,321 @@
 
 
 
-    .gform-body {
-        .gfield {
-            color: black !important;
-        }
-
-        @media screen and (min-width: 700px) {
+        .gform-body {
             .gfield {
-                grid-column: span 4 !important;
+                color: black !important;
             }
 
-            .gfield--type-textarea {
-                grid-row: span 2 !important;
+            @media screen and (min-width: 700px) {
+                .gfield {
+                    grid-column: span 4 !important;
+                }
+
+                .gfield--type-textarea {
+                    grid-row: span 2 !important;
+                }
+            }
+
+            /* Sm Screen */
+            @media screen and (max-width: 700px) {
+                .gfield--type-textarea {
+                    order: 1 !important;
+                }
+            }
+
+            /* LG Screen */
+            @media (min-width: 700px) {
+                .gfield--type-textarea {
+                    order: 0 !important;
+                }
             }
         }
-
-        /* Sm Screen */
-        @media screen and (max-width: 700px) {
-            .gfield--type-textarea {
-                order: 1 !important;
-            }
-        }
-
-        /* LG Screen */
-        @media (min-width: 700px) {
-            .gfield--type-textarea {
-                order: 0 !important;
-            }
-        }
-    }
-
-    b,
-    strong {
-        color: #e94271;
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        line-height: inherit;
-    }
-
-    .form_section {
-        border-radius: 30px;
-        background: #25325F;
-        max-width: 1700px;
-        /* height: 1400px; */
-        margin: 50px auto 50px;
-    }
-
-    .left-container {
-        border-radius: 30px;
-        margin-top: ;
-        color: white;
-        height: 264px;
-    }
-
-    .left-content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 30px;
-        gap: 50px;
-    }
-
-    .right-col-form {
-        margin-top: unset;
-    }
-
-
-
-    .border-container {
-        border-radius: 40px;
-        max-width: 1700px;
-        height: 581px;
-        border-radius: 40px;
-        border: 1px solid #CBCFDE;
-        margin: 100px auto 10px;
-    }
-
-    .border-container2 {
-        border-radius: 40px;
-        max-width: 1700px;
-        height: 576px;
-        border-radius: 40px;
-        border: 1px solid #CBCFDE;
-        margin: 100px auto 10px;
-    }
-
-
-
-    .container-max-width {
-        border-radius: 30px;
-        /* max-width: 1700px; */
-        height: 581px;
-        /* margin: 200px auto 10px; */
-    }
-
-    .container-max-width .container-img {
-        display: none;
-    }
-
-    .hero_white_block {
-        height: 100%;
-        border-radius: 40px;
-        background: #25325F;
-        position: relative;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        margin-top: -152px;
-    }
-
-    .inner_block {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: left;
-        margin: 10px 60px;
-    }
-
-    .hero_title {
-        color: #FFF;
-        font-family: Sora;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 54px;
-        margin-top: 45px;
-        margin-bottom: 31px;
-    }
-
-    .hero_text {
-        color: #6A7291;
-        font-family: Manrope;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 27.2px;
-        width: 353px;
-        /* height: 158px; */
-        margin-bottom: 31px;
-    }
-
-    .left-btn {
-        width: 209px;
-        height: 34px;
-        border-radius: 100px;
-        background: #274083;
-        padding: 3px 11px;
-        text-align: center;
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 23.4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .contact-info {
-        color: #FFF;
-        font-family: Manrope;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: left;
-        gap: 2px;
-    }
-
-    .testi-num {
-        color: #E94271;
-        font-family: Manrope;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-    }
-
-    .testi-title {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 23.8px;
-        color: #6A7291;
-        font-family: Manrope;
-    }
-
-    .testi-text {
-        color: #25325F;
-        font-family: Manrope;
-        font-size: 21px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.6px;
-    }
-
-
-
-    @media (min-width: 768px) {
-        .border-container {
-            height: 278px;
-        }
-
-        .border-container2 {
-            height: 278px;
-        }
-
-        .container-max-width .container-img {
-            display: block;
-        }
-
-        .hero_white_block {
-            width: 458px;
-            position: relative;
-            bottom: 582px;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 30px;
-            height: 581.608px;
-            margin-top: unset;
-        }
-
-        .inner_block {
-            margin: unset;
-        }
-    }
-
-
-    @media (min-width: 992px) {
 
         b,
         strong {
+            color: #e94271;
+            font-family: inherit;
             font-size: inherit;
+            font-style: inherit;
+            line-height: inherit;
         }
 
         .form_section {
-            height: 550px;
+            border-radius: 30px;
+            background: #25325F;
+            max-width: 1700px;
+            /* height: 1400px; */
+            margin: 50px auto 50px;
         }
 
         .left-container {
-            height: 500px;
+            border-radius: 30px;
+            margin-top: ;
+            color: white;
+            height: 264px;
         }
 
         .left-content {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: normal;
-            margin-top: 67px;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 30px;
+            gap: 50px;
         }
 
         .right-col-form {
-            margin-top: 67px;
+            margin-top: unset;
         }
+
 
 
         .border-container {
+            border-radius: 40px;
+            max-width: 1700px;
             height: 581px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            border-radius: 40px;
+            border: 1px solid #CBCFDE;
+            margin: 100px auto 10px;
         }
 
         .border-container2 {
-            height: 263px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            border-radius: 40px;
+            max-width: 1700px;
+            height: 576px;
+            border-radius: 40px;
+            border: 1px solid #CBCFDE;
+            margin: 100px auto 10px;
         }
 
 
+
+        .container-max-width {
+            border-radius: 30px;
+            /* max-width: 1700px; */
+            height: 581px;
+            /* margin: 200px auto 10px; */
+        }
+
+        .container-max-width .container-img {
+            display: none;
+        }
+
         .hero_white_block {
-            width: 531px;
+            height: 100%;
+            border-radius: 40px;
+            background: #25325F;
             position: relative;
-            bottom: 580px;
             left: 0;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             padding: 30px;
-            height: 100%;
-            margin-top: unset;
-
+            margin-top: -152px;
         }
 
-
+        .inner_block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: left;
+            margin: 10px 60px;
+        }
 
         .hero_title {
-            font-size: 35px;
+            color: #FFF;
+            font-family: Sora;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 54px;
+            margin-top: 45px;
+            margin-bottom: 31px;
         }
 
         .hero_text {
+            color: #6A7291;
+            font-family: Manrope;
             font-size: 17px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 27.2px;
+            width: 353px;
+            /* height: 158px; */
+            margin-bottom: 31px;
+        }
+
+        .left-btn {
+            width: 209px;
+            height: 34px;
+            border-radius: 100px;
+            background: #274083;
+            padding: 3px 11px;
+            text-align: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .contact-info {
-            justify-content: center;
-            align-items: center;
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: left;
+            gap: 2px;
+        }
 
+        .testi-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+        }
+
+        .testi-title {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 23.8px;
+            color: #6A7291;
+            font-family: Manrope;
+        }
+
+        .testi-text {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+        }
+
+
+
+        @media (min-width: 768px) {
+            .border-container {
+                height: 278px;
+            }
+
+            .border-container2 {
+                height: 278px;
+            }
+
+            .container-max-width .container-img {
+                display: block;
+            }
+
+            .hero_white_block {
+                width: 458px;
+                position: relative;
+                bottom: 582px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 581.608px;
+                margin-top: unset;
+            }
+
+            .inner_block {
+                margin: unset;
+            }
+        }
+
+
+        @media (min-width: 992px) {
+
+            b,
+            strong {
+                font-size: inherit;
+            }
+
+            .form_section {
+                height: 550px;
+            }
+
+            .left-container {
+                height: 500px;
+            }
+
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: normal;
+                margin-top: 67px;
+            }
+
+            .right-col-form {
+                margin-top: 67px;
+            }
+
+
+            .border-container {
+                height: 581px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .border-container2 {
+                height: 263px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+
+            .hero_white_block {
+                width: 531px;
+                position: relative;
+                bottom: 580px;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 30px;
+                height: 100%;
+                margin-top: unset;
+
+            }
+
+
+
+            .hero_title {
+                font-size: 35px;
+            }
+
+            .hero_text {
+                font-size: 17px;
+            }
+
+            .contact-info {
+                justify-content: center;
+                align-items: center;
+
+
+            }
 
         }
 
-    }
-
-    .back-to-home a img:hover {
-        opacity: 0.5;
-    }
+        .back-to-home a img:hover {
+            opacity: 0.5;
+        }
     </style>
     <div>
 
@@ -507,49 +507,37 @@
                 <div class="row">
                     <?php foreach (get_field("testimonials") as $testimonial) {
                         ?>
-                    <div class="col-12 col-lg-3 col-md-6">
-                        <div class=" d-flex flex-column justify-content-center gap-2"
-                            style="margin:20px; align-items:flex-start;">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="testi-num"><?= $testimonial["num"] ?></span>
-                                <span class="testi-title"><?= $testimonial["titletes"] ?></span>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class=" d-flex flex-column justify-content-center gap-2"
+                                style="margin:20px; align-items:flex-start;">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="testi-num"><?= $testimonial["num"] ?></span>
+                                    <span class="testi-title"><?= $testimonial["titletes"] ?></span>
+                                </div>
+                                <!-- <h3 class="testi-text"><?= $testimonial["mail"] ?></h3> -->
+
+                                <?php if (!empty($testimonial['mail'])) { ?>
+                                    <!-- Mail Section  -->
+                                    <h3 class="testi-text"><?= $testimonial["mail"] ?></h3>
+
+                                <?php } elseif (!empty($testimonial['social']['url'])) { ?>
+                                    <!-- Socail Section -->
+                                    <a href="<?= $testimonial['social']['url'] ?>">
+                                        <?= $testimonial['social']['alt'] ?>
+                                        <!-- Display the alt text as the link text -->
+                                    </a>
+
+                                <?php } ?>
                             </div>
-                            <!-- <h3 class="testi-text"><?= $testimonial["mail"] ?></h3> -->
-
-                            <?php if (!empty($testimonial['mail'])) { ?>
-                            <!-- Mail Section  -->
-                            <h3 class="testi-text"><?= $testimonial["mail"] ?></h3>
-
-                            <?php } elseif (!empty($testimonial['social']['url'])) { ?>
-                            <!-- Socail Section -->
-                            <a href="<?= $testimonial['social']['url'] ?>">
-                                <?= $testimonial['social']['alt'] ?>
-                                <!-- Display the alt text as the link text -->
-                            </a>
-
-                            <?php } ?>
-
-
-
-
-
-
                         </div>
-
-                    </div>
-                    <?php
+                        <?php
                     }
                     ?>
-
-
-
-
-
-
-
                 </div>
             </div>
         </div>
+
+
     </div>
 
 

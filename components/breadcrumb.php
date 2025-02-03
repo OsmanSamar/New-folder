@@ -6,8 +6,8 @@
     data-aos-easing="ease-in-out">
 
     <!-- 1 -->
-    <div class="back-to-home d-flex align-items-center justify-content-center"
-        style="margin-top:123px; margin-bottom:-123px; ">
+    <div class="back-to-home d-flex align-items-center justify-content-center" style="margin-top:123px; ">
+        <!--  margin-bottom:-123px; -->
         <!-- <?php if (false) {
             ?> <a href="<?= $breadcrumb['backtohome']['url'] ?>"
             class="d-flex justify-content-center align-items-center gap-2">
