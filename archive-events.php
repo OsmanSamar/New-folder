@@ -346,7 +346,11 @@ $id = 1576;
                             <span class="title ">
                                 <?= $post->post_title ?>
                             </span>
-                            <span><?= $fields['arrowlink'] ?> </span>
+                            <div class="d-flex align-items-center justify-content-center rounded  "
+                                style="width: 6px; height: 9px; ">
+                                <img src="/sue/wp-content/themes/New folder/images/nextarrow.svg" alt="Arrow">
+                            </div>
+
                         </span>
                     </div>
                     <div
@@ -425,6 +429,17 @@ $id = 1576;
     wp_reset_postdata();
     ?>
 
+    <!-- <div class="text-center mt-4">
+        <button id="load-more" class="btn btn-primary" data-page="1" data-url="<?= admin_url('admin-ajax.php'); ?>">
+            Load More
+        </button>
+    </div> -->
+
+
+
+
+
+
 
 
 
@@ -433,6 +448,36 @@ $id = 1576;
     <!-- Form Section container  -->
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
+
+    <!-- <script>
+        jQuery(document).ready(function ($) {
+            $("#load-more").on("click", function () {
+                var button = $(this),
+                    page = button.data("page"),
+                    ajaxurl = button.data("url");
+
+                $.ajax({
+                    url: ajaxurl,
+                    type: "POST",
+                    data: {
+                        action: "load_more",
+                        page: page,
+                    },
+                    beforeSend: function () {
+                        button.text("Loading...");
+                    },
+                    success: function (data) {
+                        if ($.trim(data)) {
+                            $("#posts-container").append(data);
+                            button.data("page", page + 1).text("Load More");
+                        } else {
+                            button.remove();  Hide button when no more posts
+                        }
+                    },
+                });
+            });
+        });
+    </script> -->
 
 
 </main>
