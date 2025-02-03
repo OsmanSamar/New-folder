@@ -54,7 +54,6 @@ $id = 1576;
 
         .container-max-width {
             border-radius: 30px;
-            /* max-width: 1700px; */
             min-height: 381px;
             margin: 200px auto 10px;
         }
@@ -64,7 +63,7 @@ $id = 1576;
         }
 
         .hero_white_block {
-            height: 100%;
+            height: 306px;
             border-radius: 40px;
             background: #FFF;
             position: relative;
@@ -73,7 +72,7 @@ $id = 1576;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 30px;
+            padding: 53px;
             position: static;
             margin-top: 0;
         }
@@ -102,8 +101,9 @@ $id = 1576;
             text-align: left;
         }
 
+
         .hero_text {
-            color: #9AA0B7;
+            color: #274083;
             font-family: Manrope;
             font-size: 36px;
             font-style: normal;
@@ -130,18 +130,58 @@ $id = 1576;
         }
 
 
-        .hero_text {
-            color: #9AA0B7;
-            font-family: Manrope;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 27.2px;
+
+
+        .resource-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            height: 80px;
+            margin-bottom: 250px;
+        }
+
+        .resource-item:hover {
+            background-color: #e94271;
+        }
+
+        .resource-item>div:first-child {
+            border-left: none;
+        }
+
+        .resource-item .arrow img {
+            width: 12px;
+            height: 18px;
+        }
+
+
+
+        .border-end {
+            border-left: 1px solid red;
+        }
+
+        .border-left {
+            border-left: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0 20px 60px;
+            row-gap: 16px;
+        }
+
+        .date {
+            border-left: unset;
+
         }
 
 
 
         @media (min-width: 768px) {
+
+            .container-max-width {
+                margin-bottom: -240px;
+            }
+
             .container-max-width .container-img {
                 display: block;
             }
@@ -183,6 +223,13 @@ $id = 1576;
         }
 
         @media (min-width: 992px) {
+            .container-max-width {
+                margin-bottom: -240px;
+            }
+
+            .hero_text {
+                font-size: 46px;
+            }
 
 
 
@@ -214,20 +261,24 @@ $id = 1576;
             .hero_white_block {
                 width: 531px;
                 position: relative;
-                bottom: 303px;
+                bottom: 306px;
                 left: 0;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
                 padding: 30px;
-                height: 100%;
                 margin-top: unset;
             }
 
             .inner_block {
                 margin: 10px 60px;
                 gap: 37px;
+            }
+
+            .date {
+                border-left: 1px solid #ccc;
+
             }
 
 
@@ -282,24 +333,64 @@ $id = 1576;
         <div class="container">
             <div class="row">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4"
-                        style="background-color:#274083; border-radius:15px 0px 0px 15px;">
+                    <div class="col-12 col-lg-3  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4"
+                        style="background-color:#274083; border-radius:15px 0px 0px 15px; color:#FFF; font-size:20px">
+                        <div class="">
+                            <?= $fields['datum'] ?>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
+                        style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
                         <span class="title ">
                             <?= $post->post_title ?>
                         </span>
                     </div>
-                    <div class="col-12 col-lg-5 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
-                        style="background-color:">
-                        <div class="description">
-                            <?= $fields['voorbeeld'] ?>
+                    <div
+                        class="d-flex col-lg-2 justify-content-center justify-content-lg-start align-items-center h-100 p-3 px-4 date">
+                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                            <div class="flex-shrink-0">
+                                <?= $fields['starttime'] ?>
+                                <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
+
+                            </div>
+                            <div style="width:40px">
+                                <hr>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <?= $fields['endtime'] ?>
+                                <span style=" color:#9AA0B7"><?= $fields['end'] ?> </span>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="d-none d-lg-flex col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 date "
-                        style="background-color: ">
-                        <div class="">
-                            Published <?= $fields['datum'] ?>
-                        </div>
+
+                    <div
+                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 date ">
+                        <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 "
+                            style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
+                            <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
+                                fill="none">
+                                <g fill="#6A7291" clip-path="url(#a)">
+                                    <path d="M4.63 14.47 5 14.2l.37.27L5 15l-.37-.53Z"></path>
+                                    <g fill-rule="evenodd" clip-rule="evenodd">
+                                        <path
+                                            d="M5 2.793c-1.256 0-2.273 1.043-2.273 2.328 0 1.286 1.017 2.328 2.272 2.328s2.273-1.042 2.273-2.328c0-1.285-1.018-2.328-2.273-2.328ZM3.635 5.121c0-.771.61-1.396 1.363-1.396s1.364.625 1.364 1.396c0 .772-.61 1.397-1.364 1.397-.753 0-1.363-.625-1.363-1.397Z">
+                                        </path>
+                                        <path
+                                            d="M4.63 14.47 5 14.2l.37.27.003-.005.01-.014.04-.056.145-.214a58.524 58.524 0 0 0 2.095-3.318c.572-.981 1.15-2.053 1.587-3.048.428-.976.75-1.944.75-2.694C10 2.293 7.761 0 5 0S0 2.293 0 5.121c0 .75.322 1.718.75 2.694.436.995 1.014 2.067 1.587 3.049a58.495 58.495 0 0 0 2.24 3.53l.04.057.01.014.003.006ZM.91 5.122C.91 2.807 2.74.931 5 .931s4.09 1.876 4.09 4.19c0 .536-.245 1.346-.67 2.313-.415.948-.974 1.985-1.537 2.952a57.499 57.499 0 0 1-1.883 3 57.517 57.517 0 0 1-1.883-3c-.563-.967-1.122-2.004-1.538-2.952C1.155 6.467.91 5.657.91 5.12Z">
+                                        </path>
+                                    </g>
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h10v15H0z"></path>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <?= $fields['place'] ?>
+                        </span>
                     </div>
+
 
                     <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
                         style="background-color:">
@@ -308,7 +399,8 @@ $id = 1576;
                             <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
                         </div>
                     </div>
-                    <!-- SM Screen -->
+
+
                     <div class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4 date flex-row"
                         style="background-color:">
                         <div class="date">

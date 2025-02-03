@@ -95,7 +95,8 @@ function create_posttype()
 // Hooking up our function to theme setup
 add_action('init', 'create_posttype');
 
-// Our custom post type function
+
+// Our custom Video post type function
 function create_post_type()
 {
 
@@ -118,3 +119,27 @@ function create_post_type()
 
 // Hooking up our function to theme setup
 add_action('init', 'create_post_type');
+
+// Our custom Video post type function
+function create_eventpost_type()
+{
+
+    register_post_type(
+        'events',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Events'),
+                'singular_name' => __('Events')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'events'),
+            'show_in_rest' => true,
+
+        )
+    );
+}
+
+// Hooking up our function to theme setup
+add_action('init', 'create_eventpost_type');

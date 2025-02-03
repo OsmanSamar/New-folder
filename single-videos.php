@@ -1,5 +1,3 @@
-hallo
-
 <?php get_header();
 
 //Template Name: video-1
@@ -48,8 +46,4 @@ hallo
     </div>
 
 
-</main>
-
-
-
-<?php get_footer() ?>
+</main><?php get_footer() ?>

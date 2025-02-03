@@ -348,6 +348,8 @@ $id = 1564;
     </div>
 
 
+
+
     <?php
     $posts = get_posts([
         'post_type' => 'videos',
@@ -356,49 +358,54 @@ $id = 1564;
 
     foreach ($posts as $post) {
         $fields = get_fields($post->ID);
-        ?>
-        <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-            data-aos-easing="ease-in-out">
-            <div class="row">
-                <?php
-                $delay = 0;
-                $content = $fields; ?>
-                <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                    data-aos-duration="800">
-                    <div style="margin-top: 2rem; margin-bottom: 2rem;"></div>
-                    <div class="video-card"
-                        style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative;">
-                        <div class="video-container" style="position: relative;">
-                            <!-- Video iframe with data attributes -->
-                            <!-- <iframe class="embed-responsive-item video-trigger" src="<?= $content['video'] ?>"
-                                allowfullscreen style="width: 100%; height: 218px; border-radius: 15px; cursor: ;"
-                                data-bs-toggle="modal" data-bs-target="#videoModal" data-video="<?= $content['video'] ?>"
-                                data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>">
-                            </iframe> -->
-                            <!-- Video Title Overlay -->
-                            <img src="<?= $content['thumbnail']['url'] ?>" alt="<?= $content['thumbnail']['alt'] ?>"
-                                data-bs-toggle="modal" data-bs-target="#videoModal" data-video="<?= $content['video'] ?>"
-                                data-title="<?= $content['videotitle'] ?>" data-text="<?= $content['videotext'] ?>">
-                            <div class="video-title-overlay">
-                                <?= $content['videotitle'] ?>
+        $videos = $fields['videogallery'];
+        if ($videos): ?>
+            <div class="container" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
+                <div class="row">
+                    <?php
+                    $delay = 0;
+                    foreach ($videos as $video_item): ?>
+                        <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
+                            data-aos-duration="800">
+                            <div class="video-card"
+                                style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative; cursor: pointer;">
+                                <div class="video-container" style="position: relative;">
+                                    <img class="video-trigger" src="<?= esc_url($video_item['thumbnail']['url']) ?>"
+                                        alt="<?= esc_attr($video_item['thumbnail']['alt']) ?>" data-bs-toggle="modal"
+                                        data-bs-target="#videoModal" data-video="<?= esc_url($video_item['video']) ?>"
+                                        data-title="<?= esc_attr($video_item['videotitle']) ?>"
+                                        data-text="<?= esc_attr($video_item['videotext']) ?>"
+                                        style="width: 100%; height: 218px; border-radius: 15px; object-fit: cover;">
+
+
+                                    <!-- Video Title Overlay -->
+                                    <div class="video-title-overlay" style="position: absolute; bottom: 10px; left: 10px; background: rgba(0, 0, 0, 0.7); 
+                                     color: white; padding: 5px 10px; border-radius: 5px;">
+                                        <?= esc_html($video_item['videotitle']) ?>
+                                    </div>
+                                </div>
+
+                                <!-- Video Info (Number + Text) -->
+                                <div class="d-flex align-items-center justify-content-start gap-2"
+                                    style="margin-top: 1rem; margin-left:1rem">
+                                    <span class="d-block articles_page_link"> <?= esc_html($video_item['videonum']) ?></span>
+                                    <span> <?= esc_html($video_item['videotext']) ?></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start gap-2"
-                            style="margin-top: 1rem; margin-left:1rem">
-                            <span class="d-block articles_page_link"> <?= $content['videonum'] ?></span>
-                            <span> <?= $content['videotext'] ?></span>
-                        </div>
-                    </div>
+                        <?php
+                        $delay += 300;
+                    endforeach; ?>
                 </div>
-                <?php
-                $delay += 300;
-                ?>
             </div>
-        </div>
-        <?php
+        <?php endif;
     }
     wp_reset_postdata();
     ?>
+
+
+
 
 
     <!-- Video Modal -->
@@ -417,17 +424,19 @@ $id = 1564;
                     </div>
                     <!-- Right: Video Title and Text -->
                     <div class="video-right" style="flex: 1; padding: 20px;">
+                        <p class="left-btn" style="background-color:#274083" id="modalText"></p>
                         <h2 id="modalTitleText"></h2>
-                        <p id="modalText"></p>
+                        <h6 id="modalVideoNum"></h6>
 
-                        <!-- Let's talk btn -->
-                        <div class=" d-flex align-items-center justify-content-between ">
+
+                        <!-- Let's talk button -->
+                        <div class="d-flex align-items-center justify-content-between">
                             <a href="<?= esc_url(home_url('/contact')); ?>"
                                 class="d-flex justify-content-center align-items-center gap-2">
-                                <div class=" d-flex align-items-center justify-content-between"
-                                    style="height: 42px; padding: 12px 15px; border-radius:8px; background:#E94271; ">
+                                <div class="d-flex align-items-center justify-content-between"
+                                    style="height: 42px; padding: 12px 15px; border-radius: 8px; background:#E94271;">
                                     <img src="<?= esc_url(get_template_directory_uri()); ?>/images/arrowbtn.svg"
-                                        alt="Arrow" style="width:12px; height: 18px; margin:7px 0;">
+                                        alt="Arrow" style="width: 12px; height: 18px; margin: 7px 0;">
                                 </div>
                                 <span
                                     style="color: #6A7291; font-family: Manrope; font-size: 16px; font-weight: 700; line-height:15.6px;">
@@ -443,9 +452,13 @@ $id = 1564;
 
 
 
+
+
     <!-- Form Section container  -->
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
+
+
 
 
 
@@ -459,19 +472,21 @@ $id = 1564;
             const modalVideo = document.getElementById("modalVideo");
             const modalTitle = document.getElementById("modalTitle");
             const modalTitleText = document.getElementById("modalTitleText");
+            const modalVideoNum = document.getElementById("modalVideoNum");
             const modalText = document.getElementById("modalText");
 
-            // When clicking on a video
+            // When clicking on a video thumbnail
             videoTriggers.forEach(trigger => {
                 trigger.addEventListener("click", function () {
-                    console.log('clickie')
                     const videoSrc = this.getAttribute("data-video");
                     const videoTitle = this.getAttribute("data-title");
                     const videoDescription = this.getAttribute("data-text");
+                    const videoNum = this.getAttribute("data-text");
 
                     modalTitle.innerText = videoTitle;
                     modalTitleText.innerText = videoTitle;
                     modalText.innerText = videoDescription;
+                    modalVideoNum.innerText = videoNum;
                     modalVideo.src = videoSrc + "?autoplay=1"; // Autoplay when modal opens
                 });
             });
