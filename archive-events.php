@@ -139,11 +139,11 @@ $id = 1576;
             border: 1px solid #ccc;
             border-radius: 15px;
             height: 80px;
-            margin-bottom: 250px;
+            margin-bottom: 40px;
         }
 
         .resource-item:hover {
-            background-color: #e94271;
+            background-color: #f9f9f9;
         }
 
         .resource-item>div:first-child {
@@ -342,8 +342,11 @@ $id = 1576;
                     </div>
                     <div class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
                         style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
-                        <span class="title ">
-                            <?= $post->post_title ?>
+                        <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 ">
+                            <span class="title ">
+                                <?= $post->post_title ?>
+                            </span>
+                            <span><?= $fields['arrowlink'] ?> </span>
                         </span>
                     </div>
                     <div
@@ -421,6 +424,12 @@ $id = 1576;
     }
     wp_reset_postdata();
     ?>
+
+
+
+
+
+
     <!-- Form Section container  -->
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
