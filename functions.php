@@ -48,7 +48,7 @@ add_action('admin_menu', 'remove_menus');
 // Add thumbnail support
 function thumbnails()
 {
-    add_theme_support('post-thumbnails', array('post', 'page'));
+    add_theme_support('post-thumbnails', array('post', 'page', 'customer_stories', 'events'));
 }
 add_action('init', 'thumbnails');
 
@@ -120,7 +120,7 @@ function create_post_type()
 // Hooking up our function to theme setup
 add_action('init', 'create_post_type');
 
-// Our custom Video post type function
+// Our custom Events post type function
 function create_eventpost_type()
 {
 
@@ -136,6 +136,7 @@ function create_eventpost_type()
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
             'show_in_rest' => true,
+            'supports' => ['editor', 'thumbnail']
 
         )
     );
@@ -143,3 +144,28 @@ function create_eventpost_type()
 
 // Hooking up our function to theme setup
 add_action('init', 'create_eventpost_type');
+
+// Our custom Events post type function
+function create_customer_story_post_type()
+{
+
+    register_post_type(
+        'customer_stories',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Customer Stories'),
+                'singular_name' => __('Customer Stories')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'customer-stories'),
+            'show_in_rest' => true,
+
+            'supports' => ['title', 'editor', 'thumbnail']
+        )
+    );
+}
+
+// Hooking up our function to theme setup
+add_action('init', 'create_customer_story_post_type');

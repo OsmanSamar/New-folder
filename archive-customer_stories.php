@@ -1,9 +1,9 @@
 <?php
 get_header();
-$id = 1576;
-//Template Name: events archive
+$id = 1731;
+//Template Name: customer stories archive
 ?>
-<main class="events flex-grow-1">
+<main class="customer stories flex-grow-1">
     <style>
         b,
         strong {
@@ -310,6 +310,7 @@ $id = 1576;
         }
     </style>
 
+
     <!-- BreadCrumb Section -->
     <?php get_template_part('components/breadcrumb') ?>
     <!--End  Of BreadCrumb Section -->
@@ -346,102 +347,93 @@ $id = 1576;
         </div>
     </div>
 
-    <?php
-    $posts = get_posts([
-        'post_type' => 'events',
-        'numberposts' => -1
-    ]);
 
-    foreach ($posts as $post) {
-        $fields = get_fields($post->ID);
-        ?>
-        <div class="container">
-            <div class="row">
-                <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div
-                        class="col-12 col-lg-3  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
-                        <span class="">
-                            <?= $fields['datum'] ?>
-                        </span>
-                    </div>
-                    <div class="col-12 col-lg-4  d-flex justify-content-center justify-content-lg-start align-items-center h-100  p-3 px-4  date post-id "
-                        style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
-                        <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 ">
-                            <span class="title ">
-                                <?= $post->post_title ?>
-                            </span>
-                            <div class="d-flex align-items-center justify-content-center rounded  "
-                                style="width: 6px; height: 9px; ">
-                                <!-- <img src="/wp-content/themes/New folder/images/nextarrow.svg" alt="Arrow"> -->
-                                <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="Arrow">
+    <div class="container">
+        <div class="row">
+            <?php
+            $posts = get_posts([
+                'post_type' => 'customer_stories',
+                'numberposts' => -1
+            ]);
+
+            foreach ($posts as $post) {
+                $fields = get_fields($post->ID);
+                ?>
+                <a href="<?= get_permalink($post) ?>" class=" g-0 row ">
+                    <?php
+                    $testimonial = get_field("clientstorytestimonials")
+                        ?>
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="card">
+                            <img src="<?= $testimonial["clientimg"]['url'] ?>" alt="<?= $testimonial['clientimg']['alt'] ?>"
+                                class="card-img-top " style="height: 213px; border-radius:20px;" />
+
+                            <!-- CARD BODY -->
+                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
+                                style="background-color:; overflow:hidden;">
+                                <div class="card-title">
+                                    <span>
+                                        <?= $testimonial["clientname"] ?></span>
+                                </div>
+                                <p class="card-text">
+                                    <?= $post->post_title ?>
+                                </p>
+
+                                <div class="bottom-border position-absolute"
+                                    style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
+                                </div>
+                            </div>
+                            <!-- END OF CARD BODY -->
+                            <!-- Bejijken btn -->
+                            <div class=" card-body d-flex justify-content-between align-items-center">
+                                <button>
+                                    <span class="circle blue-circle">
+                                        <div href="#" class="d-flex justify-content-center align-items-center  arrow">
+                                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
+                                                alt="go to article" style="width: 12px; height: 18px; margin:7px 0"
+                                                class="icon" />
+                                        </div>
+                                    </span>
+                                    <div class=" button-text blue2">
+                                        view
+                                    </div>
+                                </button>
+
+
                             </div>
 
-                        </span>
-                    </div>
-                    <div class="d-flex col-lg-2 justify-content-center  align-items-center h-100 p-3 px-4  date post-id">
-                        <div class="d-flex flex-row align-items-center justify-content-between gap-">
-                            <div class="flex-shrink-0">
-                                <?= $fields['starttime'] ?>
-                                <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
-
-                            </div>
-                            <div style="width:40px">
-                                <hr>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <?= $fields['endtime'] ?>
-                                <span style=" color:#9AA0B7"><?= $fields['end'] ?> </span>
-
-                            </div>
                         </div>
                     </div>
 
-                    <div
-                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 date post-id ">
-                        <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 "
-                            style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
-                            <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
-                                fill="none">
-                                <g fill="#6A7291" clip-path="url(#a)">
-                                    <path d="M4.63 14.47 5 14.2l.37.27L5 15l-.37-.53Z"></path>
-                                    <g fill-rule="evenodd" clip-rule="evenodd">
-                                        <path
-                                            d="M5 2.793c-1.256 0-2.273 1.043-2.273 2.328 0 1.286 1.017 2.328 2.272 2.328s2.273-1.042 2.273-2.328c0-1.285-1.018-2.328-2.273-2.328ZM3tar5 5.121c0-.771.61-1.396 1.363-1.396s1.364.625 1.364 1.396c0 .772-.61 1.397-1.364 1.397-.753 0-1.363-.625-1.363-1.397Z">
-                                        </path>
-                                        <path
-                                            d="M4.63 14.47 5 14.2l.37.27.003-.005.01-.014.04-.056.145-.214a58.524 58.524 0 0 0 2.095-3.318c.572-.981 1.15-2.053 1.587-3.048.428-.976.75-1.944.75-2.694C10 2.293 7.761 0 5 0S0 2.293 0 5.121c0 .75.322 1.718.75 2.694.436.995 1.014 2.067 1.587 3.049a58.495 58.495 0 0 0 2.24 3.53l.04.057.01.014.003.006ZM.91 5.122C.91 2.807 2.74.931 5 .931s4.09 1.876 4.09 4.19c0 .536-.245 1.346-.67 2.313-.415.948-.974 1.985-1.537 2.952a57.499 57.499 0 0 1-1.883 3 57.517 57.517 0 0 1-1.883-3c-.563-.967-1.122-2.004-1.538-2.952C1.155 6.467.91 5.657.91 5.12Z">
-                                        </path>
-                                    </g>
-                                </g>
-                                <defs>
-                                    <clipPath id="a">
-                                        <path fill="#fff" d="M0 0h10v15H0z"></path>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <?= $fields['place'] ?>
-                        </span>
-                    </div>
 
 
-                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
+
+
+
+
+
+
+                </a>
+                <?php
+            }
+            wp_reset_postdata();
+            ?>
+
+
+        </div>
+        <!-- <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
                         style="background-color:">
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
                             <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
 
                         </div>
-                    </div>
+                    </div> -->
+
+    </div>
 
 
 
-                </a>
-            </div>
-        </div>
-        <?php
-    }
-    wp_reset_postdata();
-    ?>
 
     <!-- <div class="text-center mt-4">
         <button id="load-more" class="btn btn-primary" data-page="1" data-url="<?= admin_url('admin-ajax.php'); ?>">
@@ -462,36 +454,6 @@ $id = 1576;
     <!-- Form Section container  -->
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
-
-    <!-- <script>
-        jQuery(document).ready(function ($) {
-            $("#load-more").on("click", function () {
-                var button = $(this),
-                    page = button.data("page"),
-                    ajaxurl = button.data("url");
-
-                $.ajax({
-                    url: ajaxurl,
-                    type: "POST",
-                    data: {
-                        action: "load_more",
-                        page: page,
-                    },
-                    beforeSend: function () {
-                        button.text("Loading...");
-                    },
-                    success: function (data) {
-                        if ($.trim(data)) {
-                            $("#posts-container").append(data);
-                            button.data("page", page + 1).text("Load More");
-                        } else {
-                            button.remove();  Hide button when no more posts
-                        }
-                    },
-                });
-            });
-        });
-    </script> -->
 
 
 </main>
