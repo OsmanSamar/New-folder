@@ -68,9 +68,9 @@
         .test-block::before {
             content: " ";
             position: absolute;
-            border-radius: 30px;
+            border-radius: 40px;
             background: linear-gradient(335deg, rgba(71, 95, 173, 0.4) 8.61%, rgba(52, 63, 101, 0) 61.92%);
-            top: -5px;
+            top: 15px;
             left: 0;
             z-index: -1;
             width: 100%;
@@ -223,6 +223,8 @@
             align-items: flex-start;
             justify-content: space-around;
             flex-direction: column;
+            /* align-items: center;
+            justify-content: space-between; */
         }
 
         .blue-container {
@@ -238,10 +240,12 @@
 
         .left-side-img-text {
             display: flex;
-            gap: 1rem;
-            justify-content: center;
+            /* gap: 1rem;
+            justify-content: center; */
             flex-direction: row;
-            align-items: flex-start;
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            justify-content: space-around;
         }
 
         .first-name-name {
@@ -261,7 +265,6 @@
 
         .date {
             border-left: unset;
-
         }
 
         .datum {
@@ -282,10 +285,22 @@
 
         @media (min-width: 768px) {
 
+            .test-block::before {
+                content: " ";
+                position: absolute;
+                border-radius: 40px;
+                background: linear-gradient(335deg, rgba(71, 95, 173, 0.4) 8.61%, rgba(52, 63, 101, 0) 61.92%);
+                top: -5px;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 211px;
+            }
+
+
             .container-max-width {
                 margin: 250px auto 10px;
             }
-
 
             .container-max-width .container-img {
                 display: block;
@@ -325,6 +340,8 @@
                 align-items: center;
                 flex-direction: row;
                 padding: 28px;
+                justify-content: flex-start;
+                column-gap: 31px;
             }
 
             .blue-container {
@@ -349,9 +366,20 @@
 
         @media(min-width: 992px) {
 
+            .test-block::before {
+                content: " ";
+                position: absolute;
+                border-radius: 40px;
+                background: linear-gradient(335deg, rgba(71, 95, 173, 0.4) 8.61%, rgba(52, 63, 101, 0) 61.92%);
+                top: -5px;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 211px;
+            }
+
             .container-max-width {
                 border-radius: 30px;
-
                 margin: 100px auto 10px;
             }
 
@@ -389,7 +417,9 @@
                 align-items: center;
                 flex-direction: row;
                 height: 200px;
-                justify-content: center;
+                /* justify-content: center; */
+                justify-content: flex-start;
+                column-gap: 31px;
             }
 
             .blue-container {
@@ -416,7 +446,6 @@
 
             .date {
                 border-left: 1px solid #ccc;
-
             }
 
             .datum {
@@ -433,10 +462,10 @@
         }
     </style>
 
-    <div style="margin-top:180px;">
-        <!-- BreadCrumb Section -->
-        <?php get_template_part('components/breadcrumb') ?>
 
+    <!-- BreadCrumb Section -->
+    <div style="margin-top:180px;">
+        <?php get_template_part('components/breadcrumb') ?>
     </div>
 
     <?php
@@ -445,22 +474,24 @@
     $fields = get_fields($post_id);
     ?>
 
-
-    <div class="col-12 col-lg-12 d-flex justify-content-center align-items-center  h-100  p-3 px-4  ">
+    <div class="col-12 col-lg-12 d-flex justify-content-center align-items-center  h-100  p-3 px-4">
         <span class="post-title ">
             <?= get_the_title($post_id) ?>
         </span>
     </div>
+
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-12">
+            <div class="col-12 col-lg-12" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <a href=" <?= get_permalink($post_id) ?>" class="resource-item g-0 row ">
                     <div
-                        class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
+                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
                         <div class="">
                             <?= $fields['datum'] ?>
                         </div>
                     </div>
+                    <div class="col-lg-2 d-none"></div>
 
                     <div
                         class="d-flex col-lg-4 justify-content-center  align-items-center h-100 p-3 px-4 date post-id ">
@@ -546,7 +577,8 @@
                     // var_dump($content);
                     if ($content['acf_fc_layout'] == 'text') { ?>
                         <div id="vivamusnoncommodonulla">
-                            <span class="left-btn"><?= $content['subtitle'] ?></span>
+                            <span class="left-btn">
+                                <?= $content['subtitle'] ?></span>
                             <h1 class=" first_title"> <?= $content['maintitle'] ?></h1>
                         </div>
                         <div id="pellentesquebibendumefficiturduisedconvallistinciduntelitegetiaculis">
@@ -602,7 +634,8 @@
         data-aos-duration="1000" data-aos-easing="ease-in-out">
         <!-- Left Side: Image and Texts container-let-talk -->
         <div class="container-let-talk">
-            <div class="left-side-img-text col-lg-9 col-md-8 col-12">
+            <div class="left-side-img-text col-lg-9 col-md-8 col-12 ">
+                <!-- col-lg-9 col-md-8 col-12 -->
                 <img src="<?= get_field('letstalkimg')['url'] ?>" alt="<?= get_field('letstalkimg')['alt'] ?>"
                     style="width: 120px;height: 120px; border:15px;">
                 <div>
@@ -618,8 +651,9 @@
             </div>
 
             <!-- Right Side: Text, Email, and Phone -->
-            <div class="col-lg-3 col-12 col-md-4 test-block"
-                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:center; gap:1rem; position:relative; height:200px; padding:28px;">
+            <div class=" test-block col-lg-3 col-12 col-md-4 "
+                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:center; gap:1rem; position:relative; height:200px; padding:28px; width:;">
+                <!-- col-lg-3 col-12 col-md-4 -->
                 <span style="color: #FFF;"><?= get_field('letstalkword') ?></span>
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
                     <div
