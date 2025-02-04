@@ -388,7 +388,7 @@ $id = 1519;
                         style="background-color:">
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                            <img src="wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
                         </div>
                     </div>
                     <!-- SM Screen -->
@@ -403,7 +403,7 @@ $id = 1519;
                         <div class="d-flex d-lg-none border-right"></div>
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                            <img src="wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
                         </div>
                     </div>
 

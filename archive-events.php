@@ -372,7 +372,7 @@ $id = 1576;
                             </span>
                             <div class="d-flex align-items-center justify-content-center rounded  "
                                 style="width: 6px; height: 9px; ">
-                                <img src="/sue/wp-content/themes/New folder/images/nextarrow.svg" alt="Arrow">
+                                <img src="/wp-content/themes/New folder/images/nextarrow.svg" alt="Arrow">
                             </div>
 
                         </span>
@@ -427,23 +427,9 @@ $id = 1576;
                         style="background-color:">
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                            <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
                         </div>
                     </div>
-
-
-                    <!-- <div class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4 date flex-row"
-                        style="background-color:">
-                        <div class="date">
-                            Published <?= $fields['datum'] ?>
-                        </div>
-                        <div class="d-flex d-lg-none border-left"></div>
-                        <div class="d-flex align-items-center justify-content-center rounded  arrow"
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
-                        </div>
-                    </div> -->
-
                 </a>
             </div>
         </div>

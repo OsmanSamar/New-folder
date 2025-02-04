@@ -299,9 +299,6 @@
         }
 
         @media (min-width: 768px) {
-
-
-
             .gform_fields top_label form_sublabel_below description_below validation_below {
                 display: inline-block !important;
             }
@@ -309,9 +306,7 @@
             .gform-theme--foundation .gform_fields {
                 display: inline-block !important;
                 font-size: 30px !important;
-                font-weight: 700 !important;
-
-
+                font-weight: 500 !important;
             }
 
             /* Label */
@@ -320,17 +315,10 @@
                 font-weight: 700 !important;
             }
 
-
-
-
             .gform-theme--foundation .gform_footer,
             .gform-theme--foundation .gform_page_footer {
                 justify-content: start !important;
             }
-
-
-
-
         }
 
         .text-section {
