@@ -30,16 +30,51 @@
             height: 18px;
         }
 
+        .post-title {
+            color: #24325f;
+            font-family: Manrope, sans-serif;
+            text-wrap: balance;
+            font-weight: 600;
+            line-height: 1.4;
+            font-size: 47px;
+            text-align: center;
+        }
+
+        .post-place {
+            color: #24325f;
+            font-family: Manrope, sans-serif;
+            text-wrap: balance;
+            font-weight: 600;
+            line-height: 1.4;
+            font-size: 17px;
+        }
+
+        .testi-num {
+            color: #E94271;
+            font-family: Manrope;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 23.8px;
+        }
+
+        .testi-title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 23.8px;
+            color: #6A7291;
+            font-family: Manrope;
+        }
+
         .test-block::before {
             content: " ";
             position: absolute;
             border-radius: 30px;
-            background: linear-gradient(335deg, rgba(55, 75, 141, 0.40) 8.61%, rgba(54, 70, 124, 0.00) 61.92%);
-            top: 0;
+            background: linear-gradient(335deg, rgba(71, 95, 173, 0.4) 8.61%, rgba(52, 63, 101, 0) 61.92%);
+            top: -5px;
             left: 0;
             z-index: -1;
             width: 100%;
-            height: 100%;
+            height: 211px;
         }
 
         ::selection {
@@ -240,6 +275,10 @@
             border: 1px solid #ccc;
         }
 
+        .post-id-sm {
+            border: 1px solid #ccc;
+        }
+
 
         @media (min-width: 768px) {
 
@@ -285,6 +324,7 @@
             .left-side-img-text {
                 align-items: center;
                 flex-direction: row;
+                padding: 28px;
             }
 
             .blue-container {
@@ -386,11 +426,10 @@
                 font-size: 20px
             }
 
-            .post-id {
+            .post-id-sm {
                 border: unset;
-
-
             }
+
         }
     </style>
 
@@ -407,80 +446,70 @@
     ?>
 
 
-    <div class="col-12 col-lg-12 justify-content-center  d-flex align-items-center h-100  p-3 px-4  "
-        style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:47px; ">
-        <span class="title ">
+    <div class="col-12 col-lg-12 d-flex justify-content-center align-items-center  h-100  p-3 px-4  ">
+        <span class="post-title ">
             <?= get_the_title($post_id) ?>
         </span>
     </div>
     <div class="container">
         <div class="row">
-            <a href="<?= get_permalink($post_id) ?>" class="resource-item g-0 row ">
-                <div
-                    class="col-12 col-lg-3 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
-                    <div class="">
-                        <?= $fields['datum'] ?>
-                    </div>
-                </div>
-
-                <div
-                    class="d-flex col-lg-3 justify-content-center justify-content-lg-start align-items-center h-100 p-3 px-4 date post-id ">
-                    <div class="d-flex flex-row align-items-center justify-content-between gap-3">
-                        <div class="flex-shrink-0">
-                            <?= $fields['starttime'] ?>
-                            <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
-                        </div>
-                        <div style="width:40px">
-                            <hr>
-                        </div>
-                        <div class="flex-shrink-0">
-                            <?= $fields['endtime'] ?>
-                            <span style=" color:#9AA0B7"><?= $fields['end'] ?> </span>
+            <div class="col-12 col-lg-12">
+                <a href=" <?= get_permalink($post_id) ?>" class="resource-item g-0 row ">
+                    <div
+                        class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
+                        <div class="">
+                            <?= $fields['datum'] ?>
                         </div>
                     </div>
-                </div>
 
-                <div
-                    class="col-12 col-lg-3 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4  date  post-id">
-                    <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2"
-                        style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
-                        <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
-                            fill="none">
-                            <g fill="#6A7291" clip-path="url(#a)">
-                                <path d="M4.63 14.47 5 14.2l.37.27L5 15l-.37-.53Z"></path>
-                                <g fill-rule="evenodd" clip-rule="evenodd">
-                                    <path
-                                        d="M5 2.793c-1.256 0-2.273 1.043-2.273 2.328 0 1.286 1.017 2.328 2.272 2.328s2.273-1.042 2.273-2.328c0-1.285-1.018-2.328-2.273-2.328ZM3.635 5.121c0-.771.61-1.396 1.363-1.396s1.364.625 1.364 1.396c0 .772-.61 1.397-1.364 1.397-.753 0-1.363-.625-1.363-1.397Z">
-                                    </path>
-                                    <path
-                                        d="M4.63 14.47 5 14.2l.37.27.003-.005.01-.014.04-.056.145-.214a58.524 58.524 0 0 0 2.095-3.318c.572-.981 1.15-2.053 1.587-3.048.428-.976.75-1.944.75-2.694C10 2.293 7.761 0 5 0S0 2.293 0 5.121c0 .75.322 1.718.75 2.694.436.995 1.014 2.067 1.587 3.049a58.495 58.495 0 0 0 2.24 3.53l.04.057.01.014.003.006ZM.91 5.122C.91 2.807 2.74.931 5 .931s4.09 1.876 4.09 4.19c0 .536-.245 1.346-.67 2.313-.415.948-.974 1.985-1.537 2.952a57.499 57.499 0 0 1-1.883 3 57.517 57.517 0 0 1-1.883-3c-.563-.967-1.122-2.004-1.538-2.952C1.155 6.467.91 5.657.91 5.12Z">
-                                    </path>
+                    <div
+                        class="d-flex col-lg-4 justify-content-center  align-items-center h-100 p-3 px-4 date post-id ">
+                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                            <div class="flex-shrink-0">
+                                <?= $fields['starttime'] ?>
+                                <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
+                            </div>
+                            <div style="width:40px">
+                                <hr>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <?= $fields['endtime'] ?>
+                                <span style=" color:#9AA0B7"><?= $fields['end'] ?> </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4  date  post-id-sm">
+                        <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 post-place">
+                            <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
+                                fill="none">
+                                <g fill="#6A7291" clip-path="url(#a)">
+                                    <path d="M4.63 14.47 5 14.2l.37.27L5 15l-.37-.53Z"></path>
+                                    <g fill-rule="evenodd" clip-rule="evenodd">
+                                        <path
+                                            d="M5 2.793c-1.256 0-2.273 1.043-2.273 2.328 0 1.286 1.017 2.328 2.272 2.328s2.273-1.042 2.273-2.328c0-1.285-1.018-2.328-2.273-2.328ZM3.635 5.121c0-.771.61-1.396 1.363-1.396s1.364.625 1.364 1.396c0 .772-.61 1.397-1.364 1.397-.753 0-1.363-.625-1.363-1.397Z">
+                                        </path>
+                                        <path
+                                            d="M4.63 14.47 5 14.2l.37.27.003-.005.01-.014.04-.056.145-.214a58.524 58.524 0 0 0 2.095-3.318c.572-.981 1.15-2.053 1.587-3.048.428-.976.75-1.944.75-2.694C10 2.293 7.761 0 5 0S0 2.293 0 5.121c0 .75.322 1.718.75 2.694.436.995 1.014 2.067 1.587 3.049a58.495 58.495 0 0 0 2.24 3.53l.04.057.01.014.003.006ZM.91 5.122C.91 2.807 2.74.931 5 .931s4.09 1.876 4.09 4.19c0 .536-.245 1.346-.67 2.313-.415.948-.974 1.985-1.537 2.952a57.499 57.499 0 0 1-1.883 3 57.517 57.517 0 0 1-1.883-3c-.563-.967-1.122-2.004-1.538-2.952C1.155 6.467.91 5.657.91 5.12Z">
+                                        </path>
+                                    </g>
                                 </g>
-                            </g>
-                            <defs>
-                                <clipPath id="a">
-                                    <path fill="#fff" d="M0 0h10v15H0z"></path>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <?= $fields['place'] ?>
-                    </span>
-                </div>
-
-            </a>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h10v15H0z"></path>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <?= $fields['place'] ?>
+                        </span>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
     <?php wp_reset_postdata(); ?>
-
-
-
-
-
-
-
-
-
 
 
     <!-- Hero Section -->
@@ -569,14 +598,11 @@
     </div>
 
     <!-- 4 -->
-
     <div class="blue-container row g-0 " data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
         data-aos-duration="1000" data-aos-easing="ease-in-out">
         <!-- Left Side: Image and Texts container-let-talk -->
-
         <div class="container-let-talk">
-
-            <div class="left-side-img-text col-lg-9 col-12">
+            <div class="left-side-img-text col-lg-9 col-md-8 col-12">
                 <img src="<?= get_field('letstalkimg')['url'] ?>" alt="<?= get_field('letstalkimg')['alt'] ?>"
                     style="width: 120px;height: 120px; border:15px;">
                 <div>
@@ -590,10 +616,10 @@
                     <span class="letstalkgotaquestion"><?= get_field('letstalkgotaquestion') ?></span>
                 </div>
             </div>
-            <!-- Right Side: Text, Email, and Phone -->
 
-            <div class="col-lg-3 col-12 test-block"
-                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:center; gap:1rem; position:relative; height:200px;">
+            <!-- Right Side: Text, Email, and Phone -->
+            <div class="col-lg-3 col-12 col-md-4 test-block"
+                style="display: flex; flex-direction: column; align-items: flex-start; justify-content:center; gap:1rem; position:relative; height:200px; padding:28px;">
                 <span style="color: #FFF;"><?= get_field('letstalkword') ?></span>
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
                     <div
