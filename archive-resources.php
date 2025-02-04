@@ -56,7 +56,7 @@ $id = 1519;
             border-radius: 30px;
             /* max-width: 1700px; */
             min-height: 381px;
-            margin: 200px auto 10px;
+            margin: 40px auto 10px;
         }
 
         .container-max-width .container-img {
@@ -64,7 +64,7 @@ $id = 1519;
         }
 
         .hero_white_block {
-            height: 100%;
+            /* height: 100%; */
             border-radius: 40px;
             background: #FFF;
             position: relative;
@@ -216,7 +216,7 @@ $id = 1519;
                 width: 380px;
                 /* position: relative; */
                 position: absolute;
-                bottom: 76px;
+                bottom: 79px;
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -247,6 +247,10 @@ $id = 1519;
         }
 
         @media (min-width: 992px) {
+
+            .container-max-width {
+                margin: 100px auto 10px;
+            }
 
             .datum {
                 border-radius: 15px 0px 0px 15px;
@@ -283,8 +287,11 @@ $id = 1519;
 
             .hero_white_block {
                 width: 531px;
-                position: relative;
-                bottom: 303px;
+                position: absolute;
+                bottom: 79px;
+
+                /* position: relative;
+            bottom: 303px; */
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -358,8 +365,8 @@ $id = 1519;
         <div class="container">
             <div class="row">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum"
-                        style="">
+                    <div
+                        class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
                         <span class="title ">
                             <?= $post->post_title ?>
                         </span>
@@ -372,8 +379,8 @@ $id = 1519;
                     </div>
                     <div
                         class="col-12 col-lg-2 d-none d-lg-flex justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
-                        <div class="">
-                            Published <?= $fields['datum'] ?>
+                        <div class="d-flex align-items-baseline gap-3">
+                            <span style=" color:#E94271"> Published </span> <?= $fields['datum'] ?>
                         </div>
                     </div>
 
@@ -387,11 +394,9 @@ $id = 1519;
                     <!-- SM Screen -->
                     <div
                         class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4  flex-row  post-id">
-                        <!-- <div class="date">
-                            Published <?= $fields['datum'] ?>
-                        </div> -->
+
                         <div class="flex-shrink-0 d-flex flex-column align-items-center justify-content-between gap-3">
-                            <span style=" color:#9AA0B7"> Published </span>
+                            <span style=" color:#E94271"> Published </span>
                             <?= $fields['datum'] ?>
                         </div>
 

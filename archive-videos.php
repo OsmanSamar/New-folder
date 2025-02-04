@@ -56,7 +56,7 @@ $id = 1564;
             border-radius: 30px;
             /* max-width: 1700px; */
             min-height: 381px;
-            margin: 200px auto 10px;
+            margin: 40px auto 0px;
         }
 
         .container-max-width .container-img {
@@ -265,6 +265,10 @@ $id = 1564;
                 font-size: inherit;
             }
 
+            .container-max-width {
+                margin: 100px auto 0px;
+            }
+
             /* .container-max-width {
                 margin-bottom: -240px;
             } */
@@ -291,8 +295,10 @@ $id = 1564;
 
             .hero_white_block {
                 width: 531px;
-                position: relative;
-                bottom: 306px;
+                position: absolute;
+                bottom: 79px;
+                /* position: relative;
+                bottom: 306px; */
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -367,7 +373,7 @@ $id = 1564;
                     $delay = 0;
                     foreach ($videos as $video_item): ?>
                         <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="<?= $delay ?>"
-                            data-aos-duration="800">
+                            data-aos-duration="800" style="margin: 0 0 23px 0;">
                             <div class="video-card"
                                 style="background-color:#FFF; height: 290px; border-radius: 30px; position: relative; cursor: pointer;">
                                 <div class="video-container" style="position: relative;">

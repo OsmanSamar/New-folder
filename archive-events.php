@@ -55,7 +55,7 @@ $id = 1576;
         .container-max-width {
             border-radius: 30px;
             min-height: 381px;
-            margin: 200px auto 10px;
+            margin: 40px auto 10px;
         }
 
         .container-max-width .container-img {
@@ -139,7 +139,7 @@ $id = 1576;
             border: 1px solid #ccc;
             border-radius: 15px;
             height: 80px;
-            margin-bottom: 40px;
+            margin-bottom: 250px;
         }
 
         .resource-item:hover {
@@ -162,25 +162,41 @@ $id = 1576;
         }
 
         .border-left {
-            border-left: 1px solid white;
+            border-left: 1px solid #ccc;
             display: flex;
             flex-direction: column;
             padding: 20px 0 20px 60px;
+            /*  padding: 55px 0 20px 138px; */
             row-gap: 16px;
         }
 
         .date {
             border-left: unset;
+        }
 
+        .border-right {
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            padding: 55px 0 20px 138px;
+            row-gap: 16px;
+        }
+
+        .datum {
+            background-color: #274083;
+            border-radius: 15px 15px 0px 0px;
+            color: #FFF;
+            font-size: 20px;
+        }
+
+        .post-id {
+            border: 1px solid #ccc;
         }
 
 
 
         @media (min-width: 768px) {
 
-            /* .container-max-width {
-                margin-bottom: -240px;
-            } */
 
             .container-max-width .container-img {
                 display: block;
@@ -224,9 +240,11 @@ $id = 1576;
         }
 
         @media (min-width: 992px) {
-            /* .container-max-width {
-                margin-bottom: -240px;
-            } */
+
+            .datum {
+                border-radius: 15px 0px 0px 15px;
+            }
+
 
             .hero_text {
                 font-size: 46px;
@@ -261,8 +279,10 @@ $id = 1576;
 
             .hero_white_block {
                 width: 531px;
-                position: relative;
-                bottom: 306px;
+                position: absolute;
+                bottom: 79px;
+                /* position: relative;
+                bottom: 306px; */
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -275,6 +295,10 @@ $id = 1576;
             .inner_block {
                 margin: 10px 60px;
                 gap: 37px;
+            }
+
+            .resource-item {
+                margin-bottom: 40px;
             }
 
             .date {
@@ -334,13 +358,13 @@ $id = 1576;
         <div class="container">
             <div class="row">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div class="col-12 col-lg-3  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4"
-                        style="background-color:#274083; border-radius:15px 0px 0px 15px; color:#FFF; font-size:20px">
-                        <div class="">
+                    <div
+                        class="col-12 col-lg-3  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
+                        <span class="">
                             <?= $fields['datum'] ?>
-                        </div>
+                        </span>
                     </div>
-                    <div class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
+                    <div class="col-12 col-lg-4  d-flex justify-content-center justify-content-lg-start align-items-center h-100  p-3 px-4  date post-id "
                         style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
                         <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 ">
                             <span class="title ">
@@ -353,9 +377,8 @@ $id = 1576;
 
                         </span>
                     </div>
-                    <div
-                        class="d-flex col-lg-2 justify-content-center justify-content-lg-start align-items-center h-100 p-3 px-4 date">
-                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
+                    <div class="d-flex col-lg-2 justify-content-center  align-items-center h-100 p-3 px-4  date post-id">
+                        <div class="d-flex flex-row align-items-center justify-content-between gap-">
                             <div class="flex-shrink-0">
                                 <?= $fields['starttime'] ?>
                                 <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
@@ -373,7 +396,7 @@ $id = 1576;
                     </div>
 
                     <div
-                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 date ">
+                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 date post-id ">
                         <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 "
                             style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
                             <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
