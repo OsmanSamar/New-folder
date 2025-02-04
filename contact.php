@@ -233,6 +233,7 @@
 
             .border-container2 {
                 height: 278px;
+                margin: 372px auto 10px;
             }
 
             .container-max-width .container-img {
@@ -299,6 +300,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                margin: 100px auto 10px;
             }
 
 
@@ -439,7 +441,12 @@
 
                 </div>
 
-                <div class="col-12 col-lg-6"></div>
+                <div class="col-12 col-lg-6">
+
+                    <div class="form-container form-1">
+                        <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="5" title="false" description="false"  cssClass="form-1"]')) ?>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -104,6 +104,10 @@
             line-height: 15.6px;
         }
 
+        .navbar ul li a:hover {
+            color: #E94271 !important;
+        }
+
 
         /* Sidebar Dropdown Menu */
         /* .sidebar-nav .dropdown-menu {
