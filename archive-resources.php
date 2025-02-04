@@ -139,9 +139,7 @@ $id = 1519;
             line-height: 27.2px;
         }
 
-        .desc {
-            border-bottom: 7px solid green;
-        }
+
 
         .date {
             border-left: unset;
@@ -152,14 +150,11 @@ $id = 1519;
             display: flex;
             flex-direction: row;
             align-items: center;
-            /* justify-content: space-between; */
             border: 1px solid #ccc;
             border-radius: 15px;
             height: 80px;
-            /* padding: 16px; */
-            /* padding: 8px; */
             margin-bottom: 250px;
-            /* overflow: hidden; */
+
         }
 
         .resource-item:hover {
@@ -175,21 +170,44 @@ $id = 1519;
             height: 18px;
         }
 
-
-
         .border-end {
             border-left: 1px solid red;
         }
 
         .border-left {
-            border-left: 1px solid white;
+            border-left: 1px solid #ccc;
             display: flex;
             flex-direction: column;
-            padding: 20px 0 20px 60px;
+            padding: 55px 0 20px 138px;
             row-gap: 16px;
         }
 
+        .border-right {
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            padding: 55px 0 20px 138px;
+            row-gap: 16px;
+        }
+
+
+
+        .datum {
+            background-color: #274083;
+            border-radius: 15px 15px 0px 0px;
+            color: #FFF;
+            font-size: 20px;
+        }
+
+        .post-id {
+            border: 1px solid #ccc;
+        }
+
         @media (min-width: 768px) {
+            .datum {
+                border-radius: 15px 15px 0px 0px;
+            }
+
             .container-max-width .container-img {
                 display: block;
             }
@@ -217,12 +235,9 @@ $id = 1519;
                 gap: 20px;
             }
 
-            .border-left {
-                border-left: 1px solid red;
-                display: flex;
-                flex-direction: column;
-                padding: 20px 0 20px 60px;
-                row-gap: 16px;
+            .border-right {
+                padding: 55px 0 20px 482px;
+
             }
 
             .inner_block {
@@ -232,6 +247,10 @@ $id = 1519;
         }
 
         @media (min-width: 992px) {
+
+            .datum {
+                border-radius: 15px 0px 0px 15px;
+            }
 
             .border-top {
                 border-top: 1px solid red;
@@ -280,12 +299,12 @@ $id = 1519;
                 gap: 37px;
             }
 
-            .desc {
-                border-bottom: unset;
+            .resource-item {
+                margin-bottom: 40px;
             }
 
             .date {
-                border-left: 1px solid red;
+                border-left: 1px solid #ccc;
 
             }
         }
@@ -293,7 +312,7 @@ $id = 1519;
 
     <!-- BreadCrumb Section -->
     <?php get_template_part('components/breadcrumb') ?>
-    <!--End  Of BreadCrumb Section -->
+
 
     <!-- Hero Section -->
     <div class="container container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -339,26 +358,26 @@ $id = 1519;
         <div class="container">
             <div class="row">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4"
-                        style="background-color:#274083; border-radius:15px 0px 0px 15px;">
+                    <div class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum"
+                        style="">
                         <span class="title ">
                             <?= $post->post_title ?>
                         </span>
                     </div>
-                    <div class="col-12 col-lg-5 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 desc "
-                        style="background-color:">
-                        <div class="description">
+                    <div
+                        class="col-12 col-lg-5 d-flex  justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
+                        <div class="flex-shrink-0">
                             <?= $fields['voorbeeld'] ?>
                         </div>
                     </div>
-                    <div class="d-none d-lg-flex col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 date "
-                        style="background-color: ">
+                    <div
+                        class="col-12 col-lg-2 d-none d-lg-flex justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
                         <div class="">
                             Published <?= $fields['datum'] ?>
                         </div>
                     </div>
 
-                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
+                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date post-id"
                         style="background-color:">
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
@@ -366,12 +385,17 @@ $id = 1519;
                         </div>
                     </div>
                     <!-- SM Screen -->
-                    <div class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4 date flex-row"
-                        style="background-color:">
-                        <div class="date">
+                    <div
+                        class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4  flex-row  post-id">
+                        <!-- <div class="date">
                             Published <?= $fields['datum'] ?>
+                        </div> -->
+                        <div class="flex-shrink-0 d-flex flex-column align-items-center justify-content-between gap-3">
+                            <span style=" color:#9AA0B7"> Published </span>
+                            <?= $fields['datum'] ?>
                         </div>
-                        <div class="d-flex d-lg-none border-left"></div>
+
+                        <div class="d-flex d-lg-none border-right"></div>
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
                             <img src="/sue/wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
