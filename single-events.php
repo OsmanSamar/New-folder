@@ -104,7 +104,8 @@
         }
 
         .hero_blue_block {
-            height: 100%;
+            /* height: 100%; */
+            height: 700px;
             border-radius: 40px;
             background: #25325F;
             position: relative;
@@ -283,6 +284,60 @@
         }
 
 
+        /* Custom styles for Form 1 */
+        .form-1 .gform_wrapper .gform_body .gform_fields .gfield {
+            width: 100%;
+        }
+
+        /* Input field */
+        .gform-theme--foundation .gfield input,
+        .gform-theme--foundation .gfield select {
+            inline-size: 100% !important;
+            box-sizing: border-box !important;
+            border-radius: 8px !important;
+            margin-bottom: 8px !important;
+        }
+
+        @media (min-width: 768px) {
+
+
+
+            .gform_fields top_label form_sublabel_below description_below validation_below {
+                display: inline-block !important;
+            }
+
+            .gform-theme--foundation .gform_fields {
+                display: inline-block !important;
+                font-size: 30px !important;
+                font-weight: 700 !important;
+
+
+            }
+
+            /* Label */
+            .gform-field-label--type-sub {
+                font-size: 18px !important;
+                font-weight: 700 !important;
+            }
+
+
+
+
+            .gform-theme--foundation .gform_footer,
+            .gform-theme--foundation .gform_page_footer {
+                justify-content: start !important;
+            }
+
+
+
+
+        }
+
+        .text-section {
+            margin-top: 150px
+        }
+
+
         @media (min-width: 768px) {
 
             .test-block::before {
@@ -359,6 +414,10 @@
                 border-radius: 15px 15px 0px 0px;
                 color: #FFF;
                 font-size: 20px
+            }
+
+            .text-section {
+                margin-top: 50px
             }
 
         }
@@ -457,6 +516,10 @@
 
             .post-id-sm {
                 border: unset;
+            }
+
+            .text-section {
+                margin-top: 50px
             }
 
         }
@@ -564,12 +627,21 @@
                 <span class="hero_title">
                     <?= get_field("herotitle") ?>
                 </span>
+
+
             </div>
+            <div class="form-container form-1">
+                <?= str_replace(['__START__', '__END__'], ['<div class="form-col">', '</div>'], do_shortcode('[gravityform id="5" title="false" description="false"  cssClass="form-1"]')) ?>
+            </div>
+
+
         </div>
     </div>
 
 
-    <div class="container" style="margin-top:50px">
+
+
+    <div class="container text-section" style="">
         <div class="row">
             <div class="col-lg-5 content" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000" data-aos-easing="ease-in-out">

@@ -226,7 +226,7 @@ $id = 1576;
             }
 
             .border-left {
-                border-left: 1px solid red;
+                border-left: 1px solid white;
                 display: flex;
                 flex-direction: column;
                 padding: 20px 0 20px 60px;
