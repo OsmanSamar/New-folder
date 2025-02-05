@@ -681,7 +681,6 @@
 
     <!-- BreadCrumb Section -->
     <?php get_template_part('components/breadcrumb') ?>
-    <!--End  Of BreadCrumb Section -->
 
     <!-- Hero Section -->
     <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"

@@ -5,28 +5,22 @@
 
 <main class="single-customer flex-grow-1">
     <style>
-        .resource-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            height: 80px;
-            margin-top: 40px;
+        .hr-white {
+            border-top: 1px solid white;
+            width: 100%;
+            opacity: 1;
         }
 
-        .resource-item:hover {
-            background-color: #f9f9f9;
+        .hero_text {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 33.2px;
+
         }
 
-        .resource-item>div:first-child {
-            border-left: none;
-        }
-
-        .resource-item .arrow img {
-            width: 12px;
-            height: 18px;
-        }
 
         .post-title {
             color: #24325f;
@@ -34,19 +28,35 @@
             text-wrap: balance;
             font-weight: 600;
             line-height: 1.4;
-            font-size: 47px;
+            font-size: 24px;
             text-align: center;
         }
 
-        .post-place {
-            color: #24325f;
-            font-family: Manrope, sans-serif;
-            text-wrap: balance;
-            font-weight: 600;
-            line-height: 1.4;
-            font-size: 17px;
+
+        .profit-block {
+            border-radius: 15px;
+            background: white;
+            height: auto;
+            padding: 42px;
+            margin-top: 27px
         }
 
+        .profit_title {
+            color: #25325F;
+            font-family: Manrope;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
+            margin-top: 33px;
+        }
+
+        .divider {
+            border-bottom: 0.5px solid #25325F;
+        }
+
+
+        /*  */
         .testi-num {
             color: #E94271;
             font-family: Manrope;
@@ -94,7 +104,7 @@
             border-radius: 30px;
             max-width: 1700px;
             height: 581px;
-            margin: 400px auto 10px;
+            margin: 170px auto 0px;
         }
 
         .container-max-width .container-img {
@@ -102,7 +112,6 @@
         }
 
         .hero_blue_block {
-            /* height: 100%; */
             height: 700px;
             border-radius: 40px;
             background: #25325F;
@@ -112,7 +121,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 30px;
+            /* padding: 30px; */
+            padding: 18px;
             margin-top: -152px;
         }
 
@@ -121,7 +131,8 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: left;
-            margin: 10px 60px;
+            /* margin: 10px 60px; */
+            gap: 2px;
         }
 
         .hero_title {
@@ -133,6 +144,7 @@
             line-height: 54px;
             margin-top: 45px;
             margin-bottom: 31px;
+            margin: 14px 0;
         }
 
 
@@ -297,6 +309,21 @@
         }
 
         @media (min-width: 768px) {
+
+            .post-title {
+                color: #24325f;
+                font-family: Manrope, sans-serif;
+                text-wrap: balance;
+                font-weight: 600;
+                line-height: 1.4;
+                font-size: 37px;
+                text-align: center;
+            }
+
+
+
+
+
             .gform_fields top_label form_sublabel_below description_below validation_below {
                 display: inline-block !important;
             }
@@ -326,6 +353,19 @@
 
         @media (min-width: 768px) {
 
+
+            .post-title {
+                color: #24325f;
+                font-family: Manrope, sans-serif;
+                text-wrap: balance;
+                font-weight: 600;
+                line-height: 1.4;
+                font-size: 47px;
+                text-align: center;
+            }
+
+
+
             .test-block::before {
                 content: " ";
                 position: absolute;
@@ -340,7 +380,7 @@
 
 
             .container-max-width {
-                margin: 250px auto 10px;
+                margin: 50px auto 10px;
             }
 
             .container-max-width .container-img {
@@ -429,7 +469,7 @@
             }
 
             .hero_blue_block {
-                width: 531px;
+                width: 590px;
                 position: relative;
                 bottom: 580px;
                 left: 0;
@@ -527,68 +567,113 @@
             <?= get_the_title($post_id) ?>
         </span>
     </div>
+    <?php wp_reset_postdata(); ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-12" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <a href=" <?= get_permalink($post_id) ?>" class="resource-item g-0 row ">
-                    <div
-                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
-                        <div class="">
-                            <?= $fields['datum'] ?>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 d-none"></div>
 
-                    <div
-                        class="d-flex col-lg-4 justify-content-center  align-items-center h-100 p-3 px-4 date post-id ">
-                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
-                            <div class="flex-shrink-0">
-                                <?= $fields['starttime'] ?>
-                                <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
-                            </div>
-                            <div style="width:40px">
-                                <hr>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <?= $fields['endtime'] ?>
-                                <span style=" color:#9AA0B7"><?= $fields['end'] ?> </span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div
-                        class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4  date  post-id-sm">
-                        <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 post-place">
-                            <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
-                                fill="none">
-                                <g fill="#6A7291" clip-path="url(#a)">
-                                    <path d="M4.63 14.47 5 14.2l.37.27L5 15l-.37-.53Z"></path>
-                                    <g fill-rule="evenodd" clip-rule="evenodd">
-                                        <path
-                                            d="M5 2.793c-1.256 0-2.273 1.043-2.273 2.328 0 1.286 1.017 2.328 2.272 2.328s2.273-1.042 2.273-2.328c0-1.285-1.018-2.328-2.273-2.328ZM3.635 5.121c0-.771.61-1.396 1.363-1.396s1.364.625 1.364 1.396c0 .772-.61 1.397-1.364 1.397-.753 0-1.363-.625-1.363-1.397Z">
-                                        </path>
-                                        <path
-                                            d="M4.63 14.47 5 14.2l.37.27.003-.005.01-.014.04-.056.145-.214a58.524 58.524 0 0 0 2.095-3.318c.572-.981 1.15-2.053 1.587-3.048.428-.976.75-1.944.75-2.694C10 2.293 7.761 0 5 0S0 2.293 0 5.121c0 .75.322 1.718.75 2.694.436.995 1.014 2.067 1.587 3.049a58.495 58.495 0 0 0 2.24 3.53l.04.057.01.014.003.006ZM.91 5.122C.91 2.807 2.74.931 5 .931s4.09 1.876 4.09 4.19c0 .536-.245 1.346-.67 2.313-.415.948-.974 1.985-1.537 2.952a57.499 57.499 0 0 1-1.883 3 57.517 57.517 0 0 1-1.883-3c-.563-.967-1.122-2.004-1.538-2.952C1.155 6.467.91 5.657.91 5.12Z">
-                                        </path>
-                                    </g>
-                                </g>
-                                <defs>
-                                    <clipPath id="a">
-                                        <path fill="#fff" d="M0 0h10v15H0z"></path>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <?= $fields['place'] ?>
-                        </span>
+    <!-- Hero Section -->
+    <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+        data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <img src="<?= get_field("heroimg")['url'] ?>" alt="<?= get_field("heroimg")['title'] ?>" class="container-img"
+            style=" height: 581px; border-radius: 40px; object-fit: cover;" />
+        <div class=" hero_blue_block">
+            <div class="inner_block container">
+                <div class="d-flex align-items-center justify-content-between gap-2" style="margin-bottom:20px;">
+                    <div class="d-flex align-items-center justify-content-center rounded "
+                        style="width: 30px; height: 30px; background-color:#FFF;">
+                        <img src="<?= get_field("backimg")['url'] ?>" alt="<?= get_field("backimg")['alt'] ?>"
+                            style="width: 12px; height: 18px;" />
                     </div>
-                </a>
+                    <a href="<?= get_field("backtooverview")['url'] ?>"
+                        style="color:#FFF; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
+                        <?= get_field("backtooverview")['title'] ?>
+                    </a>
+                </div>
+
+                <span class="hero_text ">
+                    <?= get_field("herotext") ?>
+                </span>
+                <hr class="hr-white">
+
+                <span class="hero_text">
+                    <?= get_field("customerttitle") ?>
+                </span>
+                <span class="hero_text  ">
+                    <?= get_field("customername") ?>
+                </span>
+                <hr class="hr-white">
+
+
+
             </div>
+
+
+
         </div>
     </div>
 
-    <?php wp_reset_postdata(); ?>
+
+    <div class="container text-section">
+        <div class="row">
+            <div class="col-lg-5 content " data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <?php foreach (get_field("content") as $content) {
+                    // var_dump($content);
+                    if ($content['acf_fc_layout'] == 'text') { ?>
+                        <div>
+                            <span class="left-btn">
+                                <?= $content['title'] ?></span>
+                            <h1 class=" first_title"> <?= $content['maintitle'] ?></h1>
+                        </div>
+                        <div>
+                            <h3 class="first_text">
+                                <?= $content['text'] ?>
+                            </h3>
+                        </div>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
+            <div class="col-lg-2 d-none d-lg-block"></div>
+            <div class="col-lg-5 content" data-aos="fade-left" data-aos-offset="100" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="profit-block">
+                    <?php foreach (get_field("content") as $content) {
+                        if ($content['acf_fc_layout'] == 'text') { ?>
+                            <span class="profit_title"> <?= $content['lefttitle'] ?></span>
+                            <?php
+                        }
+                    }
+                    ?>
+                    <div class="d-flex flex-column gap-2">
+
+                        <?php foreach (get_field("profittestimonials") as $testimonial) { ?>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="<?= $testimonial["profitimg"]['url'] ?>"
+                                    alt=" <?= $testimonial['profitimg']['alt'] ?>" class=""
+                                    style="width: 15px;height: 16px;" />
+                                <span class="expertise-sub-title"><?= $testimonial["profittext"] ?></span>
+                            </div>
+                            <div class="divider mb-1" style="max-width: 461px;"></div>
+                        <?php } ?>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
 
 </main>
 <?php get_footer() ?>
