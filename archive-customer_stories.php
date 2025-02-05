@@ -275,9 +275,6 @@ $id = 1731;
                 gap: 37px;
             }
 
-
-
-
         }
     </style>
 
@@ -325,7 +322,6 @@ $id = 1731;
     </div>
 
 
-
     <!-- Stories -->
     <div class="container">
         <div class="row">
@@ -334,7 +330,13 @@ $id = 1731;
                 'post_type' => 'customer_stories',
                 'numberposts' => -1
             ]);
-
+            //related posts
+            // $posts = get_posts([
+            //     'post_type' => 'customer_stories',
+            //     'numberposts' => 3,
+            //     'exclude' => [get_the_ID()]
+            // ]);
+            
             foreach ($posts as $post) {
                 $fields = get_fields($post->ID);
                 $testimonial = get_field("clientstorytestimonials");
@@ -382,17 +384,6 @@ $id = 1731;
             ?>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- Form Section container  -->
