@@ -152,7 +152,7 @@ $id = 1576;
             align-items: center;
             border: 1px solid #ccc;
             border-radius: 15px;
-            height: 80px;
+            height: 125px;
             margin-bottom: 250px;
         }
 
@@ -353,10 +353,15 @@ $id = 1576;
                                         class="icon" />
                                 </div>
                             </span>
-                            <div class="button-text ">
+                            <!-- <div class="button-text ">
                                 <a href="<?= get_field("backlink")['url'] ?>">
                                     <?= get_field("backlink")['title'] ?>
                                 </a>
+                            </div> -->
+                            <div class="button-text  blue2">
+                                <span>
+                                    Back to insights</span>
+
                             </div>
                         </button>
                     </div>
@@ -400,20 +405,21 @@ $id = 1576;
 
                         </span>
                     </div>
-                    <div class="d-flex col-lg-2 justify-content-center  align-items-center h-100 p-3 px-4  date post-id">
-                        <div class="d-flex flex-row align-items-center justify-content-between gap-">
-                            <div class="flex-shrink-0">
-                                <?= $testimonial['starttime'] ?>
+                    <div class="d-flex col-lg-2 justify-content-center  align-items-center h-100 p-3 px-4  date post-id ">
+                        <div class="d-flex flex-row align-items-center justify-content-center mb-4 ">
+                            <div class="flex-shrink-0 text-center">
+                                <span> <?= $testimonial['starttime'] ?></span>
                                 <span style=" color:#9AA0B7"> <?= $testimonial['start'] ?></span>
-
                             </div>
-                            <div style="width:40px">
+
+                        </div>
+                        <div class="d-flex flex-row align-items-center justify-content-center mb-4">
+                            <div style="width:40px; ">
                                 <hr>
                             </div>
-                            <div class="flex-shrink-0">
-                                <?= $testimonial['endtime'] ?>
+                            <div class="flex-shrink-0 text-center">
+                                <span><?= $testimonial['endtime'] ?></span>
                                 <span style=" color:#9AA0B7"><?= $testimonial['end'] ?> </span>
-
                             </div>
                         </div>
                     </div>
@@ -445,7 +451,6 @@ $id = 1576;
                         </span>
                     </div>
 
-
                     <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
                         style="background-color:">
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
@@ -454,9 +459,6 @@ $id = 1576;
 
                         </div>
                     </div>
-
-
-
                 </a>
             </div>
         </div>
@@ -468,9 +470,29 @@ $id = 1576;
 
 
     <div class="text-center mt-4">
-        <button id="load-more" class="btn btn-primary" data-page="1" data-url="<?= admin_url('admin-ajax.php'); ?>">
+        <!-- <button id="load-more" class="btn btn-primary" data-page="1" data-url="<?= admin_url('admin-ajax.php'); ?>">
             Load More
-        </button>
+        </button> -->
+
+
+        <div class="d-flex justify-content-center  d-flex align-items-center gap-2">
+            <button>
+                <span class="circle blue-circle">
+                    <div class="d-flex align-items-center justify-content-center rounded  arrow">
+                        <img src="<?= get_template_directory_uri() ?>/images/downloadimg.svg" alt="Arrow"
+                            style="width:16px; height:18px; margin:7px 0;" class="icon">
+
+                    </div>
+                </span>
+                <div class="button-text  blue2">
+                    <span>
+                        Load more</span>
+
+                </div>
+            </button>
+        </div>
+
+    </div>
     </div>
 
 

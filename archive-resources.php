@@ -161,8 +161,8 @@ $id = 1519;
             align-items: center;
             border: 1px solid #ccc;
             border-radius: 15px;
-            height: 80px;
-            margin-bottom: 250px;
+            height: 125px;
+            margin-bottom: 287px;
         }
 
         .resource-item:hover {
@@ -376,47 +376,52 @@ $id = 1519;
             <div class="row">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
                     <div
-                        class="col-12 col-lg-4  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
+                        class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center gap-3  h-100 p-3 px-4 datum">
                         <span class="title ">
                             <?= $post->post_title ?>
                         </span>
+                        <div class="d-flex align-items-center justify-content-center rounded  "
+                            style="width: 6px; height: 9px; ">
+                            <img src="<?= get_template_directory_uri() ?>/images/nextpost.svg" alt="Arrow">
+                        </div>
                     </div>
                     <div
                         class="col-12 col-lg-5 d-flex  justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
-                        <div class="flex-shrink-0">
-                            <?= $fields['voorbeeld'] ?>
-                        </div>
+                        <p> <?= $fields['voorbeeld'] ?></p>
                     </div>
                     <div
-                        class="col-12 col-lg-2 d-none d-lg-flex justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
-                        <div class="d-flex align-items-baseline gap-3">
-                            <span style=" color:#E94271"> Published </span> <?= $fields['datum'] ?>
+                        class="col-12 col-lg-2 d-none d-lg-flex justify-content-center   align-items-center h-100  p-3 px-4 date post-id">
+                        <div class="d-flex align-items-baseline gap-3 flex-column">
+                            <span
+                                style="color:#E94271; font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height:23.4px;">
+                                Published </span>
+                            <span
+                                style="color: #6A7291;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 600;line-height:15.6px;">
+                                <?= $fields['datum'] ?>
+                            </span>
                         </div>
                     </div>
 
-                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date post-id"
-                        style="background-color:">
+                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date post-id "
+                        style="border-radius: 0px 15px 15px 0px;">
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                            <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
                         </div>
                     </div>
                     <!-- SM Screen -->
                     <div
                         class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4  flex-row  post-id">
-
                         <div class="flex-shrink-0 d-flex flex-column align-items-center justify-content-between gap-3">
                             <span style=" color:#E94271"> Published </span>
                             <?= $fields['datum'] ?>
                         </div>
-
                         <div class="d-flex d-lg-none border-right"></div>
                         <div class="d-flex align-items-center justify-content-center rounded  arrow"
                             style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="wp-content/themes/New folder/images/arrow.svg" alt="Arrow">
+                            <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
                         </div>
                     </div>
-
                 </a>
             </div>
         </div>
