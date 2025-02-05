@@ -42,7 +42,7 @@ button .button-text {
   top: -4px;
   left: 1.5px;
   margin: 0 0 0 0.05rem;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 15.6px;
   text-align: center;
   z-index: 2;
@@ -73,7 +73,7 @@ button:hover .circle::before {
 }
 
 button:hover .circle.blue-circle::before {
-  width: 7rem;
+  width: 8.5rem;
   //  Expands the circle to include text
 }
 
@@ -114,10 +114,13 @@ button .button-text.white {
 button .button-text.blue2 {
   left: 1px;
   color: #25325f;
+  z-index: 3;
 }
 
 button:hover .button-text.blue2 {
+  left: 1px;
   color: white;
+  z-index: 3;
 }
 
 button .button-text.pink {

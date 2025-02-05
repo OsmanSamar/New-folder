@@ -1,9 +1,9 @@
 <?php get_header();
 
-//Template Name: event
+//Template Name: single-customer
 ?>
 
-<main class="single-events flex-grow-1">
+<main class="single-customer flex-grow-1">
     <style>
         .resource-item {
             display: flex;

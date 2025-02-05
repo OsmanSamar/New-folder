@@ -5,6 +5,21 @@ $id = 1564;
 ?>
 <main class="videos flex-grow-1">
     <style>
+        .button-text a {
+            color: #FFF;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+            text-decoration: none;
+        }
+
+        .button-text a:hover {
+
+            color: #274083;
+        }
+
         b,
         strong {
             color: #e94271;
@@ -338,15 +353,20 @@ $id = 1564;
                         <?= get_field("herotext") ?>
                     </span>
                     <div class="d-flex align-items-center justify-content-between gap-2">
-                        <div class="d-flex align-items-center justify-content-center rounded "
-                            style="width: 30px; height: 30px; background-color:#FFF;">
-                            <img src="<?= get_field("backimg")['url'] ?>" alt="<?= get_field("backimg")['alt'] ?>"
-                                style="width: 12px; height: 18px;" />
-                        </div>
-                        <a href="<?= get_field("backlink")['url'] ?>"
-                            style="color:#FFF; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
-                            <?= get_field("backlink")['title'] ?>
-                        </a>
+                        <button>
+                            <span class="circle white-circle">
+                                <div class="d-flex align-items-center justify-content-center rounded  arrow">
+                                    <img src="<?= get_field("backimg")['url'] ?>"
+                                        alt="<?= get_field("backimg")['alt'] ?>" style="width: 12px; height: 18px;"
+                                        class="icon" />
+                                </div>
+                            </span>
+                            <div class="button-text ">
+                                <a href="<?= get_field("backlink")['url'] ?>">
+                                    <?= get_field("backlink")['title'] ?>
+                                </a>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>

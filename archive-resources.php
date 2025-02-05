@@ -5,6 +5,20 @@ $id = 1519;
 ?>
 <main class="resources flex-grow-1">
     <style>
+        .button-text a {
+            color: #274083;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+            text-decoration: none;
+        }
+
+        .button-text a:hover {
+            color: #FFF;
+        }
+
         b,
         strong {
             color: #e94271;
@@ -18,7 +32,6 @@ $id = 1519;
             border-radius: 30px;
             background: #25325F;
             max-width: 1700px;
-            /* height: 1400px; */
             margin: 50px auto 50px;
         }
 
@@ -54,7 +67,6 @@ $id = 1519;
 
         .container-max-width {
             border-radius: 30px;
-            /* max-width: 1700px; */
             min-height: 381px;
             margin: 40px auto 10px;
         }
@@ -139,11 +151,8 @@ $id = 1519;
             line-height: 27.2px;
         }
 
-
-
         .date {
             border-left: unset;
-
         }
 
         .resource-item {
@@ -154,7 +163,6 @@ $id = 1519;
             border-radius: 15px;
             height: 80px;
             margin-bottom: 250px;
-
         }
 
         .resource-item:hover {
@@ -189,8 +197,6 @@ $id = 1519;
             padding: 55px 0 20px 138px;
             row-gap: 16px;
         }
-
-
 
         .datum {
             background-color: #274083;
@@ -237,7 +243,6 @@ $id = 1519;
 
             .border-right {
                 padding: 55px 0 20px 482px;
-
             }
 
             .inner_block {
@@ -289,9 +294,6 @@ $id = 1519;
                 width: 531px;
                 position: absolute;
                 bottom: 79px;
-
-                /* position: relative;
-            bottom: 303px; */
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -338,21 +340,29 @@ $id = 1519;
                         <?= get_field("herotext") ?>
                     </span>
                     <div class="d-flex align-items-center justify-content-between gap-2">
-                        <div class="d-flex align-items-center justify-content-center rounded "
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="<?= get_field("backimg")['url'] ?>" alt="<?= get_field("backimg")['alt'] ?>"
-                                style="width: 12px; height: 18px;" />
-                        </div>
-                        <a href="<?= get_field("backlink")['url'] ?>"
-                            style="color:#274083;; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
-                            <?= get_field("backlink")['title'] ?>
-                        </a>
+                        <button>
+                            <span class="circle blue-circle">
+                                <div class="d-flex align-items-center justify-content-center rounded  arrow">
+                                    <img src="<?= get_field("backimg")['url'] ?>"
+                                        alt="<?= get_field("backimg")['alt'] ?>" style="width: 12px; height: 18px;"
+                                        class="icon" />
+                                </div>
+                            </span>
+                            <div class="button-text ">
+                                <a href="<?= get_field("backlink")['url'] ?>">
+                                    <?= get_field("backlink")['title'] ?>
+                                </a>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+    <!-- Posts -->
     <?php
     $posts = get_posts([
         'post_type' => 'resources',

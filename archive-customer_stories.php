@@ -5,6 +5,20 @@ $id = 1731;
 ?>
 <main class="customer stories flex-grow-1">
     <style>
+        .button-text a {
+            color: #274083;
+            font-family: Manrope;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15.6px;
+            text-decoration: none;
+        }
+
+        .button-text a:hover {
+            color: #FFF;
+        }
+
         b,
         strong {
             color: #e94271;
@@ -129,82 +143,55 @@ $id = 1731;
             align-items: center;
         }
 
-
-
-
-        .resource-item {
+        .card {
+            border-radius: 20px;
+            border: 1px solid #CBCFDE;
+            background: #EDF3F4;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-img-top {
+            object-fit: cover;
+        }
+
+        .card-title {
+            display: flex;
             align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 15px;
-            height: 80px;
-            margin-bottom: 250px;
-        }
-
-        .resource-item:hover {
-            background-color: #f9f9f9;
-        }
-
-        .resource-item>div:first-child {
-            border-left: none;
-        }
-
-        .resource-item .arrow img {
-            width: 12px;
-            height: 18px;
-        }
-
-
-
-        .border-end {
-            border-left: 1px solid red;
-        }
-
-        .border-left {
-            border-left: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            padding: 20px 0 20px 60px;
-            /*  padding: 55px 0 20px 138px; */
-            row-gap: 16px;
-        }
-
-        .date {
-            border-left: unset;
-        }
-
-        .border-right {
-            border-right: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
-            padding: 55px 0 20px 138px;
-            row-gap: 16px;
-        }
-
-        .datum {
-            background-color: #274083;
-            border-radius: 15px 15px 0px 0px;
+            justify-content: center;
+            width: 96px;
+            height: 30px;
+            border-radius: 100px;
+            background: #E94271;
             color: #FFF;
-            font-size: 20px;
+            font-family: Manrope, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 23.4px;
+            text-align: center;
+            margin: 26px 0px;
         }
 
-        .post-id {
-            border: 1px solid #ccc;
+        .card-text {
+            color: #25325F;
+            font-family: Manrope, sans-serif;
+            font-size: 22px;
+            text-wrap: balance;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 33.6px;
         }
-
 
 
         @media (min-width: 768px) {
-
-
             .container-max-width .container-img {
                 display: block;
             }
 
             .hero_white_block {
                 width: 380px;
-                /* position: relative; */
                 position: absolute;
                 bottom: 76px;
                 left: 0;
@@ -241,16 +228,9 @@ $id = 1731;
 
         @media (min-width: 992px) {
 
-            .datum {
-                border-radius: 15px 0px 0px 15px;
-            }
-
-
             .hero_text {
                 font-size: 46px;
             }
-
-
 
             b,
             strong {
@@ -281,8 +261,6 @@ $id = 1731;
                 width: 531px;
                 position: absolute;
                 bottom: 79px;
-                /* position: relative;
-                bottom: 306px; */
                 left: 0;
                 display: flex;
                 flex-direction: column;
@@ -297,14 +275,7 @@ $id = 1731;
                 gap: 37px;
             }
 
-            .resource-item {
-                margin-bottom: 40px;
-            }
 
-            .date {
-                border-left: 1px solid #ccc;
-
-            }
 
 
         }
@@ -313,7 +284,7 @@ $id = 1731;
 
     <!-- BreadCrumb Section -->
     <?php get_template_part('components/breadcrumb') ?>
-    <!--End  Of BreadCrumb Section -->
+
 
     <!-- Hero Section -->
     <div class="container container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -332,22 +303,30 @@ $id = 1731;
                         <?= get_field("herotext") ?>
                     </span>
                     <div class="d-flex align-items-center justify-content-between gap-2">
-                        <div class="d-flex align-items-center justify-content-center rounded "
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="<?= get_field("backimg")['url'] ?>" alt="<?= get_field("backimg")['alt'] ?>"
-                                style="width: 12px; height: 18px;" />
-                        </div>
-                        <a href="<?= get_field("backlink")['url'] ?>"
-                            style="color:#274083;; font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;  text-decoration: none; ">
-                            <?= get_field("backlink")['title'] ?>
-                        </a>
+                        <button>
+                            <span class="circle blue-circle">
+                                <div class="d-flex align-items-center justify-content-center rounded  arrow">
+                                    <img src="<?= get_field("backimg")['url'] ?>"
+                                        alt="<?= get_field("backimg")['alt'] ?>" style="width: 12px; height: 18px;"
+                                        class="icon" />
+                                </div>
+                            </span>
+                            <div class="button-text ">
+                                <a href="<?= get_field("backlink")['url'] ?>">
+                                    <?= get_field("backlink")['title'] ?>
+                                </a>
+                            </div>
+                        </button>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 
 
+
+    <!-- Stories -->
     <div class="container">
         <div class="row">
             <?php
@@ -358,88 +337,53 @@ $id = 1731;
 
             foreach ($posts as $post) {
                 $fields = get_fields($post->ID);
+                $testimonial = get_field("clientstorytestimonials");
                 ?>
-                <a href="<?= get_permalink($post) ?>" class=" g-0 row ">
-                    <?php
-                    $testimonial = get_field("clientstorytestimonials")
-                        ?>
-                    <div class="col-12 col-md-4 col-lg-4">
-                        <div class="card">
-                            <img src="<?= $testimonial["clientimg"]['url'] ?>" alt="<?= $testimonial['clientimg']['alt'] ?>"
-                                class="card-img-top " style="height: 213px; border-radius:20px;" />
+                <div class="col-12 col-md-4 col-lg-4 mb-4">
+                    <a href="<?= get_permalink($post) ?>" class="card" style="border-radius: 20px;">
 
-                            <!-- CARD BODY -->
-                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative"
-                                style="background-color:; overflow:hidden;">
-                                <div class="card-title">
-                                    <span>
-                                        <?= $testimonial["clientname"] ?></span>
-                                </div>
-                                <p class="card-text">
-                                    <?= $post->post_title ?>
-                                </p>
+                        <img src="<?= $testimonial["clientimg"]['url'] ?>" alt="<?= $testimonial['clientimg']['alt'] ?>"
+                            class="card-img-top" style="height: 213px; border-radius: 10px;" />
 
-                                <div class="bottom-border position-absolute"
-                                    style="bottom:0; left: 0; right:0; height:10px; background-color:; border-bottom:1px solid #CBCFDE; border-radius:0 0 30px 30px;">
-                                </div>
+                        <!-- CARD BODY -->
+                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative" style="overflow: hidden;">
+                            <div class="card-title">
+                                <span><?= $testimonial["clientname"] ?></span>
                             </div>
-                            <!-- END OF CARD BODY -->
-                            <!-- Bejijken btn -->
-                            <div class=" card-body d-flex justify-content-between align-items-center">
-                                <button>
-                                    <span class="circle blue-circle">
-                                        <div href="#" class="d-flex justify-content-center align-items-center  arrow">
-                                            <img src="<?= get_template_directory_uri() ?>/images/nextarrow.svg"
-                                                alt="go to article" style="width: 12px; height: 18px; margin:7px 0"
-                                                class="icon" />
-                                        </div>
-                                    </span>
-                                    <div class=" button-text blue2">
-                                        view
-                                    </div>
-                                </button>
-
-
+                            <p class="card-text"><?= $post->post_title ?></p>
+                            <div class="bottom-border position-absolute"
+                                style="bottom: 0; left: 0; right: 0; height: 10px; border-bottom: 1px solid #CBCFDE; border-radius: 0 0 30px 30px;">
                             </div>
-
                         </div>
-                    </div>
+                        <!-- END OF CARD BODY -->
 
+                        <!-- View Button -->
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <button>
+                                <span class="circle blue-circle">
+                                    <div class="d-flex justify-content-center align-items-center arrow">
+                                        <img src="<?= get_template_directory_uri() ?>/images/arrowbtn.svg"
+                                            alt="go to article" style="width: 12px; height: 18px; margin: 7px 0"
+                                            class="icon" />
+                                    </div>
+                                </span>
+                                <div class="button-text blue2">
+                                    view
+                                </div>
+                            </button>
+                        </div>
 
+                    </a>
 
-
-
-
-
-
-
-                </a>
+                </div>
                 <?php
             }
             wp_reset_postdata();
             ?>
-
-
         </div>
-        <!-- <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date"
-                        style="background-color:">
-                        <div class="d-flex align-items-center justify-content-center rounded  arrow"
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
-
-                        </div>
-                    </div> -->
-
     </div>
 
 
-
-
-    <!-- <div class="text-center mt-4">
-        <button id="load-more" class="btn btn-primary" data-page="1" data-url="<?= admin_url('admin-ajax.php'); ?>">
-            Load More
-        </button>
-    </div> -->
 
 
 
