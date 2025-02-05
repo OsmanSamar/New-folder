@@ -136,7 +136,7 @@ function create_eventpost_type()
             'has_archive' => true,
             'rewrite' => array('slug' => 'events'),
             'show_in_rest' => true,
-            'supports' => ['editor', 'thumbnail']
+            'supports' => ['title', 'editor', 'thumbnail']
 
         )
     );

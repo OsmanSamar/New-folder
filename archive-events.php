@@ -326,7 +326,7 @@ $id = 1576;
 
     <!-- BreadCrumb Section -->
     <?php get_template_part('components/breadcrumb') ?>
-    <!--End  Of BreadCrumb Section -->
+
 
     <!-- Hero Section -->
     <div class="container container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -365,6 +365,8 @@ $id = 1576;
         </div>
     </div>
 
+
+    <!-- Events -->
     <?php
     $posts = get_posts([
         'post_type' => 'events',
@@ -373,6 +375,7 @@ $id = 1576;
 
     foreach ($posts as $post) {
         $fields = get_fields($post->ID);
+        $testimonial = get_field("eventtestimonials");
         ?>
         <div class="container">
             <div class="row">
@@ -380,7 +383,7 @@ $id = 1576;
                     <div
                         class="col-12 col-lg-3  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
                         <span class="">
-                            <?= $fields['datum'] ?>
+                            <?= $testimonial['datum'] ?>
                         </span>
                     </div>
                     <div class="col-12 col-lg-4  d-flex justify-content-center justify-content-lg-start align-items-center h-100  p-3 px-4  date post-id "
@@ -400,16 +403,16 @@ $id = 1576;
                     <div class="d-flex col-lg-2 justify-content-center  align-items-center h-100 p-3 px-4  date post-id">
                         <div class="d-flex flex-row align-items-center justify-content-between gap-">
                             <div class="flex-shrink-0">
-                                <?= $fields['starttime'] ?>
-                                <span style=" color:#9AA0B7"> <?= $fields['start'] ?></span>
+                                <?= $testimonial['starttime'] ?>
+                                <span style=" color:#9AA0B7"> <?= $testimonial['start'] ?></span>
 
                             </div>
                             <div style="width:40px">
                                 <hr>
                             </div>
                             <div class="flex-shrink-0">
-                                <?= $fields['endtime'] ?>
-                                <span style=" color:#9AA0B7"><?= $fields['end'] ?> </span>
+                                <?= $testimonial['endtime'] ?>
+                                <span style=" color:#9AA0B7"><?= $testimonial['end'] ?> </span>
 
                             </div>
                         </div>
@@ -438,7 +441,7 @@ $id = 1576;
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <?= $fields['place'] ?>
+                            <?= $testimonial['place'] ?>
                         </span>
                     </div>
 
@@ -462,11 +465,13 @@ $id = 1576;
     wp_reset_postdata();
     ?>
 
-    <!-- <div class="text-center mt-4">
+
+
+    <div class="text-center mt-4">
         <button id="load-more" class="btn btn-primary" data-page="1" data-url="<?= admin_url('admin-ajax.php'); ?>">
             Load More
         </button>
-    </div> -->
+    </div>
 
 
 
@@ -482,7 +487,7 @@ $id = 1576;
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
 
-    <!-- <script>
+    <script>
         jQuery(document).ready(function ($) {
             $("#load-more").on("click", function () {
                 var button = $(this),
@@ -504,13 +509,14 @@ $id = 1576;
                             $("#posts-container").append(data);
                             button.data("page", page + 1).text("Load More");
                         } else {
-                            button.remove();  Hide button when no more posts
+                            button.remove();
+                        Hide button when no more posts
                         }
                     },
                 });
             });
         });
-    </script> -->
+    </script>
 
 
 </main>

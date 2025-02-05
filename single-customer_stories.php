@@ -13,8 +13,6 @@
             border-radius: 15px;
             height: 80px;
             margin-top: 40px;
-
-            /* margin-bottom: 40px; */
         }
 
         .resource-item:hover {
