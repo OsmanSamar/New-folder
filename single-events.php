@@ -9,12 +9,11 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
             border-radius: 15px;
-            height: 80px;
+            height: 100px;
             margin-top: 40px;
 
-            /* margin-bottom: 40px; */
         }
 
         .resource-item:hover {
@@ -180,7 +179,7 @@
         .border-container2 {
             border-radius: 40px;
             max-width: 1700px;
-            height: 576px;
+            height: 477px;
             border-radius: 40px;
             border: 1px solid #CBCFDE;
             margin: 100px auto 10px;
@@ -224,8 +223,6 @@
             align-items: flex-start;
             justify-content: space-around;
             flex-direction: column;
-            /* align-items: center;
-            justify-content: space-between; */
         }
 
         .blue-container {
@@ -233,7 +230,6 @@
             background: #25325F;
             height: 400px;
             max-width: 1700px;
-            /* padding: 30px; */
             margin: 50px auto 10px;
             display: flex;
             align-items: anchor-center;
@@ -241,11 +237,8 @@
 
         .left-side-img-text {
             display: flex;
-            /* gap: 1rem;
-            justify-content: center; */
-            flex-direction: row;
-            /* align-items: flex-start; */
-            /* align-items: center; */
+            justify-content: center;
+            */ flex-direction: row;
             justify-content: space-around;
         }
 
@@ -263,11 +256,6 @@
             line-height: 50.4px;
         }
 
-
-        .date {
-            border-left: unset;
-        }
-
         .datum {
             background-color: #274083;
             border-radius: 15px 15px 0px 0px;
@@ -276,11 +264,19 @@
         }
 
         .post-id {
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
         }
 
+        /* .date {
+            border-left: unset;
+        } */
+
         .post-id-sm {
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
+        }
+
+        .weekday {
+            color: #9aa0b7;
         }
 
 
@@ -298,28 +294,7 @@
             margin-bottom: 8px !important;
         }
 
-        @media (min-width: 768px) {
-            .gform_fields top_label form_sublabel_below description_below validation_below {
-                display: inline-block !important;
-            }
 
-            .gform-theme--foundation .gform_fields {
-                display: inline-block !important;
-                font-size: 30px !important;
-                font-weight: 500 !important;
-            }
-
-            /* Label */
-            .gform-field-label--type-sub {
-                font-size: 18px !important;
-                font-weight: 700 !important;
-            }
-
-            .gform-theme--foundation .gform_footer,
-            .gform-theme--foundation .gform_page_footer {
-                justify-content: start !important;
-            }
-        }
 
         .text-section {
             margin-top: 150px
@@ -408,10 +383,41 @@
                 margin-top: 50px
             }
 
+
+            /*  */
+
+
+            .gform_fields top_label form_sublabel_below description_below validation_below {
+                display: inline-block !important;
+            }
+
+            .gform-theme--foundation .gform_fields {
+                display: inline-block !important;
+                font-size: 30px !important;
+                font-weight: 500 !important;
+            }
+
+            Label .gform-field-label--type-sub {
+                font-size: 18px !important;
+                font-weight: 700 !important;
+            }
+
+            .gform-theme--foundation .gform_footer,
+            .gform-theme--foundation .gform_page_footer {
+                justify-content: start !important;
+            }
+
+            .post-id {
+                border: 1px solid #dee2e6;
+            }
+
         }
 
 
         @media(min-width: 992px) {
+            .resource-item {
+                height: 125px;
+            }
 
             .test-block::before {
                 content: " ";
@@ -491,8 +497,16 @@
             }
 
 
+            /* .date {
+            border-left: 1px solid #dee2e6;
+        } */
+
             .date {
-                border-left: 1px solid #ccc;
+                border-left: 1px solid #dee2e6 !important;
+            }
+
+            .post-id {
+                border: none;
             }
 
             .datum {
@@ -532,38 +546,42 @@
         </span>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-12" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
-                data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <a href=" <?= get_permalink($post_id) ?>" class="resource-item g-0 row ">
+    <div class="container d-flex justify-content-center">
+
+        <div class="col-12 col-xxl-8 col-xxxl-7 col-lg-10 max-auto my-5 " data-aos="fade-up" data-aos-offset="100"
+            data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="container">
+                <a href=" <?= get_permalink($post_id) ?>" class="resource-item  g-0 row  ">
                     <div
-                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
-                        <div class="">
-                            <?= $testimonial['datum'] ?>
-                        </div>
+                        class="col-12 col-lg-3 justify-content-center justify-content-lg-start d-flex flex-column  align-items-center align-items-lg-start h-100 p-3 px-4 datum">
+                        <span class="weekday ">
+                            <?php
+                            echo date('l', strtotime($testimonial['datum'])); ?>
+                        </span><br>
+
+                        <span class="">
+                            <?php echo date('d M, Y', strtotime($testimonial['datum'])); ?>
+                        </span>
                     </div>
-                    <div class="col-lg-2 d-none"></div>
 
                     <div
                         class="d-flex col-lg-4 justify-content-center  align-items-center h-100 p-3 px-4 date post-id ">
-                        <div class="d-flex flex-row align-items-center justify-content-between gap-3">
-                            <div class="flex-shrink-0">
-                                <?= $testimonial['starttime'] ?>
-                                <span style=" color:#9AA0B7"> <?= $testimonial['start'] ?></span>
-                            </div>
-                            <div style="width:40px">
-                                <hr>
-                            </div>
-                            <div class="flex-shrink-0">
-                                <?= $testimonial['endtime'] ?>
-                                <span style=" color:#9AA0B7"><?= $testimonial['end'] ?> </span>
-                            </div>
+                        <div class="flex-shrink-0">
+                            <p> <?= $testimonial['starttime'] ?></p>
+                            <p style=" color:#9AA0B7"> <?= $testimonial['start'] ?></p>
+                        </div>
+                        <div style="width:40px">
+                            <hr>
+                        </div>
+                        <div class="flex-shrink-0 ">
+                            <p><?= $testimonial['endtime'] ?></p>
+                            <p style=" color:#9AA0B7"><?= $testimonial['end'] ?> </p>
+
                         </div>
                     </div>
 
                     <div
-                        class="col-12 col-lg-4 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4  date  post-id-sm">
+                        class="col-12 col-lg-4 justify-content-center  d-flex align-items-center h-100  p-3 px-4  date  post-id-sm">
                         <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 post-place">
                             <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
                                 fill="none">
@@ -587,9 +605,11 @@
                             <?= $testimonial['place'] ?>
                         </span>
                     </div>
+
                 </a>
             </div>
         </div>
+
     </div>
 
     <?php wp_reset_postdata(); ?>
@@ -599,7 +619,7 @@
     <div class="container-max-width" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
         data-aos-duration="1000" data-aos-easing="ease-in-out">
         <img src="<?= get_field("heroimg")['url'] ?>" alt="<?= get_field("heroimg")['title'] ?>" class="container-img"
-            style=" height: 581px; border-radius: 40px; object-fit: cover;" />
+            style=" height: 581px; border-radius: 40px; object-fit:cover;" />
         <div class=" hero_blue_block">
             <div class="inner_block container">
                 <div class="d-flex align-items-center justify-content-between gap-2">

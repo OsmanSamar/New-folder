@@ -150,10 +150,10 @@ $id = 1576;
             display: flex;
             flex-direction: row;
             align-items: center;
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
             border-radius: 15px;
             height: 125px;
-            margin-bottom: 250px;
+            margin-bottom: 414px;
         }
 
         .resource-item:hover {
@@ -176,7 +176,7 @@ $id = 1576;
         }
 
         .border-left {
-            border-left: 1px solid #ccc;
+            border-left: 1px solid #dee2e6;
             display: flex;
             flex-direction: column;
             padding: 20px 0 20px 60px;
@@ -189,7 +189,7 @@ $id = 1576;
         }
 
         .border-right {
-            border-right: 1px solid #ccc;
+            border-right: 1px solid #dee2e6;
             display: flex;
             flex-direction: column;
             padding: 55px 0 20px 138px;
@@ -204,7 +204,15 @@ $id = 1576;
         }
 
         .post-id {
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
+        }
+
+        /* .date {
+            border-left: none;
+        } */
+
+        .weekday {
+            color: #9aa0b7;
         }
 
 
@@ -249,6 +257,10 @@ $id = 1576;
 
             .inner_block {
                 gap: 36px;
+            }
+
+            .post-id {
+                border: 1px solid #dee2e6;
             }
 
         }
@@ -315,9 +327,17 @@ $id = 1576;
                 margin-bottom: 40px;
             }
 
-            .date {
-                border-left: 1px solid #ccc;
+            /* .date {
+            border-left: 1px solid #dee2e6;
 
+        } */
+
+            .post-id {
+                border: none;
+            }
+
+            .date {
+                border-left: 1px solid #dee2e6;
             }
 
 
@@ -371,6 +391,8 @@ $id = 1576;
     </div>
 
 
+
+    <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search events","buttonText":"Search","buttonPosition":"button-inside","align":"right"} /-->
     <!-- Events -->
     <?php
     $posts = get_posts([
@@ -383,14 +405,28 @@ $id = 1576;
         $testimonial = get_field("eventtestimonials");
         ?>
         <div class="container">
-            <div class="row">
+            <div class="row g-0">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
+
                     <div
-                        class="col-12 col-lg-3  justify-content-center justify-content-lg-start d-flex align-items-center h-100 p-3 px-4 datum">
+                        class="col-12 col-lg-3 justify-content-center justify-content-lg-start d-flex flex-column  align-items-center align-items-lg-start h-100 p-3 px-4 datum">
+                        <!-- <span class="">
+                            <?php
+                            $date = strtotime($testimonial['datum']); // Convert string to timestamp
+                            echo date('l', $date) . "<br>" . date('d M, Y', $date);
+                            ?>
+                        </span> -->
+                        <span class="weekday d-block">
+                            <?php
+
+                            echo date('l', strtotime($testimonial['datum'])); ?>
+                        </span><br>
+
                         <span class="">
-                            <?= $testimonial['datum'] ?>
+                            <?php echo date('d M, Y', strtotime($testimonial['datum'])); ?>
                         </span>
                     </div>
+
                     <div class="col-12 col-lg-4  d-flex justify-content-center justify-content-lg-start align-items-center h-100  p-3 px-4  date post-id "
                         style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
                         <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 ">
@@ -406,26 +442,22 @@ $id = 1576;
                         </span>
                     </div>
                     <div class="d-flex col-lg-2 justify-content-center  align-items-center h-100 p-3 px-4  date post-id ">
-                        <div class="d-flex flex-row align-items-center justify-content-center mb-4 ">
-                            <div class="flex-shrink-0 text-center">
-                                <span> <?= $testimonial['starttime'] ?></span>
-                                <span style=" color:#9AA0B7"> <?= $testimonial['start'] ?></span>
-                            </div>
-
+                        <div class="flex-shrink-0">
+                            <p> <?= $testimonial['starttime'] ?></p>
+                            <p style=" color:#9AA0B7"> <?= $testimonial['start'] ?></p>
                         </div>
-                        <div class="d-flex flex-row align-items-center justify-content-center mb-4">
-                            <div style="width:40px; ">
-                                <hr>
-                            </div>
-                            <div class="flex-shrink-0 text-center">
-                                <span><?= $testimonial['endtime'] ?></span>
-                                <span style=" color:#9AA0B7"><?= $testimonial['end'] ?> </span>
-                            </div>
+
+                        <div style="width:40px; ">
+                            <hr>
+                        </div>
+                        <div class="flex-shrink-0 ">
+                            <p><?= $testimonial['endtime'] ?></p>
+                            <p style=" color:#9AA0B7"><?= $testimonial['end'] ?> </p>
                         </div>
                     </div>
 
                     <div
-                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4 date post-id ">
+                        class="col-12 col-lg-2 justify-content-center justify-content-lg-start d-flex align-items-center h-100  p-3 px-4  post-id date ">
                         <span class="d-flex flex-row align-items-baseline justify-content-center  gap-2 "
                             style="color: #24325f;font-family: Manrope, sans-serif;text-wrap: balance; font-weight: 600;line-height: 1.4; font-size:17px;">
                             <svg class="flex-shrink-0 mt-2" xmlns="http://www.w3.org/2000/svg" width="10" height="15"
