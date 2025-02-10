@@ -341,40 +341,41 @@ $id = 1731;
                 $fields = get_fields($post->ID);
                 $testimonial = get_field("clientstorytestimonials");
                 ?>
-                <div class="col-12 col-md-4 col-lg-4 mb-4">
-                    <a href="<?= get_permalink($post) ?>" class="card" style="border-radius: 20px;">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <a href="<?= get_permalink($post) ?>">
 
-                        <img src="<?= $testimonial["clientimg"]['url'] ?>" alt="<?= $testimonial['clientimg']['alt'] ?>"
-                            class="card-img-top" style="height: 213px; border-radius: 10px;" />
+                        <div class="card h-100" style="border-radius: 20px;">
+                            <img src="<?= $testimonial["clientimg"]['url'] ?>" alt="<?= $testimonial['clientimg']['alt'] ?>"
+                                class="card-img-top" style="height: 213px; border-radius: 10px;" />
 
-                        <!-- CARD BODY -->
-                        <div class="card-body mt-3 mb-0 pb-4 px-4 h-10 position-relative" style="overflow: hidden;">
-                            <div class="card-title">
-                                <span><?= $testimonial["clientname"] ?></span>
-                            </div>
-                            <p class="card-text"><?= $post->post_title ?></p>
-                            <div class="bottom-border position-absolute"
-                                style="bottom: 0; left: 0; right: 0; height: 10px; border-bottom: 1px solid #CBCFDE; border-radius: 0 0 30px 30px;">
-                            </div>
-                        </div>
-                        <!-- END OF CARD BODY -->
-
-                        <!-- View Button -->
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <button>
-                                <span class="circle blue-circle">
-                                    <div class="d-flex justify-content-center align-items-center arrow">
-                                        <img src="<?= get_template_directory_uri() ?>/images/arrowbtn.svg"
-                                            alt="go to article" style="width: 12px; height: 18px; margin: 7px 0"
-                                            class="icon" />
-                                    </div>
-                                </span>
-                                <div class="button-text blue2">
-                                    view
+                            <!-- CARD BODY -->
+                            <div class="card-body mt-3 mb-0 pb-4 px-4 h-100 position-relative" style="overflow: hidden;">
+                                <div class="card-title">
+                                    <span><?= $testimonial["clientname"] ?></span>
                                 </div>
-                            </button>
-                        </div>
+                                <p class="card-text"><?= $post->post_title ?></p>
+                                <div class="bottom-border position-absolute"
+                                    style="bottom: 0; left: 0; right: 0; height: 10px; border-bottom: 1px solid #CBCFDE; border-radius: 0 0 30px 30px;">
+                                </div>
+                            </div>
+                            <!-- END OF CARD BODY -->
 
+                            <!-- View Button -->
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <button>
+                                    <span class="circle blue-circle">
+                                        <div class="d-flex justify-content-center align-items-center arrow">
+                                            <img src="<?= get_template_directory_uri() ?>/images/arrowbtn.svg"
+                                                alt="go to article" style="width: 12px; height: 18px; margin: 7px 0"
+                                                class="icon" />
+                                        </div>
+                                    </span>
+                                    <div class="button-text blue2">
+                                        view
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
                     </a>
 
                 </div>
