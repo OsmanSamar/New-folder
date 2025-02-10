@@ -65,6 +65,58 @@ h4 {
   background-color: rgb(216, 98, 131);
 }
 
+// .back-to-home a span.first {
+//   color: #6a7291;
+//   margin-right: 0.5rem;
+//   transition: 0.2s ease;
+//   font-family: Manrope;
+//   font-size: 15px;
+//   font-style: normal;
+//   font-weight: 700;
+//   line-height: 23.4px;
+// }
+
+// .back-to-home a img:hover {
+//   opacity: 0.5;
+// }
+
+// .back-to-home a span.first:hover {
+//   color: #25325f;
+// }
+
+// .back-to-home a img:hover {
+//   opacity: 0.5;
+// }
+
+#breadcrumbs span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #25325f;
+  font-weight: 600;
+}
+#breadcrumbs span:nth-child(2) > a:only-of-type {
+  transition: color 0.2s ease;
+  font-family: Manrope;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+#breadcrumbs span:nth-child(2) > a {
+  color: #6a7291;
+  text-decoration: underline;
+}
+#breadcrumbs span:nth-child(2):hover > a {
+  color: #25325f;
+}
+
+.back-to-home img:hover {
+  opacity: 0.5;
+}
+
 /* Imports */
 @import "header";
 @import "footer";
