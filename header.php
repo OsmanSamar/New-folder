@@ -109,6 +109,27 @@
         }
 
 
+        /* Added new */
+
+        .dropdown-toggle::after {
+            display: block;
+            margin-left: 1.255em;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+            position: absolute;
+            bottom: -6;
+            bottom: 13px;
+            /* left: 50%; */
+            /* transform: translate(-50px); */
+        }
+
+
+        /*  */
+
         /* Sidebar Dropdown Menu */
         /* .sidebar-nav .dropdown-menu {
         position: static;
