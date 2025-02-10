@@ -85,7 +85,7 @@ $id = 1519;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 30px;
+            padding: 53px;
             position: static;
             margin-top: 0;
         }
@@ -159,7 +159,7 @@ $id = 1519;
             display: flex;
             flex-direction: row;
             align-items: center;
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
             border-radius: 15px;
             height: 125px;
             margin-bottom: 287px;
@@ -183,7 +183,7 @@ $id = 1519;
         }
 
         .border-left {
-            border-left: 1px solid #ccc;
+            border-left: 1px solid #dee2e6;
             display: flex;
             flex-direction: column;
             padding: 55px 0 20px 138px;
@@ -191,11 +191,12 @@ $id = 1519;
         }
 
         .border-right {
-            border-right: 1px solid #ccc;
-            display: flex;
-            flex-direction: column;
+            border-right: 1px solid #dee2e6;
+            /* display: flex;
+            flex-direction: column; */
             padding: 55px 0 20px 138px;
-            row-gap: 16px;
+            /* row-gap: 16px; */
+            height: 124px;
         }
 
         .datum {
@@ -206,7 +207,7 @@ $id = 1519;
         }
 
         .post-id {
-            border: 1px solid #ccc;
+            border: 1px solid #dee2e6;
         }
 
         @media (min-width: 768px) {
@@ -313,7 +314,7 @@ $id = 1519;
             }
 
             .date {
-                border-left: 1px solid #ccc;
+                border-left: 1px solid #dee2e6;
 
             }
         }
@@ -348,10 +349,15 @@ $id = 1519;
                                         class="icon" />
                                 </div>
                             </span>
-                            <div class="button-text ">
+                            <!-- <div class="button-text ">
                                 <a href="<?= get_field("backlink")['url'] ?>">
                                     <?= get_field("backlink")['title'] ?>
                                 </a>
+                            </div> -->
+                            <div class="button-text  blue2">
+                                <span>
+                                    Back to insights
+                                </span>
                             </div>
                         </button>
                     </div>
@@ -373,7 +379,7 @@ $id = 1519;
         $fields = get_fields($post->ID);
         ?>
         <div class="container">
-            <div class="row">
+            <div class="row g-0 ">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
                     <div
                         class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center gap-3  h-100 p-3 px-4 datum">

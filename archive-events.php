@@ -380,8 +380,8 @@ $id = 1576;
                             </div> -->
                             <div class="button-text  blue2">
                                 <span>
-                                    Back to insights</span>
-
+                                    Back to insights
+                                </span>
                             </div>
                         </button>
                     </div>
