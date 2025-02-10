@@ -124,7 +124,7 @@
   justify-content: end !important;
 }
 // first input field
-.gform-theme--foundation .gform-grid-col {
+.gform-theme--foundation .gform-grid-col span {
   inline-size: 100% !important;
   box-sizing: border-box !important;
   border-radius: 8px !important;
@@ -132,7 +132,8 @@
 // Input field
 .gform-theme--foundation .gfield .ginput_password.large,
 .gform-theme--foundation .gfield input.large,
-.gform-theme--foundation .gfield select.large {
+.gform-theme--foundation .gfield select.large,
+.gform-theme--foundation .gform-grid-col input {
   inline-size: 100% !important;
   box-sizing: border-box !important;
   border-radius: 8px !important;

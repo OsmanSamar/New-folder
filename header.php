@@ -67,6 +67,9 @@
 
         }
 
+        /* .dropdown-menu .menu-item {
+            border-right: 1px solid red;
+        } */
 
         .dropdown-menu .dropdown-item {
             display: flex;
@@ -183,7 +186,7 @@
     /* }  */
 
 
-        .offcanvas-body ul li ul li {
+        /* .offcanvas-body ul li ul li {
 
             background-color: red;
             width: 100%;
@@ -193,16 +196,22 @@
             justify-content: center;
             padding: 25px;
             border-bottom: 1px solid black;
+        } */
+
+        .sidebar-menu .dropdown-menu {
+            background-color: ;
+            display: ;
+            border-radius: 0;
+            box-shadow: none;
         }
 
-        /* .menu-item {
-        width: 100%;
-        background-color: aliceblue;
-    }
+        .sidebar-menu .dropdown-menu {}
 
-    .offcanvas-body .navbar-nav {
-        background-color: aqua;
-    } */
+
+        .sidebar-menu .dropdown-item {
+            color: red;
+            padding: 15px;
+        }
     </style>
 
 </head>
@@ -236,7 +245,7 @@
                     'depth' => 2,
                     'container' => false,
                     // 'menu_class' => 'navbar-nav ms-auto',
-                    'menu_class' => 'navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1 gap-4',
+                    'menu_class' => 'navbar-nav d-none d-lg-flex justify-content-center align-items-center flex-grow-1 gap-4 ',
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
                     'walker' => new WP_Bootstrap_Navwalker(),
                 ));
@@ -346,10 +355,10 @@
                     'menu' => 'header-menu',
                     'depth' => 2,
                     'container' => false,
-                    'menu_class' => 'navbar-nav fs-5 d-flex flex-column align-items-center gap-3 w-100',
+                    'menu_class' => 'navbar-nav fs-5 d-flex flex-column align-items-center gap-3 w-100 sidebar-menu',
                     'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                    //'walker' => new WP_Bootstrap_Navwalker(),
-                
+                    'walker' => new WP_Bootstrap_Navwalker(),
+
                 ));
                 ?>
             </div>
