@@ -404,8 +404,15 @@ $id = 1576;
     foreach ($posts as $post) {
         $fields = get_fields($post->ID);
         $testimonial = get_field("eventtestimonials");
+        $expertises = get_the_terms($post, 'expertise_cat') ?? [];
+        $expertiseSlugs = [];
+        if ($expertises) {
+            foreach ($expertises as $expertise) {
+                $expertiseSlugs[] = $expertise->slug;
+            }
+        }
         ?>
-        <div class="container">
+        <div class="container" data-expertise="<?= implode(',', $expertiseSlugs) ?>">
             <div class="row g-0">
                 <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
 

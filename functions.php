@@ -140,6 +140,16 @@ function create_eventpost_type()
 
         )
     );
+    register_taxonomy('expertise_cat', ['events', 'videos'], array(
+        "has_archive" => false,
+        'label' => 'expertise',
+        'hierarchical' => true
+    ));
+    register_taxonomy('industry_cat', ['events', 'videos'], array(
+        "has_archive" => false,
+        'label' => 'industry',
+        'hierarchical' => true
+    ));
 }
 
 // Hooking up our function to theme setup
@@ -192,6 +202,8 @@ function create_outcome_post_type()
             'supports' => ['title', 'editor', 'thumbnail']
         )
     );
+
+
 }
 
 // Hooking up our function to theme setup
