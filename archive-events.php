@@ -391,13 +391,14 @@ $id = 1576;
     </div>
 
 
-
+    <!-- Search -->
     <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search events","buttonText":"Search","buttonPosition":"button-inside","align":"right"} /-->
     <!-- Events -->
     <?php
     $posts = get_posts([
         'post_type' => 'events',
-        'numberposts' => -1
+        'numberposts' => -1,
+        "order" => 'asc'
     ]);
 
     foreach ($posts as $post) {

@@ -379,7 +379,8 @@ $id = 1564;
     <?php
     $posts = get_posts([
         'post_type' => 'videos',
-        'numberposts' => -1
+        'numberposts' => -1,
+        "order" => 'asc'
     ]);
 
     foreach ($posts as $post) {

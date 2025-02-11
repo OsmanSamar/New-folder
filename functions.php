@@ -196,3 +196,8 @@ function create_outcome_post_type()
 
 // Hooking up our function to theme setup
 add_action('init', 'create_outcome_post_type');
+
+
+
+
+// Filter Events

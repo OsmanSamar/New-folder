@@ -372,7 +372,8 @@ $id = 1519;
     <?php
     $posts = get_posts([
         'post_type' => 'resources',
-        'numberposts' => -1
+        'numberposts' => -1,
+        "order" => 'asc'
     ]);
 
     foreach ($posts as $post) {

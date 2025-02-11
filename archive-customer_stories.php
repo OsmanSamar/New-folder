@@ -328,7 +328,8 @@ $id = 1731;
             <?php
             $posts = get_posts([
                 'post_type' => 'customer_stories',
-                'numberposts' => -1
+                'numberposts' => -1,
+                "order" => 'asc'
             ]);
             //related posts
             // $posts = get_posts([
