@@ -207,13 +207,72 @@ $id = 1576;
             border: 1px solid #dee2e6;
         }
 
-        /* .date {
-            border-left: none;
-        } */
+
 
         .weekday {
             color: #9aa0b7;
         }
+
+
+        /*  */
+
+        .filter-bar select.filter-input {
+            background-image: url("<?= get_template_directory_uri() ?>/images/nextarrow.svg" alt="Arrow");
+            background-position: right 1rem center;
+            background-repeat: no-repeat;
+            background-size: .75rem;
+
+        }
+
+        .filter-bar .filter-input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            border: 1px solid #cbcfde;
+            border-radius: 10px;
+            box-shadow: none;
+            color: #24325f;
+            font-size: inherit;
+            margin: .5rem 0;
+            padding: .75rem 4rem .75rem 1rem;
+            width: auto;
+        }
+
+        .filter-bar .search button {
+            position: absolute;
+            right: 133px;
+            /* top: 50%; */
+            bottom: 87px;
+            transform: translateY(-50%);
+            /* background-color: #24325f; */
+            color: #24325f;
+        }
+
+
+
+
+        .filter-bar.filter-bar-results .filter-input {
+            border: 0;
+            padding-right: 3rem;
+        }
+
+
+        option {
+            font-weight: normal;
+            display: block;
+            padding-block-start: 0px;
+            padding-block-end: 1px;
+            min-block-size: 1.2em;
+            padding-inline: 2px;
+            white-space: nowrap;
+        }
+
+
+
+
+
+        /*  */
 
 
 
@@ -373,11 +432,6 @@ $id = 1576;
                                         class="icon" />
                                 </div>
                             </span>
-                            <!-- <div class="button-text ">
-                                <a href="<?= get_field("backlink")['url'] ?>">
-                                    <?= get_field("backlink")['title'] ?>
-                                </a>
-                            </div> -->
                             <div class="button-text  blue2">
                                 <span>
                                     Back to insights
@@ -391,9 +445,83 @@ $id = 1576;
     </div>
 
 
-    <!-- Search -->
-    <!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search events","buttonText":"Search","buttonPosition":"button-inside","align":"right"} /-->
-    <!-- Events -->
+    <!-- Filter-->
+
+    <div class="filter-bar-container" id="list">
+        <div class="container">
+            <div class="row">
+                <div
+                    class="filter-bar d-flex justify-content-between flex-wrap mb-4 mt-lg-g align-items-center flex-lg-nowrap">
+                    <div class="d-flex gap-md-4 flex-wrap align-items-md-center flex-column flex-md-row w-100">
+                        <p class="mb-0 lead">Filter:</p>
+                        <select name="industry" class="filter-input level">
+                            <option value="null" selected="">Industry</option>
+                            <option value="28">Banking &amp; FinTech</option>
+                            <option value="20">Enterprise Software Development</option>
+                            <option value="40">General</option>
+                            <option value="21">High Tech Manufacturing</option>
+                            <option value="39">Hospitals &amp; Clinical Care</option>
+                            <option value="38">Research &amp; BioTech</option>
+                            <option value="37">State &amp; National Agencies</option>
+                        </select>
+
+                        <select name="expertise" class="filter-input">
+                            <option value="null" selected="">Expertise</option>
+                            <option value="23">Application Modernization</option>
+                            <option value="36">Cloud Security</option>
+                            <option value="35">Data &amp; AI</option>
+                            <option value="22">Hybrid Cloud</option>
+                            <option value="24">Platform Engineering</option>
+                        </select>
+                    </div>
+                    <div class="search d-flex align-items-center w-50">
+                        <input type="text" id="myInput" name="search" class="filter-input w-100 position-relative"
+                            onkeyup="myFunction()" placeholder="Search events...">
+
+                        <div class="d-flex align-items-center justify-content-cenetr gap-2 position-absolute   submit-btn"
+                            style="right:204px">
+                            <span class="d-flex justify-content-cenetr align-items-center "
+                                style="height:39.261px;padding: 4px 13px; border-radius: 8px;background: #274083 !important;">
+                                <img src="<?= get_field("submitimg", 'option')['url'] ?>"
+                                    alt="<?= get_field("submitimg", 'option')['alt'] ?>"
+                                    style="width: 12px; height: 18px;" />
+                            </span>
+                            <span
+                                style="color: #274083;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height: 15.6px;">
+                                Search
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="filter-bar filter-bar-results d-flex align-items-md-center justify-content-between flex-column flex-md-row">
+                        <p class="mb-0 color-neutral-500">Showing <span class="shown">5</span> of <span
+                                class="total">30</span> articles</p>
+                        <div class="filter-bar-results-sort d-flex align-items-center gap-2">
+                            <p class="mb-0 color-neutral-500">Sort by:</p>
+                            <select name="sort" class="filter-input">
+                                <option value="date_desc">Newest to oldest</option>
+                                <option value="date_asc">Oldest to newest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
     <?php
     $posts = get_posts([
         'post_type' => 'events',
@@ -515,19 +643,17 @@ $id = 1576;
         </button> -->
 
 
-        <div class="d-flex justify-content-center  d-flex align-items-center gap-2">
+        <div class="d-flex justify-content-center align-items-center gap-2">
             <button>
                 <span class="circle blue-circle">
                     <div class="d-flex align-items-center justify-content-center rounded  arrow">
                         <img src="<?= get_template_directory_uri() ?>/images/downloadimg.svg" alt="Arrow"
                             style="width:16px; height:18px; margin:7px 0;" class="icon">
-
                     </div>
                 </span>
                 <div class="button-text  blue2">
                     <span>
                         Load more</span>
-
                 </div>
             </button>
         </div>
@@ -537,49 +663,31 @@ $id = 1576;
 
 
 
-
-
-
-
-
-
-
-
     <!-- Form Section container  -->
     <?php get_template_part('components/form') ?>
     <!-- End of Form Section -->
 
-    <script>
-        jQuery(document).ready(function ($) {
-            $("#load-more").on("click", function () {
-                var button = $(this),
-                    page = button.data("page"),
-                    ajaxurl = button.data("url");
 
-                $.ajax({
-                    url: ajaxurl,
-                    type: "POST",
-                    data: {
-                        action: "load_more",
-                        page: page,
-                    },
-                    beforeSend: function () {
-                        button.text("Loading...");
-                    },
-                    success: function (data) {
-                        if ($.trim(data)) {
-                            $("#posts-container").append(data);
-                            button.data("page", page + 1).text("Load More");
-                        } else {
-                            button.remove();
-                        Hide button when no more posts
-                        }
-                    },
-                });
-            });
+
+
+
+
+
+    <!-- <script>
+    function myFunction() {
+        let input = document.getElementById("myInput").value.toLowerCase();
+        let eventItems = document.querySelectorAll(".event-item"); // Update with your event class
+
+        eventItems.forEach(function(event) {
+            let eventText = event.textContent.toLowerCase();
+            if (eventText.includes(input)) {
+                event.style.display = "";
+            } else {
+                event.style.display = "none";
+            }
         });
-    </script>
-
+    }
+    </script> -->
 
 </main>
 
