@@ -707,8 +707,11 @@
 
             .testimonial-container {
                 width: 230px;
-                /* height: 100%; */
                 padding: 10px;
+                border-radius: 15px;
+                background-color: #FFF;
+                /* width: 100%; */
+
 
             }
 
@@ -1654,39 +1657,52 @@
                 style="margin-top:-163px;">
                 <?php
                 $delay = 0;
-                foreach (get_field("testimonials_section") as $testimonial) {
+                $posts = get_posts([
+                    'post_type' => 'outcome_stories',
+                    'numberposts' => -1,
+                    "order" => 'asc'
+                ]);
+
+                foreach ($posts as $post) {
+                    $fields = get_fields($post->ID);
+                    $testimonial = get_field("testimonialssection");
                     ?>
-                    <div class="testimonial"
-                        style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0; padding: 20px;"
-                        data-aos="fade-up" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
-                        <div style="margin:0 0 2px 0 ; display: flex;align-items: center;gap:8px;">
-                            <span
-                                style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; font-family: Manrope;">
-                                <?= $testimonial["num"] ?>
-                            </span>
-                            <span
-                                style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;font-family: Manrope;">
-                                <?= $testimonial["sub_title"] ?>
-                            </span>
+                    <a href="<?= get_permalink($post) ?>">
+                        <div class="testimonial h-100"
+                            style="border-radius:15px; background-color:#FFF; width:350px; height:193px; margin:15px 0; padding: 20px;"
+                            data-aos="fade-up" data-aos-delay="<?= $delay ?>" data-aos-duration="800">
+                            <div style="margin:0 0 2px 0 ; display: flex;align-items: center;gap:8px;">
+                                <span
+                                    style="color: #E94271;font-family: Manrope;font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; font-family: Manrope;">
+                                    <?= $testimonial["num"] ?>
+                                </span>
+                                <span
+                                    style="font-size: 14px;font-style: normal;font-weight: 700;line-height: 23.8px; color:#6A7291;font-family: Manrope;">
+                                    <?= $post->post_title ?>
+                                </span>
+                            </div>
+                            <div class="d-flex justify-content-between ">
+                                <h1
+                                    style="color:#25325F; font-size:18px; font-weight:700; line-height:27px; font-family:Manrope; ">
+                                    <?= $testimonial["maintitle"] ?>
+                                </h1>
+                                <a style="border-radius:8px; background-color:#274083; height:30px; width:30px;"
+                                    class="d-flex justify-content-center align-items-center" href="#">
+
+                                    <img src="<?= get_template_directory_uri() ?>/images/arrowbtn.svg"
+                                        alt="go to outcome stories" style="width: 12px; height: 18px; margin: 7px 0"
+                                        class="icon" />
+                                </a>
+
+                            </div>
+                            <div style=" border-bottom: 0.5px solid  #25325F; margin:15px 1px;"></div>
+                            <p class=""
+                                style="font-size:13px; font-style:normal; font-weight:500; line-height:22px; color:#6A7291; padding: ; font-family: Manrope; text-align: left;  ">
+                                <?= $testimonial["text"] ?>
+                            </p>
                         </div>
-                        <div class="d-flex justify-content-between ">
-                            <h1
-                                style="color:#25325F; font-size:18px; font-weight:700; line-height:27px; font-family:Manrope; ">
-                                <?= $testimonial["main_title"] ?>
-                            </h1>
-                            <a style="border-radius:8px; background-color:#274083; height:30px; width:30px;"
-                                class="d-flex justify-content-center align-items-center" href="#">
-                                <img src="<?= get_field("schedule_link")['url'] ?>"
-                                    alt="<?= get_field("schedule_link")['alt'] ?>"
-                                    style="width:12px; height:18px; margin:7px 0;" />
-                            </a>
-                        </div>
-                        <div style=" border-bottom: 0.5px solid  #25325F; margin:15px 1px;"></div>
-                        <p class=""
-                            style="font-size:13px; font-style:normal; font-weight:500; line-height:22px; color:#6A7291; padding: ; font-family: Manrope; text-align: left;  ">
-                            <?= $testimonial["text"] ?>
-                        </p>
-                    </div>
+                    </a>
+
                     <?php
                     $delay += 300;
                 }
