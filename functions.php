@@ -169,3 +169,30 @@ function create_customer_story_post_type()
 
 // Hooking up our function to theme setup
 add_action('init', 'create_customer_story_post_type');
+
+
+
+// Our custom Events post type function
+function create_outcome_post_type()
+{
+
+    register_post_type(
+        'outcome_stories',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('Outcome_Stories'),
+                'singular_name' => __('Outcome_Stories')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'outcome_stories'),
+            'show_in_rest' => true,
+
+            'supports' => ['title', 'editor', 'thumbnail']
+        )
+    );
+}
+
+// Hooking up our function to theme setup
+add_action('init', 'create_outcome_post_type');
