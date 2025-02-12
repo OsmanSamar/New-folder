@@ -134,73 +134,11 @@
     /*  */
 
     /* Sidebar Dropdown Menu */
-    /* .sidebar-nav .dropdown-menu {
-        position: static;
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        background-color: #f8f9fa;
-    } */
 
-    /* Show dropdown on toggle */
-    /* .sidebar-nav .dropdown-menu.show {
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-    } */
-
-    /* Sidebar Dropdown Items */
-    /* .sidebar-nav .dropdown-item {
-        padding: 10px 15px;
-        font-size: 1rem;
-        color: red;
-        text-decoration: none;
-    }
-
-    .sidebar-nav .dropdown-item:hover {
-        background-color: #e9ecef;
-        color: #000;
-    } */
-
-    /* Styling Parent Items in Sidebar */
-    /* .sidebar-nav .menu-item-has-children>a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .sidebar-nav .menu-item-has-children>a:after {
-        content: '\f107';
-        margin-left: 8px;
-    }
-
-
-    .sidebar-nav .menu-item-has-children.show>a:after {
-        content: '\f106';
-    }
-
-   
-    /* }  */
-
-
-    /* .offcanvas-body ul li ul li {
-
-            background-color: red;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 25px;
-            border-bottom: 1px solid black;
-        } */
 
     .sidebar-menu .dropdown-menu {
         background-color: ;
-        display: ;
+        display: block;
         border-radius: 0;
         box-shadow: none;
     }
@@ -347,6 +285,8 @@
                 <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
+
+
 
             <!-- Sidebar Body -->
             <div class="offcanvas-body">
