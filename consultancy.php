@@ -20,7 +20,7 @@
         border-radius: 30px;
         max-width: 1700px;
         height: 581px;
-        margin: 200px auto 10px;
+        margin: 40px auto 10px;
     }
 
 

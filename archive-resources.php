@@ -5,319 +5,319 @@ $id = 1519;
 ?>
 <main class="resources flex-grow-1">
     <style>
-        .button-text a {
-            color: #274083;
-            font-family: Manrope;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 15.6px;
-            text-decoration: none;
+    .button-text a {
+        color: #274083;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 15.6px;
+        text-decoration: none;
+    }
+
+    .button-text a:hover {
+        color: #FFF;
+    }
+
+    b,
+    strong {
+        color: #e94271;
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        line-height: inherit;
+    }
+
+    .form_section {
+        border-radius: 30px;
+        background: #25325F;
+        max-width: 1700px;
+        margin: 50px auto 50px;
+    }
+
+    .test-block::before {
+        content: " ";
+        position: absolute;
+        background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
+        top: 0;
+        z-index: -1;
+        border-radius: 30px;
+        width: 97%;
+        height: 100%;
+    }
+
+    .left-container {
+        border-radius: 30px;
+        color: white;
+        height: 264px;
+        padding: 0 26px;
+    }
+
+    .left-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        gap: 50px;
+    }
+
+    .right-col-form {
+        margin-top: unset;
+    }
+
+    .container-max-width {
+        border-radius: 30px;
+        min-height: 381px;
+        margin: 40px auto 10px;
+    }
+
+    .container-max-width .container-img {
+        display: none;
+    }
+
+    .hero_white_block {
+        /* height: 100%; */
+        border-radius: 40px;
+        background: #FFF;
+        position: relative;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 53px;
+        position: static;
+        margin-top: 0;
+    }
+
+    .inner_block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+        margin: 10px 60px;
+        gap: 20px;
+    }
+
+    .hero_title {
+        color: #FFF;
+        font-family: Sora;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 54px;
+        margin-bottom: 31px;
+    }
+
+    .hero_text,
+    .hero_title {
+        text-align: left;
+    }
+
+    .hero_text {
+        color: #9AA0B7;
+        font-family: Manrope;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+    }
+
+    .left-btn {
+        width: fit-content;
+        height: 34px;
+        border-radius: 100px;
+        background: #274083;
+        padding: 3px 11px;
+        text-align: center;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 23.4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .hero_text {
+        color: #9AA0B7;
+        font-family: Manrope;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27.2px;
+    }
+
+    .date {
+        border-left: unset;
+    }
+
+    .resource-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid #dee2e6;
+        border-radius: 15px;
+        height: 125px;
+        margin-bottom: 287px;
+    }
+
+    .resource-item:hover {
+        background-color: #f9f9f9;
+    }
+
+    .resource-item>div:first-child {
+        border-left: none;
+    }
+
+    .resource-item .arrow img {
+        width: 12px;
+        height: 18px;
+    }
+
+    .border-end {
+        border-left: 1px solid red;
+    }
+
+    .border-left {
+        border-left: 1px solid #dee2e6;
+        display: flex;
+        flex-direction: column;
+        padding: 55px 0 20px 138px;
+        row-gap: 16px;
+    }
+
+    .border-right {
+        border-right: 1px solid #dee2e6;
+        /* display: flex;
+            flex-direction: column; */
+        padding: 55px 0 20px 138px;
+        /* row-gap: 16px; */
+        height: 124px;
+    }
+
+    .datum {
+        background-color: #274083;
+        border-radius: 15px 15px 0px 0px;
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .post-id {
+        border: 1px solid #dee2e6;
+    }
+
+    @media (min-width: 768px) {
+        .datum {
+            border-radius: 15px 15px 0px 0px;
         }
 
-        .button-text a:hover {
-            color: #FFF;
+        .container-max-width .container-img {
+            display: block;
         }
 
-        b,
-        strong {
-            color: #e94271;
-            font-family: inherit;
-            font-size: inherit;
-            font-style: inherit;
-            line-height: inherit;
-        }
-
-        .form_section {
-            border-radius: 30px;
-            background: #25325F;
-            max-width: 1700px;
-            margin: 50px auto 50px;
-        }
-
-        .test-block::before {
-            content: " ";
+        .hero_white_block {
+            width: 380px;
+            /* position: relative; */
             position: absolute;
-            background: linear-gradient(13deg, rgba(55, 75, 141, 0.40) 1.5%, rgba(54, 70, 124, 0.00) 94.53%);
-            top: 0;
-            z-index: -1;
-            border-radius: 30px;
-            width: 97%;
-            height: 100%;
-        }
-
-        .left-container {
-            border-radius: 30px;
-            color: white;
-            height: 264px;
-            padding: 0 26px;
+            bottom: 79px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 30px;
+            margin-top: unset;
         }
 
         .left-content {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            margin-top: 30px;
-            gap: 50px;
-        }
-
-        .right-col-form {
-            margin-top: unset;
-        }
-
-        .container-max-width {
-            border-radius: 30px;
-            min-height: 381px;
-            margin: 40px auto 10px;
-        }
-
-        .container-max-width .container-img {
-            display: none;
-        }
-
-        .hero_white_block {
-            /* height: 100%; */
-            border-radius: 40px;
-            background: #FFF;
-            position: relative;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 53px;
-            position: static;
-            margin-top: 0;
-        }
-
-        .inner_block {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: left;
-            margin: 10px 60px;
+            margin-top: 50px;
             gap: 20px;
         }
 
-        .hero_title {
-            color: #FFF;
-            font-family: Sora;
-            font-size: 45px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 54px;
-            margin-bottom: 31px;
-        }
-
-        .hero_text,
-        .hero_title {
-            text-align: left;
-        }
-
-        .hero_text {
-            color: #9AA0B7;
-            font-family: Manrope;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 27.2px;
-        }
-
-        .left-btn {
-            width: fit-content;
-            height: 34px;
-            border-radius: 100px;
-            background: #274083;
-            padding: 3px 11px;
-            text-align: center;
-            color: #FFF;
-            font-family: Manrope;
-            font-size: 13px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 23.4px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .hero_text {
-            color: #9AA0B7;
-            font-family: Manrope;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 27.2px;
-        }
-
-        .date {
-            border-left: unset;
-        }
-
-        .resource-item {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            border: 1px solid #dee2e6;
-            border-radius: 15px;
-            height: 125px;
-            margin-bottom: 287px;
-        }
-
-        .resource-item:hover {
-            background-color: #f9f9f9;
-        }
-
-        .resource-item>div:first-child {
-            border-left: none;
-        }
-
-        .resource-item .arrow img {
-            width: 12px;
-            height: 18px;
-        }
-
-        .border-end {
-            border-left: 1px solid red;
-        }
-
-        .border-left {
-            border-left: 1px solid #dee2e6;
-            display: flex;
-            flex-direction: column;
-            padding: 55px 0 20px 138px;
-            row-gap: 16px;
-        }
-
         .border-right {
-            border-right: 1px solid #dee2e6;
-            /* display: flex;
-            flex-direction: column; */
-            padding: 55px 0 20px 138px;
-            /* row-gap: 16px; */
-            height: 124px;
+            padding: 55px 0 20px 482px;
+        }
+
+        .inner_block {
+            gap: 36px;
+        }
+
+    }
+
+    @media (min-width: 992px) {
+
+        .container-max-width {
+            margin: 40px auto 10px;
         }
 
         .datum {
-            background-color: #274083;
-            border-radius: 15px 15px 0px 0px;
-            color: #FFF;
-            font-size: 20px;
+            border-radius: 15px 0px 0px 15px;
         }
 
-        .post-id {
-            border: 1px solid #dee2e6;
+        .border-top {
+            border-top: 1px solid red;
         }
 
-        @media (min-width: 768px) {
-            .datum {
-                border-radius: 15px 15px 0px 0px;
-            }
-
-            .container-max-width .container-img {
-                display: block;
-            }
-
-            .hero_white_block {
-                width: 380px;
-                /* position: relative; */
-                position: absolute;
-                bottom: 79px;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                padding: 30px;
-                margin-top: unset;
-            }
-
-            .left-content {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 50px;
-                gap: 20px;
-            }
-
-            .border-right {
-                padding: 55px 0 20px 482px;
-            }
-
-            .inner_block {
-                gap: 36px;
-            }
-
+        b,
+        strong {
+            font-size: inherit;
         }
 
-        @media (min-width: 992px) {
-
-            .container-max-width {
-                margin: 100px auto 10px;
-            }
-
-            .datum {
-                border-radius: 15px 0px 0px 15px;
-            }
-
-            .border-top {
-                border-top: 1px solid red;
-            }
-
-            b,
-            strong {
-                font-size: inherit;
-            }
-
-            .form_section {
-                height: 571px;
-            }
-
-            .left-container {
-                height: 500px;
-            }
-
-            .left-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: normal;
-                margin-top: 67px;
-            }
-
-            .right-col-form {
-                margin-top: 67px;
-            }
-
-            .hero_white_block {
-                width: 531px;
-                position: absolute;
-                bottom: 79px;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                padding: 30px;
-                margin-top: unset;
-            }
-
-            .inner_block {
-                margin: 10px 60px;
-                gap: 37px;
-            }
-
-            .resource-item {
-                margin-bottom: 40px;
-            }
-
-            .date {
-                border-left: 1px solid #dee2e6;
-
-            }
+        .form_section {
+            height: 571px;
         }
+
+        .left-container {
+            height: 500px;
+        }
+
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: normal;
+            margin-top: 67px;
+        }
+
+        .right-col-form {
+            margin-top: 67px;
+        }
+
+        .hero_white_block {
+            width: 531px;
+            position: absolute;
+            bottom: 79px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 30px;
+            margin-top: unset;
+        }
+
+        .inner_block {
+            margin: 10px 60px;
+            gap: 37px;
+        }
+
+        .resource-item {
+            margin-bottom: 40px;
+        }
+
+        .date {
+            border-left: 1px solid #dee2e6;
+
+        }
+    }
     </style>
 
     <!-- BreadCrumb Section -->
@@ -379,62 +379,62 @@ $id = 1519;
     foreach ($posts as $post) {
         $fields = get_fields($post->ID);
         ?>
-        <div class="container">
-            <div class="row g-0 ">
-                <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
-                    <div
-                        class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center gap-3  h-100 p-3 px-4 datum">
-                        <span class="title ">
-                            <?= $post->post_title ?>
-                        </span>
-                        <div class="d-flex align-items-center justify-content-center rounded  "
-                            style="width: 6px; height: 9px; ">
-                            <img src="<?= get_template_directory_uri() ?>/images/nextpost.svg" alt="Arrow">
-                        </div>
+    <div class="container">
+        <div class="row g-0 ">
+            <a href="<?= get_permalink($post) ?>" class="resource-item g-0 row ">
+                <div
+                    class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center gap-3  h-100 p-3 px-4 datum">
+                    <span class="title ">
+                        <?= $post->post_title ?>
+                    </span>
+                    <div class="d-flex align-items-center justify-content-center rounded  "
+                        style="width: 6px; height: 9px; ">
+                        <img src="<?= get_template_directory_uri() ?>/images/nextpost.svg" alt="Arrow">
                     </div>
-                    <div
-                        class="col-12 col-lg-5 d-flex  justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
-                        <p>
-                            <?= $fields['voorbeeld'] ?>
-                        </p>
-                    </div>
-                    <div
-                        class="col-12 col-lg-2 d-none d-lg-flex justify-content-center   align-items-center h-100  p-3 px-4 date post-id">
-                        <div class="d-flex align-items-baseline gap-3 flex-column">
-                            <span
-                                style="color:#E94271; font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height:23.4px;">
-                                Published </span>
-                            <span
-                                style="color: #6A7291;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 600;line-height:15.6px;">
-                                <?= $fields['datum'] ?>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date post-id "
-                        style="border-radius: 0px 15px 15px 0px;">
-                        <div class="d-flex align-items-center justify-content-center rounded  arrow"
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
-                        </div>
-                    </div>
-                    <!-- SM Screen -->
-                    <div
-                        class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4  flex-row  post-id">
-                        <div class="flex-shrink-0 d-flex flex-column align-items-center justify-content-between gap-3">
-                            <span style=" color:#E94271"> Published </span>
+                </div>
+                <div
+                    class="col-12 col-lg-5 d-flex  justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
+                    <p>
+                        <?= $fields['voorbeeld'] ?>
+                    </p>
+                </div>
+                <div
+                    class="col-12 col-lg-2 d-none d-lg-flex justify-content-center   align-items-center h-100  p-3 px-4 date post-id">
+                    <div class="d-flex align-items-baseline gap-3 flex-column">
+                        <span
+                            style="color:#E94271; font-family: Manrope;font-size: 18px;font-style: normal;font-weight: 700;line-height:23.4px;">
+                            Published </span>
+                        <span
+                            style="color: #6A7291;font-family: Manrope;font-size: 16px;font-style: normal;font-weight: 600;line-height:15.6px;">
                             <?= $fields['datum'] ?>
-                        </div>
-                        <div class="d-flex d-lg-none border-right"></div>
-                        <div class="d-flex align-items-center justify-content-center rounded  arrow"
-                            style="width: 30px; height: 30px; background-color:#274083;">
-                            <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
-                        </div>
+                        </span>
                     </div>
-                </a>
-            </div>
+                </div>
+
+                <div class=" d-none d-lg-flex col flex-shrink-0  justify-content-center  d-flex align-items-center h-100  date post-id "
+                    style="border-radius: 0px 15px 15px 0px;">
+                    <div class="d-flex align-items-center justify-content-center rounded  arrow"
+                        style="width: 30px; height: 30px; background-color:#274083;">
+                        <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
+                    </div>
+                </div>
+                <!-- SM Screen -->
+                <div
+                    class="d-flex justify-content-between d-lg-none col-12  align-items-center h-100 p-3 px-4  flex-row  post-id">
+                    <div class="flex-shrink-0 d-flex flex-column align-items-center justify-content-between gap-3">
+                        <span style=" color:#E94271"> Published </span>
+                        <?= $fields['datum'] ?>
+                    </div>
+                    <div class="d-flex d-lg-none border-right"></div>
+                    <div class="d-flex align-items-center justify-content-center rounded  arrow"
+                        style="width: 30px; height: 30px; background-color:#274083;">
+                        <img src="<?= get_template_directory_uri() ?>/images/arrow.svg" alt="Arrow">
+                    </div>
+                </div>
+            </a>
         </div>
-        <?php
+    </div>
+    <?php
     }
     wp_reset_postdata();
     ?>

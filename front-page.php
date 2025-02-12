@@ -1772,9 +1772,7 @@
                                 </button>
                             </div>
                         </div>
-
                     </a>
-
                 </div>
                 <?php
                     $delay += 300;
@@ -1985,7 +1983,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Left Column -->
-                    <div class="col-lg-5 ">
+                    <div class="col-lg-5  ">
                         <div class="left-column d-flex flex-column align-items-flex-start justify-content-left gap-4"
                             style="">
                             <span
@@ -2074,17 +2072,13 @@
                     </div>
 
                     <!-- Right Column Second one -->
-
                     <div class="col-lg-3 d-none d-md-none d-lg-flex">
                         <div class="container">
-
                             <div class="row  d-flex flex-cloumn align-items-center justify-content-between gap-4"
                                 style=" margin-top:103px; margin-bottom:103px;">
-
                                 <?php
                                 foreach (get_field("testimonails_section_right") as $testimonails) {
                                     ?>
-
                                 <div class=""
                                     style="border-radius:15px;  width:261px; height:168px; margin:0px 0 40px 0;">
                                     <div class="d-flex flex-row align-items-center justify-content-between">
@@ -2128,7 +2122,6 @@
                                 }
                                 ?>
                             </div>
-
                         </div>
                     </div>
 
@@ -2702,28 +2695,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="overlay2" data-aos="fade-right" data-aos-offset="100" data-aos-delay="50"
-                    data-aos-duration="1000" data-aos-easing="ease-in-out">
-
-                    <span class="sub-title"><?= get_field("sue_title") ?></span>
-                    <span class="main-title"><?= get_field("sue_main_title") ?></span>
-
-                    <div class="row">
-                        <div class="icon-container col-12 col-lg-12">
-                            <img src="<?= get_field("rabobank_icon")['url'] ?>"
-                                alt="<?= get_field("rabobank_icon")['alt'] ?>" class="icon" />
-                            <img src="<?= get_field("bol_icon")['url'] ?>" alt="<?= get_field("bol_icon")['alt'] ?>"
-                                class="icon" />
-                        </div>
-                    </div>
-                    <div class="icon-container">
-                        <img src="<?= get_field("kpn_icon")['url'] ?>" alt="<?= get_field("kpn_icon")['alt'] ?>"
-                            class="icon" />
-                        <img src="<?= get_field("booking_icon")['url'] ?>" alt="<?= get_field("booking_icon")['alt'] ?>"
-                            class="icon" />
-                    </div>
-                </div> -->
             </div>
             <!-- End of responsive-container With banks Block -->
 
@@ -2740,13 +2711,6 @@
                         data-aos-easing="ease-in-out">
                         <img src="<?= get_field("left_img")['url'] ?>" alt="<?= get_field("left_img")['alt'] ?>"
                             style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover" />
-
-
-                        <!-- <div class="embed-responsive embed-responsive-21by9"
-                            style="max-width:; max-height:412px; border-radius: 25px; object-fit:cover">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-                                allowfullscreen></iframe>
-                        </div> -->
 
                     </div>
                     <!-- Right Section -->
@@ -2884,17 +2848,6 @@
                                             porttitor
                                             vulputate, felis orci venenatis nibh, ut diam ullamcorper sapien.
                                         </p>
-                                        <!-- <div class=" d-flex flex-row align-items-center justify-content-start gap-3">
-                                            <a href="#"
-                                                style="background-color:#25325F;; height:30px; width:30px; border-radius: 8px;"
-                                                class="d-flex justify-content-center align-items-center">
-                                                <img src="<?= get_field("sue_insights_link")['url'] ?>"
-                                                    alt="<?= get_field("sue_insights_link")['alt'] ?>"
-                                                    style="width:12px; height:18px; margin:7px 0;" />
-                                            </a>
-                                            <span
-                                                style="color:  #25325F;font-family: Manrope;font-size: 13px;font-style: normal;font-weight: 600;line-height:  15.6px">Buttom</span>
-                                        </div> -->
 
                                         <div class="d-flex flex-row align-items-center justify-content-start  gap-3">
                                             <button>

@@ -69,12 +69,12 @@ button .circle::before {
 
 button:hover .circle::before {
   width: 9.5rem;
-  //  Expands the circle to include text
+  //  Expands the circle to include text  9.5rem
 }
 
 button:hover .circle.blue-circle::before {
   width: 8.5rem;
-  //  Expands the circle to include text
+  //  Expands the circle to include text  8.5rem
 }
 
 button .circle.blue-circle::before {
