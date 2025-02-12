@@ -1070,7 +1070,7 @@
             <!-- Left Side: Image and Texts -->
             <div class="left-side-img-text">
                 <img src="<?= get_field('lets_talk_img')['url'] ?>" alt="<?= get_field('lets_talk_img')['alt'] ?>"
-                    style="width: 120px;height: 120px; border:15px;">
+                    style="width: 120px;height: 120px; border-radius: 15px;">
                 <div>
                     <div class="first-name-name ">
                         <span class="first-name"

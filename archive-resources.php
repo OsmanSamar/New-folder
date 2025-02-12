@@ -394,7 +394,9 @@ $id = 1519;
                     </div>
                     <div
                         class="col-12 col-lg-5 d-flex  justify-content-center justify-content-lg-start  align-items-center h-100  p-3 px-4 date post-id">
-                        <p> <?= $fields['voorbeeld'] ?></p>
+                        <p>
+                            <?= $fields['voorbeeld'] ?>
+                        </p>
                     </div>
                     <div
                         class="col-12 col-lg-2 d-none d-lg-flex justify-content-center   align-items-center h-100  p-3 px-4 date post-id">

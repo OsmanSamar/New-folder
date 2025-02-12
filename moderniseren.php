@@ -6,104 +6,104 @@
 <main class="moderniseren flex-grow-1">
 
     <style>
-    b,
-    strong {
-        color: #e94271;
-        font-family: inherit;
-        font-size: inherit;
-        font-style: inherit;
-        line-height: inherit;
-    }
-
-    .blue-container {
-        border-radius: 40px;
-        background: #25325F;
-        height: 400px;
-        max-width: 1700px;
-        padding: 30px;
-        margin: 2rem auto;
-    }
-
-    .container-let-talk {
-        display: flex;
-
-        align-items: flex-start;
-
-        justify-content: space-around;
-
-        flex-direction: column;
-    }
-
-    .left-side-img-text {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-direction: row;
-        align-items: flex-start;
-
-    }
-
-    .name-class {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-    @media (min-width: 768px) {
-        .blue-container {
-            height: 212px;
-        }
-
-        .container-let-talk {
-            flex-direction: row;
-        }
-
-        .left-side-img-text {
-            align-items: center;
-            flex-direction: row;
-        }
-
-
-        .first-name-name {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-    }
-
-    @media (min-width: 992px) {
-
         b,
         strong {
+            color: #e94271;
+            font-family: inherit;
             font-size: inherit;
+            font-style: inherit;
+            line-height: inherit;
         }
 
         .blue-container {
-            height: 212px;
+            border-radius: 40px;
+            background: #25325F;
+            height: 400px;
+            max-width: 1700px;
+            padding: 30px;
+            margin: 2rem auto;
         }
 
         .container-let-talk {
-            flex-direction: row;
+            display: flex;
+
+            align-items: flex-start;
+
+            justify-content: space-around;
+
+            flex-direction: column;
         }
 
         .left-side-img-text {
-            align-items: center;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
             flex-direction: row;
+            align-items: flex-start;
+
         }
 
         .name-class {
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
+            justify-content: center;
+            flex-direction: column;
+
         }
 
-        .lets-talk-gota-question {
-            font-size: 35px;
-            font-weight: 600;
-            line-height: 50.4px;
+        @media (min-width: 768px) {
+            .blue-container {
+                height: 212px;
+            }
+
+            .container-let-talk {
+                flex-direction: row;
+            }
+
+            .left-side-img-text {
+                align-items: center;
+                flex-direction: row;
+            }
+
+
+            .first-name-name {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
         }
-    }
+
+        @media (min-width: 992px) {
+
+            b,
+            strong {
+                font-size: inherit;
+            }
+
+            .blue-container {
+                height: 212px;
+            }
+
+            .container-let-talk {
+                flex-direction: row;
+            }
+
+            .left-side-img-text {
+                align-items: center;
+                flex-direction: row;
+            }
+
+            .name-class {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+            .lets-talk-gota-question {
+                font-size: 35px;
+                font-weight: 600;
+                line-height: 50.4px;
+            }
+        }
     </style>
     <div>
 
